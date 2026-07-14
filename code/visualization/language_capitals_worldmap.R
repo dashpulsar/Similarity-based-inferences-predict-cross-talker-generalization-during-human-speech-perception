@@ -37,7 +37,7 @@ languages <- data.frame(
     "Albanian", "Bengali", "Brazilian Portuguese", "Dutch", "Farsi",
     "French", "German", "Hindi", "Japanese", "Korean", "Mandarin Chinese",
     "Romanian", "Russian", "Spanish (Mexican)", "Somali", "Turkish",
-    "English (North American)"
+    "English (North A.)"
   ),
   country = c(
     "Albania", "Bangladesh", "Brazil", "Netherlands", "Iran",
@@ -63,12 +63,46 @@ languages <- data.frame(
     44.4268, 55.7558, 19.4326, 2.0469, 39.9334,
     38.9072
   ),
+  family = c(
+    "Albanian", "Indo-Aryan", "Romance", "Germanic", "Iranian",
+    "Romance", "Germanic", "Indo-Aryan", "Japonic", "Koreanic",
+    "Sino-Tibetan", "Romance", "Slavic", "Romance", "Afro-Asiatic",
+    "Turkic", "Germanic"
+  ),
   stringsAsFactors = FALSE
 )
 
 languages$label <- paste0(languages$code, " - ", languages$language)
 english <- subset(languages, code == "ENG")
 other_languages <- subset(languages, code != "ENG")
+
+family_colors <- c(
+  "Afro-Asiatic" = "#9A642F",
+  "Albanian" = "#8F47A4",
+  "Germanic" = "#245C8D",
+  "Indo-Aryan" = "#C76500",
+  "Iranian" = "#7464D8",
+  "Japonic" = "#C21F30",
+  "Koreanic" = "#008C89",
+  "Romance" = "#087D5A",
+  "Sino-Tibetan" = "#7A431F",
+  "Slavic" = "#53671A",
+  "Turkic" = "#9A3569"
+)
+
+family_outline_colors <- c(
+  "Afro-Asiatic" = "#593817",
+  "Albanian" = "#4B1D5D",
+  "Germanic" = "#0E2F50",
+  "Indo-Aryan" = "#693500",
+  "Iranian" = "#3C3293",
+  "Japonic" = "#6B0F1C",
+  "Koreanic" = "#004A49",
+  "Romance" = "#003F2D",
+  "Sino-Tibetan" = "#3F210D",
+  "Slavic" = "#2A3609",
+  "Turkic" = "#561834"
+)
 
 world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
 
@@ -90,9 +124,40 @@ worldmap <- ggplot() +
   ) +
   ggrepel::geom_label_repel(
     data = other_languages,
+    aes(x = lon, y = lat, label = label, fill = family, color = family),
+    size = 6.4,
+    label.size = 0.3,
+    label.padding = unit(0.16, "lines"),
+    box.padding = 0.45,
+    point.padding = 0.25,
+    min.segment.length = 0,
+    segment.color = "grey45",
+    max.overlaps = Inf,
+    seed = 12
+  ) +
+  ggrepel::geom_label_repel(
+    data = other_languages,
     aes(x = lon, y = lat, label = label),
     size = 6.4,
-    label.size = 0.15,
+    color = "white",
+    fill = NA,
+    label.size = NA,
+    label.padding = unit(0.16, "lines"),
+    box.padding = 0.45,
+    point.padding = 0.25,
+    min.segment.length = 0,
+    segment.color = NA,
+    max.overlaps = Inf,
+    seed = 12,
+    show.legend = FALSE
+  ) +
+  ggrepel::geom_label_repel(
+    data = english,
+    aes(x = lon, y = lat, label = label, fill = family, color = family),
+    size = 6.4,
+    fontface = "bold",
+    nudge_y = -7,
+    label.size = 0.3,
     label.padding = unit(0.16, "lines"),
     box.padding = 0.45,
     point.padding = 0.25,
@@ -106,18 +171,21 @@ worldmap <- ggplot() +
     aes(x = lon, y = lat, label = label),
     size = 6.4,
     color = "white",
-    fill = "black",
+    fill = NA,
     fontface = "bold",
     nudge_y = -7,
-    label.size = 0.15,
+    label.size = NA,
     label.padding = unit(0.16, "lines"),
     box.padding = 0.45,
     point.padding = 0.25,
     min.segment.length = 0,
-    segment.color = "grey45",
+    segment.color = NA,
     max.overlaps = Inf,
-    seed = 12
+    seed = 12,
+    show.legend = FALSE
   ) +
+  scale_fill_manual(values = family_colors, guide = "none") +
+  scale_color_manual(values = family_outline_colors, guide = "none") +
   coord_sf(
     crs = "+proj=robin",
     default_crs = sf::st_crs(4326),
