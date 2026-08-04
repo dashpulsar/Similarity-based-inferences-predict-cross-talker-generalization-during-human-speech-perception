@@ -9,6 +9,8 @@ import torch
 import torch.nn.functional as F
 import warnings
 import traceback
+import time
+import re
 from scipy.optimize import minimize_scalar
 from joblib import Parallel, delayed
 from sklearn.model_selection import StratifiedKFold
@@ -910,5 +912,259 @@ def load_single_layer_from_h5(h5_path, audio_dir, layer_key):
                     feat = h5f[spk][sent_key][layer_key][:]
                 layer_data[s_idx_mapped].append(feat)
     return layer_data, speakers
+
+
+def compute_jaeger_ceiling_nygaard(df_data, item_groups=None):
+    """
+    Compute behavioral noise ceiling via Jaeger's self-predictability method
+    for the Nygaard (AN19) dataset.
+
+    For each CV fold:
+      1. From TRAINING data only, compute per-item log-odds(correct)
+      2. Map training-derived log-odds to test items as predictor
+      3. Scale predictor using training-fold statistics (Gelman, 2008)
+      4. Fit GLMM on test data with training-derived predictor
+      5. Extract Wald z-statistic
+
+    Parameters
+    ----------
+    df_data : DataFrame
+        Must contain columns: 'correct' (keyword), 'Speaker_full' (talker),
+        'accuracy' (0/1), 'Subject', 'fold'.
+    item_groups : list of str, optional
+        Columns defining a unique item. Default: ['correct', 'Speaker_full'].
+
+    Returns
+    -------
+    np.array of Wald z-statistics, one per CV fold.
+    """
+    if item_groups is None:
+        item_groups = ['correct', 'Speaker_full']
+
+    lme4 = importr('lme4')
+    folds = sorted(df_data['fold'].unique())
+    z_vals = []
+
+    for test_fold in folds:
+        t0 = time.time()
+        print(f'\nFold {test_fold} (test):')
+
+        train_df = df_data[df_data['fold'] != test_fold].copy()
+        test_df  = df_data[df_data['fold'] == test_fold].copy()
+        print(f'  Train: {len(train_df)} trials from '
+              f'{train_df["Subject"].nunique()} subjects')
+        print(f'  Test:  {len(test_df)} trials from '
+              f'{test_df["Subject"].nunique()} subjects')
+
+        # Compute per-item log-odds from TRAINING data only
+        item_stats = train_df.groupby(item_groups).agg(
+            n_correct=('accuracy', 'sum'),
+            n_total=('accuracy', 'count')
+        ).reset_index()
+        item_stats['p_correct'] = (
+            item_stats['n_correct'] / item_stats['n_total']
+        ).clip(0.01, 0.99)
+        item_stats['logodds_correct'] = np.log(
+            item_stats['p_correct'] / (1 - item_stats['p_correct'])
+        )
+
+        # Map training-derived log-odds to test items
+        merge_cols = item_groups + ['logodds_correct']
+        test_merged = test_df.merge(
+            item_stats[merge_cols], on=item_groups, how='left'
+        ).dropna(subset=['logodds_correct'])
+        train_merged = train_df.merge(
+            item_stats[merge_cols], on=item_groups, how='left'
+        ).dropna(subset=['logodds_correct'])
+
+        if len(test_merged) == 0:
+            print('  ERROR: No overlapping items between train and test.')
+            continue
+
+        # Scale using TRAINING statistics (Gelman 2008)
+        lo_mean = train_merged['logodds_correct'].mean()
+        lo_std  = train_merged['logodds_correct'].std()
+        if lo_std == 0:
+            print('  ERROR: Zero variance in log-odds.')
+            continue
+
+        test_merged['logodds_scaled'] = (
+            test_merged['logodds_correct'] - lo_mean
+        ) / (2 * lo_std)
+
+        # Aggregate by Subject x Item for GLMM
+        glmm_groups = ['Subject'] + item_groups
+        test_agg = test_merged.groupby(glmm_groups, as_index=False).agg(
+            logodds_scaled=('logodds_scaled', 'first'),
+            numCorrect=('accuracy', 'sum'),
+            numWord=('accuracy', 'count')
+        )
+        test_agg['numIncorrect'] = (
+            test_agg['numWord'] - test_agg['numCorrect']
+        ).clip(lower=0)
+        test_agg.rename(columns={
+            'correct': 'Keyword',
+            'Speaker_full': 'TestTalker',
+            'Subject': 'SubjectID'
+        }, inplace=True)
+
+        # Fit GLMM on test data via R
+        ro.globalenv['r_test'] = pandas2ri.py2rpy(test_agg)
+        try:
+            ro.r('''
+                library(lme4)
+                r_test$Keyword   <- factor(r_test$Keyword)
+                r_test$TestTalker <- factor(r_test$TestTalker)
+                r_test$SubjectID <- factor(r_test$SubjectID)
+
+                model_test <- tryCatch({
+                    glmer(cbind(numCorrect, numIncorrect) ~ logodds_scaled
+                              + (1 + logodds_scaled | SubjectID),
+                          data = r_test, family = binomial(link = "logit"),
+                          control = glmerControl(optimizer = "bobyqa",
+                                                 optCtrl = list(maxfun = 1e5)))
+                }, error = function(e) { NULL })
+
+                ceil_res <- list()
+                if (!is.null(model_test)) {
+                    ceil_res$z_test <- summary(model_test)$coefficients[2, 3]
+                    ceil_res$success <- TRUE
+                } else {
+                    ceil_res$success <- FALSE
+                }
+                ceil_res
+            ''')
+
+            res_r = ro.globalenv['ceil_res']
+            if res_r.rx2('success')[0]:
+                z_t = res_r.rx2('z_test')[0]
+                z_vals.append(z_t)
+                print(f'  z_test = {z_t:.4f} ({time.time()-t0:.1f}s)')
+            else:
+                print(f'  GLMM fitting failed.')
+        except Exception as e:
+            print(f'  R error: {e}')
+
+    return np.array(z_vals)
+
+
+def compute_jaeger_ceiling_xie(df_data, item_groups=None):
+    """
+    Compute behavioral noise ceiling via Jaeger's self-predictability method
+    for the Xie (X21) dataset.
+
+    Adapted from the Nygaard version to use the X21 GLMM random-effects
+    structure: (1 | SentenceID / Keyword) + (1 | TestTalkerID).
+
+    Parameters
+    ----------
+    df_data : DataFrame
+        Must contain columns: 'Keyword', 'TestTalkerID', 'SentenceID',
+        'IsCorrect' (0/1), 'fold', and a participant identifier
+        ('WorkerID' or 'TrainingTalkerID1').
+    item_groups : list of str, optional
+        Columns defining a unique item. Default: ['Keyword', 'TestTalkerID'].
+
+    Returns
+    -------
+    np.array of Wald z-statistics, one per CV fold.
+    """
+    if item_groups is None:
+        item_groups = ['Keyword', 'TestTalkerID']
+
+    lme4 = importr('lme4')
+    folds = sorted(df_data['fold'].unique())
+    z_vals = []
+
+    for test_fold in folds:
+        t0 = time.time()
+        print(f'\nFold {test_fold} (test):')
+
+        train_df = df_data[df_data['fold'] != test_fold].copy()
+        test_df  = df_data[df_data['fold'] == test_fold].copy()
+        print(f'  Train: {len(train_df)} trials, Test: {len(test_df)} trials')
+
+        # Compute per-item log-odds from TRAINING data only
+        item_stats = train_df.groupby(item_groups).agg(
+            n_correct=('IsCorrect', 'sum'),
+            n_total=('IsCorrect', 'count')
+        ).reset_index()
+        item_stats['p_correct'] = (
+            item_stats['n_correct'] / item_stats['n_total']
+        ).clip(0.01, 0.99)
+        item_stats['logodds_correct'] = np.log(
+            item_stats['p_correct'] / (1 - item_stats['p_correct'])
+        )
+
+        # Map training-derived log-odds to test items
+        merge_cols = item_groups + ['logodds_correct']
+        test_merged = test_df.merge(
+            item_stats[merge_cols], on=item_groups, how='left'
+        ).dropna(subset=['logodds_correct'])
+        train_merged = train_df.merge(
+            item_stats[merge_cols], on=item_groups, how='left'
+        ).dropna(subset=['logodds_correct'])
+
+        if len(test_merged) == 0:
+            print('  ERROR: No overlapping items between train and test.')
+            continue
+
+        # Scale using TRAINING statistics (Gelman 2008)
+        lo_mean = train_merged['logodds_correct'].mean()
+        lo_std  = train_merged['logodds_correct'].std()
+        if lo_std == 0:
+            print('  ERROR: Zero variance in log-odds.')
+            continue
+
+        test_merged['logodds_scaled'] = (
+            test_merged['logodds_correct'] - lo_mean
+        ) / (2 * lo_std)
+
+        # Aggregate for GLMM
+        agg_groups = item_groups + ['SentenceID']
+        test_agg = test_merged.groupby(agg_groups, as_index=False).agg(
+            logodds_scaled=('logodds_scaled', 'first'),
+            numCorrect=('IsCorrect', lambda x: (x == 1).sum()),
+            numIncorrect=('IsCorrect', lambda x: (x == 0).sum())
+        )
+
+        # Fit GLMM on test data via R
+        ro.globalenv['r_test'] = pandas2ri.py2rpy(test_agg)
+        try:
+            ro.r('''
+                library(lme4)
+                r_test$SentenceID   <- factor(r_test$SentenceID)
+                r_test$Keyword      <- factor(r_test$Keyword)
+                r_test$TestTalkerID <- factor(r_test$TestTalkerID)
+
+                model_test <- tryCatch({
+                    glmer(cbind(numCorrect, numIncorrect) ~ 1 + logodds_scaled
+                              + (1 | SentenceID / Keyword) + (1 | TestTalkerID),
+                          data = r_test, family = binomial(link = "logit"),
+                          control = glmerControl(optimizer = "bobyqa",
+                                                 optCtrl = list(maxfun = 10000)))
+                }, error = function(e) { NULL })
+
+                ceil_res <- list()
+                if (!is.null(model_test)) {
+                    ceil_res$z_test <- summary(model_test)$coefficients[2, 3]
+                    ceil_res$success <- TRUE
+                } else {
+                    ceil_res$success <- FALSE
+                }
+                ceil_res
+            ''')
+
+            res_r = ro.globalenv['ceil_res']
+            if res_r.rx2('success')[0]:
+                z_t = res_r.rx2('z_test')[0]
+                z_vals.append(z_t)
+                print(f'  z_test = {z_t:.4f} ({time.time()-t0:.1f}s)')
+            else:
+                print(f'  GLMM fitting failed.')
+        except Exception as e:
+            print(f'  R error: {e}')
+
+    return np.array(z_vals)
 
 
