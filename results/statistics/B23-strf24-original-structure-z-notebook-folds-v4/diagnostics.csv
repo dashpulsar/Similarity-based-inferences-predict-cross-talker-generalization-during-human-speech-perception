@@ -1,7 +1,0 @@
-layer,fold,fold_train,fold_val,k,status,note,n_cells,n_trials,converged,singular,optimizer_code,convergence_messages,warnings,log_likelihood,elapsed_seconds
-global_z,1,3.0,2.0,0.0010037010865477953,complete,notebook train/validation/test k optimization on corrected repository mapping,,,,,,,,,
-global_z,2,1.0,3.0,0.9897009277423171,complete,notebook train/validation/test k optimization on corrected repository mapping,,,,,,,,,
-global_z,3,2.0,1.0,0.0010037010865477953,complete,notebook train/validation/test k optimization on corrected repository mapping,,,,,,,,,
-behavioral_ceiling,1,,,,,,540.0,20930.0,True,False,0.0,,,-1675.14052601127,0.13
-behavioral_ceiling,2,,,,,,540.0,20930.0,True,False,0.0,,,-1718.83369970769,0.1
-behavioral_ceiling,3,,,,,,540.0,20930.0,True,False,0.0,,,-1575.31100293699,0.0900000000000001

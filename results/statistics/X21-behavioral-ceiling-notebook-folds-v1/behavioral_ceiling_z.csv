@@ -1,4 +1,0 @@
-"dataset_id","layer","fold","type","predictor","estimate","std_error","z_test","p_value"
-"X21","behavioral_ceiling",1,"corrected_leakage_free","training_item_logodds",2.51894038987881,0.111137758636048,22.6650278068661,9.91854393730352e-114
-"X21","behavioral_ceiling",2,"corrected_leakage_free","training_item_logodds",2.44529503558943,0.122451560324433,19.9694885807144,1.01487158755457e-88
-"X21","behavioral_ceiling",3,"corrected_leakage_free","training_item_logodds",2.4874967583027,0.110175682413083,22.5775480017115,7.20358685664673e-113

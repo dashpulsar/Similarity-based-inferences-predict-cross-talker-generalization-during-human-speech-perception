@@ -1,4 +1,0 @@
-"dataset_id","fold","n_rows","converged","singular","optimizer_code","convergence_messages","warnings","elapsed_seconds"
-"X21",1,412,TRUE,FALSE,"0","","",0.17
-"X21",2,412,TRUE,FALSE,"0","","",0.14
-"X21",3,412,FALSE,TRUE,"0","boundary (singular) fit: see help('isSingular')","",0.19

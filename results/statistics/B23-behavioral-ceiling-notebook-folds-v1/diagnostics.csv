@@ -1,4 +1,0 @@
-"dataset_id","fold","n_rows","converged","singular","optimizer_code","convergence_messages","warnings","elapsed_seconds"
-"B23",1,540,TRUE,FALSE,"0","","",0.13
-"B23",2,540,TRUE,FALSE,"0","","",0.1
-"B23",3,540,TRUE,FALSE,"0","","",0.11

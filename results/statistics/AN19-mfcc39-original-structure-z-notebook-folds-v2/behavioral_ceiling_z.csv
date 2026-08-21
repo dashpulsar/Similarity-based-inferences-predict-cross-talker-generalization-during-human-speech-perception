@@ -1,4 +1,0 @@
-dataset_id,layer,fold,type,predictor,estimate,std_error,z_test,p_value
-AN19,behavioral_ceiling,1,corrected_leakage_free,distance_similarity_z,5.63997136279956,0.258365678077947,21.8294140489435,1.21974105605531e-105
-AN19,behavioral_ceiling,2,corrected_leakage_free,distance_similarity_z,6.13206273916064,0.313452538560812,19.5629704175166,3.19888133384698e-85
-AN19,behavioral_ceiling,3,corrected_leakage_free,distance_similarity_z,5.26268529303149,0.209794231769561,25.0849856482806,7.25311976122641e-139
