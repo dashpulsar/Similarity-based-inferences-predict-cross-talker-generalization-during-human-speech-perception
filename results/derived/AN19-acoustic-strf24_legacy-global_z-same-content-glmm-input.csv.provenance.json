@@ -1,0 +1,36 @@
+{
+  "analysis_group_count": 1,
+  "analysis_groups": [
+    {
+      "dataset_id": "AN19",
+      "layer": "global_z",
+      "model_variant": "acoustic_baseline",
+      "representation": "strf24_legacy"
+    }
+  ],
+  "behavior_path": "data/preprocessed data/AN19-behavioral-data.csv",
+  "behavior_sha256": "17f6831e3d37b22e9baf4e2e818c715d2fea6cee84f0178c5ef1c4d32603314e",
+  "control_missing_rows": 1920,
+  "control_policy": "missing_no_exposure",
+  "created_utc": "2026-08-14T05:29:12+00:00",
+  "dataset_id": "AN19",
+  "model_variant": "acoustic_baseline",
+  "nonpublishable_smoke_allowed": false,
+  "output_path": "results/derived/AN19-acoustic-strf24_legacy-global_z-same-content-glmm-input.csv",
+  "output_rows": 7680,
+  "output_sha256": "3dcd51b4a5b334f4b8d7bec2efe7964cbed951718fc1a5805689d60587a01261",
+  "pair_distance_path": "results/derived/AN19-acoustic-strf24_legacy-global_z-same-content-pair-distances.csv",
+  "pair_distance_sha256": "fc25a545aa4a31088ea185fde80ef048388f518ccb893a72b84290fd5f76b418",
+  "pair_rows_per_group": 5472,
+  "participant_aggregation": "mean_raw_distance_over_exactly_six_registered_exposure_talkers_then_exp",
+  "participant_rows_per_group": 7680,
+  "predictor_id": "same_content_talker_distance",
+  "production_inventory_required": true,
+  "repository_source_gap_rows": 75,
+  "representation": "strf24_legacy",
+  "run_glmm_required_flag": "--drop-missing-distance",
+  "schema_version": "an19-same-content-glmm-input-v2",
+  "source_gap_policy": "missing_no_partial_talker_average_no_imputation",
+  "source_provenance_path": "results/derived/AN19-acoustic-strf24_legacy-global_z-same-content-provenance.json",
+  "source_provenance_sha256": "f25e07c366a4d8a6b13cba173562db9e37bc0808570137790e1a0ecd75b4daa2"
+}

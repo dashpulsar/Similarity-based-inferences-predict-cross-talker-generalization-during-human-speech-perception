@@ -1,0 +1,13 @@
+{
+  "profile_id": "notebook_compatibility_v1",
+  "description": "Explicit sensitivity profile approximating the historical notebooks",
+  "distance_metric": "minkowski",
+  "tau": 2.0,
+  "dtw_normalization": "mean_sequence_length",
+  "talker_aggregation": "mean_distance",
+  "similarity_predictor": "exp_minus_k_distance",
+  "k_grid": [0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0, 1.5, 2.0, 3.0, 5.0],
+  "fold_unit": "participant",
+  "reported_statistic": "heldout_refit_wald_z",
+  "warning": "Held-out refit z is association stability, not predictive performance. Do not present it as cross-validated prediction."
+}

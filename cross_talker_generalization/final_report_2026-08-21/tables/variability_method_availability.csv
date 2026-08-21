@@ -1,0 +1,49 @@
+dataset_id,measure,display_label,three_fold_heldout_refit_z_available,true_participant_heldout_oof_available,status_note
+AN19,overall,Overall frame dispersion,True,True,available
+AN19,within_token_sentence,Within sentence,False,False,AN19 has isolated-word recordings only
+AN19,within_type_sentence,Within sentence type,False,False,AN19 has isolated-word recordings only
+AN19,between_type_sentence,Between sentence types,False,False,AN19 has isolated-word recordings only
+AN19,order_sentence,Adjacent frames: sentence,False,False,AN19 has isolated-word recordings only
+AN19,mean_dissimilarity_sentence,Within-type DTW: sentence,False,False,AN19 has isolated-word recordings only
+AN19,within_token_word,Within word,True,True,available
+AN19,within_type_word,Within word type,True,True,available
+AN19,between_type_word,Between word types,True,True,available
+AN19,order_word,Adjacent frames: word,True,True,available
+AN19,mean_dissimilarity_word,Within-type DTW: word,True,True,available
+AN19,within_token_phoneme,Within phoneme,False,False,AN19 has isolated-word recordings only
+AN19,within_type_phoneme,Within phoneme type,False,False,AN19 has isolated-word recordings only
+AN19,between_type_phoneme,Between phoneme types,False,False,AN19 has isolated-word recordings only
+AN19,order_phoneme,Adjacent frames: phoneme,False,False,AN19 has isolated-word recordings only
+AN19,mean_dissimilarity_phoneme,Within-type DTW: phoneme,False,False,AN19 has isolated-word recordings only
+X21,overall,Overall frame dispersion,True,True,available
+X21,within_token_sentence,Within sentence,True,True,available
+X21,within_type_sentence,Within sentence type,True,True,available
+X21,between_type_sentence,Between sentence types,True,True,available
+X21,order_sentence,Adjacent frames: sentence,True,True,available
+X21,mean_dissimilarity_sentence,Within-type DTW: sentence,True,True,available
+X21,within_token_word,Within word,True,True,available
+X21,within_type_word,Within word type,True,True,available
+X21,between_type_word,Between word types,True,True,available
+X21,order_word,Adjacent frames: word,True,True,available
+X21,mean_dissimilarity_word,Within-type DTW: word,True,True,available
+X21,within_token_phoneme,Within phoneme,True,True,available
+X21,within_type_phoneme,Within phoneme type,True,True,available
+X21,between_type_phoneme,Between phoneme types,True,True,available
+X21,order_phoneme,Adjacent frames: phoneme,True,True,available
+X21,mean_dissimilarity_phoneme,Within-type DTW: phoneme,True,True,available
+B23,overall,Overall frame dispersion,True,False,available
+B23,within_token_sentence,Within sentence,True,False,available
+B23,within_type_sentence,Within sentence type,False,False,undefined: one physical token per sentence type in identified B23 exposure pools
+B23,between_type_sentence,Between sentence types,True,False,available
+B23,order_sentence,Adjacent frames: sentence,True,False,available
+B23,mean_dissimilarity_sentence,Within-type DTW: sentence,False,False,undefined: one physical token per sentence type in identified B23 exposure pools
+B23,within_token_word,Within word,True,False,available
+B23,within_type_word,Within word type,True,False,available
+B23,between_type_word,Between word types,True,False,available
+B23,order_word,Adjacent frames: word,True,False,available
+B23,mean_dissimilarity_word,Within-type DTW: word,True,False,available
+B23,within_token_phoneme,Within phoneme,True,False,available
+B23,within_type_phoneme,Within phoneme type,True,False,available
+B23,between_type_phoneme,Between phoneme types,True,False,available
+B23,order_phoneme,Adjacent frames: phoneme,True,False,available
+B23,mean_dissimilarity_phoneme,Within-type DTW: phoneme,True,False,available

@@ -1,0 +1,133 @@
+{
+  "analysis_group_count": 18,
+  "analysis_groups": [
+    {
+      "dataset_id": "B23",
+      "layer": "cnn_2",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "cnn_3",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "cnn_4",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "cnn_5",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "cnn_6",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_0",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_10",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_12",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_14",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_16",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_18",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_2",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_20",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_22",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_24",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_4",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_6",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    },
+    {
+      "dataset_id": "B23",
+      "layer": "tr_8",
+      "model_variant": "ft",
+      "representation": "hubert_tsne_3d"
+    }
+  ],
+  "behavior_path": "data/preprocessed data/B23-behavioral-data.csv",
+  "behavior_rows_per_group": 11700,
+  "behavior_sha256": "44aebe6eaf200c58d23fea41c634e4baf7d87e0477bc847097f3d869b58fafab",
+  "condition_cells_per_group": 540,
+  "condition_distance_path": "results/derived/B23-same-content-condition-distances-ft-v2.csv",
+  "condition_distance_sha256": "32182fc592336adff2675e1054106efc6de2ae524ac98316c873f31d5d32680e",
+  "control_distance_policy": "missing; excluded explicitly by run_glmm.py",
+  "created_utc": "2026-08-14T00:43:32.055924+00:00",
+  "dataset_id": "B23",
+  "model_variant": "ft",
+  "nonpublishable_smoke_allowed": false,
+  "output_path": "results/derived/B23-same-content-glmm-input-ft-v2.csv",
+  "output_rows": 210600,
+  "output_sha256": "3562c1ee7d181eade712808f3e629c6a501ec67393c332b698afbbbdbbb3344e",
+  "predictor_id": "same_content_talker_distance",
+  "production_inventory_required": true,
+  "representation": "hubert_tsne_3d",
+  "schema_version": "b23-same-content-glmm-input-v2",
+  "source_provenance_path": "results/derived/B23-same-content-provenance-ft-v2.json",
+  "source_provenance_sha256": "e4bbaf79407c2dcfc2cf71d299a92fbd6cc34c1e79ca958b7349722042aa4d4c"
+}

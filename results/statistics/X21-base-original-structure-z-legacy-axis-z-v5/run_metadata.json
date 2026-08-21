@@ -1,0 +1,63 @@
+{
+  "aggregation": "Keyword,Condition2,TrainingTalkerID1,TestTalkerID,SentenceID within held-out participant fold",
+  "ceiling_fold_z": [
+    20.9781577775564,
+    21.2270952812265,
+    22.4474395904278
+  ],
+  "dataset_id": "X21",
+  "fold_source_declared_input_path": "results/derived/X21-same-content-glmm-input.csv",
+  "fold_source_declared_input_sha256": "4a1c1a445c55680dff143ecf43ae1eb8a8eefd742b60755f0d5d4d754f8c8b63",
+  "fold_source_glmm_directory": "results/glmm/X21-base-tsne-euclidean-v1",
+  "fold_source_model_input_sha256": "cb3e06e71a66ff3e72f6b9614dfe1320df06aaa875ae55a04dbe25d25452abf8",
+  "fold_source_usage": "participant_fold_assignments_only_after_exact_behavior_key_and_outcome_match",
+  "folds": 3,
+  "formula": "cbind(correct,incorrect) ~ similarity_z + (1|SentenceID/Keyword) + (1|TestTalkerID)",
+  "generated_utc": "2026-08-14T08:09:07+00:00",
+  "input_path": "results/derived/X21-same-content-glmm-input-legacy-axis-z.csv",
+  "input_provenance_sha256": "55dae372c6e30240564687da237fd0b2141e47241010b1baf11b33483fc68c79",
+  "input_sha256": "8e5a116078b778404f595517ed312060e72b0b25cfe62816beea094f3bacb7a0",
+  "jobs_effective": 4,
+  "k_selection": "bounded scalar optimization in [0.001,5] on each two-fold training set; corrected rows use the mean of three best k values",
+  "layers": [
+    "cnn_2",
+    "cnn_3",
+    "cnn_4",
+    "cnn_5",
+    "cnn_6",
+    "tr_0",
+    "tr_2",
+    "tr_4",
+    "tr_6",
+    "tr_8",
+    "tr_10",
+    "tr_12",
+    "tr_14",
+    "tr_16",
+    "tr_18",
+    "tr_20",
+    "tr_22",
+    "tr_24"
+  ],
+  "model_variant": "base",
+  "not_oof_prediction_performance": true,
+  "outputs_sha256": {
+    "behavioral_ceiling_z.csv": "a6c391d1e823f560fc6d43de87e1b45dff962a6576041ec6ac144a537c44aceb",
+    "diagnostics.csv": "52d54afa0b55276443cea06c2561c354561eac1a4eb56390db6e9383b4b4222e",
+    "heldout_refit_z.csv": "9c14b7efce926af0abc1710bfbaca8e4cb722453508d8968a642c649dfbcc46b"
+  },
+  "predictor": "similarity=exp(-k*raw_distance)",
+  "publication_status": "legacy_numeric_reproduction_current_complete_corpus_with_explicit_mean_k_leakage",
+  "r_engine_sha256": "65f12af4fd233c6638265ce8bcc5ace74c2c6ddd4fb5cc4e7af27846cd3066d0",
+  "representation": "hubert_tsne_3d",
+  "result_types": {
+    "corrected": "exact legacy cross-fold mean-k; held-out test refit; k leakage",
+    "diagnostic": "fold-specific optimized k; held-out test refit"
+  },
+  "runner_sha256": "af87c65fcb10ce7491332a6499042a37db75076cadfa819b42bc4cef586e1a11",
+  "schema_version": "x21-original-structure-glmm-z-v2",
+  "similarity_engine_path": "glmm_prediction/project_utils.py",
+  "similarity_engine_sha256": "e805fb02e3e27827540f9cdc3225cc9004aace046338babe41a6af0be7e4f790",
+  "status": "complete",
+  "trials_per_layer": 16477
+}
