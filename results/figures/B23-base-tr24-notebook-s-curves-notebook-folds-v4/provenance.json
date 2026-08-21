@@ -1,0 +1,39 @@
+{
+  "condition_order": [
+    "Single talker",
+    "Multi-talker"
+  ],
+  "control_policy": "a_control excluded because repository exposure similarity is undefined",
+  "curve_definition": "count-exact expanded word trials; unadjusted logistic regression by test talker and exposure class",
+  "dataset_id": "B23",
+  "expanded_word_trials": 54096,
+  "generated_utc": "2026-08-14T07:19:34+00:00",
+  "k_origin": "mean_of_three_notebook_optimized_tr24_fold_k_from_B23_base_original_structure_z_notebook_folds_v4",
+  "layer": "tr_24",
+  "model_variant": "base",
+  "not_a_hierarchical_glmm_curve": true,
+  "outputs_sha256": {
+    "b23_s_curves_by_condition.png": "91f6f9c351e25283fbc6ae28517aa86c6cd2974da6253db93e869cde04bc44bf",
+    "b23_s_curves_by_condition.svg": "8ceaf11a45d8d02f09a513e57acfeac9c0cd01f653a30767978d6ce102d8d089",
+    "b23_s_curves_pooled.png": "076b676213c096c1c46f84b11aa418ab1f1a11d1db98535c6fe465e328798c1d",
+    "b23_s_curves_pooled.svg": "d987f4fcbf5020c4191db06adbb75da3333f73dbf466fe7a07a6fe67688abfa0",
+    "s_curve_word_trials.csv": "16958488e61b87864ec215426b621e6292423152a8a175f28cf38853f8d1fdae"
+  },
+  "participants": 168,
+  "publication_status": "descriptive_scale_explicit_not_hierarchical_glmm",
+  "schema_version": "b23-notebook-s-curves-v1",
+  "seed": 230519,
+  "sentence_count_rows": 10080,
+  "similarity_definition": "exp(-k * raw_distance), k=0.31969552106604088",
+  "source_glmm_directory": "results/glmm/B23-base-tsne-euclidean-v3",
+  "source_model_input_sha256": "db2f04045c705f2e5a0e5b4375fa983b1c6c5295506f48fff832b7d0453eaefb",
+  "source_run_metadata_sha256": "145dee02bcd7eaa38631bc403077342bc54cc481cea56282faf1f63c5fa39ec0",
+  "source_runner_sha256": "636deafa5a754d50853b606c4ac21621c050de51a16e8132e76544561c4ac690",
+  "talker_order": [
+    "B23.BRP.BRP",
+    "B23.FAR.FAR",
+    "B23.TUR.TUR",
+    "B23.SPA.SPA"
+  ],
+  "uncertainty_display": "none; deterministic binned means and fitted curve, avoiding resampling pseudo-replication of expanded word counts"
+}

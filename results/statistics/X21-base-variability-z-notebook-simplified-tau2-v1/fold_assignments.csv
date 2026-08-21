@@ -1,0 +1,321 @@
+participant_id,fold,stratum,split_engine
+X21.f8b17be6a35f51d7f154ff160f33e71c,3,"set2,set1_Control_3",StratifiedKFold
+X21.9c2c7fd165b3aa898e658c3cc81da774,1,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.f85defbfc037896d3ff7577f8a288ba9,3,"set2,set1_Single talker_3",StratifiedKFold
+X21.448fd7d0cd089e3f9195ebd3f9c39f5a,1,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.69decdc1ca270e4f9655741cc96bb91b,1,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.6fd6dfe40dd753d7795852052ebef541,3,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.643313ae83f041d62efb0f54570821ac,3,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.9ed81ed8f97a93609ba9cf98a39bd8bf,1,"set2,set1_Single talker_3",StratifiedKFold
+X21.da814bfa96b46299d008d1d010b9e28c,1,"set2,set1_Single talker_5",StratifiedKFold
+X21.823314ed0676126bc658df08ced4e0d5,2,"set2,set1_Control_4",StratifiedKFold
+X21.29e3173a48c934207b391d026a4a3edb,2,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.5e0f9593449b9bd0d7d90f17ef58f707,2,"set2,set1_Single talker_5",StratifiedKFold
+X21.4b706490aba187bd10cca9e65a91cfd9,1,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.1eacdd6a82b08a5adcb60f3fbc8967fc,2,"set2,set1_Control_5",StratifiedKFold
+X21.55b6ae995c0a74001334c2a895f11992,2,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.22eb07cb0e8ddc8663987ad4b70e80ea,1,"set2,set1_Single talker_5",StratifiedKFold
+X21.e933e4127113efac6d17b9c8ee834f2d,1,"set2,set1_Single talker_4",StratifiedKFold
+X21.9b6639228245762d2541ffbf2061cb9c,1,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.a7521cc7326de09da1dc147569315926,1,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.33d87d8f468a467ec3df0b10651c971a,2,"set2,set1_Single talker_5",StratifiedKFold
+X21.85db54cfe518f64200c1c07d84482f91,2,"set2,set1_Single talker_4",StratifiedKFold
+X21.0bbb8e1687436e51d59f10e17e061b63,3,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.e27d0d3e8773cb5d2921dfe1aba4018a,2,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.420026c2a7df0246c709f3f6bfe8b31a,1,"set2,set1_Single talker_6",StratifiedKFold
+X21.42bc7968726d6b9bc8522357d33776ff,3,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.da25e3cbebab3f75fb98985f47879100,3,"set2,set1_Control_4",StratifiedKFold
+X21.1efa44df54c8250082c43d0b09e12853,1,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.cf94576436a173e9cab899e732dd61fc,2,"set2,set1_Control_6",StratifiedKFold
+X21.9cc509344f8c4b3428e7dd7c0432f5d2,1,"set2,set1_Single talker_5",StratifiedKFold
+X21.e287481755f8c6d2779d32907bf15327,2,"set2,set1_Single talker_6",StratifiedKFold
+X21.baa572b54a829c59cdfc8bfeea2c6808,1,"set2,set1_Control_4",StratifiedKFold
+X21.3be2c7882e36e00c2ed46a8412f3c219,2,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.1d03da118b62f9218776009d870e45e4,2,"set2,set1_Control_4",StratifiedKFold
+X21.eba1391df3f59af1c36fca869b7cd79b,1,"set2,set1_Single talker_3",StratifiedKFold
+X21.c56798f57b96c06b6951f8ee516d7123,1,"set2,set1_Single talker_4",StratifiedKFold
+X21.2e2d58024ab7c3cd1300ffbfa25b8e08,2,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.fa053e903ff2b1c725a92f0debe139e5,3,"set2,set1_Single talker_5",StratifiedKFold
+X21.ecc5671f4ec9f27be695e65cc50b789c,1,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.f4b7796317383b61b26393cc8e146abd,2,"set2,set1_Single talker_6",StratifiedKFold
+X21.b789a1d9dabb5a7e3269c499d1f1be45,2,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.b14a7a9a164c892dc192e0958a258ece,1,"set2,set1_Control_5",StratifiedKFold
+X21.e2d889a4a33be2b5ebd672b9df388e5d,1,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.5466f612909a9cdc90cde9bf6a120c31,1,"set2,set1_Control_6",StratifiedKFold
+X21.c2561f3558002d5808ea95a0e27231c1,3,"set2,set1_Control_5",StratifiedKFold
+X21.b8bd3bffd43727cd669d0ff6eb5eb7e3,3,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.d138a8070a5cfb8006257725de1de341,2,"set2,set1_Single talker_5",StratifiedKFold
+X21.d532bde115f8c12a01965c11bbe0862e,2,"set2,set1_Single talker_4",StratifiedKFold
+X21.f46243b7dad41efdd0129493cc2dc9de,1,"set2,set1_Control_4",StratifiedKFold
+X21.30194253c1ae61ee1843afa7223b9b02,1,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.cae6020405cf1a8fcf5d9d7283f5a291,3,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.a21640d8525156f6aaa732f9f3862d74,3,"set2,set1_Single talker_3",StratifiedKFold
+X21.f403f5a61d16922bca7be0d38f9baf3f,1,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.1be19654bc177f0a1415d383cda4255b,1,"set2,set1_Control_3",StratifiedKFold
+X21.7e0b9bf53eabceed6fad387a9c45e3c8,3,"set2,set1_Single talker_3",StratifiedKFold
+X21.6c08ba3deec2eb8d1352268acf774576,1,"set2,set1_Single talker_5",StratifiedKFold
+X21.2f81a3476d95dec8e93fc5b182a05227,2,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.a38a6d14bc9fa799ca22ebfc1d928aba,1,"set2,set1_Control_5",StratifiedKFold
+X21.f51aad789c52195f2889b657707cc46e,1,"set2,set1_Control_6",StratifiedKFold
+X21.9b3851cb01e721162cc897bc20aaa165,2,"set2,set1_Control_5",StratifiedKFold
+X21.617398f3bf1e3da8b79e01ca8be7ef5c,2,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.8c1d866020539780cb3fe82870db3b28,3,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.af3712ed6ff4c8d391d94f287dcef01b,2,"set2,set1_Control_4",StratifiedKFold
+X21.e9a2c6b3f59f6990a2e100152386aac3,2,"set2,set1_Single talker_4",StratifiedKFold
+X21.0f239fb2ae3273cc00935f5559a8d4f6,1,"set2,set1_Single talker_6",StratifiedKFold
+X21.1814f8dc62c0c135e8fcf33dc7efde07,3,"set2,set1_Single talker_6",StratifiedKFold
+X21.1ad796cad7981cb77f56d90fd7602074,3,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.98b2c382d9402d9bfd0727152e39236a,2,"set2,set1_Control_3",StratifiedKFold
+X21.fb6e9386224bd769ca40bbf85aab1f55,1,"set2,set1_Control_3",StratifiedKFold
+X21.f0574eb2d303020a77efbf056eaca516,2,"set2,set1_Single talker_3",StratifiedKFold
+X21.1f9a51e5587b56470abe0b16224c85a7,1,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.27984f73544e492387e8e63250e79fba,3,"set2,set1_Single talker_5",StratifiedKFold
+X21.603305462a9b5c3ef8006c8c58299cc6,3,"set2,set1_Control_6",StratifiedKFold
+X21.b6a8bbba17f30180fb313f2fee267082,3,"set2,set1_Single talker_4",StratifiedKFold
+X21.fb14eddedfb3d6f491ae4142efe966d2,1,"set2,set1_Single talker_6",StratifiedKFold
+X21.434cff690fb8ff13310cf5a55acaa360,2,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.faf65ce3e98f9af4b51aa75bce5167b7,1,"set2,set1_Control_5",StratifiedKFold
+X21.d056ab9ecb808d33c95900615597355e,1,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.21ccc85858f08cff84bc655d9e5825f3,2,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.6f5ea416538ce84db0f9dff8517fdb8f,2,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.c611000fb39e97f892a0400b707ac62a,3,"set2,set1_Control_6",StratifiedKFold
+X21.3c1b45042b5779d1baa2020fbf904e10,2,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.53e562ed17f742cb76dc8cb64f12d7f3,3,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.340c8d71dc928b6230cab5f478bcc7a6,2,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.0fe2f414da0cf5e10156ab8f4bbc486d,3,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.ec5b711d12c84272e86158a43c916eac,3,"set2,set1_Control_3",StratifiedKFold
+X21.f4a9e95f66f2807319f69ee07fe824e9,3,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.071c9abb1899c4a6a1a89de2b543b00a,1,"set2,set1_Control_3",StratifiedKFold
+X21.8b3ad7cb629be6bd8ff9d20118046196,3,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.d37e9541c9d1d792c2e939286c72aa76,3,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.3a7934e4dcdc65f91cd021ad2dc5826e,3,"set2,set1_Single talker_4",StratifiedKFold
+X21.99c8dc4bf7a6b325fd9bc7a46bcf8145,1,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.a111e592a495ac05418110f210d00460,3,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.d945ba665f2ba8e548e7608c95997e99,3,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.0f6c1690a62d8e75110c59f42d20e042,2,"set2,set1_Single talker_3",StratifiedKFold
+X21.8dc940089d6a1e6265796ed4ea8bfdcf,2,"set2,set1_Control_5",StratifiedKFold
+X21.fa167d16788e17500bb9808e163bb15f,2,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.80c3fd843906b57140d3df71812e1359,1,"set2,set1_Control_4",StratifiedKFold
+X21.bc43cd46287303856fcc7b0e4a85cf7a,2,"set2,set1_Control_6",StratifiedKFold
+X21.4559eae18299aa2730a093184a3b5e52,2,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.9f0defab0d7ff0fc7de96beb474259ae,3,"set2,set1_Control_5",StratifiedKFold
+X21.d8f2ba0813d28c2aa7469e63343ab73e,1,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.f9a14ef438a4c9659353299140f6a9a3,2,"set2,set1_Control_6",StratifiedKFold
+X21.7f164fd03ddc07e7614653cd9cb4951d,3,"set2,set1_Single talker_6",StratifiedKFold
+X21.35d2c7926c538e44996e0f3691dedfca,3,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.8e50e92044a7cd0b630e01941faf089e,3,"set2,set1_Single talker_3",StratifiedKFold
+X21.945746ddea48f60d991f3df02f245b76,3,"set2,set1_Control_6",StratifiedKFold
+X21.25d8b26f2b697ee3f7a2e3f0a71abed1,2,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.7c22ded74c03d60a95d8b0cd59e2a3cc,3,"set2,set1_Single talker_4",StratifiedKFold
+X21.bcf8e83f49a7cad45913d42a4c675479,2,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.5feffcdde150bf3f6ca585a0c30d1678,3,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.d6a05565038e174b2a1c17560bdcc7f0,1,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.d266e664f577579ef1471afeb54f8285,2,"set2,set1_Single talker_6",StratifiedKFold
+X21.0812e542bebd719ebe5203eb37641ec8,1,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.e54e1c72eab771be6c415a2ea3fb43f1,1,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.00eb8ffdbc8e3a087dfcd5ec4f785fa2,1,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.21f220e0ccabe8b91411ef252dc3de8d,3,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.af80ebf1bdf22465bfa3e7ee4c0ad75c,3,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.3dc21af9dc0d37cc5ad19d6be9eb8d74,1,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.d8ecb462869328178f13fb463d8ad0b7,2,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.447bd3f4d6f0a4a7cb752d6ff7cd4d1c,3,"set2,set1_Single talker_6",StratifiedKFold
+X21.1edff2f95a375e84c09fb075ff3d436f,3,"set2,set1_Control_4",StratifiedKFold
+X21.e8846de7e7a38aabe54d8a3be6dfbf04,3,"set2,set1_Control_5",StratifiedKFold
+X21.26241965a09d573337e7ab9787ac2e7d,2,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.4ef045483ee3ac0809e0477e2dbe97a6,3,"set2,set1_Single talker_4",StratifiedKFold
+X21.1dac75c2df8b8ac114ff2bdae77b80e8,2,"set2,set1_Multi-talker_4",StratifiedKFold
+X21.856373c9315999a440ca092a46d9b661,3,"set2,set1_Control_3",StratifiedKFold
+X21.2cbf6e201b96410b5c527b246a9163c3,2,"set2,set1_Control_3",StratifiedKFold
+X21.364c3435964c72c98725cc8fd449ac19,3,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.9ad2cd77ebc472c04be279df8f9cb295,2,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.2e954e4c8db07447cc0d0df82992982c,1,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.d9f3e90534f74db89e837afb353d1578,1,"set2,set1_Multi-talker_3",StratifiedKFold
+X21.0773731c711b6b5ef6731dba1c8fd180,2,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.d46cc7dab48dc9687d696349b165ccc9,2,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.171bc48bc5b6f64da0a062b1b5c1ae44,3,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.1de673c83b35f6c2d0fd066baef200ae,2,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.b2a08929c28b0bc95a58d830f0de0c3d,2,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.1e5b66155efe1f5bde504c741b6eb9f4,3,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.1613610a0d7196a72e4ac58b8607b24f,1,"set2,set1_Control_5",StratifiedKFold
+X21.cd9967284e197dd78d408f6cc29cb34f,1,"set2,set1_Control_6",StratifiedKFold
+X21.85293daf6b2bdf392e605567d181a5aa,3,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.ff444a3c6b90407fbc2f56fed3404299,2,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.107ff451da63ee7fffc677ff2454f7ce,1,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.686c387d55a548c6d940d1313e532b92,2,"set2,set1_Single talker_6",StratifiedKFold
+X21.c1c3874d7a9510f24d96aa13ad8666eb,3,"set2,set1_Multi-talker_6",StratifiedKFold
+X21.c21cd461196d93cc55edd51c5e5941cf,1,"set2,set1_Single talker_4",StratifiedKFold
+X21.ccfe0dbafc73c36dce366014edc83578,1,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.83de4e89e10b3821436da4e4ed93ae04,1,"set2,set1_Single talker_3",StratifiedKFold
+X21.f1d8c00ac4e764d2d053bd16eeabd687,1,"set2,set1_Control_3",StratifiedKFold
+X21.6edf999fb187e0736d1a73ea1d864e7b,1,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.bddd924ed2003b09fac1f71677f8b0d1,1,"set2,set1_Talker-specific_5",StratifiedKFold
+X21.606b205697604ee15fe7605577d7f4da,2,"set2,set1_Single talker_3",StratifiedKFold
+X21.c911fd5f7877385cbe04f5b35d6a8e7f,3,"set2,set1_Single talker_5",StratifiedKFold
+X21.e82ddf77ec2a979fa8794302c762f245,1,"set2,set1_Control_6",StratifiedKFold
+X21.ce099fed81811e2d81d153c8c6daceb7,3,"set2,set1_Control_4",StratifiedKFold
+X21.8d41ca9baddd8d02faa14acf473c545f,3,"set2,set1_Talker-specific_3",StratifiedKFold
+X21.1329245b529ec7f8e65f5aed056798d6,2,"set2,set1_Talker-specific_6",StratifiedKFold
+X21.237a33b3d02ab3ac4274a4c5386c3a97,3,"set2,set1_Talker-specific_4",StratifiedKFold
+X21.94346235f869f8be826c8261bc17a024,2,"set2,set1_Control_4",StratifiedKFold
+X21.9363d116b54b183e0087f80ed9717aa1,3,"set2,set1_Multi-talker_5",StratifiedKFold
+X21.d6d7608746f24a5c9a7c4d2d17188759,2,"set2,set1_Control_3",StratifiedKFold
+X21.c383f4053493850ce0fb445b40a902f7,2,"set1,set2_Control_5",StratifiedKFold
+X21.d897a4f0fa34c3b14796651724c26b0b,1,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.8746531b88dff37409223eb87b73ec4d,3,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.82d9c4e257367931da07eb97b3a0ecc4,3,"set1,set2_Control_3",StratifiedKFold
+X21.fc9ce21584932098e497a98067a174b9,1,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.0202afbc7502337e8841923b31ff7277,1,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.97579edd95bb32d456a017a103e6a698,3,"set1,set2_Single talker_3",StratifiedKFold
+X21.07666f5a141bd17aeefebd7d26c6059b,3,"set1,set2_Control_5",StratifiedKFold
+X21.4ef0fafc8234aeadb2e04a603718add2,2,"set1,set2_Control_6",StratifiedKFold
+X21.87374087fffa1304ac0098b373661393,3,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.ff9f37ba6fa8b3be373a94accc357279,1,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.a1e86b8a7214b483b8ba9cf99dfdd76a,3,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.f7c429c42bcd045c4f77750e4ed09323,3,"set1,set2_Single talker_3",StratifiedKFold
+X21.6047c830d282d1fce19fcbb2362f0c5a,3,"set1,set2_Control_6",StratifiedKFold
+X21.d61dcbb38956ab7ef4189865f5290af7,2,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.f14baf66a3bb940ad367bf87d74b7102,2,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.2d9fd5d2f504ffbafbf78fd0cb36815e,3,"set1,set2_Single talker_4",StratifiedKFold
+X21.c994f2072e1ed22172c722afff4f59ea,1,"set1,set2_Single talker_4",StratifiedKFold
+X21.2b5c9f8e148ffcca0e5cf11862ec20e2,2,"set1,set2_Single talker_5",StratifiedKFold
+X21.7092c19d9cd51d119dc61d34df4e80af,1,"set1,set2_Control_3",StratifiedKFold
+X21.958d634c31c9cc3b1063251665e5785f,2,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.6615769c94e1c2aa44fee134b6cb75df,2,"set1,set2_Control_3",StratifiedKFold
+X21.9385f1fa476a4c813a41c8eae7c3b7e4,3,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.0c086e54b1e5e1465225ca56b0ccfd6d,2,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.097d502843d5e87eb4b100aff36e3f45,1,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.eaf2abd63766cffbaa6b6c93a87dba4f,2,"set1,set2_Single talker_6",StratifiedKFold
+X21.fc31588bdd542b1d95b3f41e1389dda8,2,"set1,set2_Control_6",StratifiedKFold
+X21.46a0aaa982b9fb6a956dfe75cb2f68f9,2,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.9826113edbc21f82c2705ad9c8acf214,1,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.c50dcc877da714eb354431c5c51286f7,1,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.7b3013880f2f0a36e9d12f68ca841ec3,2,"set1,set2_Control_4",StratifiedKFold
+X21.8457666a54e3f6aadc67a93b3f1233fb,3,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.784bce890d96994d6a12f517f535d58c,3,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.9484aaf3f0c770c3489facdfd997e8c9,2,"set1,set2_Control_4",StratifiedKFold
+X21.690a572085d1ddd8afcee0801f506320,1,"set1,set2_Single talker_6",StratifiedKFold
+X21.f92c4b0dcd3905d6fbc866a467fda5a6,2,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.23abe6dca9c2fa79237f072b182f6738,2,"set1,set2_Control_6",StratifiedKFold
+X21.7a5ee5239ad5ea203645bf4fe328ba96,3,"set1,set2_Control_4",StratifiedKFold
+X21.84018ff0fa83d612042ce54d21d936eb,2,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.dbef9d43c1e0698524a45e3d635ec2d9,3,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.f7338ff85bdd07887c2e13b315f963cd,2,"set1,set2_Single talker_4",StratifiedKFold
+X21.122af1ac1819b90ce594ea5aefcdbdeb,1,"set1,set2_Control_4",StratifiedKFold
+X21.69a6ebb39ef5563af11a37803177ad98,2,"set1,set2_Control_4",StratifiedKFold
+X21.d7adde00d33b5fc6e84cac9b39e499e8,1,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.ecadc35faddf6c6ac0f76d300bc947ac,1,"set1,set2_Control_3",StratifiedKFold
+X21.9b849728861c286ccecb44634db6c0a3,1,"set1,set2_Single talker_6",StratifiedKFold
+X21.4e373aa3eb43e90c791b5626e1898623,3,"set1,set2_Control_3",StratifiedKFold
+X21.7d4317e291c47d617513f598c6ad3372,3,"set1,set2_Single talker_5",StratifiedKFold
+X21.71b207975d6e4230c13267950a0aa62d,1,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.a3d27135fc543c46aa50708b6bb211b6,1,"set1,set2_Single talker_4",StratifiedKFold
+X21.babef2feaea8bbe82174bcabb0dc492c,3,"set1,set2_Control_6",StratifiedKFold
+X21.178d4149d093b6cc715e02f82efe2ecc,2,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.b44e7ed1c8b41efb824ac0a698ca10e5,3,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.020c7be259c2104ae464e2e5a1781b16,1,"set1,set2_Single talker_3",StratifiedKFold
+X21.1b24390e2445246bcc05ee358b5af0e1,3,"set1,set2_Single talker_6",StratifiedKFold
+X21.273573951c907d05e062263e1a2cbd50,3,"set1,set2_Control_4",StratifiedKFold
+X21.d8b96eaffb5d54381352aae18a3c78ce,2,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.2c8cb26b4de025cbd7351f4861655d1f,3,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.d4f3a38e1690a3418307c4ddf286bb06,2,"set1,set2_Single talker_3",StratifiedKFold
+X21.360d891f465425b79faeae0871253ad7,1,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.7811968eda64af95c51eaf5c790ee229,1,"set1,set2_Control_4",StratifiedKFold
+X21.3c054fb684fcfbf678c58a49d753ba53,2,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.97c9c98efa36d871c59ee278760cf90f,3,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.64ceb7a14579034fdb19089b97ecbbad,1,"set1,set2_Single talker_5",StratifiedKFold
+X21.a0242d2afdb0288f6642ca729d7b01f6,2,"set1,set2_Single talker_6",StratifiedKFold
+X21.32342e02f563fa88db3bcc854df437bf,2,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.2cbe1db29928a999ab0bcf534e51d533,3,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.f68deb12f7ed4631109d632790168f7e,1,"set1,set2_Control_4",StratifiedKFold
+X21.b41d793f9bf36bba755122b8c9f431ea,3,"set1,set2_Single talker_6",StratifiedKFold
+X21.1af41dc5e712ae7a87f8c7b1a217a773,2,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.50cc91e4b029146144b856af8e0a02a3,2,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.add4ac18c294a4be63e2b2d38a1b48b4,3,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.debe66c1be7e9ee1fb23b5543c54bb1b,3,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.aa9fbb532cc2f470ee3ad86c43b7aed8,3,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.0c61f333a108b50978b45c87044a9da2,1,"set1,set2_Control_4",StratifiedKFold
+X21.1c44a06f10b74d67471ce9fe05cd3b1f,2,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.c00bdf282541433a5a635dc804037517,1,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.02c717b37194ec7fb742924e5207859c,3,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.58dc6c7e9e447625c6fce977283c269d,3,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.59acea6b6c1a4fae86499c47c5c7766f,3,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.4902189907a24bc35a2619a75991fe82,2,"set1,set2_Single talker_3",StratifiedKFold
+X21.7f2ce952c3969b99723db1bf7ea87546,1,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.cc9838a64c6c3170018ededcc2b84d58,3,"set1,set2_Single talker_5",StratifiedKFold
+X21.ea7a56b4c63606f2f2ab27bc1ef32fe3,3,"set1,set2_Single talker_4",StratifiedKFold
+X21.362946800f9ca86b0ab5c9b330fc77ad,1,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.0950e0e46bdce265235be956055575f5,3,"set1,set2_Control_5",StratifiedKFold
+X21.8bbec18c8dc1a165532ca5a552d3bc31,3,"set1,set2_Single talker_6",StratifiedKFold
+X21.e3163263a73b875ef670026ec832a436,1,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.d2d781922c40ad076e71e7871a52f7a4,2,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.0958fec9c589e863c28ccb280a442229,1,"set1,set2_Single talker_3",StratifiedKFold
+X21.030d0b2b8c88fe760c1eefe71a4fe797,3,"set1,set2_Control_6",StratifiedKFold
+X21.ead2fd1cdeae3b8457d168e1f96bcd13,1,"set1,set2_Single talker_4",StratifiedKFold
+X21.1add24d782196928395cf5fe4f59632d,1,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.31f25df7f0a8220a2e52baa627c5127a,2,"set1,set2_Single talker_6",StratifiedKFold
+X21.70c4ff5e9085308d5fe5f86fc6449d30,3,"set1,set2_Control_4",StratifiedKFold
+X21.58bd692c33f3b1f72a47fe31aad5e021,3,"set1,set2_Single talker_4",StratifiedKFold
+X21.81872de2d512c13ec76cc4a1fb4fefac,1,"set1,set2_Single talker_3",StratifiedKFold
+X21.3f84dbe1dac6fe9d89a99e81f56dd01a,1,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.a548147c199c3b92425c3c938d82103b,2,"set1,set2_Control_3",StratifiedKFold
+X21.7e1a9fdd3781bad21bc0d8c3a40866ff,3,"set1,set2_Control_3",StratifiedKFold
+X21.ea12346577e29221b311ab3ce29ef439,2,"set1,set2_Control_6",StratifiedKFold
+X21.855af998d17cfc134d5b95b68f9c4e07,1,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.3458c874333b4b88330c52918bbd137f,1,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.5a097530c382d34041b8bc818f8214af,1,"set1,set2_Single talker_6",StratifiedKFold
+X21.e6988adf78f1654a102eccf4d92bcec6,2,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.67d3426e028685a02cb880f3b6e1e1c6,2,"set1,set2_Single talker_4",StratifiedKFold
+X21.ebbbae4f89b380b5ff8d3dc1a97cf16c,1,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.38741d68652be431fb30c117ebef0ad2,1,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.ba6a9d4cf664104463b385aa98f44743,1,"set1,set2_Single talker_5",StratifiedKFold
+X21.cc43e93ef8277c311383ea3243a8aee5,3,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.ea87ef8748d2517f2eae4b4589e0cc87,3,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.34c5dcc79bc8979917bca910d6a56d3b,2,"set1,set2_Single talker_6",StratifiedKFold
+X21.491fe92e16462d8d43ff002f777d15b3,1,"set1,set2_Control_3",StratifiedKFold
+X21.95c8f701fcfdb4518acdcacdfdbfb7a0,2,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.90d9d7c405beaa7488d03799c89ba784,1,"set1,set2_Control_6",StratifiedKFold
+X21.f6d85e3299dec9fffb8485e51c0c7326,2,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.2d25f106d7da35f39b9e980cf1ea109e,2,"set1,set2_Control_5",StratifiedKFold
+X21.e4a66d729a112d865f87377e9621633f,2,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.7ff6ced3efa569ff8808314fa57f1f56,2,"set1,set2_Single talker_5",StratifiedKFold
+X21.ddeb3bc677d7b6984d055287f2599c5d,3,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.c910284dbbfdb43a3b9ceb6ce9c28740,2,"set1,set2_Single talker_3",StratifiedKFold
+X21.13b51fcece705a5459fad5ce1001278e,2,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.fa443bbb5dc57c7af9602f56f3a62b42,2,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.49c567f1012440aa7cffda3f831f0cd2,1,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.020c76efcc87293cc9ea6fc85be93243,1,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.8e14befbeffb3248062e95aefa00982b,2,"set1,set2_Control_5",StratifiedKFold
+X21.72f4ac5dc753c1771310135ed3240636,1,"set1,set2_Control_6",StratifiedKFold
+X21.dfe30a492ce03ada11efb9a590a7474c,2,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.15230c4eb9414dbfbac8312a3adf89de,1,"set1,set2_Control_5",StratifiedKFold
+X21.3855a6b955e21fcbe2d54bdc83922465,1,"set1,set2_Control_5",StratifiedKFold
+X21.7278c5967afab1d2842d5d17f637749d,3,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.111b51bdc9d63d17e5b03e16b763ad03,3,"set1,set2_Talker-specific_4",StratifiedKFold
+X21.b32e32b80fb4ea372bfb8799f2e0a4a4,2,"set1,set2_Control_3",StratifiedKFold
+X21.02df8d3b08a6de375b962ede739a0992,1,"set1,set2_Single talker_3",StratifiedKFold
+X21.eba64d8a4b58cd4ff87372207788c1a2,3,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.297e8ab96c4a7360619e74b2123d2abb,3,"set1,set2_Talker-specific_5",StratifiedKFold
+X21.0efe000242abdb021414d560bcd78139,1,"set1,set2_Single talker_5",StratifiedKFold
+X21.77e6b2cada9de1f65a3eb366b77ca8db,3,"set1,set2_Talker-specific_6",StratifiedKFold
+X21.8599117350c9a8318126b6bb49dfd028,1,"set1,set2_Control_6",StratifiedKFold
+X21.8fe34053b5ea79bed45a9e5c7381a793,3,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.f0be26ecb356e4b74c9747786e652b4c,2,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.218c8a40e8c364b04e8ff4e92a60dbbb,3,"set1,set2_Single talker_4",StratifiedKFold
+X21.9530bdd4c804067f6f58f01c18d371a3,1,"set1,set2_Multi-talker_6",StratifiedKFold
+X21.75d647002538ea6deffca8b210f7eb0e,2,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.66000974dab792389c71ffd9005a1942,2,"set1,set2_Single talker_4",StratifiedKFold
+X21.f25c36abef4b7f76180dba700c848a15,1,"set1,set2_Single talker_5",StratifiedKFold
+X21.0c40b427abdd31098f4c65d9a011cd29,1,"set1,set2_Control_5",StratifiedKFold
+X21.0c8105aca604f0d20d6cbf8ad6895fdd,2,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.c6c39b3bd7250e513b274ea286f9dee3,1,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.16f803983cd4c44a9dac51d6ffbb01cb,3,"set1,set2_Control_5",StratifiedKFold
+X21.a1e111e94be1abd2daec335b01d2c353,1,"set1,set2_Talker-specific_3",StratifiedKFold
+X21.f2eb8e1cf1a2af606da2bed8881866f9,1,"set1,set2_Control_3",StratifiedKFold
+X21.d7b39b3c27c19e4742c003bb0e54d961,2,"set1,set2_Multi-talker_4",StratifiedKFold
+X21.03e3d42c290f0dddfc6dec03d147b746,2,"set1,set2_Single talker_5",StratifiedKFold
+X21.1a92fbb6fbd90440fc98201479c51aa1,2,"set1,set2_Multi-talker_3",StratifiedKFold
+X21.06141bb127d7fc26711ea295e96a20f2,3,"set1,set2_Single talker_3",StratifiedKFold
+X21.bc4f48b4671f3f87238b85af458093d1,2,"set1,set2_Control_5",StratifiedKFold
+X21.17e0ed85069ed23b19653508b30a52aa,3,"set1,set2_Single talker_5",StratifiedKFold
+X21.b985a11f9fc4599fcbb58cc157631cb0,3,"set1,set2_Multi-talker_5",StratifiedKFold
+X21.d81897e03b15544ec6bfc14f1115cf8d,3,"set1,set2_Multi-talker_4",StratifiedKFold

@@ -1,0 +1,19 @@
+{
+  "behavior_path": "data/preprocessed data/B23-behavioral-data.csv",
+  "behavior_sha256": "44aebe6eaf200c58d23fea41c634e4baf7d87e0477bc847097f3d869b58fafab",
+  "dataset_id": "B23",
+  "fold_assignment_map_sha256": "ebe9615cdcf8438867f4caa88d5f7d38a70fb8289250363d1e858473e0357d12",
+  "generated_utc": "2026-08-14T20:35:22+00:00",
+  "outputs_sha256": {
+    "behavioral_ceiling_z.csv": "a938896743b3df954bab8faba91ee83c304d49f49094facef336573975828636",
+    "diagnostics.csv": "754d18009159b6a64462eb277f27b42d627a48e9bccc67d6515c52106dc5f8b6",
+    "model_input.csv": "549447507c411ffee1452a5f65323ad2ab4d1358d999cbd5f8190adb38fba6e3"
+  },
+  "publication_status": "notebook_compatibility_behavioral_ceiling",
+  "r_engine_sha256": "5793346c41949be6e41dcfd1bd8a73141a79f8d1be4264d80b2015b67c7f1b2b",
+  "runner_sha256": "bde742556fb8fb1a19ef1a872a050d1d14a0e4d95cdce1d54daf7425c0a5326b",
+  "schema_version": "notebook-behavioral-ceiling-z-v1",
+  "source_directory": "results/statistics/B23-base-variability-z-notebook-simplified-tau2-v1",
+  "source_metadata_sha256": "c4137e7bdda4de12756d5af387c7d389bb7586512ee67f861861330939e94727",
+  "status": "complete"
+}

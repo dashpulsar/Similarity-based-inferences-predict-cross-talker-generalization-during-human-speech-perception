@@ -1,0 +1,28 @@
+{
+  "allow_nonpublishable_smoke": false,
+  "analysis_script_sha256": "8dae2374d90e93c40cdad5d68f43014abe87e9f1d81c5c9f18220a3a2af4a683",
+  "behavior_expansion": "deferred_to_dedicated_variability_runner",
+  "created_utc": "2026-08-14T00:33:13.680498+00:00",
+  "dataset_id": "B23",
+  "model_variant": "ft",
+  "n_analysis_groups": 576,
+  "n_cells": 5184,
+  "output_path": "C:/Users/Alex/Documents/GitHub/Similarity-based inferences predict cross-talker generalization during human speech perception/results/derived/B23-exposure-variability-predictor-cells-ft.csv",
+  "output_sha256": "2c53782ebd4568f8a4c0dfc7641b2c76f09b288c398b765ad5308e87ad1e9a2d",
+  "predictor_cluster_definition": "one original B23 exposure condition",
+  "production_inventory_required": true,
+  "schema_version": "variability-predictor-cells-v1",
+  "source_behavior_path": "C:/Users/Alex/Documents/GitHub/Similarity-based inferences predict cross-talker generalization during human speech perception/data/preprocessed data/B23-behavioral-data.csv",
+  "source_behavior_sha256": "44aebe6eaf200c58d23fea41c634e4baf7d87e0477bc847097f3d869b58fafab",
+  "source_variability_path": "C:/Users/Alex/Documents/GitHub/Similarity-based inferences predict cross-talker generalization during human speech perception/results/derived/B23-hubert-ft-tsne-3d-exposure-variability.csv",
+  "source_variability_provenance_path": "C:/Users/Alex/Documents/GitHub/Similarity-based inferences predict cross-talker generalization during human speech perception/results/derived/B23-hubert-ft-tsne-3d-exposure-variability-provenance.json",
+  "source_variability_provenance_sha256": "91b8acf6909fa4511ec98dbac678136b75576faa8ba22ea72c2ca1b374262f22",
+  "source_variability_sha256": "260986fcde2f34dbfb8d7877eba174d677a4a3f32ab48a9bbcc6ee63ea94831b",
+  "unavailable_value_policy": "preserve_missing_never_impute",
+  "value_status_counts": {
+    "available": 3168,
+    "blocked": 1152,
+    "mathematically_undefined_for_token_inventory": 288,
+    "not_applicable": 576
+  }
+}
