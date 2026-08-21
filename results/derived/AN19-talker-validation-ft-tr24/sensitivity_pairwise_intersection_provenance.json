@@ -1,0 +1,51 @@
+{
+  "aggregation_rule": "physical_pairs_mean_within_word_then_equal_weight_mean_across_words",
+  "analysis_script_sha256": "60ad9b5f4bdc06583dc1354966904f9bc9f9c56d13f1bf6e2b2c25b1a9a2011e",
+  "behavior_sha256": "17f6831e3d37b22e9baf4e2e818c715d2fea6cee84f0178c5ef1c4d32603314e",
+  "coordinate_scaling": "none",
+  "dataset_id": "AN19",
+  "distance_metric": "minkowski",
+  "dtw_backend": "numba_nogil",
+  "dtw_normalization": "mean_sequence_length",
+  "estimand": "pairwise_intersection_word_talker_validation_sensitivity",
+  "estimand_note": "pair-specific complete word intersections; descriptive sensitivity only",
+  "generated_utc": "2026-08-14T12:47:07+00:00",
+  "layer": "tr_24",
+  "manifest_sha256": "c395b3a7f5b9e75af43a8040cc43640f70250d17df5160846a22fb21d15cd1b3",
+  "metrics_script_sha256": "62935e7653c44c3c81e307b0f797361b5997b6909d6ffcf6b62db72702edf5f9",
+  "model_variant": "ft",
+  "numba_version": "0.60.0",
+  "output_files": {
+    "sensitivity_pairwise_intersection_physical_recording_pairs.csv": {
+      "rows": 128102,
+      "sha256": "66cc740ebb4d021e2def433af516aabe8d5fe82843b80b65c69806a80abf4a6c"
+    },
+    "sensitivity_pairwise_intersection_talker_pair_summary.csv": {
+      "rows": 861,
+      "sha256": "9a09ce1eec7e22911f687ae7cb97145b2c709b8d2c6edadcc3855b7f52594fb6"
+    },
+    "sensitivity_pairwise_intersection_word_pair_summary.csv": {
+      "rows": 126814,
+      "sha256": "da03970d319f0f51e75d63371a727815588b125c9b2a2c1a8e94b98edee0f699"
+    }
+  },
+  "pair_eligible_recording_count": 6256,
+  "pair_word_set_hash_column": "word_set_sha256",
+  "physical_recording_pair_count": 128102,
+  "publication_status": "publishable_sensitivity",
+  "reduced_h5_sha256": "18c7b669c9edb7b67f7d0a1e4034efde1ff1b45bda0c24b11d17347074e269ed",
+  "representation": "hubert_tsne_3d",
+  "schema_version": "an19-pairwise-intersection-talker-validation-v1",
+  "shared_word_pair_cell_count": 126814,
+  "similarity_aggregation": "equal_weight_mean_over_words_of_mean_physical_exp(-raw_distance)",
+  "source_features_sha256": "44b30c95bbcf58353f8a92c95a2a516dc9999a20693505c71d9cc8ff5169dcf8",
+  "talker_pair_count": 861,
+  "tau": 2.0,
+  "unpaired_recording_count": 5,
+  "word_range_per_talker_pair": [
+    142,
+    149
+  ],
+  "word_scope": "pairwise_intersection_142_to_149_words",
+  "word_universe_sha256": "79cfbdd86b0c5f7ce37d2a778f0f4ef29dda21b6007568cedda5a19e879e5178"
+}

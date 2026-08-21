@@ -1,0 +1,39 @@
+{
+  "condition_order": [
+    "Single talker",
+    "Multi-talker"
+  ],
+  "control_policy": "a_control excluded because repository exposure similarity is undefined",
+  "curve_definition": "count-exact expanded word trials; unadjusted logistic regression by test talker and exposure class",
+  "dataset_id": "B23",
+  "expanded_word_trials": 54096,
+  "generated_utc": "2026-08-14T07:19:48+00:00",
+  "k_origin": "mean_of_three_notebook_optimized_tr24_fold_k_from_B23_ft_original_structure_z_notebook_folds_v4",
+  "layer": "tr_24",
+  "model_variant": "ft",
+  "not_a_hierarchical_glmm_curve": true,
+  "outputs_sha256": {
+    "b23_s_curves_by_condition.png": "3eeccead0671c4afc32b2e03ed6e3141c096d0e35f793006ca212c480c8e0c3f",
+    "b23_s_curves_by_condition.svg": "590330937d94e1088cfcf26cdf9a7dba8af104ded1b0da37f52ea55cece77641",
+    "b23_s_curves_pooled.png": "ee059d96efdf9778ae1f40815fa04e563bf37d91edbf8d3b278232791b4d0f7b",
+    "b23_s_curves_pooled.svg": "34d678acf533975abfa2640c1658ba2268c1a4369e076852e75743de62675af1",
+    "s_curve_word_trials.csv": "6e8c59c046cb39f029878c3f62f66dad48f9b99d284488a1e61cbe8cdfb7436f"
+  },
+  "participants": 168,
+  "publication_status": "descriptive_scale_explicit_not_hierarchical_glmm",
+  "schema_version": "b23-notebook-s-curves-v1",
+  "seed": 230519,
+  "sentence_count_rows": 10080,
+  "similarity_definition": "exp(-k * raw_distance), k=0.0010039470970037",
+  "source_glmm_directory": "results/glmm/B23-ft-tsne-euclidean-v3",
+  "source_model_input_sha256": "df8cc16defe71d96a89ebc09ffc0e8ba454b87f025ad12488661b5528d85e90b",
+  "source_run_metadata_sha256": "712247884a4e73cefd682a1d27af73f7a64193377cbc6ec2a7310616b935ec98",
+  "source_runner_sha256": "636deafa5a754d50853b606c4ac21621c050de51a16e8132e76544561c4ac690",
+  "talker_order": [
+    "B23.BRP.BRP",
+    "B23.FAR.FAR",
+    "B23.TUR.TUR",
+    "B23.SPA.SPA"
+  ],
+  "uncertainty_display": "none; deterministic binned means and fitted curve, avoiding resampling pseudo-replication of expanded word counts"
+}
