@@ -5,8 +5,10 @@ All paths declared in JSON are resolved relative to the JSON file. The commands 
 ## 0. Environment and audit
 
 ```powershell
+conda env create -f cross_talker_generalization\environment.yml
+conda activate cross-talker-generalization
 $env:PYTHONPATH = "$PWD\cross_talker_generalization\src"
-conda run --no-capture-output -n BayesPCN python -m ctg.cli audit `
+python -m ctg.cli audit `
   --project cross_talker_generalization\configs\project.json `
   --output cross_talker_generalization\artifacts\audit
 ```
@@ -36,11 +38,11 @@ The script runs `build-pairs` → `make-folds` → optional `fit-standardizers` 
 ## 2. SBI: step-by-step execution
 
 ```powershell
-conda run --no-capture-output -n BayesPCN python -m ctg.cli build-pairs `
+python -m ctg.cli build-pairs `
   --dataset X21 --project cross_talker_generalization\configs\project.json `
   --output cross_talker_generalization\artifacts\derived\X21-pairs
 
-conda run --no-capture-output -n BayesPCN python -m ctg.cli compute-distances `
+python -m ctg.cli compute-distances `
   --pairs cross_talker_generalization\artifacts\derived\X21-pairs\pairs.csv `
   --store X21_hubert_base_tsne --features tr_24 `
   --project cross_talker_generalization\configs\project.json `
@@ -48,7 +50,7 @@ conda run --no-capture-output -n BayesPCN python -m ctg.cli compute-distances `
   --jobs 8 `
   --output cross_talker_generalization\artifacts\derived\X21-distances.csv
 
-conda run --no-capture-output -n BayesPCN python -m ctg.cli aggregate `
+python -m ctg.cli aggregate `
   --cells cross_talker_generalization\artifacts\derived\X21-pairs\cells.csv `
   --distances cross_talker_generalization\artifacts\derived\X21-distances.csv `
   --profile cross_talker_generalization\configs\confirmatory.json `
@@ -75,12 +77,12 @@ X21 defaults to presentation weighting: 16 tokens in Single-talker and Talker-sp
 ## 4. Compatibility behavioral ceiling
 
 ```powershell
-conda run --no-capture-output -n BayesPCN python -m ctg.cli make-ceiling-input `
+python -m ctg.cli make-ceiling-input `
   --project cross_talker_generalization\configs\project.json --dataset X21 `
   --folds cross_talker_generalization\artifacts\derived\X21-folds.csv `
   --output cross_talker_generalization\artifacts\derived\X21-ceiling-input.csv
 
-conda run --no-capture-output -n BayesPCN python -m ctg.cli fit-ceiling-compatibility `
+python -m ctg.cli fit-ceiling-compatibility `
   --input cross_talker_generalization\artifacts\derived\X21-ceiling-input.csv `
   --output cross_talker_generalization\artifacts\models\X21-ceiling-compatibility
 ```
@@ -90,12 +92,12 @@ Each fold's item log odds are estimated from the other two participant folds. Th
 ## 5. Figures
 
 ```powershell
-conda run --no-capture-output -n BayesPCN python -m ctg.cli plot-s-curves `
+python -m ctg.cli plot-s-curves `
   --input cross_talker_generalization\artifacts\derived\X21-model-input.csv `
   --feature tr_24 --bins 10 `
   --output cross_talker_generalization\artifacts\figures\X21-tr24-s-curves
 
-conda run --no-capture-output -n BayesPCN python -m ctg.cli plot-distance-correlations `
+python -m ctg.cli plot-distance-correlations `
   --input cross_talker_generalization\artifacts\derived\X21-distances.csv `
   --output cross_talker_generalization\artifacts\figures\X21-distance-correlations
 ```
@@ -106,7 +108,7 @@ S-curve points are trial-count-weighted accuracy in predictor quantile bins with
 
 ```powershell
 $env:PYTHONPATH = "$PWD\cross_talker_generalization\src"
-conda run --no-capture-output -n BayesPCN python -m unittest discover `
+python -m unittest discover `
   -s cross_talker_generalization\tests -v
 ```
 
@@ -116,7 +118,7 @@ The report builder merges SBI, acoustic baselines, all available variability pro
 
 ```powershell
 $env:PYTHONPATH = "$PWD\cross_talker_generalization\src"
-conda run --no-capture-output -n BayesPCN python -m ctg.cli build-report `
+python -m ctg.cli build-report `
   --repository . `
   --output cross_talker_generalization\final_report_rebuild
 ```

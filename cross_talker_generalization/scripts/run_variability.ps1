@@ -9,7 +9,7 @@ param(
     [string[]]$Features = @(),
     [string[]]$Measures = @(),
     [int]$Jobs = 8,
-    [string]$Environment = "BayesPCN"
+    [string]$Environment = "cross-talker-generalization"
 )
 
 $ErrorActionPreference = "Stop"

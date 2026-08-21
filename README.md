@@ -128,12 +128,16 @@ See [FILE_GUIDE.md](FILE_GUIDE.md) for file-level navigation and [TECHNICAL_DOCU
 
 The tested Python environment is 3.9.18. Python dependencies are pinned in [pyproject.toml](cross_talker_generalization/pyproject.toml) and [environment.yml](cross_talker_generalization/environment.yml). GLMM fitting additionally requires R 4.4.1 and `lme4` 1.1-35.5.
 
-The repository currently uses the existing `BayesPCN` Conda environment for verified runs. From the repository root:
+Create the project environment from the versioned specification, then activate it from the repository root:
 
 ```powershell
+conda env create -f cross_talker_generalization\environment.yml
+conda activate cross-talker-generalization
 $env:PYTHONPATH = "$PWD\cross_talker_generalization\src"
-conda run --no-capture-output -n BayesPCN python -m ctg.cli --help
+python -m ctg.cli --help
 ```
+
+If the environment already exists, only the activation and `PYTHONPATH` commands are needed. The commands below assume that environment is active.
 
 ## Quick verification
 
@@ -141,14 +145,14 @@ Run the production tests:
 
 ```powershell
 $env:PYTHONPATH = "$PWD\cross_talker_generalization\src"
-conda run --no-capture-output -n BayesPCN python -m unittest discover `
+python -m unittest discover `
   -s cross_talker_generalization\tests -v
 ```
 
 Audit the registered behavioral data, manifests, and feature stores:
 
 ```powershell
-conda run --no-capture-output -n BayesPCN python -m ctg.cli audit `
+python -m ctg.cli audit `
   --project cross_talker_generalization\configs\project.json `
   --output cross_talker_generalization\artifacts\audit-current
 ```
@@ -163,7 +167,7 @@ Run an X21 Tr-24 SBI analysis:
 Build a new final report without overwriting the reviewed release:
 
 ```powershell
-conda run --no-capture-output -n BayesPCN python -m ctg.cli build-report `
+python -m ctg.cli build-report `
   --repository . `
   --output cross_talker_generalization\final_report_rebuild
 ```

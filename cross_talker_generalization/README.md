@@ -24,8 +24,10 @@ This directory is the repository's only production analysis codebase. It reads b
 Run from the repository root:
 
 ```powershell
+conda env create -f cross_talker_generalization\environment.yml
+conda activate cross-talker-generalization
 $env:PYTHONPATH = "$PWD\cross_talker_generalization\src"
-conda run --no-capture-output -n BayesPCN python -m ctg.cli audit `
+python -m ctg.cli audit `
   --project cross_talker_generalization\configs\project.json `
   --output cross_talker_generalization\artifacts\audit
 ```
@@ -42,7 +44,7 @@ Omit `-Features tr_24` to process all registered layers and generate the layer-d
 Build a new final report:
 
 ```powershell
-conda run --no-capture-output -n BayesPCN python -m ctg.cli build-report `
+python -m ctg.cli build-report `
   --repository . `
   --output cross_talker_generalization\final_report_rebuild
 ```
