@@ -1,0 +1,19 @@
+{
+  "behavior_path": "data/preprocessed data/AN19-behavioral-data.csv",
+  "behavior_sha256": "17f6831e3d37b22e9baf4e2e818c715d2fea6cee84f0178c5ef1c4d32603314e",
+  "dataset_id": "AN19",
+  "fold_assignment_map_sha256": "e41e66ffdd3fb6cdf6898fe0a174e8b581f580a724a419ba7ac4e7ce1fc11dc9",
+  "generated_utc": "2026-08-14T20:35:18+00:00",
+  "outputs_sha256": {
+    "behavioral_ceiling_z.csv": "59714b5df1f7bfc6cef7dbcae7dbb71e8346f15ed787b98573388554d86e8ad9",
+    "diagnostics.csv": "34977c1802864a2b7906031e0bfa687cc0e7e7568dd3b6f561abf05f90b22481",
+    "model_input.csv": "0d38746748833db6de776bd014f5cc59888ac5f8642876c1e1b5219e7c6f83b3"
+  },
+  "publication_status": "notebook_compatibility_behavioral_ceiling",
+  "r_engine_sha256": "5793346c41949be6e41dcfd1bd8a73141a79f8d1be4264d80b2015b67c7f1b2b",
+  "runner_sha256": "bde742556fb8fb1a19ef1a872a050d1d14a0e4d95cdce1d54daf7425c0a5326b",
+  "schema_version": "notebook-behavioral-ceiling-z-v1",
+  "source_directory": "results/statistics/AN19-base-variability-z-notebook-simplified-tau2-v1",
+  "source_metadata_sha256": "bc933dfab0e5f089e0d3f26598b2cb5c4c9f6045bbdbe2a704802c04e4684f17",
+  "status": "complete"
+}

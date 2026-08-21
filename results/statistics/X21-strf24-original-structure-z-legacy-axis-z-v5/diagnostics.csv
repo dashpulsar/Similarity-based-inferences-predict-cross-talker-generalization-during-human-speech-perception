@@ -1,0 +1,10 @@
+layer,fold,type,k,status,note,n_cells,n_trials,converged,singular,optimizer_code,convergence_messages,warnings,log_likelihood,elapsed_seconds
+global_z,0,diagnostic,0.1872126832469752,complete,fold-specific k optimized without held-out test outcomes,,,,,,,,,
+global_z,1,diagnostic,0.008795756054723578,complete,fold-specific k optimized without held-out test outcomes,,,,,,,,,
+global_z,2,diagnostic,0.030887039533628063,complete,fold-specific k optimized without held-out test outcomes,,,,,,,,,
+global_z,0,corrected,0.07563182627844228,complete,exact legacy cross-fold mean-k result; contains k leakage,,,,,,,,,
+global_z,1,corrected,0.07563182627844228,complete,exact legacy cross-fold mean-k result; contains k leakage,,,,,,,,,
+global_z,2,corrected,0.07563182627844228,complete,exact legacy cross-fold mean-k result; contains k leakage,,,,,,,,,
+behavioral_ceiling,0,,,,,412.0,5557.0,True,False,0.0,,,-651.62090641381,0.19
+behavioral_ceiling,1,,,,,412.0,5560.0,True,False,0.0,,,-629.907921719581,0.14
+behavioral_ceiling,2,,,,,412.0,5360.0,True,True,0.0,boundary (singular) fit: see help('isSingular'),,-581.119456954994,0.17

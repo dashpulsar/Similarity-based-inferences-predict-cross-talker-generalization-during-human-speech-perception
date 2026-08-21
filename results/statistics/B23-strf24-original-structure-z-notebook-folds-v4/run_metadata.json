@@ -1,0 +1,51 @@
+{
+  "aggregation": "Sentence,TestTalker,Condition within held-out participant fold",
+  "ceiling_fold_z": [
+    5.72833446971041,
+    4.09009281798607,
+    4.10648632652824
+  ],
+  "ceiling_item_definition": "Condition x Sentence x TestTalker empirical log-odds from full training folds",
+  "ceiling_population": "all 195 participants and all 11,700 test rows",
+  "control_policy": "a_control excluded from similarity because exposure similarity is undefined; retained in behavioral ceiling",
+  "dataset_id": "B23",
+  "fold_assignment": "notebook full-195 condition-stratified StratifiedKFold shuffle=True random_state=42, folds 1..3",
+  "fold_assignment_artifact": "fold_assignments.csv",
+  "fold_assignment_map_sha256": "ebe9615cdcf8438867f4caa88d5f7d38a70fb8289250363d1e858473e0357d12",
+  "fold_assignment_records": 195,
+  "fold_roles": "rotating one train, one validation, and one held-out test fold",
+  "fold_source_model_input_sha256": null,
+  "folds": 3,
+  "formula": "cbind(correct,incorrect) ~ similarity_z + (1|TestTalker) + (1|Sentence)",
+  "generated_utc": "2026-08-14T07:10:49+00:00",
+  "input_path": "results/derived/B23-acoustic-strf24_legacy-global_z-same-content-glmm-input.csv",
+  "input_provenance_sha256": "fe4faaa837d14592dd5636d64a0f1336f2259ea6260594c1bc4a6e943e9e783d",
+  "input_sha256": "3a24fdaf7a5693e11df970099059138d2e6b28a10f8f7923e37de663e8ba8f92",
+  "jobs_effective": 1,
+  "k_selection": "per test fold: bounded scalar optimization in [0.001,5] on a separate validation fold; minimize -validation_z + 0.1*k^2",
+  "layers": [
+    "global_z"
+  ],
+  "legacy_ceiling_status": "values [4.84,3.68,4.47] were hard-coded in legacy plotting cells without a reproducible computation chain and are not reused",
+  "mapping_policy": "repository B23 v2 actual single and three included-talker multi mapping; no external-dataset talkers",
+  "model_variant": "acoustic_baseline",
+  "optional_unified_lineage_crosscheck": false,
+  "outputs_sha256": {
+    "behavioral_ceiling_z.csv": "2e2d26400b2ce832c58813dd16b06777e479597441e167c9092cde8af4ef7f47",
+    "diagnostics.csv": "b6328adcdb0db537ff5c67925ca84802bbd4097404d11537f88fa0029dc5abef",
+    "fold_assignments.csv": "54f250123b5d0c0dda66519cc3ddb8ce3b61f1800b80ad7dd79275c19fee77bc",
+    "heldout_refit_z.csv": "7955bcd1bd7535b36a8c219d4c6df3b03d1a91356aa19a0db2943db606dc38a5"
+  },
+  "participant_rows_per_layer": 10080,
+  "predictor": "similarity=exp(-k*raw_distance), then training-fold Gelman scale (x-mean)/(2*sample_sd)",
+  "publication_status": "current_repository_corrected_mapping_notebook_exp_k_structure",
+  "r_engine_sha256": "808efd9060fd557efd57b7e23c9b4811aa4e16344c326145ac2d4237539c671d",
+  "representation": "strf24_legacy",
+  "runner_sha256": "c81275b40b8ee1dbf86ccacd76dc7dd6e790b4af12c5978588802c0ace40b6fc",
+  "schema_version": "b23-original-structure-glmm-z-v4",
+  "similarity_engine_path": "code/statistics/run_b23_original_glmm_z.py",
+  "similarity_engine_sha256": "c81275b40b8ee1dbf86ccacd76dc7dd6e790b4af12c5978588802c0ace40b6fc",
+  "similarity_population": "168 trained participants; 27 controls excluded after fold assignment",
+  "source_similarity_provenance_sha256": null,
+  "status": "complete"
+}

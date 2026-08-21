@@ -1,0 +1,129 @@
+# Project description
+
+## Overview
+
+Human listeners routinely understand speech from talkers they have never heard before. This ability is remarkable because speech varies substantially across individuals: vocal-tract anatomy, accent, speaking rate, phonetic realization, and recording context all alter the acoustic signal. A central problem for speech-perception theory is therefore not only how listeners recognize a familiar token, but how experience with one set of speech exemplars supports generalization to another talker.
+
+This project tests a computational account of that generalization. The central proposal is that exposure creates a basis for inference: when a test talker's speech is similar to the speech associated with prior exposure, recognition should be easier; when it is dissimilar, generalization should be weaker. The project operationalizes this proposal using acoustic features and learned speech representations, then evaluates the resulting predictors against human behavior in three experiments.
+
+The goal is not to identify one universally best speech model or one layer with the largest statistic. The broader objective is to determine which representational relationships are behaviorally informative, whether those relationships replicate across experimental designs, and where they fail.
+
+## Scientific framework
+
+The project separates two mechanisms that are related but not interchangeable.
+
+### Similarity-based inference
+
+Similarity-based inference (SBI) concerns the relationship between exposure and test speech. For a test item, the analysis identifies recordings in which exposure talker(s) produce the same linguistic content. Their frame-level representations are aligned with dynamic time warping, producing an exposure–test distance. Smaller distance corresponds to greater similarity.
+
+This predictor is intentionally described as a **same-content talker proxy**. In the available datasets, the comparison recording is not always the exact acoustic token presented to a particular participant. It therefore measures how similarly the relevant talkers realize matched content, rather than reconstructing a literal episodic memory trace.
+
+### Heard/exposure variability
+
+Heard/exposure variability (HVE) concerns the internal structure of the speech set encountered during exposure. A set may contain tightly clustered or highly dispersed frame-level representations, repeated instances of the same linguistic type, or substantial differences among types and talkers. The project registers multiple measures that separate within-token, within-type, between-type, sequential-frame, and pairwise-DTW variability.
+
+SBI asks whether exposure speech resembles test speech. HVE asks how heterogeneous the exposure set itself is. Keeping these estimands separate makes it possible to test whether generalization depends primarily on a match to the test talker, on exposure diversity, or on both.
+
+## Why use computational speech representations?
+
+The project treats an English-trained speech model as a computational observer: a defined transformation from waveform to a sequence of feature vectors. Such a model offers a reproducible way to compare speech at multiple representational stages.
+
+HuBERT large was selected because its self-supervised pretraining provides a rich hierarchy of speech representations. Two variants are analyzed:
+
+- **HuBERT base:** the English-pretrained model before ASR fine-tuning;
+- **HuBERT ASR fine-tuned:** the same model family after optimization for speech recognition.
+
+The comparison tests whether behavioral relevance is associated with generic learned speech structure, recognition-oriented fine-tuning, particular model depths, or lower-level acoustics. MFCC39 and STRF24 serve as acoustic baselines under the same DTW and statistical analysis contract.
+
+The established method uses precomputed 3-D t-SNE trajectories for every registered layer. Because t-SNE can alter high-dimensional geometry, the project also retains full-dimensional HuBERT representations for sensitivity analysis. Results are interpreted within each dataset-specific representation space rather than treating t-SNE distances as globally calibrated units.
+
+## The three datasets
+
+The three experiments provide complementary tests rather than interchangeable replications.
+
+### AN19
+
+AN19 contains 160 participants and 24,960 behavioral observations, including 7,680 test-phase rows. The key comparison is word-level: exposure and test talkers are compared while producing the same word. Its relatively rich talker structure supports both behavioral prediction and a large all-talker validation matrix. In the current results, AN19 supplies the strongest evidence that computational similarity improves prediction beyond experimental condition.
+
+### X21
+
+X21 contains 320 participants and 16,477 binary-response observations. It includes control, multi-talker, single-talker, and talker-specific conditions. Similarity is defined for the same keyword within the same sentence. The talker-specific condition creates an informative self-comparison boundary, while repeated exposure tokens allow presentation-weighted and unique-token variability estimands to be distinguished. Current incremental predictive effects are present but substantially smaller than in AN19.
+
+### B23
+
+B23 contains 195 participants and 11,700 sentence-level observations. Each observation retains the number of correctly and incorrectly recognized keywords, so the appropriate outcome is count-binomial rather than one binary value per sentence. Same-content SBI is defined at the sentence level. The current SBI results are close to zero, making B23 important as a possible boundary condition.
+
+B23 also defines a strict data limitation: the true sentence-to-talker assignment for multi-talker exposure is not available in the repository, including the known noSPA presentation irregularity. Actual multi-talker HVE is therefore marked as blocked instead of being reconstructed from an unjustified proxy. Identifiable single-talker pools remain analyzable.
+
+## Computational construction
+
+Every recording is represented as a variable-length sequence of frame vectors. For HuBERT, the registry includes CNN layers 2–6, Transformer layer 0, and even-numbered Transformer layers 2–24, for 18 feature spaces per model variant.
+
+Dynamic time warping aligns two sequences without assuming equal duration. The main method-reproduction profile uses Minkowski `tau=2` frame cost and mean-sequence-length normalization. This normalization matches the historical notebook computation. Optimal-path-length normalization, which appeared in the earlier written description, is implemented separately as a sensitivity analysis rather than silently substituted.
+
+For multi-talker exposure, the primary predictor averages raw distance across exposure talkers. A minimum-distance profile tests the alternative hypothesis that the closest available exemplar dominates generalization. Descriptive plots may convert distance to bounded similarity with `exp(-k d)`, while confirmatory models use negative distance standardized from training-fold data only.
+
+Exposure variability is constructed from identifiable exposure pools. The complete registry contains 16 definitions: one overall measure and five measure families at sentence, word, and phoneme levels. The code records unsupported, unavailable, and blocked measures explicitly rather than dropping them silently.
+
+## Behavioral modeling
+
+The statistical design prioritizes generalization to new participants. Participants are assigned to three deterministic, stratified folds. For each predictor and feature space, three GLMMs are compared:
+
+```text
+M_condition = experimental condition + registered random effects
+M_predictor = computational predictor + registered random effects
+M_joint     = experimental condition + computational predictor + registered random effects
+```
+
+Full-data fits provide coefficient estimates, confidence intervals, Wald z statistics, and likelihood-ratio tests. Predictive evaluation follows a stricter rule: the model is fit on training participants, frozen, and scored on the held-out participant fold using population-level predictions. Improvement is measured as the reduction in binomial log loss from `M_condition` to `M_joint`.
+
+This distinction corrects an ambiguity in the historical analysis. Refitting a GLMM on held-out responses and reporting its z value evaluates association in another subset, not prediction of unseen responses. The project retains these values only for compatibility with earlier figures and labels them accordingly.
+
+## Major outputs
+
+The project produces several complementary views of the evidence:
+
+- layer-by-layer HuBERT association and OOF-prediction profiles;
+- MFCC39 and STRF24 comparisons under the same folds and GLMM contract;
+- behavioral-ceiling-normalized compatibility figures with fold uncertainty;
+- complete HVE profiles across all identifiable measures;
+- condition- and talker-specific quantile-binned S-curves with Wilson intervals;
+- matched-content all-talker distance matrices;
+- raw-distance correlations among feature layers;
+- sensitivity analyses for DTW normalization, `tau`, aggregation, dimensionality, and predictor transformation;
+- figure source tables and SHA-256 provenance for the final report.
+
+## Current evidence pattern
+
+The present results do not support a simple claim that one mechanism works identically in every experiment. Instead, they show a graded cross-dataset pattern:
+
+- **AN19:** strong evidence that SBI improves participant-held-out prediction beyond condition;
+- **X21:** a weaker replication with small incremental gains;
+- **B23:** near-zero incremental SBI prediction under the current design, consistent with a boundary condition;
+- **HVE:** limited robust positive incremental evidence in the currently identifiable analyses.
+
+This heterogeneity is scientifically useful. It motivates analyses of which exposure designs, talker relationships, stimulus units, and outcome structures permit similarity-based inference to predict behavior.
+
+## Contributions of the project
+
+The project contributes more than a set of plots. It provides:
+
+1. A shared computational definition of matched-content talker similarity across three experiments;
+2. A clear separation between exposure–test similarity and variability within the exposure set;
+3. A direct comparison of learned and conventional acoustic representations;
+4. A participant-held-out predictive evaluation that is distinct from association stability;
+5. Explicit reconciliation of written and implemented DTW normalization choices;
+6. Reproducible folds, stable identifiers, validated HDF5 contracts, tidy outputs, and provenance;
+7. Transparent blocked states for scientific quantities that cannot be recovered from the available data.
+
+## Scope and limitations
+
+The project does not re-extract HuBERT features or refit t-SNE during routine analysis; it treats the supplied HDF5 stores as audited inputs. It also does not claim that HuBERT is a literal model of a native speaker or listener. Behavioral relevance must be established empirically for each representation.
+
+The main SBI predictor is counterfactual at the token level, 3-D t-SNE can distort high-dimensional distance, B23 multi-talker HVE remains unidentified, and layer selection can become optimistic if performed on the same held-out results used for reporting. These limitations are preserved in the documentation and final report rather than hidden by the unified implementation.
+
+## Reproducible project structure
+
+The production implementation is located in `cross_talker_generalization/`. Configuration files define inputs and estimands; Python performs auditing, pairing, DTW, aggregation, variability construction, and plotting; R/lme4 performs GLMM estimation; tests enforce numerical and project-level contracts; and the final report builder assembles figures, tables, interpretation notes, and provenance without overwriting existing releases.
+
+For detailed navigation, see [FILE_GUIDE.md](FILE_GUIDE.md). Exact equations, variability definitions, statistical semantics, and known limitations are documented in [TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md). Execution commands are provided in the [runbook](cross_talker_generalization/docs/RUNBOOK.md).
