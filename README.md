@@ -10,7 +10,7 @@ The production codebase is [cross_talker_generalization/](cross_talker_generaliz
 
 ## Research questions
 
-The analyses compare (multiple implementations of) two theories of generalization during human speech perception: 
+The analyses compare (multiple implementations of) two theories of generalization during human speech perception:
 
 1. **Exposure variability (HVE):** does a listener perceive speech during the test phase more accurately when the exposure phase of the experiment contained speech tokens that varied substantially from each other.
 2. **Similarity-based inference (SBI):** does a listener perceive speech during the test phase more accurately when exposure talker(s) and a test talker produce acoustically or representationally similar speech?
@@ -50,16 +50,6 @@ Frame-level variable-length representations
 ```
 
 The distinction at the bottom is essential. Primary predictive claims use models fit on training participants and frozen before scoring unseen participants.
-
-## Datasets
-
-| Dataset | Participants | Task | Behavioral observations | Observational unit | Outcome | Tested generalization | 
-|---|---:|---:|---|---|---|---|
-| AN19 | 160 | Word transcription | 24,960 total; 7,680 test rows | Word | Bernoulli | Across-talker within and across accents | Binary response |
-| X21 | 320 | Sentence transcription | 16,477 | Word (within sentence) | Bernoulli | Within- and across talker within-accent | 
-| B23 | 195 | Sentence transcription | 11,700  | Sentence | Binomial | Within- and across talker within- or across accent | 
-
-The three experiments are analyzed separately under a shared computational and statistical contract. Dimensionality reduction is conducted separately for each experiment and neural layer (or acoustic/perceptual baseline).
 
 ## Representations and distance computation
 
@@ -199,18 +189,7 @@ The reviewed report package is [cross_talker_generalization/final_report_2026-08
 This report package is the single authoritative entry point for current results. The
 top-level [`results/`](results/) directory is deliberately narrower: it contains only
 inputs still required to rebuild the report, compatibility-only notebook summaries,
-validated AN19 talker-matrix sources, and one provenance-backed method schematic. 
-
-The current cross-dataset pattern is heterogeneous: AN19 provides strong incremental SBI prediction, X21 provides a weaker replication with small gains, and B23 is close to zero under the current design. The project therefore treats B23 as a potential boundary condition rather than claiming uniform support across all three datasets.
-
-## Interpretation constraints
-
-- HuBERT is treated as an English-trained computational observer, not assumed to be a literal native-talker representation.
-- SBI is a same-content counterfactual proxy, not the participant's exact heard token, as the latter was not possible under the current model architecture.
-- Compatibility z/ceiling percentages are descriptive rescalings of Wald z, not variance explained or predictive accuracy.
-- t-SNE distance is dataset- and layer-specific and cannot be compared in absolute units across datasets.
-- B23 multi-talker actual-exposure HVE is not estimated without the missing assignment.
-- Selecting the best HuBERT layer from the same held-out results is exploratory unless layer choice is prespecified or nested within cross-validation.
+validated AN19 talker-matrix sources, and one provenance-backed method schematic.
 
 ## Reproducibility policy
 

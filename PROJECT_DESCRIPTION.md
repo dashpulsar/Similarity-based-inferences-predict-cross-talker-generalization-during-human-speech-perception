@@ -39,7 +39,14 @@ The established method uses precomputed 3-D t-SNE trajectories for every registe
 
 ## The three datasets
 
-The three experiments provide complementary tests rather than interchangeable replications.
+The three experiments provide complementary tests rather than interchangeable replications. The three experiments are analyzed separately under a shared computational and statistical contract. Dimensionality reduction is conducted separately for each experiment and neural layer (or acoustic/perceptual baseline).
+
+| Dataset | Participants | Task | Behavioral observations | Observational unit | Outcome | Tested generalization |
+|---|---:|---:|---|---|---|---|
+| AN19 | 160 | Word transcription | 24,960 total; 7,680 test rows | Word | Bernoulli | Across-talker within and across accents | Binary response |
+| X21 | 320 | Sentence transcription | 16,477 | Word (within sentence) | Bernoulli | Within- and across talker within-accent |
+| B23 | 195 | Sentence transcription | 11,700  | Sentence | Binomial | Within- and across talker within- or across accent |
+
 
 ### AN19
 
@@ -95,10 +102,15 @@ The project produces several complementary views of the evidence:
 
 ## Scope and limitations
 
-* The project does not re-extract HuBERT features or refit t-SNE during routine analysis; it treats the supplied HDF5 stores as audited inputs. 
-* The main SBI predictor is counterfactual at the token level
-* 3-D t-SNE can distort high-dimensional distance
-* layer selection can become optimistic if performed on the same held-out results used for reporting. 
+- HuBERT is treated as an English-trained computational observer, not assumed to be a literal native-talker representation.
+- The SBI predictor is counterfactual `same_content_talker_proxy`. It compares a test token with another recording of the same content by an exposure talker. That recording is not necessarily the exact token heard by a participant. The predictor therefore represents talker-level acoustic/representational correspondence, not a verified token-level memory trace.
+- 3-D t-SNE can distort high-dimensional distance
+
+## Interpretational constraints: things to keep in mind when interpreting the results
+- Compatibility z/ceiling percentages are descriptive rescalings of Wald z, not variance explained or predictive accuracy.
+- t-SNE distance is dataset- and layer-specific and cannot be compared in absolute units across datasets.
+- Selecting the best HuBERT layer from the same held-out results is exploratory unless layer choice is prespecified or nested within cross-validation.
+
 
 ## Reproducible project structure
 

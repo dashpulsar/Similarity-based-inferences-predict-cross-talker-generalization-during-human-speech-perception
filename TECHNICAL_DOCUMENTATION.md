@@ -2,20 +2,10 @@
 
 ## 1. Research questions and analysis units
 
-The project expresses three cross-talker speech-perception experiments in a single auditable pipeline.
-
-| Dataset | Behavioral rows | Participants | Registered speech units | Test talkers | Outcome | SBI match unit |
-|---|---:|---:|---:|---:|---|---|
-| AN19 | 24,960 (7,680 test rows) | 160 | 6,261 | 24 | Bernoulli | Same word |
-| X21 | 16,477 | 320 | 660 | 4 | Bernoulli | Same keyword within the same sentence |
-| B23 | 11,700 | 195 | 480 | 4 | Count-binomial | Same sentence |
-
 The two core estimands are:
 
 - **SBI, similarity-based inference**: whether representational distance between exposure talkers and the test talker, for matched linguistic content, explains or predicts behavior.
 - **HVE, heard/exposure variability**: whether dispersion within the speech set heard during exposure explains or predicts behavior.
-
-The recoverable SBI predictor is a `same_content_talker_proxy`. It compares a test token with another recording of the same content by an exposure talker. That recording is not necessarily the exact token heard by a participant. The predictor therefore represents talker-level acoustic/representational correspondence, not a verified token-level memory trace.
 
 ## 2. Inputs and data contract
 
