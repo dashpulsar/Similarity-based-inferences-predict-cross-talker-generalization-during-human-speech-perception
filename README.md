@@ -1,19 +1,29 @@
-# Computational models of cross-talker generalization in human speech perception
+# Testing theories of cross-talker generalization in human speech perception
 
-This repository contains a cross-dataset investigation of how listeners generalize speech recognition from previously encountered talkers to new talkers. It asks whether relationships among speech exemplars—measured in acoustic and learned speech-representation spaces—predict human behavior beyond the experimental condition labels themselves.
+This repository contains an investigation of how listeners generalize speech recognition from recently experienced speech to new words, new talkers, and new accents. It asks whether relationships among speech exemplars—--measured in either acoustic or learned latent speech-representation spaces—--predict human behavior.
 
-The project combines three behavioral datasets (AN19, X21, and B23), two HuBERT model variants, 18 registered neural layers, two acoustic baselines, dynamic time warping, exposure-variability measures, participant-disjoint generalized linear mixed models, and a unified figure/report pipeline.
+The project combines modern DNN-based automatic speech recognition (ASR) systems trained through self-supervised learning (SSL) with theories of human speech perception. Specifically, we use the latent representations learned by different layers of the HuBERT model to approximate the latent representations of speech inputs learned by human listeners. This allows us to apply a general model of human speech perception (exemplar theory) to those representations, and to test competing hypotheses about the mechanisms that afford generalization during human speech perception. The use of modern ASR models allows us to test these hypotheses against the data from a comparatively unconstrained tasks---listeners' transcriptions of spoken words and sentences---and to go beyond qualitative hypothesis tests (whether a hypothesis can in principle explain the direction of the observed effects) towards quantitative hypothesis tests (whether a hypothesis can explain a non-trivial amount of human behavior, or perhaps even captures most of the observed behavior, pre-empting the need for less parsimonious explanations).
+
+We address these questions for three distinct behavioral data sets previously elicited in separate perception experiments.
 
 The production codebase is [cross_talker_generalization/](cross_talker_generalization/). Superseded implementations and reports are recoverably archived under `recycle_bin/` and are not used at runtime.
 
 ## Research questions
 
-The analyses address four related questions:
+The analyses compare (multiple implementations of) two theories of generalization during human speech perception: 
 
-1. **Similarity-based inference (SBI):** does a listener perform better when exposure talker(s) and a test talker produce acoustically or representationally similar speech?
-2. **Cross-talker generalization:** does this relationship hold across experiments with different exposure designs, talker sets, stimulus units, and behavioral outcomes?
-3. **Exposure variability (HVE):** does the internal variability of the speech heard during exposure contribute information beyond exposure–test similarity?
-4. **Computational observer comparison:** do English-trained HuBERT representations predict behavior more effectively than conventional MFCC39 and STRF24 acoustic baselines, and how does predictive value change across model layers?
+1. **Exposure variability (HVE):** does a listener perceive speech during the test phase more accurately when the exposure phase of the experiment contained speech tokens that varied substantially from each other.
+2. **Similarity-based inference (SBI):** does a listener perceive speech during the test phase more accurately when exposure talker(s) and a test talker produce acoustically or representationally similar speech?
+
+Additionally, we ask:
+
+3. Can either HVE or SBI or both explain variability beyond that previous explained by the experimental conditions (the design factors) of the experiments that elicited the behavioral data sets we model?
+
+We compare the answer to these questions:
+
+* across different neural layers of the HuBERT model.
+* across different variants of the HuBERT model (ASR-fine tuned vs. not)
+* for acoustic (MFCCs) and perceptual (STRFs) baseline measures
 
 ## Conceptual analysis flow
 
@@ -35,21 +45,21 @@ Frame-level variable-length representations
                                                              │
                               ┌──────────────────────────────┴─────────────────────────────┐
                               ▼                                                            ▼
-                 Full-data association statistics                         Frozen-model OOF prediction
+                 Full-data association statistics                         Frozen-model out-of-fold (OOF) prediction
               coefficient, CI, Wald z, LRT                         held-out binomial log-loss gain
 ```
 
-The distinction at the bottom is essential. A GLMM refit on held-out responses can show association stability, but it is not an out-of-sample prediction. Primary predictive claims use models fit on training participants and frozen before scoring unseen participants.
+The distinction at the bottom is essential. Primary predictive claims use models fit on training participants and frozen before scoring unseen participants.
 
 ## Datasets
 
-| Dataset | Participants | Behavioral observations | Exposure/test structure | Outcome | Same-content matching unit |
-|---|---:|---:|---|---|---|
-| AN19 | 160 | 24,960 total; 7,680 test rows | Word-learning and cross-talker test design | Binary response | Word |
-| X21 | 320 | 16,477 | Control, multi-talker, single-talker, and talker-specific exposure | Binary response | Keyword within the same sentence |
-| B23 | 195 | 11,700 | Single- and multi-talker sentence exposure conditions | Count-binomial keyword accuracy | Sentence |
+| Dataset | Participants | Task | Behavioral observations | Observational unit | Outcome | Tested generalization | 
+|---|---:|---:|---|---|---|---|
+| AN19 | 160 | Word transcription | 24,960 total; 7,680 test rows | Word | Bernoulli | Across-talker within and across accents | Binary response |
+| X21 | 320 | Sentence transcription | 16,477 | Word (within sentence) | Bernoulli | Within- and across talker within-accent | 
+| B23 | 195 | Sentence transcription | 11,700  | Sentence | Binomial | Within- and across talker within- or across accent | 
 
-The three experiments are analyzed separately under a shared computational and statistical contract. Their raw distance scales are not pooled because each dataset has its own stimulus corpus and t-SNE geometry.
+The three experiments are analyzed separately under a shared computational and statistical contract. Dimensionality reduction is conducted separately for each experiment and neural layer (or acoustic/perceptual baseline).
 
 ## Representations and distance computation
 
@@ -59,7 +69,7 @@ The project analyzes HuBERT large base and an ASR fine-tuned variant. Each model
 - Transformer layer 0;
 - Even-numbered Transformer layers 2–24.
 
-The established analysis uses supplied frame-level 3-D t-SNE sequences. Full-dimensional HuBERT representations are retained for key sensitivity analyses. MFCC39 and STRF24 provide conventional acoustic comparisons.
+The established analysis uses supplied frame-level 3-D t-SNE sequences. Full-dimensional HuBERT representations are retained for key sensitivity analyses. MFCC39 and STRF24 provide acoustic/perceptual control comparisons.
 
 Variable-length sequences are aligned with dynamic time warping (DTW). The main reproduction setting uses Minkowski `tau=2` and divides cumulative path cost by mean sequence length:
 
@@ -77,7 +87,7 @@ SBI compares exposure and test talkers producing matched linguistic content. The
 
 Descriptive figures may show bounded similarity `exp(-k d)`. Confirmatory models use negative DTW distance standardized with training-fold moments only, so larger predictor values indicate greater similarity without tuning `k` against held-out behavior.
 
-### Heard/exposure variability (HVE)
+### High exposure variability (HVE)
 
 HVE describes dispersion within the exposure speech set rather than similarity between exposure and test speech. The registry contains 16 measures: `overall`, plus five measure families at sentence, word, and phoneme levels:
 
@@ -91,7 +101,7 @@ Availability is dataset-dependent. AN19 supports six measures, X21 supports all 
 
 ## Statistical contract
 
-Participants—not trials—are assigned to three folds using fixed seed `230519`. Each predictor is evaluated with condition-only, predictor-only, and joint GLMMs.
+Participants---not trials---are assigned to three folds using fixed seed `230519`. Each predictor is evaluated with condition-only, predictor-only, and joint GLMMs.
 
 The primary predictive quantity is:
 
@@ -189,18 +199,16 @@ The reviewed report package is [cross_talker_generalization/final_report_2026-08
 This report package is the single authoritative entry point for current results. The
 top-level [`results/`](results/) directory is deliberately narrower: it contains only
 inputs still required to rebuild the report, compatibility-only notebook summaries,
-validated AN19 talker-matrix sources, and one provenance-backed method schematic. Older
-duplicate outputs were moved to `recycle_bin/results_old_20260821/` and are not used at
-runtime.
+validated AN19 talker-matrix sources, and one provenance-backed method schematic. 
 
 The current cross-dataset pattern is heterogeneous: AN19 provides strong incremental SBI prediction, X21 provides a weaker replication with small gains, and B23 is close to zero under the current design. The project therefore treats B23 as a potential boundary condition rather than claiming uniform support across all three datasets.
 
 ## Interpretation constraints
 
 - HuBERT is treated as an English-trained computational observer, not assumed to be a literal native-talker representation.
-- SBI is a same-content counterfactual proxy, not necessarily the participant's exact heard token.
+- SBI is a same-content counterfactual proxy, not the participant's exact heard token, as the latter was not possible under the current model architecture.
 - Compatibility z/ceiling percentages are descriptive rescalings of Wald z, not variance explained or predictive accuracy.
-- t-SNE distance is dataset-specific and cannot be compared in absolute units across datasets.
+- t-SNE distance is dataset- and layer-specific and cannot be compared in absolute units across datasets.
 - B23 multi-talker actual-exposure HVE is not estimated without the missing assignment.
 - Selecting the best HuBERT layer from the same held-out results is exploratory unless layer choice is prespecified or nested within cross-validation.
 
