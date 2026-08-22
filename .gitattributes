@@ -1,3 +1,19 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-*.wav filter=lfs diff=lfs merge=lfs -text
+# Keep source and documentation line endings stable across platforms.
+* text=auto eol=lf
+
+# Preserve generated and provenance-bearing artifacts byte for byte. Their recorded
+# SHA-256 values cover CSV, JSON, Markdown, and SVG files as generated locally.
+cross_talker_generalization/artifacts/audit/** -text
+cross_talker_generalization/final_report_2026-08-21/** -text
+data/manifests/** -text
+results/** -text
+
+# Binary publication and data formats.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.h5 binary
+*.hdf5 binary
+*.rds binary

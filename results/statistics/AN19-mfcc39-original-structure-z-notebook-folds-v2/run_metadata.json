@@ -1,0 +1,47 @@
+{
+  "ceiling_fold_z": [
+    21.8294140489435,
+    19.5629704175166,
+    25.0849856482806
+  ],
+  "ceiling_item_definition": "Word x TestTalker empirical log-odds from full training folds",
+  "ceiling_population": "all 160 participants and all 7,680 test trials",
+  "dataset_id": "AN19",
+  "exclusion_policy": "similarity excludes 40 controls and 75 audited missing-source participant-items; behavioral ceiling excludes neither",
+  "fold_assignment": "notebook create_nygaard_dataset equivalent: all 160 participants, training/test-file-list stratification, StratifiedKFold shuffle=True random_state=42, folds 1..3",
+  "fold_assignment_artifact": "fold_assignments.csv",
+  "fold_assignment_map_sha256": "e41e66ffdd3fb6cdf6898fe0a174e8b581f580a724a419ba7ac4e7ce1fc11dc9",
+  "fold_assignment_records": 160,
+  "fold_roles": "per test fold: one remaining fold training, the other validation, matching process_layer_nygaard_l2",
+  "fold_source_model_input_sha256": null,
+  "fold_source_run_metadata_sha256": null,
+  "folds": 3,
+  "formula": "cbind(correct,incorrect) ~ similarity_z + (1+similarity_z|SubjectID)",
+  "generated_utc": "2026-08-14T09:09:46+00:00",
+  "input_path": "results/derived/AN19-acoustic-mfcc39-global_z-same-content-glmm-input.csv",
+  "input_provenance_sha256": "2e7ef75dd3c15d3861363d37d48d453013955ae53f895412f33789889909fcd3",
+  "input_sha256": "d66391e6d78e14d3dba8761b0f5947217195a9db17291e9903240b8ecf6a3215",
+  "jobs_effective": 1,
+  "k_selection": "per outer fold: Optuna TPESampler(seed=42), 20 trials, k in [0.001,2], minimize -validation_z + 0.1*k^2",
+  "layers": [
+    "global_z"
+  ],
+  "model_variant": "acoustic_baseline",
+  "optional_unified_fold_crosscheck": false,
+  "outputs_sha256": {
+    "behavioral_ceiling_z.csv": "f693fbd2eda213ceec51472a518277f564a1f166e25ca6bac94c0b4eaff14f3b",
+    "diagnostics.csv": "240a693dc5484ec45714324c9424b9d651d0292dce9658dcb7735a6b32ea286d",
+    "fold_assignments.csv": "cbfb07a6d3ca92278d2cd42742720ba3a476ca6f398a7f4a080f00655bfd6295",
+    "heldout_refit_z.csv": "a5522f6a1bb94f454f28caa19994f0e2e79be3a148ade3d5d631db295dd0b6a3"
+  },
+  "participant_rows_per_layer": 5685,
+  "predictor": "similarity=exp(-k*raw_distance), then training-fold Gelman scale (x-mean)/(2*sample_sd)",
+  "r_engine_sha256": "8c5df2ad04670e927f6e8ff194611f0951505ea3adc21417cec7b05576056740",
+  "representation": "mfcc39",
+  "runner_sha256": "ebd79fcbf6e2e90334b0d61976a7f7b32bbb24662a1ed8217bc5f18abdc91584",
+  "schema_version": "an19-original-structure-glmm-z-v4",
+  "similarity_engine_path": "glmm_prediction/project_utils.py",
+  "similarity_engine_sha256": "e805fb02e3e27827540f9cdc3225cc9004aace046338babe41a6af0be7e4f790",
+  "similarity_population": "120 trained participants; 75 audited missing-source rows excluded",
+  "status": "complete"
+}

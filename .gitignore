@@ -1,0 +1,32 @@
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+*.egg-info/
+
+# Large feature stores and interrupted feature writes
+*.h5
+*.hdf5
+*.h5.partial
+
+# Local execution outputs
+/tmp/
+/cross_talker_generalization/final_report_rebuild*/
+
+# The recoverable archive is local-only. Keep its policy document on GitHub.
+/recycle_bin/**
+!/recycle_bin/README.md
+
+# Large retained compatibility inputs remain local. Publish provenance and compact
+# AN19 talker-pair summaries, but not participant/item-level CSV intermediates.
+/results/derived/*.csv
+/results/derived/AN19-talker-validation-base-tr24/*.csv
+/results/derived/AN19-talker-validation-ft-tr24/*.csv
+!/results/derived/AN19-talker-validation-base-tr24/talker_pair_summary.csv
+!/results/derived/AN19-talker-validation-base-tr24/sensitivity_pairwise_intersection_talker_pair_summary.csv
+!/results/derived/AN19-talker-validation-ft-tr24/talker_pair_summary.csv
+!/results/derived/AN19-talker-validation-ft-tr24/sensitivity_pairwise_intersection_talker_pair_summary.csv
+
+# Large media are distributed separately.
+*.mp4

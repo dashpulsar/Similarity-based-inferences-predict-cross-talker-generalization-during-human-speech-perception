@@ -1,0 +1,19 @@
+{
+  "behavior_path": "data/preprocessed data/X21-behavioral-data.csv",
+  "behavior_sha256": "9bfc9a8c4bf0823d4ae28ba1ddbdde09bca80b20848e159ac2c485a5ab0470ef",
+  "dataset_id": "X21",
+  "fold_assignment_map_sha256": "67023b4ae9c19b34b357bcf9fab692a4bd14e81d2cb30d9c0e07c3013bbb7c92",
+  "generated_utc": "2026-08-14T20:35:20+00:00",
+  "outputs_sha256": {
+    "behavioral_ceiling_z.csv": "1a878f31eef6262bbae42d32573764abec425299e9241ce28450716b25f96751",
+    "diagnostics.csv": "1877b7d9a43622cce9deaead47e12c4827cecb7757d26a9eabff06838dc621ef",
+    "model_input.csv": "8624a07f9de4f6bc2769d253d3c78d877a21f77cdfff7bd1bd1d76a5ff7eafb6"
+  },
+  "publication_status": "notebook_compatibility_behavioral_ceiling",
+  "r_engine_sha256": "5793346c41949be6e41dcfd1bd8a73141a79f8d1be4264d80b2015b67c7f1b2b",
+  "runner_sha256": "bde742556fb8fb1a19ef1a872a050d1d14a0e4d95cdce1d54daf7425c0a5326b",
+  "schema_version": "notebook-behavioral-ceiling-z-v1",
+  "source_directory": "results/statistics/X21-base-variability-z-notebook-simplified-tau2-v1",
+  "source_metadata_sha256": "132117b809035f1c102e63397305f464457edb4dd7b387aa733c45b4efafa2e0",
+  "status": "complete"
+}

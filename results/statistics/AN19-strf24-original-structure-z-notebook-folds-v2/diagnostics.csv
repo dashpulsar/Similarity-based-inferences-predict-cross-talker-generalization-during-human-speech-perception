@@ -1,0 +1,7 @@
+layer,fold,stage,status,optimized_k,note,n_cells,n_trials,n_participants,converged,singular,optimizer_code,convergence_messages,warnings,log_likelihood,elapsed_seconds
+global_z,1,notebook_optuna_similarity_compatibility,complete,0.20885618981881046,legacy engine suppresses R warnings; exact notebook compatibility result,,,,,,,,,,
+global_z,2,notebook_optuna_similarity_compatibility,complete,0.20885618981881046,legacy engine suppresses R warnings; exact notebook compatibility result,,,,,,,,,,
+global_z,3,notebook_optuna_similarity_compatibility,complete,0.1948405907168116,legacy engine suppresses R warnings; exact notebook compatibility result,,,,,,,,,,
+behavioral_ceiling,1,,,,,2592.0,2592.0,54.0,True,False,0.0,,,-890.794558422275,1.11
+behavioral_ceiling,2,,,,,2544.0,2544.0,53.0,True,False,0.0,,,-860.216283799585,0.75
+behavioral_ceiling,3,,,,,2544.0,2544.0,53.0,True,True,0.0,boundary (singular) fit: see help('isSingular'),,-904.550916969128,0.79
