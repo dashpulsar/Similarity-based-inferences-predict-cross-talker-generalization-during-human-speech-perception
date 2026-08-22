@@ -18,7 +18,7 @@ Similarity-based inference (SBI) concerns the relationship between exposure and 
 
 This predictor is intentionally described as a **same-content talker proxy**. In the available datasets, the comparison recording is not always the exact acoustic token presented to a particular participant. It therefore measures how similarly the relevant talkers realize matched content, rather than reconstructing a literal episodic memory trace.
 
-### Heard/exposure variability
+### High exposure variability
 
 Heard/exposure variability (HVE) concerns the internal structure of the speech set encountered during exposure. A set may contain tightly clustered or highly dispersed frame-level representations, repeated instances of the same linguistic type, or substantial differences among types and talkers. The project registers multiple measures that separate within-token, within-type, between-type, sequential-frame, and pairwise-DTW variability.
 
@@ -84,43 +84,21 @@ This distinction corrects an ambiguity in the historical analysis. Refitting a G
 The project produces several complementary views of the evidence:
 
 - layer-by-layer HuBERT association and OOF-prediction profiles;
+- visualizations of layer-specific & hypothesis-specific predictions against actual human behavior
 - MFCC39 and STRF24 comparisons under the same folds and GLMM contract;
 - behavioral-ceiling-normalized compatibility figures with fold uncertainty;
 - complete HVE profiles across all identifiable measures;
-- condition- and talker-specific quantile-binned S-curves with Wilson intervals;
 - matched-content all-talker distance matrices;
 - raw-distance correlations among feature layers;
 - sensitivity analyses for DTW normalization, `tau`, aggregation, dimensionality, and predictor transformation;
 - figure source tables and SHA-256 provenance for the final report.
 
-## Current evidence pattern
-
-The present results do not support a simple claim that one mechanism works identically in every experiment. Instead, they show a graded cross-dataset pattern:
-
-- **AN19:** strong evidence that SBI improves participant-held-out prediction beyond condition;
-- **X21:** a weaker replication with small incremental gains;
-- **B23:** near-zero incremental SBI prediction under the current design, consistent with a boundary condition;
-- **HVE:** limited robust positive incremental evidence in the currently identifiable analyses.
-
-This heterogeneity is scientifically useful. It motivates analyses of which exposure designs, talker relationships, stimulus units, and outcome structures permit similarity-based inference to predict behavior.
-
-## Contributions of the project
-
-The project contributes more than a set of plots. It provides:
-
-1. A shared computational definition of matched-content talker similarity across three experiments;
-2. A clear separation between exposure–test similarity and variability within the exposure set;
-3. A direct comparison of learned and conventional acoustic representations;
-4. A participant-held-out predictive evaluation that is distinct from association stability;
-5. Explicit reconciliation of written and implemented DTW normalization choices;
-6. Reproducible folds, stable identifiers, validated HDF5 contracts, tidy outputs, and provenance;
-7. Transparent blocked states for scientific quantities that cannot be recovered from the available data.
-
 ## Scope and limitations
 
-The project does not re-extract HuBERT features or refit t-SNE during routine analysis; it treats the supplied HDF5 stores as audited inputs. It also does not claim that HuBERT is a literal model of a native speaker or listener. Behavioral relevance must be established empirically for each representation.
-
-The main SBI predictor is counterfactual at the token level, 3-D t-SNE can distort high-dimensional distance, B23 multi-talker HVE remains unidentified, and layer selection can become optimistic if performed on the same held-out results used for reporting. These limitations are preserved in the documentation and final report rather than hidden by the unified implementation.
+* The project does not re-extract HuBERT features or refit t-SNE during routine analysis; it treats the supplied HDF5 stores as audited inputs. 
+* The main SBI predictor is counterfactual at the token level
+* 3-D t-SNE can distort high-dimensional distance
+* layer selection can become optimistic if performed on the same held-out results used for reporting. 
 
 ## Reproducible project structure
 
