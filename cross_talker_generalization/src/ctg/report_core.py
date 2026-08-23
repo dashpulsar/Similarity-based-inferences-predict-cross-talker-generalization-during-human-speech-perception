@@ -234,8 +234,8 @@ def _best_gain(sbi: pd.DataFrame, destination: Path) -> pd.DataFrame:
     sns.barplot(data=source, x="dataset_id", y="oof_gain", hue="model", ax=axis, palette="Set2")
     axis.axhline(0, color="black", linewidth=0.9)
     axis.set_xlabel("")
-    axis.set_ylabel("Best OOF log-loss gain\nvs condition-only")
-    axis.set_title("Predictive comparison across datasets\n(best HuBERT layer selected descriptively)")
+    axis.set_ylabel("Largest OOF log-loss reduction\njoint vs condition-only")
+    axis.set_title("Auxiliary incremental-prediction comparison\n(HuBERT layer selected on this same OOF summary)")
     axis.legend(title="")
     figure.tight_layout()
     figure.savefig(destination.with_suffix(".png"), dpi=250, bbox_inches="tight")
@@ -265,7 +265,7 @@ def _hve_profiles(hve: pd.DataFrame, destination: Path) -> None:
     for axis in axes[-1, :]:
         axis.set_xticks(x)
         axis.set_xticklabels(LAYERS, rotation=60, ha="right", fontsize=9)
-    figure.suptitle("Actual-exposure variability (B23 incremental GLMM not identifiable)", y=1.01)
+    figure.suptitle("Actual-exposure variability (current B23 multi-talker mapping not integrated)", y=1.01)
     figure.tight_layout()
     figure.savefig(destination.with_suffix(".png"), dpi=250, bbox_inches="tight")
     figure.savefig(destination.with_suffix(".svg"), bbox_inches="tight")
@@ -334,7 +334,7 @@ def _ceiling_figure(root: Path, sbi: pd.DataFrame, destination: Path) -> pd.Data
         rows.extend(
             [
                 {"dataset_id": dataset, "model": "Condition only", "mean_log_loss": condition_loss, "feature_key": ""},
-                {"dataset_id": dataset, "model": "Best HuBERT joint", "mean_log_loss": best["M_joint"], "feature_key": best["feature_key"]},
+                {"dataset_id": dataset, "model": "Lowest-loss HuBERT joint (auxiliary selection)", "mean_log_loss": best["M_joint"], "feature_key": best["feature_key"]},
                 {"dataset_id": dataset, "model": "Behavioral ceiling", "mean_log_loss": ceiling_loss, "feature_key": "cross-fitted item rate"},
             ]
         )
@@ -376,7 +376,7 @@ def _b23_hve(root: Path, destination: Path) -> pd.DataFrame:
         axis.set_ylabel("Overall actual-exposure variability")
         axis.tick_params(axis="x", rotation=60, labelsize=8)
         axis.legend(title="Single talker", fontsize=8)
-    figure.suptitle("B23 HVE descriptive only: multi-talker assignment missing; incremental GLMM not identifiable")
+    figure.suptitle("B23 HVE descriptive only: public multi-talker mapping not yet integrated")
     figure.tight_layout()
     figure.savefig(destination.with_suffix(".png"), dpi=250, bbox_inches="tight")
     figure.savefig(destination.with_suffix(".svg"), bbox_inches="tight")

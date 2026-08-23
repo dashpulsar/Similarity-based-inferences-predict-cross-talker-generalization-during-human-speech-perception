@@ -32,3 +32,7 @@ The file *-behavioral-data.csv files contain the preprocessed exposure and test 
 The raw_data/ folder contain the behavioral measurements and the sounds stimuli (and were available Praat textgrids with annotated sentence, word or segment boundaries) from the published data sets we analyze.
 
 The folders also contain the NIH-posted preprints of the papers that describe the experiments from which these data were collected.
+
+## B23 exposure-source note
+
+The tracked B23 behavioral workbook contains test-phase responses, but it is not the complete exposure record. The authors' public [OSF project](https://osf.io/t83xk/) (DOI `10.17605/OSF.IO/T83XK`) additionally provides `BBP-2023-StimLists.xlsx` and `BBP-2023-TrainingData.xlsx`. Those files contain the multi-talker sentence-to-recording assignments needed for actual-exposure HVE. They have been located and audited but are not yet part of the production ingestion workflow; the remaining work is listed in the root `TODO.md`.

@@ -59,7 +59,7 @@ python -m ctg.cli aggregate `
 
 `distances.csv` retains accumulated DTW cost, path length, frame counts, normalized distance, and `exp(-d)`. The confirmatory model uses raw distance and does not search for a `k` that maximizes Wald z.
 
-Sensitivity profiles are under `configs/sensitivities/`: `path_length.json`, `min_distance.json`, `tau_1.json`, and `tau_3.json`. Each profile must use a distinct output path.
+Alternative analysis settings are under `configs/sensitivities/`: `path_length.json`, `min_distance.json`, `tau_1.json`, and `tau_3.json`. Each setting must use a distinct output path.
 
 ## 3. HVE / exposure variability
 
@@ -70,7 +70,7 @@ Sensitivity profiles are under `configs/sensitivities/`: `path_length.json`, `mi
   -Jobs 8
 ```
 
-Omit `-Measures` to run every registered measure that is defined for the dataset. AN19 has isolated-word exposure, so sentence/phoneme measures are unsupported. B23 actual multi-talker cells are blocked until the missing assignment is recovered.
+Omit `-Measures` to run every registered measure that is defined for the dataset. AN19 has isolated-word exposure, so sentence/phoneme measures are unsupported. The current B23 builder marks multi-talker cells as blocked because it does not yet ingest the public OSF stimulus lists; integration steps are tracked in the root `TODO.md`.
 
 X21 defaults to presentation weighting: 16 tokens in Single-talker and Talker-specific conditions each appear five times. The task table also retains the unique-token structure.
 

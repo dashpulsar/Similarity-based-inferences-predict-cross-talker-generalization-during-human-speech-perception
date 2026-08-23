@@ -659,7 +659,9 @@ def _write_readme(output: Path, audit: pd.DataFrame) -> None:
         )
     text = f"""# Final experimental report and figures (2026-08-21)
 
-This directory is the current production report package. Historical reports are recoverably archived under the repository's `recycle_bin/`.
+This directory is the current reviewed report package. Superseded reports remain available through Git history.
+
+> **Analysis-status note:** feature spaces in this report are ranked by condition-only versus joint OOF log-loss gain. This is an incremental prediction comparison, not the planned predictor-only GLMM likelihood optimization. B23 HVE also predates integration of the public multi-talker stimulus lists. See the repository-root `TODO.md`.
 
 ## Four principal corrections
 
@@ -684,7 +686,7 @@ Audited values:
 
 ## Variability interpretation boundary
 
-The earlier `figure_03a_variability_ceiling_normalized_profiles` displays only `overall` and takes `abs(z_test)`. It is retained strictly as a compatibility output and is not the primary variability figure. Complete sign-preserving Figure 03 profiles and true OOF results are described below. B23 covers only identifiable actual single-talker exposure and is not equivalent in evidential status to AN19/X21.
+The earlier `figure_03a_variability_ceiling_normalized_profiles` displays only `overall` and takes `abs(z_test)`. It is retained strictly as a compatibility output. Complete sign-preserving Figure 03 profiles and OOF incremental results are described below. B23 covers only the currently implemented single-talker exposure pools and must be rerun after the public multi-talker stimulus lists are integrated.
 """
     (output / "README.md").write_text(text, encoding="utf-8")
 
@@ -694,7 +696,7 @@ def _write_slide_outline(output: Path) -> None:
 
 1. Start with Figure 00 and state that it is a historical notebook-compatible association statistic, not predictive accuracy.
 2. Follow with Figure 01: a HuBERT participant-held-out OOF layer profile in which values above zero improve prediction.
-3. Use Figure 02 to compare the best OOF gains for MFCC, STRF, HuBERT base, and HuBERT ASR fine-tuned.
+3. Use Figure 02 only as the auxiliary condition-incremental OOF comparison for MFCC, STRF, HuBERT base, and HuBERT ASR fine-tuned; it is not the planned optimization criterion.
 4. Use the Figure 03 core panels to separate compatibility three-fold variability associations from true OOF evidence.
 5. Present Figure 05b and state that every matrix cell averages item-wise, matched-content DTW distances; X21 uses 11 talkers and all 32 matched experimental sentences.
 

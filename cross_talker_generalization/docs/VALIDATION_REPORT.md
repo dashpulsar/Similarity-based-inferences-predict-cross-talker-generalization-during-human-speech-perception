@@ -15,9 +15,11 @@ This report describes checks that were actually executed; it does not label unru
 - All 3,296 X21 condition-item aggregates matched within floating-point summation order: maximum absolute difference `1.07e-14`.
 - All six defined AN19 `tr_24` HVE measures matched existing output pool by pool.
 - All 16 X21 `tr_24` presentation-weighted HVE measures matched to `1e-9` rounding.
-- All defined HVE values for the four identifiable B23 `tr_24` single-talker pools matched to `1e-9`. The production output intentionally does not reproduce a multi-talker proxy that cannot be reconstructed from the repository.
+- All defined HVE values for the four currently implemented B23 `tr_24` single-talker pools matched to `1e-9`. This check predates ingestion of the public B23 multi-talker stimulus lists and does not validate multi-talker HVE.
 
 ## Statistical smoke tests
+
+These tests validate the currently implemented condition-only versus joint analysis. They do not validate the planned predictor-only GLMM likelihood as a feature-selection criterion, because the current model outputs do not yet record or use that criterion.
 
 For X21 HuBERT-base 3-D t-SNE `tr_24`, the confirmatory joint model produced coefficient `0.0962`, SE `0.0473`, Wald z `2.032`, p `.0421`, and 95% CI `[0.0034, 0.1890]`. The condition-only versus joint LRT was chi-square(1) `3.859`, p `.0495`. OOF mean binomial log loss was `0.487218` for condition-only and `0.482370` for joint, a gain of `0.004848`. Fits converged and were non-singular; the four X21 test talkers were fixed blocking factors.
 

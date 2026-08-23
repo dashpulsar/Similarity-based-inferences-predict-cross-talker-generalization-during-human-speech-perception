@@ -16,15 +16,15 @@ VARIABILITY_APPENDIX = """
 
 This report contains every computed variability measure rather than only `overall`:
 
-- `figure_03a_variability_true_oof_core_profiles`: primary participant-held-out OOF result;
+- `figure_03a_variability_true_oof_core_profiles`: participant-held-out condition-incremental OOF result;
 - `figure_03b_variability_ceiling_normalized_core_profiles`: signed three-fold Wald-z/ceiling display;
 - Figures 03c–03e: every computable method for AN19, X21, and B23;
 - Figures 03f–03g: true OOF results for every method in AN19 and X21.
 
 The overall-only `abs(z_test)` figures are retained strictly for historical compatibility.
 Three-fold held-out-refit Wald z measures association stability, not frozen-model OOF
-prediction. The actual B23 multi-talker exposure assignment is unavailable, so no
-unidentifiable incremental OOF variability model is reported.
+prediction. The public B23 multi-talker exposure assignment has not yet been integrated,
+so this release does not report a multi-talker B23 HVE model.
 
 AN19 `between_type_word` is not the same as the historical pooled-token `BetweenWord`.
 The label `Between word types` prevents the two estimands from being conflated.
@@ -38,7 +38,7 @@ PRESENTATION_APPENDIX = """
 Present `figure_03a_variability_true_oof_core_profiles` first. Follow with
 `figure_03b_variability_ceiling_normalized_core_profiles` to explain the
 notebook-compatible three-fold association. Figures 03c–03g contain all-method
-profiles. The earlier overall-only figures are no longer primary presentation figures.
+profiles. The earlier overall-only figures are retained only for compatibility.
 """
 
 
@@ -64,7 +64,7 @@ Pass. Before this verification file is added, the report contains {counts.get('.
 - All six matrices are complete and symmetric with zero diagonals; X21/B23 item-level DTW rows reaggregate to matrix means.
 - Variability covers 6 AN19, 16 X21, and 14 B23 computable measures.
 - Signed compatibility profiles and true participant-held-out OOF variability profiles are both included.
-- An unidentified B23 multi-talker actual-exposure HVE value is not replaced by a proxy.
+- B23 multi-talker HVE is not included because the public stimulus mapping has not yet been integrated and validated.
 
 ## Code tests
 

@@ -6,10 +6,9 @@ The reviewed package at
 `cross_talker_generalization/final_report_2026-08-21/` is now the single authoritative
 result entry point. The top-level `results/` directory has been reduced to report
 dependencies, direct compatibility-analysis inputs, validated AN19 matrix sources, and
-one provenance-backed method schematic.
+one method schematic with recorded build inputs.
 
-No research file was permanently deleted. Superseded outputs are recoverably stored in
-`recycle_bin/results_old_20260821/`.
+Superseded tracked outputs remain available through Git history.
 
 ## Curation decision
 
@@ -30,7 +29,7 @@ provenance, and its independent scientific value.
 These 209 analysis/source files are accompanied by this report, `README.md`, and the
 generated `RETAINED_FILES_SHA256.csv` manifest.
 
-### Archived files
+### Removed from the working tree
 
 | Archive section | Files | Approximate size | Reason |
 |---|---:|---:|---|
@@ -38,7 +37,7 @@ generated `RETAINED_FILES_SHA256.csv` manifest.
 | `figures/` | 87 | 76.72 MiB | Replaced distance-correlation, z/ceiling, and variability plots |
 | `other/` | 3 | negligible | Old logs and files from unused result shells |
 
-The archive also preserves the previously empty directory shells where applicable.
+The corresponding tracked versions remain recoverable from Git history.
 
 ## Post-curation verification
 
@@ -87,9 +86,8 @@ sources are recovered or regenerated.
 ## Use policy
 
 Use the final report for current figures and claims. Use `results/` only to rebuild or
-audit the explicitly retained components. Do not use material under
-`recycle_bin/results_old_20260821/` as current evidence without a new validation run and a
-new provenance-bearing output directory.
+audit the explicitly retained components. Do not restore superseded Git-history outputs
+as current evidence without a new validation run and a new provenance-bearing output directory.
 
 For GitHub publication, large HDF5 stores, direct compatibility GLMM inputs, and
 item/recording-level AN19 validation tables remain local and are ignored rather than

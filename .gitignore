@@ -14,10 +14,6 @@ __pycache__/
 /tmp/
 /cross_talker_generalization/final_report_rebuild*/
 
-# The recoverable archive is local-only. Keep its policy document on GitHub.
-/recycle_bin/**
-!/recycle_bin/README.md
-
 # Large retained compatibility inputs remain local. Publish provenance and compact
 # AN19 talker-pair summaries, but not participant/item-level CSV intermediates.
 /results/derived/*.csv
