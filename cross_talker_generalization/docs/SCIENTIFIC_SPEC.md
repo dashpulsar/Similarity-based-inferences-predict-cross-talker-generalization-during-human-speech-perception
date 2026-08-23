@@ -32,7 +32,7 @@ All outputs retain raw distance. Descriptive bounded similarity is `exp(-k d)`. 
 
 Folds are participant-disjoint with fixed seed 230519 and dataset-specific design-cell stratification. Held-out participants cannot influence `tau`, `k`, random-effects structure, or predictor scaling.
 
-Primary evaluation freezes each training-fold model and computes population-level binomial log loss for held-out participants. A Wald z obtained by refitting a GLMM on the held-out fold measures association stability, not prediction.
+For the incremental comparison, each training-fold model is frozen before population-level binomial log loss is computed for held-out participants. A Wald z obtained by refitting a GLMM on the held-out fold measures association stability, not prediction.
 
 ## Behavioral models
 
@@ -46,10 +46,10 @@ M_joint:     original condition + predictor_z + random effects
 
 AN19 and X21 use binary rows. B23 retains 4–7 keyword counts per sentence as `cbind(correct, incorrect)` count-binomial observations.
 
-Primary reporting includes predictor coefficient/CI, the `M_condition` versus `M_joint` LRT, and held-out log loss for all three models. `z_predictor / z_ceiling` appears only in compatibility figures and is not described as variance explained.
+The intended optimization criterion for theoretical predictors is the maximized likelihood of `M_predictor`, without the condition term. The current pipeline fits `M_predictor` but does not persist its full-data log likelihood or use it for report selection. The reported `M_condition` versus `M_joint` LRT and held-out log-loss difference answer the separate question of whether a predictor adds information beyond condition. `z_predictor / z_ceiling` appears only in compatibility figures and is not described as variance explained.
 
 ## HVE status
 
 - AN19: the exposure phase supports reconstruction of the actual 144-token list and isolated-word measures.
 - X21: the public design supports reconstruction of 80 presentations; each of 16 Single-talker/Talker-specific tokens repeats five times. Unique-token HVE is secondary.
-- B23: single-talker pools are recoverable. The multi-talker 20/20/20 sentence assignment, including the noSPA error, is absent. Actual multi-talker HVE remains blocked; a union of available recordings may only be called `available_pool_proxy`.
+- B23: current production outputs cover four single-talker pools. Fourteen definitions are mathematically available there; the two same-sentence, multiple-token measures are undefined. The public OSF stimulus lists provide multi-talker sentence-to-recording assignments, but production ingestion and validation are pending, so those cells remain marked `blocked` for the current release.

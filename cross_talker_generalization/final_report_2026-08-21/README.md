@@ -1,6 +1,8 @@
 # Final experimental report and figures (2026-08-21)
 
-This directory is the current production report package. Historical reports are recoverably archived under the repository's `recycle_bin/`.
+This directory is the current reviewed report package. Superseded reports remain available through Git history.
+
+> **Status note (2026-08-23):** feature spaces in this release were ranked by condition-only versus joint OOF log-loss gain. That is an incremental prediction comparison, not the planned predictor-only GLMM likelihood optimization. B23 HVE in this release also predates integration of the public multi-talker stimulus lists. See the repository-root [TODO.md](../../TODO.md) before treating “best” labels or B23 HVE coverage as final.
 
 ## Four principal corrections
 
@@ -35,21 +37,21 @@ Audited values:
 
 ## Variability interpretation boundary
 
-The earlier `figure_03a_variability_ceiling_normalized_profiles` displays only `overall` and takes `abs(z_test)`. It is retained strictly as a compatibility output and is not the primary variability figure. Complete sign-preserving Figure 03 profiles and true OOF results are described below. B23 covers only identifiable actual single-talker exposure and is not equivalent in evidential status to AN19/X21.
+The earlier `figure_03a_variability_ceiling_normalized_profiles` displays only `overall` and takes `abs(z_test)`. It is retained strictly as a compatibility output. Complete sign-preserving Figure 03 profiles and OOF incremental results are described below. B23 covers only the currently implemented single-talker exposure pools and must be rerun after the public multi-talker stimulus lists are integrated.
 
 ## Complete exposure-variability results
 
 This report contains every computed variability measure rather than only `overall`:
 
-- `figure_03a_variability_true_oof_core_profiles`: primary participant-held-out OOF result;
+- `figure_03a_variability_true_oof_core_profiles`: participant-held-out condition-incremental OOF result;
 - `figure_03b_variability_ceiling_normalized_core_profiles`: signed three-fold Wald-z/ceiling display;
 - Figures 03c–03e: every computable method for AN19, X21, and B23;
 - Figures 03f–03g: true OOF results for every method in AN19 and X21.
 
 The overall-only `abs(z_test)` figures are retained strictly for historical compatibility.
 Three-fold held-out-refit Wald z measures association stability, not frozen-model OOF
-prediction. The actual B23 multi-talker exposure assignment is unavailable, so no
-unidentifiable incremental OOF variability model is reported.
+prediction. The public B23 multi-talker exposure assignment has not yet been integrated,
+so this release does not report a multi-talker B23 HVE model.
 
 AN19 `between_type_word` is not the same as the historical pooled-token `BetweenWord`.
 The label `Between word types` prevents the two estimands from being conflated.

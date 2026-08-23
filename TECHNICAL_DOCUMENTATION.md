@@ -102,7 +102,8 @@ Availability differs by dataset:
 
 - AN19 contains isolated-word exposure and supports `overall` plus the five word-level measures. Sentence and phoneme variants are explicitly unsupported.
 - X21 reconstructs 80 exposure presentations. In Single-talker and Talker-specific conditions, each of 16 tokens is repeated five times. The primary HVE estimand preserves presentation weighting; a unique-token version remains available.
-- B23 supports four identifiable single-talker pools. The repository does not contain the full 20/20/20 sentence-to-talker assignment for multi-talker exposure, including the noSPA presentation error. Those actual-exposure cells are marked `blocked`; the union of available recordings is not substituted as if it were the heard set.
+- B23 currently computes HVE for four single-talker pools. Fourteen of the 16 registered definitions are mathematically defined for those pools; `within_type_sentence` and `mean_dissimilarity_sentence` require multiple tokens of the same sentence type and are therefore undefined when each sentence has one recording.
+- The public B23 OSF archive (`10.17605/OSF.IO/T83XK`) contains `BBP-2023-StimLists.xlsx` and `BBP-2023-TrainingData.xlsx`, which provide the multi-talker sentence-to-recording assignments. These files have not yet been integrated into `exposure.py`, so current multi-talker rows remain marked `blocked`. This is a pending implementation and validation task, not an unidentified estimand.
 
 ## 7. Participant-disjoint three-fold analysis
 
@@ -120,17 +121,24 @@ AN19 and X21 use binary responses. B23 retains correct/incorrect keyword counts 
 
 R/lme4 fits the GLMMs. Full-data models report coefficient, standard error, 95% CI, and Wald z. The likelihood-ratio comparison of `M_condition` and `M_joint` tests whether the predictor contributes association beyond condition. Random-effects structure, convergence, and singularity are recorded in diagnostics rather than silently altered.
 
+There are two distinct model-comparison questions:
+
+1. **Theoretical-predictor optimization:** compare representations or parameterizations using the maximized likelihood of `M_predictor`, which excludes the original experimental condition predictor.
+2. **Incremental prediction beyond condition:** compare `M_condition` with `M_joint`, including on held-out participants.
+
+The current R code fits all three models, but it does not persist the full-data `logLik(M_predictor)` needed for the intended optimization rule. The current report builders select their “best” feature space using the second question's OOF log-loss difference. That output remains a valid incremental comparison, but it must not be described as the optimization criterion. Implementing and prespecifying the first criterion is tracked in [TODO.md](TODO.md).
+
 ## 8. True OOF prediction versus compatibility z
 
 These quantities have different meanings.
 
-**True cross-validated prediction:** a GLMM is fit on two training folds and frozen. It predicts the third, entirely unseen participant fold at the population level without held-out participant random effects. The three held-out partitions form the OOF predictions. Primary incremental performance is:
+**True cross-validated prediction:** a GLMM is fit on two training folds and frozen. It predicts the third, entirely unseen participant fold at the population level without held-out participant random effects. The three held-out partitions form the OOF predictions. Incremental performance beyond condition is:
 
 ```text
 OOF gain = logloss(M_condition) - logloss(M_joint)
 ```
 
-Positive values mean that adding the predictor improves prediction for unseen participants; negative values mean worse prediction.
+Positive values mean that adding the predictor improves prediction for unseen participants; negative values mean worse prediction. This comparison is additional to, and must not be substituted for, the planned predictor-only likelihood optimization.
 
 **Held-out-refit Wald z:** after selecting one fold, the GLMM is refit directly on that fold's behavioral responses and its z is recorded. Because those responses were used for fitting, the statistic measures association stability across participant subsets, not out-of-sample prediction. The historical method is preserved for compatibility figures but is not rerun by default.
 
@@ -146,8 +154,8 @@ Figure 00 and its variability analogue define 100% as the mean of the three comp
 ## 10. Figures and interpretation
 
 - **Figure 00:** MFCC39 and STRF24 appear first, followed by 18 HuBERT layers. Gray dots are fold-specific held-out-refit z values; black points/lines show the fold mean and fold-bootstrap 95% interval; the gray band represents ceiling uncertainty. This is a compatibility association figure.
-- **Figures 01–02:** participant-held-out frozen-model OOF log-loss gain asks whether a representation improves prediction for unseen participants. The zero line means no incremental prediction, not a significance threshold.
-- **Figure 03 series:** the compatibility panel matches Figure 00 semantics, while the core and dataset-specific profiles report true OOF results across every available HVE method.
+- **Figures 01–02:** participant-held-out frozen-model OOF log-loss gain asks whether a representation improves prediction for unseen participants beyond condition. The zero line means no incremental prediction, not a significance threshold. Any “best” label in the current release reflects this auxiliary ranking and must be revisited after predictor-only likelihood selection is implemented.
+- **Figure 03 series:** the compatibility panel matches Figure 00 semantics, while the core and dataset-specific profiles report OOF incremental results across every currently computed HVE method.
 - **S-curves:** panels follow available test talkers and conditions. Points are trial-count-weighted accuracy in predictor quantile bins with Wilson 95% binomial intervals. Curves are descriptive binomial logistic fits, not hierarchical GLMM conditional-effect plots.
 - **Talker distance matrices:** for talkers A and B, DTW is computed for each shared linguistic item and averaged. X21 uses all 32 matched experimental sentences per cell, B23 uses 120 common sentences, and AN19 uses the shared word set. Matrices are symmetric with a zero diagonal.
 - **Correlation matrices:** raw distances from exactly the same physical pairs/cells are compared across layers or representations. Inputs containing participant/fold/response replication are rejected.
@@ -171,7 +179,7 @@ Each profile must write to a distinct output directory and preserve its paramete
 
 ## 12. Parallel execution and provenance
 
-DTW and HVE tasks are parallelized by feature layer. Each worker owns its HDF5 handle, and BLAS threads within a worker are restricted to one to avoid `jobs × BLAS threads` oversubscription. The default is eight jobs. Independent talker-matrix pairs may use up to 32 threads, bounded by CPU count and task count. Full-dimensional runs should reduce jobs if memory pressure is high.
+DTW and HVE tasks are parallelized by feature layer. Each worker owns its HDF5 handle, and BLAS threads within a worker are restricted to one to avoid `jobs × BLAS threads` oversubscription. The default is eight jobs. Independent matched-content comparisons for all talker pairs may use up to 32 threads, bounded by CPU count and task count. Full-dimensional runs should reduce jobs if memory pressure is high.
 
 Provenance JSON records random seed, input paths and hashes, runtime versions, parameters, output hashes, and status counts. Stable IDs and explicit join keys connect tables. Unavailable, unsupported, or blocked cells are recorded as states rather than silently removed or guessed.
 
@@ -185,18 +193,19 @@ S-curve source files, validated AN19 talker-distance inputs, or direct audit inp
 those summaries.
 
 Consequently, a retained file's timestamp or presence in `results/` does not make it a
-primary result. The statistical semantics determine its status. Held-out-refit Wald-z
+current result. The statistical semantics determine its status. Held-out-refit Wald-z
 outputs remain compatibility association measures; participant-disjoint frozen-model
-log-loss gains remain the predictive results. Superseded duplicates are recoverably
-archived under `recycle_bin/results_old_20260821/` and are never runtime inputs.
+log-loss gains remain incremental predictive comparisons. Superseded versions are
+available from Git history and are not runtime inputs.
 
 ## 13. Current limitations
 
 - SBI is a same-content counterfactual proxy, not the verified token heard by each participant.
 - 3-D t-SNE changes high-dimensional geometry. Full-dimensional sensitivity results remain important even though the reporting emphasis follows the established 3-D method.
-- B23 multi-talker actual-exposure HVE is not recoverable without the missing assignment table.
 - Compatibility three-fold z figures cannot replace OOF prediction.
 - Absolute raw distances from dataset-specific t-SNE spaces are not directly comparable across datasets.
+
+Remediable gaps, including the predictor-only likelihood criterion and B23 multi-talker exposure integration, are listed in [TODO.md](TODO.md) rather than treated as intrinsic limitations.
 
 ## 14. Implementation entry points
 

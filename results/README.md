@@ -21,11 +21,11 @@ as a scientific validity criterion.
 | `statistics/` | Direct input to Figure 00 and the compatibility variability panels | Historical held-out-refit association only; not true OOF prediction |
 | `figures/*notebook-s-curves*` | Source figures and trial tables copied into the final report | Descriptive S-curves |
 | `figures/AN19-*-talker-similarity-*` | Validated AN19 Tr-24 matrices used by the report builder | Matched-content talker-distance source |
-| `figures/X21-base-tr12-representation-schematic-v1/` | Self-contained, provenance-backed method schematic marked publishable | Supporting method illustration; not a behavioral result |
+| `figures/X21-base-tr12-representation-schematic-v1/` | Method schematic with recorded source inputs and build parameters | Supporting illustration; not a behavioral result |
 | `derived/AN19-talker-validation-*-tr24/` | Complete local AN19 validation products; Git publishes compact pair summaries and provenance | Direct source for the 42 x 42 report matrices |
 | selected files at `derived/` root | Local direct inputs and published provenance for compatibility GLMM summaries | Audit and rerun support for compatibility analyses only |
 
-The primary true participant-held-out SBI and HVE products are under
+The participant-held-out SBI and HVE products are under
 [`cross_talker_generalization/artifacts/`](../cross_talker_generalization/artifacts/),
 and their reviewed presentation is in the final report. They should not be inferred from
 the compatibility z-value directories in `results/statistics/`.
@@ -47,13 +47,10 @@ the compatibility z-value directories in `results/statistics/`.
   must be resolved before claiming a full from-scratch reproduction of that compatibility
   run.
 
-## Archived material
+## Superseded material
 
-Duplicate figures, superseded upstream distance tables, old logs, and unused empty result
-directories were moved recoverably to the local path
-`recycle_bin/results_old_20260821/`. Nothing was permanently deleted. Archive payloads are
-excluded from Git and from all production runtime dependencies; see the
-[`recycle_bin` policy](../recycle_bin/README.md).
+Superseded tracked versions remain available through Git history. They are not maintained
+as a second results tree on the main branch.
 
 `RETAINED_FILES_SHA256.csv` records the role, size, original modification time, and SHA-256
 digest of every retained file other than the manifest itself.

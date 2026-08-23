@@ -11,6 +11,6 @@ This document records consequential differences among the earlier paper, manuscr
 | Fold reproducibility | Three folds | Some `StratifiedKFold` calls lacked `random_state` | Fixed seed and saved fold table |
 | Similarity meaning | Information supplied by exposure | Often a same-content counterfactual recording rather than a heard token | Named `same_content_talker_proxy` |
 | t-SNE scaling | 3-D representation | Some legacy paths z-scored each t-SNE axis | Primary profile leaves t-SNE geometry unchanged |
-| B23 HVE | Actual exposure variability | Exact multi-talker assignment is absent | Actual multi-talker estimand is blocked; proxies require separate names |
+| B23 HVE | Actual exposure variability | Public OSF stimulus lists contain the multi-talker recording assignment, but current code does not ingest it | Current release is incomplete; integrate the source and rerun rather than substituting an available-recording union |
 
 Additional risks in the historical utilities included broad exception swallowing, dependence on filesystem traversal order, notebook-global state, unseeded folds, duplicated dataset-specific code, and R fits launched inside layer workers. The production implementation uses manifest IDs, deterministic task tables, one HDF5 open per layer worker, tidy outputs, and fail-closed validation.

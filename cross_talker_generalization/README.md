@@ -1,6 +1,6 @@
 # Cross-talker generalization: production analysis pipeline
 
-This directory is the repository's only production analysis codebase. It reads behavioral data, manifests, and precomputed HDF5 features from the root `data/` directory and writes audits, intermediate tables, models, and figures to `artifacts/` or root-level `results/`. Superseded code and notebooks are archived under `recycle_bin/` and are not runtime dependencies.
+This directory is the repository's production analysis codebase. It reads behavioral data, manifests, and precomputed HDF5 features from the root `data/` directory and writes audits, intermediate tables, models, and figures to `artifacts/` or root-level `results/`. Superseded versions are available through Git history.
 
 ## Coverage
 
@@ -15,9 +15,9 @@ This directory is the repository's only production analysis codebase. It reads b
 
 ## Statistical semantics
 
-`confirmatory_v1` is the default profile. Folds are participant-disjoint, predictor scaling is estimated on training folds only, and GLMMs are frozen before population-level prediction for unseen participants. Performance is evaluated with binomial log loss.
+`confirmatory_v1` is the default profile. Folds are participant-disjoint, predictor scaling is estimated on training folds only, and GLMMs are frozen before population-level prediction for unseen participants. The current report compares condition-only and joint models with held-out binomial log loss. Predictor-only GLMM likelihood, the intended theoretical-predictor optimization criterion, is not yet implemented as the report-selection rule; see [`../TODO.md`](../TODO.md).
 
-`notebook_compatibility_v1` reproduces `exp(-k d)` and held-out-refit Wald z. These z values describe association stability across participant subsets; they are not cross-validated predictive performance. Figure 00 and the compatibility variability panel preserve this view, while the OOF figures and tables contain the primary predictive evidence.
+`notebook_compatibility_v1` reproduces `exp(-k d)` and held-out-refit Wald z. These z values describe association stability across participant subsets; they are not cross-validated predictive performance. Figure 00 and the compatibility variability panel preserve this view; OOF figures report the separate incremental-prediction comparison.
 
 ## Quick start
 
@@ -58,8 +58,8 @@ python -m ctg.cli build-report `
 - Repository-wide technical reference: [../TECHNICAL_DOCUMENTATION.md](../TECHNICAL_DOCUMENTATION.md)
 - Current production report: [final_report_2026-08-21/](final_report_2026-08-21/)
 
-## Known data boundary
+## Current B23 ingestion boundary
 
-The repository does not contain the true B23 20/20/20 sentence-to-talker assignment for multi-talker exposure, including the noSPA presentation error. The corresponding actual-exposure HVE cells are explicitly marked `blocked`. Four single-talker pools remain identifiable. Recovering the assignment would require adding exposure mappings, not rewriting the DTW/HVE core.
+The public B23 OSF archive contains the multi-talker stimulus lists and training data, but the production exposure builder does not yet ingest them. Current multi-talker HVE cells therefore remain marked `blocked`, while four single-talker pools are available. Integrating and validating the public mapping is tracked in [`../TODO.md`](../TODO.md).
 
 This pipeline does not re-extract HuBERT or refit t-SNE. Supplied full-dimensional, 3-D t-SNE, MFCC39, and STRF24 HDF5 files are read-only inputs.

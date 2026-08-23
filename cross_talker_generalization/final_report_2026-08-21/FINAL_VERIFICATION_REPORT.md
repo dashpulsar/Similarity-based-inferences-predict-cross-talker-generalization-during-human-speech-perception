@@ -15,7 +15,7 @@ Pass. Before this verification file is added, the report contains 40 PNG files, 
 - All six matrices are complete and symmetric with zero diagonals; X21/B23 item-level DTW rows reaggregate to matrix means.
 - Variability covers 6 AN19, 16 X21, and 14 B23 computable measures.
 - Signed compatibility profiles and true participant-held-out OOF variability profiles are both included.
-- An unidentified B23 multi-talker actual-exposure HVE value is not replaced by a proxy.
+- B23 multi-talker HVE is not included because the public stimulus mapping had not yet been integrated and validated for this release.
 
 ## Code tests
 

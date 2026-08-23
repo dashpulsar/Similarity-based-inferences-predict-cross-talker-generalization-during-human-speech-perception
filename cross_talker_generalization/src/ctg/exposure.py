@@ -324,7 +324,7 @@ def _build_b23(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFrame
         elif condition.startswith("B23.c_no"):
             pool_id = stable_id("B23V", condition, "blocked")
             status = "blocked"
-            reason = "missing 20/20/20 sentence-to-talker assignment and noSPA presentation-error mapping"
+            reason = "public B23 multi-talker stimulus mapping not yet integrated or validated"
         elif condition.startswith("B23.b_") and len(talkers) == 1:
             pool_id = stable_id("B23V", talkers[0])
             status, reason = "available", None
