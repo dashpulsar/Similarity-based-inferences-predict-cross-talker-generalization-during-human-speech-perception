@@ -9,6 +9,7 @@ This document describes where files belong. Scientific rationale is kept in [PRO
 | `README.md` | Entry point, setup, and current analysis-status notice | Production |
 | `PROJECT_DESCRIPTION.md` | Scientific scope, predictors, representations, and dataset designs | Production |
 | `TECHNICAL_DOCUMENTATION.md` | Equations, data contracts, statistical semantics, and implementation details | Production |
+| `DOCUMENTATION_CHANGES.md` | Post-review wording changes, previous claims, and reasons | Review record |
 | `TODO.md` | Remediable analysis and documentation gaps | Active |
 | `cross_talker_generalization/` | Production code, configuration, tests, artifacts, and report package | Production |
 | `data/` | Behavioral data, manifests, stimulus sources, and local feature-store location | Production input |

@@ -29,3 +29,4 @@ This file tracks remediable gaps in the current production analysis. Intrinsic i
 - After priorities 1–2 are rerun, rebuild the final report into a new dated directory and update the authoritative-report pointer only after numerical and visual review.
 - Remove transitional compatibility files from `results/` when the report builder no longer depends on them.
 - Keep scientific rationale in `PROJECT_DESCRIPTION.md`, implementation details in `TECHNICAL_DOCUMENTATION.md`, commands in the runbook, and file locations in `FILE_GUIDE.md`; avoid restating the same material across documents.
+- Before consolidating remaining README/project-description duplication, propose a small section-movement diff for collaborator review; do not broadly rewrite reviewed prose.

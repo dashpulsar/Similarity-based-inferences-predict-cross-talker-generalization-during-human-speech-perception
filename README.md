@@ -1,36 +1,131 @@
 # Testing theories of cross-talker generalization in human speech perception
 
-This repository investigates how listeners generalize speech recognition from recently experienced speech to new words, talkers, and accents. It asks whether relationships among speech exemplars, measured in acoustic or learned speech-representation spaces, predict human behavior.
+This repository contains an investigation of how listeners generalize speech recognition from recently experienced speech to new words, new talkers, and new accents. It asks whether relationships among speech exemplars—--measured in either acoustic or learned latent speech-representation spaces—--predict human behavior.
 
-The project uses latent representations from English-trained HuBERT models as inputs to exemplar-based computational analyses. It evaluates two theoretical predictors against transcription behavior from three previously published experiments:
+The project combines modern DNN-based automatic speech recognition (ASR) systems trained through self-supervised learning (SSL) with theories of human speech perception. Specifically, we use the latent representations learned by different layers of the HuBERT model to approximate the latent representations of speech inputs learned by human listeners. This allows us to apply a general model of human speech perception (exemplar theory) to those representations, and to test competing hypotheses about the mechanisms that afford generalization during human speech perception. The use of modern ASR models allows us to test these hypotheses against the data from a comparatively unconstrained tasks---listeners' transcriptions of spoken words and sentences---and to go beyond qualitative hypothesis tests (whether a hypothesis can in principle explain the direction of the observed effects) towards quantitative hypothesis tests (whether a hypothesis can explain a non-trivial amount of human behavior, or perhaps even captures most of the observed behavior, pre-empting the need for less parsimonious explanations).
 
-1. **High exposure variability (HVE):** is test performance related to variability among the speech tokens presented during exposure?
-2. **Similarity-based inference (SBI):** is test performance related to the similarity between speech from the exposure talker or talkers and speech from the test talker?
-3. Do HVE or SBI explain behavioral variation beyond the experimental condition labels?
+We address these questions for three distinct behavioral data sets previously elicited in separate perception experiments.
 
-The analyses compare HuBERT layers and model variants with MFCC39 and STRF24 baselines. The scientific rationale and dataset designs are described in [PROJECT_DESCRIPTION.md](PROJECT_DESCRIPTION.md); equations and implementation details are in [TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md).
+The production codebase is [cross_talker_generalization/](cross_talker_generalization/). Superseded tracked versions remain available through Git history and are not used at runtime.
 
-## Current analysis status
+## Research questions
 
-The pipeline fits condition-only, predictor-only, and joint generalized linear mixed models (GLMMs). The present report code ranks feature spaces using participant-held-out improvement of the joint model over the condition-only model. This is a useful additional comparison, but it is **not** the planned optimization criterion for the theoretical predictors. The planned criterion is the likelihood of the predictor-only GLMM, without the original condition predictor. That criterion is not yet implemented as the report-selection rule; it is the first item in [TODO.md](TODO.md).
+The analyses compare (multiple implementations of) two theories of generalization during human speech perception:
 
-The public B23 archive contains the multi-talker stimulus lists needed to reconstruct actual exposure. The current pipeline has not yet imported those lists, so the released B23 HVE outputs cover only the previously reconstructed single-talker exposure pools. This is an implementation task, not a permanent data limitation; see [TODO.md](TODO.md).
+1. **Exposure variability (HVE):** does a listener perceive speech during the test phase more accurately when the exposure phase of the experiment contained speech tokens that varied substantially from each other.
+2. **Similarity-based inference (SBI):** does a listener perceive speech during the test phase more accurately when exposure talker(s) and a test talker produce acoustically or representationally similar speech?
 
-## Repository map
+Additionally, we ask:
 
-| Path | Purpose |
-|---|---|
-| [`cross_talker_generalization/`](cross_talker_generalization/) | Production code, configuration, tests, intermediate artifacts, and report builder |
-| [`cross_talker_generalization/final_report_2026-08-21/`](cross_talker_generalization/final_report_2026-08-21/) | Current figures, source tables, and report notes |
-| [`data/`](data/) | Behavioral data, stimulus manifests, and local feature-store location |
-| [`results/`](results/) | Compact retained inputs needed by the report builder |
-| [`references/`](references/) | Papers and manuscript reference material |
+3. Can either HVE or SBI or both explain variability beyond that previous explained by the experimental conditions (the design factors) of the experiments that elicited the behavioral data sets we model?
 
-For file-level navigation, use [FILE_GUIDE.md](FILE_GUIDE.md). Superseded versions are available through Git history and are not maintained in a separate archive directory on the main branch.
+We compare the answer to these questions:
 
-## Installation
+* across different neural layers of the HuBERT model.
+* across different variants of the HuBERT model (ASR-fine tuned vs. not)
+* for acoustic (MFCCs) and perceptual (STRFs) baseline measures
 
-The tested environment uses Python 3.9.18. Python dependencies are specified in [pyproject.toml](cross_talker_generalization/pyproject.toml) and [environment.yml](cross_talker_generalization/environment.yml). GLMM fitting requires R 4.4.1 and `lme4` 1.1-35.5.
+## Conceptual analysis flow
+
+```text
+Speech recordings
+    ├── HuBERT base / HuBERT ASR fine-tuned (18 registered layers)
+    ├── MFCC39
+    └── STRF24
+            │
+            ▼
+Frame-level variable-length representations
+            │
+            ├── Same-content exposure–test DTW distance ──► SBI predictor
+            │
+            └── Dispersion within the heard exposure pool ─► HVE predictors
+                                                             │
+                                                             ▼
+                        Participant-disjoint three-fold GLMM evaluation
+                                                             │
+                              ┌──────────────────────────────┴─────────────────────────────┐
+                              ▼                                                            ▼
+                 Full-data association statistics                         Frozen-model out-of-fold (OOF) prediction
+              coefficient, CI, Wald z, LRT                         held-out binomial log-loss gain
+```
+
+The distinction at the bottom is essential. Primary predictive claims use models fit on training participants and frozen before scoring unseen participants.
+
+## Representations and distance computation
+
+The project analyzes HuBERT large base and an ASR fine-tuned variant. Each model contributes 18 registered feature spaces:
+
+- CNN layers 2–6;
+- Transformer layer 0;
+- Even-numbered Transformer layers 2–24.
+
+The established analysis uses supplied frame-level 3-D t-SNE sequences. Full-dimensional HuBERT representations are retained for key sensitivity analyses. MFCC39 and STRF24 provide acoustic/perceptual control comparisons.
+
+Variable-length sequences are aligned with dynamic time warping (DTW). The main reproduction setting uses Minkowski `tau=2` and divides cumulative path cost by mean sequence length:
+
+```text
+d = minimum accumulated DTW cost / ((n_frames_left + n_frames_right) / 2)
+```
+
+Path-length normalization, alternative `tau` values, multi-talker aggregation, and predictor transformations are implemented as prespecified sensitivity analyses. Raw costs, path lengths, frame counts, and normalized distances are retained for auditability.
+
+## Two predictor families
+
+### Similarity-based inference (SBI)
+
+SBI compares exposure and test talkers producing matched linguistic content. The recoverable predictor is a **same-content talker proxy**: it does not guarantee that the comparison recording is the exact token heard by a participant. Multi-talker conditions use mean raw distance by default, with minimum distance available as a sensitivity analysis.
+
+Descriptive figures may show bounded similarity `exp(-k d)`. Confirmatory models use negative DTW distance standardized with training-fold moments only, so larger predictor values indicate greater similarity without tuning `k` against held-out behavior.
+
+### High exposure variability (HVE)
+
+HVE describes dispersion within the exposure speech set rather than similarity between exposure and test speech. The registry contains 16 measures: `overall`, plus five measure families at sentence, word, and phoneme levels:
+
+- within-token dispersion;
+- within-type dispersion;
+- between-type dispersion;
+- adjacent-frame order dispersion;
+- within-type mean DTW dissimilarity.
+
+Availability is dataset-dependent. AN19 supports six measures and X21 supports all 16. The current B23 release contains 14 measures for the reconstructed single-talker pools: two same-sentence measures are undefined when each sentence type has only one recording. The public B23 archive also contains the multi-talker stimulus assignments, but those files have not yet been integrated into the production exposure builder. The B23 count and the incomplete multi-talker condition coverage are therefore separate issues.
+
+## Statistical contract
+
+Participants---not trials---are assigned to three folds using fixed seed `230519`. Each predictor is evaluated with condition-only, predictor-only, and joint GLMMs.
+
+Two model-comparison questions must be kept separate. The intended optimization criterion for a theoretical predictor is the likelihood of the predictor-only GLMM, without the original condition predictor. The condition-only versus joint out-of-fold (OOF) log-loss difference is an additional test of whether the computational predictor improves prediction for unseen participants beyond experimental condition.
+
+The current pipeline fits the predictor-only model but does not yet save or use its full-data likelihood as the report-selection rule. Current “best” feature-space labels are instead based on the condition-only versus joint OOF comparison and must be revisited. This implementation gap is the first item in [TODO.md](TODO.md).
+
+Full-data coefficients, confidence intervals, Wald z, and likelihood-ratio tests remain useful association summaries. Historical held-out-refit z values are preserved only in clearly labeled compatibility figures.
+
+AN19 and X21 use Bernoulli responses. B23 retains sentence-level correct/incorrect keyword counts as a count-binomial outcome rather than collapsing each sentence to one binary trial.
+
+## Repository layout
+
+```text
+.
+├── cross_talker_generalization/   production code, configs, tests, artifacts, and report
+│   ├── configs/                   dataset registry and analysis profiles
+│   ├── src/ctg/                   Python analysis package
+│   ├── R/                         lme4 GLMM fitting scripts
+│   ├── scripts/                   automated PowerShell and report entry points
+│   ├── docs/                      runbook, scientific specification, and validation records
+│   ├── tests/                     unit and project-contract tests
+│   ├── artifacts/                 refactored-pipeline intermediate and model products
+│   └── final_report_2026-08-21/  reviewed figures, source tables, and provenance
+├── data/                           tracked manifests plus local read-only feature stores
+├── results/                        published summaries plus local compatibility inputs
+├── references/                     prior paper and manuscript reference files
+```
+
+See [FILE_GUIDE.md](FILE_GUIDE.md) for file-level navigation and [TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md) for exact estimands, equations, and implementation details.
+
+## Installation and requirements
+
+The tested Python environment is 3.9.18. Python dependencies are pinned in [pyproject.toml](cross_talker_generalization/pyproject.toml) and [environment.yml](cross_talker_generalization/environment.yml). GLMM fitting additionally requires R 4.4.1 and `lme4` 1.1-35.5.
+
+Create the project environment from the versioned specification, then activate it from the repository root:
 
 ```powershell
 conda env create -f cross_talker_generalization\environment.yml
@@ -39,9 +134,11 @@ $env:PYTHONPATH = "$PWD\cross_talker_generalization\src"
 python -m ctg.cli --help
 ```
 
-## Verification and execution
+If the environment already exists, only the activation and `PYTHONPATH` commands are needed. The commands below assume that environment is active.
 
-Run the production tests from the repository root:
+## Quick verification
+
+Run the production tests:
 
 ```powershell
 $env:PYTHONPATH = "$PWD\cross_talker_generalization\src"
@@ -57,18 +154,70 @@ python -m ctg.cli audit `
   --output cross_talker_generalization\artifacts\audit-current
 ```
 
-Analysis and report commands are documented in the [runbook](cross_talker_generalization/docs/RUNBOOK.md).
+Run an X21 Tr-24 SBI analysis:
 
-## Data and GitHub policy
+```powershell
+& .\cross_talker_generalization\scripts\run_similarity.ps1 `
+  -Dataset X21 -Store X21_hubert_base_tsne -Features tr_24 -Jobs 8
+```
 
-The repository tracks code, configuration, tests, compact results, figures, and provenance. Large HDF5 feature stores and participant/item-level derived files are excluded from Git. Place externally stored feature files under `data/features/`; the required filenames and hashes are recorded in manifests and provenance files.
+Build a new final report without overwriting the reviewed release:
 
-## Documentation
+```powershell
+python -m ctg.cli build-report `
+  --repository . `
+  --output cross_talker_generalization\final_report_rebuild
+```
 
-- [Project description](PROJECT_DESCRIPTION.md): scientific scope, predictors, representations, and datasets
-- [Technical documentation](TECHNICAL_DOCUMENTATION.md): exact computational and statistical definitions
-- [File guide](FILE_GUIDE.md): repository navigation and result authority
-- [To-do list](TODO.md): remediable analysis and documentation gaps
-- [Runbook](cross_talker_generalization/docs/RUNBOOK.md): executable commands
-- [Validation report](cross_talker_generalization/docs/VALIDATION_REPORT.md): checks already completed
-- [Current report](cross_talker_generalization/final_report_2026-08-21/README.md): figures and interpretation notes
+Complete commands and output contracts are documented in the [runbook](cross_talker_generalization/docs/RUNBOOK.md).
+
+## Results and presentation materials
+
+The reviewed report package is [cross_talker_generalization/final_report_2026-08-21/](cross_talker_generalization/final_report_2026-08-21/). It contains:
+
+- PNG and SVG figures;
+- figure-level CSV source data;
+- complete variability profiles;
+- all-talker matched-content distance matrices;
+- S-curves by talker and condition;
+- a presentation outline;
+- build verification and SHA-256 provenance.
+
+This report package is the single authoritative entry point for current results. The
+top-level [`results/`](results/) directory is deliberately narrower: it contains only
+inputs still required to rebuild the report, compatibility-only notebook summaries,
+AN19 matched-content talker-distance summaries that were checked against their source
+tables, and a method schematic with recorded build inputs.
+
+## Reproducibility policy
+
+Production stages use explicit configuration, stable IDs, participant-disjoint saved folds, deterministic seeds, one HDF5 handle per parallel worker, tidy intermediate tables, and fail-closed validation. New runs should write to new output directories rather than overwrite audited products. Historical provenance retains the paths under which those computations were originally executed, even when the surrounding project directory is later renamed.
+
+### GitHub large-file policy
+
+The Git repository contains the production implementation, tests, configuration,
+manifests, compact result summaries, provenance, and the reviewed final report. It does
+not contain the large HDF5 feature stores, participant/item-level derived CSV files,
+or full local execution artifacts. These files remain in
+their documented local paths and are ignored rather than deleted.
+
+To reproduce computational stages that require those inputs, place the externally stored
+files under `data/features/` and the local result-source paths recorded in
+[`results/README.md`](results/README.md). The tracked manifests and provenance records
+provide filenames, identities, and hashes for auditing.
+
+## Documentation index
+
+- [Project description](PROJECT_DESCRIPTION.md)
+- [Documentation changes after review](DOCUMENTATION_CHANGES.md)
+- [Open tasks](TODO.md)
+- [File guide](FILE_GUIDE.md)
+- [Technical documentation](TECHNICAL_DOCUMENTATION.md)
+- [Production code README](cross_talker_generalization/README.md)
+- [Runbook](cross_talker_generalization/docs/RUNBOOK.md)
+- [Scientific specification](cross_talker_generalization/docs/SCIENTIFIC_SPEC.md)
+- [Historical implementation audit](cross_talker_generalization/docs/LEGACY_AUDIT.md)
+- [Validation report](cross_talker_generalization/docs/VALIDATION_REPORT.md)
+- [Final report](cross_talker_generalization/final_report_2026-08-21/README.md)
+- [Retained-result policy](results/README.md)
+- [Result curation and rebuild record](results/CURATION_REPORT_2026-08-21.md)
