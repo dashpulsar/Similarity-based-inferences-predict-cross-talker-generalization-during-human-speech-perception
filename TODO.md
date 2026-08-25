@@ -18,15 +18,22 @@ This file tracks remediable gaps in the current production analysis. Intrinsic i
 - Recompute all mathematically defined B23 HVE measures for both single- and multi-talker exposure conditions, rebuild the B23 GLMM inputs, and regenerate affected figures and source tables.
 - Replace the current `blocked` states only after the imported mapping and new outputs pass project-contract tests.
 
-## Priority 3: statistical uncertainty and selection safeguards
+## Priority 3: develop model comparisons
+
+- We already have comparisons of GLMMs with the only the theoretical predictors (plus random effects) against joint GLMMs that also contain the condition predictors. These comparisons assess whether the theoretical predictors can explain variance in human behavior that goes beyond that explained by the experiment's conditions. We also need comparisons of the joint GLMMs against GLMMs with only the condition predictors. These comparisons assess whether the theoretical predictors completely subsume / explain all of the variance of the experimental conditions.
+- Similarly, we need a GLMM with theoretical SBI and HVE predictors from layer 24 + the two control predictors (MFCC, STRF), and we need to conduct backward-model selection on this model. The resulting model will tell us which predictors explain variance not explained by the other predictors.
+- We can apply the same backward-model selection procedure to GLMMs that contain SBI OR HVE predictors from all layers. The resulting model will tell us whether different layers capture different information about human behavior.
+
+## Priority 4: statistical uncertainty and selection safeguards
 
 - Add participant-cluster bootstrap intervals for held-out log-loss differences and other key predictive summaries.
 - Prespecify the layer-selection strategy or implement nested participant-level cross-validation when a selected layer is used for confirmatory reporting.
 - Complete the planned full-dimensional HuBERT and DTW-normalization analyses for the key conclusions and report them alongside the established 3-D t-SNE results.
 
-## Priority 4: documentation and release maintenance
+## Priority 5: documentation and release maintenance
 
 - After priorities 1–2 are rerun, rebuild the final report into a new dated directory and update the authoritative-report pointer only after numerical and visual review.
 - Remove transitional compatibility files from `results/` when the report builder no longer depends on them.
 - Keep scientific rationale in `PROJECT_DESCRIPTION.md`, implementation details in `TECHNICAL_DOCUMENTATION.md`, commands in the runbook, and file locations in `FILE_GUIDE.md`; avoid restating the same material across documents.
 - Before consolidating remaining README/project-description duplication, propose a small section-movement diff for collaborator review; do not broadly rewrite reviewed prose.
+
