@@ -1,0 +1,34 @@
+{
+  "outputs": {
+    "B23-exposure-presentations.csv": {
+      "order_status_counts": {
+        "available": 97,
+        "unavailable_duplicate_or_missing_trial_index": 71
+      },
+      "participants": 168,
+      "rows": 10080,
+      "unique_segment_count_by_participant": {
+        "59": 1,
+        "60": 167
+      }
+    },
+    "X21-exposure-presentations.csv": {
+      "participants": 320,
+      "rows": 25600
+    }
+  },
+  "sources": {
+    "b23_lists": {
+      "sha256": "bc060a2c6bb8ab8308c9f2a4eca4865232ff846116f73a93adeb73c9ea7d5203",
+      "url": "https://osf.io/download/x2dmg/"
+    },
+    "b23_training": {
+      "sha256": "74df1cfd9e0588bf73f0854104b112142571209804e575ee6238c883bf5f7613",
+      "url": "https://osf.io/download/gt7bj/"
+    },
+    "x21_training": {
+      "sha256": "073baff169c23a4f0e346076598fc629114775af2383e5f24723d5b610bef940",
+      "url": "https://osf.io/download/8wtn2/"
+    }
+  }
+}

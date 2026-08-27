@@ -9,13 +9,13 @@ This directory is the repository's production analysis codebase. It reads behavi
 - Primary 3-D t-SNE reproduction and full-dimensional sensitivity analysis;
 - MFCC39 and STRF24 acoustic baselines;
 - Minkowski DTW with explicit `tau` and `mean_sequence_length` / `path_length` normalization;
-- Up to 16 registered HVE measures on identifiable actual-exposure pools;
+- Up to 17 registered HVE measures on identifiable actual-exposure presentations;
 - Participant-disjoint three-fold GLMMs, behavioral ceilings, S-curves, and talker distance matrices;
 - A unified cross-dataset final report builder.
 
 ## Statistical semantics
 
-`confirmatory_v1` is the default profile. Folds are participant-disjoint, predictor scaling is estimated on training folds only, and GLMMs are frozen before population-level prediction for unseen participants. The current report compares condition-only and joint models with held-out binomial log loss. Predictor-only GLMM likelihood, the intended theoretical-predictor optimization criterion, is not yet implemented as the report-selection rule; see [`../TODO.md`](../TODO.md).
+`confirmatory_v1` is the default profile. Folds are participant-disjoint, predictor scaling is estimated on training folds only, and GLMMs are frozen before population-level prediction for unseen participants. Candidate theoretical predictors are selected by held-out log loss from the predictor-only GLMM. Condition-only, predictor-only, and joint models are then compared without re-optimizing the selected predictor.
 
 `notebook_compatibility_v1` reproduces `exp(-k d)` and held-out-refit Wald z. These z values describe association stability across participant subsets; they are not cross-validated predictive performance. Figure 00 and the compatibility variability panel preserve this view; OOF figures report the separate incremental-prediction comparison.
 
@@ -56,10 +56,11 @@ python -m ctg.cli build-report `
 - Historical implementation audit: [docs/LEGACY_AUDIT.md](docs/LEGACY_AUDIT.md)
 - Numerical validation: [docs/VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md)
 - Repository-wide technical reference: [../TECHNICAL_DOCUMENTATION.md](../TECHNICAL_DOCUMENTATION.md)
-- Current production report: [final_report_2026-08-21/](final_report_2026-08-21/)
+- Reviewed broad report: [final_report_2026-08-21/](final_report_2026-08-21/)
+- Corrected SBI/HVE selection and downstream comparison update: [analysis_update_2026-08-27/](analysis_update_2026-08-27/)
 
-## Current B23 ingestion boundary
+## B23 exposure source status
 
-The public B23 OSF archive contains the multi-talker stimulus lists and training data, but the production exposure builder does not yet ingest them. Current multi-talker HVE cells therefore remain marked `blocked`, while four single-talker pools are available. Integrating and validating the public mapping is tracked in [`../TODO.md`](../TODO.md).
+The production builder integrates the public B23 stimulus lists and participant-level training data for all eight trained conditions. It uses actual filenames to map recordings. Order-independent HVE remains available for every trained participant; the global order-sensitive measure is unavailable when the public trial indices are incomplete.
 
 This pipeline does not re-extract HuBERT or refit t-SNE. Supplied full-dimensional, 3-D t-SNE, MFCC39, and STRF24 HDF5 files are read-only inputs.

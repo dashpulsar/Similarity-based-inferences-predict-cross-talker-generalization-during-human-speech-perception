@@ -79,7 +79,7 @@ Descriptive figures may show bounded similarity `exp(-k d)`. Confirmatory models
 
 ### High exposure variability (HVE)
 
-HVE describes dispersion within the exposure speech set rather than similarity between exposure and test speech. The registry contains 16 measures: `overall`, plus five measure families at sentence, word, and phoneme levels:
+HVE describes dispersion within the exposure speech set rather than similarity between exposure and test speech. The registry contains 17 measures: `overall`, the trial-order measure `overall_order_sensitive`, and five measure families at sentence, word, and phoneme levels:
 
 - within-token dispersion;
 - within-type dispersion;
@@ -87,15 +87,15 @@ HVE describes dispersion within the exposure speech set rather than similarity b
 - adjacent-frame order dispersion;
 - within-type mean DTW dissimilarity.
 
-Availability is dataset-dependent. AN19 supports six measures and X21 supports all 16. The current B23 release contains 14 measures for the reconstructed single-talker pools: two same-sentence measures are undefined when each sentence type has only one recording. The public B23 archive also contains the multi-talker stimulus assignments, but those files have not yet been integrated into the production exposure builder. The B23 count and the incomplete multi-talker condition coverage are therefore separate issues.
+`overall_order_sensitive` concatenates complete exposure tokens in actual presentation order and includes transitions across token boundaries. AN19 and X21 have complete participant-level order. The B23 public stimulus and training files are now integrated for both single- and multi-talker exposure. Two same-sentence measures remain mathematically undefined for B23, and the global order measure is unavailable for 71 participants whose public trial indices are duplicated or incomplete; their order-independent HVE measures remain available.
 
 ## Statistical contract
 
 Participants---not trials---are assigned to three folds using fixed seed `230519`. Each predictor is evaluated with condition-only, predictor-only, and joint GLMMs.
 
-Two model-comparison questions must be kept separate. The intended optimization criterion for a theoretical predictor is the likelihood of the predictor-only GLMM, without the original condition predictor. The condition-only versus joint out-of-fold (OOF) log-loss difference is an additional test of whether the computational predictor improves prediction for unseen participants beyond experimental condition.
+Candidate theoretical predictors are selected by the summed three-fold held-out log loss of the predictor-only GLMM, without the original condition predictor. Candidates are ranked together only if they were evaluated on identical held-out observations.
 
-The current pipeline fits the predictor-only model but does not yet save or use its full-data likelihood as the report-selection rule. Current “best” feature-space labels are instead based on the condition-only versus joint OOF comparison and must be revisited. This implementation gap is the first item in [TODO.md](TODO.md).
+After selection, condition-only versus joint asks whether the theoretical predictor adds information beyond condition; predictor-only versus joint asks whether condition adds information beyond the theoretical predictor. Both comparisons are separate from the optimization criterion. The August 21 report predates this correction; the corrected selection and downstream results are in [analysis_update_2026-08-27](cross_talker_generalization/analysis_update_2026-08-27/README.md).
 
 Full-data coefficients, confidence intervals, Wald z, and likelihood-ratio tests remain useful association summaries. Historical held-out-refit z values are preserved only in clearly labeled compatibility figures.
 
@@ -113,7 +113,8 @@ AN19 and X21 use Bernoulli responses. B23 retains sentence-level correct/incorre
 │   ├── docs/                      runbook, scientific specification, and validation records
 │   ├── tests/                     unit and project-contract tests
 │   ├── artifacts/                 refactored-pipeline intermediate and model products
-│   └── final_report_2026-08-21/  reviewed figures, source tables, and provenance
+│   ├── final_report_2026-08-21/  reviewed broad report package
+│   └── analysis_update_2026-08-27/ corrected SBI/HVE selection and comparisons
 ├── data/                           tracked manifests plus local read-only feature stores
 ├── results/                        published summaries plus local compatibility inputs
 ├── references/                     prior paper and manuscript reference files
@@ -173,7 +174,7 @@ Complete commands and output contracts are documented in the [runbook](cross_tal
 
 ## Results and presentation materials
 
-The reviewed report package is [cross_talker_generalization/final_report_2026-08-21/](cross_talker_generalization/final_report_2026-08-21/). It contains:
+The reviewed broad report package is [cross_talker_generalization/final_report_2026-08-21/](cross_talker_generalization/final_report_2026-08-21/). It contains:
 
 - PNG and SVG figures;
 - figure-level CSV source data;
@@ -183,8 +184,13 @@ The reviewed report package is [cross_talker_generalization/final_report_2026-08
 - a presentation outline;
 - build verification and SHA-256 provenance.
 
-This report package is the single authoritative entry point for current results. The
-top-level [`results/`](results/) directory is deliberately narrower: it contains only
+Its predictor-selection labels are superseded by the dated
+[model-selection and HVE update](cross_talker_generalization/analysis_update_2026-08-27/README.md).
+The update contains the complete revised t-SNE HVE candidate reruns and selected SBI
+downstream comparisons. It remains separate because it does not rebuild every descriptive
+or compatibility figure in the broad August 21 package;
+the August 21 package remains the broad presentation inventory, not the authority for the
+corrected selection analysis. The top-level [`results/`](results/) directory contains only
 inputs still required to rebuild the report, compatibility-only notebook summaries,
 AN19 matched-content talker-distance summaries that were checked against their source
 tables, and a method schematic with recorded build inputs.
@@ -218,6 +224,7 @@ provide filenames, identities, and hashes for auditing.
 - [Scientific specification](cross_talker_generalization/docs/SCIENTIFIC_SPEC.md)
 - [Historical implementation audit](cross_talker_generalization/docs/LEGACY_AUDIT.md)
 - [Validation report](cross_talker_generalization/docs/VALIDATION_REPORT.md)
-- [Final report](cross_talker_generalization/final_report_2026-08-21/README.md)
+- [Reviewed broad report](cross_talker_generalization/final_report_2026-08-21/README.md)
+- [Corrected model-selection and global-order HVE update](cross_talker_generalization/analysis_update_2026-08-27/README.md)
 - [Retained-result policy](results/README.md)
 - [Result curation and rebuild record](results/CURATION_REPORT_2026-08-21.md)

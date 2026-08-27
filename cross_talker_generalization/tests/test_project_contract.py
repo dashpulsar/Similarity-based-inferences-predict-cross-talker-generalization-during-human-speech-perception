@@ -19,6 +19,8 @@ class RealProjectContractTests(unittest.TestCase):
         for spec in self.project.datasets.values():
             self.assertTrue(spec.behavior.is_file())
             self.assertTrue(spec.manifest.is_file())
+            if spec.exposure_presentations is not None:
+                self.assertTrue(spec.exposure_presentations.is_file())
         for spec in self.project.feature_stores.values():
             self.assertTrue(spec.path.is_file())
 
@@ -37,19 +39,26 @@ class RealProjectContractTests(unittest.TestCase):
                     self.assertEqual(len(pairs), pair_count)
                     self.assertEqual(cells["cell_id"].nunique(), cell_count)
 
-    def test_actual_exposure_inventories_and_blocked_cells(self):
+    def test_actual_exposure_inventories_and_order_status(self):
         expected = {
-            "AN19": (864, 7, 160, {"available": 6, "no_exposure": 1}),
-            "X21": (41147, 22, 320, {"available": 22}),
+            "AN19": (
+                17280, 121, 160, {"available": 120, "no_exposure": 1},
+                {"available": 120, "no_exposure": 1},
+            ),
+            "X21": (82294, 44, 320, {"available": 44}, {"available": 44}),
             "B23": (
-                5601,
-                9,
-                195,
-                {"available": 4, "blocked": 4, "no_exposure": 1},
+                147026, 106, 195, {"available": 105, "no_exposure": 1},
+                {
+                    "available": 97,
+                    "unavailable_duplicate_or_missing_trial_index": 8,
+                    "no_exposure": 1,
+                },
             ),
         }
         with tempfile.TemporaryDirectory() as temporary:
-            for dataset_id, (task_count, pool_count, participant_count, statuses) in expected.items():
+            for dataset_id, (
+                task_count, pool_count, participant_count, statuses, order_statuses
+            ) in expected.items():
                 with self.subTest(dataset=dataset_id):
                     tasks, pools, participants, provenance = build_exposure_tables(
                         self.project.dataset(dataset_id), Path(temporary) / dataset_id
@@ -58,6 +67,7 @@ class RealProjectContractTests(unittest.TestCase):
                     self.assertEqual(len(pools), pool_count)
                     self.assertEqual(len(participants), participant_count)
                     self.assertEqual(provenance["pool_status_counts"], statuses)
+                    self.assertEqual(pools["order_status"].value_counts().to_dict(), order_statuses)
 
 
 if __name__ == "__main__":

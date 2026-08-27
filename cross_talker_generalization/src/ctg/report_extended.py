@@ -22,6 +22,7 @@ from .report_core import (
     _diagnostics,
     _hve_heatmaps,
     _sbi_profiles,
+    _select_by_predictor_oof,
 )
 from .provenance import atomic_write_csv, atomic_write_json, runtime_record, sha256_file
 
@@ -186,7 +187,7 @@ def _best_gain_source(sbi: pd.DataFrame) -> pd.DataFrame:
             "HuBERT FT": data["family"].eq("HuBERT t-SNE") & data["variant"].eq("ft"),
         }
         for model in MODEL_ORDER:
-            selected = data.loc[selectors[model]].sort_values("oof_gain_joint_vs_condition", ascending=False).iloc[0]
+            selected = _select_by_predictor_oof(data.loc[selectors[model]])
             rows.append({
                 "dataset_id": dataset,
                 "model": model,
@@ -194,6 +195,8 @@ def _best_gain_source(sbi: pd.DataFrame) -> pd.DataFrame:
                 "oof_gain": selected["oof_gain_joint_vs_condition"],
                 "z_value": selected["z_value"],
                 "p_value": selected["p_value"],
+                "predictor_oof_total_log_loss": selected["predictor_oof_total_log_loss"],
+                "predictor_oof_total_trials": selected["predictor_oof_total_trials"],
             })
     return pd.DataFrame(rows)
 

@@ -1,39 +1,45 @@
 # To-do
 
-This file tracks remediable gaps in the current production analysis. Intrinsic interpretation boundaries are documented separately in [PROJECT_DESCRIPTION.md](PROJECT_DESCRIPTION.md) and [TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md).
+This file tracks work that can still change the production results. Scientific definitions are kept in [`cross_talker_generalization/docs/SCIENTIFIC_SPEC.md`](cross_talker_generalization/docs/SCIENTIFIC_SPEC.md).
 
-## Priority 1: align model selection with the intended theoretical test
+## 1. Rerun predictor selection and model comparisons
 
-- Record the maximized log-likelihood (and, for auditability, deviance, AIC, observation count, and convergence status) for every full-data predictor-only GLMM, `M_predictor`.
-- Define and document the exact comparison rule for SBI and HVE representations and parameterizations using `M_predictor`, without the original condition predictor. Confirm whether the intended score is full-data log-likelihood, summed held-out log-likelihood, or a nested-cross-validation analogue before rerunning selection.
-- Rerun feature-space and parameter comparisons using that rule. Do not use condition-only versus joint OOF log-loss gain as the optimization target.
-- Retain condition-only versus joint likelihood-ratio tests and participant-held-out log-loss differences as a separate analysis of information beyond experimental condition.
-- Revise “best layer” labels, figures, tables, and report prose after the intended selection analysis is complete.
+- [x] Rank candidate SBI and HVE specifications by three-fold held-out total log loss from `M_predictor` (predictor plus random effects, without condition).
+- [x] Require candidates in the same ranking to use identical held-out observations and trial counts.
+- [x] Record full-data log likelihood, deviance, AIC, observation count, and convergence status for auditability.
+- [x] Produce both comparisons after selection: `M_condition` versus `M_joint`, and `M_predictor` versus `M_joint`.
+- [x] Correct SBI selection using the existing true OOF `M_predictor` scores and replace the old best-layer labels in the dated analysis update.
+- [x] Rerun the complete revised HVE candidate sets for AN19, X21, and B23 and publish corrected best-method labels in the dated analysis update.
+- [ ] Replace or retire the remaining old best-method labels in the broader August 21 report package.
 
-## Priority 2: integrate actual B23 multi-talker exposure
+## 2. Complete the revised HVE analysis
 
-- Add the public B23 exposure sources from OSF project `T83XK` (DOI `10.17605/OSF.IO/T83XK`), especially `BBP-2023-StimLists.xlsx` and `BBP-2023-TrainingData.xlsx`, to the documented data-ingestion workflow.
-- Build B23 exposure pools from the stimulus filename actually presented, not only from the nominal `speaker` column. The stimulus lists contain a Spanish recording of “THE TABLE HAS THREE LEGS” in conditions where the nominal row labels it as Turkish; this must be reconciled with the paper's presentation-error note and verified before analysis.
-- Validate that every training condition contains 60 presentations and that every sentence maps to one recording within a condition. Record actual talker counts after resolving the filename/label discrepancy.
-- Recompute all mathematically defined B23 HVE measures for both single- and multi-talker exposure conditions, rebuild the B23 GLMM inputs, and regenerate affected figures and source tables.
-- Replace the current `blocked` states only after the imported mapping and new outputs pass project-contract tests.
+- [x] Add `overall_order_sensitive`, defined by concatenating complete exposure tokens in presentation order and including cross-token frame transitions.
+- [x] Recover participant-level order for AN19 and X21.
+- [x] Integrate the B23 public stimulus lists and training table, using the actual stimulus filename to resolve the documented speaker-label discrepancy.
+- [x] Keep unordered B23 HVE available when trial indices are incomplete, while marking only `overall_order_sensitive` unavailable for those participants.
+- [x] Run `overall_order_sensitive` across all 18 t-SNE layers for base and fine-tuned HuBERT in all three datasets.
+- [x] Fit all 14 modelable B23 order-independent HVE measures across 18 layers and both HuBERT variants using predictor-only selection.
+- [x] Fit both downstream comparisons for the two selected B23 order-independent predictors and add participant-cluster bootstrap intervals.
+- [x] Recompute the revised AN19/X21 HVE candidates and regenerate the complete cross-method HVE figures.
 
-## Priority 3: develop model comparisons
+## 3. Multivariable model analyses
 
-- We already have comparisons of GLMMs with the only the theoretical predictors (plus random effects) against joint GLMMs that also contain the condition predictors. These comparisons assess whether the theoretical predictors can explain variance in human behavior that goes beyond that explained by the experiment's conditions. We also need comparisons of the joint GLMMs against GLMMs with only the condition predictors. These comparisons assess whether the theoretical predictors completely subsume / explain all of the variance of the experimental conditions.
-- Similarly, we need a GLMM with theoretical SBI and HVE predictors from layer 24 + the two control predictors (MFCC, STRF), and we need to conduct backward-model selection on this model. The resulting model will tell us which predictors explain variance not explained by the other predictors.
-- We can apply the same backward-model selection procedure to GLMMs that contain SBI OR HVE predictors from all layers. The resulting model will tell us whether different layers capture different information about human behavior.
+- [ ] Prespecify the backward-selection removal rule and stopping criterion.
+- [ ] At HuBERT layer 24, fit the combined SBI + HVE + MFCC + STRF model and perform the prespecified backward selection.
+- [ ] Separately fit all-layer SBI and all-layer HVE models to test whether layers retain nonredundant information.
 
-## Priority 4: statistical uncertainty and selection safeguards
+## 4. Uncertainty and sensitivity analyses
 
-- Add participant-cluster bootstrap intervals for held-out log-loss differences and other key predictive summaries.
-- Prespecify the layer-selection strategy or implement nested participant-level cross-validation when a selected layer is used for confirmatory reporting.
-- Complete the planned full-dimensional HuBERT and DTW-normalization analyses for the key conclusions and report them alongside the established 3-D t-SNE results.
+- [x] Add participant-cluster bootstrap intervals for both held-out comparisons in the global order-sensitive HVE analysis.
+- [x] Extend the paired participant-cluster bootstrap to every selected HVE analysis.
+- [x] Add the same paired participant-cluster bootstrap intervals to the selected SBI analyses.
+- [ ] Treat data-driven layer selection as exploratory or evaluate it with nested participant-level cross-validation before making confirmatory claims.
+- [ ] Run the planned full-dimensional HuBERT and DTW path-length-normalization sensitivity analyses for the key conclusions.
 
-## Priority 5: documentation and release maintenance
+## 5. Revised report and release review
 
-- After priorities 1–2 are rerun, rebuild the final report into a new dated directory and update the authoritative-report pointer only after numerical and visual review.
-- Remove transitional compatibility files from `results/` when the report builder no longer depends on them.
-- Keep scientific rationale in `PROJECT_DESCRIPTION.md`, implementation details in `TECHNICAL_DOCUMENTATION.md`, commands in the runbook, and file locations in `FILE_GUIDE.md`; avoid restating the same material across documents.
-- Before consolidating remaining README/project-description duplication, propose a small section-movement diff for collaborator review; do not broadly rewrite reviewed prose.
-
+- [x] Build the dated methodological update `analysis_update_2026-08-27` without overwriting `final_report_2026-08-21`.
+- [x] Review the update's numerical inventories, candidate diagnostics, selected-model diagnostics, source tables, labels, and figures.
+- [x] Update the root documentation so the August 21 broad report is not presented as the authority for corrected selection results.
+- [ ] Decide whether to promote the dated update or rebuild the broad report after the remaining multivariable and sensitivity-analysis decisions are resolved.

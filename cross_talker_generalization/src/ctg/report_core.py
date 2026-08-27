@@ -19,6 +19,7 @@ LAYERS = (
 COLORS = {"base": "#1f77b4", "ft": "#d62728", "mfcc39": "#7f7f7f", "strf24_legacy": "#9467bd"}
 HVE_MEASURES = (
     "overall",
+    "overall_order_sensitive",
     "within_token_sentence", "within_type_sentence", "between_type_sentence",
     "order_sentence", "mean_dissimilarity_sentence",
     "within_token_word", "within_type_word", "between_type_word",
@@ -39,15 +40,27 @@ def _model_summary(model_dir: Path, *, dataset: str, family: str, variant: str, 
         ["feature_key", "estimate", "std_error", "z_value", "p_value", "conf_low", "conf_high"],
     ].copy()
     coefficient["coefficient_q_bh"] = _benjamini_hochberg(coefficient["p_value"])
+    if "comparison_id" in lrts:
+        lrts = lrts.loc[lrts["comparison_id"].eq("predictor_beyond_condition")]
     lrt = lrts[["feature_key", "chisq", "df", "p_value"]].rename(columns={"p_value": "lrt_p_value"})
-    overall = metrics.loc[metrics["scope"].eq("oof_all")].pivot(
+    oof = metrics.loc[metrics["scope"].eq("oof_all")]
+    overall = oof.pivot(
         index="feature_key", columns="model_id", values="mean_log_loss"
     )
     overall["oof_gain_joint_vs_condition"] = overall["M_condition"] - overall["M_joint"]
+    overall["oof_gain_joint_vs_predictor"] = overall["M_predictor"] - overall["M_joint"]
+    predictor_selection = oof.loc[oof["model_id"].eq("M_predictor"), [
+        "feature_key", "total_log_loss", "total_trials"
+    ]].rename(
+        columns={
+            "total_log_loss": "predictor_oof_total_log_loss",
+            "total_trials": "predictor_oof_total_trials",
+        }
+    )
     features = pd.read_csv(model_dir / "feature_manifest.csv")[["feature_key"]].drop_duplicates()
     result = features.merge(coefficient, on="feature_key", how="left").merge(lrt, on="feature_key", how="left").merge(
         overall.reset_index(), on="feature_key", how="left"
-    )
+    ).merge(predictor_selection, on="feature_key", how="left")
     result.insert(0, "variant", variant)
     result.insert(0, "family", family)
     result.insert(0, "dataset_id", dataset)
@@ -76,6 +89,20 @@ def _model_summary(model_dir: Path, *, dataset: str, family: str, variant: str, 
         "numerical_note",
     ] = "quasi_separation_or_scale_saturation"
     return result
+
+
+def _select_by_predictor_oof(data: pd.DataFrame) -> pd.Series:
+    candidates = data.loc[
+        np.isfinite(data["predictor_oof_total_log_loss"])
+        & np.isfinite(data["predictor_oof_total_trials"])
+    ].copy()
+    if candidates.empty:
+        raise ValueError("no finite held-out M_predictor scores are available for selection")
+    if candidates["predictor_oof_total_trials"].nunique() != 1:
+        raise ValueError("candidate predictors were not scored on identical held-out trials")
+    return candidates.sort_values(
+        ["predictor_oof_total_log_loss", "feature_key"], ascending=[True, True]
+    ).iloc[0]
 
 
 def _collect_sbi(root: Path) -> pd.DataFrame:
@@ -221,12 +248,14 @@ def _best_gain(sbi: pd.DataFrame, destination: Path) -> pd.DataFrame:
             ("MFCC39", data["feature_key"].eq("mfcc39")),
             ("STRF24", data["feature_key"].eq("strf24_legacy")),
         ):
-            selected = data.loc[selector].sort_values("oof_gain_joint_vs_condition", ascending=False).iloc[0]
+            selected = _select_by_predictor_oof(data.loc[selector])
             rows.append(
                 {
                     "dataset_id": dataset, "model": label, "feature_key": selected["feature_key"],
                     "oof_gain": selected["oof_gain_joint_vs_condition"], "z_value": selected["z_value"],
                     "p_value": selected["p_value"],
+                    "predictor_oof_total_log_loss": selected["predictor_oof_total_log_loss"],
+                    "predictor_oof_total_trials": selected["predictor_oof_total_trials"],
                 }
             )
     source = pd.DataFrame(rows)
@@ -235,7 +264,7 @@ def _best_gain(sbi: pd.DataFrame, destination: Path) -> pd.DataFrame:
     axis.axhline(0, color="black", linewidth=0.9)
     axis.set_xlabel("")
     axis.set_ylabel("Largest OOF log-loss reduction\njoint vs condition-only")
-    axis.set_title("Auxiliary incremental-prediction comparison\n(HuBERT layer selected on this same OOF summary)")
+    axis.set_title("Auxiliary incremental-prediction comparison\n(HuBERT layer selected by held-out predictor-only likelihood)")
     axis.legend(title="")
     figure.tight_layout()
     figure.savefig(destination.with_suffix(".png"), dpi=250, bbox_inches="tight")
@@ -277,6 +306,7 @@ def _hve_heatmaps(hve: pd.DataFrame, dataset: str, destination: Path) -> None:
     present_measures = [measure for measure in HVE_MEASURES if measure in set(subset["measure"])]
     labels = {
         "overall": "overall",
+        "overall_order_sensitive": "overall · exposure order",
         **{
             f"{kind}_{unit}": f"{unit} · {kind.replace('_', ' ')}"
             for unit in ("sentence", "word", "phoneme")
@@ -478,11 +508,11 @@ def build_report_core(root: str | Path, output_dir: str | Path) -> dict[str, obj
     selected_curves = []
     hubert = sbi.loc[sbi["family"].eq("HuBERT t-SNE")]
     for (dataset, variant), group in hubert.groupby(["dataset_id", "variant"]):
-        for basis, column, ascending in (
-            ("best_oof_gain", "oof_gain_joint_vs_condition", False),
-            ("strongest_association", "p_value", True),
-        ):
-            row = group.sort_values(column, ascending=ascending).iloc[0]
+        selections = (
+            ("best_predictor_only_oof_likelihood", _select_by_predictor_oof(group)),
+            ("strongest_association", group.sort_values("p_value", ascending=True).iloc[0]),
+        )
+        for basis, row in selections:
             selected_curves.append(
                 {
                     "dataset_id": dataset,

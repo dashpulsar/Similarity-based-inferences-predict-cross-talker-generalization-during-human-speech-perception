@@ -54,6 +54,8 @@ def plot_glmm_profile(model_dir: str | Path, output_prefix: str | Path) -> pd.Da
             "conf_low", "conf_high", "p_value",
         ],
     ]
+    if "comparison_id" in lrts:
+        lrts = lrts.loc[lrts["comparison_id"].eq("predictor_beyond_condition")]
     lrt = lrts[["feature_key", "chisq", "df", "p_value"]].rename(
         columns={"p_value": "lrt_p_value"}
     )

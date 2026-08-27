@@ -70,7 +70,7 @@ Alternative analysis settings are under `configs/sensitivities/`: `path_length.j
   -Jobs 8
 ```
 
-Omit `-Measures` to run every registered measure that is defined for the dataset. AN19 has isolated-word exposure, so sentence/phoneme measures are unsupported. The current B23 builder marks multi-talker cells as blocked because it does not yet ingest the public OSF stimulus lists; integration steps are tracked in the root `TODO.md`.
+Omit `-Measures` to run every registered measure that is defined for the dataset. AN19 has isolated-word exposure, so sentence/phoneme measures are unsupported. B23 uses the normalized participant-level public exposure table under `data/exposure_presentations/`; only the global order-sensitive measure is unavailable for participants whose public trial indices are incomplete.
 
 X21 defaults to presentation weighting: 16 tokens in Single-talker and Talker-specific conditions each appear five times. The task table also retains the unique-token structure.
 

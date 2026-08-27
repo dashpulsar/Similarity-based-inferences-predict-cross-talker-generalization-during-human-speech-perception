@@ -81,7 +81,7 @@ def _parser() -> argparse.ArgumentParser:
     exposure.add_argument("--dataset", choices=("AN19", "X21", "B23"), required=True)
     exposure.add_argument("--output", type=Path, required=True)
 
-    variability = sub.add_parser("compute-variability", help="compute the 16 registered HVE measures")
+    variability = sub.add_parser("compute-variability", help="compute the 17 registered HVE measures")
     variability.add_argument("--project", type=Path, required=True)
     variability.add_argument("--profile", type=Path, required=True)
     variability.add_argument("--tasks", type=Path, required=True)
@@ -119,6 +119,10 @@ def _parser() -> argparse.ArgumentParser:
     fit_parallel.add_argument("--predictor-column", default="raw_distance")
     fit_parallel.add_argument("--direction", type=int, choices=(-1, 1), default=-1)
     fit_parallel.add_argument("--term", default="similarity_z")
+    fit_parallel.add_argument(
+        "--model-set", choices=("all", "predictor_only"), default="all",
+        help="fit all registered models or only M_predictor for candidate selection",
+    )
 
     ceiling_input = sub.add_parser(
         "make-ceiling-input", help="build cross-fitted behavioral ceiling input"
@@ -346,6 +350,7 @@ def main(argv: list[str] | None = None) -> int:
             predictor_column=args.predictor_column,
             direction=args.direction,
             term=args.term,
+            model_set=args.model_set,
             rscript=args.rscript,
         )
         print(f"parallel GLMM completed for {len(result)} feature groups in {args.output}")

@@ -77,6 +77,7 @@ def _fit_one(
     predictor_column: str,
     direction: int,
     term: str,
+    model_set: str,
 ) -> dict[str, Any]:
     run_dir.mkdir(parents=True, exist_ok=True)
     input_path = run_dir / "model_input.csv"
@@ -87,6 +88,7 @@ def _fit_one(
         "predictor_column": predictor_column,
         "direction": int(direction),
         "term": term,
+        "model_set": model_set,
     }
     if _valid_cached_run(
         run_dir, input_hash=input_hash, script_hash=script_hash, parameters=parameters
@@ -105,6 +107,7 @@ def _fit_one(
             predictor_column,
             str(direction),
             term,
+            model_set,
         ],
         capture_output=True,
         text=True,
@@ -170,6 +173,7 @@ def fit_glmm_parallel(
     predictor_column: str = "raw_distance",
     direction: int = -1,
     term: str = "similarity_z",
+    model_set: str = "all",
     rscript: str | None = None,
 ) -> pd.DataFrame:
     input_path = Path(input_path).resolve()
@@ -178,6 +182,8 @@ def fit_glmm_parallel(
         raise ValueError("jobs must be positive")
     if direction not in {-1, 1}:
         raise ValueError("direction must be -1 or 1")
+    if model_set not in {"all", "predictor_only"}:
+        raise ValueError("model_set must be all or predictor_only")
     data = pd.read_csv(input_path)
     required = {"feature_key", predictor_column}
     missing = required.difference(data.columns)
@@ -212,6 +218,7 @@ def fit_glmm_parallel(
                 predictor_column=predictor_column,
                 direction=direction,
                 term=term,
+                model_set=model_set,
             )
             futures[future] = feature
         for future in as_completed(futures):
@@ -244,7 +251,7 @@ def fit_glmm_parallel(
         pd.read_csv(Path(row.run_dir) / "software.csv") for row in manifest.itertuples(index=False)
     ]
     software = pd.concat(software_frames, ignore_index=True).drop_duplicates(
-        ["R_version", "lme4_version", "dataset_id", "talker_strategy", "predictor_column", "predictor_direction", "predictor_term"]
+        ["R_version", "lme4_version", "dataset_id", "talker_strategy", "predictor_column", "predictor_direction", "predictor_term", "model_set"]
     )
     software["parallel_jobs"] = min(jobs, len(features))
     software["feature_count"] = len(features)
@@ -265,6 +272,7 @@ def fit_glmm_parallel(
             "predictor_column": predictor_column,
             "direction": int(direction),
             "term": term,
+            "model_set": model_set,
             "jobs": int(jobs),
         },
         "feature_keys": features,
