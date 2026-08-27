@@ -162,11 +162,13 @@ class Token:
     token_id: str
     type_id: str
     sequence: np.ndarray
+    presentation_index: int | None = None
 
 
 UNITS = ("sentence", "word", "phoneme")
 VARIABILITY_NAMES = (
     "overall",
+    "overall_order_sensitive",
     *(f"within_token_{unit}" for unit in UNITS),
     *(f"within_type_{unit}" for unit in UNITS),
     *(f"between_type_{unit}" for unit in UNITS),
@@ -180,7 +182,10 @@ def compute_variability(name: str, tokens: Sequence[Token], tau: float = 2.0) ->
         raise ValueError(f"unknown variability measure {name!r}")
     if not tokens:
         raise ValueError("at least one token is required")
-    checked = [Token(t.token_id, t.type_id, _validate_sequence(t.sequence)) for t in tokens]
+    checked = [
+        Token(t.token_id, t.type_id, _validate_sequence(t.sequence), t.presentation_index)
+        for t in tokens
+    ]
     if len({t.token_id for t in checked}) != len(checked):
         raise ValueError("token IDs must be unique")
     if len({t.sequence.shape[1] for t in checked}) != 1:
@@ -188,6 +193,20 @@ def compute_variability(name: str, tokens: Sequence[Token], tau: float = 2.0) ->
 
     if name == "overall":
         return generalized_dispersion(np.vstack([t.sequence for t in checked]), tau)
+    if name == "overall_order_sensitive":
+        indices = [token.presentation_index for token in checked]
+        if any(index is None for index in indices):
+            raise ValueError("overall_order_sensitive requires a presentation index for every token")
+        numeric_indices = [int(index) for index in indices if index is not None]
+        if len(set(numeric_indices)) != len(numeric_indices):
+            raise ValueError("presentation indices must be unique within an exposure sequence")
+        ordered = [
+            token
+            for _, token in sorted(
+                zip(numeric_indices, checked), key=lambda pair: pair[0]
+            )
+        ]
+        return consecutive_dispersion(np.vstack([token.sequence for token in ordered]), tau)
     if name.startswith("within_token_"):
         return float(np.mean([generalized_dispersion(t.sequence, tau) for t in checked]))
     if name.startswith("order_"):

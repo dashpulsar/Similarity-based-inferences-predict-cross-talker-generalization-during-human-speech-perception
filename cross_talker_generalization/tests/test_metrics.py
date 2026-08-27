@@ -59,6 +59,30 @@ class VariabilityTests(unittest.TestCase):
             compute_variability("between_type_word", tokens, tau=2), 4.0
         )
 
+    def test_overall_order_sensitive_includes_token_boundaries(self):
+        tokens = [
+            Token("late", "x", np.asarray([[10.0], [11.0]]), presentation_index=2),
+            Token("early", "y", np.asarray([[0.0], [1.0]]), presentation_index=1),
+        ]
+        # Ordered concatenation is [0, 1, 10, 11]. The three squared
+        # transitions are 1, 81, and 1, including the cross-token boundary.
+        self.assertAlmostEqual(
+            compute_variability("overall_order_sensitive", tokens, tau=2),
+            83.0 / 3.0,
+        )
+
+    def test_overall_order_sensitive_requires_unique_complete_order(self):
+        missing = [Token("a", "x", np.asarray([[0.0], [1.0]]))]
+        with self.assertRaises(ValueError):
+            compute_variability("overall_order_sensitive", missing, tau=2)
+
+        duplicate = [
+            Token("a", "x", np.asarray([[0.0], [1.0]]), presentation_index=1),
+            Token("b", "y", np.asarray([[2.0], [3.0]]), presentation_index=1),
+        ]
+        with self.assertRaises(ValueError):
+            compute_variability("overall_order_sensitive", duplicate, tau=2)
+
 
 if __name__ == "__main__":
     unittest.main()

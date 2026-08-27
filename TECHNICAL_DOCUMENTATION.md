@@ -77,7 +77,7 @@ similarity_z = -(d - mean_train) / sd_train
 
 The sign makes greater similarity correspond to a larger predictor. Training-fold moments are applied unchanged to held-out participants.
 
-## 6. Exposure variability: 16 registered measures
+## 6. Exposure variability: 17 registered measures
 
 An exposure pool contains tokens represented as frame × dimension sequences, each with a token ID and a type ID. Generalized dispersion is computed without taking the `1/tau` root:
 
@@ -85,25 +85,26 @@ An exposure pool contains tokens represented as frame × dimension sequences, ea
 V(A) = mean_i sum_r |a_ir - mean(A)_r|^tau
 ```
 
-At `tau=2`, this is mean squared Euclidean deviation, not ordinary Euclidean standard deviation. There are 16 registered measures: one overall measure plus five families at sentence, word, and phoneme levels.
+At `tau=2`, this is mean squared Euclidean deviation, not ordinary Euclidean standard deviation. There are 17 registered measures: two overall measures plus five families at sentence, word, and phoneme levels.
 
 | Measure | Definition |
 |---|---|
 | `overall` | Pool all available exposure frames and compute generalized dispersion |
+| `overall_order_sensitive` | Concatenate complete tokens in actual exposure order and average powered adjacent-frame distance, including cross-token boundaries |
 | `within_token_{unit}` | Compute frame dispersion within each token, then average across tokens |
 | `within_type_{unit}` | Compute each token center, dispersion among centers within a linguistic type, then average across types |
 | `between_type_{unit}` | Compute one center per linguistic type, then dispersion among type centers |
 | `order_{unit}` | Mean powered distance between adjacent acoustic frames within each token; order is frame order, not trial order |
 | `mean_dissimilarity_{unit}` | Mean pairwise DTW distance within each type, then mean across types |
 
-The set is `overall` plus `within_token_*`, `within_type_*`, `between_type_*`, `order_*`, and `mean_dissimilarity_*` for three units: `1 + 5×3 = 16`.
+The set contains `overall`, `overall_order_sensitive`, and `within_token_*`, `within_type_*`, `between_type_*`, `order_*`, and `mean_dissimilarity_*` for three units: `2 + 5 × 3 = 17`.
 
 Availability differs by dataset:
 
-- AN19 contains isolated-word exposure and supports `overall` plus the five word-level measures. Sentence and phoneme variants are explicitly unsupported.
+- AN19 contains isolated-word exposure and supports both overall measures plus the five word-level measures. Sentence and phoneme variants are explicitly unsupported.
 - X21 reconstructs 80 exposure presentations. In Single-talker and Talker-specific conditions, each of 16 tokens is repeated five times. The primary HVE estimand preserves presentation weighting; a unique-token version remains available.
-- B23 currently computes HVE for four single-talker pools. Fourteen of the 16 registered definitions are mathematically defined for those pools; `within_type_sentence` and `mean_dissimilarity_sentence` require multiple tokens of the same sentence type and are therefore undefined when each sentence has one recording.
-- The public B23 OSF archive (`10.17605/OSF.IO/T83XK`) contains `BBP-2023-StimLists.xlsx` and `BBP-2023-TrainingData.xlsx`, which provide the multi-talker sentence-to-recording assignments. These files have not yet been integrated into `exposure.py`, so current multi-talker rows remain marked `blocked`. This is a pending implementation and validation task, not an unidentified estimand.
+- B23 now uses the public stimulus lists and training table for all single- and multi-talker conditions. The actual filename, not the nominal speaker label alone, determines the recording. Fifteen definitions are modelable. The two same-sentence measures are unavailable as cross-participant predictors: 167 participants have one token per sentence type, while one source record contains a duplicated sentence/segment and yields coverage for only that participant.
+- B23 participant-level trial order is complete for 97 trained participants. For the other 71, duplicate or missing public trial indices make only `overall_order_sensitive` unavailable; order-independent measures remain available.
 
 ## 7. Participant-disjoint three-fold analysis
 
@@ -119,14 +120,14 @@ M_joint     = original condition + predictor_z + registered random effects
 
 AN19 and X21 use binary responses. B23 retains correct/incorrect keyword counts per sentence and uses a count-binomial `cbind(correct, incorrect)` outcome; a sentence is not treated as one Bernoulli trial.
 
-R/lme4 fits the GLMMs. Full-data models report coefficient, standard error, 95% CI, and Wald z. The likelihood-ratio comparison of `M_condition` and `M_joint` tests whether the predictor contributes association beyond condition. Random-effects structure, convergence, and singularity are recorded in diagnostics rather than silently altered.
+R/lme4 fits the GLMMs. Full-data models report coefficient, standard error, 95% CI, and Wald z. The pipeline records both likelihood-ratio comparisons: `M_condition` versus `M_joint` for predictor information beyond condition, and `M_predictor` versus `M_joint` for condition information beyond the predictor. Random-effects structure, convergence, and singularity are recorded in diagnostics rather than silently altered.
 
 There are two distinct model-comparison questions:
 
-1. **Theoretical-predictor optimization:** compare representations or parameterizations using the maximized likelihood of `M_predictor`, which excludes the original experimental condition predictor.
+1. **Theoretical-predictor optimization:** compare representations or parameterizations using summed three-fold held-out log loss from `M_predictor`, which excludes the original experimental condition predictor. Lower loss is better, and candidates must use identical held-out observations.
 2. **Incremental prediction beyond condition:** compare `M_condition` with `M_joint`, including on held-out participants.
 
-The current R code fits all three models, but it does not persist the full-data `logLik(M_predictor)` needed for the intended optimization rule. The current report builders select their “best” feature space using the second question's OOF log-loss difference. That output remains a valid incremental comparison, but it must not be described as the optimization criterion. Implementing and prespecifying the first criterion is tracked in [TODO.md](TODO.md).
+The R code can fit only `M_predictor` during candidate selection, then fits all three models for selected candidates. It stores full-data fit statistics for auditing and scores frozen models on held-out participants. Report selection uses predictor-only held-out loss. The August 21 report predates this implementation; revised results are in `analysis_update_2026-08-27`.
 
 ## 8. True OOF prediction versus compatibility z
 
@@ -138,7 +139,7 @@ These quantities have different meanings.
 OOF gain = logloss(M_condition) - logloss(M_joint)
 ```
 
-Positive values mean that adding the predictor improves prediction for unseen participants; negative values mean worse prediction. This comparison is additional to, and must not be substituted for, the planned predictor-only likelihood optimization.
+Positive values mean that adding the predictor improves prediction for unseen participants; negative values mean worse prediction. This comparison is additional to, and must not be substituted for, predictor selection based on held-out `M_predictor` log loss.
 
 **Held-out-refit Wald z:** after selecting one fold, the GLMM is refit directly on that fold's behavioral responses and its z is recorded. Because those responses were used for fitting, the statistic measures association stability across participant subsets, not out-of-sample prediction. The historical method is preserved for compatibility figures but is not rerun by default.
 
@@ -154,7 +155,7 @@ Figure 00 and its variability analogue define 100% as the mean of the three comp
 ## 10. Figures and interpretation
 
 - **Figure 00:** MFCC39 and STRF24 appear first, followed by 18 HuBERT layers. Gray dots are fold-specific held-out-refit z values; black points/lines show the fold mean and fold-bootstrap 95% interval; the gray band represents ceiling uncertainty. This is a compatibility association figure.
-- **Figures 01–02:** participant-held-out frozen-model OOF log-loss gain asks whether a representation improves prediction for unseen participants beyond condition. The zero line means no incremental prediction, not a significance threshold. Any “best” label in the current release reflects this auxiliary ranking and must be revisited after predictor-only likelihood selection is implemented.
+- **Figures 01–02 in the August 21 package:** participant-held-out frozen-model OOF log-loss gain asks whether a representation improves prediction for unseen participants beyond condition. The zero line means no incremental prediction, not a significance threshold. Its old best-layer labels are superseded by the predictor-only selection and paired participant-bootstrap results in `analysis_update_2026-08-27`.
 - **Figure 03 series:** the compatibility panel matches Figure 00 semantics, while the core and dataset-specific profiles report OOF incremental results across every currently computed HVE method.
 - **S-curves:** panels follow available test talkers and conditions. Points are trial-count-weighted accuracy in predictor quantile bins with Wilson 95% binomial intervals. Curves are descriptive binomial logistic fits, not hierarchical GLMM conditional-effect plots.
 - **Talker distance matrices:** for talkers A and B, DTW is computed for each shared linguistic item and averaged. X21 uses all 32 matched experimental sentences per cell, B23 uses 120 common sentences, and AN19 uses the shared word set. Matrices are symmetric with a zero diagonal.
@@ -186,7 +187,10 @@ Provenance JSON records random seed, input paths and hashes, runtime versions, p
 ### Result authority and retention
 
 The reviewed package at `cross_talker_generalization/final_report_2026-08-21/` is the
-authoritative presentation layer. `cross_talker_generalization/artifacts/` supplies the
+broad presentation inventory. Corrected SBI selection/downstream comparisons and the complete
+revised t-SNE HVE candidate analysis are in
+`cross_talker_generalization/analysis_update_2026-08-27/`.
+`cross_talker_generalization/artifacts/` supplies the
 refactored true OOF SBI and HVE products. The top-level `results/` directory is retained
 only where the report builder still requires historical notebook-compatible summaries,
 S-curve source files, validated AN19 talker-distance inputs, or direct audit inputs for

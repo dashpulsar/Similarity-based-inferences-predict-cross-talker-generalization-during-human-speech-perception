@@ -18,6 +18,7 @@ class DatasetSpec:
     expected_test_talkers: int
     outcome: str
     similarity_unit: str
+    exposure_presentations: Path | None = None
 
 
 @dataclass(frozen=True)
@@ -79,6 +80,11 @@ def load_project(path: str | Path) -> ProjectConfig:
             expected_test_talkers=int(values["expected_test_talkers"]),
             outcome=str(values["outcome"]),
             similarity_unit=str(values["similarity_unit"]),
+            exposure_presentations=(
+                _absolute(base, values["exposure_presentations"])
+                if values.get("exposure_presentations")
+                else None
+            ),
         )
         for dataset_id, values in raw["datasets"].items()
     }

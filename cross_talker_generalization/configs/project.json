@@ -23,6 +23,7 @@
     "X21": {
       "behavior": "../../data/preprocessed data/X21-behavioral-data.csv",
       "manifest": "../../data/manifests/X21-stimulus-manifest.csv",
+      "exposure_presentations": "../../data/exposure_presentations/X21-exposure-presentations.csv",
       "expected_behavior_rows": 16477,
       "expected_test_rows": 16477,
       "expected_participants": 320,
@@ -34,6 +35,7 @@
     "B23": {
       "behavior": "../../data/preprocessed data/B23-behavioral-data.csv",
       "manifest": "../../data/manifests/B23-stimulus-manifest.csv",
+      "exposure_presentations": "../../data/exposure_presentations/B23-exposure-presentations.csv",
       "expected_behavior_rows": 11700,
       "expected_test_rows": 11700,
       "expected_participants": 195,

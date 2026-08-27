@@ -1,0 +1,96 @@
+{
+  "analysis": "predictor_only_selection_and_downstream_model_comparisons",
+  "datasets": [
+    "AN19",
+    "X21",
+    "B23"
+  ],
+  "selected_hve_models": [
+    {
+      "dataset_id": "AN19",
+      "feature_key": "cnn_3::overall_order_sensitive",
+      "selection_stratum": "all_exposure_participants",
+      "variant": "base"
+    },
+    {
+      "dataset_id": "AN19",
+      "feature_key": "cnn_3::overall_order_sensitive",
+      "selection_stratum": "all_exposure_participants",
+      "variant": "ft"
+    },
+    {
+      "dataset_id": "X21",
+      "feature_key": "cnn_6::order_word",
+      "selection_stratum": "all_exposure_participants",
+      "variant": "base"
+    },
+    {
+      "dataset_id": "X21",
+      "feature_key": "cnn_6::order_word",
+      "selection_stratum": "all_exposure_participants",
+      "variant": "ft"
+    },
+    {
+      "dataset_id": "B23",
+      "feature_key": "tr_12::between_type_sentence",
+      "selection_stratum": "order_independent_168_participants",
+      "variant": "base"
+    },
+    {
+      "dataset_id": "B23",
+      "feature_key": "tr_4::between_type_sentence",
+      "selection_stratum": "order_independent_168_participants",
+      "variant": "ft"
+    },
+    {
+      "dataset_id": "B23",
+      "feature_key": "tr_6::overall_order_sensitive",
+      "selection_stratum": "global_order_97_participants",
+      "variant": "base"
+    },
+    {
+      "dataset_id": "B23",
+      "feature_key": "tr_20::overall_order_sensitive",
+      "selection_stratum": "global_order_97_participants",
+      "variant": "ft"
+    }
+  ],
+  "selected_sbi_models": [
+    {
+      "dataset_id": "AN19",
+      "feature_key": "tr_10",
+      "variant": "base"
+    },
+    {
+      "dataset_id": "AN19",
+      "feature_key": "tr_10",
+      "variant": "ft"
+    },
+    {
+      "dataset_id": "X21",
+      "feature_key": "tr_14",
+      "variant": "base"
+    },
+    {
+      "dataset_id": "X21",
+      "feature_key": "tr_22",
+      "variant": "ft"
+    },
+    {
+      "dataset_id": "B23",
+      "feature_key": "tr_24",
+      "variant": "base"
+    },
+    {
+      "dataset_id": "B23",
+      "feature_key": "tr_20",
+      "variant": "ft"
+    }
+  ],
+  "selection_rule": "minimum three-fold held-out total log loss from M_predictor",
+  "status": "complete",
+  "variants": [
+    "base",
+    "ft"
+  ]
+}

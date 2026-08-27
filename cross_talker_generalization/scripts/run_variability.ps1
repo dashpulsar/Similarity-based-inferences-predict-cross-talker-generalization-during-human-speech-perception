@@ -9,7 +9,10 @@ param(
     [string[]]$Features = @(),
     [string[]]$Measures = @(),
     [int]$Jobs = 8,
-    [string]$Environment = "cross-talker-generalization"
+    [string]$Environment = "cross-talker-generalization",
+    [string]$RunSuffix = "",
+    [ValidateSet("all", "predictor_only")]
+    [string]$ModelSet = "all"
 )
 
 $ErrorActionPreference = "Stop"
@@ -26,12 +29,30 @@ if ($Store -match "_hubert_(base|ft)_tsne$") {
     $VariantLabel = $Store
 }
 $RunId = "$Dataset-HVE-$VariantLabel"
+if ($RunSuffix) { $RunId = "$RunId-$RunSuffix" }
 $Exposure = Join-Path $Derived "$Dataset-exposure"
 $Folds = Join-Path $Derived "$Dataset-folds.csv"
 $Variability = Join-Path $Derived "$RunId-values.csv"
 $ModelInput = Join-Path $Derived "$RunId-model-input.csv"
 $ModelOutput = Join-Path $Models $RunId
 $Standardizers = Join-Path $Derived "$Store-standardizers"
+
+if ($Measures.Count -eq 0) {
+    $MeasureFamilies = @("within_token", "within_type", "between_type", "order", "mean_dissimilarity")
+    if ($Dataset -eq "AN19") {
+        $Measures = @("overall", "overall_order_sensitive") + ($MeasureFamilies | ForEach-Object { "${_}_word" })
+    } elseif ($Dataset -eq "B23") {
+        $Measures = @("overall", "overall_order_sensitive")
+        foreach ($Unit in @("sentence", "word", "phoneme")) {
+            foreach ($Family in $MeasureFamilies) {
+                $Measure = "${Family}_${Unit}"
+                if ($Measure -notin @("within_type_sentence", "mean_dissimilarity_sentence")) {
+                    $Measures += $Measure
+                }
+            }
+        }
+    }
+}
 
 function Invoke-Ctg {
     param([string[]]$Arguments)
@@ -65,8 +86,10 @@ if ($Measures.Count -gt 0) { $InputArgs += @("--measures") + $Measures }
 Invoke-Ctg $InputArgs
 Invoke-Ctg @("fit-glmm-parallel", "--input", $ModelInput, "--output", $ModelOutput,
     "--jobs", "$Jobs", "--predictor-column", "predictor_value", "--direction", "1",
-    "--term", "variability_z")
-Invoke-Ctg @("plot-profile", "--model-dir", $ModelOutput,
-    "--output", (Join-Path $Figures "$RunId-profile"))
+    "--term", "variability_z", "--model-set", $ModelSet)
+if ($ModelSet -eq "all") {
+    Invoke-Ctg @("plot-profile", "--model-dir", $ModelOutput,
+        "--output", (Join-Path $Figures "$RunId-profile"))
+}
 
 Write-Host "Completed $RunId"

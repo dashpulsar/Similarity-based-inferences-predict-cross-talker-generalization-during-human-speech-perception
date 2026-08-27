@@ -19,6 +19,8 @@ This document describes where files belong. Scientific rationale is kept in [PRO
 
 Superseded versions are retained in Git history. They are not duplicated in a separate archive directory on the main branch.
 
+`data/exposure_presentations/` contains the compact participant-level X21 and B23 exposure tables used by HVE. Its provenance file records the public OSF download URLs and hashes; the preparation script is `cross_talker_generalization/scripts/prepare_public_exposure_presentations.py`.
+
 ## Production analysis directory
 
 | Path | Description |
@@ -36,11 +38,12 @@ Superseded versions are retained in Git history. They are not duplicated in a se
 | `docs/LEGACY_AUDIT.md` | Differences between historical descriptions and implementations |
 | `docs/VALIDATION_REPORT.md` | Numerical and statistical checks already run |
 | `artifacts/` | Intermediate tables, model outputs, and smoke-test products |
-| `final_report_2026-08-21/` | Current reviewed report package |
+| `final_report_2026-08-21/` | Reviewed broad report package |
+| `analysis_update_2026-08-27/` | Corrected SBI/HVE selection, selected-model comparisons, and complete revised t-SNE HVE candidate results |
 
 ## Current report package
 
-`cross_talker_generalization/final_report_2026-08-21/` is the current source for presentation figures and their underlying tables. It contains:
+`cross_talker_generalization/final_report_2026-08-21/` remains the reviewed source for the broad presentation inventory and its underlying tables. It contains:
 
 - `README.md`: figure descriptions and interpretation notes;
 - `PRESENTATION_OUTLINE.md`: suggested presentation order;
@@ -50,7 +53,7 @@ Superseded versions are retained in Git history. They are not duplicated in a se
 - `tables/`: figure source data and manifests;
 - `provenance*.json`: parameters, environment versions, and file hashes.
 
-The report predates the corrections listed in [TODO.md](TODO.md): its “best” feature-space labels use condition-only versus joint OOF log-loss gain, and its B23 HVE coverage does not include the public multi-talker stimulus mapping. Treat it as the current reviewed output package, not as evidence that those two open tasks are complete.
+The report predates the corrections listed in [TODO.md](TODO.md): its “best” feature-space labels use condition-only versus joint OOF log-loss gain, and its B23 HVE coverage does not include the public multi-talker stimulus mapping. Use `analysis_update_2026-08-27/` for corrected predictor-only selection, selected SBI/HVE downstream comparisons, and the complete revised t-SNE HVE candidate search. The update does not replace descriptive outputs such as S-curves and talker matrices in the August 21 package.
 
 ## Result authority and retained sources
 

@@ -31,6 +31,7 @@ TASK_COLUMNS = [
     "linguistic_unit",
     "speaker_id",
     "unit_id",
+    "presentation_index",
     "start_seconds",
     "end_seconds",
     "duration_seconds",
@@ -56,6 +57,7 @@ def _task(
     speaker: str,
     unit_id: str,
     interval: tuple[float, float, float] | None = None,
+    presentation_index: int | None = None,
 ):
     start, end, duration = interval or (None, None, None)
     return {
@@ -66,6 +68,7 @@ def _task(
         "linguistic_unit": unit,
         "speaker_id": speaker,
         "unit_id": unit_id,
+        "presentation_index": presentation_index,
         "start_seconds": start,
         "end_seconds": end,
         "duration_seconds": duration,
@@ -89,6 +92,10 @@ def _build_an19(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFram
     lookup = manifest.set_index("recording_id", drop=False)
     participant_recordings: dict[str, list[str]] = {}
     for participant, rows in exposure.groupby("participant_id", sort=True):
+        rows = rows.sort_values("trial.within_phase")
+        indices = rows["trial.within_phase"].astype(int).tolist()
+        if indices != list(range(1, 145)):
+            raise ValueError(f"AN19 participant {participant} lacks a complete exposure order")
         recordings = []
         for row in rows.itertuples(index=False):
             matched = manifest.loc[
@@ -102,7 +109,7 @@ def _build_an19(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFram
             recordings.append(str(matched.iloc[0]["recording_id"]))
         if len(recordings) != 144 or len(set(recordings)) != 144:
             raise ValueError(f"AN19 participant {participant} does not have 144 unique exposure tokens")
-        participant_recordings[str(participant)] = sorted(recordings)
+        participant_recordings[str(participant)] = recordings
 
     pool_by_signature: dict[tuple[str, ...], str] = {}
     tasks: list[dict[str, Any]] = []
@@ -119,12 +126,14 @@ def _build_an19(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFram
                 "dataset_id": "AN19",
                 "pool_status": "available",
                 "pool_reason": None,
+                "order_status": "available",
+                "order_reason": None,
                 "estimand": "actual_heard_exposure_variability",
                 "n_participants": len(members),
                 "n_presentations": len(signature),
             }
         )
-        for recording_id in signature:
+        for presentation_index, recording_id in enumerate(signature, start=1):
             row = lookup.loc[recording_id]
             tasks.append(
                 _task(
@@ -135,6 +144,7 @@ def _build_an19(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFram
                     "word",
                     str(row["speaker_id"]),
                     recording_id,
+                    presentation_index=presentation_index,
                 )
             )
 
@@ -164,6 +174,8 @@ def _build_an19(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFram
             "dataset_id": "AN19",
             "pool_status": "no_exposure",
             "pool_reason": "untrained control",
+            "order_status": "no_exposure",
+            "order_reason": "untrained control",
             "estimand": "actual_heard_exposure_variability",
             "n_participants": 40,
             "n_presentations": 0,
@@ -177,6 +189,7 @@ def _interval_tasks_for_segment(
     dataset_id: str,
     presentation_id: str,
     row: pd.Series,
+    presentation_index: int | None,
 ) -> list[dict[str, Any]]:
     duration = float(row["duration_seconds"])
     result = [
@@ -188,6 +201,7 @@ def _interval_tasks_for_segment(
             "sentence",
             str(row["speaker_id"]),
             str(row["segment_id"]),
+            presentation_index=presentation_index,
         )
     ]
     for unit, column in (("word", "word_intervals_json"), ("phoneme", "phone_intervals_json")):
@@ -208,43 +222,37 @@ def _interval_tasks_for_segment(
                     str(row["speaker_id"]),
                     str(row["segment_id"]),
                     (float(interval["start_seconds"]), float(interval["end_seconds"]), duration),
+                    presentation_index=presentation_index,
                 )
             )
     return result
 
 
 def _build_x21(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFrame):
+    if spec.exposure_presentations is None or not spec.exposure_presentations.exists():
+        raise FileNotFoundError("X21 participant-level exposure presentations are not available")
+    exposure = pd.read_csv(spec.exposure_presentations)
     by_segment = manifest.set_index("segment_id", drop=False)
     test = behavior.loc[behavior["phase"].eq("test")].copy()
     participant_rows = []
-    pool_definitions: dict[str, dict[str, Any]] = {}
+    pool_definitions: dict[str, tuple[str, ...]] = {}
 
     for participant, rows in test.groupby("participant_id", sort=True):
         conditions = rows["exposure_test_condition_id"].unique()
-        exposure_sets = rows["exposure_talkers"].unique()
-        if len(conditions) != 1 or len(exposure_sets) != 1:
+        if len(conditions) != 1:
             raise ValueError(f"X21 participant {participant} has multiple designs")
-        segments = sorted({str(item).rsplit(".W", 1)[0] for item in rows["item_id"]})
-        sets = {str(by_segment.loc[segment, "experimental_set"]) for segment in segments}
-        if len(sets) != 1:
-            raise ValueError(f"X21 participant {participant} spans test sets {sets}")
-        test_set = next(iter(sets))
-        exposure_set = "set2" if test_set == "set1" else "set1"
-        talkers = _talkers(exposure_sets[0])
+        presentations = exposure.loc[exposure["participant_id"].eq(participant)].sort_values(
+            "presentation_index"
+        )
+        indices = presentations["presentation_index"].astype(int).tolist()
+        if indices != list(range(1, 81)):
+            raise ValueError(f"X21 participant {participant} lacks a complete exposure order")
+        signature = tuple(presentations["segment_id"].astype(str))
+        if not set(signature).issubset(by_segment.index):
+            raise ValueError(f"X21 participant {participant} has unregistered exposure segments")
         condition = str(conditions[0])
-        multiplicity = 5 if condition in {"X21.Single_talker", "X21.Talker_specific"} else 1
-        signature = (exposure_set, tuple(talkers), multiplicity)
-        pool_id = stable_id("X21V", exposure_set, ",".join(talkers), multiplicity)
-        pool_definitions[pool_id] = {
-            "pool_id": pool_id,
-            "dataset_id": "X21",
-            "pool_status": "available",
-            "pool_reason": None,
-            "estimand": "actual_heard_presentation_weighted_exposure_variability",
-            "exposure_sentence_set": exposure_set,
-            "exposure_talker_set": ", ".join(talkers),
-            "presentation_multiplicity": multiplicity,
-        }
+        pool_id = stable_id("X21V", *signature)
+        pool_definitions[pool_id] = signature
         participant_rows.append(
             {
                 "participant_id": participant,
@@ -259,25 +267,26 @@ def _build_x21(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFrame
     tasks: list[dict[str, Any]] = []
     pool_rows = []
     participant_frame = pd.DataFrame(participant_rows)
-    for pool_id, definition in sorted(pool_definitions.items()):
-        talkers = _talkers(definition["exposure_talker_set"])
-        selected = manifest.loc[
-            manifest["speaker_id"].isin(talkers)
-            & manifest["experimental_set"].eq(definition["exposure_sentence_set"])
-        ].sort_values(["speaker_id", "sentence_code"])
-        expected_segments = 16 * len(talkers)
-        if len(selected) != expected_segments:
-            raise ValueError(f"X21 pool {pool_id} has {len(selected)} segments, expected {expected_segments}")
-        multiplicity = int(definition["presentation_multiplicity"])
-        for _, segment in selected.iterrows():
-            for repetition in range(multiplicity):
-                presentation = f"{segment['segment_id']}:presentation{repetition + 1}"
-                tasks.extend(_interval_tasks_for_segment(pool_id, "X21", presentation, segment))
+    for pool_id, signature in sorted(pool_definitions.items()):
+        for presentation_index, segment_id in enumerate(signature, start=1):
+            segment = by_segment.loc[segment_id]
+            presentation = f"{segment_id}:presentation{presentation_index}"
+            tasks.extend(
+                _interval_tasks_for_segment(
+                    pool_id, "X21", presentation, segment, presentation_index
+                )
+            )
         pool_rows.append(
             {
-                **definition,
+                "pool_id": pool_id,
+                "dataset_id": "X21",
+                "pool_status": "available",
+                "pool_reason": None,
+                "order_status": "available",
+                "order_reason": None,
+                "estimand": "actual_heard_presentation_weighted_exposure_variability",
                 "n_participants": int(participant_frame["pool_id"].eq(pool_id).sum()),
-                "n_presentations": int(len(selected) * multiplicity),
+                "n_presentations": 80,
             }
         )
     return pd.DataFrame(tasks), pd.DataFrame(pool_rows), participant_frame
@@ -313,31 +322,52 @@ def _textgrid_intervals(row: pd.Series, repo_root: Path):
 
 
 def _build_b23(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFrame):
+    if spec.exposure_presentations is None or not spec.exposure_presentations.exists():
+        raise FileNotFoundError("B23 participant-level exposure presentations are not available")
+    exposure = pd.read_csv(spec.exposure_presentations)
+    by_segment = manifest.set_index("segment_id", drop=False)
     design = _participant_design(behavior)
     participant_rows = []
     pool_definitions: dict[str, dict[str, Any]] = {}
     for row in design.itertuples(index=False):
         condition = str(row.exposure_test_condition_id)
-        talkers = _talkers(row.exposure_talkers)
         if condition == "B23.a_control":
             pool_id, status, reason = "B23V:no_exposure", "no_exposure", "untrained control"
-        elif condition.startswith("B23.c_no"):
-            pool_id = stable_id("B23V", condition, "blocked")
-            status = "blocked"
-            reason = "public B23 multi-talker stimulus mapping not yet integrated or validated"
-        elif condition.startswith("B23.b_") and len(talkers) == 1:
-            pool_id = stable_id("B23V", talkers[0])
+        else:
+            presentations = exposure.loc[exposure["participant_id"].eq(row.participant_id)].copy()
+            if len(presentations) != 60:
+                raise ValueError(f"B23 participant {row.participant_id} lacks 60 exposure rows")
+            order_statuses = presentations["order_status"].unique()
+            if len(order_statuses) != 1:
+                raise ValueError(f"B23 participant {row.participant_id} has mixed order status")
+            order_status = str(order_statuses[0])
+            order_available = order_status == "available"
+            if order_available:
+                presentations = presentations.sort_values("presentation_index")
+                indices = presentations["presentation_index"].astype(int).tolist()
+                if indices != list(range(1, 61)):
+                    raise ValueError(f"B23 participant {row.participant_id} has invalid exposure order")
+            else:
+                presentations = presentations.sort_values("segment_id")
+            signature = tuple(presentations["segment_id"].astype(str))
+            if not set(signature).issubset(by_segment.index):
+                raise ValueError(f"B23 participant {row.participant_id} has unregistered exposure segments")
+            pool_id = stable_id("B23V", order_status, *signature)
             status, reason = "available", None
             pool_definitions[pool_id] = {
                 "pool_id": pool_id,
                 "dataset_id": "B23",
-                "pool_status": status,
-                "pool_reason": reason,
-                "estimand": "actual_single_talker_exposure_variability",
-                "exposure_talker_set": talkers[0],
+                "pool_status": "available",
+                "pool_reason": None,
+                "order_status": order_status,
+                "order_reason": (
+                    None
+                    if order_available
+                    else "public participant record has duplicate or missing trial indices"
+                ),
+                "estimand": "actual_heard_exposure_variability",
+                "signature": signature,
             }
-        else:
-            raise ValueError(f"unexpected B23 design {condition}/{talkers}")
         participant_rows.append(
             {
                 "participant_id": row.participant_id,
@@ -356,37 +386,22 @@ def _build_b23(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFrame
             "dataset_id": "B23",
             "pool_status": "no_exposure",
             "pool_reason": "untrained control",
+            "order_status": "no_exposure",
+            "order_reason": "untrained control",
             "estimand": "actual_exposure_variability",
             "n_participants": int(participant_frame["pool_id"].eq("B23V:no_exposure").sum()),
             "n_presentations": 0,
         }
     ]
-    for pool_id in sorted(participant_frame.loc[participant_frame["pool_status"].eq("blocked"), "pool_id"].unique()):
-        rows = participant_frame.loc[participant_frame["pool_id"].eq(pool_id)]
-        pool_rows.append(
-            {
-                "pool_id": pool_id,
-                "dataset_id": "B23",
-                "pool_status": "blocked",
-                "pool_reason": rows["pool_reason"].iloc[0],
-                "estimand": "actual_multi_talker_exposure_variability",
-                "n_participants": int(rows["participant_id"].nunique()),
-                "n_presentations": np.nan,
-            }
-        )
-
     tasks = []
     repo_root = spec.manifest.parents[2]
     interval_cache: dict[str, dict[str, list[dict[str, Any]]]] = {}
     for pool_id, definition in sorted(pool_definitions.items()):
-        talker = definition["exposure_talker_set"]
-        selected = manifest.loc[
-            manifest["speaker_id"].eq(talker) & manifest["corpus_role"].eq("training_sentence")
-        ].sort_values("segment_id")
-        if len(selected) != 60:
-            raise ValueError(f"B23 single-talker pool {talker} has {len(selected)} training sentences")
-        for _, segment in selected.iterrows():
-            presentation = str(segment["segment_id"])
+        order_available = definition["order_status"] == "available"
+        for position, segment_id in enumerate(definition["signature"], start=1):
+            segment = by_segment.loc[segment_id]
+            presentation = f"{segment_id}:presentation{position}"
+            presentation_index = position if order_available else None
             tasks.append(
                 _task(
                     pool_id,
@@ -396,6 +411,7 @@ def _build_b23(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFrame
                     "sentence",
                     str(segment["speaker_id"]),
                     str(segment["segment_id"]),
+                    presentation_index=presentation_index,
                 )
             )
             cache_key = str(segment["segment_id"])
@@ -412,11 +428,13 @@ def _build_b23(spec: DatasetSpec, behavior: pd.DataFrame, manifest: pd.DataFrame
                             str(segment["speaker_id"]),
                             str(segment["segment_id"]),
                             (interval["start"], interval["end"], interval["duration"]),
+                            presentation_index=presentation_index,
                         )
                     )
+        pool_definition = {key: value for key, value in definition.items() if key != "signature"}
         pool_rows.append(
             {
-                **definition,
+                **pool_definition,
                 "n_participants": int(participant_frame["pool_id"].eq(pool_id).sum()),
                 "n_presentations": 60,
             }
@@ -435,7 +453,10 @@ def build_exposure_tables(spec: DatasetSpec, output_dir: str | Path):
         tasks, pools, participants = _build_b23(spec, behavior, manifest)
     else:  # pragma: no cover
         raise ValueError(spec.dataset_id)
-    tasks = tasks[TASK_COLUMNS].sort_values(["pool_id", "linguistic_unit", "token_id"]).reset_index(drop=True)
+    tasks = tasks[TASK_COLUMNS].sort_values(
+        ["pool_id", "presentation_index", "linguistic_unit", "token_id"],
+        na_position="last",
+    ).reset_index(drop=True)
     pools = pools.sort_values("pool_id").reset_index(drop=True)
     participants = participants.sort_values("participant_id").reset_index(drop=True)
     destination = Path(output_dir)
@@ -483,10 +504,15 @@ def _compute_variability_key(
     output = []
     with threadpool_limits(limits=1), FeatureStore(spec) as store:
         sequence_cache: dict[tuple[object, ...], np.ndarray] = {}
+        measure_cache: dict[tuple[object, ...], float] = {}
         for pool in pools.itertuples(index=False):
             pool_tasks = tasks.loc[tasks["pool_id"].eq(pool.pool_id)]
             for name in VARIABILITY_NAMES:
-                unit = "all" if name == "overall" else name.rsplit("_", 1)[-1]
+                unit = (
+                    "all"
+                    if name in {"overall", "overall_order_sensitive"}
+                    else name.rsplit("_", 1)[-1]
+                )
                 if pool.pool_status != "available":
                     output.append(
                         {
@@ -506,7 +532,31 @@ def _compute_variability_key(
                         }
                     )
                     continue
-                if name == "overall":
+                if (
+                    name == "overall_order_sensitive"
+                    and getattr(pool, "order_status", "unavailable") != "available"
+                ):
+                    output.append(
+                        {
+                            "dataset_id": pool.dataset_id,
+                            "store_id": spec.store_id,
+                            "model_variant": spec.variant,
+                            "feature_key": feature_key,
+                            "layer": feature_key,
+                            "pool_id": pool.pool_id,
+                            "measure": name,
+                            "linguistic_unit": unit,
+                            "tau": tau,
+                            "coordinate_scaling": scaling,
+                            "value": np.nan,
+                            "value_status": "order_unavailable",
+                            "status_reason": getattr(
+                                pool, "order_reason", "presentation order is unavailable"
+                            ),
+                        }
+                    )
+                    continue
+                if name in {"overall", "overall_order_sensitive"}:
                     # Use each exposure frame once.  Connected-speech datasets
                     # use complete sentence tokens; AN19 has only isolated-word
                     # recordings, for which the word token is the complete signal.
@@ -537,6 +587,43 @@ def _compute_variability_key(
                         }
                     )
                     continue
+                signature_columns = [
+                    "speaker_id", "unit_id", "start_seconds", "end_seconds",
+                    "duration_seconds", "type_id",
+                ]
+                if name == "overall_order_sensitive":
+                    signature_frame = selected.sort_values("presentation_index")
+                else:
+                    signature_frame = selected.sort_values(signature_columns)
+                measure_signature = (
+                    name,
+                    tuple(
+                        tuple(None if pd.isna(value) else value for value in row)
+                        for row in signature_frame[signature_columns].itertuples(
+                            index=False, name=None
+                        )
+                    ),
+                )
+                if measure_signature in measure_cache:
+                    value = measure_cache[measure_signature]
+                    output.append(
+                        {
+                            "dataset_id": pool.dataset_id,
+                            "store_id": spec.store_id,
+                            "model_variant": spec.variant,
+                            "feature_key": feature_key,
+                            "layer": feature_key,
+                            "pool_id": pool.pool_id,
+                            "measure": name,
+                            "linguistic_unit": unit,
+                            "tau": tau,
+                            "coordinate_scaling": scaling,
+                            "value": value,
+                            "value_status": "available" if np.isfinite(value) else "mathematically_undefined",
+                            "status_reason": None if np.isfinite(value) else "measure has no eligible token pairs",
+                        }
+                    )
+                    continue
                 tokens = []
                 for task in selected.itertuples(index=False):
                     cache_key = (
@@ -550,8 +637,21 @@ def _compute_variability_key(
                         sequence = store.read(task.speaker_id, task.unit_id, feature_key)
                         sequence = slice_by_time(sequence, cache_key[2], cache_key[3], cache_key[4])
                         sequence_cache[cache_key] = apply_standardizer(sequence, mean, scale)
-                    tokens.append(Token(str(task.token_id), str(task.type_id), sequence_cache[cache_key]))
+                    presentation_index = (
+                        None
+                        if pd.isna(task.presentation_index)
+                        else int(task.presentation_index)
+                    )
+                    tokens.append(
+                        Token(
+                            str(task.token_id),
+                            str(task.type_id),
+                            sequence_cache[cache_key],
+                            presentation_index,
+                        )
+                    )
                 value = compute_variability(name, tokens, tau=tau)
+                measure_cache[measure_signature] = value
                 output.append(
                     {
                         "dataset_id": pool.dataset_id,

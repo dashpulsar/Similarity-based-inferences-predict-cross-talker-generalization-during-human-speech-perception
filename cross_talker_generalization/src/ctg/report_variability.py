@@ -22,6 +22,7 @@ CEILING_Z_DIR = "{dataset}-behavioral-ceiling-notebook-folds-v1"
 
 MEASURE_LABELS = {
     "overall": "Overall frame dispersion",
+    "overall_order_sensitive": "Overall exposure-order transitions",
     "within_token_sentence": "Within sentence",
     "within_type_sentence": "Within sentence type",
     "between_type_sentence": "Between sentence types",
@@ -46,7 +47,11 @@ CORE_MEASURES = {
 }
 
 EXPECTED_MEASURES = {
-    "AN19": tuple(measure for measure in HVE_MEASURES if measure == "overall" or measure.endswith("_word")),
+    "AN19": tuple(
+        measure
+        for measure in HVE_MEASURES
+        if measure in {"overall", "overall_order_sensitive"} or measure.endswith("_word")
+    ),
     "X21": tuple(HVE_MEASURES),
     "B23": tuple(
         measure
@@ -335,9 +340,9 @@ def _plot_all_association_methods(
         frameon=False,
     )
     subtitle = {
-        "AN19": "6 supported word-recording measures",
-        "X21": "all 16 registered sentence, word, and phoneme measures",
-        "B23": "14 estimable measures; within-type and DTW sentence measures are undefined",
+        "AN19": "7 supported overall and word-recording measures",
+        "X21": "all 17 registered measures",
+        "B23": "15 modelable measures; two repeated-sentence measures lack coverage",
     }[dataset]
     figure.suptitle(
         f"{dataset} exposure variability across HuBERT layers\n{subtitle}",

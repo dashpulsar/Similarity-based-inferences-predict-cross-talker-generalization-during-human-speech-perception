@@ -1,6 +1,6 @@
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) < 2L || length(args) > 5L) {
-  stop("usage: fit_confirmatory.R MODEL_INPUT.csv OUTPUT_DIR [PREDICTOR_COLUMN] [DIRECTION] [TERM_NAME]")
+if (length(args) < 2L || length(args) > 6L) {
+  stop("usage: fit_confirmatory.R MODEL_INPUT.csv OUTPUT_DIR [PREDICTOR_COLUMN] [DIRECTION] [TERM_NAME] [MODEL_SET]")
 }
 
 suppressPackageStartupMessages(library(lme4))
@@ -10,8 +10,10 @@ output_dir <- args[[2L]]
 predictor_column <- if (length(args) >= 3L) args[[3L]] else "raw_distance"
 predictor_direction <- if (length(args) >= 4L) as.numeric(args[[4L]]) else -1.0
 predictor_term <- if (length(args) >= 5L) args[[5L]] else "similarity_z"
+model_set <- if (length(args) >= 6L) args[[6L]] else "all"
 if (!(predictor_direction %in% c(-1, 1))) stop("predictor direction must be -1 or 1")
 if (!grepl("^[A-Za-z][A-Za-z0-9_]*$", predictor_term)) stop("invalid predictor term")
+if (!(model_set %in% c("all", "predictor_only"))) stop("model set must be all or predictor_only")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 input <- read.csv(input_path, stringsAsFactors = FALSE, check.names = FALSE,
@@ -55,11 +57,12 @@ if (length(unique(input$test_talker_id)) <= 4L) {
   talker_strategy <- "random_intercept"
 }
 formula_set <- function(random_structure) {
-  c(
+  formulas <- c(
     M_condition = paste0(response_text, " ~ condition_id + ", talker_fixed, random_structure),
     M_predictor = paste0(response_text, " ~ ", predictor_term, " + ", talker_fixed, random_structure),
     M_joint = paste0(response_text, " ~ condition_id + ", predictor_term, " + ", talker_fixed, random_structure)
   )
+  if (model_set == "predictor_only") formulas["M_predictor"] else formulas
 }
 primary_formula_text <- formula_set(random_text)
 fallback_random_text <- "(1 | participant_id) + (1 | analysis_item_id)"
@@ -166,7 +169,12 @@ record_fit <- function(bundle, feature_key, scope, fold, model_id, n_rows,
     selection_reason = selection_reason, n_rows = n_rows,
     fit_ok = !is.null(bundle$fit), singular = bundle$singular,
     convergence = bundle$convergence, warnings = bundle$warnings,
-    error = bundle$error, stringsAsFactors = FALSE
+    error = bundle$error,
+    log_likelihood = if (is.null(bundle$fit)) NA_real_ else as.numeric(logLik(bundle$fit)),
+    deviance = if (is.null(bundle$fit)) NA_real_ else deviance(bundle$fit),
+    AIC = if (is.null(bundle$fit)) NA_real_ else AIC(bundle$fit),
+    n_observations = if (is.null(bundle$fit)) NA_integer_ else nobs(bundle$fit),
+    stringsAsFactors = FALSE
   )
   diagnostic_cursor <<- diagnostic_cursor + 1L
   if (is.null(bundle$fit)) return(invisible(NULL))
@@ -207,14 +215,26 @@ for (feature_key in feature_keys) {
       full_scope$selection_reason
     )
   }
-  if (!is.null(full_bundles$M_condition$fit) && !is.null(full_bundles$M_joint$fit)) {
+  comparison_specs <- if (model_set == "all") {
+    list(
+      predictor_beyond_condition = c(reduced = "M_condition", full = "M_joint"),
+      condition_beyond_predictor = c(reduced = "M_predictor", full = "M_joint")
+    )
+  } else {
+    list()
+  }
+  for (comparison_id in names(comparison_specs)) {
+    reduced_id <- comparison_specs[[comparison_id]][["reduced"]]
+    full_id <- comparison_specs[[comparison_id]][["full"]]
+    if (is.null(full_bundles[[reduced_id]]$fit) || is.null(full_bundles[[full_id]]$fit)) next
     comparison <- tryCatch(
-      anova(full_bundles$M_condition$fit, full_bundles$M_joint$fit, test = "Chisq"),
+      anova(full_bundles[[reduced_id]]$fit, full_bundles[[full_id]]$fit, test = "Chisq"),
       error = function(e) e
     )
     if (inherits(comparison, "error")) {
       lrt_rows[[lrt_cursor]] <- data.frame(
         dataset_id = unique(input$dataset_id), feature_key = feature_key,
+        comparison_id = comparison_id, reduced_model = reduced_id, full_model = full_id,
         scope = "full", fold = NA_integer_, chisq = NA_real_, df = NA_real_,
         p_value = NA_real_, status = "error", reason = conditionMessage(comparison)
       )
@@ -225,6 +245,7 @@ for (feature_key in feature_keys) {
       }
       lrt_rows[[lrt_cursor]] <- data.frame(
         dataset_id = unique(input$dataset_id), feature_key = feature_key,
+        comparison_id = comparison_id, reduced_model = reduced_id, full_model = full_id,
         scope = "full", fold = NA_integer_, chisq = value_at("Chisq"),
         df = if (is.finite(value_at("Chi Df"))) value_at("Chi Df") else value_at("Df"),
         p_value = value_at("Pr(>Chisq)"),
@@ -289,7 +310,12 @@ for (feature_key in feature_keys) {
 
 coefficients <- if (length(coefficient_rows)) do.call(rbind, coefficient_rows) else data.frame()
 diagnostics <- if (length(diagnostic_rows)) do.call(rbind, diagnostic_rows) else data.frame()
-lrts <- if (length(lrt_rows)) do.call(rbind, lrt_rows) else data.frame()
+lrts <- if (length(lrt_rows)) do.call(rbind, lrt_rows) else data.frame(
+  dataset_id = character(), feature_key = character(), comparison_id = character(),
+  reduced_model = character(), full_model = character(), scope = character(),
+  fold = integer(), chisq = numeric(), df = numeric(), p_value = numeric(),
+  status = character(), reason = character()
+)
 predictions <- if (length(prediction_rows)) do.call(rbind, prediction_rows) else data.frame()
 metrics <- if (length(metric_rows)) do.call(rbind, metric_rows) else data.frame()
 
@@ -321,6 +347,7 @@ write.csv(
     predictor_column = predictor_column,
     predictor_direction = predictor_direction,
     predictor_term = predictor_term,
+    model_set = model_set,
     stringsAsFactors = FALSE
   ),
   file.path(output_dir, "software.csv"), row.names = FALSE

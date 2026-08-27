@@ -60,7 +60,7 @@ X21 contains 320 participants and 16,477 binary-response observations. It includ
 
 B23 contains 195 participants and 11,700 sentence-level observations. Each observation retains the number of correctly and incorrectly recognized keywords, so the appropriate outcome is count-binomial rather than one binary value per sentence. Same-content SBI is defined at the sentence level. The current SBI results are close to zero, making B23 important as a possible boundary condition.
 
-The current production release reconstructs only the four B23 single-talker exposure pools. A subsequent source audit located the multi-talker sentence-to-recording assignments in the authors' public OSF files, including information needed to examine the presentation irregularity discussed in the paper. These sources are recoverable but have not yet been integrated and validated in the production exposure builder; the resulting rerun is tracked in [TODO.md](TODO.md).
+The production exposure builder now integrates the public B23 stimulus lists and participant-level training table for all four single-talker and all four multi-talker conditions. It maps the stimulus filename actually presented, which resolves the speaker-label irregularity described in the paper. Revised B23 HVE candidate selection and downstream comparisons are reported in `analysis_update_2026-08-27`.
 
 ## Computational construction
 
@@ -70,7 +70,7 @@ Dynamic time warping aligns two sequences without assuming equal duration. The m
 
 For multi-talker exposure, the primary predictor averages raw distance across exposure talkers. A minimum-distance profile tests the alternative hypothesis that the closest available exemplar dominates generalization. Descriptive plots may convert distance to bounded similarity with `exp(-k d)`, while confirmatory models use negative distance standardized from training-fold data only.
 
-Exposure variability is constructed from identifiable exposure pools. The complete registry contains 16 definitions: one overall measure and five measure families at sentence, word, and phoneme levels. The code records unsupported, unavailable, and blocked measures explicitly rather than dropping them silently.
+Exposure variability is constructed from identifiable exposure presentations. The registry contains 17 definitions: one order-independent overall measure, one global trial-order-sensitive measure, and five measure families at sentence, word, and phoneme levels. Unsupported or unavailable measures are recorded explicitly rather than dropped silently.
 
 ## Behavioral modeling
 
@@ -82,7 +82,7 @@ M_predictor = computational predictor + registered random effects
 M_joint     = experimental condition + computational predictor + registered random effects
 ```
 
-The intended optimization criterion for comparing implementations of SBI or HVE is the likelihood of `M_predictor`, without the original condition predictor. The current pipeline fits this model but does not yet persist and use its full-data likelihood for report selection.
+Implementations of SBI or HVE are compared using the summed participant-held-out log loss of `M_predictor`, without the original condition predictor. Full-data likelihood and related fit statistics are retained for auditing. The selected predictor is then carried unchanged into comparisons with `M_condition` and `M_joint`.
 
 A separate incremental analysis compares `M_condition` with `M_joint`. For this comparison, the model is fit on training participants, frozen, and scored on the held-out participant fold using population-level predictions. Improvement is measured as the reduction in binomial log loss from `M_condition` to `M_joint`.
 
