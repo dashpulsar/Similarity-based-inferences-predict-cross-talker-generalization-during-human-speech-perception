@@ -38,12 +38,12 @@ Superseded versions are retained in Git history. They are not duplicated in a se
 | `docs/LEGACY_AUDIT.md` | Differences between historical descriptions and implementations |
 | `docs/VALIDATION_REPORT.md` | Numerical and statistical checks already run |
 | `artifacts/` | Intermediate tables, model outputs, and smoke-test products |
-| `final_report_2026-08-21/` | Reviewed broad report package |
+| `analysis_update_2026-08-21/` | Reviewed broad analysis package from August 21 |
 | `analysis_update_2026-08-27/` | Corrected SBI/HVE selection, selected-model comparisons, and complete revised t-SNE HVE candidate results |
 
 ## Current report package
 
-`cross_talker_generalization/final_report_2026-08-21/` remains the reviewed source for the broad presentation inventory and its underlying tables. It contains:
+`cross_talker_generalization/analysis_update_2026-08-21/` remains the reviewed source for the broad August 21 presentation inventory and its underlying tables. It contains:
 
 - `README.md`: figure descriptions and interpretation notes;
 - `PRESENTATION_OUTLINE.md`: suggested presentation order;

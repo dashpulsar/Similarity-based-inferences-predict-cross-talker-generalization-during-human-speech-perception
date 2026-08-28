@@ -3,7 +3,7 @@
 ## Outcome
 
 The reviewed package at
-`cross_talker_generalization/final_report_2026-08-21/` is now the single authoritative
+`cross_talker_generalization/analysis_update_2026-08-21/` was the reviewed broad
 result entry point. The top-level `results/` directory has been reduced to report
 dependencies, direct compatibility-analysis inputs, validated AN19 matrix sources, and
 one method schematic with recorded build inputs.

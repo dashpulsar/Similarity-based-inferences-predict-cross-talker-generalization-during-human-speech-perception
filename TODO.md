@@ -39,7 +39,7 @@ This file tracks work that can still change the production results. Scientific d
 
 ## 5. Revised report and release review
 
-- [x] Build the dated methodological update `analysis_update_2026-08-27` without overwriting `final_report_2026-08-21`.
+- [x] Build the dated methodological update `analysis_update_2026-08-27` without overwriting `analysis_update_2026-08-21`.
 - [x] Review the update's numerical inventories, candidate diagnostics, selected-model diagnostics, source tables, labels, and figures.
 - [x] Update the root documentation so the August 21 broad report is not presented as the authority for corrected selection results.
 - [ ] Decide whether to promote the dated update or rebuild the broad report after the remaining multivariable and sensitivity-analysis decisions are resolved.

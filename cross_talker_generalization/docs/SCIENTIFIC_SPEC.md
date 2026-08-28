@@ -72,4 +72,4 @@ Both full-data likelihood-ratio comparisons and paired held-out log-loss differe
 
 ## 7. Reporting status
 
-The checked-in `final_report_2026-08-21` predates the changes above. It remains a historical reviewed report until the revised exposure tables, HVE values, GLMMs, selection tables, and figures have been regenerated and checked in a new dated report directory.
+The checked-in `analysis_update_2026-08-21` predates the changes above. It remains the historical broad August 21 package; corrected selection and revised HVE results are in `analysis_update_2026-08-27`.

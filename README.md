@@ -113,7 +113,7 @@ AN19 and X21 use Bernoulli responses. B23 retains sentence-level correct/incorre
 │   ├── docs/                      runbook, scientific specification, and validation records
 │   ├── tests/                     unit and project-contract tests
 │   ├── artifacts/                 refactored-pipeline intermediate and model products
-│   ├── final_report_2026-08-21/  reviewed broad report package
+│   ├── analysis_update_2026-08-21/ reviewed broad August 21 package
 │   └── analysis_update_2026-08-27/ corrected SBI/HVE selection and comparisons
 ├── data/                           tracked manifests plus local read-only feature stores
 ├── results/                        published summaries plus local compatibility inputs
@@ -174,7 +174,7 @@ Complete commands and output contracts are documented in the [runbook](cross_tal
 
 ## Results and presentation materials
 
-The reviewed broad report package is [cross_talker_generalization/final_report_2026-08-21/](cross_talker_generalization/final_report_2026-08-21/). It contains:
+The reviewed broad August 21 package is [cross_talker_generalization/analysis_update_2026-08-21/](cross_talker_generalization/analysis_update_2026-08-21/). It contains:
 
 - PNG and SVG figures;
 - figure-level CSV source data;
@@ -224,7 +224,7 @@ provide filenames, identities, and hashes for auditing.
 - [Scientific specification](cross_talker_generalization/docs/SCIENTIFIC_SPEC.md)
 - [Historical implementation audit](cross_talker_generalization/docs/LEGACY_AUDIT.md)
 - [Validation report](cross_talker_generalization/docs/VALIDATION_REPORT.md)
-- [Reviewed broad report](cross_talker_generalization/final_report_2026-08-21/README.md)
+- [Reviewed broad August 21 analysis](cross_talker_generalization/analysis_update_2026-08-21/README.md)
 - [Corrected model-selection and global-order HVE update](cross_talker_generalization/analysis_update_2026-08-27/README.md)
 - [Retained-result policy](results/README.md)
 - [Result curation and rebuild record](results/CURATION_REPORT_2026-08-21.md)

@@ -123,7 +123,7 @@ python -m ctg.cli build-report `
   --output cross_talker_generalization\final_report_rebuild
 ```
 
-The reviewed release is `cross_talker_generalization/final_report_2026-08-21/`. Build to a new directory, inspect `FINAL_VERIFICATION_REPORT.md`, file counts, and provenance, and only then promote it.
+The reviewed broad August 21 package is `cross_talker_generalization/analysis_update_2026-08-21/`. Build to a new directory, inspect `FINAL_VERIFICATION_REPORT.md`, file counts, and provenance, and only then promote it.
 
 ## Parallelism
 

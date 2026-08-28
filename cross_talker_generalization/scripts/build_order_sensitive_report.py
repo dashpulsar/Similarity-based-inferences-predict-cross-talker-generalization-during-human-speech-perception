@@ -134,7 +134,7 @@ def _collect(project: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 
 def _collect_sbi_selection(project: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
-    source = pd.read_csv(project / "final_report_2026-08-21/tables/sbi_all_results.csv")
+    source = pd.read_csv(project / "analysis_update_2026-08-21/tables/sbi_all_results.csv")
     hubert = source.loc[source["family"].eq("HuBERT t-SNE")].copy()
     selected = hubert.loc[
         hubert.groupby(["dataset_id", "variant"])["M_predictor"].idxmin()

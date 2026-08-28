@@ -3,7 +3,7 @@
 ## Authoritative release
 
 The authoritative result package is
-[`cross_talker_generalization/final_report_2026-08-21/`](../cross_talker_generalization/final_report_2026-08-21/).
+[`cross_talker_generalization/analysis_update_2026-08-21/`](../cross_talker_generalization/analysis_update_2026-08-21/).
 Use that package for interpretation, presentation, figure selection, and manuscript-facing
 tables. It contains the reviewed figures, their source tables, verification records, and
 file-level SHA-256 provenance.

@@ -186,7 +186,7 @@ Provenance JSON records random seed, input paths and hashes, runtime versions, p
 
 ### Result authority and retention
 
-The reviewed package at `cross_talker_generalization/final_report_2026-08-21/` is the
+The reviewed package at `cross_talker_generalization/analysis_update_2026-08-21/` is the
 broad presentation inventory. Corrected SBI selection/downstream comparisons and the complete
 revised t-SNE HVE candidate analysis are in
 `cross_talker_generalization/analysis_update_2026-08-27/`.

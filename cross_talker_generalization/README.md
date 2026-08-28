@@ -56,7 +56,7 @@ python -m ctg.cli build-report `
 - Historical implementation audit: [docs/LEGACY_AUDIT.md](docs/LEGACY_AUDIT.md)
 - Numerical validation: [docs/VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md)
 - Repository-wide technical reference: [../TECHNICAL_DOCUMENTATION.md](../TECHNICAL_DOCUMENTATION.md)
-- Reviewed broad report: [final_report_2026-08-21/](final_report_2026-08-21/)
+- Reviewed broad August 21 analysis: [analysis_update_2026-08-21/](analysis_update_2026-08-21/)
 - Corrected SBI/HVE selection and downstream comparison update: [analysis_update_2026-08-27/](analysis_update_2026-08-27/)
 
 ## B23 exposure source status
