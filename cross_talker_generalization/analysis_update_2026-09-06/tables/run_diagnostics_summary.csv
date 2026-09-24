@@ -1,0 +1,17 @@
+run_id,dataset_id,family,n_fits,fit_ok,convergence_ok,singular,warnings,errors
+AN19-AN19_hubert_base_tsne-confirmatory-tr24-20260906,AN19,SBI,16,16,16,0,0,0
+AN19-AN19_hubert_ft_tsne-confirmatory-tr24-20260906,AN19,SBI,16,16,16,0,0,0
+AN19-AN19_acoustic-confirmatory-full-20260906,AN19,SBI,32,32,32,0,0,0
+AN19-HVE-base-tr24-20260906,AN19,HVE,112,112,112,0,0,0
+AN19-HVE-ft-tr24-20260906,AN19,HVE,112,112,112,0,0,0
+X21-X21_hubert_base_tsne-confirmatory-tr24-20260906,X21,SBI,16,16,16,0,0,0
+X21-X21_hubert_ft_tsne-confirmatory-tr24-20260906,X21,SBI,16,16,16,0,0,0
+X21-X21_acoustic-confirmatory-full-20260906,X21,SBI,32,32,32,0,0,0
+X21-HVE-base-tr24-20260906,X21,HVE,272,272,272,0,0,0
+X21-HVE-ft-tr24-20260906,X21,HVE,272,272,272,0,0,0
+B23-B23_hubert_base_tsne-confirmatory-tr24-20260906,B23,SBI,16,16,16,0,0,0
+B23-B23_hubert_ft_tsne-confirmatory-tr24-20260906,B23,SBI,16,16,16,0,0,0
+B23-B23_acoustic-confirmatory-full-20260906,B23,SBI,32,32,32,0,0,0
+B23-HVE-base-tr24-20260906,B23,HVE,240,240,240,0,0,0
+B23-HVE-ft-tr24-20260906,B23,HVE,240,240,240,0,0,0
+AN19-AN19_acoustic_diagnostic-confirmatory,AN19,ACOUSTIC_DIAGNOSTIC,224,224,224,0,0,0

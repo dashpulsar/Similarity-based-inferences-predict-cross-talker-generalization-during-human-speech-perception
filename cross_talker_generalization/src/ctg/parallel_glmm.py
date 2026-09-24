@@ -18,6 +18,8 @@ OUTPUT_TABLES = (
     "likelihood_ratio_tests.csv",
     "oof_predictions.csv",
     "cv_metrics.csv",
+    "train_test_scores.csv",
+    "variance_components.csv",
 )
 THREAD_ENVIRONMENT = (
     "OMP_NUM_THREADS",
@@ -78,6 +80,7 @@ def _fit_one(
     direction: int,
     term: str,
     model_set: str,
+    random_policy: str,
 ) -> dict[str, Any]:
     run_dir.mkdir(parents=True, exist_ok=True)
     input_path = run_dir / "model_input.csv"
@@ -89,6 +92,7 @@ def _fit_one(
         "direction": int(direction),
         "term": term,
         "model_set": model_set,
+        "random_policy": random_policy,
     }
     if _valid_cached_run(
         run_dir, input_hash=input_hash, script_hash=script_hash, parameters=parameters
@@ -108,6 +112,7 @@ def _fit_one(
             str(direction),
             term,
             model_set,
+            random_policy,
         ],
         capture_output=True,
         text=True,
@@ -174,6 +179,7 @@ def fit_glmm_parallel(
     direction: int = -1,
     term: str = "similarity_z",
     model_set: str = "all",
+    random_policy: str = "registered",
     rscript: str | None = None,
 ) -> pd.DataFrame:
     input_path = Path(input_path).resolve()
@@ -184,6 +190,8 @@ def fit_glmm_parallel(
         raise ValueError("direction must be -1 or 1")
     if model_set not in {"all", "predictor_only"}:
         raise ValueError("model_set must be all or predictor_only")
+    if random_policy not in {"registered", "participant_item"}:
+        raise ValueError("random_policy must be registered or participant_item")
     data = pd.read_csv(input_path)
     required = {"feature_key", predictor_column}
     missing = required.difference(data.columns)
@@ -219,6 +227,7 @@ def fit_glmm_parallel(
                 direction=direction,
                 term=term,
                 model_set=model_set,
+                random_policy=random_policy,
             )
             futures[future] = feature
         for future in as_completed(futures):
@@ -251,7 +260,7 @@ def fit_glmm_parallel(
         pd.read_csv(Path(row.run_dir) / "software.csv") for row in manifest.itertuples(index=False)
     ]
     software = pd.concat(software_frames, ignore_index=True).drop_duplicates(
-        ["R_version", "lme4_version", "dataset_id", "talker_strategy", "predictor_column", "predictor_direction", "predictor_term", "model_set"]
+        ["R_version", "lme4_version", "dataset_id", "talker_strategy", "predictor_column", "predictor_direction", "predictor_term", "model_set", "random_policy"]
     )
     software["parallel_jobs"] = min(jobs, len(features))
     software["feature_count"] = len(features)
@@ -273,6 +282,7 @@ def fit_glmm_parallel(
             "direction": int(direction),
             "term": term,
             "model_set": model_set,
+            "random_policy": random_policy,
             "jobs": int(jobs),
         },
         "feature_keys": features,

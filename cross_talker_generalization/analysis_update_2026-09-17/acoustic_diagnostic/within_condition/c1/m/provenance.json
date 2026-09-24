@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-17T06:20:51.362619+00:00",
+  "feature_keys": [
+    "mfcc39",
+    "strf24_legacy"
+  ],
+  "feature_status_counts": {
+    "cached": 2
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\acoustic_diagnostic\\within_condition\\c1\\input.csv",
+  "input_sha256": "ab66e80ea24bae739f802db9db3340db0d8962f442865459a03df700d6e728f5",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "3db32717fc4e180f28762dee41ce02aaeb51750697a7d2627fc4c50a1b19f79c",
+    "cv_metrics.csv": "2b8534932ee7baba9de41712bab40709a3dc75d21e59697dff02fdb8e27372dd",
+    "diagnostics.csv": "e9deecd32252deaf887bcad55da46afee081fde0de81fe79226ee2c4118c75d7",
+    "feature_manifest.csv": "59cf5a9dfb0d89283c8a27da982697e7c8b014bd22bfbc2c9a47cfab71ebb3cc",
+    "likelihood_ratio_tests.csv": "3d8e11842d339186ffa24c8d2df6f798c05691f0189f0695331f54a443bc066e",
+    "oof_predictions.csv": "b2b4cb5d2050a942b3dc5cea3afae484f73749d98767bf452057554d3521a1c1",
+    "software.csv": "63b733fcf9e2ed0e58e69a57bc281c79cc8537d904fa61621acee0c56f4b5254",
+    "train_test_scores.csv": "482634a36e8d5044fff79008dee966d20b620ec832d8d8e05d0964ea8055d5bb"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": -1,
+    "jobs": 2,
+    "model_set": "predictor_only",
+    "predictor_column": "raw_distance",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "2908f8e819bfbe93b68b06171429d6e866b6a0ceab72363207daa3dd22c3e73c",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 16,
+    "non_ok_convergence": 4,
+    "singular": 4
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

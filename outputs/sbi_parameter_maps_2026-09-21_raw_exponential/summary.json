@@ -1,0 +1,20 @@
+{
+  "run_status": "budget_limited",
+  "expected_points": 1247,
+  "recorded_points": 1247,
+  "status_counts": {
+    "ok": 647,
+    "not_started_budget": 376,
+    "timeout": 209,
+    "nonconverged": 15
+  },
+  "finite_score_pairs": 662,
+  "clean_finite_pairs": 562,
+  "finite_flagged_pairs": 100,
+  "fits_with_warnings": 100,
+  "max_abs_z": 6067.93601685768,
+  "elapsed_seconds": 1800.1410000000615,
+  "per_point_timeout_seconds": 90,
+  "maximum_absolute_z_difference": 6063.671847220052,
+  "reported_abs_z_above_100": 82
+}

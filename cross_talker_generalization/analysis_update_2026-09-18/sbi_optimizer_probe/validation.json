@@ -1,0 +1,120 @@
+{
+  "caveat": "One dataset/layer/fold/seed, twelve proposals. No general optimizer ranking or independent prediction evaluation.",
+  "coefficient_standard_error_z_consistency": true,
+  "exponential_similarity_scaling_consistency": true,
+  "failed_fits": 0,
+  "same_response_rows_across_tau": true,
+  "search_score_and_running_best_consistency": true,
+  "singular_fits": 0,
+  "status": "passed",
+  "successful_fits": 39,
+  "test_fold_rows_used": 0,
+  "training_files": [
+    {
+      "path": "tau_0000_training.csv",
+      "sha256": "700923527bec5c88e76349c0c275b73055be399218d86f7a68242765f55b539a"
+    },
+    {
+      "path": "tau_0001_training.csv",
+      "sha256": "ab1999fab65e1ce594289a835fffdaec8d367545959c661f9e3a225331248e2d"
+    },
+    {
+      "path": "tau_0002_training.csv",
+      "sha256": "750cd655ca67a3a1625ff8912132d4b6d57e6ba367d9e1dd6038e73798c629be"
+    },
+    {
+      "path": "tau_0003_training.csv",
+      "sha256": "9f820f8ea44467b3e3044689d4d04ab7420946844108e03bfd4d617b4fc52f39"
+    },
+    {
+      "path": "tau_0004_training.csv",
+      "sha256": "fa8e367155b63ea72997d8921c1e64da39875075f9cfcac7f59e4f751730c233"
+    },
+    {
+      "path": "tau_0005_training.csv",
+      "sha256": "bf6af50981d7dfea59006148c81889c294b518e7435532757cd26f843b294ac6"
+    },
+    {
+      "path": "tau_0006_training.csv",
+      "sha256": "f112d0dc85932c82f00bd6116c130bb7b51b749494cf393c0966e128e24776b5"
+    },
+    {
+      "path": "tau_0007_training.csv",
+      "sha256": "fa9b02c0d284b90d29f8581bbdc37ad801fd0aa3b5d6260902694c60862a40fc"
+    },
+    {
+      "path": "tau_0008_training.csv",
+      "sha256": "e2b182c5e8fb0762b5b58b1dda535e73e129443ea7e0b0704ab0bb8a44647be5"
+    },
+    {
+      "path": "tau_0009_training.csv",
+      "sha256": "947194d5eac13dd278d27b3ad0ac86cbc7896d8e1ad553bcc8af6ac98f673d3f"
+    },
+    {
+      "path": "tau_0010_training.csv",
+      "sha256": "1dc75429e5934a48e02a11981a951ce4ea7b4139cff09f0a00a0d8590d2f2484"
+    },
+    {
+      "path": "tau_0011_training.csv",
+      "sha256": "bc7e3cb08aeed76dd79f95aa6290b61c0c3fc3bc5d32b831c07d0be473aece57"
+    },
+    {
+      "path": "tau_0012_training.csv",
+      "sha256": "8dfa74b3e90e17705cb9bd73463eefa9cc300c81b637f88fb793f10870e9bb39"
+    },
+    {
+      "path": "tau_0013_training.csv",
+      "sha256": "293ece5a318a7d81b6a96a80418bd4df65c8692de147daf38ff21f52aa4644e3"
+    },
+    {
+      "path": "tau_0014_training.csv",
+      "sha256": "097bb31b8993031ad304d06f2f3ce000e0a36c37b87eee04dbe31aab883e270c"
+    },
+    {
+      "path": "tau_0015_training.csv",
+      "sha256": "73adfff8ac64421e366ed09da5a4dad608be4b37f65ee8bea694709b8561aa13"
+    },
+    {
+      "path": "tau_0016_training.csv",
+      "sha256": "7b4db86f2cec3950629ded89ecce92f9c1c79f3f275a90bef883ecb7c745fc1d"
+    },
+    {
+      "path": "tau_0017_training.csv",
+      "sha256": "f0a07cb683f52a5238c4926c01a46004e26729d53b19ddea69529598a23c7fa5"
+    },
+    {
+      "path": "tau_0018_training.csv",
+      "sha256": "32589ee5ce8bae36cbb8eb7670f811fe5c7c7aae2781d5fd63fa897fc7d3332e"
+    },
+    {
+      "path": "tau_0019_training.csv",
+      "sha256": "903ff90feb8cda0b84751784f0d3e619457fc437d749b1abe9e544f2fd90e022"
+    },
+    {
+      "path": "tau_0020_training.csv",
+      "sha256": "93417f21e25ba919a6f7289447a563eb9a9c2402cce7458a5fa0565da557fad2"
+    },
+    {
+      "path": "tau_0021_training.csv",
+      "sha256": "e8eb34a82e40b42a25056349bee116b25275e2a96209f1b6de3888dbb8e6b787"
+    },
+    {
+      "path": "tau_0022_training.csv",
+      "sha256": "deee74646ea816f5bd68cadeb6426839c2713f35e3fb0ec9f2a1c4e2679e273d"
+    },
+    {
+      "path": "tau_0023_training.csv",
+      "sha256": "30312e44b40142093817a8123053b607d66fe1ea0dcc3d88b5669de6c2098c54"
+    },
+    {
+      "path": "tau_0024_training.csv",
+      "sha256": "82613733670772a2237b2c803d6f5f9c69badd7b9c8a7fdfe6fd64db6a9e3e20"
+    },
+    {
+      "path": "tau_0025_training.csv",
+      "sha256": "f4206f4861a7e720723f28d84974765abcf3e7a170acc2290ce694423c50603a"
+    }
+  ],
+  "training_responses": 3791,
+  "unique_fits": 39
+}

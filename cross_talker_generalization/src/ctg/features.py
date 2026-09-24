@@ -48,6 +48,8 @@ class FeatureStore(AbstractContextManager["FeatureStore"]):
         return list(self.h5.keys())
 
     def feature_keys(self) -> tuple[str, ...]:
+        if self.spec.feature_subsets:
+            return tuple(self.spec.feature_subsets)
         if self.spec.kind == "hubert_tsne":
             return tuple(self.h5.keys())
         for speaker in self.h5.keys():
@@ -82,11 +84,23 @@ class FeatureStore(AbstractContextManager["FeatureStore"]):
                 yield speaker, unit
 
     def read(self, speaker_id: str, unit_id: str, feature_key: str) -> np.ndarray:
+        indices: tuple[int, ...] | None = None
         if self.spec.kind == "hubert_tsne":
             dataset = self.h5[feature_key][speaker_id][unit_id]
         else:
-            dataset = self.h5[speaker_id][unit_id][feature_key]
+            source_key = feature_key
+            if self.spec.feature_subsets:
+                if feature_key not in self.spec.feature_subsets:
+                    raise KeyError(f"unknown feature subset {feature_key!r}")
+                source_key, indices = self.spec.feature_subsets[feature_key]
+            dataset = self.h5[speaker_id][unit_id][source_key]
         array = np.asarray(dataset, dtype=np.float64)
+        if indices is not None:
+            if not indices or min(indices) < 0 or max(indices) >= array.shape[1]:
+                raise ValueError(
+                    f"invalid subset indices for {self.spec.store_id}/{feature_key}: {indices}"
+                )
+            array = array[:, indices]
         if array.ndim != 2 or min(array.shape) == 0:
             raise ValueError(
                 f"invalid feature shape {array.shape} for {speaker_id}/{unit_id}/{feature_key}"

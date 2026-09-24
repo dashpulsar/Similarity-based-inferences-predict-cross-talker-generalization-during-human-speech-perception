@@ -1,0 +1,28 @@
+{
+  "approval": "Florian's September 15 reply, supplied by Zhengyang: proposed test/train mean log-loss ratio accepted",
+  "caveat": "A raw-loss ratio is not algebraically equivalent to a ratio of gains relative to a baseline. No independent tuning split is introduced by this diagnostic.",
+  "created_utc": "2026-09-17T08:05:35.672349+00:00",
+  "incomplete_policy": "Invalid pairs retained with reasons; no three-fold CI/mean unless all three ratios are valid; fewer than three neural layers remain table-only",
+  "interpretation": "Above 1 means worse held-out loss under matched scoring; a descriptive generalization diagnostic, not a significance test",
+  "likelihood_convention": "word_response_bernoulli_no_binomial_coefficient",
+  "n_invalid_ratio_rows": 0,
+  "n_ratio_rows": 4752,
+  "n_runs": 25,
+  "n_warning_ratio_rows": 0,
+  "normalization": "Per word response; grouped-binomial row counts are not denominators",
+  "numpy": "1.26.4",
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "prediction_convention": "fixed_effects_only_re_form_NA",
+  "python": "3.9.18",
+  "ratio": "(test total negative log likelihood / test word responses) / (train total negative log likelihood / train word responses)",
+  "source_manifests": [
+    {
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\diagnostic_inputs.json",
+      "sha256": "11d1211fb8cd87e2748b04f36517bf84620ee734cd73c3a2ea5fdfde7f166b89"
+    }
+  ],
+  "source_script_sha256": "9e822b8d2f108c3a91ff45797d32ad86f3663f63e5729ddca86af51080568ade",
+  "uncertainty": "Equal-weight mean of paired fold ratios; percentile 95% interval over all 27 resamples of three folds. Descriptive fold variability; overlapping training folds are not independent replications."
+}

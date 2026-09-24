@@ -1,0 +1,4 @@
+index,start_seconds,end_seconds,label,normalized,n_frames
+6,0.39,0.521,F,F,7
+7,0.521,0.55,EH1,EH1,1
+8,0.55,0.62,L,L,4

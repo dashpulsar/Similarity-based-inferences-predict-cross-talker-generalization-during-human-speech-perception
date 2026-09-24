@@ -1,0 +1,24 @@
+figure,scope
+sbi_an19_base_z,retained notebook test-fold refit z; shared historical behavioral ceiling
+sbi_an19_ft_z,retained notebook test-fold refit z; shared historical behavioral ceiling
+sbi_x21_base_z,retained notebook test-fold refit z; shared historical behavioral ceiling
+sbi_x21_ft_z,retained notebook test-fold refit z; shared historical behavioral ceiling
+sbi_b23_base_z,retained notebook test-fold refit z; shared historical behavioral ceiling
+sbi_b23_ft_z,retained notebook test-fold refit z; shared historical behavioral ceiling
+sbi_an19_base_loglik,retained predictor-only out-of-fold scores; no compatible item-by-condition reference inserted
+sbi_an19_ft_loglik,retained predictor-only out-of-fold scores; no compatible item-by-condition reference inserted
+sbi_x21_base_loglik,retained predictor-only out-of-fold scores; no compatible item-by-condition reference inserted
+sbi_x21_ft_loglik,retained predictor-only out-of-fold scores; no compatible item-by-condition reference inserted
+sbi_b23_base_loglik,retained predictor-only out-of-fold scores; no compatible item-by-condition reference inserted
+sbi_b23_ft_loglik,retained predictor-only out-of-fold scores; no compatible item-by-condition reference inserted
+hve_an19_loglik_01,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_an19_loglik_02,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_x21_loglik_01,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_x21_loglik_02,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_x21_loglik_03,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_x21_loglik_04,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_x21_loglik_05,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_b23_loglik_01,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_b23_loglik_02,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_b23_loglik_03,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking
+hve_b23_loglik_04,retained revised HVE; three folds; separate B23 samples; not cross-sample ranking

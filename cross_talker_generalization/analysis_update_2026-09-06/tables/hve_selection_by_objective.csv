@@ -1,0 +1,13 @@
+dataset_id,variant,selection_objective,feature_key,measure
+AN19,base,OOF likelihood,tr_24::overall_order_sensitive,overall_order_sensitive
+AN19,base,training-fold z,tr_24::order_word,order_word
+AN19,ft,OOF likelihood,tr_24::order_word,order_word
+AN19,ft,training-fold z,tr_24::overall_order_sensitive,overall_order_sensitive
+B23,base,OOF likelihood,tr_24::overall_order_sensitive,overall_order_sensitive
+B23,base,training-fold z,tr_24::between_type_phoneme,between_type_phoneme
+B23,ft,OOF likelihood,tr_24::overall_order_sensitive,overall_order_sensitive
+B23,ft,training-fold z,tr_24::within_token_word,within_token_word
+X21,base,OOF likelihood,tr_24::mean_dissimilarity_word,mean_dissimilarity_word
+X21,base,training-fold z,tr_24::between_type_word,between_type_word
+X21,ft,OOF likelihood,tr_24::within_type_phoneme,within_type_phoneme
+X21,ft,training-fold z,tr_24::between_type_sentence,between_type_sentence

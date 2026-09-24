@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "ratio_status": "Not chosen; figures display separate training and test losses",
+  "runs": 9,
+  "score_rows": 1104,
+  "source_checks": [
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 18,
+      "n_score_rows": 432,
+      "nonconverged_cv_fits": 0,
+      "run_label": "AN19-base",
+      "score_file_sha256": "7e27dbf11e299bf45c1913a02bd923242d03c0d99af9354e548a5f10626d4929",
+      "singular_cv_fits": 0
+    },
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 18,
+      "n_score_rows": 432,
+      "nonconverged_cv_fits": 0,
+      "run_label": "AN19-ft",
+      "score_file_sha256": "e8b09d34878db05136bd3c09ce031fe054b69b2eb9dd7517022f97e92f3f2ace",
+      "singular_cv_fits": 0
+    },
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 1,
+      "n_score_rows": 24,
+      "nonconverged_cv_fits": 0,
+      "run_label": "X21-base",
+      "score_file_sha256": "7a39fe32b32be44b954388f7bb07a76947e48905425d381af8d4d46fabd3e374",
+      "singular_cv_fits": 0
+    },
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 1,
+      "n_score_rows": 24,
+      "nonconverged_cv_fits": 0,
+      "run_label": "X21-ft",
+      "score_file_sha256": "5e77895f0472109ae71c7e21483a049903f8d74cb08e35c4d3d2d628c258b281",
+      "singular_cv_fits": 0
+    },
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 1,
+      "n_score_rows": 24,
+      "nonconverged_cv_fits": 0,
+      "run_label": "B23-base",
+      "score_file_sha256": "d959531fd67f19b1c2a96c3aaafe06a14a380111cb38b64f2ceb0eb0e62e0958",
+      "singular_cv_fits": 0
+    },
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 1,
+      "n_score_rows": 24,
+      "nonconverged_cv_fits": 0,
+      "run_label": "B23-ft",
+      "score_file_sha256": "07480ada3cb4fa2e2dbd27e4213dad1a010c38274a3ea7133e41d63587a68619",
+      "singular_cv_fits": 0
+    },
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 2,
+      "n_score_rows": 48,
+      "nonconverged_cv_fits": 0,
+      "run_label": "AN19-acoustic",
+      "score_file_sha256": "0df069eeb9cb8647c075fe55f8c5140ba414db77897e5e5538e451e30591ba86",
+      "singular_cv_fits": 0
+    },
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 2,
+      "n_score_rows": 48,
+      "nonconverged_cv_fits": 0,
+      "run_label": "X21-acoustic",
+      "score_file_sha256": "c33dd5d33f147d7e0992d2f2f5e3b8787dc961bbd4ad29940556779e025ea0b4",
+      "singular_cv_fits": 0
+    },
+    {
+      "existing_oof_scores_match": true,
+      "n_features": 2,
+      "n_score_rows": 48,
+      "nonconverged_cv_fits": 0,
+      "run_label": "B23-acoustic",
+      "score_file_sha256": "e4fb7fa9a98fe2d0dbc2bccbc4f7ac448299d26338a12abc6c6d18e66bf7e388",
+      "singular_cv_fits": 0
+    }
+  ],
+  "uncertainty": "Exact enumeration of all 27 resamples of three fold scores; descriptive fold variability",
+  "unique_feature_runs": 46
+}

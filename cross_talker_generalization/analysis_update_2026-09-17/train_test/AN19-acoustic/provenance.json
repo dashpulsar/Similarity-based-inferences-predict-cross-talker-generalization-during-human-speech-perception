@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-17T06:15:11.540541+00:00",
+  "feature_keys": [
+    "mfcc39",
+    "strf24_legacy"
+  ],
+  "feature_status_counts": {
+    "computed": 2
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\AN19-AN19_acoustic-confirmatory-full-20260906-model-input.csv",
+  "input_sha256": "b43103e8f7f42e0099b4f8ca92e3332a276a4762233c90ac2ca9f894d7b450a7",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "ffaa65cfd64ef9e78dc4e4fb116e586b932433b5c6e88d0124e322c2c4eb6bea",
+    "cv_metrics.csv": "18c311cd1657317ef81504c235cb6f70300fe4196cba0fde642ba184bc6cf50f",
+    "diagnostics.csv": "229538d3e72877bb31e1a8cc943794f73fbbcfc1b9372f958f44cff8d79a5c85",
+    "feature_manifest.csv": "a760aa30c9d72fcb2357ce2f66560a940941b123446cb4ce408ed7bc8eef2c14",
+    "likelihood_ratio_tests.csv": "de2b65ac96a0586e86e8096d19356fc2dae81d3c4ebd07f30541e83f56013c6f",
+    "oof_predictions.csv": "6f3a6e8c5655698e6e21be06adf31fd847279839559de8d8d61b2491fd9d3283",
+    "software.csv": "42d49895b8c6abae2f232829a28ca009361d92a20aeee9711118863a8f20e452",
+    "train_test_scores.csv": "0df069eeb9cb8647c075fe55f8c5140ba414db77897e5e5538e451e30591ba86"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": -1,
+    "jobs": 4,
+    "model_set": "all",
+    "predictor_column": "raw_distance",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "2908f8e819bfbe93b68b06171429d6e866b6a0ceab72363207daa3dd22c3e73c",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 32,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

@@ -1,0 +1,22 @@
+language,dataset,family
+Albanian,AN19,Albanian
+Somalian,AN19,Cushitic
+Dutch,AN19,Germanic
+English,AN19,Germanic
+English,X21,Germanic
+German,AN19,Germanic
+Bengali,AN19,Indo-Aryan
+Farsi,B23,Iranian
+Japanese,AN19,Japonic
+Korean,AN19,Koreanic
+Brazilian Portuguese,B23,Romance
+French,AN19,Romance
+Romanian,AN19,Romance
+Spanish,AN19,Romance
+Spanish,B23,Romance
+Chinese,AN19,Sinitic
+Mandarin,X21,Sinitic
+Russian,AN19,Slavic
+Turkish,AN19,Turkic
+Turkish,B23,Turkic
+Indian (reported label),AN19,Unspecified

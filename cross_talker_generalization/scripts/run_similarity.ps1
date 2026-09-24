@@ -8,7 +8,10 @@ param(
 
     [string[]]$Features = @(),
     [int]$Jobs = 8,
-    [string]$Environment = "cross-talker-generalization"
+    [string]$Environment = "cross-talker-generalization",
+    [string]$RunSuffix = "",
+    [ValidateSet("all", "predictor_only")]
+    [string]$ModelSet = "all"
 )
 
 $ErrorActionPreference = "Stop"
@@ -21,6 +24,7 @@ $Derived = Join-Path $ProjectRoot "artifacts\derived"
 $Models = Join-Path $ProjectRoot "artifacts\models"
 $Figures = Join-Path $ProjectRoot "artifacts\figures"
 $RunId = "$Dataset-$Store-confirmatory"
+if ($RunSuffix) { $RunId = "$RunId-$RunSuffix" }
 $PairDirectory = Join-Path $Derived "$Dataset-pairs"
 $Folds = Join-Path $Derived "$Dataset-folds.csv"
 $Distances = Join-Path $Derived "$RunId-distances.csv"
@@ -38,7 +42,7 @@ function Invoke-Ctg {
 Invoke-Ctg @("build-pairs", "--project", $Config, "--dataset", $Dataset, "--output", $PairDirectory)
 Invoke-Ctg @("make-folds", "--project", $Config, "--dataset", $Dataset, "--output", $Folds)
 
-$NeedsScaling = $Store.EndsWith("_full") -or $Store.EndsWith("_acoustic")
+$NeedsScaling = $Store.EndsWith("_full") -or $Store.Contains("_acoustic")
 if ($NeedsScaling) {
     $ScaleArgs = @("fit-standardizers", "--project", $Config, "--store", $Store,
         "--jobs", "$Jobs", "--output", $Standardizers)
@@ -58,10 +62,12 @@ Invoke-Ctg @("aggregate", "--profile", $Profile, "--cells", (Join-Path $PairDire
 Invoke-Ctg @("make-model-input", "--project", $Config, "--dataset", $Dataset,
     "--predictors", $Predictors, "--folds", $Folds, "--output", $ModelInput)
 Invoke-Ctg @("fit-glmm-parallel", "--input", $ModelInput, "--output", $ModelOutput,
-    "--jobs", "$Jobs")
-Invoke-Ctg @("plot-profile", "--model-dir", $ModelOutput,
-    "--output", (Join-Path $Figures "$RunId-profile"))
-if ($Features.Count -ne 1) {
+    "--jobs", "$Jobs", "--model-set", $ModelSet)
+if ($ModelSet -eq "all") {
+    Invoke-Ctg @("plot-profile", "--model-dir", $ModelOutput,
+        "--output", (Join-Path $Figures "$RunId-profile"))
+}
+if ($Features.Count -ne 1 -and $ModelSet -eq "all") {
     Invoke-Ctg @("plot-distance-correlations", "--input", $Distances,
         "--output", (Join-Path $Figures "$RunId-distance-correlations"))
 }

@@ -1,0 +1,25 @@
+{
+  "source_sha256": {
+    "current_repository/historical_sbi_fold_z.csv/tables": "1376762669350018e083f2f151e9443be01781a660a7b27f4e3992a046b21720",
+    "current_repository/historical_ceiling_fold_z.csv/tables": "e0050353b0589c6a5c4de9847519118be940274d49ecff7a7c3929424bd6e0cd",
+    "current_repository/historical_hve_ceiling_fold_z.csv/tables": "abf1712194aae7fbbbf0276f609988a8bba036df4491e52412081091ea22c1e5",
+    "retained_worktree/cv_metrics.csv/AN19-AN19_acoustic-confirmatory": "bb5f8412c5950889089abe311da894d37b8f6637018a4fed72b3b69fde80ac27",
+    "retained_worktree/cv_metrics.csv/AN19-AN19_hubert_base_tsne-confirmatory": "05a1e42c745dd491cd3724808a64c143ed4de294090284fcbb94e3b7898f2117",
+    "retained_worktree/cv_metrics.csv/AN19-AN19_hubert_ft_tsne-confirmatory": "3cfffc9d72af86e9a51b2c9d51ac88ed51f73025fdf90c0d34cbec8d9b922ee4",
+    "retained_worktree/cv_metrics.csv/X21-X21_acoustic-confirmatory": "3db5c129fae72acf065dc6bc71cec2fa1957b1eec4dcff15bd49b1a13680a4f6",
+    "retained_worktree/cv_metrics.csv/X21-X21_hubert_base_tsne-confirmatory": "5ea64e9effd9b10a318a3a5df28ff16458e1fed465e748ed305f3265ab58a639",
+    "retained_worktree/cv_metrics.csv/X21-X21_hubert_ft_tsne-confirmatory": "71c52dcdd9c3a8794414a7a09bc8b36ff40783b5d89260b339e353723de90696",
+    "retained_worktree/cv_metrics.csv/B23-B23_acoustic-confirmatory": "4a366a0dcabb17abc44197b6f4cb77cecbf5903a8d3d864bdfa0c168da43380d",
+    "retained_worktree/cv_metrics.csv/B23-B23_hubert_base_tsne-confirmatory": "b8c4f5b72788a18c8fee26ecb3c1f3e0dd8e97400f670979560084f023c69fd3",
+    "retained_worktree/cv_metrics.csv/B23-B23_hubert_ft_tsne-confirmatory": "4544bbe2c4bf08ea69201b77cef82a81dd07f1719465b592bdce020fdabd8ca0",
+    "current_repository/cv_metrics.csv/AN19-HVE-base-revised-selection": "b429e211e68b8c506f89ed7bee4c50e298712e0e48c397579205435bbc9c2388",
+    "current_repository/cv_metrics.csv/AN19-HVE-ft-revised-selection": "9f40647bbff268198e0208f61b86c7499052ad0f45867e65aef5c9359eca3fbb",
+    "current_repository/cv_metrics.csv/X21-HVE-base-revised-selection": "3dc588d212d7575271de1640d9c44e718fa90db662c3d8460a2d6ae1699dbe8c",
+    "current_repository/cv_metrics.csv/X21-HVE-ft-revised-selection": "86528d4a43aac0c52e22f46251d8aa1c1d062919cbdbdd51d8207265c60333a1",
+    "current_repository/cv_metrics.csv/B23-HVE-base-selection": "f1f717e6deb456ce0a7389cdaaf2d27d355aec8b5756df5fb4b0964e71962931",
+    "current_repository/cv_metrics.csv/B23-HVE-ft-selection": "797b91d9f2e2f172793213c3a64556eb7efe3eb203b081131ef88b860cef438d"
+  },
+  "new_GLMM_fits": 0,
+  "bootstrap": "all 27 ordered resamples of 3 fold means",
+  "note": "Log likelihood omits binomial coefficient constant; per-word Bernoulli score. Do not compare different participant samples."
+}

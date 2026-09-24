@@ -1,0 +1,13 @@
+dataset_id,feature_key,comparison_id,reduced_model,full_model,scope,fold,chisq,df,p_value,status,reason,fitted_condition_id
+AN19,mfcc39,predictor_beyond_null,M_null,M_predictor,full,,11.7990561851308,1,0.0005926075621556,ok,,AN19.Korean.test_Korean
+AN19,strf24_legacy,predictor_beyond_null,M_null,M_predictor,full,,22.5707268420897,1,2.02547422879391e-06,ok,,AN19.Korean.test_Korean
+AN19,mfcc39,predictor_beyond_null,M_null,M_predictor,full,,11.6536037207196,1,0.0006407828163691,ok,,AN19.Korean.test_Spanish
+AN19,strf24_legacy,predictor_beyond_null,M_null,M_predictor,full,,26.3245954973668,1,2.88589998997842e-07,ok,,AN19.Korean.test_Spanish
+AN19,mfcc39,predictor_beyond_null,M_null,M_predictor,full,,6.65319454984319,1,0.009897820898123,ok,,AN19.Mixed.test_Korean
+AN19,strf24_legacy,predictor_beyond_null,M_null,M_predictor,full,,5.76361562374575,1,0.0163613700313016,ok,,AN19.Mixed.test_Korean
+AN19,mfcc39,predictor_beyond_null,M_null,M_predictor,full,,8.30510289370966,1,0.0039533842624123,ok,,AN19.Mixed.test_Spanish
+AN19,strf24_legacy,predictor_beyond_null,M_null,M_predictor,full,,8.51530953194322,1,0.0035217101715455,ok,,AN19.Mixed.test_Spanish
+AN19,mfcc39,predictor_beyond_null,M_null,M_predictor,full,,8.59972165428917,1,0.00336214385358,ok,,AN19.Spanish.test_Korean
+AN19,strf24_legacy,predictor_beyond_null,M_null,M_predictor,full,,13.7435150534693,1,0.0002095430007481,ok,,AN19.Spanish.test_Korean
+AN19,mfcc39,predictor_beyond_null,M_null,M_predictor,full,,11.5956090713488,1,0.0006610771983093,ok,,AN19.Spanish.test_Spanish
+AN19,strf24_legacy,predictor_beyond_null,M_null,M_predictor,full,,21.4074842821077,1,3.71318901453258e-06,ok,,AN19.Spanish.test_Spanish

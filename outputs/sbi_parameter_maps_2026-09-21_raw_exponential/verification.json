@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "recorded_grid_points": 1247,
+  "expected_grid_points": 1247,
+  "input_hashes_checked": 29,
+  "identical_response_rows_across_taus": true,
+  "raw_exponential_statistic_checks": 871,
+  "no_failure_score_imputation": true,
+  "complete_grid_recorded": true,
+  "run_status": "budget_limited"
+}

@@ -1,0 +1,2 @@
+R_version,lme4_version,input_path,n_input_rows,dataset_id,talker_strategy,predictor_column,predictor_direction,predictor_term,model_set,parallel_jobs,feature_count
+R version 4.4.1 (2024-06-14 ucrt),1.1.35.5,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis_update_2026-09-17\train_test\X21-ft\r\f-4b3e7191f6\model_input.csv,16477,X21,fixed_block,raw_distance,-1,similarity_z,all,1,1

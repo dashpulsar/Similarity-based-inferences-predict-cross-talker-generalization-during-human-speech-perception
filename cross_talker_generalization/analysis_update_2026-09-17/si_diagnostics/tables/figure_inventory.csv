@@ -1,0 +1,85 @@
+dataset_id,family,measure,stratum,variant,n_neural_layers,layers,plot_status,figure,n_warning_features,n_incomplete_features,per_fold_response_counts_match
+AN19,HVE,between_type_word,AN19_120_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,between_type_word,AN19_120_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,mean_dissimilarity_word,AN19_120_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,mean_dissimilarity_word,AN19_120_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,order_word,AN19_120_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,order_word,AN19_120_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,overall,AN19_120_available_exposure,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,AN19_HVE_base_overall_AN19_120_available_exposure_test_train_ratio,0.0,0.0,True
+AN19,HVE,overall,AN19_120_available_exposure,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,AN19_HVE_ft_overall_AN19_120_available_exposure_test_train_ratio,0.0,0.0,True
+AN19,HVE,overall_order_sensitive,AN19_120_available_exposure,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,AN19_HVE_base_overall_order_sensitive_AN19_120_available_exposure_test_train_ratio,0.0,0.0,True
+AN19,HVE,overall_order_sensitive,AN19_120_available_exposure,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,AN19_HVE_ft_overall_order_sensitive_AN19_120_available_exposure_test_train_ratio,0.0,0.0,True
+AN19,HVE,within_token_word,AN19_120_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,within_token_word,AN19_120_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,within_type_word,AN19_120_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,HVE,within_type_word,AN19_120_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+AN19,SBI,similarity,all_participants,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,AN19_SBI_base_similarity_all_participants_test_train_ratio,0.0,0.0,True
+AN19,SBI,similarity,all_participants,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,AN19_SBI_ft_similarity_all_participants_test_train_ratio,0.0,0.0,True
+B23,HVE,between_type_phoneme,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,between_type_phoneme,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,between_type_sentence,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,between_type_sentence,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,between_type_word,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,between_type_word,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,mean_dissimilarity_phoneme,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,mean_dissimilarity_phoneme,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,mean_dissimilarity_word,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,mean_dissimilarity_word,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,order_phoneme,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,order_phoneme,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,order_sentence,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,order_sentence,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,order_word,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,order_word,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,overall,B23_168_available_exposure,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,B23_HVE_base_overall_B23_168_available_exposure_test_train_ratio,0.0,0.0,True
+B23,HVE,overall,B23_168_available_exposure,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,B23_HVE_ft_overall_B23_168_available_exposure_test_train_ratio,0.0,0.0,True
+B23,HVE,overall_order_sensitive,B23_97_complete_order,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,B23_HVE_base_overall_order_sensitive_B23_97_complete_order_test_train_ratio,0.0,0.0,True
+B23,HVE,overall_order_sensitive,B23_97_complete_order,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,B23_HVE_ft_overall_order_sensitive_B23_97_complete_order_test_train_ratio,0.0,0.0,True
+B23,HVE,within_token_phoneme,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_token_phoneme,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_token_sentence,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_token_sentence,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_token_word,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_token_word,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_type_phoneme,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_type_phoneme,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_type_word,B23_168_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,HVE,within_type_word,B23_168_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+B23,SBI,similarity,all_participants,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,B23_SBI_base_similarity_all_participants_test_train_ratio,0.0,0.0,True
+B23,SBI,similarity,all_participants,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,B23_SBI_ft_similarity_all_participants_test_train_ratio,0.0,0.0,True
+X21,HVE,between_type_phoneme,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,between_type_phoneme,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,between_type_sentence,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,between_type_sentence,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,between_type_word,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,between_type_word,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,mean_dissimilarity_phoneme,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,mean_dissimilarity_phoneme,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,mean_dissimilarity_sentence,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,mean_dissimilarity_sentence,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,mean_dissimilarity_word,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,mean_dissimilarity_word,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,order_phoneme,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,order_phoneme,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,order_sentence,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,order_sentence,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,order_word,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,order_word,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,overall,X21_320_available_exposure,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,X21_HVE_base_overall_X21_320_available_exposure_test_train_ratio,0.0,0.0,True
+X21,HVE,overall,X21_320_available_exposure,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,X21_HVE_ft_overall_X21_320_available_exposure_test_train_ratio,0.0,0.0,True
+X21,HVE,overall_order_sensitive,X21_320_available_exposure,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,X21_HVE_base_overall_order_sensitive_X21_320_available_exposure_test_train_ratio,0.0,0.0,True
+X21,HVE,overall_order_sensitive,X21_320_available_exposure,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,X21_HVE_ft_overall_order_sensitive_X21_320_available_exposure_test_train_ratio,0.0,0.0,True
+X21,HVE,within_token_phoneme,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_token_phoneme,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_token_sentence,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_token_sentence,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_token_word,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_token_word,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_type_phoneme,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_type_phoneme,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_type_sentence,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_type_sentence,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_type_word,X21_320_available_exposure,base,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,HVE,within_type_word,X21_320_available_exposure,ft,1,tr_24,table_only_insufficient_layer_coverage,,,,
+X21,SBI,similarity,all_participants,base,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,X21_SBI_base_similarity_all_participants_test_train_ratio,0.0,0.0,True
+X21,SBI,similarity,all_participants,ft,18,cnn_2; cnn_3; cnn_4; cnn_5; cnn_6; tr_0; tr_2; tr_4; tr_6; tr_8; tr_10; tr_12; tr_14; tr_16; tr_18; tr_20; tr_22; tr_24,layer_profile,X21_SBI_ft_similarity_all_participants_test_train_ratio,0.0,0.0,True

@@ -1,0 +1,214 @@
+{
+  "revision": "X21 Tr-24 base display revision; titles changed, all scientific geometry unchanged",
+  "source_directory": "results/figures/X21-base-tr24-notebook-s-curves-legacy-axis-z-v5",
+  "source_sha256": {
+    "provenance.json": "38eb68dabe158a0cf2d3e889bb3ffb6f49a59852e7c98be1d6058a7b1bdcb979",
+    "s_curve_trials.csv": "0101d1260fe747b3047cbf409b5ec807020e609d61bd5ca23f5b26cc94fc6562",
+    "x21_s_curves_by_condition.svg": "b8d790488af93d61c7afb78064273eab536caf1db74f45442f50bbfa01fdd5ba",
+    "x21_s_curves_pooled.svg": "25d168b93d4dff6be3081b0a2b42865465c458b4bef3105f1568de8a3fecc48b"
+  },
+  "representation": "HuBERT base, 3-D t-SNE, Transformer layer 24",
+  "coordinate_scaling": "legacy_per_dimension_z",
+  "similarity_definition": "exp(-k * raw_distance), k=0.35784438264009538",
+  "similarity_parameter_origin": "exact_cross_fold_mean_k_from_X21_base_legacy_axis_z_v5",
+  "curve_definition": "trial-level unadjusted binomial logistic regression, separately by test talker and optionally condition",
+  "point_definition": "seaborn quantile-binned trial accuracy; 10 bins by condition or 20 bins pooled",
+  "pooling_definition": "All trial rows from all four exposure conditions within each test talker. Trial-weighted, not an equally weighted mean of four condition curves.",
+  "interval_definition": "Existing bands and point intervals retained exactly from the historical descriptive SVG. Source metadata does not establish the bootstrap resampling unit or replicate count; no participant-cluster or three-fold uncertainty claim is made.",
+  "not_a_new_glmm_fit": true,
+  "not_cross_validated_prediction": true,
+  "geometry_checks": {
+    "x21_s_curves_by_condition": {
+      "replacements": [
+        {
+          "before": "035 Mandarin Chinese (Cmn), Male (M)",
+          "after": "Mandarin Chinese (CMN), Male (M) 035"
+        },
+        {
+          "before": "032 CMN, M",
+          "after": "CMN-M-032"
+        },
+        {
+          "before": "043 CMN, M",
+          "after": "CMN-M-043"
+        },
+        {
+          "before": "037 CMN, M",
+          "after": "CMN-M-037"
+        }
+      ],
+      "unchanged_geometry_groups": 232
+    },
+    "x21_s_curves_pooled": {
+      "replacements": [
+        {
+          "before": "035 Mandarin Chinese (Cmn), Male (M)",
+          "after": "Mandarin Chinese (CMN), Male (M) 035"
+        },
+        {
+          "before": "032 CMN, M",
+          "after": "CMN-M-032"
+        },
+        {
+          "before": "043 CMN, M",
+          "after": "CMN-M-043"
+        },
+        {
+          "before": "037 CMN, M",
+          "after": "CMN-M-037"
+        }
+      ],
+      "unchanged_geometry_groups": 132
+    }
+  },
+  "trial_summary": [
+    {
+      "test_talker": "X21.CMN.CMN_M_035",
+      "condition": "Control",
+      "trial_rows": 1027,
+      "participants": 20,
+      "accuracy": 0.804284323271665
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_035",
+      "condition": "Multi-talker",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8621359223300971
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_035",
+      "condition": "Single talker",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8679611650485437
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_035",
+      "condition": "Talker-specific",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.870873786407767
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_035",
+      "condition": "All conditions (pooled)",
+      "trial_rows": 4117,
+      "participants": 80,
+      "accuracy": 0.8513480689822687
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_032",
+      "condition": "Control",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.7456310679611651
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_032",
+      "condition": "Multi-talker",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.829126213592233
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_032",
+      "condition": "Single talker",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8155339805825242
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_032",
+      "condition": "Talker-specific",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8805825242718447
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_032",
+      "condition": "All conditions (pooled)",
+      "trial_rows": 4120,
+      "participants": 80,
+      "accuracy": 0.8177184466019417
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_043",
+      "condition": "Control",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8194174757281554
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_043",
+      "condition": "Multi-talker",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8349514563106796
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_043",
+      "condition": "Single talker",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8271844660194175
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_043",
+      "condition": "Talker-specific",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8699029126213592
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_043",
+      "condition": "All conditions (pooled)",
+      "trial_rows": 4120,
+      "participants": 80,
+      "accuracy": 0.8378640776699029
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_037",
+      "condition": "Control",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.7757281553398059
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_037",
+      "condition": "Multi-talker",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8436893203883495
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_037",
+      "condition": "Single talker",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8436893203883495
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_037",
+      "condition": "Talker-specific",
+      "trial_rows": 1030,
+      "participants": 20,
+      "accuracy": 0.8990291262135922
+    },
+    {
+      "test_talker": "X21.CMN.CMN_M_037",
+      "condition": "All conditions (pooled)",
+      "trial_rows": 4120,
+      "participants": 80,
+      "accuracy": 0.8405339805825243
+    }
+  ],
+  "output_sha256": {
+    "x21_s_curves_by_condition.pdf": "05765da32bca77f0291396c928a651193ddf4c28a4e4d5471466b49623ec43fb",
+    "x21_s_curves_by_condition.png": "65edd3dddfa18c1b3fc3c9a42201e94a3d9f44d18eb95f765e77c44585edf040",
+    "x21_s_curves_by_condition.svg": "b0eb6fe999f62e16117e9e6e002243aee742aff8637ed9705e8879684cbeac4b",
+    "x21_s_curves_pooled.pdf": "83846dadeaa6eba2cbc04b457d9eff2530b0b0a50bf8ca83ae862f9f68afe228",
+    "x21_s_curves_pooled.png": "2d2bcb62619658307b6cc13fd3c0f56150ccc98ffaa93825f2100d5c72896ae3",
+    "x21_s_curves_pooled.svg": "bc599c8a1fce6771ae099be68f1a79bcb2e72b3956ddb0f3517dedf70aa843ae"
+  }
+}

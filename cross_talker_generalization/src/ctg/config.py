@@ -29,6 +29,7 @@ class FeatureStoreSpec:
     kind: str
     variant: str
     expected_units: int
+    feature_subsets: Mapping[str, tuple[str, tuple[int, ...]]] | None = None
 
 
 @dataclass(frozen=True)
@@ -96,6 +97,17 @@ def load_project(path: str | Path) -> ProjectConfig:
             kind=str(values["kind"]),
             variant=str(values["variant"]),
             expected_units=int(values["expected_units"]),
+            feature_subsets=(
+                {
+                    str(feature_key): (
+                        str(definition["source"]),
+                        tuple(int(index) for index in definition["indices"]),
+                    )
+                    for feature_key, definition in values["feature_subsets"].items()
+                }
+                if values.get("feature_subsets")
+                else None
+            ),
         )
         for store_id, values in raw["feature_stores"].items()
     }

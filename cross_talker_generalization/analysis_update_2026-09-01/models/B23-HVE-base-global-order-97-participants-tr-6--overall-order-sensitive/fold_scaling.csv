@@ -1,0 +1,4 @@
+"dataset_id","feature_key","held_out_fold","n_training_rows","n_held_out_rows","training_mean","training_sd"
+"B23","tr_6::overall_order_sensitive",0,3900,1920,313.135404869488,13.7263960173871
+"B23","tr_6::overall_order_sensitive",1,3660,2160,312.455883072943,13.9405599574649
+"B23","tr_6::overall_order_sensitive",2,4080,1740,314.106607996924,13.1372915990294

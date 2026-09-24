@@ -1,5 +1,7 @@
 # Testing theories of cross-talker generalization in human speech perception
 
+**Latest code and results checkpoint (September 24, 2026):** see the [checkpoint index](cross_talker_generalization/analysis_update_2026-09-24/README.md) for the September updates, interactive parameter maps, diagnostics, and validation status. This preserves the current work before repository cleanup; it is not a claim that all analyses or manuscript figures are final.
+
 This repository contains an investigation of how listeners generalize speech recognition from recently experienced speech to new words, new talkers, and new accents. It asks whether relationships among speech exemplars—--measured in either acoustic or learned latent speech-representation spaces—--predict human behavior.
 
 The project combines modern DNN-based automatic speech recognition (ASR) systems trained through self-supervised learning (SSL) with theories of human speech perception. Specifically, we use the latent representations learned by different layers of the HuBERT model to approximate the latent representations of speech inputs learned by human listeners. This allows us to apply a general model of human speech perception (exemplar theory) to those representations, and to test competing hypotheses about the mechanisms that afford generalization during human speech perception. The use of modern ASR models allows us to test these hypotheses against the data from a comparatively unconstrained tasks---listeners' transcriptions of spoken words and sentences---and to go beyond qualitative hypothesis tests (whether a hypothesis can in principle explain the direction of the observed effects) towards quantitative hypothesis tests (whether a hypothesis can explain a non-trivial amount of human behavior, or perhaps even captures most of the observed behavior, pre-empting the need for less parsimonious explanations).
@@ -7,6 +9,8 @@ The project combines modern DNN-based automatic speech recognition (ASR) systems
 We address these questions for three distinct behavioral data sets previously elicited in separate perception experiments.
 
 The production codebase is [cross_talker_generalization/](cross_talker_generalization/). Superseded tracked versions remain available through Git history and are not used at runtime.
+
+For the latest illustrated discussion report, see [Report for Florian](cross_talker_generalization/analysis_update_2026-09-09/REPORT_FOR_FLORIAN.md) ([PDF](output/pdf/cross_talker_analysis_report_for_florian_reviewed.pdf)). The [comment-by-comment response](cross_talker_generalization/analysis_update_2026-09-09/REVIEW_RESPONSE.md) records changes following the annotated PDF and supplied Slack messages. The report distinguishes revised figures, retained model results, and analyses still to run; it does not claim that every manuscript panel is complete.
 
 ## Research questions
 
@@ -97,6 +101,8 @@ Candidate theoretical predictors are selected by the summed three-fold held-out 
 
 After selection, condition-only versus joint asks whether the theoretical predictor adds information beyond condition; predictor-only versus joint asks whether condition adds information beyond the theoretical predictor. Both comparisons are separate from the optimization criterion. The August 21 report predates this correction; the corrected selection and downstream results are in [analysis_update_2026-08-27](cross_talker_generalization/analysis_update_2026-08-27/README.md).
 
+The meeting proposed Transformer layer 24 as a common manuscript summary. The principal **SBI result display** is a layerwise z-value plot with three-fold 95% intervals, a compatible behavioral z-ceiling normalized to 100%, and labeled nominal significance references; this does not designate the manuscript's main figures. See the [z-value review](cross_talker_generalization/analysis_update_2026-09-06/z_value_review/README.md) for the currently available plots and their source/scope distinctions. Likelihood-based evaluation and nested-model comparisons remain separate analyses. The [numbered requirements review](cross_talker_generalization/docs/FLORIAN_REQUIREMENTS_REVIEW.md) records the meeting/email requests and unfinished figure panels, including corrections needed in the September 6 HVE selection and acoustic diagnostics.
+
 Full-data coefficients, confidence intervals, Wald z, and likelihood-ratio tests remain useful association summaries. Historical held-out-refit z values are preserved only in clearly labeled compatibility figures.
 
 AN19 and X21 use Bernoulli responses. B23 retains sentence-level correct/incorrect keyword counts as a count-binomial outcome rather than collapsing each sentence to one binary trial.
@@ -114,7 +120,8 @@ AN19 and X21 use Bernoulli responses. B23 retains sentence-level correct/incorre
 │   ├── tests/                     unit and project-contract tests
 │   ├── artifacts/                 refactored-pipeline intermediate and model products
 │   ├── analysis_update_2026-08-21/ reviewed broad August 21 package
-│   └── analysis_update_2026-08-27/ corrected SBI/HVE selection and comparisons
+│   ├── analysis_update_2026-08-27/ corrected SBI/HVE selection and comparisons
+│   └── analysis_update_2026-09-01/ cross-fitted predictor nested GLMM tests
 ├── data/                           tracked manifests plus local read-only feature stores
 ├── results/                        published summaries plus local compatibility inputs
 ├── references/                     prior paper and manuscript reference files
@@ -222,9 +229,13 @@ provide filenames, identities, and hashes for auditing.
 - [Production code README](cross_talker_generalization/README.md)
 - [Runbook](cross_talker_generalization/docs/RUNBOOK.md)
 - [Scientific specification](cross_talker_generalization/docs/SCIENTIFIC_SPEC.md)
+- [Next analysis plan](cross_talker_generalization/docs/NEXT_ANALYSIS_PLAN.md)
+- [Main Figure 1/2 specification](cross_talker_generalization/docs/MAIN_FIGURE_SPEC.md)
 - [Historical implementation audit](cross_talker_generalization/docs/LEGACY_AUDIT.md)
 - [Validation report](cross_talker_generalization/docs/VALIDATION_REPORT.md)
 - [Reviewed broad August 21 analysis](cross_talker_generalization/analysis_update_2026-08-21/README.md)
 - [Corrected model-selection and global-order HVE update](cross_talker_generalization/analysis_update_2026-08-27/README.md)
+- [Combined-fold cross-fitted predictor LRT update](cross_talker_generalization/analysis_update_2026-09-01/README.md)
+- [Fixed Tr-24 SBI/HVE and acoustic-audit update](cross_talker_generalization/analysis_update_2026-09-06/README.md)
 - [Retained-result policy](results/README.md)
 - [Result curation and rebuild record](results/CURATION_REPORT_2026-08-21.md)

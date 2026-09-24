@@ -96,9 +96,13 @@ def run_audit(
             observed_units = store.unit_count(keys[0] if keys else None)
             attrs = store.attrs
             expected_keys = (
-                set(project.layers)
-                if spec.kind in {"hubert_tsne", "hubert_full"}
-                else {"mfcc39", "strf24_legacy"}
+                set(spec.feature_subsets)
+                if spec.feature_subsets
+                else (
+                    set(project.layers)
+                    if spec.kind in {"hubert_tsne", "hubert_full"}
+                    else {"mfcc39", "strf24_legacy"}
+                )
             )
             store_checks = [
                 ("dataset_id", str(attrs.get("dataset_id")), spec.dataset),

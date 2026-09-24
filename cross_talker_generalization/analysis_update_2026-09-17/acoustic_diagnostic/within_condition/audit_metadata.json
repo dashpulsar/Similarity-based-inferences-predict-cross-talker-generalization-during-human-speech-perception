@@ -1,0 +1,40 @@
+{
+  "all_positive_training_slopes": true,
+  "conditions": 6,
+  "convergence_flag_messages": {
+    "boundary (singular) fit: see help('isSingular')": 20
+  },
+  "created_utc": "2026-09-17T06:20:51.935441+00:00",
+  "features": [
+    "mfcc39",
+    "strf24_legacy"
+  ],
+  "fit_failures": 0,
+  "flagged_conditions": [
+    "AN19.Korean.test_Spanish",
+    "AN19.Spanish.test_Spanish"
+  ],
+  "interpretation": "Positive held-out improvements persist within the four conditions with no selected-fit flags for both spaces. Thus these predictors contain within-condition information; unstable cells remain exploratory and require model review.",
+  "limitations": "Small condition samples; random-effect fallback can differ across conditions/features; a common scope within each nested pair is enforced. Selection or causal decomposition is not claimed.",
+  "matched_null_predictor_structures_within_each_scope": true,
+  "max_parallel_R_processes": 4,
+  "n_selected_fits": 96,
+  "non_ok_convergence": 20,
+  "numpy": "1.26.4",
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "positive_pooled_feature_condition_results": 11,
+  "positive_test_improvement_folds": 30,
+  "prediction": "Frozen fixed-effects-only predictions (re.form=NA), original participant folds; mean Bernoulli log loss per word response",
+  "predictor": "Negative within-training-fold standardized distance from full MFCC39 or STRF24; fixed tau=2, historical mean-sequence-length normalization",
+  "purpose": "Independent model fitting within each condition tests whether positive acoustic evidence persists after removing between-condition differences",
+  "python": "3.9.18",
+  "scope": "Six informative-exposure conditions, 20 participants each; no predictor exists for untrained controls in this analysis",
+  "script_sha256": "310cd7e4717e47c618177beb57ca338077777821b5341ebdc72d4714f79cd998",
+  "singular_selected_fits": 20,
+  "source_input_sha256": "674a60d21a1c7b75e0052529b34869157ee13b7eb80930003c84cf0bb9dc7c9d",
+  "status": "complete_with_fit_warnings",
+  "total_test_folds": 36,
+  "uncertainty": "Raw fold results, z estimates and ranges retained. No fold-bootstrap interval or cross-condition inferential claim added"
+}

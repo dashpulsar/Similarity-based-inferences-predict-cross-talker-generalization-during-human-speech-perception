@@ -1,0 +1,11 @@
+{
+  "total": 1247,
+  "recorded": 1247,
+  "elapsed_seconds": 1800.1410000000615,
+  "status_counts": {
+    "ok": 647,
+    "not_started_budget": 376,
+    "timeout": 209,
+    "nonconverged": 15
+  }
+}

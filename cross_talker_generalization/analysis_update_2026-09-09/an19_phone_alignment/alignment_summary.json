@@ -1,0 +1,62 @@
+{
+  "config": {
+    "dataset": "AN19",
+    "scope": "all 6261 physical recording IDs in the canonical stimulus manifest",
+    "model": "FALCON TIMIT-English",
+    "code_repository": "https://github.com/MLSpeech/FALCON",
+    "code_revision": "3d6e3d876ebaf2472757720d92222d55dd7410f8",
+    "weights_repository": "MLSpeech/FALCON-weights",
+    "weights_revision": "b94a36298af110fd78a6083ca4108f2a288125f7",
+    "weights_filename": "falcon_timit_english.pt",
+    "weights_sha256": "a8f223c6ebdc56506a358ce74748b588c983ae68a53da45d9bd1ce7c1f3af016",
+    "dictionary_repository": "https://github.com/cmusphinx/cmudict",
+    "dictionary_revision": "74790861f652b15e4ac49015a90074ad62a27690",
+    "pronunciation_choice": "first CMU dictionary variant, without outcome-based selection",
+    "alignment_labels": "canonical ARPAbet targets without stress; preserved separately from FALCON LH39 mapping",
+    "silence": "prepend and append sil to each isolated target word",
+    "audio_sample_rate": 16000,
+    "resampling": "torchaudio.functional.resample defaults; full decoded waveform; no trimming or VAD",
+    "model_timestamp_samples_per_frame": 161.34011627906978,
+    "timestamp_note": "retain the pinned official forward implementation's conversion; not exact 10ms boundaries",
+    "phone_short_flag_seconds": 0.02,
+    "low_mean_posterior_flag": 0.2,
+    "quality_flags": "descriptive automatic flags only; not a manual acceptance gate or calibrated correctness probabilities",
+    "seed": 42,
+    "human_verified": false,
+    "manual_pilot_required": false,
+    "interpretation": "target-conditioned automatic phone boundaries, not recognized actual pronunciations"
+  },
+  "config_sha256": "cfaee04c2fc09bfd72583ac4f7d864f21c40994d9f3e40281baea4d0fd078ac0",
+  "manifest_sha256": "2557a4870750a438debc09def1e402f96fc9ae1cce5d2bb6078fc29626f0cfaa",
+  "runner_sha256": "1f69371cedb6ffbe448ab3c12e188cf88cebc4ae3e337858da58e4c6327b8b36",
+  "transcript_overrides": {
+    "AN19-rec-8e01733e25fc77ea52f1": {
+      "original_word": "cheif",
+      "annotation_word": "chief",
+      "reason": "All 41 other EW32 recordings, including the other five English talkers, use chief. Behavioral exposure rows use chief (240 rows) and never cheif. See an19_phone_alignment/INPUT_AUDIT.md."
+    }
+  },
+  "transcript_overrides_sha256": "4bcbcf230c211de05ce4804880b4ab2e2f3db45705650106d98fc9eb104517d1",
+  "dictionary_sha256": "286782f036cd341701058943e0615475c8d543ff1ead5b9ddaafd095a352d66a",
+  "processed_recordings": 6261,
+  "aligned_recordings": 6261,
+  "failed_recordings": 0,
+  "phone_intervals_including_silence": 31307,
+  "speech_phone_intervals": 18785,
+  "elapsed_seconds_this_invocation": 38.755852699279785,
+  "cached_aligned_records_reused": 6260,
+  "records_inferred_this_invocation": 1,
+  "runtime": {
+    "python": "3.9.18",
+    "torch": "2.4.1+cu124",
+    "torchaudio": "2.4.1+cu124",
+    "numpy": "1.26.4",
+    "device": "NVIDIA GeForce RTX 4080",
+    "loader_workers": 8,
+    "cpu_threads": 2
+  },
+  "source_audio_modified": false,
+  "hubert_features_recomputed": false,
+  "all_output_automatically_generated": true,
+  "human_verified": false
+}

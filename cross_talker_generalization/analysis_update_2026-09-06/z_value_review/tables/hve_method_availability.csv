@@ -1,0 +1,52 @@
+dataset_id,measure,status,note
+AN19,overall,plotted,"Both variants, 18 layers, 3 folds"
+AN19,overall_order_sensitive,plotted,"Both variants, 18 layers, 3 folds"
+AN19,within_token_sentence,no_estimate_in_selected_sources,Not an assumed zero
+AN19,within_type_sentence,no_estimate_in_selected_sources,Not an assumed zero
+AN19,between_type_sentence,no_estimate_in_selected_sources,Not an assumed zero
+AN19,order_sentence,no_estimate_in_selected_sources,Not an assumed zero
+AN19,mean_dissimilarity_sentence,no_estimate_in_selected_sources,Not an assumed zero
+AN19,within_token_word,plotted,"Both variants, 18 layers, 3 folds"
+AN19,within_type_word,plotted,"Both variants, 18 layers, 3 folds"
+AN19,between_type_word,plotted,"Both variants, 18 layers, 3 folds"
+AN19,order_word,plotted,"Both variants, 18 layers, 3 folds"
+AN19,mean_dissimilarity_word,plotted,"Both variants, 18 layers, 3 folds"
+AN19,within_token_phoneme,no_estimate_in_selected_sources,Not an assumed zero
+AN19,within_type_phoneme,no_estimate_in_selected_sources,Not an assumed zero
+AN19,between_type_phoneme,no_estimate_in_selected_sources,Not an assumed zero
+AN19,order_phoneme,no_estimate_in_selected_sources,Not an assumed zero
+AN19,mean_dissimilarity_phoneme,no_estimate_in_selected_sources,Not an assumed zero
+X21,overall,plotted,"Both variants, 18 layers, 3 folds"
+X21,overall_order_sensitive,plotted,"Both variants, 18 layers, 3 folds"
+X21,within_token_sentence,plotted,"Both variants, 18 layers, 3 folds"
+X21,within_type_sentence,plotted,"Both variants, 18 layers, 3 folds"
+X21,between_type_sentence,plotted,"Both variants, 18 layers, 3 folds"
+X21,order_sentence,plotted,"Both variants, 18 layers, 3 folds"
+X21,mean_dissimilarity_sentence,plotted,"Both variants, 18 layers, 3 folds"
+X21,within_token_word,plotted,"Both variants, 18 layers, 3 folds"
+X21,within_type_word,plotted,"Both variants, 18 layers, 3 folds"
+X21,between_type_word,plotted,"Both variants, 18 layers, 3 folds"
+X21,order_word,plotted,"Both variants, 18 layers, 3 folds"
+X21,mean_dissimilarity_word,plotted,"Both variants, 18 layers, 3 folds"
+X21,within_token_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+X21,within_type_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+X21,between_type_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+X21,order_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+X21,mean_dissimilarity_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+B23,overall,plotted,"Both variants, 18 layers, 3 folds"
+B23,overall_order_sensitive,plotted,"Both variants, 18 layers, 3 folds"
+B23,within_token_sentence,plotted,"Both variants, 18 layers, 3 folds"
+B23,within_type_sentence,no_estimate_in_selected_sources,Not an assumed zero
+B23,between_type_sentence,plotted,"Both variants, 18 layers, 3 folds"
+B23,order_sentence,plotted,"Both variants, 18 layers, 3 folds"
+B23,mean_dissimilarity_sentence,no_estimate_in_selected_sources,Not an assumed zero
+B23,within_token_word,plotted,"Both variants, 18 layers, 3 folds"
+B23,within_type_word,plotted,"Both variants, 18 layers, 3 folds"
+B23,between_type_word,plotted,"Both variants, 18 layers, 3 folds"
+B23,order_word,plotted,"Both variants, 18 layers, 3 folds"
+B23,mean_dissimilarity_word,plotted,"Both variants, 18 layers, 3 folds"
+B23,within_token_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+B23,within_type_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+B23,between_type_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+B23,order_phoneme,plotted,"Both variants, 18 layers, 3 folds"
+B23,mean_dissimilarity_phoneme,plotted,"Both variants, 18 layers, 3 folds"

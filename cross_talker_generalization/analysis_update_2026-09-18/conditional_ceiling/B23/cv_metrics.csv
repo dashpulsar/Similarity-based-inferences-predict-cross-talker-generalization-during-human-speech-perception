@@ -1,0 +1,5 @@
+dataset_id,model_id,scope,fold,n_rows,total_trials,requested_n_rows,requested_total_trials,missing_rows,status,total_log_loss,mean_log_loss,mean_brier
+B23,cross_validated_behavioral_ceiling,oof_fold,0.0,3900,20930,3900,20930,0,complete,10923.709754336694,0.521916376222489,0.1719785805230138
+B23,cross_validated_behavioral_ceiling,oof_fold,1.0,3900,20930,3900,20930,0,complete,10411.745319994368,0.4974555814617472,0.16388364200226638
+B23,cross_validated_behavioral_ceiling,oof_fold,2.0,3900,20930,3900,20930,0,complete,10237.225046971544,0.4891172979919514,0.1602517963969099
+B23,cross_validated_behavioral_ceiling,oof_all,,11700,62790,11700,62790,0,complete,31572.68012130261,0.5028297518920626,0.16537133964073

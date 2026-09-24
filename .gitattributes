@@ -7,6 +7,9 @@ cross_talker_generalization/artifacts/audit/** -text
 cross_talker_generalization/final_report_2026-08-21/** -text
 data/manifests/** -text
 results/** -text
+cross_talker_generalization/analysis_update_2026-09-*/** -text
+outputs/** -text
+output/** -text
 
 # Binary publication and data formats.
 *.png binary

@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-17T06:15:41.752015+00:00",
+  "feature_keys": [
+    "mfcc39",
+    "strf24_legacy"
+  ],
+  "feature_status_counts": {
+    "computed": 2
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-X21_acoustic-confirmatory-full-20260906-model-input.csv",
+  "input_sha256": "a1c54bcb77f9ee252354d2b7ce5e499a599a715751454fe8542733cf1791ff4d",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "ebad33cfa6e4d625d77015630b1aee3df2c6e5126c29cd9c6031588806be69e4",
+    "cv_metrics.csv": "ac40cef56dd5dddd7ae62706ea4157985ef62364baa1913960a072b0e64bcdcd",
+    "diagnostics.csv": "e5ce2e0834f9a26f8107446b808e7d9ce5333eaecfac113bc3181a151840469e",
+    "feature_manifest.csv": "aa0f1659b30f0929388ac136a08e589f830504017c822c8044563fb646445c8c",
+    "likelihood_ratio_tests.csv": "cffcfa366d08096eea4472dff35f0e83538b72f983955c7060bfcf8f3d4b1d0b",
+    "oof_predictions.csv": "66c5855b1cb63a2d5fb1a934df2ff2b642efc810da7907b7b84e3040e3df187a",
+    "software.csv": "392f9fc3b34c1fe9bab2ba344d1eaf485fee4c9385621be35e9f3b28cc24a4c9",
+    "train_test_scores.csv": "c33dd5d33f147d7e0992d2f2f5e3b8787dc961bbd4ad29940556779e025ea0b4"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": -1,
+    "jobs": 4,
+    "model_set": "all",
+    "predictor_column": "raw_distance",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "2908f8e819bfbe93b68b06171429d6e866b6a0ceab72363207daa3dd22c3e73c",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 32,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

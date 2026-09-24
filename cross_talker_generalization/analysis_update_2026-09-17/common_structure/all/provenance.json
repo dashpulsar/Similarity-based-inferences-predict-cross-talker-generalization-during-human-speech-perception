@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-09-17T07:04:00.126786+00:00",
+  "feature_keys": [
+    "mfcc39",
+    "mfcc_c0",
+    "mfcc_delta13",
+    "mfcc_delta_delta13",
+    "mfcc_static13",
+    "mfcc_static_spectral12",
+    "strf24_legacy",
+    "strf_direction_negative",
+    "strf_direction_positive",
+    "strf_rate_16",
+    "strf_rate_2",
+    "strf_rate_4",
+    "strf_rate_8",
+    "strf_scale_0p25",
+    "strf_scale_0p5",
+    "strf_scale_1p0"
+  ],
+  "feature_status_counts": {
+    "computed": 16
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\acoustic_diagnostic\\model_input.csv",
+  "input_sha256": "674a60d21a1c7b75e0052529b34869157ee13b7eb80930003c84cf0bb9dc7c9d",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "a231a078009ad40f7f2b1997e0729c71c63108c6b8934e7962a3ef7d4b2b1636",
+    "cv_metrics.csv": "550dab9b2dc61a364f80e9376ff2cd66a0721e42ed95e3d93fd838dbc98aa0fd",
+    "diagnostics.csv": "a6e4bdc2da4332a628f2e2ac01db2f9a2b1029c109a818afa6938037c7bebc47",
+    "feature_manifest.csv": "d036e9927240e9438f51ed822a4e0673802be526a90f2bad663d9cd839769b02",
+    "likelihood_ratio_tests.csv": "21366ec8c0fe098ba6ddf935b3314e49ad38e8df561d73a4117870b2bcc3b256",
+    "oof_predictions.csv": "eae875b02f7abc96f52648ee7b968d108f1491d53da6700e4e63348cb053029a",
+    "software.csv": "ac2c6b3a8bd898e9ea09201c34207e0ba90f2e85ece58b115e56ee1ee410ef00",
+    "train_test_scores.csv": "f689a773197922ab2544ffba2b9bd9a11aaf68c911497c13459613e36b1eb2a6",
+    "variance_components.csv": "71149889e6ecc77d88a0afcdfa8d8081630ce5f95019f0e2a9058f2af25835ce"
+  },
+  "package_version": "0.1.0",
+  "pandas": "3.0.5",
+  "parameters": {
+    "direction": -1,
+    "jobs": 4,
+    "model_set": "all",
+    "predictor_column": "raw_distance",
+    "random_policy": "participant_item",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "589076774f7c9184cb3801c8b4ef2d9d702f59f6f4d90ad8ad2cc39ecac9bcdf",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 256,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

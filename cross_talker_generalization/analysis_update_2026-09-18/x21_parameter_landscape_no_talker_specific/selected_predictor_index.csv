@@ -1,0 +1,5 @@
+scope,objective,tau,k,table
+expanded,z,0.5,0.0060341763365451,selected_predictors/candidate_00.csv
+expanded,log_likelihood,0.5,0.0060341763365451,selected_predictors/candidate_00.csv
+metric_tau_ge_1,z,1.0,0.0179141104306328,selected_predictors/candidate_01.csv
+metric_tau_ge_1,log_likelihood,1.0,0.0179141104306328,selected_predictors/candidate_01.csv

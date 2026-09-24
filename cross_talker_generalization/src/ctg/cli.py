@@ -123,6 +123,11 @@ def _parser() -> argparse.ArgumentParser:
         "--model-set", choices=("all", "predictor_only"), default="all",
         help="fit all registered models or only M_predictor for candidate selection",
     )
+    for fit_parser in (fit, fit_parallel):
+        fit_parser.add_argument(
+            "--random-policy", choices=("registered", "participant_item"), default="registered",
+            help="registered fallback policy, or declared participant/item-only sensitivity",
+        )
 
     ceiling_input = sub.add_parser(
         "make-ceiling-input", help="build cross-fitted behavioral ceiling input"
@@ -324,7 +329,7 @@ def main(argv: list[str] | None = None) -> int:
         subprocess.run(
             [
                 str(executable), str(script), str(args.input.resolve()), str(args.output.resolve()),
-                args.predictor_column, str(args.direction), args.term,
+                args.predictor_column, str(args.direction), args.term, "all", args.random_policy,
             ],
             check=True,
         )
@@ -338,6 +343,7 @@ def main(argv: list[str] | None = None) -> int:
                 "predictor_column": args.predictor_column,
                 "direction": args.direction,
                 "term": args.term,
+                "random_policy": args.random_policy,
             },
         )
         print(f"GLMM outputs written to {args.output}")
@@ -351,6 +357,7 @@ def main(argv: list[str] | None = None) -> int:
             direction=args.direction,
             term=args.term,
             model_set=args.model_set,
+            random_policy=args.random_policy,
             rscript=args.rscript,
         )
         print(f"parallel GLMM completed for {len(result)} feature groups in {args.output}")

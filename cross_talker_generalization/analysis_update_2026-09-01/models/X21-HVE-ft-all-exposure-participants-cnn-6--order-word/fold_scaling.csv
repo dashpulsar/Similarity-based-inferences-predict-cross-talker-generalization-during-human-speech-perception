@@ -1,0 +1,4 @@
+"dataset_id","feature_key","held_out_fold","n_training_rows","n_held_out_rows","training_mean","training_sd"
+"X21","cnn_6::order_word",0,10969,5508,448.972412910599,53.2987321958115
+"X21","cnn_6::order_word",1,10974,5503,449.591960809788,51.872220076631
+"X21","cnn_6::order_word",2,11011,5466,450.274734898495,51.0290120507537

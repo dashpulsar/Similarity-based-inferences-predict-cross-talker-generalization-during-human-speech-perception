@@ -35,11 +35,22 @@ Superseded versions are retained in Git history. They are not duplicated in a se
 | `tests/` | Unit and project-contract tests |
 | `docs/RUNBOOK.md` | Commands from input audit through report generation |
 | `docs/SCIENTIFIC_SPEC.md` | Concise estimand and model specification |
+| `docs/NEXT_ANALYSIS_PLAN.md` | September meeting decisions, completion order, and unresolved runs |
+| `docs/MAIN_FIGURE_SPEC.md` | Reproducible panel requirements and input status for manuscript Figures 1 and 2 |
+| `docs/FLORIAN_REQUIREMENTS_REVIEW.md` | Numbered meeting/email requirements, timestamp evidence, figure coverage and outstanding work |
+| `docs/Z_VALUE_FIGURE_SPEC.md` | Principal SBI z display: fold CI, compatible ceiling, significance references and statistical scope |
 | `docs/LEGACY_AUDIT.md` | Differences between historical descriptions and implementations |
 | `docs/VALIDATION_REPORT.md` | Numerical and statistical checks already run |
 | `artifacts/` | Intermediate tables, model outputs, and smoke-test products |
 | `analysis_update_2026-08-21/` | Reviewed broad analysis package from August 21 |
 | `analysis_update_2026-08-27/` | Corrected SBI/HVE selection, selected-model comparisons, and complete revised t-SNE HVE candidate results |
+| `analysis_update_2026-09-01/` | Combined-fold cross-fitted-predictor nested GLMM tests; supplementary association analysis |
+| `analysis_update_2026-09-06/` | Fixed Tr-24 SBI/HVE reruns, matched cross-validated ceilings, objective/reporting robustness, AN19 acoustic audit, and Figure 1/2 drafts |
+| `analysis_update_2026-09-06/z_value_review/` | Navigable SBI/HVE z gallery, source tables and explicit separation of historical and revised fit scopes |
+| `analysis_update_2026-09-06/collaborator_report/` | Illustrated report for Florian; new Figure 1/2 panels, source audit, numerical tables and generation provenance |
+| `analysis_update_2026-09-09/` | Latest illustrated response to the annotated PDF and supplied Slack messages; revised figures, supplied map/heatmap sources, recovered layerwise likelihood tables and remaining analyses |
+
+The latest report PDF is at [output/pdf/cross_talker_analysis_report_for_florian_reviewed.pdf](output/pdf/cross_talker_analysis_report_for_florian_reviewed.pdf). Its editable English source is [REPORT_FOR_FLORIAN.md](cross_talker_generalization/analysis_update_2026-09-09/REPORT_FOR_FLORIAN.md); regeneration commands are in the same folder's README. Earlier PDFs remain available but do not include the latest feedback.
 
 ## Current report package
 
@@ -54,6 +65,8 @@ Superseded versions are retained in Git history. They are not duplicated in a se
 - `provenance*.json`: parameters, environment versions, and file hashes.
 
 The report predates the corrections listed in [TODO.md](TODO.md): its “best” feature-space labels use condition-only versus joint OOF log-loss gain, and its B23 HVE coverage does not include the public multi-talker stimulus mapping. Use `analysis_update_2026-08-27/` for corrected predictor-only selection, selected SBI/HVE downstream comparisons, and the complete revised t-SNE HVE candidate search. The update does not replace descriptive outputs such as S-curves and talker matrices in the August 21 package.
+
+Start with `analysis_update_2026-09-06/z_value_review/` for the SBI/HVE z display review and `docs/FLORIAN_REQUIREMENTS_REVIEW.md` for the complete available request inventory. The parent September 6 package contains fixed-`tr_24` predictive comparisons and Figure 1/2 drafts, but its notice flags incomplete panels, cross-sample HVE selection and acoustic component scaling that need correction.
 
 ## Result authority and retained sources
 

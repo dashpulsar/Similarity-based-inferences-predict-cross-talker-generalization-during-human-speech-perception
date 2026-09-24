@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-09-17T06:59:05.115948+00:00",
+  "inputs": [
+    {
+      "family": "SBI",
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\tt_all\\X21-base",
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\Similarity-based inferences predict cross-talker generalization during human speech perception\\cross_talker_generalization\\artifacts\\derived\\X21-X21_hubert_base_tsne-confirmatory-model-input.csv",
+      "run_label": "X21-base-all",
+      "source_sha256": "cac303fb4e05282d2d7a5eb8c83c53aa61d894019a6610665622b587ba9dde33",
+      "stratum": "all_available_exposure_participants",
+      "variant": "base"
+    },
+    {
+      "family": "SBI",
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\tt_all\\X21-ft",
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\Similarity-based inferences predict cross-talker generalization during human speech perception\\cross_talker_generalization\\artifacts\\derived\\X21-X21_hubert_ft_tsne-confirmatory-model-input.csv",
+      "run_label": "X21-ft-all",
+      "source_sha256": "c7fbf435985b74f5e2f510fc1ba26fb92c1876b2b5bf07c8566296d66caa585a",
+      "stratum": "all_available_exposure_participants",
+      "variant": "ft"
+    },
+    {
+      "family": "SBI",
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\tt_all\\B23-base",
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\Similarity-based inferences predict cross-talker generalization during human speech perception\\cross_talker_generalization\\artifacts\\derived\\B23-B23_hubert_base_tsne-confirmatory-model-input.csv",
+      "run_label": "B23-base-all",
+      "source_sha256": "eab8ea37a25b660c26ad1e3e1d073700bd1d6a66c8d758cf9b255ecc196fdfdb",
+      "stratum": "all_available_exposure_participants",
+      "variant": "base"
+    },
+    {
+      "family": "SBI",
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\tt_all\\B23-ft",
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\Similarity-based inferences predict cross-talker generalization during human speech perception\\cross_talker_generalization\\artifacts\\derived\\B23-B23_hubert_ft_tsne-confirmatory-model-input.csv",
+      "run_label": "B23-ft-all",
+      "source_sha256": "5c4c755a14ab07bf2cd3b5b68d7e13fa8bfe05fa7daaaab4dd52ab8e63e8c451",
+      "stratum": "all_available_exposure_participants",
+      "variant": "ft"
+    }
+  ],
+  "numpy": "1.26.4",
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "scope": "Registered fixed-parameter SBI; remaining all-layer matched scores; approved test/train mean-log-loss ratio"
+}

@@ -1,0 +1,15 @@
+language,branch,mean_distance,ci_low,ci_high,n_talkers,n_segment_types_min,n_segment_types_max
+Somali,Afro-Asiatic,36.2862480384714,,,1,33,33
+Albanian,Albanian,36.225050027777804,,,1,35,35
+Dutch,Germanic,38.9079615372348,,,1,34,34
+German,Germanic,34.620998839260025,,,1,34,34
+Bengali,Indo-Aryan,40.74481961461366,,,1,34,34
+Hindi,Indo-Aryan,40.21197526503816,,,1,34,34
+Japanese,Japonic,45.63919026851762,,,1,35,35
+Korean,Koreanic,36.426997370779056,34.98785461325652,37.812819320327975,12,32,35
+French,Romance,39.730733148096704,,,1,35,35
+Romanian,Romance,41.560206729004776,,,1,35,35
+Spanish,Romance,38.54824073458139,37.447787568319896,39.601030614769385,12,33,35
+Mandarin,Sino-Tibetan,39.88014748935084,,,1,34,34
+Russian,Slavic,35.90447477671726,,,1,34,34
+Turkish,Turkic,33.17016663907006,,,1,35,35

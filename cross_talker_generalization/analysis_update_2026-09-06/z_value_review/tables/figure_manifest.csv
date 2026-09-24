@@ -1,0 +1,28 @@
+figure,title,scope,png,svg
+sbi_an19_base_z,AN19 | SBI | HuBERT base,historical_test_fold_refit,figures/sbi_an19_base_z.png,figures/sbi_an19_base_z.svg
+sbi_an19_ft_z,AN19 | SBI | HuBERT ASR-FT,historical_test_fold_refit,figures/sbi_an19_ft_z.png,figures/sbi_an19_ft_z.svg
+sbi_x21_base_z,X21 | SBI | HuBERT base,historical_test_fold_refit,figures/sbi_x21_base_z.png,figures/sbi_x21_base_z.svg
+sbi_x21_ft_z,X21 | SBI | HuBERT ASR-FT,historical_test_fold_refit,figures/sbi_x21_ft_z.png,figures/sbi_x21_ft_z.svg
+sbi_b23_base_z,B23 | SBI | HuBERT base,historical_test_fold_refit,figures/sbi_b23_base_z.png,figures/sbi_b23_base_z.svg
+sbi_b23_ft_z,B23 | SBI | HuBERT ASR-FT,historical_test_fold_refit,figures/sbi_b23_ft_z.png,figures/sbi_b23_ft_z.svg
+hve_historical_an19_01,AN19 | HVE definitions | page 1,historical_test_fold_refit,figures/hve_historical_an19_01.png,figures/hve_historical_an19_01.svg
+hve_historical_an19_02,AN19 | HVE definitions | page 2,historical_test_fold_refit,figures/hve_historical_an19_02.png,figures/hve_historical_an19_02.svg
+hve_historical_x21_01,X21 | HVE definitions | page 1,historical_test_fold_refit,figures/hve_historical_x21_01.png,figures/hve_historical_x21_01.svg
+hve_historical_x21_02,X21 | HVE definitions | page 2,historical_test_fold_refit,figures/hve_historical_x21_02.png,figures/hve_historical_x21_02.svg
+hve_historical_x21_03,X21 | HVE definitions | page 3,historical_test_fold_refit,figures/hve_historical_x21_03.png,figures/hve_historical_x21_03.svg
+hve_historical_x21_04,X21 | HVE definitions | page 4,historical_test_fold_refit,figures/hve_historical_x21_04.png,figures/hve_historical_x21_04.svg
+hve_historical_b23_01,B23 | HVE definitions | page 1,historical_test_fold_refit,figures/hve_historical_b23_01.png,figures/hve_historical_b23_01.svg
+hve_historical_b23_02,B23 | HVE definitions | page 2,historical_test_fold_refit,figures/hve_historical_b23_02.png,figures/hve_historical_b23_02.svg
+hve_historical_b23_03,B23 | HVE definitions | page 3,historical_test_fold_refit,figures/hve_historical_b23_03.png,figures/hve_historical_b23_03.svg
+hve_historical_b23_04,B23 | HVE definitions | page 4,historical_test_fold_refit,figures/hve_historical_b23_04.png,figures/hve_historical_b23_04.svg
+hve_revised_an19_01,AN19 | HVE definitions | page 1,revised_training_two_folds,figures/hve_revised_an19_01.png,figures/hve_revised_an19_01.svg
+hve_revised_an19_02,AN19 | HVE definitions | page 2,revised_training_two_folds,figures/hve_revised_an19_02.png,figures/hve_revised_an19_02.svg
+hve_revised_x21_01,X21 | HVE definitions | page 1,revised_training_two_folds,figures/hve_revised_x21_01.png,figures/hve_revised_x21_01.svg
+hve_revised_x21_02,X21 | HVE definitions | page 2,revised_training_two_folds,figures/hve_revised_x21_02.png,figures/hve_revised_x21_02.svg
+hve_revised_x21_03,X21 | HVE definitions | page 3,revised_training_two_folds,figures/hve_revised_x21_03.png,figures/hve_revised_x21_03.svg
+hve_revised_x21_04,X21 | HVE definitions | page 4,revised_training_two_folds,figures/hve_revised_x21_04.png,figures/hve_revised_x21_04.svg
+hve_revised_x21_05,X21 | HVE definitions | page 5,revised_training_two_folds,figures/hve_revised_x21_05.png,figures/hve_revised_x21_05.svg
+hve_revised_b23_01,B23 | HVE definitions | page 1,revised_training_two_folds,figures/hve_revised_b23_01.png,figures/hve_revised_b23_01.svg
+hve_revised_b23_02,B23 | HVE definitions | page 2,revised_training_two_folds,figures/hve_revised_b23_02.png,figures/hve_revised_b23_02.svg
+hve_revised_b23_03,B23 | HVE definitions | page 3,revised_training_two_folds,figures/hve_revised_b23_03.png,figures/hve_revised_b23_03.svg
+hve_revised_b23_04,B23 | HVE definitions | page 4,revised_training_two_folds,figures/hve_revised_b23_04.png,figures/hve_revised_b23_04.svg

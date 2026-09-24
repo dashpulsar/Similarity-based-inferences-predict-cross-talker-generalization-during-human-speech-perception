@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-09-17T06:07:20.649369+00:00",
+  "feature_keys": [
+    "tr_24"
+  ],
+  "feature_status_counts": {
+    "computed": 1
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-X21_hubert_base_tsne-confirmatory-tr24-20260906-model-input.csv",
+  "input_sha256": "bffc508c383e18cb85b722063e6e9486bf6763cdf762098d355328f8056e0456",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "805ef4b379f7747afdb0c3946319ceee1e129e94cd511edcd53c4d328953927a",
+    "cv_metrics.csv": "089434b3c3940c5b3566f1c8b9e678d0605c85b0c360da68b4a8da9d989666ed",
+    "diagnostics.csv": "4b134c8d2ffe9dd21e12697a1737300cfef0637337cecd8bcc66a9126589259b",
+    "feature_manifest.csv": "6ede4db5e4e058737d4c98d75d316afd00879f2b365581eafbc7c37c60968aa7",
+    "likelihood_ratio_tests.csv": "acf5a7f73e89c027c7dc764b05fa91f6f88d1a81d5a28e08364a502466d51875",
+    "oof_predictions.csv": "65cbd4b54a3741cc0fbf5f5ae6e139a420abcef988a743fe894583ee73feb3a4",
+    "software.csv": "c3043400bcca235ba9692bd80d19a9906c4e0437ea0ad3cbe54a0841c0bf041a",
+    "train_test_scores.csv": "7a39fe32b32be44b954388f7bb07a76947e48905425d381af8d4d46fabd3e374"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": -1,
+    "jobs": 4,
+    "model_set": "all",
+    "predictor_column": "raw_distance",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "2908f8e819bfbe93b68b06171429d6e866b6a0ceab72363207daa3dd22c3e73c",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 16,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

@@ -1,0 +1,8 @@
+{
+  "descriptive_weighting": "one row per retained training word response",
+  "distinct_candidates": 2,
+  "excluded_condition_rows": 0,
+  "scaling_reproduces_fits": true,
+  "status": "passed",
+  "warning": "Raw z and total fitted likelihood are not performance comparisons across different samples"
+}

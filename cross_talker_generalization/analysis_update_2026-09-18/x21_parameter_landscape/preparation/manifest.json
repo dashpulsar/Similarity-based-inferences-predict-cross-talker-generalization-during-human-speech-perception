@@ -1,0 +1,53 @@
+{
+  "aggregation": "mean physical distances within source talker, then equal mean over source talkers, then exp(-k*d)",
+  "coordinate_scaling": "none",
+  "created_utc": "2026-09-18T04:50:12.513299+00:00",
+  "feature_load_and_warmup_seconds": 0.4398782,
+  "feature_store": "C:\\Users\\Alex\\Documents\\GitHub\\Similarity-based inferences predict cross-talker generalization during human speech perception\\data\\features\\x21_hubert_full_corpus_tsne_3d.h5",
+  "feature_store_mtime_ns": 1786664487728775300,
+  "feature_store_size": 107754880,
+  "glmm_maxfun": 20000,
+  "glmm_optimizer": "bobyqa",
+  "hve_run": false,
+  "k_bounds": [
+    0.001,
+    2.0
+  ],
+  "likelihood": "lme4 logLik, Laplace nAGQ=1",
+  "model": "binomial-logit: similarity_z + (1|participant_id) + (1|analysis_item_id) + (1|test_talker_id)",
+  "normalization": "mean_sequence_length",
+  "numpy": "1.26.4",
+  "objectives": [
+    "signed training Wald z",
+    "training fitted GLMM log likelihood"
+  ],
+  "outer_test_used": false,
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "participants": 213,
+  "penalty": "none",
+  "physical_pairs": 4532,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "responses": 10969,
+  "scope": "Feasibility only: X21 base 3-D t-SNE Tr-24; folds 1+2 training; fold 0 excluded",
+  "scope_of_bounds": "Preliminary timing/search box, not final scientific parameter bounds",
+  "search_coordinates": "tau, log10(k)",
+  "seconds_budget": 1800.0,
+  "sources": {
+    "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_sbi_optimizer_probe.R": "bb10d02b88a1b576847d4feb6187439850c5a4e3437130d98ffa3a144205717b",
+    "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-X21_hubert_base_tsne-confirmatory-tr24-20260906-model-input.csv": "bffc508c383e18cb85b722063e6e9486bf6763cdf762098d355328f8056e0456",
+    "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-pairs\\cells.csv": "613c1c27ecb4e10b37067d0b73f622916ac6028318b8a16db465e01086b9deba",
+    "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-pairs\\pairs.csv": "e99b3bd58355143f9410b2546628b04bdb09d5aca53cd08e779542b5b0c7ac7e",
+    "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\scripts\\probe_sbi_joint_optimization.py": "b747d44c9ccbc9bc24e3e85fa2514808b22bec5f1232e1e45fc929e3cb50bf49",
+    "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\src\\ctg\\metrics.py": "8671cf39c00efaacb2322d488ec8b17cad883e5d67cdfb400efafe37628c1758"
+  },
+  "structure_fallback": false,
+  "tau2_historical_distance_max_error": 7.105427357601002e-15,
+  "tau_bounds": [
+    1.0,
+    3.0
+  ],
+  "training_scaling": "Each candidate similarity standardized over training responses only",
+  "workers": 4
+}

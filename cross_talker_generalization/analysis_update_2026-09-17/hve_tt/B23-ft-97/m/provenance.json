@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-09-17T07:21:54.484836+00:00",
+  "feature_keys": [
+    "tr_24::overall_order_sensitive"
+  ],
+  "feature_status_counts": {
+    "computed": 1
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\hve_tt\\B23-ft-97\\input.csv",
+  "input_sha256": "6c2d4f27102d5256d1e3d76530ab9545ec1ba59e5f880e1794265684ffbf7836",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "70c6682e07f895a35700f8f06ced83d0a1066142cdf20714cc0c2d5fe71f778f",
+    "cv_metrics.csv": "b9153b11a82729f3d508afdf604d8c9ea1c29ad0dd86821afccaeacad8d4155f",
+    "diagnostics.csv": "de8cdc098f0a62a0d2c68e74518fc051e2f23e48e0d3aa43b3478f6cbd828343",
+    "feature_manifest.csv": "12138f2b2fd2b346cd89c6908759208cc3e1b5e0ca2916f7ed8280667e9facb0",
+    "likelihood_ratio_tests.csv": "fdbcf31a82a7f1dcc73120ee2871f8b21f50e750a64dad38fc5d2f4045c4527d",
+    "oof_predictions.csv": "66cb6e838b625fc039f36d9ce28d6c583da2bd051ff12f7acffa92b63f8e405b",
+    "software.csv": "76d42239a5dff495410cd1684fca2e4d175775dc8c39f67563b911792abb8195",
+    "train_test_scores.csv": "4b7b0ec43424b8c51643ee4743bab119c73706b051ea2744b252fb9d97c88fb2",
+    "variance_components.csv": "65b06d51c1e8a39f905991e12580ea2d7141399c36d922a91ade83239621cd51"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": 1,
+    "jobs": 4,
+    "model_set": "all",
+    "predictor_column": "predictor_value",
+    "random_policy": "registered",
+    "term": "variability_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "589076774f7c9184cb3801c8b4ef2d9d702f59f6f4d90ad8ad2cc39ecac9bcdf",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 16,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

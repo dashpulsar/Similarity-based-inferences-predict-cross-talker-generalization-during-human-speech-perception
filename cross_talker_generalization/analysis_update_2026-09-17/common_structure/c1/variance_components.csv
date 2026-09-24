@@ -1,0 +1,33 @@
+dataset_id,feature_key,scope,fold,model_id,random_policy,random_structure,group,term,paired_term,variance,stddev_or_correlation,variance_below_1e_8,singular,convergence
+AN19,mfcc39,cv_train,0.0,M_null,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,14.4211831917648,3.79752329706676,False,True,boundary (singular) fit: see help('isSingular')
+AN19,mfcc39,cv_train,0.0,M_null,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0,0.0,True,True,boundary (singular) fit: see help('isSingular')
+AN19,mfcc39,cv_train,0.0,M_predictor,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,11.356381393515,3.36992305453923,False,True,boundary (singular) fit: see help('isSingular')
+AN19,mfcc39,cv_train,0.0,M_predictor,participant_item,participant_item_intercepts,participant_id,(Intercept),,1.03481009009979e-15,3.21684642173013e-08,True,True,boundary (singular) fit: see help('isSingular')
+AN19,mfcc39,cv_train,1.0,M_null,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,12.5659494770095,3.54484830098687,False,False,ok
+AN19,mfcc39,cv_train,1.0,M_null,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0560234289114897,0.236692688757996,False,False,ok
+AN19,mfcc39,cv_train,1.0,M_predictor,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,9.37143341042583,3.06127970143628,False,False,ok
+AN19,mfcc39,cv_train,1.0,M_predictor,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0503124633511925,0.224304398867237,False,False,ok
+AN19,mfcc39,cv_train,2.0,M_null,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,12.1345574175338,3.48346916414281,False,False,ok
+AN19,mfcc39,cv_train,2.0,M_null,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0373035150902051,0.193141179167481,False,False,ok
+AN19,mfcc39,cv_train,2.0,M_predictor,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,9.3698700029177,3.06102433883132,False,False,ok
+AN19,mfcc39,cv_train,2.0,M_predictor,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0360278621283276,0.189810068564151,False,False,ok
+AN19,mfcc39,full,,M_null,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,13.8412589188816,3.72038424344605,False,False,ok
+AN19,mfcc39,full,,M_null,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0064821854920889,0.0805120207924813,False,False,ok
+AN19,mfcc39,full,,M_predictor,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,10.7272144462134,3.27524265455452,False,False,ok
+AN19,mfcc39,full,,M_predictor,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0053462632197146,0.0731181456255196,False,False,ok
+AN19,strf24_legacy,cv_train,0.0,M_null,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,14.4211831917648,3.79752329706676,False,True,boundary (singular) fit: see help('isSingular')
+AN19,strf24_legacy,cv_train,0.0,M_null,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0,0.0,True,True,boundary (singular) fit: see help('isSingular')
+AN19,strf24_legacy,cv_train,0.0,M_predictor,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,11.4388860738483,3.38214223146341,False,True,boundary (singular) fit: see help('isSingular')
+AN19,strf24_legacy,cv_train,0.0,M_predictor,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0,0.0,True,True,boundary (singular) fit: see help('isSingular')
+AN19,strf24_legacy,cv_train,1.0,M_null,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,12.5659494770095,3.54484830098687,False,False,ok
+AN19,strf24_legacy,cv_train,1.0,M_null,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0560234289114897,0.236692688757996,False,False,ok
+AN19,strf24_legacy,cv_train,1.0,M_predictor,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,9.07254527619033,3.01206661217682,False,False,ok
+AN19,strf24_legacy,cv_train,1.0,M_predictor,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.054456313848448,0.233358766384398,False,False,ok
+AN19,strf24_legacy,cv_train,2.0,M_null,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,12.1345574175338,3.48346916414281,False,False,ok
+AN19,strf24_legacy,cv_train,2.0,M_null,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0373035150902051,0.193141179167481,False,False,ok
+AN19,strf24_legacy,cv_train,2.0,M_predictor,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,8.65832513780053,2.94250320948007,False,False,ok
+AN19,strf24_legacy,cv_train,2.0,M_predictor,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0387334403657529,0.196808130842587,False,False,ok
+AN19,strf24_legacy,full,,M_null,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,13.8412589188816,3.72038424344605,False,False,ok
+AN19,strf24_legacy,full,,M_null,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0064821854920889,0.0805120207924813,False,False,ok
+AN19,strf24_legacy,full,,M_predictor,participant_item,participant_item_intercepts,analysis_item_id,(Intercept),,9.88823431924473,3.14455629926461,False,False,ok
+AN19,strf24_legacy,full,,M_predictor,participant_item,participant_item_intercepts,participant_id,(Intercept),,0.0068544209868906,0.0827914306368153,False,False,ok

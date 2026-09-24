@@ -1,0 +1,5 @@
+scope,objective,descriptive_tolerance,points,tau_min,tau_max,k_min,k_max
+expanded,z,0.01,3,0.5,0.625,0.0124643460295014,0.0257466658709045
+expanded,log_likelihood,0.1,9,0.5,0.75,0.0124643460295014,0.0531829589694499
+metric_tau_ge_1,z,0.01,4,1.0,1.125,0.05,0.0764360518996802
+metric_tau_ge_1,log_likelihood,0.1,19,1.0,2.25,0.0370038359445673,0.109856054330612

@@ -1,0 +1,3093 @@
+InventoryID,ISO6393,LanguageName,Phoneme,SegmentClass,Source
+1,kor,Korean,a,vowel,spa
+1,kor,Korean,aː,vowel,spa
+1,kor,Korean,æ,vowel,spa
+1,kor,Korean,æː,vowel,spa
+1,kor,Korean,e,vowel,spa
+1,kor,Korean,eː,vowel,spa
+1,kor,Korean,ɤ,vowel,spa
+1,kor,Korean,ɤː,vowel,spa
+1,kor,Korean,h,consonant,spa
+1,kor,Korean,i,vowel,spa
+1,kor,Korean,iː,vowel,spa
+1,kor,Korean,j,consonant,spa
+1,kor,Korean,k,consonant,spa
+1,kor,Korean,kʰ,consonant,spa
+1,kor,Korean,kˀ,consonant,spa
+1,kor,Korean,l,consonant,spa
+1,kor,Korean,m,consonant,spa
+1,kor,Korean,n,consonant,spa
+1,kor,Korean,ŋ,consonant,spa
+1,kor,Korean,o,vowel,spa
+1,kor,Korean,ø,vowel,spa
+1,kor,Korean,oː,vowel,spa
+1,kor,Korean,p,consonant,spa
+1,kor,Korean,pʰ,consonant,spa
+1,kor,Korean,pˀ,consonant,spa
+1,kor,Korean,s,consonant,spa
+1,kor,Korean,sˀ,consonant,spa
+1,kor,Korean,t,consonant,spa
+1,kor,Korean,tʰ,consonant,spa
+1,kor,Korean,t̠ʃ,consonant,spa
+1,kor,Korean,t̠ʃʰ,consonant,spa
+1,kor,Korean,t̠ʃˀ,consonant,spa
+1,kor,Korean,tˀ,consonant,spa
+1,kor,Korean,u,vowel,spa
+1,kor,Korean,uː,vowel,spa
+1,kor,Korean,ɯ,vowel,spa
+1,kor,Korean,ɯː,vowel,spa
+1,kor,Korean,w,consonant,spa
+1,kor,Korean,y,vowel,spa
+1,kor,Korean,ʔ,consonant,spa
+16,cmn,Mandarin Chinese,a,vowel,spa
+16,cmn,Mandarin Chinese,a˞,vowel,spa
+16,cmn,Mandarin Chinese,a̟˞,vowel,spa
+16,cmn,Mandarin Chinese,ɑ̃˞,vowel,spa
+16,cmn,Mandarin Chinese,ç,consonant,spa
+16,cmn,Mandarin Chinese,cç,consonant,spa
+16,cmn,Mandarin Chinese,cçʰ,consonant,spa
+16,cmn,Mandarin Chinese,ə˞,vowel,spa
+16,cmn,Mandarin Chinese,ə̃˞,vowel,spa
+16,cmn,Mandarin Chinese,ɤ,vowel,spa
+16,cmn,Mandarin Chinese,ɤ˞,vowel,spa
+16,cmn,Mandarin Chinese,f,consonant,spa
+16,cmn,Mandarin Chinese,i,vowel,spa
+16,cmn,Mandarin Chinese,j,consonant,spa
+16,cmn,Mandarin Chinese,k,consonant,spa
+16,cmn,Mandarin Chinese,kʰ,consonant,spa
+16,cmn,Mandarin Chinese,l,consonant,spa
+16,cmn,Mandarin Chinese,m,consonant,spa
+16,cmn,Mandarin Chinese,n,consonant,spa
+16,cmn,Mandarin Chinese,ŋ,consonant,spa
+16,cmn,Mandarin Chinese,p,consonant,spa
+16,cmn,Mandarin Chinese,pʰ,consonant,spa
+16,cmn,Mandarin Chinese,s,consonant,spa
+16,cmn,Mandarin Chinese,ʂ,consonant,spa
+16,cmn,Mandarin Chinese,t,consonant,spa
+16,cmn,Mandarin Chinese,tʰ,consonant,spa
+16,cmn,Mandarin Chinese,ts,consonant,spa
+16,cmn,Mandarin Chinese,tsʰ,consonant,spa
+16,cmn,Mandarin Chinese,ʈʂ,consonant,spa
+16,cmn,Mandarin Chinese,ʈʂʰ,consonant,spa
+16,cmn,Mandarin Chinese,u,vowel,spa
+16,cmn,Mandarin Chinese,u˞,vowel,spa
+16,cmn,Mandarin Chinese,ɥ,consonant,spa
+16,cmn,Mandarin Chinese,ɰ,consonant,spa
+16,cmn,Mandarin Chinese,w,consonant,spa
+16,cmn,Mandarin Chinese,w˞,consonant,spa
+16,cmn,Mandarin Chinese,y,vowel,spa
+16,cmn,Mandarin Chinese,ʐ,consonant,spa
+16,cmn,Mandarin Chinese,χ,consonant,spa
+127,som,Somali,aː,vowel,spa
+127,som,Somali,æ,vowel,spa
+127,som,Somali,æː,vowel,spa
+127,som,Somali,b,consonant,spa
+127,som,Somali,bː,consonant,spa
+127,som,Somali,d,consonant,spa
+127,som,Somali,dː,consonant,spa
+127,som,Somali,ᶑ,consonant,spa
+127,som,Somali,ᶑː,consonant,spa
+127,som,Somali,e,vowel,spa
+127,som,Somali,eː,vowel,spa
+127,som,Somali,ə,vowel,spa
+127,som,Somali,ɛ,vowel,spa
+127,som,Somali,ɛː,vowel,spa
+127,som,Somali,f,consonant,spa
+127,som,Somali,ɡ,consonant,spa
+127,som,Somali,ɡː,consonant,spa
+127,som,Somali,ɢ,consonant,spa
+127,som,Somali,ɢː,consonant,spa
+127,som,Somali,h,consonant,spa
+127,som,Somali,ħ,consonant,spa
+127,som,Somali,i,vowel,spa
+127,som,Somali,iː,vowel,spa
+127,som,Somali,ɪ,vowel,spa
+127,som,Somali,ɪː,vowel,spa
+127,som,Somali,j,consonant,spa
+127,som,Somali,kʰ,consonant,spa
+127,som,Somali,l,consonant,spa
+127,som,Somali,lː,consonant,spa
+127,som,Somali,m,consonant,spa
+127,som,Somali,n,consonant,spa
+127,som,Somali,nː,consonant,spa
+127,som,Somali,ɔ,vowel,spa
+127,som,Somali,ɔː,vowel,spa
+127,som,Somali,ɵ̞,vowel,spa
+127,som,Somali,ɵ̞ː,vowel,spa
+127,som,Somali,rː,consonant,spa
+127,som,Somali,ɾ,consonant,spa
+127,som,Somali,s,consonant,spa
+127,som,Somali,ʃ,consonant,spa
+127,som,Somali,tʰ,consonant,spa
+127,som,Somali,t̠ʃ,consonant,spa
+127,som,Somali,ʊ,vowel,spa
+127,som,Somali,ʊ̈,vowel,spa
+127,som,Somali,ʊː,vowel,spa
+127,som,Somali,ʊ̈ː,vowel,spa
+127,som,Somali,w,consonant,spa
+127,som,Somali,x,consonant,spa
+127,som,Somali,ʔ,consonant,spa
+127,som,Somali,ʕ,consonant,spa
+160,eng,English,aː,vowel,spa
+160,eng,English,æ,vowel,spa
+160,eng,English,ɐ,vowel,spa
+160,eng,English,ɒ,vowel,spa
+160,eng,English,b,consonant,spa
+160,eng,English,d,consonant,spa
+160,eng,English,ð,consonant,spa
+160,eng,English,d̠ʒ,consonant,spa
+160,eng,English,e̞,vowel,spa
+160,eng,English,ə,vowel,spa
+160,eng,English,əː,vowel,spa
+160,eng,English,f,consonant,spa
+160,eng,English,ɡ,consonant,spa
+160,eng,English,h,consonant,spa
+160,eng,English,iː,vowel,spa
+160,eng,English,ɪ,vowel,spa
+160,eng,English,j,consonant,spa
+160,eng,English,kʰ,consonant,spa
+160,eng,English,l,consonant,spa
+160,eng,English,m,consonant,spa
+160,eng,English,n,consonant,spa
+160,eng,English,ŋ,consonant,spa
+160,eng,English,o̞ː,vowel,spa
+160,eng,English,ɔ,vowel,spa
+160,eng,English,pʰ,consonant,spa
+160,eng,English,ɻ,consonant,spa
+160,eng,English,s,consonant,spa
+160,eng,English,ʃ,consonant,spa
+160,eng,English,tʰ,consonant,spa
+160,eng,English,t̠ʃ,consonant,spa
+160,eng,English,uː,vowel,spa
+160,eng,English,ʊ,vowel,spa
+160,eng,English,v,consonant,spa
+160,eng,English,w,consonant,spa
+160,eng,English,ʍ,consonant,spa
+160,eng,English,x,consonant,spa
+160,eng,English,z,consonant,spa
+160,eng,English,ʒ,consonant,spa
+160,eng,English,ʔ,consonant,spa
+160,eng,English,θ,consonant,spa
+161,deu,German,aː,vowel,spa
+161,deu,German,ɐ,vowel,spa
+161,deu,German,b,consonant,spa
+161,deu,German,d,consonant,spa
+161,deu,German,eː,vowel,spa
+161,deu,German,ə,vowel,spa
+161,deu,German,ɛ,vowel,spa
+161,deu,German,ɛː,vowel,spa
+161,deu,German,f,consonant,spa
+161,deu,German,ɡ,consonant,spa
+161,deu,German,h,consonant,spa
+161,deu,German,iː,vowel,spa
+161,deu,German,ɪ,vowel,spa
+161,deu,German,j,consonant,spa
+161,deu,German,kʰ,consonant,spa
+161,deu,German,l,consonant,spa
+161,deu,German,m,consonant,spa
+161,deu,German,n,consonant,spa
+161,deu,German,ŋ,consonant,spa
+161,deu,German,oː,vowel,spa
+161,deu,German,øː,vowel,spa
+161,deu,German,œ,vowel,spa
+161,deu,German,ɔ,vowel,spa
+161,deu,German,pf,consonant,spa
+161,deu,German,pʰ,consonant,spa
+161,deu,German,ʀ,consonant,spa
+161,deu,German,s,consonant,spa
+161,deu,German,ʃ,consonant,spa
+161,deu,German,tʰ,consonant,spa
+161,deu,German,ts,consonant,spa
+161,deu,German,uː,vowel,spa
+161,deu,German,ʊ,vowel,spa
+161,deu,German,v,consonant,spa
+161,deu,German,x,consonant,spa
+161,deu,German,yː,vowel,spa
+161,deu,German,ʏ,vowel,spa
+161,deu,German,z,consonant,spa
+161,deu,German,ʒ,consonant,spa
+161,deu,German,ʔ,consonant,spa
+162,fra,French,a̟,vowel,spa
+162,fra,French,æ̃,vowel,spa
+162,fra,French,ɒ,vowel,spa
+162,fra,French,ɒ̃,vowel,spa
+162,fra,French,b,consonant,spa
+162,fra,French,d,consonant,spa
+162,fra,French,e,vowel,spa
+162,fra,French,ɛ,vowel,spa
+162,fra,French,ɛː,vowel,spa
+162,fra,French,f,consonant,spa
+162,fra,French,ɡ̟,consonant,spa
+162,fra,French,ɦ,consonant,spa
+162,fra,French,i,vowel,spa
+162,fra,French,j,consonant,spa
+162,fra,French,k̟,consonant,spa
+162,fra,French,l,consonant,spa
+162,fra,French,m,consonant,spa
+162,fra,French,n,consonant,spa
+162,fra,French,ɲ,consonant,spa
+162,fra,French,ŋ,consonant,spa
+162,fra,French,o,vowel,spa
+162,fra,French,õ,vowel,spa
+162,fra,French,ø,vowel,spa
+162,fra,French,ø̞,vowel,spa
+162,fra,French,œ,vowel,spa
+162,fra,French,œ̃,vowel,spa
+162,fra,French,ɔ,vowel,spa
+162,fra,French,p,consonant,spa
+162,fra,French,r,consonant,spa
+162,fra,French,ʀ,consonant,spa
+162,fra,French,s,consonant,spa
+162,fra,French,ʃ,consonant,spa
+162,fra,French,t,consonant,spa
+162,fra,French,u,vowel,spa
+162,fra,French,ɥ,consonant,spa
+162,fra,French,v,consonant,spa
+162,fra,French,w,consonant,spa
+162,fra,French,y,vowel,spa
+162,fra,French,z,consonant,spa
+162,fra,French,ʒ,consonant,spa
+163,por,Portuguese,a,vowel,spa
+163,por,Portuguese,ɐ̃,vowel,spa
+163,por,Portuguese,b,consonant,spa
+163,por,Portuguese,d̪,consonant,spa
+163,por,Portuguese,e,vowel,spa
+163,por,Portuguese,ĕ,vowel,spa
+163,por,Portuguese,ẽ,vowel,spa
+163,por,Portuguese,ɛ,vowel,spa
+163,por,Portuguese,f,consonant,spa
+163,por,Portuguese,ɡ,consonant,spa
+163,por,Portuguese,i,vowel,spa
+163,por,Portuguese,ĭ,vowel,spa
+163,por,Portuguese,ĩ,vowel,spa
+163,por,Portuguese,j,consonant,spa
+163,por,Portuguese,k,consonant,spa
+163,por,Portuguese,l,consonant,spa
+163,por,Portuguese,ʎ,consonant,spa
+163,por,Portuguese,m,consonant,spa
+163,por,Portuguese,ɱ,consonant,spa
+163,por,Portuguese,n,consonant,spa
+163,por,Portuguese,ɲ,consonant,spa
+163,por,Portuguese,ŋ,consonant,spa
+163,por,Portuguese,o,vowel,spa
+163,por,Portuguese,õ,vowel,spa
+163,por,Portuguese,ɔ,vowel,spa
+163,por,Portuguese,p,consonant,spa
+163,por,Portuguese,ɾ,consonant,spa
+163,por,Portuguese,s,consonant,spa
+163,por,Portuguese,ʃ,consonant,spa
+163,por,Portuguese,t̪,consonant,spa
+163,por,Portuguese,u,vowel,spa
+163,por,Portuguese,ŭ,vowel,spa
+163,por,Portuguese,ũ,vowel,spa
+163,por,Portuguese,v,consonant,spa
+163,por,Portuguese,w,consonant,spa
+163,por,Portuguese,x,consonant,spa
+163,por,Portuguese,z̪,consonant,spa
+163,por,Portuguese,ʒ,consonant,spa
+164,spa,Spanish,a,vowel,spa
+164,spa,Spanish,ð͉,consonant,spa
+164,spa,Spanish,e̞,vowel,spa
+164,spa,Spanish,f,consonant,spa
+164,spa,Spanish,ɣ,consonant,spa
+164,spa,Spanish,i,vowel,spa
+164,spa,Spanish,j,consonant,spa
+164,spa,Spanish,k,consonant,spa
+164,spa,Spanish,l,consonant,spa
+164,spa,Spanish,ʎ,consonant,spa
+164,spa,Spanish,m,consonant,spa
+164,spa,Spanish,n,consonant,spa
+164,spa,Spanish,ɲ,consonant,spa
+164,spa,Spanish,o̞,vowel,spa
+164,spa,Spanish,p,consonant,spa
+164,spa,Spanish,r,consonant,spa
+164,spa,Spanish,ɾ,consonant,spa
+164,spa,Spanish,s,consonant,spa
+164,spa,Spanish,t,consonant,spa
+164,spa,Spanish,t̠ʃ,consonant,spa
+164,spa,Spanish,u,vowel,spa
+164,spa,Spanish,w,consonant,spa
+164,spa,Spanish,x,consonant,spa
+164,spa,Spanish,β,consonant,spa
+164,spa,Spanish,θ,consonant,spa
+165,ron,Rumanian,a,vowel,spa
+165,ron,Rumanian,b,consonant,spa
+165,ron,Rumanian,d,consonant,spa
+165,ron,Rumanian,d̠ʒ,consonant,spa
+165,ron,Rumanian,e,vowel,spa
+165,ron,Rumanian,ə,vowel,spa
+165,ron,Rumanian,ɛ̯,vowel,spa
+165,ron,Rumanian,f,consonant,spa
+165,ron,Rumanian,ɡ,consonant,spa
+165,ron,Rumanian,h,consonant,spa
+165,ron,Rumanian,i,vowel,spa
+165,ron,Rumanian,ɨ,vowel,spa
+165,ron,Rumanian,j,consonant,spa
+165,ron,Rumanian,k,consonant,spa
+165,ron,Rumanian,l,consonant,spa
+165,ron,Rumanian,m,consonant,spa
+165,ron,Rumanian,n,consonant,spa
+165,ron,Rumanian,o,vowel,spa
+165,ron,Rumanian,ɔ̯,vowel,spa
+165,ron,Rumanian,p,consonant,spa
+165,ron,Rumanian,ɾ,consonant,spa
+165,ron,Rumanian,s,consonant,spa
+165,ron,Rumanian,ʃ,consonant,spa
+165,ron,Rumanian,t,consonant,spa
+165,ron,Rumanian,ts,consonant,spa
+165,ron,Rumanian,t̠ʃ,consonant,spa
+165,ron,Rumanian,u,vowel,spa
+165,ron,Rumanian,v,consonant,spa
+165,ron,Rumanian,w,consonant,spa
+165,ron,Rumanian,z,consonant,spa
+165,ron,Rumanian,ʒ,consonant,spa
+166,rus,Russian,a̟,vowel,spa
+166,rus,Russian,b,consonant,spa
+166,rus,Russian,bʲ,consonant,spa
+166,rus,Russian,d,consonant,spa
+166,rus,Russian,d̻ʲ,consonant,spa
+166,rus,Russian,ɛ,vowel,spa
+166,rus,Russian,f,consonant,spa
+166,rus,Russian,fʲ,consonant,spa
+166,rus,Russian,ɡ,consonant,spa
+166,rus,Russian,i,vowel,spa
+166,rus,Russian,j,consonant,spa
+166,rus,Russian,k,consonant,spa
+166,rus,Russian,kʲ,consonant,spa
+166,rus,Russian,lˠ,consonant,spa
+166,rus,Russian,lʲ,consonant,spa
+166,rus,Russian,m,consonant,spa
+166,rus,Russian,mʲ,consonant,spa
+166,rus,Russian,n,consonant,spa
+166,rus,Russian,n̻ʲ,consonant,spa
+166,rus,Russian,o̞,vowel,spa
+166,rus,Russian,p,consonant,spa
+166,rus,Russian,pʲ,consonant,spa
+166,rus,Russian,r,consonant,spa
+166,rus,Russian,rʲ,consonant,spa
+166,rus,Russian,s,consonant,spa
+166,rus,Russian,sʲ,consonant,spa
+166,rus,Russian,ʃˠ,consonant,spa
+166,rus,Russian,t,consonant,spa
+166,rus,Russian,t̻ʲ,consonant,spa
+166,rus,Russian,ts,consonant,spa
+166,rus,Russian,t̠ʃʲ,consonant,spa
+166,rus,Russian,u,vowel,spa
+166,rus,Russian,v,consonant,spa
+166,rus,Russian,vʲ,consonant,spa
+166,rus,Russian,x,consonant,spa
+166,rus,Russian,z,consonant,spa
+166,rus,Russian,zʲ,consonant,spa
+166,rus,Russian,ʒˠ,consonant,spa
+169,als,Albanian,a,vowel,spa
+169,als,Albanian,b,consonant,spa
+169,als,Albanian,cç,consonant,spa
+169,als,Albanian,d,consonant,spa
+169,als,Albanian,ð,consonant,spa
+169,als,Albanian,dz,consonant,spa
+169,als,Albanian,d̠ʒ,consonant,spa
+169,als,Albanian,e̞,vowel,spa
+169,als,Albanian,ə,vowel,spa
+169,als,Albanian,f,consonant,spa
+169,als,Albanian,ɡ,consonant,spa
+169,als,Albanian,h,consonant,spa
+169,als,Albanian,i,vowel,spa
+169,als,Albanian,j,consonant,spa
+169,als,Albanian,ɟʝ,consonant,spa
+169,als,Albanian,k,consonant,spa
+169,als,Albanian,l,consonant,spa
+169,als,Albanian,lˠ,consonant,spa
+169,als,Albanian,m,consonant,spa
+169,als,Albanian,n,consonant,spa
+169,als,Albanian,ɲ̟,consonant,spa
+169,als,Albanian,o̞,vowel,spa
+169,als,Albanian,p,consonant,spa
+169,als,Albanian,r,consonant,spa
+169,als,Albanian,s,consonant,spa
+169,als,Albanian,ʃ,consonant,spa
+169,als,Albanian,t,consonant,spa
+169,als,Albanian,ts,consonant,spa
+169,als,Albanian,t̠ʃ,consonant,spa
+169,als,Albanian,u,vowel,spa
+169,als,Albanian,v,consonant,spa
+169,als,Albanian,y,vowel,spa
+169,als,Albanian,z,consonant,spa
+169,als,Albanian,ʒ,consonant,spa
+169,als,Albanian,θ,consonant,spa
+172,pes,Persian,a̟,vowel,spa
+172,pes,Persian,ɑ,vowel,spa
+172,pes,Persian,b,consonant,spa
+172,pes,Persian,d,consonant,spa
+172,pes,Persian,d̠ʒ,consonant,spa
+172,pes,Persian,e,vowel,spa
+172,pes,Persian,f,consonant,spa
+172,pes,Persian,ɡ,consonant,spa
+172,pes,Persian,ɢ,consonant,spa
+172,pes,Persian,h,consonant,spa
+172,pes,Persian,i,vowel,spa
+172,pes,Persian,j,consonant,spa
+172,pes,Persian,kʰ,consonant,spa
+172,pes,Persian,l,consonant,spa
+172,pes,Persian,m,consonant,spa
+172,pes,Persian,n,consonant,spa
+172,pes,Persian,o,vowel,spa
+172,pes,Persian,pʰ,consonant,spa
+172,pes,Persian,r,consonant,spa
+172,pes,Persian,s,consonant,spa
+172,pes,Persian,ʃ,consonant,spa
+172,pes,Persian,tʰ,consonant,spa
+172,pes,Persian,t̠ʃ,consonant,spa
+172,pes,Persian,u,vowel,spa
+172,pes,Persian,v,consonant,spa
+172,pes,Persian,w,consonant,spa
+172,pes,Persian,z,consonant,spa
+172,pes,Persian,ʒ,consonant,spa
+172,pes,Persian,ʔ,consonant,spa
+172,pes,Persian,χ,consonant,spa
+176,hin,Hindi-Urdu,aː,vowel,spa
+176,hin,Hindi-Urdu,ãː,vowel,spa
+176,hin,Hindi-Urdu,æe̯,vowel,spa
+176,hin,Hindi-Urdu,æẽ̯,vowel,spa
+176,hin,Hindi-Urdu,ɑ,vowel,spa
+176,hin,Hindi-Urdu,b,consonant,spa
+176,hin,Hindi-Urdu,b̤,consonant,spa
+176,hin,Hindi-Urdu,bː,consonant,spa
+176,hin,Hindi-Urdu,b̤ː,consonant,spa
+176,hin,Hindi-Urdu,d̪,consonant,spa
+176,hin,Hindi-Urdu,d̪̤,consonant,spa
+176,hin,Hindi-Urdu,d̪ː,consonant,spa
+176,hin,Hindi-Urdu,d̪̤ː,consonant,spa
+176,hin,Hindi-Urdu,d̠ʒ,consonant,spa
+176,hin,Hindi-Urdu,d̠ʒ̤,consonant,spa
+176,hin,Hindi-Urdu,d̠ʒː,consonant,spa
+176,hin,Hindi-Urdu,d̠ʒ̤ː,consonant,spa
+176,hin,Hindi-Urdu,ɖ,consonant,spa
+176,hin,Hindi-Urdu,ɖ̤,consonant,spa
+176,hin,Hindi-Urdu,ɖː,consonant,spa
+176,hin,Hindi-Urdu,ɖ̤ː,consonant,spa
+176,hin,Hindi-Urdu,eː,vowel,spa
+176,hin,Hindi-Urdu,ẽː,vowel,spa
+176,hin,Hindi-Urdu,ɜ,vowel,spa
+176,hin,Hindi-Urdu,ɜ̃,vowel,spa
+176,hin,Hindi-Urdu,f,consonant,spa
+176,hin,Hindi-Urdu,fː,consonant,spa
+176,hin,Hindi-Urdu,ɡ,consonant,spa
+176,hin,Hindi-Urdu,ɡ̤,consonant,spa
+176,hin,Hindi-Urdu,ɡː,consonant,spa
+176,hin,Hindi-Urdu,ɡ̤ː,consonant,spa
+176,hin,Hindi-Urdu,ɦ,consonant,spa
+176,hin,Hindi-Urdu,iː,vowel,spa
+176,hin,Hindi-Urdu,ĩː,vowel,spa
+176,hin,Hindi-Urdu,ɪ,vowel,spa
+176,hin,Hindi-Urdu,ɪ̈,vowel,spa
+176,hin,Hindi-Urdu,ɪ̃,vowel,spa
+176,hin,Hindi-Urdu,j,consonant,spa
+176,hin,Hindi-Urdu,jː,consonant,spa
+176,hin,Hindi-Urdu,k,consonant,spa
+176,hin,Hindi-Urdu,kː,consonant,spa
+176,hin,Hindi-Urdu,kʰ,consonant,spa
+176,hin,Hindi-Urdu,kʰː,consonant,spa
+176,hin,Hindi-Urdu,l,consonant,spa
+176,hin,Hindi-Urdu,l̤,consonant,spa
+176,hin,Hindi-Urdu,lː,consonant,spa
+176,hin,Hindi-Urdu,m,consonant,spa
+176,hin,Hindi-Urdu,m̤,consonant,spa
+176,hin,Hindi-Urdu,mː,consonant,spa
+176,hin,Hindi-Urdu,n̪,consonant,spa
+176,hin,Hindi-Urdu,n̪̤,consonant,spa
+176,hin,Hindi-Urdu,n̪ː,consonant,spa
+176,hin,Hindi-Urdu,oː,vowel,spa
+176,hin,Hindi-Urdu,õː,vowel,spa
+176,hin,Hindi-Urdu,ɔ̤,vowel,spa
+176,hin,Hindi-Urdu,ɔo̯,vowel,spa
+176,hin,Hindi-Urdu,ɔõ̯,vowel,spa
+176,hin,Hindi-Urdu,p,consonant,spa
+176,hin,Hindi-Urdu,pː,consonant,spa
+176,hin,Hindi-Urdu,pʰ,consonant,spa
+176,hin,Hindi-Urdu,pʰː,consonant,spa
+176,hin,Hindi-Urdu,q,consonant,spa
+176,hin,Hindi-Urdu,qː,consonant,spa
+176,hin,Hindi-Urdu,r,consonant,spa
+176,hin,Hindi-Urdu,rː,consonant,spa
+176,hin,Hindi-Urdu,ɽ̃,consonant,spa
+176,hin,Hindi-Urdu,ʁ,consonant,spa
+176,hin,Hindi-Urdu,s,consonant,spa
+176,hin,Hindi-Urdu,sː,consonant,spa
+176,hin,Hindi-Urdu,ʂ,consonant,spa
+176,hin,Hindi-Urdu,ʃː,consonant,spa
+176,hin,Hindi-Urdu,t̪,consonant,spa
+176,hin,Hindi-Urdu,t̪ː,consonant,spa
+176,hin,Hindi-Urdu,t̪ʰ,consonant,spa
+176,hin,Hindi-Urdu,t̪ʰː,consonant,spa
+176,hin,Hindi-Urdu,t̠ʃ,consonant,spa
+176,hin,Hindi-Urdu,t̠ʃː,consonant,spa
+176,hin,Hindi-Urdu,t̠ʃʰ,consonant,spa
+176,hin,Hindi-Urdu,t̠ʃʰː,consonant,spa
+176,hin,Hindi-Urdu,ʈ,consonant,spa
+176,hin,Hindi-Urdu,ʈː,consonant,spa
+176,hin,Hindi-Urdu,ʈʰ,consonant,spa
+176,hin,Hindi-Urdu,ʈʰː,consonant,spa
+176,hin,Hindi-Urdu,uː,vowel,spa
+176,hin,Hindi-Urdu,ũː,vowel,spa
+176,hin,Hindi-Urdu,ʊ,vowel,spa
+176,hin,Hindi-Urdu,ʊ̃,vowel,spa
+176,hin,Hindi-Urdu,ʋ,consonant,spa
+176,hin,Hindi-Urdu,ʋː,consonant,spa
+176,hin,Hindi-Urdu,z,consonant,spa
+176,hin,Hindi-Urdu,zː,consonant,spa
+176,hin,Hindi-Urdu,ʒ,consonant,spa
+176,hin,Hindi-Urdu,ʔ,consonant,spa
+176,hin,Hindi-Urdu,χ,consonant,spa
+177,ben,Bengali,a,vowel,spa
+177,ben,Bengali,ã,vowel,spa
+177,ben,Bengali,æ,vowel,spa
+177,ben,Bengali,æ̃,vowel,spa
+177,ben,Bengali,b,consonant,spa
+177,ben,Bengali,b̤,consonant,spa
+177,ben,Bengali,ç,consonant,spa
+177,ben,Bengali,d,consonant,spa
+177,ben,Bengali,d̤,consonant,spa
+177,ben,Bengali,d̠ʒ,consonant,spa
+177,ben,Bengali,d̠ʒ̤,consonant,spa
+177,ben,Bengali,ɖ,consonant,spa
+177,ben,Bengali,ɖ̤,consonant,spa
+177,ben,Bengali,e̞,vowel,spa
+177,ben,Bengali,e̯,vowel,spa
+177,ben,Bengali,ẽ̞,vowel,spa
+177,ben,Bengali,ɡ,consonant,spa
+177,ben,Bengali,ɡ̤,consonant,spa
+177,ben,Bengali,h,consonant,spa
+177,ben,Bengali,ɪ,vowel,spa
+177,ben,Bengali,ɪ̃,vowel,spa
+177,ben,Bengali,j,consonant,spa
+177,ben,Bengali,k,consonant,spa
+177,ben,Bengali,kʰ,consonant,spa
+177,ben,Bengali,l,consonant,spa
+177,ben,Bengali,l̤,consonant,spa
+177,ben,Bengali,m,consonant,spa
+177,ben,Bengali,m̤,consonant,spa
+177,ben,Bengali,n,consonant,spa
+177,ben,Bengali,n̤,consonant,spa
+177,ben,Bengali,ŋ,consonant,spa
+177,ben,Bengali,o,vowel,spa
+177,ben,Bengali,õ,vowel,spa
+177,ben,Bengali,o̞,vowel,spa
+177,ben,Bengali,o̯,vowel,spa
+177,ben,Bengali,ɔ,vowel,spa
+177,ben,Bengali,ɔ̃,vowel,spa
+177,ben,Bengali,p,consonant,spa
+177,ben,Bengali,pʰ,consonant,spa
+177,ben,Bengali,ɽ,consonant,spa
+177,ben,Bengali,ɽ̤,consonant,spa
+177,ben,Bengali,ɾ,consonant,spa
+177,ben,Bengali,ɾ̤,consonant,spa
+177,ben,Bengali,s,consonant,spa
+177,ben,Bengali,t,consonant,spa
+177,ben,Bengali,tʰ,consonant,spa
+177,ben,Bengali,t̠ʃ,consonant,spa
+177,ben,Bengali,t̠ʃʰ,consonant,spa
+177,ben,Bengali,ʈ,consonant,spa
+177,ben,Bengali,ʈʰ,consonant,spa
+177,ben,Bengali,ʊ,vowel,spa
+177,ben,Bengali,ʊ̃,vowel,spa
+177,ben,Bengali,w,consonant,spa
+186,tur,Turkish,a,vowel,spa
+186,tur,Turkish,aː,vowel,spa
+186,tur,Turkish,b,consonant,spa
+186,tur,Turkish,cʰ,consonant,spa
+186,tur,Turkish,d,consonant,spa
+186,tur,Turkish,d̠ʒ,consonant,spa
+186,tur,Turkish,ɛ,vowel,spa
+186,tur,Turkish,ɛː,vowel,spa
+186,tur,Turkish,f,consonant,spa
+186,tur,Turkish,ɡ,consonant,spa
+186,tur,Turkish,h,consonant,spa
+186,tur,Turkish,i,vowel,spa
+186,tur,Turkish,iː,vowel,spa
+186,tur,Turkish,j,consonant,spa
+186,tur,Turkish,ɟ,consonant,spa
+186,tur,Turkish,kʰ,consonant,spa
+186,tur,Turkish,l,consonant,spa
+186,tur,Turkish,ʎ,consonant,spa
+186,tur,Turkish,m,consonant,spa
+186,tur,Turkish,n,consonant,spa
+186,tur,Turkish,o̞,vowel,spa
+186,tur,Turkish,o̞ː,vowel,spa
+186,tur,Turkish,œ,vowel,spa
+186,tur,Turkish,œː,vowel,spa
+186,tur,Turkish,pʰ,consonant,spa
+186,tur,Turkish,ɾ,consonant,spa
+186,tur,Turkish,s,consonant,spa
+186,tur,Turkish,ʃ,consonant,spa
+186,tur,Turkish,tʰ,consonant,spa
+186,tur,Turkish,t̠ʃʰ,consonant,spa
+186,tur,Turkish,u,vowel,spa
+186,tur,Turkish,uː,vowel,spa
+186,tur,Turkish,ɯ,vowel,spa
+186,tur,Turkish,ɯː,vowel,spa
+186,tur,Turkish,v,consonant,spa
+186,tur,Turkish,y,vowel,spa
+186,tur,Turkish,yː,vowel,spa
+186,tur,Turkish,z,consonant,spa
+186,tur,Turkish,ʒ,consonant,spa
+186,tur,Turkish,ʔ,consonant,spa
+197,jpn,Japanese,a,vowel,spa
+197,jpn,Japanese,aː,vowel,spa
+197,jpn,Japanese,b,consonant,spa
+197,jpn,Japanese,çː,consonant,spa
+197,jpn,Japanese,d,consonant,spa
+197,jpn,Japanese,d̠ʒ,consonant,spa
+197,jpn,Japanese,ɛ,vowel,spa
+197,jpn,Japanese,ɛː,vowel,spa
+197,jpn,Japanese,ɡ,consonant,spa
+197,jpn,Japanese,h,consonant,spa
+197,jpn,Japanese,i,vowel,spa
+197,jpn,Japanese,iː,vowel,spa
+197,jpn,Japanese,j,consonant,spa
+197,jpn,Japanese,k,consonant,spa
+197,jpn,Japanese,kː,consonant,spa
+197,jpn,Japanese,m,consonant,spa
+197,jpn,Japanese,n,consonant,spa
+197,jpn,Japanese,ŋ,consonant,spa
+197,jpn,Japanese,ɔ,vowel,spa
+197,jpn,Japanese,ɔː,vowel,spa
+197,jpn,Japanese,p,consonant,spa
+197,jpn,Japanese,pː,consonant,spa
+197,jpn,Japanese,ɾ,consonant,spa
+197,jpn,Japanese,s,consonant,spa
+197,jpn,Japanese,sː,consonant,spa
+197,jpn,Japanese,ʃ,consonant,spa
+197,jpn,Japanese,ʃː,consonant,spa
+197,jpn,Japanese,t,consonant,spa
+197,jpn,Japanese,tː,consonant,spa
+197,jpn,Japanese,tsː,consonant,spa
+197,jpn,Japanese,t̠ʃ,consonant,spa
+197,jpn,Japanese,t̠ʃː,consonant,spa
+197,jpn,Japanese,ɯ,vowel,spa
+197,jpn,Japanese,ɯ̃,vowel,spa
+197,jpn,Japanese,ɯː,vowel,spa
+197,jpn,Japanese,w,consonant,spa
+197,jpn,Japanese,z,consonant,spa
+197,jpn,Japanese,ʔ,consonant,spa
+215,als,ALBANIAN,a,vowel,upsid
+215,als,ALBANIAN,b,consonant,upsid
+215,als,ALBANIAN,cç,consonant,upsid
+215,als,ALBANIAN,d̪,consonant,upsid
+215,als,ALBANIAN,ð,consonant,upsid
+215,als,ALBANIAN,d̪z̪|dz,consonant,upsid
+215,als,ALBANIAN,d̠ʒ,consonant,upsid
+215,als,ALBANIAN,e̞,vowel,upsid
+215,als,ALBANIAN,ə,vowel,upsid
+215,als,ALBANIAN,f,consonant,upsid
+215,als,ALBANIAN,ɡ,consonant,upsid
+215,als,ALBANIAN,h,consonant,upsid
+215,als,ALBANIAN,i,vowel,upsid
+215,als,ALBANIAN,j,consonant,upsid
+215,als,ALBANIAN,ɟʝ,consonant,upsid
+215,als,ALBANIAN,k,consonant,upsid
+215,als,ALBANIAN,l,consonant,upsid
+215,als,ALBANIAN,lˠ,consonant,upsid
+215,als,ALBANIAN,m,consonant,upsid
+215,als,ALBANIAN,n,consonant,upsid
+215,als,ALBANIAN,n̠,consonant,upsid
+215,als,ALBANIAN,o̞,vowel,upsid
+215,als,ALBANIAN,p,consonant,upsid
+215,als,ALBANIAN,r̪|r,consonant,upsid
+215,als,ALBANIAN,s̪,consonant,upsid
+215,als,ALBANIAN,ʃ,consonant,upsid
+215,als,ALBANIAN,t̪,consonant,upsid
+215,als,ALBANIAN,t̪s̪|ts,consonant,upsid
+215,als,ALBANIAN,t̠ʃ,consonant,upsid
+215,als,ALBANIAN,u,vowel,upsid
+215,als,ALBANIAN,v,consonant,upsid
+215,als,ALBANIAN,y,vowel,upsid
+215,als,ALBANIAN,z̪,consonant,upsid
+215,als,ALBANIAN,ʒ,consonant,upsid
+215,als,ALBANIAN,θ,consonant,upsid
+250,ben,BENGALI,a,vowel,upsid
+250,ben,BENGALI,ã,vowel,upsid
+250,ben,BENGALI,æ,vowel,upsid
+250,ben,BENGALI,æ̃,vowel,upsid
+250,ben,BENGALI,b,consonant,upsid
+250,ben,BENGALI,b̤,consonant,upsid
+250,ben,BENGALI,ɕ,consonant,upsid
+250,ben,BENGALI,d̪,consonant,upsid
+250,ben,BENGALI,d̪̤,consonant,upsid
+250,ben,BENGALI,d̠ʒ,consonant,upsid
+250,ben,BENGALI,d̠ʒ̤,consonant,upsid
+250,ben,BENGALI,ɖ,consonant,upsid
+250,ben,BENGALI,ɖ̤,consonant,upsid
+250,ben,BENGALI,e̞,vowel,upsid
+250,ben,BENGALI,ẽ̞,vowel,upsid
+250,ben,BENGALI,ɡ,consonant,upsid
+250,ben,BENGALI,ɡ̤,consonant,upsid
+250,ben,BENGALI,h,consonant,upsid
+250,ben,BENGALI,ɪ,vowel,upsid
+250,ben,BENGALI,ɪ̃,vowel,upsid
+250,ben,BENGALI,k,consonant,upsid
+250,ben,BENGALI,kʰ,consonant,upsid
+250,ben,BENGALI,l,consonant,upsid
+250,ben,BENGALI,m,consonant,upsid
+250,ben,BENGALI,n,consonant,upsid
+250,ben,BENGALI,ŋ,consonant,upsid
+250,ben,BENGALI,o,vowel,upsid
+250,ben,BENGALI,õ,vowel,upsid
+250,ben,BENGALI,ɔ,vowel,upsid
+250,ben,BENGALI,ɔ̃,vowel,upsid
+250,ben,BENGALI,p,consonant,upsid
+250,ben,BENGALI,pʰ,consonant,upsid
+250,ben,BENGALI,ɽ,consonant,upsid
+250,ben,BENGALI,ɾ,consonant,upsid
+250,ben,BENGALI,s̪,consonant,upsid
+250,ben,BENGALI,t̪,consonant,upsid
+250,ben,BENGALI,t̪ʰ,consonant,upsid
+250,ben,BENGALI,t̠ʃ,consonant,upsid
+250,ben,BENGALI,t̠ʃʰ,consonant,upsid
+250,ben,BENGALI,ʈ,consonant,upsid
+250,ben,BENGALI,ʈʰ,consonant,upsid
+250,ben,BENGALI,ʊ,vowel,upsid
+250,ben,BENGALI,ʊ̃,vowel,upsid
+286,cmn,MANDARIN,a,vowel,upsid
+286,cmn,MANDARIN,a˞,vowel,upsid
+286,cmn,MANDARIN,ç,consonant,upsid
+286,cmn,MANDARIN,cç,consonant,upsid
+286,cmn,MANDARIN,cçʰ,consonant,upsid
+286,cmn,MANDARIN,ə˞,vowel,upsid
+286,cmn,MANDARIN,ɤ̟,vowel,upsid
+286,cmn,MANDARIN,f,consonant,upsid
+286,cmn,MANDARIN,i,vowel,upsid
+286,cmn,MANDARIN,j,consonant,upsid
+286,cmn,MANDARIN,k,consonant,upsid
+286,cmn,MANDARIN,kʰ,consonant,upsid
+286,cmn,MANDARIN,l̪|l,consonant,upsid
+286,cmn,MANDARIN,m,consonant,upsid
+286,cmn,MANDARIN,n,consonant,upsid
+286,cmn,MANDARIN,ŋ,consonant,upsid
+286,cmn,MANDARIN,p,consonant,upsid
+286,cmn,MANDARIN,pʰ,consonant,upsid
+286,cmn,MANDARIN,s̪|s,consonant,upsid
+286,cmn,MANDARIN,ʂ,consonant,upsid
+286,cmn,MANDARIN,t̪|t,consonant,upsid
+286,cmn,MANDARIN,t̪ʰ|tʰ,consonant,upsid
+286,cmn,MANDARIN,t̪s̪|ts,consonant,upsid
+286,cmn,MANDARIN,t̪s̪ʰ|tsʰ,consonant,upsid
+286,cmn,MANDARIN,ʈʂ,consonant,upsid
+286,cmn,MANDARIN,ʈʂʰ,consonant,upsid
+286,cmn,MANDARIN,u,vowel,upsid
+286,cmn,MANDARIN,ɥ,consonant,upsid
+286,cmn,MANDARIN,w,consonant,upsid
+286,cmn,MANDARIN,y,vowel,upsid
+286,cmn,MANDARIN,ʐ,consonant,upsid
+286,cmn,MANDARIN,χ,consonant,upsid
+304,deu,GERMAN,aː,vowel,upsid
+304,deu,GERMAN,ai,vowel,upsid
+304,deu,GERMAN,au,vowel,upsid
+304,deu,GERMAN,ɐ,vowel,upsid
+304,deu,GERMAN,b,consonant,upsid
+304,deu,GERMAN,d,consonant,upsid
+304,deu,GERMAN,eː,vowel,upsid
+304,deu,GERMAN,ə,vowel,upsid
+304,deu,GERMAN,ɛ,vowel,upsid
+304,deu,GERMAN,ɛː,vowel,upsid
+304,deu,GERMAN,f,consonant,upsid
+304,deu,GERMAN,ɡ,consonant,upsid
+304,deu,GERMAN,h,consonant,upsid
+304,deu,GERMAN,iː,vowel,upsid
+304,deu,GERMAN,ɪ,vowel,upsid
+304,deu,GERMAN,j,consonant,upsid
+304,deu,GERMAN,k,consonant,upsid
+304,deu,GERMAN,l,consonant,upsid
+304,deu,GERMAN,m,consonant,upsid
+304,deu,GERMAN,n,consonant,upsid
+304,deu,GERMAN,ŋ,consonant,upsid
+304,deu,GERMAN,oː,vowel,upsid
+304,deu,GERMAN,øː,vowel,upsid
+304,deu,GERMAN,œ,vowel,upsid
+304,deu,GERMAN,ɔ,vowel,upsid
+304,deu,GERMAN,ɔi,vowel,upsid
+304,deu,GERMAN,p,consonant,upsid
+304,deu,GERMAN,pf,consonant,upsid
+304,deu,GERMAN,ʀ,consonant,upsid
+304,deu,GERMAN,s,consonant,upsid
+304,deu,GERMAN,ʃ,consonant,upsid
+304,deu,GERMAN,t,consonant,upsid
+304,deu,GERMAN,ts,consonant,upsid
+304,deu,GERMAN,uː,vowel,upsid
+304,deu,GERMAN,ʊ,vowel,upsid
+304,deu,GERMAN,v,consonant,upsid
+304,deu,GERMAN,x,consonant,upsid
+304,deu,GERMAN,yː,vowel,upsid
+304,deu,GERMAN,ʏ,vowel,upsid
+304,deu,GERMAN,z,consonant,upsid
+304,deu,GERMAN,ʒ,consonant,upsid
+331,fra,FRENCH,a̟,vowel,upsid
+331,fra,FRENCH,æ̃,vowel,upsid
+331,fra,FRENCH,ɒ,vowel,upsid
+331,fra,FRENCH,ɒ̃,vowel,upsid
+331,fra,FRENCH,b,consonant,upsid
+331,fra,FRENCH,d̪,consonant,upsid
+331,fra,FRENCH,e,vowel,upsid
+331,fra,FRENCH,ɛ,vowel,upsid
+331,fra,FRENCH,ɛː,vowel,upsid
+331,fra,FRENCH,f,consonant,upsid
+331,fra,FRENCH,ɡ,consonant,upsid
+331,fra,FRENCH,i,vowel,upsid
+331,fra,FRENCH,j,consonant,upsid
+331,fra,FRENCH,k,consonant,upsid
+331,fra,FRENCH,l̪,consonant,upsid
+331,fra,FRENCH,m,consonant,upsid
+331,fra,FRENCH,n̪,consonant,upsid
+331,fra,FRENCH,ɲ,consonant,upsid
+331,fra,FRENCH,ŋ,consonant,upsid
+331,fra,FRENCH,õ,vowel,upsid
+331,fra,FRENCH,ø,vowel,upsid
+331,fra,FRENCH,oː,vowel,upsid
+331,fra,FRENCH,œ,vowel,upsid
+331,fra,FRENCH,œ̃,vowel,upsid
+331,fra,FRENCH,ɔ,vowel,upsid
+331,fra,FRENCH,p,consonant,upsid
+331,fra,FRENCH,ʀ,consonant,upsid
+331,fra,FRENCH,s̪,consonant,upsid
+331,fra,FRENCH,ʃ,consonant,upsid
+331,fra,FRENCH,t̪,consonant,upsid
+331,fra,FRENCH,u,vowel,upsid
+331,fra,FRENCH,ɥ,consonant,upsid
+331,fra,FRENCH,v,consonant,upsid
+331,fra,FRENCH,w,consonant,upsid
+331,fra,FRENCH,y,vowel,upsid
+331,fra,FRENCH,z̪,consonant,upsid
+331,fra,FRENCH,ʒ,consonant,upsid
+354,hin,HINDI-URDU,aː,vowel,upsid
+354,hin,HINDI-URDU,ãː,vowel,upsid
+354,hin,HINDI-URDU,æː,vowel,upsid
+354,hin,HINDI-URDU,b,consonant,upsid
+354,hin,HINDI-URDU,b̤,consonant,upsid
+354,hin,HINDI-URDU,d̪,consonant,upsid
+354,hin,HINDI-URDU,d̪̤,consonant,upsid
+354,hin,HINDI-URDU,d̠ʒ,consonant,upsid
+354,hin,HINDI-URDU,d̠ʒ̤,consonant,upsid
+354,hin,HINDI-URDU,ɖ,consonant,upsid
+354,hin,HINDI-URDU,ɖ̤,consonant,upsid
+354,hin,HINDI-URDU,eː,vowel,upsid
+354,hin,HINDI-URDU,ẽː,vowel,upsid
+354,hin,HINDI-URDU,ɛ,vowel,upsid
+354,hin,HINDI-URDU,ɛ̃,vowel,upsid
+354,hin,HINDI-URDU,ɜ,vowel,upsid
+354,hin,HINDI-URDU,ɜ̃,vowel,upsid
+354,hin,HINDI-URDU,f,consonant,upsid
+354,hin,HINDI-URDU,ɡ,consonant,upsid
+354,hin,HINDI-URDU,ɡ̤,consonant,upsid
+354,hin,HINDI-URDU,ɦ,consonant,upsid
+354,hin,HINDI-URDU,iː,vowel,upsid
+354,hin,HINDI-URDU,ĩː,vowel,upsid
+354,hin,HINDI-URDU,ɪ,vowel,upsid
+354,hin,HINDI-URDU,ɪ̃,vowel,upsid
+354,hin,HINDI-URDU,j,consonant,upsid
+354,hin,HINDI-URDU,k,consonant,upsid
+354,hin,HINDI-URDU,kʰ,consonant,upsid
+354,hin,HINDI-URDU,l̪|l,consonant,upsid
+354,hin,HINDI-URDU,l̪̤|l̤,consonant,upsid
+354,hin,HINDI-URDU,m,consonant,upsid
+354,hin,HINDI-URDU,m̤,consonant,upsid
+354,hin,HINDI-URDU,n̪,consonant,upsid
+354,hin,HINDI-URDU,n̪̤,consonant,upsid
+354,hin,HINDI-URDU,oː,vowel,upsid
+354,hin,HINDI-URDU,õː,vowel,upsid
+354,hin,HINDI-URDU,ɔ,vowel,upsid
+354,hin,HINDI-URDU,ɔ̃,vowel,upsid
+354,hin,HINDI-URDU,p,consonant,upsid
+354,hin,HINDI-URDU,pʰ,consonant,upsid
+354,hin,HINDI-URDU,q,consonant,upsid
+354,hin,HINDI-URDU,r̪|r,consonant,upsid
+354,hin,HINDI-URDU,ɽ̃,consonant,upsid
+354,hin,HINDI-URDU,ʁ,consonant,upsid
+354,hin,HINDI-URDU,s̪|s,consonant,upsid
+354,hin,HINDI-URDU,ʃ,consonant,upsid
+354,hin,HINDI-URDU,t̪,consonant,upsid
+354,hin,HINDI-URDU,t̪ʰ,consonant,upsid
+354,hin,HINDI-URDU,t̠ʃ,consonant,upsid
+354,hin,HINDI-URDU,t̠ʃʰ,consonant,upsid
+354,hin,HINDI-URDU,ʈ,consonant,upsid
+354,hin,HINDI-URDU,ʈʰ,consonant,upsid
+354,hin,HINDI-URDU,uː,vowel,upsid
+354,hin,HINDI-URDU,ũː,vowel,upsid
+354,hin,HINDI-URDU,ʊ,vowel,upsid
+354,hin,HINDI-URDU,ʊ̃,vowel,upsid
+354,hin,HINDI-URDU,z̪|z,consonant,upsid
+354,hin,HINDI-URDU,ʒ,consonant,upsid
+354,hin,HINDI-URDU,ʔ,consonant,upsid
+354,hin,HINDI-URDU,β̞,consonant,upsid
+354,hin,HINDI-URDU,χ,consonant,upsid
+384,jpn,JAPANESE,a,vowel,upsid
+384,jpn,JAPANESE,b,consonant,upsid
+384,jpn,JAPANESE,d̪,consonant,upsid
+384,jpn,JAPANESE,ɛ,vowel,upsid
+384,jpn,JAPANESE,ɡ,consonant,upsid
+384,jpn,JAPANESE,h,consonant,upsid
+384,jpn,JAPANESE,i,vowel,upsid
+384,jpn,JAPANESE,j,consonant,upsid
+384,jpn,JAPANESE,k,consonant,upsid
+384,jpn,JAPANESE,m,consonant,upsid
+384,jpn,JAPANESE,n̪,consonant,upsid
+384,jpn,JAPANESE,ɴ,consonant,upsid
+384,jpn,JAPANESE,ɔ,vowel,upsid
+384,jpn,JAPANESE,p,consonant,upsid
+384,jpn,JAPANESE,ɾ,consonant,upsid
+384,jpn,JAPANESE,s̪,consonant,upsid
+384,jpn,JAPANESE,t̪,consonant,upsid
+384,jpn,JAPANESE,ɯ,vowel,upsid
+384,jpn,JAPANESE,w,consonant,upsid
+384,jpn,JAPANESE,z̪,consonant,upsid
+423,kor,KOREAN,a,vowel,upsid
+423,kor,KOREAN,æ,vowel,upsid
+423,kor,KOREAN,e,vowel,upsid
+423,kor,KOREAN,ɤ̞,vowel,upsid
+423,kor,KOREAN,h,consonant,upsid
+423,kor,KOREAN,i,vowel,upsid
+423,kor,KOREAN,j,consonant,upsid
+423,kor,KOREAN,k,consonant,upsid
+423,kor,KOREAN,kʰ,consonant,upsid
+423,kor,KOREAN,kˀ,consonant,upsid
+423,kor,KOREAN,l,consonant,upsid
+423,kor,KOREAN,m,consonant,upsid
+423,kor,KOREAN,n̪,consonant,upsid
+423,kor,KOREAN,ŋ,consonant,upsid
+423,kor,KOREAN,o,vowel,upsid
+423,kor,KOREAN,ø,vowel,upsid
+423,kor,KOREAN,p,consonant,upsid
+423,kor,KOREAN,pʰ,consonant,upsid
+423,kor,KOREAN,pˀ,consonant,upsid
+423,kor,KOREAN,s̪,consonant,upsid
+423,kor,KOREAN,s̪ˀ,consonant,upsid
+423,kor,KOREAN,t̪,consonant,upsid
+423,kor,KOREAN,t̪ʰ,consonant,upsid
+423,kor,KOREAN,t̠ʃ,consonant,upsid
+423,kor,KOREAN,t̠ʃʰ,consonant,upsid
+423,kor,KOREAN,t̠ʃˀ,consonant,upsid
+423,kor,KOREAN,t̪ˀ,consonant,upsid
+423,kor,KOREAN,u,vowel,upsid
+423,kor,KOREAN,ɯ,vowel,upsid
+423,kor,KOREAN,ɯi,vowel,upsid
+423,kor,KOREAN,w,consonant,upsid
+423,kor,KOREAN,y,vowel,upsid
+516,pes,FARSI,a̟,vowel,upsid
+516,pes,FARSI,ɑ,vowel,upsid
+516,pes,FARSI,b,consonant,upsid
+516,pes,FARSI,d̪,consonant,upsid
+516,pes,FARSI,d̠ʒ,consonant,upsid
+516,pes,FARSI,e,vowel,upsid
+516,pes,FARSI,f,consonant,upsid
+516,pes,FARSI,ɡ,consonant,upsid
+516,pes,FARSI,ɢ,consonant,upsid
+516,pes,FARSI,h,consonant,upsid
+516,pes,FARSI,i,vowel,upsid
+516,pes,FARSI,j,consonant,upsid
+516,pes,FARSI,kʰ,consonant,upsid
+516,pes,FARSI,l,consonant,upsid
+516,pes,FARSI,m,consonant,upsid
+516,pes,FARSI,n̪,consonant,upsid
+516,pes,FARSI,o,vowel,upsid
+516,pes,FARSI,pʰ,consonant,upsid
+516,pes,FARSI,r,consonant,upsid
+516,pes,FARSI,s,consonant,upsid
+516,pes,FARSI,ʃ,consonant,upsid
+516,pes,FARSI,t̪ʰ,consonant,upsid
+516,pes,FARSI,t̠ʃ,consonant,upsid
+516,pes,FARSI,u,vowel,upsid
+516,pes,FARSI,v,consonant,upsid
+516,pes,FARSI,w,consonant,upsid
+516,pes,FARSI,z,consonant,upsid
+516,pes,FARSI,ʒ,consonant,upsid
+516,pes,FARSI,ʔ,consonant,upsid
+516,pes,FARSI,χ,consonant,upsid
+527,ron,ROMANIAN,a,vowel,upsid
+527,ron,ROMANIAN,b,consonant,upsid
+527,ron,ROMANIAN,d̪,consonant,upsid
+527,ron,ROMANIAN,d̠ʒ,consonant,upsid
+527,ron,ROMANIAN,e,vowel,upsid
+527,ron,ROMANIAN,e̞a,vowel,upsid
+527,ron,ROMANIAN,e̞o̞,vowel,upsid
+527,ron,ROMANIAN,ə,vowel,upsid
+527,ron,ROMANIAN,f,consonant,upsid
+527,ron,ROMANIAN,ɡ,consonant,upsid
+527,ron,ROMANIAN,h,consonant,upsid
+527,ron,ROMANIAN,i,vowel,upsid
+527,ron,ROMANIAN,ɨ,vowel,upsid
+527,ron,ROMANIAN,j,consonant,upsid
+527,ron,ROMANIAN,k,consonant,upsid
+527,ron,ROMANIAN,l̪,consonant,upsid
+527,ron,ROMANIAN,m,consonant,upsid
+527,ron,ROMANIAN,n̪,consonant,upsid
+527,ron,ROMANIAN,o,vowel,upsid
+527,ron,ROMANIAN,o̞a,vowel,upsid
+527,ron,ROMANIAN,p,consonant,upsid
+527,ron,ROMANIAN,r̪,consonant,upsid
+527,ron,ROMANIAN,s̪,consonant,upsid
+527,ron,ROMANIAN,ʃ,consonant,upsid
+527,ron,ROMANIAN,t̪,consonant,upsid
+527,ron,ROMANIAN,t̪s̪,consonant,upsid
+527,ron,ROMANIAN,t̠ʃ,consonant,upsid
+527,ron,ROMANIAN,u,vowel,upsid
+527,ron,ROMANIAN,v,consonant,upsid
+527,ron,ROMANIAN,w,consonant,upsid
+527,ron,ROMANIAN,z̪,consonant,upsid
+527,ron,ROMANIAN,ʒ,consonant,upsid
+530,rus,RUSSIAN,a,vowel,upsid
+530,rus,RUSSIAN,b,consonant,upsid
+530,rus,RUSSIAN,bʲ,consonant,upsid
+530,rus,RUSSIAN,d̪,consonant,upsid
+530,rus,RUSSIAN,d̪ʲ,consonant,upsid
+530,rus,RUSSIAN,ɛ,vowel,upsid
+530,rus,RUSSIAN,f,consonant,upsid
+530,rus,RUSSIAN,fʲ,consonant,upsid
+530,rus,RUSSIAN,ɡ,consonant,upsid
+530,rus,RUSSIAN,i,vowel,upsid
+530,rus,RUSSIAN,j,consonant,upsid
+530,rus,RUSSIAN,k,consonant,upsid
+530,rus,RUSSIAN,kʲ,consonant,upsid
+530,rus,RUSSIAN,l̪ˠ,consonant,upsid
+530,rus,RUSSIAN,l̪ʲ,consonant,upsid
+530,rus,RUSSIAN,m,consonant,upsid
+530,rus,RUSSIAN,mʲ,consonant,upsid
+530,rus,RUSSIAN,n̪,consonant,upsid
+530,rus,RUSSIAN,n̪ʲ,consonant,upsid
+530,rus,RUSSIAN,ɔ,vowel,upsid
+530,rus,RUSSIAN,p,consonant,upsid
+530,rus,RUSSIAN,pʲ,consonant,upsid
+530,rus,RUSSIAN,r̪,consonant,upsid
+530,rus,RUSSIAN,r̪ʲ,consonant,upsid
+530,rus,RUSSIAN,s̪,consonant,upsid
+530,rus,RUSSIAN,s̪ʲ,consonant,upsid
+530,rus,RUSSIAN,ʃˠ,consonant,upsid
+530,rus,RUSSIAN,t̪,consonant,upsid
+530,rus,RUSSIAN,t̪ʲ,consonant,upsid
+530,rus,RUSSIAN,ts,consonant,upsid
+530,rus,RUSSIAN,t̠ʃ,consonant,upsid
+530,rus,RUSSIAN,u,vowel,upsid
+530,rus,RUSSIAN,v,consonant,upsid
+530,rus,RUSSIAN,vʲ,consonant,upsid
+530,rus,RUSSIAN,x,consonant,upsid
+530,rus,RUSSIAN,z̪,consonant,upsid
+530,rus,RUSSIAN,z̪ʲ,consonant,upsid
+530,rus,RUSSIAN,ʒˠ,consonant,upsid
+552,som,SOMALI,a,vowel,upsid
+552,som,SOMALI,æ,vowel,upsid
+552,som,SOMALI,b,consonant,upsid
+552,som,SOMALI,d̪,consonant,upsid
+552,som,SOMALI,ɖ̰,consonant,upsid
+552,som,SOMALI,e̞,vowel,upsid
+552,som,SOMALI,ɛ,vowel,upsid
+552,som,SOMALI,f,consonant,upsid
+552,som,SOMALI,ɡ,consonant,upsid
+552,som,SOMALI,ɢ,consonant,upsid
+552,som,SOMALI,h,consonant,upsid
+552,som,SOMALI,ħ,consonant,upsid
+552,som,SOMALI,i,vowel,upsid
+552,som,SOMALI,ɪ,vowel,upsid
+552,som,SOMALI,j,consonant,upsid
+552,som,SOMALI,kʰ,consonant,upsid
+552,som,SOMALI,l,consonant,upsid
+552,som,SOMALI,m,consonant,upsid
+552,som,SOMALI,n,consonant,upsid
+552,som,SOMALI,ɔ,vowel,upsid
+552,som,SOMALI,ɵ̞,vowel,upsid
+552,som,SOMALI,ɾ,consonant,upsid
+552,som,SOMALI,s,consonant,upsid
+552,som,SOMALI,ʃ,consonant,upsid
+552,som,SOMALI,t̪ʰ,consonant,upsid
+552,som,SOMALI,t̠ʃ,consonant,upsid
+552,som,SOMALI,ʉ̞,vowel,upsid
+552,som,SOMALI,ʊ,vowel,upsid
+552,som,SOMALI,w,consonant,upsid
+552,som,SOMALI,x,consonant,upsid
+552,som,SOMALI,ʔ,consonant,upsid
+552,som,SOMALI,ʕ,consonant,upsid
+553,spa,SPANISH,a,vowel,upsid
+553,spa,SPANISH,ð,consonant,upsid
+553,spa,SPANISH,ᴅ,consonant,upsid
+553,spa,SPANISH,e̞,vowel,upsid
+553,spa,SPANISH,f,consonant,upsid
+553,spa,SPANISH,ɣ,consonant,upsid
+553,spa,SPANISH,i,vowel,upsid
+553,spa,SPANISH,j,consonant,upsid
+553,spa,SPANISH,k,consonant,upsid
+553,spa,SPANISH,l̪,consonant,upsid
+553,spa,SPANISH,ʎ,consonant,upsid
+553,spa,SPANISH,m,consonant,upsid
+553,spa,SPANISH,n̪,consonant,upsid
+553,spa,SPANISH,ɲ,consonant,upsid
+553,spa,SPANISH,o̞,vowel,upsid
+553,spa,SPANISH,p,consonant,upsid
+553,spa,SPANISH,r,consonant,upsid
+553,spa,SPANISH,s̪,consonant,upsid
+553,spa,SPANISH,t̪,consonant,upsid
+553,spa,SPANISH,t̠ʃ,consonant,upsid
+553,spa,SPANISH,u,vowel,upsid
+553,spa,SPANISH,w,consonant,upsid
+553,spa,SPANISH,x,consonant,upsid
+553,spa,SPANISH,β,consonant,upsid
+553,spa,SPANISH,θ,consonant,upsid
+597,tur,TURKISH,a,vowel,upsid
+597,tur,TURKISH,b,consonant,upsid
+597,tur,TURKISH,c,consonant,upsid
+597,tur,TURKISH,d̪,consonant,upsid
+597,tur,TURKISH,d̠ʒ,consonant,upsid
+597,tur,TURKISH,ɛ,vowel,upsid
+597,tur,TURKISH,f,consonant,upsid
+597,tur,TURKISH,ɡ,consonant,upsid
+597,tur,TURKISH,ɣ,consonant,upsid
+597,tur,TURKISH,h,consonant,upsid
+597,tur,TURKISH,ɪ,vowel,upsid
+597,tur,TURKISH,j,consonant,upsid
+597,tur,TURKISH,ɟ,consonant,upsid
+597,tur,TURKISH,k,consonant,upsid
+597,tur,TURKISH,l̪|l,consonant,upsid
+597,tur,TURKISH,ʎ,consonant,upsid
+597,tur,TURKISH,m,consonant,upsid
+597,tur,TURKISH,n̪,consonant,upsid
+597,tur,TURKISH,o̞,vowel,upsid
+597,tur,TURKISH,œ,vowel,upsid
+597,tur,TURKISH,p,consonant,upsid
+597,tur,TURKISH,r,consonant,upsid
+597,tur,TURKISH,s,consonant,upsid
+597,tur,TURKISH,ʃ,consonant,upsid
+597,tur,TURKISH,t̪,consonant,upsid
+597,tur,TURKISH,t̠ʃ,consonant,upsid
+597,tur,TURKISH,ɯ̞,vowel,upsid
+597,tur,TURKISH,ʊ,vowel,upsid
+597,tur,TURKISH,v,consonant,upsid
+597,tur,TURKISH,ʏ,vowel,upsid
+597,tur,TURKISH,z,consonant,upsid
+597,tur,TURKISH,ʒ,consonant,upsid
+597,tur,TURKISH,ʔ,consonant,upsid
+1047,cmn,Standard Chinese; Mandarin,a,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,ai,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,au,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,ɕ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,ei,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,ə,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,ɤ,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,f,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,i,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,ia,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,iau,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,ie,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,iou,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,iu,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,j,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,k,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,kʰ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,l,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,m,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,n,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,ŋ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,ou,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,p,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,pʰ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,ɹ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,s,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,ʃ̺,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,t,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,tɕ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,tɕʰ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,tʰ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,ts,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,tsʰ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,t̠ʃ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,t̠ʃ̺ʰ,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,u,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,ua,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,uai,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,uei,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,uə,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,uo,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,w,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,x,consonant,ph
+1047,cmn,Standard Chinese; Mandarin,y,vowel,ph
+1047,cmn,Standard Chinese; Mandarin,ye,vowel,ph
+1050,nld,Dutch,aː,vowel,ph
+1050,nld,Dutch,ɑ,vowel,ph
+1050,nld,Dutch,b,consonant,ph
+1050,nld,Dutch,d,consonant,ph
+1050,nld,Dutch,eː,vowel,ph
+1050,nld,Dutch,ɛ,vowel,ph
+1050,nld,Dutch,ɛi̯,vowel,ph
+1050,nld,Dutch,f,consonant,ph
+1050,nld,Dutch,ɣ,consonant,ph
+1050,nld,Dutch,ɦ,consonant,ph
+1050,nld,Dutch,i,vowel,ph
+1050,nld,Dutch,ɪ,vowel,ph
+1050,nld,Dutch,j,consonant,ph
+1050,nld,Dutch,k,consonant,ph
+1050,nld,Dutch,l,consonant,ph
+1050,nld,Dutch,ʎ,consonant,ph
+1050,nld,Dutch,m,consonant,ph
+1050,nld,Dutch,n,consonant,ph
+1050,nld,Dutch,ɲ,consonant,ph
+1050,nld,Dutch,ŋ,consonant,ph
+1050,nld,Dutch,oː,vowel,ph
+1050,nld,Dutch,øː,vowel,ph
+1050,nld,Dutch,œy,vowel,ph
+1050,nld,Dutch,ɔ,vowel,ph
+1050,nld,Dutch,ɔu,vowel,ph
+1050,nld,Dutch,p,consonant,ph
+1050,nld,Dutch,ʀ,consonant,ph
+1050,nld,Dutch,s,consonant,ph
+1050,nld,Dutch,ʃ,consonant,ph
+1050,nld,Dutch,t,consonant,ph
+1050,nld,Dutch,u,vowel,ph
+1050,nld,Dutch,v,consonant,ph
+1050,nld,Dutch,w,consonant,ph
+1050,nld,Dutch,x,consonant,ph
+1050,nld,Dutch,yː,vowel,ph
+1050,nld,Dutch,ʏ,vowel,ph
+1050,nld,Dutch,z,consonant,ph
+1050,nld,Dutch,ʒ,consonant,ph
+1050,nld,Dutch,ʔ,consonant,ph
+1711,ben,Bengali,a,vowel,ra
+1711,ben,Bengali,æ,vowel,ra
+1711,ben,Bengali,æ̞̃,vowel,ra
+1711,ben,Bengali,ɑ̃,vowel,ra
+1711,ben,Bengali,b,consonant,ra
+1711,ben,Bengali,b̤,consonant,ra
+1711,ben,Bengali,ç,consonant,ra
+1711,ben,Bengali,cç,consonant,ra
+1711,ben,Bengali,cçʰ,consonant,ra
+1711,ben,Bengali,d̪,consonant,ra
+1711,ben,Bengali,d̪̤,consonant,ra
+1711,ben,Bengali,ɖ,consonant,ra
+1711,ben,Bengali,ɖ̤,consonant,ra
+1711,ben,Bengali,e,vowel,ra
+1711,ben,Bengali,ɛ̃,vowel,ra
+1711,ben,Bengali,ɡ,consonant,ra
+1711,ben,Bengali,ɡʱ,consonant,ra
+1711,ben,Bengali,h,consonant,ra
+1711,ben,Bengali,ɦ,consonant,ra
+1711,ben,Bengali,i,vowel,ra
+1711,ben,Bengali,ɪ̃,vowel,ra
+1711,ben,Bengali,j,consonant,ra
+1711,ben,Bengali,ɟʝ,consonant,ra
+1711,ben,Bengali,ɟ̤ʝ,consonant,ra
+1711,ben,Bengali,k,consonant,ra
+1711,ben,Bengali,kʰ,consonant,ra
+1711,ben,Bengali,l,consonant,ra
+1711,ben,Bengali,m,consonant,ra
+1711,ben,Bengali,n,consonant,ra
+1711,ben,Bengali,ŋ,consonant,ra
+1711,ben,Bengali,o,vowel,ra
+1711,ben,Bengali,õ̞,vowel,ra
+1711,ben,Bengali,ɔ,vowel,ra
+1711,ben,Bengali,p,consonant,ra
+1711,ben,Bengali,pʰ,consonant,ra
+1711,ben,Bengali,r,consonant,ra
+1711,ben,Bengali,ɽ,consonant,ra
+1711,ben,Bengali,ɽ̤,consonant,ra
+1711,ben,Bengali,ɾ,consonant,ra
+1711,ben,Bengali,s,consonant,ra
+1711,ben,Bengali,t̪,consonant,ra
+1711,ben,Bengali,t̪ʰ,consonant,ra
+1711,ben,Bengali,ʈ,consonant,ra
+1711,ben,Bengali,ʈʰ,consonant,ra
+1711,ben,Bengali,u,vowel,ra
+1711,ben,Bengali,ũː,vowel,ra
+1711,ben,Bengali,ʊ̃,vowel,ra
+1711,ben,Bengali,w,consonant,ra
+1728,hin,Hindi,a,vowel,ra
+1728,hin,Hindi,æ,vowel,ra
+1728,hin,Hindi,æ̞̃,vowel,ra
+1728,hin,Hindi,ɑ̃,vowel,ra
+1728,hin,Hindi,b,consonant,ra
+1728,hin,Hindi,b̤,consonant,ra
+1728,hin,Hindi,ç,consonant,ra
+1728,hin,Hindi,cç,consonant,ra
+1728,hin,Hindi,cçʰ,consonant,ra
+1728,hin,Hindi,d̪,consonant,ra
+1728,hin,Hindi,d̪̤,consonant,ra
+1728,hin,Hindi,ɖ,consonant,ra
+1728,hin,Hindi,ɖ̤,consonant,ra
+1728,hin,Hindi,e,vowel,ra
+1728,hin,Hindi,ẽ̞,vowel,ra
+1728,hin,Hindi,ə,vowel,ra
+1728,hin,Hindi,ə̃,vowel,ra
+1728,hin,Hindi,ɛ,vowel,ra
+1728,hin,Hindi,f,consonant,ra
+1728,hin,Hindi,ɡ,consonant,ra
+1728,hin,Hindi,ɡʱ,consonant,ra
+1728,hin,Hindi,h,consonant,ra
+1728,hin,Hindi,i,vowel,ra
+1728,hin,Hindi,ĩ,vowel,ra
+1728,hin,Hindi,ɪ,vowel,ra
+1728,hin,Hindi,ɪ̃,vowel,ra
+1728,hin,Hindi,j,consonant,ra
+1728,hin,Hindi,ʝ,consonant,ra
+1728,hin,Hindi,ɟʝ,consonant,ra
+1728,hin,Hindi,ɟ̤ʝ,consonant,ra
+1728,hin,Hindi,k,consonant,ra
+1728,hin,Hindi,kʰ,consonant,ra
+1728,hin,Hindi,l,consonant,ra
+1728,hin,Hindi,m,consonant,ra
+1728,hin,Hindi,n̪,consonant,ra
+1728,hin,Hindi,ɲ,consonant,ra
+1728,hin,Hindi,ɳ,consonant,ra
+1728,hin,Hindi,ŋ,consonant,ra
+1728,hin,Hindi,o,vowel,ra
+1728,hin,Hindi,õ,vowel,ra
+1728,hin,Hindi,õ̞,vowel,ra
+1728,hin,Hindi,ɔ,vowel,ra
+1728,hin,Hindi,p,consonant,ra
+1728,hin,Hindi,pʰ,consonant,ra
+1728,hin,Hindi,ɽ,consonant,ra
+1728,hin,Hindi,ɽ̤,consonant,ra
+1728,hin,Hindi,ɾ,consonant,ra
+1728,hin,Hindi,s,consonant,ra
+1728,hin,Hindi,t̪,consonant,ra
+1728,hin,Hindi,t̪ʰ,consonant,ra
+1728,hin,Hindi,ʈ,consonant,ra
+1728,hin,Hindi,ʈʰ,consonant,ra
+1728,hin,Hindi,u,vowel,ra
+1728,hin,Hindi,ũː,vowel,ra
+1728,hin,Hindi,ʊ,vowel,ra
+1728,hin,Hindi,ʊ̃,vowel,ra
+1728,hin,Hindi,w,consonant,ra
+1728,hin,Hindi,z,consonant,ra
+2162,ben,Bengali,a,vowel,uz
+2162,ben,Bengali,ae,vowel,uz
+2162,ben,Bengali,ai,vowel,uz
+2162,ben,Bengali,ao,vowel,uz
+2162,ben,Bengali,au,vowel,uz
+2162,ben,Bengali,b,consonant,uz
+2162,ben,Bengali,bː,consonant,uz
+2162,ben,Bengali,bʱ,consonant,uz
+2162,ben,Bengali,bʱː,consonant,uz
+2162,ben,Bengali,d,consonant,uz
+2162,ben,Bengali,d̪,consonant,uz
+2162,ben,Bengali,dː,consonant,uz
+2162,ben,Bengali,d̪ː,consonant,uz
+2162,ben,Bengali,dʱ,consonant,uz
+2162,ben,Bengali,d̪ʱ,consonant,uz
+2162,ben,Bengali,d̪ʱː,consonant,uz
+2162,ben,Bengali,dʑ,consonant,uz
+2162,ben,Bengali,dʑː,consonant,uz
+2162,ben,Bengali,dʑʱ,consonant,uz
+2162,ben,Bengali,dʑʱː,consonant,uz
+2162,ben,Bengali,e,vowel,uz
+2162,ben,Bengali,ei,vowel,uz
+2162,ben,Bengali,eu,vowel,uz
+2162,ben,Bengali,ɛ,vowel,uz
+2162,ben,Bengali,ɛe,vowel,uz
+2162,ben,Bengali,ɛo,vowel,uz
+2162,ben,Bengali,f,consonant,uz
+2162,ben,Bengali,ɡ,consonant,uz
+2162,ben,Bengali,ɡː,consonant,uz
+2162,ben,Bengali,ɡʱ,consonant,uz
+2162,ben,Bengali,h,consonant,uz
+2162,ben,Bengali,i,vowel,uz
+2162,ben,Bengali,iu,vowel,uz
+2162,ben,Bengali,k,consonant,uz
+2162,ben,Bengali,kː,consonant,uz
+2162,ben,Bengali,kʰ,consonant,uz
+2162,ben,Bengali,kʰː,consonant,uz
+2162,ben,Bengali,l,consonant,uz
+2162,ben,Bengali,lː,consonant,uz
+2162,ben,Bengali,m,consonant,uz
+2162,ben,Bengali,mː,consonant,uz
+2162,ben,Bengali,n,consonant,uz
+2162,ben,Bengali,nː,consonant,uz
+2162,ben,Bengali,ŋ,consonant,uz
+2162,ben,Bengali,o,vowel,uz
+2162,ben,Bengali,oe,vowel,uz
+2162,ben,Bengali,oi,vowel,uz
+2162,ben,Bengali,oo,vowel,uz
+2162,ben,Bengali,ou,vowel,uz
+2162,ben,Bengali,ɔ,vowel,uz
+2162,ben,Bengali,ɔe,vowel,uz
+2162,ben,Bengali,ɔo,vowel,uz
+2162,ben,Bengali,p,consonant,uz
+2162,ben,Bengali,pː,consonant,uz
+2162,ben,Bengali,ɹ,consonant,uz
+2162,ben,Bengali,s,consonant,uz
+2162,ben,Bengali,ʃ,consonant,uz
+2162,ben,Bengali,ʃː,consonant,uz
+2162,ben,Bengali,t,consonant,uz
+2162,ben,Bengali,t̪,consonant,uz
+2162,ben,Bengali,tː,consonant,uz
+2162,ben,Bengali,t̪ː,consonant,uz
+2162,ben,Bengali,tɕ,consonant,uz
+2162,ben,Bengali,tɕː,consonant,uz
+2162,ben,Bengali,tɕʰ,consonant,uz
+2162,ben,Bengali,tɕʰː,consonant,uz
+2162,ben,Bengali,tʰ,consonant,uz
+2162,ben,Bengali,t̪ʰ,consonant,uz
+2162,ben,Bengali,tʰː,consonant,uz
+2162,ben,Bengali,t̪ʰː,consonant,uz
+2162,ben,Bengali,u,vowel,uz
+2162,ben,Bengali,ui,vowel,uz
+2169,nld,Dutch,aː,vowel,uz
+2169,nld,Dutch,ɑ,vowel,uz
+2169,nld,Dutch,b,consonant,uz
+2169,nld,Dutch,d,consonant,uz
+2169,nld,Dutch,eː,vowel,uz
+2169,nld,Dutch,ɛ,vowel,uz
+2169,nld,Dutch,ɛi,vowel,uz
+2169,nld,Dutch,f,consonant,uz
+2169,nld,Dutch,ɣ,consonant,uz
+2169,nld,Dutch,ɦ,consonant,uz
+2169,nld,Dutch,i,vowel,uz
+2169,nld,Dutch,ɪ,vowel,uz
+2169,nld,Dutch,j,consonant,uz
+2169,nld,Dutch,k,consonant,uz
+2169,nld,Dutch,l,consonant,uz
+2169,nld,Dutch,m,consonant,uz
+2169,nld,Dutch,n,consonant,uz
+2169,nld,Dutch,ŋ,consonant,uz
+2169,nld,Dutch,oː,vowel,uz
+2169,nld,Dutch,øː,vowel,uz
+2169,nld,Dutch,œy,vowel,uz
+2169,nld,Dutch,ɔ,vowel,uz
+2169,nld,Dutch,ɔu,vowel,uz
+2169,nld,Dutch,p,consonant,uz
+2169,nld,Dutch,r,consonant,uz
+2169,nld,Dutch,s,consonant,uz
+2169,nld,Dutch,ʃ,consonant,uz
+2169,nld,Dutch,t,consonant,uz
+2169,nld,Dutch,u,vowel,uz
+2169,nld,Dutch,v,consonant,uz
+2169,nld,Dutch,w,consonant,uz
+2169,nld,Dutch,x,consonant,uz
+2169,nld,Dutch,yː,vowel,uz
+2169,nld,Dutch,ʏ,vowel,uz
+2169,nld,Dutch,z,consonant,uz
+2169,nld,Dutch,ʒ,consonant,uz
+2169,nld,Dutch,ʔ,consonant,uz
+2170,nld,Dutch,aː,vowel,uz
+2170,nld,Dutch,æ,vowel,uz
+2170,nld,Dutch,æ̃ː,vowel,uz
+2170,nld,Dutch,aɪ,vowel,uz
+2170,nld,Dutch,ɑ,vowel,uz
+2170,nld,Dutch,ɑː,vowel,uz
+2170,nld,Dutch,ɑ̃ː,vowel,uz
+2170,nld,Dutch,b,consonant,uz
+2170,nld,Dutch,d,consonant,uz
+2170,nld,Dutch,d̠ʒ,consonant,uz
+2170,nld,Dutch,eː,vowel,uz
+2170,nld,Dutch,eɪ,vowel,uz
+2170,nld,Dutch,ə,vowel,uz
+2170,nld,Dutch,ɛ,vowel,uz
+2170,nld,Dutch,ɛː,vowel,uz
+2170,nld,Dutch,f,consonant,uz
+2170,nld,Dutch,ɡ,consonant,uz
+2170,nld,Dutch,ɣ,consonant,uz
+2170,nld,Dutch,h,consonant,uz
+2170,nld,Dutch,i,vowel,uz
+2170,nld,Dutch,iː,vowel,uz
+2170,nld,Dutch,ɪ,vowel,uz
+2170,nld,Dutch,ɪə,vowel,uz
+2170,nld,Dutch,j,consonant,uz
+2170,nld,Dutch,k,consonant,uz
+2170,nld,Dutch,l,consonant,uz
+2170,nld,Dutch,m,consonant,uz
+2170,nld,Dutch,n,consonant,uz
+2170,nld,Dutch,ŋ,consonant,uz
+2170,nld,Dutch,ø,vowel,uz
+2170,nld,Dutch,oː,vowel,uz
+2170,nld,Dutch,øː,vowel,uz
+2170,nld,Dutch,œ,vowel,uz
+2170,nld,Dutch,œː,vowel,uz
+2170,nld,Dutch,œ̃ː,vowel,uz
+2170,nld,Dutch,øɪ,vowel,uz
+2170,nld,Dutch,ou,vowel,uz
+2170,nld,Dutch,ɔ,vowel,uz
+2170,nld,Dutch,ɔː,vowel,uz
+2170,nld,Dutch,ɔ̃ː,vowel,uz
+2170,nld,Dutch,ɔɪ,vowel,uz
+2170,nld,Dutch,p,consonant,uz
+2170,nld,Dutch,r,consonant,uz
+2170,nld,Dutch,s,consonant,uz
+2170,nld,Dutch,ʃ,consonant,uz
+2170,nld,Dutch,t,consonant,uz
+2170,nld,Dutch,u,vowel,uz
+2170,nld,Dutch,uː,vowel,uz
+2170,nld,Dutch,uɪ,vowel,uz
+2170,nld,Dutch,v,consonant,uz
+2170,nld,Dutch,x,consonant,uz
+2170,nld,Dutch,y,vowel,uz
+2170,nld,Dutch,yː,vowel,uz
+2170,nld,Dutch,z,consonant,uz
+2170,nld,Dutch,β̞,consonant,uz
+2171,nld,Dutch,aː,vowel,uz
+2171,nld,Dutch,æ,vowel,uz
+2171,nld,Dutch,ɑ,vowel,uz
+2171,nld,Dutch,ɒː,vowel,uz
+2171,nld,Dutch,b,consonant,uz
+2171,nld,Dutch,c̠,consonant,uz
+2171,nld,Dutch,d,consonant,uz
+2171,nld,Dutch,eː,vowel,uz
+2171,nld,Dutch,ə,vowel,uz
+2171,nld,Dutch,ɛ,vowel,uz
+2171,nld,Dutch,ɛː,vowel,uz
+2171,nld,Dutch,ɛi,vowel,uz
+2171,nld,Dutch,f,consonant,uz
+2171,nld,Dutch,ɡ,consonant,uz
+2171,nld,Dutch,ɣ,consonant,uz
+2171,nld,Dutch,ɦ,consonant,uz
+2171,nld,Dutch,i,vowel,uz
+2171,nld,Dutch,iː,vowel,uz
+2171,nld,Dutch,ɪ,vowel,uz
+2171,nld,Dutch,j,consonant,uz
+2171,nld,Dutch,k,consonant,uz
+2171,nld,Dutch,l,consonant,uz
+2171,nld,Dutch,m,consonant,uz
+2171,nld,Dutch,n,consonant,uz
+2171,nld,Dutch,ɲ̠,consonant,uz
+2171,nld,Dutch,ŋ,consonant,uz
+2171,nld,Dutch,oː,vowel,uz
+2171,nld,Dutch,øː,vowel,uz
+2171,nld,Dutch,œ,vowel,uz
+2171,nld,Dutch,œː,vowel,uz
+2171,nld,Dutch,œy,vowel,uz
+2171,nld,Dutch,ɔ,vowel,uz
+2171,nld,Dutch,ɔu,vowel,uz
+2171,nld,Dutch,p,consonant,uz
+2171,nld,Dutch,ʀʁ,consonant,uz
+2171,nld,Dutch,s,consonant,uz
+2171,nld,Dutch,ʃ,consonant,uz
+2171,nld,Dutch,t,consonant,uz
+2171,nld,Dutch,u,vowel,uz
+2171,nld,Dutch,uː,vowel,uz
+2171,nld,Dutch,ʊ,vowel,uz
+2171,nld,Dutch,v,consonant,uz
+2171,nld,Dutch,x,consonant,uz
+2171,nld,Dutch,y,vowel,uz
+2171,nld,Dutch,yː,vowel,uz
+2171,nld,Dutch,ʏ,vowel,uz
+2171,nld,Dutch,z,consonant,uz
+2171,nld,Dutch,ʒ,consonant,uz
+2171,nld,Dutch,ʔ,consonant,uz
+2171,nld,Dutch,β̞,consonant,uz
+2172,nld,Dutch,aː,vowel,uz
+2172,nld,Dutch,æ,vowel,uz
+2172,nld,Dutch,æː,vowel,uz
+2172,nld,Dutch,ɑ,vowel,uz
+2172,nld,Dutch,ɑː,vowel,uz
+2172,nld,Dutch,b,consonant,uz
+2172,nld,Dutch,c,consonant,uz
+2172,nld,Dutch,d,consonant,uz
+2172,nld,Dutch,eə,vowel,uz
+2172,nld,Dutch,ə,vowel,uz
+2172,nld,Dutch,ɛ,vowel,uz
+2172,nld,Dutch,ɛː,vowel,uz
+2172,nld,Dutch,ɛi,vowel,uz
+2172,nld,Dutch,f,consonant,uz
+2172,nld,Dutch,ɣ,consonant,uz
+2172,nld,Dutch,h,consonant,uz
+2172,nld,Dutch,i,vowel,uz
+2172,nld,Dutch,iː,vowel,uz
+2172,nld,Dutch,iə,vowel,uz
+2172,nld,Dutch,ɪ,vowel,uz
+2172,nld,Dutch,j,consonant,uz
+2172,nld,Dutch,ɟ,consonant,uz
+2172,nld,Dutch,k,consonant,uz
+2172,nld,Dutch,l,consonant,uz
+2172,nld,Dutch,m,consonant,uz
+2172,nld,Dutch,n,consonant,uz
+2172,nld,Dutch,ŋ,consonant,uz
+2172,nld,Dutch,œ,vowel,uz
+2172,nld,Dutch,œː,vowel,uz
+2172,nld,Dutch,œy,vowel,uz
+2172,nld,Dutch,oə,vowel,uz
+2172,nld,Dutch,øə,vowel,uz
+2172,nld,Dutch,ɔ,vowel,uz
+2172,nld,Dutch,ɔː,vowel,uz
+2172,nld,Dutch,p,consonant,uz
+2172,nld,Dutch,ʀʁ,consonant,uz
+2172,nld,Dutch,s,consonant,uz
+2172,nld,Dutch,ʃ,consonant,uz
+2172,nld,Dutch,t,consonant,uz
+2172,nld,Dutch,u,vowel,uz
+2172,nld,Dutch,uː,vowel,uz
+2172,nld,Dutch,uə,vowel,uz
+2172,nld,Dutch,ʊ,vowel,uz
+2172,nld,Dutch,v,consonant,uz
+2172,nld,Dutch,ʌu,vowel,uz
+2172,nld,Dutch,x,consonant,uz
+2172,nld,Dutch,y,vowel,uz
+2172,nld,Dutch,yː,vowel,uz
+2172,nld,Dutch,yə,vowel,uz
+2172,nld,Dutch,ʏ,vowel,uz
+2172,nld,Dutch,z,consonant,uz
+2172,nld,Dutch,ʒ,consonant,uz
+2172,nld,Dutch,ʔ,consonant,uz
+2172,nld,Dutch,β̞,consonant,uz
+2173,nld,Dutch,aː,vowel,uz
+2173,nld,Dutch,æ,vowel,uz
+2173,nld,Dutch,æː,vowel,uz
+2173,nld,Dutch,ɑ,vowel,uz
+2173,nld,Dutch,ɑː,vowel,uz
+2173,nld,Dutch,ɑu,vowel,uz
+2173,nld,Dutch,ɑuː,vowel,uz
+2173,nld,Dutch,b,consonant,uz
+2173,nld,Dutch,d,consonant,uz
+2173,nld,Dutch,eː,vowel,uz
+2173,nld,Dutch,ə,vowel,uz
+2173,nld,Dutch,ɛ,vowel,uz
+2173,nld,Dutch,ɛː,vowel,uz
+2173,nld,Dutch,ɛi,vowel,uz
+2173,nld,Dutch,ɛiː,vowel,uz
+2173,nld,Dutch,f,consonant,uz
+2173,nld,Dutch,ɣ,consonant,uz
+2173,nld,Dutch,ɦ,consonant,uz
+2173,nld,Dutch,i,vowel,uz
+2173,nld,Dutch,iː,vowel,uz
+2173,nld,Dutch,iːə,vowel,uz
+2173,nld,Dutch,ɪ,vowel,uz
+2173,nld,Dutch,j,consonant,uz
+2173,nld,Dutch,k,consonant,uz
+2173,nld,Dutch,l,consonant,uz
+2173,nld,Dutch,m,consonant,uz
+2173,nld,Dutch,n,consonant,uz
+2173,nld,Dutch,ŋ,consonant,uz
+2173,nld,Dutch,oː,vowel,uz
+2173,nld,Dutch,øː,vowel,uz
+2173,nld,Dutch,oːə,vowel,uz
+2173,nld,Dutch,œ,vowel,uz
+2173,nld,Dutch,œː,vowel,uz
+2173,nld,Dutch,œy,vowel,uz
+2173,nld,Dutch,œyː,vowel,uz
+2173,nld,Dutch,ɔ,vowel,uz
+2173,nld,Dutch,ɔː,vowel,uz
+2173,nld,Dutch,ɔːə,vowel,uz
+2173,nld,Dutch,ɔu,vowel,uz
+2173,nld,Dutch,ɔuː,vowel,uz
+2173,nld,Dutch,p,consonant,uz
+2173,nld,Dutch,ʀ,consonant,uz
+2173,nld,Dutch,s,consonant,uz
+2173,nld,Dutch,ʃ,consonant,uz
+2173,nld,Dutch,t,consonant,uz
+2173,nld,Dutch,u,vowel,uz
+2173,nld,Dutch,uː,vowel,uz
+2173,nld,Dutch,uːə,vowel,uz
+2173,nld,Dutch,v,consonant,uz
+2173,nld,Dutch,x,consonant,uz
+2173,nld,Dutch,y,vowel,uz
+2173,nld,Dutch,yː,vowel,uz
+2173,nld,Dutch,yːə,vowel,uz
+2173,nld,Dutch,ʏ,vowel,uz
+2173,nld,Dutch,z,consonant,uz
+2173,nld,Dutch,ʒ,consonant,uz
+2173,nld,Dutch,ʔ,consonant,uz
+2173,nld,Dutch,β̞,consonant,uz
+2174,nld,Dutch,a,vowel,uz
+2174,nld,Dutch,aː,vowel,uz
+2174,nld,Dutch,aɪ,vowel,uz
+2174,nld,Dutch,aʊ,vowel,uz
+2174,nld,Dutch,ɒ,vowel,uz
+2174,nld,Dutch,ɒː,vowel,uz
+2174,nld,Dutch,b,consonant,uz
+2174,nld,Dutch,d,consonant,uz
+2174,nld,Dutch,eː,vowel,uz
+2174,nld,Dutch,eə,vowel,uz
+2174,nld,Dutch,ei,vowel,uz
+2174,nld,Dutch,ə,vowel,uz
+2174,nld,Dutch,əʊ,vowel,uz
+2174,nld,Dutch,ɛ,vowel,uz
+2174,nld,Dutch,ɛː,vowel,uz
+2174,nld,Dutch,ɛə,vowel,uz
+2174,nld,Dutch,ɛɪ,vowel,uz
+2174,nld,Dutch,ɞʊ,vowel,uz
+2174,nld,Dutch,f,consonant,uz
+2174,nld,Dutch,ɣ,consonant,uz
+2174,nld,Dutch,h,consonant,uz
+2174,nld,Dutch,iː,vowel,uz
+2174,nld,Dutch,iə,vowel,uz
+2174,nld,Dutch,ɪ,vowel,uz
+2174,nld,Dutch,j,consonant,uz
+2174,nld,Dutch,k,consonant,uz
+2174,nld,Dutch,kʲ,consonant,uz
+2174,nld,Dutch,l,consonant,uz
+2174,nld,Dutch,m,consonant,uz
+2174,nld,Dutch,n,consonant,uz
+2174,nld,Dutch,ŋ,consonant,uz
+2174,nld,Dutch,o,vowel,uz
+2174,nld,Dutch,oː,vowel,uz
+2174,nld,Dutch,øː,vowel,uz
+2174,nld,Dutch,œ,vowel,uz
+2174,nld,Dutch,œː,vowel,uz
+2174,nld,Dutch,œʏ,vowel,uz
+2174,nld,Dutch,øy,vowel,uz
+2174,nld,Dutch,ɔ,vowel,uz
+2174,nld,Dutch,p,consonant,uz
+2174,nld,Dutch,pʲ,consonant,uz
+2174,nld,Dutch,r,consonant,uz
+2174,nld,Dutch,s,consonant,uz
+2174,nld,Dutch,ʃ,consonant,uz
+2174,nld,Dutch,t,consonant,uz
+2174,nld,Dutch,tʲ,consonant,uz
+2174,nld,Dutch,uː,vowel,uz
+2174,nld,Dutch,uɪ,vowel,uz
+2174,nld,Dutch,ʊ,vowel,uz
+2174,nld,Dutch,v,consonant,uz
+2174,nld,Dutch,x,consonant,uz
+2174,nld,Dutch,y,vowel,uz
+2174,nld,Dutch,yː,vowel,uz
+2174,nld,Dutch,ʏ,vowel,uz
+2174,nld,Dutch,z,consonant,uz
+2174,nld,Dutch,ʒ,consonant,uz
+2174,nld,Dutch,β̞,consonant,uz
+2175,eng,English (American),æ,vowel,uz
+2175,eng,English (American),aɪ,vowel,uz
+2175,eng,English (American),aʊ,vowel,uz
+2175,eng,English (American),ɑ,vowel,uz
+2175,eng,English (American),b,consonant,uz
+2175,eng,English (American),d,consonant,uz
+2175,eng,English (American),ð,consonant,uz
+2175,eng,English (American),d̠ʒ,consonant,uz
+2175,eng,English (American),eɪ̯,vowel,uz
+2175,eng,English (American),ə,vowel,uz
+2175,eng,English (American),ɛ,vowel,uz
+2175,eng,English (American),ɚː,vowel,uz
+2175,eng,English (American),f,consonant,uz
+2175,eng,English (American),ɡ,consonant,uz
+2175,eng,English (American),h,consonant,uz
+2175,eng,English (American),iɪ,vowel,uz
+2175,eng,English (American),ɪ,vowel,uz
+2175,eng,English (American),j,consonant,uz
+2175,eng,English (American),kʰ,consonant,uz
+2175,eng,English (American),l,consonant,uz
+2175,eng,English (American),m,consonant,uz
+2175,eng,English (American),n,consonant,uz
+2175,eng,English (American),ŋ,consonant,uz
+2175,eng,English (American),oʊ,vowel,uz
+2175,eng,English (American),ɔɪ,vowel,uz
+2175,eng,English (American),pʰ,consonant,uz
+2175,eng,English (American),ɹ,consonant,uz
+2175,eng,English (American),s,consonant,uz
+2175,eng,English (American),ʃ,consonant,uz
+2175,eng,English (American),tʰ,consonant,uz
+2175,eng,English (American),t̠ʃ,consonant,uz
+2175,eng,English (American),uː,vowel,uz
+2175,eng,English (American),ʊ,vowel,uz
+2175,eng,English (American),v,consonant,uz
+2175,eng,English (American),ʌ,vowel,uz
+2175,eng,English (American),w,consonant,uz
+2175,eng,English (American),z,consonant,uz
+2175,eng,English (American),ʒ,consonant,uz
+2175,eng,English (American),θ,consonant,uz
+2176,eng,American English,æ,vowel,uz
+2176,eng,American English,aɪ,vowel,uz
+2176,eng,American English,aʊ,vowel,uz
+2176,eng,American English,ɑ,vowel,uz
+2176,eng,American English,b,consonant,uz
+2176,eng,American English,d,consonant,uz
+2176,eng,American English,ð,consonant,uz
+2176,eng,American English,d̠ʒ,consonant,uz
+2176,eng,American English,ei,vowel,uz
+2176,eng,American English,ɛ,vowel,uz
+2176,eng,American English,ɚ,vowel,uz
+2176,eng,American English,f,consonant,uz
+2176,eng,American English,ɡ,consonant,uz
+2176,eng,American English,h,consonant,uz
+2176,eng,American English,i,vowel,uz
+2176,eng,American English,ɪ,vowel,uz
+2176,eng,American English,j,consonant,uz
+2176,eng,American English,kʰ,consonant,uz
+2176,eng,American English,l,consonant,uz
+2176,eng,American English,m,consonant,uz
+2176,eng,American English,n,consonant,uz
+2176,eng,American English,ŋ,consonant,uz
+2176,eng,American English,oʊ,vowel,uz
+2176,eng,American English,ɔ,vowel,uz
+2176,eng,American English,ɔɪ,vowel,uz
+2176,eng,American English,pʰ,consonant,uz
+2176,eng,American English,ɹ,consonant,uz
+2176,eng,American English,s,consonant,uz
+2176,eng,American English,ʃ,consonant,uz
+2176,eng,American English,tʰ,consonant,uz
+2176,eng,American English,t̠ʃ,consonant,uz
+2176,eng,American English,u,vowel,uz
+2176,eng,American English,ʊ,vowel,uz
+2176,eng,American English,v,consonant,uz
+2176,eng,American English,ʌ,vowel,uz
+2176,eng,American English,w,consonant,uz
+2176,eng,American English,z,consonant,uz
+2176,eng,American English,ʒ,consonant,uz
+2176,eng,American English,θ,consonant,uz
+2177,eng,English (Australian),æ,vowel,uz
+2177,eng,English (Australian),æɪ,vowel,uz
+2177,eng,English (Australian),æɔ,vowel,uz
+2177,eng,English (Australian),ɐ,vowel,uz
+2177,eng,English (Australian),ɐː,vowel,uz
+2177,eng,English (Australian),ɑe,vowel,uz
+2177,eng,English (Australian),b,consonant,uz
+2177,eng,English (Australian),d,consonant,uz
+2177,eng,English (Australian),ð,consonant,uz
+2177,eng,English (Australian),d̠ʒ,consonant,uz
+2177,eng,English (Australian),e,vowel,uz
+2177,eng,English (Australian),eː,vowel,uz
+2177,eng,English (Australian),əʉ,vowel,uz
+2177,eng,English (Australian),ɜː,vowel,uz
+2177,eng,English (Australian),f,consonant,uz
+2177,eng,English (Australian),ɡ,consonant,uz
+2177,eng,English (Australian),h,consonant,uz
+2177,eng,English (Australian),iː,vowel,uz
+2177,eng,English (Australian),ɪ,vowel,uz
+2177,eng,English (Australian),ɪə,vowel,uz
+2177,eng,English (Australian),j,consonant,uz
+2177,eng,English (Australian),k,consonant,uz
+2177,eng,English (Australian),kʰ,consonant,uz
+2177,eng,English (Australian),l,consonant,uz
+2177,eng,English (Australian),m,consonant,uz
+2177,eng,English (Australian),n,consonant,uz
+2177,eng,English (Australian),ŋ,consonant,uz
+2177,eng,English (Australian),oː,vowel,uz
+2177,eng,English (Australian),oɪ,vowel,uz
+2177,eng,English (Australian),ɔ,vowel,uz
+2177,eng,English (Australian),pʰ,consonant,uz
+2177,eng,English (Australian),ɹ,consonant,uz
+2177,eng,English (Australian),s,consonant,uz
+2177,eng,English (Australian),ʃ,consonant,uz
+2177,eng,English (Australian),tʰ,consonant,uz
+2177,eng,English (Australian),t̠ʃ,consonant,uz
+2177,eng,English (Australian),ʉː,vowel,uz
+2177,eng,English (Australian),ʊ,vowel,uz
+2177,eng,English (Australian),ʊə,vowel,uz
+2177,eng,English (Australian),v,consonant,uz
+2177,eng,English (Australian),w,consonant,uz
+2177,eng,English (Australian),z,consonant,uz
+2177,eng,English (Australian),ʒ,consonant,uz
+2177,eng,English (Australian),θ,consonant,uz
+2178,eng,English (British),a,vowel,uz
+2178,eng,English (British),aɪ,vowel,uz
+2178,eng,English (British),aʊ,vowel,uz
+2178,eng,English (British),ɑː,vowel,uz
+2178,eng,English (British),ɒ,vowel,uz
+2178,eng,English (British),b,consonant,uz
+2178,eng,English (British),d,consonant,uz
+2178,eng,English (British),ð,consonant,uz
+2178,eng,English (British),d̠ʒ,consonant,uz
+2178,eng,English (British),eː,vowel,uz
+2178,eng,English (British),eɪ,vowel,uz
+2178,eng,English (British),ə,vowel,uz
+2178,eng,English (British),ɛ,vowel,uz
+2178,eng,English (British),ɛʉ,vowel,uz
+2178,eng,English (British),f,consonant,uz
+2178,eng,English (British),ɡ,consonant,uz
+2178,eng,English (British),h,consonant,uz
+2178,eng,English (British),iː,vowel,uz
+2178,eng,English (British),ɪ,vowel,uz
+2178,eng,English (British),j,consonant,uz
+2178,eng,English (British),kʰ,consonant,uz
+2178,eng,English (British),l,consonant,uz
+2178,eng,English (British),m,consonant,uz
+2178,eng,English (British),n,consonant,uz
+2178,eng,English (British),ŋ,consonant,uz
+2178,eng,English (British),ɔː,vowel,uz
+2178,eng,English (British),ɔɪ,vowel,uz
+2178,eng,English (British),pʰ,consonant,uz
+2178,eng,English (British),ɹ,consonant,uz
+2178,eng,English (British),s,consonant,uz
+2178,eng,English (British),ʃ,consonant,uz
+2178,eng,English (British),tʰ,consonant,uz
+2178,eng,English (British),t̠ʃ,consonant,uz
+2178,eng,English (British),ʉː,vowel,uz
+2178,eng,English (British),ʊ,vowel,uz
+2178,eng,English (British),v,consonant,uz
+2178,eng,English (British),w,consonant,uz
+2178,eng,English (British),z,consonant,uz
+2178,eng,English (British),ʒ,consonant,uz
+2178,eng,English (British),θ,consonant,uz
+2179,eng,English (New Zealand),æe,vowel,uz
+2179,eng,English (New Zealand),æo,vowel,uz
+2179,eng,English (New Zealand),ɐ,vowel,uz
+2179,eng,English (New Zealand),ɐː,vowel,uz
+2179,eng,English (New Zealand),ɐʉ,vowel,uz
+2179,eng,English (New Zealand),ɑe,vowel,uz
+2179,eng,English (New Zealand),ɒ,vowel,uz
+2179,eng,English (New Zealand),ɒɯ,vowel,uz
+2179,eng,English (New Zealand),b,consonant,uz
+2179,eng,English (New Zealand),d,consonant,uz
+2179,eng,English (New Zealand),ð,consonant,uz
+2179,eng,English (New Zealand),d̠ʒ,consonant,uz
+2179,eng,English (New Zealand),e,vowel,uz
+2179,eng,English (New Zealand),eə,vowel,uz
+2179,eng,English (New Zealand),ɛ,vowel,uz
+2179,eng,English (New Zealand),ɘ,vowel,uz
+2179,eng,English (New Zealand),f,consonant,uz
+2179,eng,English (New Zealand),ɡ,consonant,uz
+2179,eng,English (New Zealand),h,consonant,uz
+2179,eng,English (New Zealand),i,vowel,uz
+2179,eng,English (New Zealand),iː,vowel,uz
+2179,eng,English (New Zealand),iə,vowel,uz
+2179,eng,English (New Zealand),j,consonant,uz
+2179,eng,English (New Zealand),kx,consonant,uz
+2179,eng,English (New Zealand),l,consonant,uz
+2179,eng,English (New Zealand),m,consonant,uz
+2179,eng,English (New Zealand),n,consonant,uz
+2179,eng,English (New Zealand),ŋ,consonant,uz
+2179,eng,English (New Zealand),oː,vowel,uz
+2179,eng,English (New Zealand),oe,vowel,uz
+2179,eng,English (New Zealand),ɵː,vowel,uz
+2179,eng,English (New Zealand),pʰ,consonant,uz
+2179,eng,English (New Zealand),ɹ,consonant,uz
+2179,eng,English (New Zealand),s,consonant,uz
+2179,eng,English (New Zealand),ʃ,consonant,uz
+2179,eng,English (New Zealand),ts,consonant,uz
+2179,eng,English (New Zealand),t̠ʃ,consonant,uz
+2179,eng,English (New Zealand),ʉː,vowel,uz
+2179,eng,English (New Zealand),ʉə,vowel,uz
+2179,eng,English (New Zealand),ʊ,vowel,uz
+2179,eng,English (New Zealand),v,consonant,uz
+2179,eng,English (New Zealand),w,consonant,uz
+2179,eng,English (New Zealand),z,consonant,uz
+2179,eng,English (New Zealand),ʒ,consonant,uz
+2179,eng,English (New Zealand),θ,consonant,uz
+2180,eng,English (British),a,vowel,uz
+2180,eng,English (British),aː,vowel,uz
+2180,eng,English (British),ɒ,vowel,uz
+2180,eng,English (British),ɒː,vowel,uz
+2180,eng,English (British),b,consonant,uz
+2180,eng,English (British),d,consonant,uz
+2180,eng,English (British),ð,consonant,uz
+2180,eng,English (British),d̠ʒ,consonant,uz
+2180,eng,English (British),eː,vowel,uz
+2180,eng,English (British),ə,vowel,uz
+2180,eng,English (British),ɛ,vowel,uz
+2180,eng,English (British),ɛː,vowel,uz
+2180,eng,English (British),f,consonant,uz
+2180,eng,English (British),ɡ,consonant,uz
+2180,eng,English (British),h,consonant,uz
+2180,eng,English (British),iː,vowel,uz
+2180,eng,English (British),ɪ,vowel,uz
+2180,eng,English (British),j,consonant,uz
+2180,eng,English (British),k,consonant,uz
+2180,eng,English (British),l,consonant,uz
+2180,eng,English (British),m,consonant,uz
+2180,eng,English (British),n,consonant,uz
+2180,eng,English (British),ŋ,consonant,uz
+2180,eng,English (British),oː,vowel,uz
+2180,eng,English (British),øː,vowel,uz
+2180,eng,English (British),ɔː,vowel,uz
+2180,eng,English (British),pʰ,consonant,uz
+2180,eng,English (British),ɹ,consonant,uz
+2180,eng,English (British),s,consonant,uz
+2180,eng,English (British),ʃ,consonant,uz
+2180,eng,English (British),tʰ,consonant,uz
+2180,eng,English (British),t̠ʃ,consonant,uz
+2180,eng,English (British),uː,vowel,uz
+2180,eng,English (British),ʊ,vowel,uz
+2180,eng,English (British),v,consonant,uz
+2180,eng,English (British),w,consonant,uz
+2180,eng,English (British),z,consonant,uz
+2180,eng,English (British),ʒ,consonant,uz
+2180,eng,English (British),θ,consonant,uz
+2182,fra,French,a,vowel,uz
+2182,fra,French,ɑ,vowel,uz
+2182,fra,French,ɑ̃,vowel,uz
+2182,fra,French,b,consonant,uz
+2182,fra,French,d̪,consonant,uz
+2182,fra,French,e,vowel,uz
+2182,fra,French,ə,vowel,uz
+2182,fra,French,ɛ,vowel,uz
+2182,fra,French,ɛ̃,vowel,uz
+2182,fra,French,f,consonant,uz
+2182,fra,French,ɡ,consonant,uz
+2182,fra,French,i,vowel,uz
+2182,fra,French,j,consonant,uz
+2182,fra,French,k,consonant,uz
+2182,fra,French,l̪,consonant,uz
+2182,fra,French,m,consonant,uz
+2182,fra,French,n,consonant,uz
+2182,fra,French,ɲ,consonant,uz
+2182,fra,French,ŋ,consonant,uz
+2182,fra,French,o,vowel,uz
+2182,fra,French,ø,vowel,uz
+2182,fra,French,œ,vowel,uz
+2182,fra,French,ɔ,vowel,uz
+2182,fra,French,ɔ̃,vowel,uz
+2182,fra,French,p,consonant,uz
+2182,fra,French,ʁ,consonant,uz
+2182,fra,French,s̪,consonant,uz
+2182,fra,French,ʃ,consonant,uz
+2182,fra,French,t̪,consonant,uz
+2182,fra,French,u,vowel,uz
+2182,fra,French,ɥ,consonant,uz
+2182,fra,French,v,consonant,uz
+2182,fra,French,w,consonant,uz
+2182,fra,French,y,vowel,uz
+2182,fra,French,z̪,consonant,uz
+2182,fra,French,ʒ,consonant,uz
+2184,deu,German,a,vowel,uz
+2184,deu,German,aː,vowel,uz
+2184,deu,German,aɪ,vowel,uz
+2184,deu,German,aʊ,vowel,uz
+2184,deu,German,b,consonant,uz
+2184,deu,German,d,consonant,uz
+2184,deu,German,e,vowel,uz
+2184,deu,German,ə,vowel,uz
+2184,deu,German,ɛ,vowel,uz
+2184,deu,German,ɛː,vowel,uz
+2184,deu,German,f,consonant,uz
+2184,deu,German,ɡ,consonant,uz
+2184,deu,German,h,consonant,uz
+2184,deu,German,iː,vowel,uz
+2184,deu,German,ɪ,vowel,uz
+2184,deu,German,j,consonant,uz
+2184,deu,German,kʰ,consonant,uz
+2184,deu,German,l,consonant,uz
+2184,deu,German,m,consonant,uz
+2184,deu,German,n,consonant,uz
+2184,deu,German,ŋ,consonant,uz
+2184,deu,German,oː,vowel,uz
+2184,deu,German,øː,vowel,uz
+2184,deu,German,œ,vowel,uz
+2184,deu,German,ɔ,vowel,uz
+2184,deu,German,ɔɪ,vowel,uz
+2184,deu,German,pʰ,consonant,uz
+2184,deu,German,ʁ,consonant,uz
+2184,deu,German,s,consonant,uz
+2184,deu,German,ʃ,consonant,uz
+2184,deu,German,tʰ,consonant,uz
+2184,deu,German,uː,vowel,uz
+2184,deu,German,ʊ,vowel,uz
+2184,deu,German,v,consonant,uz
+2184,deu,German,x,consonant,uz
+2184,deu,German,y,vowel,uz
+2184,deu,German,ʏː,vowel,uz
+2184,deu,German,z,consonant,uz
+2184,deu,German,ʒ,consonant,uz
+2184,deu,German,ʔ,consonant,uz
+2190,hin,Hindi,æ,vowel,uz
+2190,hin,Hindi,ɑ,vowel,uz
+2190,hin,Hindi,b,consonant,uz
+2190,hin,Hindi,b̤,consonant,uz
+2190,hin,Hindi,bː,consonant,uz
+2190,hin,Hindi,d̪,consonant,uz
+2190,hin,Hindi,d̪̤,consonant,uz
+2190,hin,Hindi,d̪ː,consonant,uz
+2190,hin,Hindi,d̪̤ː,consonant,uz
+2190,hin,Hindi,d̠ʒ,consonant,uz
+2190,hin,Hindi,d̤ʒ̤,consonant,uz
+2190,hin,Hindi,d̠ʒː,consonant,uz
+2190,hin,Hindi,d̤ʒ̤ː,consonant,uz
+2190,hin,Hindi,ɖ,consonant,uz
+2190,hin,Hindi,ɖ̤,consonant,uz
+2190,hin,Hindi,ɖː,consonant,uz
+2190,hin,Hindi,ɖ̤ː,consonant,uz
+2190,hin,Hindi,e,vowel,uz
+2190,hin,Hindi,ə,vowel,uz
+2190,hin,Hindi,ɛ,vowel,uz
+2190,hin,Hindi,f,consonant,uz
+2190,hin,Hindi,fː,consonant,uz
+2190,hin,Hindi,ɡ,consonant,uz
+2190,hin,Hindi,ɡ̤,consonant,uz
+2190,hin,Hindi,ɡː,consonant,uz
+2190,hin,Hindi,ɡ̤ː,consonant,uz
+2190,hin,Hindi,h,consonant,uz
+2190,hin,Hindi,i,vowel,uz
+2190,hin,Hindi,ɪ,vowel,uz
+2190,hin,Hindi,j,consonant,uz
+2190,hin,Hindi,k,consonant,uz
+2190,hin,Hindi,kː,consonant,uz
+2190,hin,Hindi,kʰ,consonant,uz
+2190,hin,Hindi,kʰː,consonant,uz
+2190,hin,Hindi,l,consonant,uz
+2190,hin,Hindi,lː,consonant,uz
+2190,hin,Hindi,m,consonant,uz
+2190,hin,Hindi,mː,consonant,uz
+2190,hin,Hindi,n,consonant,uz
+2190,hin,Hindi,nː,consonant,uz
+2190,hin,Hindi,ŋ,consonant,uz
+2190,hin,Hindi,ŋː,consonant,uz
+2190,hin,Hindi,o,vowel,uz
+2190,hin,Hindi,ɔ,vowel,uz
+2190,hin,Hindi,p,consonant,uz
+2190,hin,Hindi,pː,consonant,uz
+2190,hin,Hindi,pʰ,consonant,uz
+2190,hin,Hindi,pʰː,consonant,uz
+2190,hin,Hindi,rː,consonant,uz
+2190,hin,Hindi,ɽ,consonant,uz
+2190,hin,Hindi,ɽ̤,consonant,uz
+2190,hin,Hindi,ɾ,consonant,uz
+2190,hin,Hindi,s,consonant,uz
+2190,hin,Hindi,sː,consonant,uz
+2190,hin,Hindi,ʃ,consonant,uz
+2190,hin,Hindi,ʃː,consonant,uz
+2190,hin,Hindi,t̪,consonant,uz
+2190,hin,Hindi,t̪ː,consonant,uz
+2190,hin,Hindi,t̪ʰ,consonant,uz
+2190,hin,Hindi,t̪ʰː,consonant,uz
+2190,hin,Hindi,t̠ʃ,consonant,uz
+2190,hin,Hindi,t̠ʃː,consonant,uz
+2190,hin,Hindi,t̠ʃʰ,consonant,uz
+2190,hin,Hindi,t̠ʃʰː,consonant,uz
+2190,hin,Hindi,ʈ,consonant,uz
+2190,hin,Hindi,ʈː,consonant,uz
+2190,hin,Hindi,ʈʰ,consonant,uz
+2190,hin,Hindi,ʈʰː,consonant,uz
+2190,hin,Hindi,u,vowel,uz
+2190,hin,Hindi,ʊ,vowel,uz
+2190,hin,Hindi,ʋ,consonant,uz
+2190,hin,Hindi,ʋː,consonant,uz
+2190,hin,Hindi,z,consonant,uz
+2190,hin,Hindi,zː,consonant,uz
+2196,jpn,Japanese,a,vowel,uz
+2196,jpn,Japanese,b,consonant,uz
+2196,jpn,Japanese,d,consonant,uz
+2196,jpn,Japanese,d̠,consonant,uz
+2196,jpn,Japanese,e,vowel,uz
+2196,jpn,Japanese,ɡ,consonant,uz
+2196,jpn,Japanese,h,consonant,uz
+2196,jpn,Japanese,i,vowel,uz
+2196,jpn,Japanese,j,consonant,uz
+2196,jpn,Japanese,k,consonant,uz
+2196,jpn,Japanese,m,consonant,uz
+2196,jpn,Japanese,n,consonant,uz
+2196,jpn,Japanese,ɴ,consonant,uz
+2196,jpn,Japanese,o,vowel,uz
+2196,jpn,Japanese,p,consonant,uz
+2196,jpn,Japanese,s,consonant,uz
+2196,jpn,Japanese,t,consonant,uz
+2196,jpn,Japanese,ts,consonant,uz
+2196,jpn,Japanese,u,vowel,uz
+2196,jpn,Japanese,w,consonant,uz
+2196,jpn,Japanese,z,consonant,uz
+2197,kor,Korean,a,vowel,uz
+2197,kor,Korean,aː,vowel,uz
+2197,kor,Korean,e,vowel,uz
+2197,kor,Korean,eː,vowel,uz
+2197,kor,Korean,əː,vowel,uz
+2197,kor,Korean,ɛ,vowel,uz
+2197,kor,Korean,ɛː,vowel,uz
+2197,kor,Korean,h,consonant,uz
+2197,kor,Korean,i,vowel,uz
+2197,kor,Korean,iː,vowel,uz
+2197,kor,Korean,ia,vowel,uz
+2197,kor,Korean,ie,vowel,uz
+2197,kor,Korean,iɛ,vowel,uz
+2197,kor,Korean,io,vowel,uz
+2197,kor,Korean,iu,vowel,uz
+2197,kor,Korean,iʌ,vowel,uz
+2197,kor,Korean,k,consonant,uz
+2197,kor,Korean,k͉,consonant,uz
+2197,kor,Korean,kʰ,consonant,uz
+2197,kor,Korean,l,consonant,uz
+2197,kor,Korean,lː,consonant,uz
+2197,kor,Korean,m,consonant,uz
+2197,kor,Korean,n,consonant,uz
+2197,kor,Korean,ŋ,consonant,uz
+2197,kor,Korean,o,vowel,uz
+2197,kor,Korean,oː,vowel,uz
+2197,kor,Korean,p,consonant,uz
+2197,kor,Korean,p͉,consonant,uz
+2197,kor,Korean,pʰ,consonant,uz
+2197,kor,Korean,s,consonant,uz
+2197,kor,Korean,s͉,consonant,uz
+2197,kor,Korean,t,consonant,uz
+2197,kor,Korean,t͉,consonant,uz
+2197,kor,Korean,tɕ,consonant,uz
+2197,kor,Korean,t͉ɕ͉,consonant,uz
+2197,kor,Korean,tɕʰ,consonant,uz
+2197,kor,Korean,tʰ,consonant,uz
+2197,kor,Korean,u,vowel,uz
+2197,kor,Korean,uː,vowel,uz
+2197,kor,Korean,ua,vowel,uz
+2197,kor,Korean,ue,vowel,uz
+2197,kor,Korean,uɛ,vowel,uz
+2197,kor,Korean,ui,vowel,uz
+2197,kor,Korean,uʌ,vowel,uz
+2197,kor,Korean,ɯ,vowel,uz
+2197,kor,Korean,ɯː,vowel,uz
+2197,kor,Korean,ɯi,vowel,uz
+2197,kor,Korean,ʌ,vowel,uz
+2205,pes,Persian,æ,vowel,uz
+2205,pes,Persian,ɒ,vowel,uz
+2205,pes,Persian,b,consonant,uz
+2205,pes,Persian,d,consonant,uz
+2205,pes,Persian,d̠ʒ,consonant,uz
+2205,pes,Persian,e,vowel,uz
+2205,pes,Persian,f,consonant,uz
+2205,pes,Persian,ɡ,consonant,uz
+2205,pes,Persian,ɣ,consonant,uz
+2205,pes,Persian,h,consonant,uz
+2205,pes,Persian,i,vowel,uz
+2205,pes,Persian,j,consonant,uz
+2205,pes,Persian,kʰ,consonant,uz
+2205,pes,Persian,l,consonant,uz
+2205,pes,Persian,m,consonant,uz
+2205,pes,Persian,n,consonant,uz
+2205,pes,Persian,o,vowel,uz
+2205,pes,Persian,pʰ,consonant,uz
+2205,pes,Persian,r,consonant,uz
+2205,pes,Persian,s,consonant,uz
+2205,pes,Persian,ʃ,consonant,uz
+2205,pes,Persian,tʰ,consonant,uz
+2205,pes,Persian,t̠ʃ,consonant,uz
+2205,pes,Persian,u,vowel,uz
+2205,pes,Persian,v,consonant,uz
+2205,pes,Persian,x,consonant,uz
+2205,pes,Persian,z,consonant,uz
+2205,pes,Persian,ʒ,consonant,uz
+2205,pes,Persian,ʔ,consonant,uz
+2206,por,Portuguese (European),a,vowel,uz
+2206,por,Portuguese (European),ai,vowel,uz
+2206,por,Portuguese (European),au̜,vowel,uz
+2206,por,Portuguese (European),ɐ,vowel,uz
+2206,por,Portuguese (European),ɐ̃,vowel,uz
+2206,por,Portuguese (European),ɐi,vowel,uz
+2206,por,Portuguese (European),ɐ̃i,vowel,uz
+2206,por,Portuguese (European),ɐ̃u̜,vowel,uz
+2206,por,Portuguese (European),b,consonant,uz
+2206,por,Portuguese (European),d̪,consonant,uz
+2206,por,Portuguese (European),e,vowel,uz
+2206,por,Portuguese (European),ẽ,vowel,uz
+2206,por,Portuguese (European),eu̜,vowel,uz
+2206,por,Portuguese (European),ɛ,vowel,uz
+2206,por,Portuguese (European),ɛi,vowel,uz
+2206,por,Portuguese (European),ɛu̜,vowel,uz
+2206,por,Portuguese (European),f,consonant,uz
+2206,por,Portuguese (European),ɡ,consonant,uz
+2206,por,Portuguese (European),i,vowel,uz
+2206,por,Portuguese (European),ĩ,vowel,uz
+2206,por,Portuguese (European),iu̜,vowel,uz
+2206,por,Portuguese (European),k,consonant,uz
+2206,por,Portuguese (European),l̪ˠ,consonant,uz
+2206,por,Portuguese (European),ʎ,consonant,uz
+2206,por,Portuguese (European),m,consonant,uz
+2206,por,Portuguese (European),n̪,consonant,uz
+2206,por,Portuguese (European),ɲ,consonant,uz
+2206,por,Portuguese (European),o,vowel,uz
+2206,por,Portuguese (European),õ,vowel,uz
+2206,por,Portuguese (European),oi,vowel,uz
+2206,por,Portuguese (European),õi,vowel,uz
+2206,por,Portuguese (European),ɔ,vowel,uz
+2206,por,Portuguese (European),ɔi,vowel,uz
+2206,por,Portuguese (European),p,consonant,uz
+2206,por,Portuguese (European),ɾ,consonant,uz
+2206,por,Portuguese (European),ʁ,consonant,uz
+2206,por,Portuguese (European),s,consonant,uz
+2206,por,Portuguese (European),ʃ,consonant,uz
+2206,por,Portuguese (European),t̪,consonant,uz
+2206,por,Portuguese (European),u,vowel,uz
+2206,por,Portuguese (European),ũ,vowel,uz
+2206,por,Portuguese (European),ui,vowel,uz
+2206,por,Portuguese (European),ũi,vowel,uz
+2206,por,Portuguese (European),ɯ,vowel,uz
+2206,por,Portuguese (European),v,consonant,uz
+2206,por,Portuguese (European),z,consonant,uz
+2206,por,Portuguese (European),ʒ,consonant,uz
+2207,por,Portuguese (Brazilian),a,vowel,uz
+2207,por,Portuguese (Brazilian),aɪ̯,vowel,uz
+2207,por,Portuguese (Brazilian),aʊ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ɐ̃ɪ̯̃,vowel,uz
+2207,por,Portuguese (Brazilian),ɐ̃ʊ̯̃,vowel,uz
+2207,por,Portuguese (Brazilian),b,consonant,uz
+2207,por,Portuguese (Brazilian),d̪,consonant,uz
+2207,por,Portuguese (Brazilian),e,vowel,uz
+2207,por,Portuguese (Brazilian),eɪ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ẽɪ̯̃,vowel,uz
+2207,por,Portuguese (Brazilian),eʊ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ɛ,vowel,uz
+2207,por,Portuguese (Brazilian),ɛɪ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ɛʊ̯,vowel,uz
+2207,por,Portuguese (Brazilian),f,consonant,uz
+2207,por,Portuguese (Brazilian),ɡ,consonant,uz
+2207,por,Portuguese (Brazilian),ɣ,consonant,uz
+2207,por,Portuguese (Brazilian),i,vowel,uz
+2207,por,Portuguese (Brazilian),iʊ̯,vowel,uz
+2207,por,Portuguese (Brazilian),k,consonant,uz
+2207,por,Portuguese (Brazilian),l,consonant,uz
+2207,por,Portuguese (Brazilian),ʎ,consonant,uz
+2207,por,Portuguese (Brazilian),m,consonant,uz
+2207,por,Portuguese (Brazilian),n̪,consonant,uz
+2207,por,Portuguese (Brazilian),ɲ,consonant,uz
+2207,por,Portuguese (Brazilian),o,vowel,uz
+2207,por,Portuguese (Brazilian),oɪ̯,vowel,uz
+2207,por,Portuguese (Brazilian),õɪ̯̃,vowel,uz
+2207,por,Portuguese (Brazilian),oʊ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ɔ,vowel,uz
+2207,por,Portuguese (Brazilian),ɔɪ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ɔʊ̯,vowel,uz
+2207,por,Portuguese (Brazilian),p,consonant,uz
+2207,por,Portuguese (Brazilian),r,consonant,uz
+2207,por,Portuguese (Brazilian),ɾ,consonant,uz
+2207,por,Portuguese (Brazilian),s̪,consonant,uz
+2207,por,Portuguese (Brazilian),ʃ,consonant,uz
+2207,por,Portuguese (Brazilian),t̪,consonant,uz
+2207,por,Portuguese (Brazilian),u,vowel,uz
+2207,por,Portuguese (Brazilian),uɪ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ũɪ̯̃,vowel,uz
+2207,por,Portuguese (Brazilian),uʊ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ʊ̯aɪ̯,vowel,uz
+2207,por,Portuguese (Brazilian),ʊ̯ɐ̃,vowel,uz
+2207,por,Portuguese (Brazilian),v,consonant,uz
+2207,por,Portuguese (Brazilian),z,consonant,uz
+2207,por,Portuguese (Brazilian),ʒ,consonant,uz
+2210,spa,Spanish,a,vowel,uz
+2210,spa,Spanish,ai̯,vowel,uz
+2210,spa,Spanish,au̯,vowel,uz
+2210,spa,Spanish,b,consonant,uz
+2210,spa,Spanish,d̻,consonant,uz
+2210,spa,Spanish,e,vowel,uz
+2210,spa,Spanish,ei̯,vowel,uz
+2210,spa,Spanish,eu̯,vowel,uz
+2210,spa,Spanish,f,consonant,uz
+2210,spa,Spanish,ɡ,consonant,uz
+2210,spa,Spanish,i,vowel,uz
+2210,spa,Spanish,ia,vowel,uz
+2210,spa,Spanish,ie,vowel,uz
+2210,spa,Spanish,io,vowel,uz
+2210,spa,Spanish,iu,vowel,uz
+2210,spa,Spanish,ɟʝ,consonant,uz
+2210,spa,Spanish,l,consonant,uz
+2210,spa,Spanish,ʎ,consonant,uz
+2210,spa,Spanish,m,consonant,uz
+2210,spa,Spanish,n,consonant,uz
+2210,spa,Spanish,ɲ,consonant,uz
+2210,spa,Spanish,o,vowel,uz
+2210,spa,Spanish,oi̯,vowel,uz
+2210,spa,Spanish,ou̯,vowel,uz
+2210,spa,Spanish,p,consonant,uz
+2210,spa,Spanish,r,consonant,uz
+2210,spa,Spanish,ɾ,consonant,uz
+2210,spa,Spanish,s,consonant,uz
+2210,spa,Spanish,t̻,consonant,uz
+2210,spa,Spanish,t̠ʃ,consonant,uz
+2210,spa,Spanish,u,vowel,uz
+2210,spa,Spanish,ua,vowel,uz
+2210,spa,Spanish,ue,vowel,uz
+2210,spa,Spanish,uei̯,vowel,uz
+2210,spa,Spanish,ui,vowel,uz
+2210,spa,Spanish,u̯o,vowel,uz
+2210,spa,Spanish,x,consonant,uz
+2210,spa,Spanish,θ,consonant,uz
+2217,tur,Turkish,a,vowel,uz
+2217,tur,Turkish,aː,vowel,uz
+2217,tur,Turkish,b,consonant,uz
+2217,tur,Turkish,c,consonant,uz
+2217,tur,Turkish,d̪,consonant,uz
+2217,tur,Turkish,d̠ʒ,consonant,uz
+2217,tur,Turkish,e,vowel,uz
+2217,tur,Turkish,eː,vowel,uz
+2217,tur,Turkish,f,consonant,uz
+2217,tur,Turkish,ɡ,consonant,uz
+2217,tur,Turkish,ɣ,consonant,uz
+2217,tur,Turkish,h,consonant,uz
+2217,tur,Turkish,i,vowel,uz
+2217,tur,Turkish,iː,vowel,uz
+2217,tur,Turkish,j,consonant,uz
+2217,tur,Turkish,ɟ,consonant,uz
+2217,tur,Turkish,k,consonant,uz
+2217,tur,Turkish,l̪ˠ,consonant,uz
+2217,tur,Turkish,lʲ,consonant,uz
+2217,tur,Turkish,m,consonant,uz
+2217,tur,Turkish,n̪,consonant,uz
+2217,tur,Turkish,o,vowel,uz
+2217,tur,Turkish,œ,vowel,uz
+2217,tur,Turkish,p,consonant,uz
+2217,tur,Turkish,ɾ,consonant,uz
+2217,tur,Turkish,s̪,consonant,uz
+2217,tur,Turkish,ʃ,consonant,uz
+2217,tur,Turkish,t̪,consonant,uz
+2217,tur,Turkish,t̠ʃ,consonant,uz
+2217,tur,Turkish,u,vowel,uz
+2217,tur,Turkish,uː,vowel,uz
+2217,tur,Turkish,ɯ,vowel,uz
+2217,tur,Turkish,v,consonant,uz
+2217,tur,Turkish,y,vowel,uz
+2217,tur,Turkish,z̪,consonant,uz
+2217,tur,Turkish,ʒ,consonant,uz
+2252,eng,English,æ,vowel,ea
+2252,eng,English,aɪ,vowel,ea
+2252,eng,English,aʊ,vowel,ea
+2252,eng,English,ɑː,vowel,ea
+2252,eng,English,ɒ,vowel,ea
+2252,eng,English,b,consonant,ea
+2252,eng,English,d,consonant,ea
+2252,eng,English,ð,consonant,ea
+2252,eng,English,d̠ʒ,consonant,ea
+2252,eng,English,e,vowel,ea
+2252,eng,English,eə,vowel,ea
+2252,eng,English,eɪ,vowel,ea
+2252,eng,English,ə,vowel,ea
+2252,eng,English,əʊ,vowel,ea
+2252,eng,English,ɜː,vowel,ea
+2252,eng,English,f,consonant,ea
+2252,eng,English,ɡ,consonant,ea
+2252,eng,English,h,consonant,ea
+2252,eng,English,iː,vowel,ea
+2252,eng,English,ɪ,vowel,ea
+2252,eng,English,ɪə,vowel,ea
+2252,eng,English,j,consonant,ea
+2252,eng,English,kʰ,consonant,ea
+2252,eng,English,l,consonant,ea
+2252,eng,English,m,consonant,ea
+2252,eng,English,n,consonant,ea
+2252,eng,English,ŋ,consonant,ea
+2252,eng,English,ɔː,vowel,ea
+2252,eng,English,ɔɪ,vowel,ea
+2252,eng,English,pʰ,consonant,ea
+2252,eng,English,ɹ,consonant,ea
+2252,eng,English,s,consonant,ea
+2252,eng,English,ʃ,consonant,ea
+2252,eng,English,tʰ,consonant,ea
+2252,eng,English,t̠ʃ,consonant,ea
+2252,eng,English,uː,vowel,ea
+2252,eng,English,ʊ,vowel,ea
+2252,eng,English,ʊə,vowel,ea
+2252,eng,English,v,consonant,ea
+2252,eng,English,ʌ,vowel,ea
+2252,eng,English,w,consonant,ea
+2252,eng,English,z,consonant,ea
+2252,eng,English,ʒ,consonant,ea
+2252,eng,English,θ,consonant,ea
+2261,rus,Russian,a,vowel,ea
+2261,rus,Russian,b,consonant,ea
+2261,rus,Russian,bʲ,consonant,ea
+2261,rus,Russian,ɕː,consonant,ea
+2261,rus,Russian,d̪,consonant,ea
+2261,rus,Russian,d̪ʲ,consonant,ea
+2261,rus,Russian,e,vowel,ea
+2261,rus,Russian,f,consonant,ea
+2261,rus,Russian,fʲ,consonant,ea
+2261,rus,Russian,ɡ,consonant,ea
+2261,rus,Russian,ɡʲ,consonant,ea
+2261,rus,Russian,i,vowel,ea
+2261,rus,Russian,ɨ,vowel,ea
+2261,rus,Russian,j,consonant,ea
+2261,rus,Russian,k,consonant,ea
+2261,rus,Russian,kʲ,consonant,ea
+2261,rus,Russian,l,consonant,ea
+2261,rus,Russian,lʲ,consonant,ea
+2261,rus,Russian,m,consonant,ea
+2261,rus,Russian,mʲ,consonant,ea
+2261,rus,Russian,n̪,consonant,ea
+2261,rus,Russian,n̪ʲ,consonant,ea
+2261,rus,Russian,o,vowel,ea
+2261,rus,Russian,p,consonant,ea
+2261,rus,Russian,pʲ,consonant,ea
+2261,rus,Russian,r,consonant,ea
+2261,rus,Russian,ɾʲ,consonant,ea
+2261,rus,Russian,s,consonant,ea
+2261,rus,Russian,sʲ,consonant,ea
+2261,rus,Russian,ʂ,consonant,ea
+2261,rus,Russian,t̪,consonant,ea
+2261,rus,Russian,tɕ,consonant,ea
+2261,rus,Russian,t̪ʲ,consonant,ea
+2261,rus,Russian,t̪s,consonant,ea
+2261,rus,Russian,u,vowel,ea
+2261,rus,Russian,v,consonant,ea
+2261,rus,Russian,vʲ,consonant,ea
+2261,rus,Russian,x,consonant,ea
+2261,rus,Russian,xʲ,consonant,ea
+2261,rus,Russian,z,consonant,ea
+2261,rus,Russian,zʲ,consonant,ea
+2261,rus,Russian,ʐ,consonant,ea
+2269,fra,French,a,vowel,ea
+2269,fra,French,ɑ̃,vowel,ea
+2269,fra,French,b,consonant,ea
+2269,fra,French,d,consonant,ea
+2269,fra,French,e,vowel,ea
+2269,fra,French,ə,vowel,ea
+2269,fra,French,ɛ,vowel,ea
+2269,fra,French,ɛ̃,vowel,ea
+2269,fra,French,f,consonant,ea
+2269,fra,French,ɡ,consonant,ea
+2269,fra,French,i,vowel,ea
+2269,fra,French,j,consonant,ea
+2269,fra,French,k,consonant,ea
+2269,fra,French,l,consonant,ea
+2269,fra,French,m,consonant,ea
+2269,fra,French,n,consonant,ea
+2269,fra,French,ɲ,consonant,ea
+2269,fra,French,o,vowel,ea
+2269,fra,French,ø,vowel,ea
+2269,fra,French,œ,vowel,ea
+2269,fra,French,ɔ,vowel,ea
+2269,fra,French,ɔ̃,vowel,ea
+2269,fra,French,p,consonant,ea
+2269,fra,French,ʁ,consonant,ea
+2269,fra,French,s,consonant,ea
+2269,fra,French,ʃ,consonant,ea
+2269,fra,French,t,consonant,ea
+2269,fra,French,u,vowel,ea
+2269,fra,French,ɥ,consonant,ea
+2269,fra,French,v,consonant,ea
+2269,fra,French,w,consonant,ea
+2269,fra,French,y,vowel,ea
+2269,fra,French,z,consonant,ea
+2269,fra,French,ʒ,consonant,ea
+2287,kor,Korean,ɐ,vowel,ea
+2287,kor,Korean,ɑ̟ː,vowel,ea
+2287,kor,Korean,b̥,consonant,ea
+2287,kor,Korean,d̥,consonant,ea
+2287,kor,Korean,d̥ʑ̥,consonant,ea
+2287,kor,Korean,e̞,vowel,ea
+2287,kor,Korean,eː,vowel,ea
+2287,kor,Korean,ɛ̝,vowel,ea
+2287,kor,Korean,ɛː,vowel,ea
+2287,kor,Korean,ɘː,vowel,ea
+2287,kor,Korean,ɡ̊,consonant,ea
+2287,kor,Korean,h,consonant,ea
+2287,kor,Korean,iː,vowel,ea
+2287,kor,Korean,ɪ,vowel,ea
+2287,kor,Korean,ɨi,vowel,ea
+2287,kor,Korean,j,consonant,ea
+2287,kor,Korean,k,consonant,ea
+2287,kor,Korean,kʰ,consonant,ea
+2287,kor,Korean,m,consonant,ea
+2287,kor,Korean,n,consonant,ea
+2287,kor,Korean,ŋ,consonant,ea
+2287,kor,Korean,o̞̜,vowel,ea
+2287,kor,Korean,oː,vowel,ea
+2287,kor,Korean,p,consonant,ea
+2287,kor,Korean,pʰ,consonant,ea
+2287,kor,Korean,ɾ,consonant,ea
+2287,kor,Korean,s,consonant,ea
+2287,kor,Korean,sʰ,consonant,ea
+2287,kor,Korean,t,consonant,ea
+2287,kor,Korean,tɕ,consonant,ea
+2287,kor,Korean,tɕʰ,consonant,ea
+2287,kor,Korean,tʰ,consonant,ea
+2287,kor,Korean,uː,vowel,ea
+2287,kor,Korean,ɯ̽,vowel,ea
+2287,kor,Korean,ɯː,vowel,ea
+2287,kor,Korean,ʊ̜,vowel,ea
+2287,kor,Korean,ʌ,vowel,ea
+2287,kor,Korean,w,consonant,ea
+2303,spa,Spanish,a,vowel,ea
+2303,spa,Spanish,æ,vowel,ea
+2303,spa,Spanish,æi,vowel,ea
+2303,spa,Spanish,ai,vowel,ea
+2303,spa,Spanish,au,vowel,ea
+2303,spa,Spanish,b,consonant,ea
+2303,spa,Spanish,d̪,consonant,ea
+2303,spa,Spanish,e,vowel,ea
+2303,spa,Spanish,ei,vowel,ea
+2303,spa,Spanish,ɛ,vowel,ea
+2303,spa,Spanish,ɛi,vowel,ea
+2303,spa,Spanish,f,consonant,ea
+2303,spa,Spanish,ɡ,consonant,ea
+2303,spa,Spanish,i,vowel,ea
+2303,spa,Spanish,i̯a,vowel,ea
+2303,spa,Spanish,i̯æ,vowel,ea
+2303,spa,Spanish,i̯æi,vowel,ea
+2303,spa,Spanish,i̯e,vowel,ea
+2303,spa,Spanish,i̯ɛ,vowel,ea
+2303,spa,Spanish,i̯ɛi,vowel,ea
+2303,spa,Spanish,i̯o,vowel,ea
+2303,spa,Spanish,i̯ɔ,vowel,ea
+2303,spa,Spanish,ɟ,consonant,ea
+2303,spa,Spanish,k,consonant,ea
+2303,spa,Spanish,l,consonant,ea
+2303,spa,Spanish,ʎ,consonant,ea
+2303,spa,Spanish,m,consonant,ea
+2303,spa,Spanish,n̪,consonant,ea
+2303,spa,Spanish,ɲ,consonant,ea
+2303,spa,Spanish,o,vowel,ea
+2303,spa,Spanish,oi,vowel,ea
+2303,spa,Spanish,ɔ,vowel,ea
+2303,spa,Spanish,ɔi,vowel,ea
+2303,spa,Spanish,p,consonant,ea
+2303,spa,Spanish,r,consonant,ea
+2303,spa,Spanish,ɾ,consonant,ea
+2303,spa,Spanish,s,consonant,ea
+2303,spa,Spanish,t̪,consonant,ea
+2303,spa,Spanish,t̠ʃ,consonant,ea
+2303,spa,Spanish,u,vowel,ea
+2303,spa,Spanish,u̯a,vowel,ea
+2303,spa,Spanish,u̯æi,vowel,ea
+2303,spa,Spanish,u̯ɛi,vowel,ea
+2303,spa,Spanish,x,consonant,ea
+2303,spa,Spanish,θ,consonant,ea
+2308,spa,Spanish,ä,vowel,ea
+2308,spa,Spanish,b,consonant,ea
+2308,spa,Spanish,d̻,consonant,ea
+2308,spa,Spanish,e̞,vowel,ea
+2308,spa,Spanish,f,consonant,ea
+2308,spa,Spanish,ɡ,consonant,ea
+2308,spa,Spanish,i,vowel,ea
+2308,spa,Spanish,i̯,vowel,ea
+2308,spa,Spanish,ɟʝ,consonant,ea
+2308,spa,Spanish,k,consonant,ea
+2308,spa,Spanish,l,consonant,ea
+2308,spa,Spanish,m,consonant,ea
+2308,spa,Spanish,n,consonant,ea
+2308,spa,Spanish,ɲ,consonant,ea
+2308,spa,Spanish,o̞,vowel,ea
+2308,spa,Spanish,p,consonant,ea
+2308,spa,Spanish,ɾ,consonant,ea
+2308,spa,Spanish,s̺̠,consonant,ea
+2308,spa,Spanish,ʃ,consonant,ea
+2308,spa,Spanish,t̻,consonant,ea
+2308,spa,Spanish,t̠ʃ,consonant,ea
+2308,spa,Spanish,u,vowel,ea
+2308,spa,Spanish,u̯,vowel,ea
+2308,spa,Spanish,θ,consonant,ea
+2308,spa,Spanish,χ,consonant,ea
+2398,deu,German,a,vowel,ea
+2398,deu,German,aː,vowel,ea
+2398,deu,German,b,consonant,ea
+2398,deu,German,ç,consonant,ea
+2398,deu,German,d̺,consonant,ea
+2398,deu,German,d̠ʒ,consonant,ea
+2398,deu,German,eː,vowel,ea
+2398,deu,German,ə,vowel,ea
+2398,deu,German,ɛ,vowel,ea
+2398,deu,German,ɛː,vowel,ea
+2398,deu,German,f,consonant,ea
+2398,deu,German,ɡ,consonant,ea
+2398,deu,German,h,consonant,ea
+2398,deu,German,iː,vowel,ea
+2398,deu,German,ɪ,vowel,ea
+2398,deu,German,j,consonant,ea
+2398,deu,German,kʰ,consonant,ea
+2398,deu,German,l,consonant,ea
+2398,deu,German,m,consonant,ea
+2398,deu,German,n,consonant,ea
+2398,deu,German,ŋ,consonant,ea
+2398,deu,German,oː,vowel,ea
+2398,deu,German,øː,vowel,ea
+2398,deu,German,œ,vowel,ea
+2398,deu,German,ɔ,vowel,ea
+2398,deu,German,pf,consonant,ea
+2398,deu,German,pʰ,consonant,ea
+2398,deu,German,ʀ,consonant,ea
+2398,deu,German,s,consonant,ea
+2398,deu,German,ʃ,consonant,ea
+2398,deu,German,t̺ʰ,consonant,ea
+2398,deu,German,ts,consonant,ea
+2398,deu,German,t̠ʃ,consonant,ea
+2398,deu,German,uː,vowel,ea
+2398,deu,German,ʊ,vowel,ea
+2398,deu,German,v,consonant,ea
+2398,deu,German,yː,vowel,ea
+2398,deu,German,ʏ,vowel,ea
+2398,deu,German,z,consonant,ea
+2398,deu,German,ʒ,consonant,ea
+2405,nld,Dutch,ã,vowel,ea
+2405,nld,Dutch,aː,vowel,ea
+2405,nld,Dutch,ɑ,vowel,ea
+2405,nld,Dutch,b,consonant,ea
+2405,nld,Dutch,d,consonant,ea
+2405,nld,Dutch,eː,vowel,ea
+2405,nld,Dutch,ə,vowel,ea
+2405,nld,Dutch,ɛ,vowel,ea
+2405,nld,Dutch,ɛ̃,vowel,ea
+2405,nld,Dutch,ɛː,vowel,ea
+2405,nld,Dutch,ɛi,vowel,ea
+2405,nld,Dutch,f,consonant,ea
+2405,nld,Dutch,ɦ,consonant,ea
+2405,nld,Dutch,i,vowel,ea
+2405,nld,Dutch,iː,vowel,ea
+2405,nld,Dutch,ɪ,vowel,ea
+2405,nld,Dutch,j,consonant,ea
+2405,nld,Dutch,k,consonant,ea
+2405,nld,Dutch,l,consonant,ea
+2405,nld,Dutch,m,consonant,ea
+2405,nld,Dutch,n,consonant,ea
+2405,nld,Dutch,ŋ,consonant,ea
+2405,nld,Dutch,oː,vowel,ea
+2405,nld,Dutch,øː,vowel,ea
+2405,nld,Dutch,œː,vowel,ea
+2405,nld,Dutch,œy,vowel,ea
+2405,nld,Dutch,ɔ,vowel,ea
+2405,nld,Dutch,ɔ̃,vowel,ea
+2405,nld,Dutch,ɔː,vowel,ea
+2405,nld,Dutch,p,consonant,ea
+2405,nld,Dutch,ɾ,consonant,ea
+2405,nld,Dutch,s,consonant,ea
+2405,nld,Dutch,t,consonant,ea
+2405,nld,Dutch,u,vowel,ea
+2405,nld,Dutch,uː,vowel,ea
+2405,nld,Dutch,v,consonant,ea
+2405,nld,Dutch,ʋ,consonant,ea
+2405,nld,Dutch,ʌu,vowel,ea
+2405,nld,Dutch,y,vowel,ea
+2405,nld,Dutch,yː,vowel,ea
+2405,nld,Dutch,ʏ,vowel,ea
+2405,nld,Dutch,z,consonant,ea
+2405,nld,Dutch,χ,consonant,ea
+2416,tur,Turkish,ä,vowel,ea
+2416,tur,Turkish,äː,vowel,ea
+2416,tur,Turkish,æ,vowel,ea
+2416,tur,Turkish,b,consonant,ea
+2416,tur,Turkish,cʰ,consonant,ea
+2416,tur,Turkish,d̻,consonant,ea
+2416,tur,Turkish,d̠ʒ,consonant,ea
+2416,tur,Turkish,e̞,vowel,ea
+2416,tur,Turkish,e̞ː,vowel,ea
+2416,tur,Turkish,f,consonant,ea
+2416,tur,Turkish,ɡ,consonant,ea
+2416,tur,Turkish,h,consonant,ea
+2416,tur,Turkish,i,vowel,ea
+2416,tur,Turkish,iː,vowel,ea
+2416,tur,Turkish,j,consonant,ea
+2416,tur,Turkish,ɟ,consonant,ea
+2416,tur,Turkish,kʰ,consonant,ea
+2416,tur,Turkish,l̻,consonant,ea
+2416,tur,Turkish,ɫ̻,consonant,ea
+2416,tur,Turkish,m,consonant,ea
+2416,tur,Turkish,n̻,consonant,ea
+2416,tur,Turkish,ø̞,vowel,ea
+2416,tur,Turkish,o̞,vowel,ea
+2416,tur,Turkish,o̞ː,vowel,ea
+2416,tur,Turkish,pʰ,consonant,ea
+2416,tur,Turkish,ɾ̻,consonant,ea
+2416,tur,Turkish,s̻,consonant,ea
+2416,tur,Turkish,ʃ,consonant,ea
+2416,tur,Turkish,t̻ʰ,consonant,ea
+2416,tur,Turkish,t̠ʃʰ,consonant,ea
+2416,tur,Turkish,u,vowel,ea
+2416,tur,Turkish,uː,vowel,ea
+2416,tur,Turkish,ɯ,vowel,ea
+2416,tur,Turkish,ɯː,vowel,ea
+2416,tur,Turkish,ʋ,consonant,ea
+2416,tur,Turkish,y,vowel,ea
+2416,tur,Turkish,z̻,consonant,ea
+2416,tur,Turkish,ʒ,consonant,ea
+2443,ron,Romanian,ä,vowel,ea
+2443,ron,Romanian,b,consonant,ea
+2443,ron,Romanian,bʲ,consonant,ea
+2443,ron,Romanian,ç,consonant,ea
+2443,ron,Romanian,d̪,consonant,ea
+2443,ron,Romanian,dʲ,consonant,ea
+2443,ron,Romanian,d̠ʒ,consonant,ea
+2443,ron,Romanian,d̠ʒʲ,consonant,ea
+2443,ron,Romanian,e̞,vowel,ea
+2443,ron,Romanian,e̯ä,vowel,ea
+2443,ron,Romanian,ə,vowel,ea
+2443,ron,Romanian,f,consonant,ea
+2443,ron,Romanian,fʲ,consonant,ea
+2443,ron,Romanian,ɡ,consonant,ea
+2443,ron,Romanian,ɡʲ,consonant,ea
+2443,ron,Romanian,h,consonant,ea
+2443,ron,Romanian,i,vowel,ea
+2443,ron,Romanian,i̯,vowel,ea
+2443,ron,Romanian,ɨ,vowel,ea
+2443,ron,Romanian,k,consonant,ea
+2443,ron,Romanian,kʲ,consonant,ea
+2443,ron,Romanian,l,consonant,ea
+2443,ron,Romanian,lʲ,consonant,ea
+2443,ron,Romanian,m,consonant,ea
+2443,ron,Romanian,mʲ,consonant,ea
+2443,ron,Romanian,n̪,consonant,ea
+2443,ron,Romanian,nʲ,consonant,ea
+2443,ron,Romanian,o̞,vowel,ea
+2443,ron,Romanian,o̯ä,vowel,ea
+2443,ron,Romanian,p,consonant,ea
+2443,ron,Romanian,pʲ,consonant,ea
+2443,ron,Romanian,ɾ̪,consonant,ea
+2443,ron,Romanian,ɾʲ,consonant,ea
+2443,ron,Romanian,s̪,consonant,ea
+2443,ron,Romanian,sʲ,consonant,ea
+2443,ron,Romanian,ʃ,consonant,ea
+2443,ron,Romanian,ʃʲ,consonant,ea
+2443,ron,Romanian,t̪,consonant,ea
+2443,ron,Romanian,tʲ,consonant,ea
+2443,ron,Romanian,t̪s̪,consonant,ea
+2443,ron,Romanian,tsʲ,consonant,ea
+2443,ron,Romanian,t̠ʃ,consonant,ea
+2443,ron,Romanian,t̠ʃʲ,consonant,ea
+2443,ron,Romanian,u,vowel,ea
+2443,ron,Romanian,u̯,vowel,ea
+2443,ron,Romanian,v,consonant,ea
+2443,ron,Romanian,vʲ,consonant,ea
+2443,ron,Romanian,z̪,consonant,ea
+2443,ron,Romanian,zʲ,consonant,ea
+2443,ron,Romanian,ʒ,consonant,ea
+2443,ron,Romanian,ʒʲ,consonant,ea
+2457,cmn,Standard Chinese,a,vowel,ea
+2457,cmn,Standard Chinese,ai,vowel,ea
+2457,cmn,Standard Chinese,au,vowel,ea
+2457,cmn,Standard Chinese,ɕ,consonant,ea
+2457,cmn,Standard Chinese,ei,vowel,ea
+2457,cmn,Standard Chinese,ə,vowel,ea
+2457,cmn,Standard Chinese,ɤ,vowel,ea
+2457,cmn,Standard Chinese,f,consonant,ea
+2457,cmn,Standard Chinese,i,vowel,ea
+2457,cmn,Standard Chinese,ia,vowel,ea
+2457,cmn,Standard Chinese,iau,vowel,ea
+2457,cmn,Standard Chinese,ie,vowel,ea
+2457,cmn,Standard Chinese,iou,vowel,ea
+2457,cmn,Standard Chinese,iu,vowel,ea
+2457,cmn,Standard Chinese,j,consonant,ea
+2457,cmn,Standard Chinese,k,consonant,ea
+2457,cmn,Standard Chinese,kʰ,consonant,ea
+2457,cmn,Standard Chinese,l,consonant,ea
+2457,cmn,Standard Chinese,m,consonant,ea
+2457,cmn,Standard Chinese,n,consonant,ea
+2457,cmn,Standard Chinese,ŋ,consonant,ea
+2457,cmn,Standard Chinese,ou,vowel,ea
+2457,cmn,Standard Chinese,p,consonant,ea
+2457,cmn,Standard Chinese,pʰ,consonant,ea
+2457,cmn,Standard Chinese,ɹ̺,consonant,ea
+2457,cmn,Standard Chinese,s,consonant,ea
+2457,cmn,Standard Chinese,ʃ̺,consonant,ea
+2457,cmn,Standard Chinese,t,consonant,ea
+2457,cmn,Standard Chinese,tɕ,consonant,ea
+2457,cmn,Standard Chinese,tɕʰ,consonant,ea
+2457,cmn,Standard Chinese,tʰ,consonant,ea
+2457,cmn,Standard Chinese,ts,consonant,ea
+2457,cmn,Standard Chinese,tsʰ,consonant,ea
+2457,cmn,Standard Chinese,t̠ʃ̺,consonant,ea
+2457,cmn,Standard Chinese,t̠ʃ̺ʰ,consonant,ea
+2457,cmn,Standard Chinese,u,vowel,ea
+2457,cmn,Standard Chinese,ua,vowel,ea
+2457,cmn,Standard Chinese,uai,vowel,ea
+2457,cmn,Standard Chinese,uei,vowel,ea
+2457,cmn,Standard Chinese,uə,vowel,ea
+2457,cmn,Standard Chinese,uo,vowel,ea
+2457,cmn,Standard Chinese,w,consonant,ea
+2457,cmn,Standard Chinese,x,consonant,ea
+2457,cmn,Standard Chinese,y,vowel,ea
+2457,cmn,Standard Chinese,ye,vowel,ea
+2457,cmn,Standard Chinese,z̩,consonant,ea
+2515,eng,English,a,vowel,ea
+2515,eng,English,aɪ,vowel,ea
+2515,eng,English,aʊ,vowel,ea
+2515,eng,English,ɑː,vowel,ea
+2515,eng,English,ɒ,vowel,ea
+2515,eng,English,b,consonant,ea
+2515,eng,English,d,consonant,ea
+2515,eng,English,ð,consonant,ea
+2515,eng,English,d̠ʒ,consonant,ea
+2515,eng,English,eː,vowel,ea
+2515,eng,English,eɪ,vowel,ea
+2515,eng,English,ə,vowel,ea
+2515,eng,English,ɛ,vowel,ea
+2515,eng,English,ɛʉ,vowel,ea
+2515,eng,English,f,consonant,ea
+2515,eng,English,ɡ,consonant,ea
+2515,eng,English,h,consonant,ea
+2515,eng,English,iː,vowel,ea
+2515,eng,English,iɛ,vowel,ea
+2515,eng,English,ɪ,vowel,ea
+2515,eng,English,j,consonant,ea
+2515,eng,English,k,consonant,ea
+2515,eng,English,l,consonant,ea
+2515,eng,English,m,consonant,ea
+2515,eng,English,n,consonant,ea
+2515,eng,English,ŋ,consonant,ea
+2515,eng,English,ɔɪ,vowel,ea
+2515,eng,English,p,consonant,ea
+2515,eng,English,r,consonant,ea
+2515,eng,English,s,consonant,ea
+2515,eng,English,ʃ,consonant,ea
+2515,eng,English,t,consonant,ea
+2515,eng,English,t̠ʃ,consonant,ea
+2515,eng,English,ʉː,vowel,ea
+2515,eng,English,ʊ,vowel,ea
+2515,eng,English,v,consonant,ea
+2515,eng,English,w,consonant,ea
+2515,eng,English,z,consonant,ea
+2515,eng,English,ʒ,consonant,ea
+2515,eng,English,θ,consonant,ea
+2520,pes,Farsi,æ,vowel,ea
+2520,pes,Farsi,ɒː,vowel,ea
+2520,pes,Farsi,b,consonant,ea
+2520,pes,Farsi,d,consonant,ea
+2520,pes,Farsi,d̠ʒ,consonant,ea
+2520,pes,Farsi,e̞,vowel,ea
+2520,pes,Farsi,f,consonant,ea
+2520,pes,Farsi,ɡ,consonant,ea
+2520,pes,Farsi,ɢʁ,consonant,ea
+2520,pes,Farsi,h,consonant,ea
+2520,pes,Farsi,iː,vowel,ea
+2520,pes,Farsi,j,consonant,ea
+2520,pes,Farsi,kʰ,consonant,ea
+2520,pes,Farsi,l̪,consonant,ea
+2520,pes,Farsi,m,consonant,ea
+2520,pes,Farsi,n,consonant,ea
+2520,pes,Farsi,o̞,vowel,ea
+2520,pes,Farsi,pʰ,consonant,ea
+2520,pes,Farsi,r̪,consonant,ea
+2520,pes,Farsi,s,consonant,ea
+2520,pes,Farsi,ʃ,consonant,ea
+2520,pes,Farsi,tʰ,consonant,ea
+2520,pes,Farsi,t̠ʃʰ,consonant,ea
+2520,pes,Farsi,uː,vowel,ea
+2520,pes,Farsi,v,consonant,ea
+2520,pes,Farsi,z,consonant,ea
+2520,pes,Farsi,ʒ,consonant,ea
+2520,pes,Farsi,ʔ,consonant,ea
+2520,pes,Farsi,χ,consonant,ea
+2542,hin,Hindi,äː,vowel,ea
+2542,hin,Hindi,ã̈ː,vowel,ea
+2542,hin,Hindi,æ,vowel,ea
+2542,hin,Hindi,b,consonant,ea
+2542,hin,Hindi,b̤ʱ,consonant,ea
+2542,hin,Hindi,d̻,consonant,ea
+2542,hin,Hindi,d̻̤ʱ,consonant,ea
+2542,hin,Hindi,d̠ʒ,consonant,ea
+2542,hin,Hindi,d̤ʒ̤ʱ,consonant,ea
+2542,hin,Hindi,ɖ,consonant,ea
+2542,hin,Hindi,ɖ̤ʱ,consonant,ea
+2542,hin,Hindi,eː,vowel,ea
+2542,hin,Hindi,ẽː,vowel,ea
+2542,hin,Hindi,ə,vowel,ea
+2542,hin,Hindi,ə̃,vowel,ea
+2542,hin,Hindi,ɛː,vowel,ea
+2542,hin,Hindi,ɛ̃ː,vowel,ea
+2542,hin,Hindi,f,consonant,ea
+2542,hin,Hindi,ɡ,consonant,ea
+2542,hin,Hindi,ɡ̤ʱ,consonant,ea
+2542,hin,Hindi,ɦ,consonant,ea
+2542,hin,Hindi,iː,vowel,ea
+2542,hin,Hindi,ĩː,vowel,ea
+2542,hin,Hindi,ɪ,vowel,ea
+2542,hin,Hindi,ɪ̃,vowel,ea
+2542,hin,Hindi,j,consonant,ea
+2542,hin,Hindi,k,consonant,ea
+2542,hin,Hindi,kʰ,consonant,ea
+2542,hin,Hindi,l̻,consonant,ea
+2542,hin,Hindi,m,consonant,ea
+2542,hin,Hindi,n̻,consonant,ea
+2542,hin,Hindi,oː,vowel,ea
+2542,hin,Hindi,õː,vowel,ea
+2542,hin,Hindi,ɔː,vowel,ea
+2542,hin,Hindi,ɔ̃ː,vowel,ea
+2542,hin,Hindi,p,consonant,ea
+2542,hin,Hindi,pʰ,consonant,ea
+2542,hin,Hindi,r,consonant,ea
+2542,hin,Hindi,ɽ,consonant,ea
+2542,hin,Hindi,ɽ̤ʱ,consonant,ea
+2542,hin,Hindi,s,consonant,ea
+2542,hin,Hindi,ʂ,consonant,ea
+2542,hin,Hindi,ʃ,consonant,ea
+2542,hin,Hindi,t̻,consonant,ea
+2542,hin,Hindi,t̻ʰ,consonant,ea
+2542,hin,Hindi,t̠ʃ,consonant,ea
+2542,hin,Hindi,t̠ʃʰ,consonant,ea
+2542,hin,Hindi,ʈ,consonant,ea
+2542,hin,Hindi,ʈʰ,consonant,ea
+2542,hin,Hindi,uː,vowel,ea
+2542,hin,Hindi,ũː,vowel,ea
+2542,hin,Hindi,ʊ,vowel,ea
+2542,hin,Hindi,ʊ̃,vowel,ea
+2542,hin,Hindi,ʋ,consonant,ea
+2542,hin,Hindi,z,consonant,ea
+2592,als,Tosk Albanian,ä,vowel,ea
+2592,als,Tosk Albanian,b,consonant,ea
+2592,als,Tosk Albanian,c,consonant,ea
+2592,als,Tosk Albanian,d,consonant,ea
+2592,als,Tosk Albanian,ð͇ˠ,consonant,ea
+2592,als,Tosk Albanian,dz,consonant,ea
+2592,als,Tosk Albanian,d̠ʒ,consonant,ea
+2592,als,Tosk Albanian,e,vowel,ea
+2592,als,Tosk Albanian,ə,vowel,ea
+2592,als,Tosk Albanian,f,consonant,ea
+2592,als,Tosk Albanian,ɡ,consonant,ea
+2592,als,Tosk Albanian,h,consonant,ea
+2592,als,Tosk Albanian,i,vowel,ea
+2592,als,Tosk Albanian,i̯,vowel,ea
+2592,als,Tosk Albanian,j,consonant,ea
+2592,als,Tosk Albanian,ɟ,consonant,ea
+2592,als,Tosk Albanian,k,consonant,ea
+2592,als,Tosk Albanian,l,consonant,ea
+2592,als,Tosk Albanian,ɫ,consonant,ea
+2592,als,Tosk Albanian,m,consonant,ea
+2592,als,Tosk Albanian,n,consonant,ea
+2592,als,Tosk Albanian,ɲ,consonant,ea
+2592,als,Tosk Albanian,o,vowel,ea
+2592,als,Tosk Albanian,p,consonant,ea
+2592,als,Tosk Albanian,r,consonant,ea
+2592,als,Tosk Albanian,ɾ,consonant,ea
+2592,als,Tosk Albanian,s,consonant,ea
+2592,als,Tosk Albanian,ʃ,consonant,ea
+2592,als,Tosk Albanian,t,consonant,ea
+2592,als,Tosk Albanian,ts,consonant,ea
+2592,als,Tosk Albanian,t̠ʃ,consonant,ea
+2592,als,Tosk Albanian,u,vowel,ea
+2592,als,Tosk Albanian,u̯,vowel,ea
+2592,als,Tosk Albanian,v,consonant,ea
+2592,als,Tosk Albanian,y,vowel,ea
+2592,als,Tosk Albanian,z,consonant,ea
+2592,als,Tosk Albanian,ʒ,consonant,ea
+2592,als,Tosk Albanian,θ,consonant,ea
+2623,por,Portuguese,ä,vowel,ea
+2623,por,Portuguese,ã̈,vowel,ea
+2623,por,Portuguese,ɐ,vowel,ea
+2623,por,Portuguese,ɐ̃,vowel,ea
+2623,por,Portuguese,b,consonant,ea
+2623,por,Portuguese,d̪,consonant,ea
+2623,por,Portuguese,e,vowel,ea
+2623,por,Portuguese,ẽ,vowel,ea
+2623,por,Portuguese,ə,vowel,ea
+2623,por,Portuguese,ɛ,vowel,ea
+2623,por,Portuguese,f,consonant,ea
+2623,por,Portuguese,ɡ,consonant,ea
+2623,por,Portuguese,i,vowel,ea
+2623,por,Portuguese,ĩ,vowel,ea
+2623,por,Portuguese,i̯,vowel,ea
+2623,por,Portuguese,ĩ̯,vowel,ea
+2623,por,Portuguese,j,consonant,ea
+2623,por,Portuguese,k,consonant,ea
+2623,por,Portuguese,ɫ,consonant,ea
+2623,por,Portuguese,ʎ,consonant,ea
+2623,por,Portuguese,m,consonant,ea
+2623,por,Portuguese,n̪,consonant,ea
+2623,por,Portuguese,ɲ,consonant,ea
+2623,por,Portuguese,o,vowel,ea
+2623,por,Portuguese,õ,vowel,ea
+2623,por,Portuguese,ɔ,vowel,ea
+2623,por,Portuguese,p,consonant,ea
+2623,por,Portuguese,ɾ,consonant,ea
+2623,por,Portuguese,ʁ,consonant,ea
+2623,por,Portuguese,s̻,consonant,ea
+2623,por,Portuguese,ʃ,consonant,ea
+2623,por,Portuguese,t̪,consonant,ea
+2623,por,Portuguese,u,vowel,ea
+2623,por,Portuguese,ũ,vowel,ea
+2623,por,Portuguese,u̯,vowel,ea
+2623,por,Portuguese,ũ̯,vowel,ea
+2623,por,Portuguese,ɯ̽,vowel,ea
+2623,por,Portuguese,v,consonant,ea
+2623,por,Portuguese,w,consonant,ea
+2623,por,Portuguese,z̻,consonant,ea
+2623,por,Portuguese,ʒ,consonant,ea
+2624,ben,Bengali,æ,vowel,ea
+2624,ben,Bengali,æ̃,vowel,ea
+2624,ben,Bengali,æi̯,vowel,ea
+2624,ben,Bengali,ɑ,vowel,ea
+2624,ben,Bengali,ɑ̃,vowel,ea
+2624,ben,Bengali,ɑi̯,vowel,ea
+2624,ben,Bengali,b,consonant,ea
+2624,ben,Bengali,bʱ,consonant,ea
+2624,ben,Bengali,c,consonant,ea
+2624,ben,Bengali,cʰ,consonant,ea
+2624,ben,Bengali,d,consonant,ea
+2624,ben,Bengali,d̪,consonant,ea
+2624,ben,Bengali,dʱ,consonant,ea
+2624,ben,Bengali,d̪ʱ,consonant,ea
+2624,ben,Bengali,e̞,vowel,ea
+2624,ben,Bengali,ẽ̞,vowel,ea
+2624,ben,Bengali,ɡ,consonant,ea
+2624,ben,Bengali,ɡʱ,consonant,ea
+2624,ben,Bengali,h,consonant,ea
+2624,ben,Bengali,i,vowel,ea
+2624,ben,Bengali,ĩ,vowel,ea
+2624,ben,Bengali,j,consonant,ea
+2624,ben,Bengali,ɟ,consonant,ea
+2624,ben,Bengali,ɟʱ,consonant,ea
+2624,ben,Bengali,k,consonant,ea
+2624,ben,Bengali,kʰ,consonant,ea
+2624,ben,Bengali,l,consonant,ea
+2624,ben,Bengali,m,consonant,ea
+2624,ben,Bengali,n,consonant,ea
+2624,ben,Bengali,ŋ,consonant,ea
+2624,ben,Bengali,o,vowel,ea
+2624,ben,Bengali,õ,vowel,ea
+2624,ben,Bengali,ɔ,vowel,ea
+2624,ben,Bengali,ɔ̃,vowel,ea
+2624,ben,Bengali,ɔi̯,vowel,ea
+2624,ben,Bengali,p,consonant,ea
+2624,ben,Bengali,pʰ,consonant,ea
+2624,ben,Bengali,r,consonant,ea
+2624,ben,Bengali,s,consonant,ea
+2624,ben,Bengali,ʃ,consonant,ea
+2624,ben,Bengali,t,consonant,ea
+2624,ben,Bengali,t̪,consonant,ea
+2624,ben,Bengali,tʰ,consonant,ea
+2624,ben,Bengali,t̪ʰ,consonant,ea
+2624,ben,Bengali,u,vowel,ea
+2624,ben,Bengali,ũ,vowel,ea
+2624,ben,Bengali,w,consonant,ea

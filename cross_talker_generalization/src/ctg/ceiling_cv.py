@@ -16,17 +16,23 @@ X21_ITEM = re.compile(
 
 
 def _prepare_keys(dataset_id: str, rows: pd.DataFrame) -> list[str]:
+    required = ["item_id", "item_talker", "response_expected",
+                "exposure_test_condition_id", "exposure_test_condition.original"]
+    if rows[required].isna().any().any():
+        raise ValueError("missing behavioral ceiling cell identifiers")
+    rows["ceiling_condition_id"] = rows["exposure_test_condition_id"].astype(str)
     if dataset_id == "AN19":
         rows["ceiling_content_id"] = rows["response_expected"].astype(str)
         rows["ceiling_talker_id"] = rows["item_talker"].astype(str)
-        return ["ceiling_content_id", "ceiling_talker_id"]
+        return ["ceiling_condition_id", "ceiling_content_id", "ceiling_talker_id"]
     if dataset_id == "X21":
         parsed = rows["item_id"].astype(str).map(X21_ITEM.fullmatch)
         if parsed.isna().any():
             raise ValueError("an X21 item ID could not be parsed")
         rows["ceiling_content_id"] = parsed.map(lambda value: value.group("keyword"))
+        rows["ceiling_sentence_id"] = parsed.map(lambda value: value.group("sentence"))
         rows["ceiling_talker_id"] = rows["item_talker"].astype(str)
-        return ["ceiling_content_id", "ceiling_talker_id"]
+        return ["ceiling_condition_id", "ceiling_sentence_id", "ceiling_content_id", "ceiling_talker_id"]
     if dataset_id == "B23":
         rows["ceiling_content_id"] = rows["item_id"].astype(str).str.rsplit(".", n=1).str[-1]
         rows["ceiling_talker_id"] = rows["item_talker"].astype(str)
@@ -36,15 +42,32 @@ def _prepare_keys(dataset_id: str, rows: pd.DataFrame) -> list[str]:
 
 
 def compute_cross_validated_ceiling(
-    *, spec: DatasetSpec, folds_path: str | Path, output_dir: str | Path
+    *, spec: DatasetSpec, folds_path: str | Path, output_dir: str | Path,
+    missing_cell_policy: str = "error",
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Training-only item reference, conditional on experimental condition.
+
+    Default behavior rejects unseen training cells. The diagnostic-only
+    mark_unavailable policy retains those responses with missing predictions;
+    partial-coverage metrics must not normalize models on the complete sample.
+    """
+    if missing_cell_policy not in {"error", "mark_unavailable"}:
+        raise ValueError("missing_cell_policy must be error or mark_unavailable")
     folds_path = Path(folds_path).resolve()
     output_dir = Path(output_dir)
     folds = pd.read_csv(folds_path)
+    if folds["participant_id"].duplicated().any() or folds["fold"].isna().any():
+        raise ValueError("duplicate participants or missing fold assignments")
+    if not folds["fold"].isin([0, 1, 2]).all():
+        raise ValueError("expected integer folds 0, 1, 2")
     if set(folds["fold"].astype(int)) != {0, 1, 2}:
         raise ValueError("expected folds 0, 1, 2")
     behavior = pd.read_csv(spec.behavior)
     rows = behavior.loc[behavior["phase"].eq("test")].copy()
+    counts = rows[["response_correct", "response_incorrect"]]
+    if (counts.isna().any().any() or not np.isfinite(counts.to_numpy()).all()
+            or (counts < 0).any().any() or (counts.sum(axis=1) <= 0).any()):
+        raise ValueError("invalid behavioral response counts")
     rows = rows.merge(
         folds[["participant_id", "fold"]], on="participant_id", how="left", validate="many_to_one"
     )
@@ -67,9 +90,12 @@ def compute_cross_validated_ceiling(
             / (lookup["training_correct"] + lookup["training_incorrect"] + 1.0)
         )
         held_out = held_out.merge(lookup, on=keys, how="left", validate="many_to_one")
-        if held_out["predicted_probability"].isna().any():
+        if missing_cell_policy == "error" and held_out["predicted_probability"].isna().any():
             missing = held_out.loc[held_out["predicted_probability"].isna(), keys].drop_duplicates().head()
             raise ValueError(f"held-out ceiling cells absent from training fold {fold_id}:\n{missing}")
+        held_out["prediction_status"] = np.where(
+            held_out["predicted_probability"].notna(), "available", "unseen_training_cell"
+        )
         probability = held_out["predicted_probability"].clip(1e-12, 1 - 1e-12)
         held_out["log_loss"] = -(
             held_out["response_correct"] * np.log(probability)
@@ -87,7 +113,7 @@ def compute_cross_validated_ceiling(
         "dataset_id", "participant_id", "fold", "item_id", "item_talker",
         "response_expected", "response_correct", "response_incorrect", "n_trials",
         *keys, "training_correct", "training_incorrect", "predicted_probability",
-        "log_loss", "brier_sum",
+        "log_loss", "brier_sum", "prediction_status", "exposure_test_condition_id",
     ]
     prediction = prediction[output_columns].sort_values(
         ["fold", "participant_id", "item_id", "response_expected"]
@@ -95,18 +121,23 @@ def compute_cross_validated_ceiling(
     metric_rows = []
     for fold_id in (0, 1, 2, None):
         selected = prediction if fold_id is None else prediction.loc[prediction["fold"].eq(fold_id)]
-        total_trials = int(selected["n_trials"].sum())
+        available = selected.loc[selected["prediction_status"].eq("available")]
+        total_trials = int(available["n_trials"].sum())
         metric_rows.append(
             {
                 "dataset_id": spec.dataset_id,
                 "model_id": "cross_validated_behavioral_ceiling",
                 "scope": "oof_all" if fold_id is None else "oof_fold",
                 "fold": np.nan if fold_id is None else fold_id,
-                "n_rows": int(len(selected)),
+                "n_rows": int(len(available)),
                 "total_trials": total_trials,
-                "total_log_loss": float(selected["log_loss"].sum()),
-                "mean_log_loss": float(selected["log_loss"].sum() / total_trials),
-                "mean_brier": float(selected["brier_sum"].sum() / total_trials),
+                "requested_n_rows": int(len(selected)),
+                "requested_total_trials": int(selected["n_trials"].sum()),
+                "missing_rows": int(len(selected) - len(available)),
+                "status": "complete" if len(available) == len(selected) else "partial_coverage",
+                "total_log_loss": float(available["log_loss"].sum()) if total_trials else np.nan,
+                "mean_log_loss": float(available["log_loss"].sum() / total_trials) if total_trials else np.nan,
+                "mean_brier": float(available["brier_sum"].sum() / total_trials) if total_trials else np.nan,
             }
         )
     metrics = pd.DataFrame(metric_rows)
@@ -117,7 +148,7 @@ def compute_cross_validated_ceiling(
         output_dir / "provenance.json",
         {
             **runtime_record(),
-            "status": "complete",
+            "status": "complete" if prediction["prediction_status"].eq("available").all() else "partial_coverage",
             "stage": "cross_validated_behavioral_ceiling",
             "interpretation": "direct held-out prediction; no held-out refit",
             "dataset_id": spec.dataset_id,
@@ -126,6 +157,10 @@ def compute_cross_validated_ceiling(
             "folds_path": str(folds_path),
             "folds_sha256": sha256_file(folds_path),
             "item_keys": keys,
+            "cell_definition_version": "condition_and_token_context_v2",
+            "missing_cell_policy": missing_cell_policy,
+            "missing_prediction_rows": int(prediction["prediction_status"].ne("available").sum()),
+            "source_sha256": sha256_file(Path(__file__)),
             "smoothing": "Jeffreys Beta(0.5, 0.5)",
             "prediction_rows": int(len(prediction)),
         },

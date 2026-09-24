@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-09-17T06:09:28.062837+00:00",
+  "feature_keys": [
+    "tr_24"
+  ],
+  "feature_status_counts": {
+    "computed": 1
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-X21_hubert_ft_tsne-confirmatory-tr24-20260906-model-input.csv",
+  "input_sha256": "7c91f1fa4c86e5821b12d83fe0fcc1c13f2d0d01603846dbf4d7aa16fa104f4c",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "c345ee54b5ab7aef5966a50c02ca177ce219d05db598addabf880582c01857fe",
+    "cv_metrics.csv": "e6e872d0a7f61717e0a1645c207ef18ca54f7669b26f61bece75fa97b96cdd8a",
+    "diagnostics.csv": "ff390220723d87a8dadb17b71f1886eda7e74c0f2802b1c3beb5203a41b3a8cd",
+    "feature_manifest.csv": "86c59d3573ff87bc724bf95540736215cf099cbd91ce4b49f2c560296526d587",
+    "likelihood_ratio_tests.csv": "afe8d66404a5117b02bab8107db2d22fe786384b2520188321b4a05b4b0e55a2",
+    "oof_predictions.csv": "0cd30c04b4f578ad61bca039439e87638cba3127bcf99c3cdd0fd9a654bac2cf",
+    "software.csv": "1af5aefcf5e4993100d646b67f25195a889f548570f0c7d8b64dac56765367e8",
+    "train_test_scores.csv": "5e77895f0472109ae71c7e21483a049903f8d74cb08e35c4d3d2d628c258b281"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": -1,
+    "jobs": 4,
+    "model_set": "all",
+    "predictor_column": "raw_distance",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "2908f8e819bfbe93b68b06171429d6e866b6a0ceab72363207daa3dd22c3e73c",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 16,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

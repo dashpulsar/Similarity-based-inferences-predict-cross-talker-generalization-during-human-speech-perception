@@ -1,0 +1,4 @@
+"dataset_id","feature_key","held_out_fold","n_training_rows","n_held_out_rows","training_mean","training_sd"
+"AN19","cnn_3::overall_order_sensitive",0,3840,1920,279.760135490102,9.78838365209364
+"AN19","cnn_3::overall_order_sensitive",1,3840,1920,279.80247331103,10.0508545496628
+"AN19","cnn_3::overall_order_sensitive",2,3840,1920,279.523663862131,10.0051136253936

@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "manifest_recordings": 6261,
+  "output_counts": {
+    "ok": 6261
+  },
+  "empty_ipa_hypotheses": 389,
+  "elapsed_seconds": 260.7857620998984,
+  "run_key": "b0b1d12c0bebb6b556d1cbd38f29af8b136f0412421f9419d7a6cf7f6eb2920c",
+  "interpretation": "Machine-generated IPA hypotheses, not ground-truth transcriptions or phone boundaries."
+}

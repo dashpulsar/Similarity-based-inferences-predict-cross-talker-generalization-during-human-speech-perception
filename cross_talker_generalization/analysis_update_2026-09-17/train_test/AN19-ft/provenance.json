@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-09-17T06:12:17.924300+00:00",
+  "feature_keys": [
+    "cnn_2",
+    "cnn_3",
+    "cnn_4",
+    "cnn_5",
+    "cnn_6",
+    "tr_0",
+    "tr_10",
+    "tr_12",
+    "tr_14",
+    "tr_16",
+    "tr_18",
+    "tr_2",
+    "tr_20",
+    "tr_22",
+    "tr_24",
+    "tr_4",
+    "tr_6",
+    "tr_8"
+  ],
+  "feature_status_counts": {
+    "computed": 18
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\Similarity-based inferences predict cross-talker generalization during human speech perception\\cross_talker_generalization\\artifacts\\derived\\AN19-AN19_hubert_ft_tsne-confirmatory-model-input.csv",
+  "input_sha256": "33fe81c53f86d339c9e563989eff2fb25bc0cc82e0e4534d268e2b9f99842522",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "7722ce5c9ed79006285cce77a6ca348e42b1306d50e07ba96f2a8d8b28b9e802",
+    "cv_metrics.csv": "34f22dbf874cde628223ce35cf536249dae33fc65b1ad8a5be7afa955e6ab3b5",
+    "diagnostics.csv": "70b54577cb92a9aefb89a4d30deb3ccabafdf5d56f062d38fe7f5d2dbdeee054",
+    "feature_manifest.csv": "c12ed88f0dd694dc22c48dc41da772593269a070480fd66ea5946b287bc60fcd",
+    "likelihood_ratio_tests.csv": "7b5361bfc9f576d611a47f5a15ec84d33cd5b7ea93eecf7180e57f2323e76edc",
+    "oof_predictions.csv": "07a9a35155b03fb37dde0ab618cc49ecd3a4115cda4eac3ba359fe83a58136a0",
+    "software.csv": "c66048e3f5f07ca261a0c3ce07340b271c521ef2347c3cd53997f762bf60db34",
+    "train_test_scores.csv": "e8b09d34878db05136bd3c09ce031fe054b69b2eb9dd7517022f97e92f3f2ace"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": -1,
+    "jobs": 4,
+    "model_set": "all",
+    "predictor_column": "raw_distance",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "2908f8e819bfbe93b68b06171429d6e866b6a0ceab72363207daa3dd22c3e73c",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 288,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

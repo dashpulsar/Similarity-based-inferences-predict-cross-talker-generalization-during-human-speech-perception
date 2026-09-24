@@ -1,0 +1,3 @@
+"dataset_id","feature_key","comparison_id","reduced_model","full_model","reduced_log_likelihood","full_log_likelihood","delta_log_likelihood","chisq","df","p_value","status","reason"
+"B23","tr_12::between_type_sentence","predictor_beyond_condition","M_condition","M_joint",-14865.8376770695,-14862.307861318,3.529815751559,7.059631503118,1,0.00788402130406883,"ok",
+"B23","tr_12::between_type_sentence","condition_beyond_predictor","M_predictor","M_joint",-14866.3836730875,-14862.307861318,4.07581176952772,8.15162353905544,7,0.319414072863188,"ok",

@@ -1,0 +1,17 @@
+dataset_id,feature_key,scope,fold,model_id,n_rows,total_trials,total_log_loss,mean_log_loss
+B23,tr_24::overall_order_sensitive,oof_all,,M_condition,5820,31234,17833.1985630717,0.570954682815897
+B23,tr_24::overall_order_sensitive,oof_all,,M_joint,5820,31234,18165.4052160387,0.581590741372821
+B23,tr_24::overall_order_sensitive,oof_all,,M_null,5820,31234,17768.3096847155,0.568877175024507
+B23,tr_24::overall_order_sensitive,oof_all,,M_predictor,5820,31234,17786.508740564,0.569459843137734
+B23,tr_24::overall_order_sensitive,oof_fold,0.0,M_condition,1920,10304,5991.23549100003,0.581447543769413
+B23,tr_24::overall_order_sensitive,oof_fold,0.0,M_joint,1920,10304,6279.41216958899,0.609415000930608
+B23,tr_24::overall_order_sensitive,oof_fold,0.0,M_null,1920,10304,5849.79712015317,0.567720993803685
+B23,tr_24::overall_order_sensitive,oof_fold,0.0,M_predictor,1920,10304,5922.2246230338,0.574750060465237
+B23,tr_24::overall_order_sensitive,oof_fold,1.0,M_condition,2160,11592,6434.14445631958,0.555050418937161
+B23,tr_24::overall_order_sensitive,oof_fold,1.0,M_joint,2160,11592,6435.62106862423,0.555177800951021
+B23,tr_24::overall_order_sensitive,oof_fold,1.0,M_null,2160,11592,6473.60236365666,0.558454310184322
+B23,tr_24::overall_order_sensitive,oof_fold,1.0,M_predictor,2160,11592,6453.27142654404,0.556700433621812
+B23,tr_24::overall_order_sensitive,oof_fold,2.0,M_condition,1740,9338,5407.81861575212,0.579119577613206
+B23,tr_24::overall_order_sensitive,oof_fold,2.0,M_joint,1740,9338,5450.37197782546,0.583676587901634
+B23,tr_24::overall_order_sensitive,oof_fold,2.0,M_null,1740,9338,5444.91020090563,0.583091689966334
+B23,tr_24::overall_order_sensitive,oof_fold,2.0,M_predictor,1740,9338,5411.01269098613,0.579461628934047

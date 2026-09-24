@@ -1,0 +1,2 @@
+"status","z","log_likelihood","coefficient","std_error","singular","convergence","n_rows","participants","n_word_responses","similarity_mean","similarity_sd","fit_seconds","warnings","lme4_version"
+"ok",0.241466546179124,-1544.81114981466,0.0233760197175868,0.0968085231162665,FALSE,"ok",3791,80,3791,2.2219026390757e-08,2.77953785751144e-07,1.75,"","1.1.35.5"

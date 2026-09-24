@@ -1,0 +1,252 @@
+{
+  "status": "passed",
+  "model_fits_run": 0,
+  "source_runs": [
+    {
+      "run": "AN19-base",
+      "score_sha256": "7e27dbf11e299bf45c1913a02bd923242d03c0d99af9354e548a5f10626d4929",
+      "input_sha256": "c035d990e5eb2ca2f40962ce1df9669a7bdb6fbf32ed72ab619c268a15d4f5ca",
+      "score_pairs": 216,
+      "status": "passed"
+    },
+    {
+      "run": "AN19-ft",
+      "score_sha256": "e8b09d34878db05136bd3c09ce031fe054b69b2eb9dd7517022f97e92f3f2ace",
+      "input_sha256": "33fe81c53f86d339c9e563989eff2fb25bc0cc82e0e4534d268e2b9f99842522",
+      "score_pairs": 216,
+      "status": "passed"
+    },
+    {
+      "run": "AN19-acoustic",
+      "score_sha256": "0df069eeb9cb8647c075fe55f8c5140ba414db77897e5e5538e451e30591ba86",
+      "input_sha256": "b43103e8f7f42e0099b4f8ca92e3332a276a4762233c90ac2ca9f894d7b450a7",
+      "score_pairs": 24,
+      "status": "passed"
+    },
+    {
+      "run": "X21-acoustic",
+      "score_sha256": "c33dd5d33f147d7e0992d2f2f5e3b8787dc961bbd4ad29940556779e025ea0b4",
+      "input_sha256": "a1c54bcb77f9ee252354d2b7ce5e499a599a715751454fe8542733cf1791ff4d",
+      "score_pairs": 24,
+      "status": "passed"
+    },
+    {
+      "run": "B23-acoustic",
+      "score_sha256": "e4fb7fa9a98fe2d0dbc2bccbc4f7ac448299d26338a12abc6c6d18e66bf7e388",
+      "input_sha256": "2719fb30758fc78a4d4244d51b1684a3cc6037a48eb847bb2f337c5cc3c09eda",
+      "score_pairs": 24,
+      "status": "passed"
+    },
+    {
+      "run": "X21-base",
+      "score_sha256": "75cba5e01fe3d268e095d640498b78e6a9a026287852adf39c3468720ac4ad16",
+      "input_sha256": "cac303fb4e05282d2d7a5eb8c83c53aa61d894019a6610665622b587ba9dde33",
+      "score_pairs": 216,
+      "status": "passed"
+    },
+    {
+      "run": "X21-ft",
+      "score_sha256": "377f63da918733748acebbcbdeaca3e0156591309777342dbe3a3e8eea68d042",
+      "input_sha256": "c7fbf435985b74f5e2f510fc1ba26fb92c1876b2b5bf07c8566296d66caa585a",
+      "score_pairs": 216,
+      "status": "passed"
+    },
+    {
+      "run": "B23-base",
+      "score_sha256": "4e37575750cf2571de62e5398881f67f295a59fcf76c67a7047cc72dd8ea9aa5",
+      "input_sha256": "eab8ea37a25b660c26ad1e3e1d073700bd1d6a66c8d758cf9b255ecc196fdfdb",
+      "score_pairs": 216,
+      "status": "passed"
+    },
+    {
+      "run": "B23-ft",
+      "score_sha256": "52b7a66e567bcf476780898235a0bc651a2c7c28ca47e73d2fd4f8099a56f0a0",
+      "input_sha256": "5c4c755a14ab07bf2cd3b5b68d7e13fa8bfe05fa7daaaab4dd52ab8e63e8c451",
+      "score_pairs": 216,
+      "status": "passed"
+    }
+  ],
+  "all_model_pairs": 1368,
+  "all_model_summaries": 456,
+  "plotted_unique_specifications": 114,
+  "plotted_fold_ratios": 342,
+  "predictor_intervals_containing_one": 114,
+  "neural_ranges": [
+    {
+      "dataset": "AN19",
+      "n_layers_variants": 36,
+      "mean_ratio_min": 0.9996148018754418,
+      "mean_ratio_max": 1.0008934406704617,
+      "single_fold_min": 0.9886901590484252,
+      "single_fold_max": 1.0117492390455225
+    },
+    {
+      "dataset": "B23",
+      "n_layers_variants": 36,
+      "mean_ratio_min": 1.0005192297205128,
+      "mean_ratio_max": 1.0006903502318627,
+      "single_fold_min": 0.9871072204506662,
+      "single_fold_max": 1.0220165926686189
+    },
+    {
+      "dataset": "X21",
+      "n_layers_variants": 36,
+      "mean_ratio_min": 1.0058501837433425,
+      "mean_ratio_max": 1.0067882285225365,
+      "single_fold_min": 0.8688765584804984,
+      "single_fold_max": 1.0942798219266778
+    }
+  ],
+  "fold_accuracy": [
+    {
+      "dataset": "AN19",
+      "fold": 0,
+      "word_responses": 1894,
+      "participants": 40,
+      "accuracy": 0.5776135163674763
+    },
+    {
+      "dataset": "AN19",
+      "fold": 1,
+      "word_responses": 1895,
+      "participants": 40,
+      "accuracy": 0.5825857519788918
+    },
+    {
+      "dataset": "AN19",
+      "fold": 2,
+      "word_responses": 1896,
+      "participants": 40,
+      "accuracy": 0.5822784810126582
+    },
+    {
+      "dataset": "X21",
+      "fold": 0,
+      "word_responses": 5508,
+      "participants": 107,
+      "accuracy": 0.8542120551924474
+    },
+    {
+      "dataset": "X21",
+      "fold": 1,
+      "word_responses": 5503,
+      "participants": 107,
+      "accuracy": 0.8257314192258768
+    },
+    {
+      "dataset": "X21",
+      "fold": 2,
+      "word_responses": 5466,
+      "participants": 106,
+      "accuracy": 0.8305890962312477
+    },
+    {
+      "dataset": "B23",
+      "fold": 0,
+      "word_responses": 18032,
+      "participants": 56,
+      "accuracy": 0.7259871339840284
+    },
+    {
+      "dataset": "B23",
+      "fold": 1,
+      "word_responses": 18032,
+      "participants": 56,
+      "accuracy": 0.7357475598935226
+    },
+    {
+      "dataset": "B23",
+      "fold": 2,
+      "word_responses": 18032,
+      "participants": 56,
+      "accuracy": 0.7377994676131322
+    }
+  ],
+  "x21_base_tr24_model_comparison": [
+    {
+      "fold": 0,
+      "model_id": "M_null",
+      "train_mean_log_loss": 0.501989368446607,
+      "test_mean_log_loss": 0.438815958089752,
+      "ratio": 0.8741538878555466
+    },
+    {
+      "fold": 0,
+      "model_id": "M_condition",
+      "train_mean_log_loss": 0.494388906045235,
+      "test_mean_log_loss": 0.433632554985634,
+      "ratio": 0.8771081828158135
+    },
+    {
+      "fold": 0,
+      "model_id": "M_predictor",
+      "train_mean_log_loss": 0.492219622864308,
+      "test_mean_log_loss": 0.42804975330306,
+      "ratio": 0.8696316307183513
+    },
+    {
+      "fold": 0,
+      "model_id": "M_joint",
+      "train_mean_log_loss": 0.489067190197914,
+      "test_mean_log_loss": 0.427833621208902,
+      "ratio": 0.8747951810788366
+    },
+    {
+      "fold": 1,
+      "model_id": "M_null",
+      "train_mean_log_loss": 0.481820632947025,
+      "test_mean_log_loss": 0.526326415315823,
+      "ratio": 1.092370021799567
+    },
+    {
+      "fold": 1,
+      "model_id": "M_condition",
+      "train_mean_log_loss": 0.473033542578626,
+      "test_mean_log_loss": 0.518855906706659,
+      "ratio": 1.096869164664822
+    },
+    {
+      "fold": 1,
+      "model_id": "M_predictor",
+      "train_mean_log_loss": 0.471070779083904,
+      "test_mean_log_loss": 0.515144826708248,
+      "ratio": 1.093561412809462
+    },
+    {
+      "fold": 1,
+      "model_id": "M_joint",
+      "train_mean_log_loss": 0.468255848878336,
+      "test_mean_log_loss": 0.514149255440054,
+      "ratio": 1.0980092542819304
+    },
+    {
+      "fold": 2,
+      "model_id": "M_null",
+      "train_mean_log_loss": 0.491584850800048,
+      "test_mean_log_loss": 0.516997829300989,
+      "ratio": 1.051696016383706
+    },
+    {
+      "fold": 2,
+      "model_id": "M_condition",
+      "train_mean_log_loss": 0.484581093844049,
+      "test_mean_log_loss": 0.509362069816244,
+      "ratio": 1.0511389657727137
+    },
+    {
+      "fold": 2,
+      "model_id": "M_predictor",
+      "train_mean_log_loss": 0.481164935989774,
+      "test_mean_log_loss": 0.507773610648842,
+      "ratio": 1.0553005272596037
+    },
+    {
+      "fold": 2,
+      "model_id": "M_joint",
+      "train_mean_log_loss": 0.480246127570458,
+      "test_mean_log_loss": 0.505332156364831,
+      "ratio": 1.0522357752706557
+    }
+  ],
+  "limitation": "This checks saved score arithmetic, pairing, metadata and hashes, plus source-code review. It does not rerun model fitting or regenerate probabilities."
+}

@@ -1,0 +1,511 @@
+[
+  {
+    "page": 1,
+    "id": "figure_1ab_method",
+    "removed_annotations": [
+      "Raw activations; first and last shown",
+      "Lines join adjacent frames",
+      "Same coordinates; zoomed to the word",
+      "L1-English, male, talker 055",
+      "1,024 latent dimensions",
+      "One 3-D vector per frame"
+    ],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      1368.0,
+      388.79998779296875
+    ]
+  },
+  {
+    "page": 2,
+    "id": "language_capitals_worldmap",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      936.0,
+      460.0
+    ]
+  },
+  {
+    "page": 3,
+    "id": "figure_1d_phonological_inventory_similarity",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      785.99951171875,
+      526.7994995117188
+    ]
+  },
+  {
+    "page": 4,
+    "id": "english_phonology_similarity_heatmap",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 36.48162841796875,
+    "dimensions_points": [
+      1044.0,
+      684.4816284179688
+    ]
+  },
+  {
+    "page": 5,
+    "id": "figure_2a_an19_42_talker_distance_linear",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      911.2518310546875,
+      850.7994995117188
+    ]
+  },
+  {
+    "page": 6,
+    "id": "figure_2a_an19_42_talker_similarity_linear",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      928.9767456054688,
+      845.3389892578125
+    ]
+  },
+  {
+    "page": 7,
+    "id": "AN19_all_segments_similarity",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      720.0,
+      489.6000061035156
+    ]
+  },
+  {
+    "page": 8,
+    "id": "an19_phone_similarity_01",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      945.8148803710938,
+      498.239990234375
+    ]
+  },
+  {
+    "page": 9,
+    "id": "an19_phone_similarity_02",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      945.8148803710938,
+      498.239990234375
+    ]
+  },
+  {
+    "page": 10,
+    "id": "an19_phone_similarity_03",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      945.8148803710938,
+      498.239990234375
+    ]
+  },
+  {
+    "page": 11,
+    "id": "figure_2c_control_similarity_with_marginals",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      914.0505981445312,
+      455.9012451171875
+    ]
+  },
+  {
+    "page": 12,
+    "id": "sbi_an19_base_z",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      541.1995239257812
+    ]
+  },
+  {
+    "page": 13,
+    "id": "sbi_x21_base_z",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      541.1995239257812
+    ]
+  },
+  {
+    "page": 14,
+    "id": "sbi_b23_base_z",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      541.1995239257812
+    ]
+  },
+  {
+    "page": 15,
+    "id": "hve_x21_z_01",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 16,
+    "id": "hve_x21_loglik_01",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 17,
+    "id": "x21_s_curves_by_condition",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      999.1199951171875,
+      640.0799560546875
+    ]
+  },
+  {
+    "page": 18,
+    "id": "x21_s_curves_pooled",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      999.1199951171875,
+      640.0799560546875
+    ]
+  },
+  {
+    "page": 19,
+    "id": "x21_nested_comparisons",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      361.19952392578125
+    ]
+  },
+  {
+    "page": 20,
+    "id": "sbi_an19_ft_z",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      541.1995239257812
+    ]
+  },
+  {
+    "page": 21,
+    "id": "sbi_x21_ft_z",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      541.1995239257812
+    ]
+  },
+  {
+    "page": 22,
+    "id": "sbi_b23_ft_z",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      541.1995239257812
+    ]
+  },
+  {
+    "page": 23,
+    "id": "sbi_an19_base_loglik",
+    "removed_annotations": [
+      "Predictor-only model | Higher is better | Mean and 95% three-fold bootstrap interval"
+    ],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      352.7703857421875
+    ]
+  },
+  {
+    "page": 24,
+    "id": "sbi_an19_ft_loglik",
+    "removed_annotations": [
+      "Predictor-only model | Higher is better | Mean and 95% three-fold bootstrap interval"
+    ],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      352.7703857421875
+    ]
+  },
+  {
+    "page": 25,
+    "id": "sbi_x21_base_loglik",
+    "removed_annotations": [
+      "Predictor-only model | Higher is better | Mean and 95% three-fold bootstrap interval"
+    ],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      352.7703857421875
+    ]
+  },
+  {
+    "page": 26,
+    "id": "sbi_x21_ft_loglik",
+    "removed_annotations": [
+      "Predictor-only model | Higher is better | Mean and 95% three-fold bootstrap interval"
+    ],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      352.7703857421875
+    ]
+  },
+  {
+    "page": 27,
+    "id": "sbi_b23_base_loglik",
+    "removed_annotations": [
+      "Predictor-only model | Higher is better | Mean and 95% three-fold bootstrap interval"
+    ],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      352.7703857421875
+    ]
+  },
+  {
+    "page": 28,
+    "id": "sbi_b23_ft_loglik",
+    "removed_annotations": [
+      "Predictor-only model | Higher is better | Mean and 95% three-fold bootstrap interval"
+    ],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      728.3995361328125,
+      352.7703857421875
+    ]
+  },
+  {
+    "page": 29,
+    "id": "hve_an19_z_01",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 30,
+    "id": "hve_an19_z_02",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 31,
+    "id": "hve_x21_z_02",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 32,
+    "id": "hve_x21_z_03",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 33,
+    "id": "hve_x21_z_04",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 34,
+    "id": "hve_x21_z_05",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      526.4497680664062,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 35,
+    "id": "hve_b23_z_01",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 36,
+    "id": "hve_b23_z_02",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 37,
+    "id": "hve_b23_z_03",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 38,
+    "id": "hve_b23_z_04",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 39,
+    "id": "hve_an19_loglik_01",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 40,
+    "id": "hve_an19_loglik_02",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 41,
+    "id": "hve_x21_loglik_02",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 42,
+    "id": "hve_x21_loglik_03",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 43,
+    "id": "hve_x21_loglik_04",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 44,
+    "id": "hve_x21_loglik_05",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      526.4497680664062,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 45,
+    "id": "hve_b23_loglik_01",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 46,
+    "id": "hve_b23_loglik_02",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 47,
+    "id": "hve_b23_loglik_03",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 48,
+    "id": "hve_b23_loglik_04",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      843.5995483398438,
+      538.6997680664062
+    ]
+  },
+  {
+    "page": 49,
+    "id": "figure_si_language_corpus_coverage",
+    "removed_annotations": [],
+    "recovered_bottom_margin_points": 0.0,
+    "dimensions_points": [
+      757.1995239257812,
+      555.5995483398438
+    ]
+  }
+]

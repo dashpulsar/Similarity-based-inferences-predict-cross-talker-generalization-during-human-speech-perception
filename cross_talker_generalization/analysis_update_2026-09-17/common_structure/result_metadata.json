@@ -1,0 +1,29 @@
+{
+  "case_count": 7,
+  "common_policy_boundary_only_diagnostic_fits": 20,
+  "common_policy_convergence_message_fits": 20,
+  "common_policy_fit_count": 352,
+  "common_policy_fit_failures": 0,
+  "common_policy_nonboundary_convergence_message_fits": 0,
+  "common_policy_singular_fits": 20,
+  "created_utc": "2026-09-17T07:05:33.478797+00:00",
+  "documentation": [
+    "https://lme4.github.io/lme4/reference/isSingular.html",
+    "https://lme4.github.io/lme4/reference/VarCorr.html"
+  ],
+  "numpy": "1.26.4",
+  "original_variance_note": "Previous primary files did not save variance components; missing old variances remain missing and are not reconstructed from z-values",
+  "package_version": "0.1.0",
+  "pandas": "3.0.5",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "policy": "participant_item",
+  "preserved": "Original predictors, response rows, participant folds, predictor direction, frozen train-fold scaling and fixed-effect-only scoring",
+  "python": "3.11.5",
+  "r_script_sha256": "589076774f7c9184cb3801c8b4ef2d9d702f59f6f4d90ad8ad2cc39ecac9bcdf",
+  "scope": "Sensitivity analysis; primary registered outputs not replaced",
+  "script_sha256": "0d92cb315fe5f53a234d670e30e1c0c427a1fcc0a7230ac0d45f8907ea46b38a",
+  "status": "complete_with_fit_warnings",
+  "structure": "(1 | participant_id) + (1 | analysis_item_id)",
+  "structure_rationale": "Existing AN19 registered fallback fixed across features and folds before this sensitivity run; not selected using test performance",
+  "variance_boundary_note": "Variance below 1e-8 is an explicit descriptive flag. isSingular(tol=1e-4), optimizer convergence messages, and fit failures are retained separately. Zero random-intercept variance is not automatically an optimizer failure."
+}

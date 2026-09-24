@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-17T06:20:51.740011+00:00",
+  "feature_keys": [
+    "mfcc39",
+    "strf24_legacy"
+  ],
+  "feature_status_counts": {
+    "cached": 2
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\acoustic_diagnostic\\within_condition\\c5\\input.csv",
+  "input_sha256": "9ab30bde866deb3cf6a413456020894f63048e8474b000f80a57b0f868805aac",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "ca2e5195952d3b9abab22a7feea53e047e3edad81ec580600b58d0b7997b1f35",
+    "cv_metrics.csv": "c970dd1795b9e97c5688a3d8640a7787a6ab687a45f83b48b01f7bc597b1b900",
+    "diagnostics.csv": "f74db172e8c37916e863e4add820d3596d7dba7ad2e5bb3abf762b46108d5a41",
+    "feature_manifest.csv": "8e58a9154ce6fddb384b86dbffc3d7caad033d5315616a953d40a2bd48670488",
+    "likelihood_ratio_tests.csv": "dcb9f3b7b11ac9e20d28ecfe773126d599856ac285a0f7addf4ba5de8a729b1e",
+    "oof_predictions.csv": "672032e501b8cdfd980c2f21cbf7222cc4bb1569d4e1cd22412099c66701ec32",
+    "software.csv": "7cbda30584b3471f67ffb713597fe4eab6fc15767ae3dc44cfc353d91daca338",
+    "train_test_scores.csv": "aff3b40e2b228aed32626f4610463fc89e863080cba0c29002a072b98b2772af"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": -1,
+    "jobs": 2,
+    "model_set": "predictor_only",
+    "predictor_column": "raw_distance",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "2908f8e819bfbe93b68b06171429d6e866b6a0ceab72363207daa3dd22c3e73c",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 16,
+    "non_ok_convergence": 16,
+    "singular": 16
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

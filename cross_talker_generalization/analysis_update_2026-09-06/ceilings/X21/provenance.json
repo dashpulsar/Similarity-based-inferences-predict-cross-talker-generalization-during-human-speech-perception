@@ -1,0 +1,22 @@
+{
+  "behavior_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\data\\preprocessed data\\X21-behavioral-data.csv",
+  "behavior_sha256": "ef1db11be947d2e310c315382e42da7396771cd9e153de19a612e23000e635da",
+  "created_utc": "2026-09-05T20:37:49.232726+00:00",
+  "dataset_id": "X21",
+  "folds_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-folds.csv",
+  "folds_sha256": "4918e966b312285e921196e14842d1a6905f04b6c1db132c49d4d48a4de7eafb",
+  "interpretation": "direct held-out prediction; no held-out refit",
+  "item_keys": [
+    "ceiling_content_id",
+    "ceiling_talker_id"
+  ],
+  "numpy": "1.26.4",
+  "package_version": "0.1.0",
+  "pandas": "3.0.5",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "prediction_rows": 16477,
+  "python": "3.11.5",
+  "smoothing": "Jeffreys Beta(0.5, 0.5)",
+  "stage": "cross_validated_behavioral_ceiling",
+  "status": "complete"
+}

@@ -56,8 +56,12 @@ python -m ctg.cli build-report `
 - Historical implementation audit: [docs/LEGACY_AUDIT.md](docs/LEGACY_AUDIT.md)
 - Numerical validation: [docs/VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md)
 - Repository-wide technical reference: [../TECHNICAL_DOCUMENTATION.md](../TECHNICAL_DOCUMENTATION.md)
+- Current analysis plan: [docs/NEXT_ANALYSIS_PLAN.md](docs/NEXT_ANALYSIS_PLAN.md)
+- Main Figure 1/2 specification: [docs/MAIN_FIGURE_SPEC.md](docs/MAIN_FIGURE_SPEC.md)
 - Reviewed broad August 21 analysis: [analysis_update_2026-08-21/](analysis_update_2026-08-21/)
 - Corrected SBI/HVE selection and downstream comparison update: [analysis_update_2026-08-27/](analysis_update_2026-08-27/)
+- Combined-fold cross-fitted predictor LRT update: [analysis_update_2026-09-01/](analysis_update_2026-09-01/)
+- Fixed Tr-24 SBI/HVE, behavioral-ceiling, and acoustic-audit update: [analysis_update_2026-09-06/](analysis_update_2026-09-06/)
 
 ## B23 exposure source status
 

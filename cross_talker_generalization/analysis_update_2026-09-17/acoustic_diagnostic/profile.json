@@ -1,0 +1,26 @@
+{
+  "_source_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\configs\\confirmatory.json",
+  "coordinate_scaling": {
+    "acoustic": "global_z",
+    "acoustic_subset": "global_z",
+    "hubert_full": "global_z",
+    "hubert_tsne": "none"
+  },
+  "description": "Leakage-resistant primary analysis",
+  "distance_metric": "minkowski",
+  "dtw_normalization": "mean_sequence_length",
+  "fixed_k": 1.0,
+  "fold_unit": "participant",
+  "model_comparison": [
+    "M_condition",
+    "M_predictor",
+    "M_joint"
+  ],
+  "primary_cv_metric": "heldout_binomial_log_loss",
+  "profile_id": "an19_matched_acoustic_components_20260917",
+  "select_k": false,
+  "select_tau": false,
+  "similarity_predictor": "negative_train_z_distance",
+  "talker_aggregation": "mean_distance",
+  "tau": 2.0
+}

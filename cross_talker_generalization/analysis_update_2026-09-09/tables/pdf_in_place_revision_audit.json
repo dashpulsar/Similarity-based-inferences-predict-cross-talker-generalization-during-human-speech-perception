@@ -1,0 +1,478 @@
+{
+  "original_sha256": "a327a211b860de0c54da42830cd58b2ce781b333d23b595026b5569419f0d87a",
+  "clean_revision_sha256": "78447201c06551ed5a64fb00383b1570fe2b5ced1f47fdd5a666f62db5d39dca",
+  "output_sha256": "65a9af9960e38e6b09a68bde01365276dde14d841c4673a9c481c2ebe5a88837",
+  "pages": 18,
+  "original_comments_preserved": 20,
+  "native_threaded_replies": 20,
+  "input_unchanged": true,
+  "original_file_embedded_unchanged": true,
+  "new_model_fits": 0,
+  "page_mapping_from_clean_report": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    9,
+    10,
+    13,
+    15,
+    18,
+    3,
+    6,
+    8,
+    11,
+    12,
+    14,
+    16,
+    17
+  ],
+  "annotations": [
+    {
+      "id": "P01",
+      "page": 1,
+      "original_id": "ce854e32-7f3f-5346-b53a-8863f14ed38c",
+      "original_rect": [
+        45.60260009765625,
+        156.361572265625,
+        791.6430053710938,
+        184.87255859375
+      ],
+      "revised_rect": [
+        54.50973892211914,
+        100.28329467773438,
+        181.78536987304688,
+        117.32363891601562
+      ],
+      "reply_id": "fitz-A0",
+      "reply": "You're right: the ceiling should not depend on SBI versus HVE. I checked that the historical ceiling tables are identical and have corrected my wording. The remaining issue is matching the response sample and fitting procedure: the old ceiling is a test-fold-refit z, whereas revised HVE z comes from training-fold fits. I also still need to implement the item-by-condition reference for AN19/X21. See page 17.",
+      "anchor": "One behavioral ceiling.",
+      "related_pages": [
+        17
+      ]
+    },
+    {
+      "id": "P02",
+      "page": 1,
+      "original_id": "1743906c-dcd3-4643-a2c3-883db8b2ccc1",
+      "original_rect": [
+        186.20399475097656,
+        234.361572265625,
+        322.12200927734375,
+        247.87255859375
+      ],
+      "revised_rect": [
+        259.5003967285156,
+        256.2303466796875,
+        477.5394592285156,
+        273.23358154296875
+      ],
+      "reply_id": "fitz-A1",
+      "reply": "I mean standardizing each acoustic dimension before DTW: (x - corpus mean) / corpus SD. The full baselines used this transformation, but the component subsets used raw coordinates, across the same 5,459 recording pairs. This changes their relative weighting and potentially the alignment. I have explained the mismatch on page 18; I still need to rerun the subsets with matching scaling.",
+      "anchor": "acoustic components with matching scaling",
+      "related_pages": [
+        18
+      ]
+    },
+    {
+      "id": "P03",
+      "page": 3,
+      "original_id": "7f75879e-f967-5d41-9a4a-566f01d0697b",
+      "original_rect": [
+        678.760009765625,
+        142.49755859375,
+        702.760009765625,
+        166.49755859375
+      ],
+      "revised_rect": [
+        804.0,
+        430.0,
+        828.0,
+        454.0
+      ],
+      "reply_id": "fitz-A0",
+      "reply": "I now identify this as a supplementary figure and have matched the language groups and colors to your world-map code. Your map is included on page 11. The revised figure files are saved locally; I have not yet committed them to Git or uploaded them to Overleaf.",
+      "anchor": "supplementary information",
+      "related_pages": [
+        11
+      ]
+    },
+    {
+      "id": "P04",
+      "page": 4,
+      "original_id": "2f53bce0-26ec-cc42-a90e-e9f3c48668b9",
+      "original_rect": [
+        488.43701171875,
+        282.4405822753906,
+        512.43701171875,
+        306.4405822753906
+      ],
+      "revised_rect": [
+        804.0,
+        468.0,
+        828.0,
+        492.0
+      ],
+      "reply_id": "fitz-A0",
+      "reply": "I have matched the colors and removed the inventory counts. The current calculation still compares consonant/vowel inventories. Before adding tone, I need to check whether missing tone entries mean absent tone or missing annotation, and specify how tone contributes to the score.",
+      "anchor": "Before adding tone",
+      "related_pages": []
+    },
+    {
+      "id": "P05",
+      "page": 4,
+      "original_id": "e69f2ac4-57f4-fe44-a741-12e44a905410",
+      "original_rect": [
+        488.43701171875,
+        282.4405822753906,
+        512.43701171875,
+        306.4405822753906
+      ],
+      "revised_rect": [
+        804.0,
+        416.0,
+        828.0,
+        440.0
+      ],
+      "reply_id": "fitz-A1",
+      "reply": "I have changed the x-axis to 'L1-L2 phonological inventory similarity with English'.",
+      "anchor": "updated the axis wording",
+      "related_pages": []
+    },
+    {
+      "id": "P06",
+      "page": 4,
+      "original_id": "0c5e9ea4-53f0-ea49-b9f9-affe2b32894e",
+      "original_rect": [
+        488.43701171875,
+        282.4405822753906,
+        512.43701171875,
+        306.4405822753906
+      ],
+      "revised_rect": [
+        804.0,
+        494.0,
+        828.0,
+        518.0
+      ],
+      "reply_id": "fitz-A2",
+      "reply": "I have included your feature examples on page 12, keeping both plots large enough to read in this review copy. I would arrange the inventory summary above the examples in the combined paper figure. That assembly is not finished: I still need the heatmap's score table and generation code, including its full final row label, which is clipped in the supplied graphic.",
+      "anchor": "above your feature examples",
+      "related_pages": [
+        12
+      ]
+    },
+    {
+      "id": "P07",
+      "page": 5,
+      "original_id": "1be2b3bb-fa9d-3749-9527-5422c89fd364",
+      "original_rect": [
+        152.58099365234375,
+        156.50857543945312,
+        176.58099365234375,
+        180.50857543945312
+      ],
+      "revised_rect": [
+        804.0,
+        430.0,
+        828.0,
+        454.0
+      ],
+      "reply_id": "fitz-A0",
+      "reply": "I have restored the six English talkers, giving 42 in total, and added gray language-block outlines with black, language-first labels. English appears first; the other language groups are ordered by mean distance to English, with talkers clustered within each language. Both matrices use that order.",
+      "anchor": "42 talkers",
+      "related_pages": [
+        13
+      ]
+    },
+    {
+      "id": "P08",
+      "page": 5,
+      "original_id": "362a4f87-0023-e742-b5d7-212cc551b953",
+      "original_rect": [
+        152.58099365234375,
+        156.50857543945312,
+        176.58099365234375,
+        180.50857543945312
+      ],
+      "revised_rect": [
+        804.0,
+        478.0,
+        828.0,
+        502.0
+      ],
+      "reply_id": "fitz-A1",
+      "reply": "I have added separate distance (this page) and similarity (page 13) matrices with linear color scales. Each cell averages over the same 138 words. The similarity matrix averages exp(-distance), with k = 1; it is not exp(-mean distance). I have also shortened the colorbar labels.",
+      "anchor": "color scale is linear",
+      "related_pages": [
+        13
+      ]
+    },
+    {
+      "id": "P09",
+      "page": 6,
+      "original_id": "27894131-63de-8a40-8f7e-d4ea9d99eabf",
+      "original_rect": [
+        594.1799926757812,
+        41.74554443359375,
+        618.1799926757812,
+        65.74554443359375
+      ],
+      "revised_rect": [
+        804.0,
+        462.0,
+        828.0,
+        486.0
+      ],
+      "reply_id": "fitz-A0",
+      "reply": "I have added marginal similarity distributions and matched the world-map colors. Each distribution counts a target recording once, rather than once per listener. I now describe this as a conceptual extension of Kim et al. (2025): our matched-word control-test analysis differs from their relative talker-intelligibility analysis.",
+      "anchor": "conceptually extends",
+      "related_pages": []
+    },
+    {
+      "id": "P10",
+      "page": 6,
+      "original_id": "66ee9d77-8a15-5c42-8615-9d651cccdb17",
+      "original_rect": [
+        594.1799926757812,
+        41.74554443359375,
+        618.1799926757812,
+        65.74554443359375
+      ],
+      "revised_rect": [
+        804.0,
+        106.0,
+        828.0,
+        130.0
+      ],
+      "reply_id": "fitz-A1",
+      "reply": "I have added one shared color legend and shortened the panel titles to AN19 and X21.",
+      "anchor": "a shared legend",
+      "related_pages": []
+    },
+    {
+      "id": "P11",
+      "page": 6,
+      "original_id": "c1840160-2194-3a41-aace-f93bf83119a6",
+      "original_rect": [
+        594.1799926757812,
+        41.74554443359375,
+        618.1799926757812,
+        65.74554443359375
+      ],
+      "revised_rect": [
+        804.0,
+        403.0,
+        828.0,
+        427.0
+      ],
+      "reply_id": "fitz-A2",
+      "reply": "I have changed the x-axis to 'Similarity to L1-English'.",
+      "anchor": "Control-test intelligibility",
+      "related_pages": []
+    },
+    {
+      "id": "P12",
+      "page": 6,
+      "original_id": "25b2c768-2f85-094a-b603-ffb505d93f20",
+      "original_rect": [
+        45.60260009765625,
+        491.6075744628906,
+        734.5540161132812,
+        520.1178588867188
+      ],
+      "revised_rect": [
+        584.7595825195312,
+        501.2303466796875,
+        746.5669555664062,
+        518.233642578125
+      ],
+      "reply_id": "fitz-A3",
+      "reply": "I have kept the 40 wave/wade responses excluded while I verify what was actually spoken. The naming discrepancy and preliminary ASR screening do not establish that the recordings contain the same word, so I have not merged or relabeled them. This check is still pending.",
+      "anchor": "40 AN19 wave/wade responses",
+      "related_pages": []
+    },
+    {
+      "id": "P13",
+      "page": 6,
+      "original_id": "d115eb7d-0c58-0240-8a7a-b1c608b03448",
+      "original_rect": [
+        594.1799926757812,
+        41.74554443359375,
+        618.1799926757812,
+        65.74554443359375
+      ],
+      "revised_rect": [
+        804.0,
+        434.0,
+        828.0,
+        458.0
+      ],
+      "reply_id": "fitz-A4",
+      "reply": "These are test responses from the control conditions, not exposure performance. I have made that explicit. I agree that the beginning of exposure is worth examining separately; I would define the first ten presentations before analyzing their responses. That analysis has not yet been run.",
+      "anchor": "control-test performance",
+      "related_pages": [
+        10
+      ]
+    },
+    {
+      "id": "P14",
+      "page": 7,
+      "original_id": "fd514f37-6c72-e34c-b463-a3e194843cb4",
+      "original_rect": [
+        214.5449981689453,
+        93.67257690429688,
+        238.5449981689453,
+        117.67257690429688
+      ],
+      "revised_rect": [
+        804.0,
+        122.0,
+        828.0,
+        146.0
+      ],
+      "reply_id": "fitz-A0",
+      "reply": "I have moved the three-entry legend below the ceiling: significance threshold, ceiling and individual folds. The caption explains the mean and 95% fold-bootstrap intervals.",
+      "anchor": "three-entry legend",
+      "related_pages": []
+    },
+    {
+      "id": "P15",
+      "page": 7,
+      "original_id": "f33a5fa7-38f3-7a46-82a1-3a058722ac76",
+      "original_rect": [
+        214.5449981689453,
+        93.67257690429688,
+        238.5449981689453,
+        117.67257690429688
+      ],
+      "revised_rect": [
+        804.0,
+        412.0,
+        828.0,
+        436.0
+      ],
+      "reply_id": "fitz-A1",
+      "reply": "I have made the figure narrower and changed the x-axis label to 'Feature space'.",
+      "anchor": "Feature space",
+      "related_pages": []
+    },
+    {
+      "id": "P16",
+      "page": 7,
+      "original_id": "3193c045-ea1a-784e-9c3e-d6ea4bd79526",
+      "original_rect": [
+        295.7080078125,
+        37.81756591796875,
+        319.7080078125,
+        61.81756591796875
+      ],
+      "revised_rect": [
+        804.0,
+        53.0,
+        828.0,
+        77.0
+      ],
+      "reply_id": "fitz-A2",
+      "reply": "I have added predictor-only held-out likelihood profiles: six SBI plots with both acoustic baselines and eleven HVE figure pages in the accompanying figure folder. Examples are on pages 14-15 here. They use actual three-fold scores and intervals from recovered runs, not a new optimization. The SBI likelihood runs used negative DTW, whereas the earlier z plots used exponential similarity, so a matched objective comparison remains to be done. AN19 layerwise random-effects fallbacks also need to be held constant in that rerun.",
+      "anchor": "SBI: z across feature spaces",
+      "related_pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "id": "P17",
+      "page": 8,
+      "original_id": "9655955c-7200-264b-9aa0-f96a40adc2a4",
+      "original_rect": [
+        356.0360107421875,
+        61.0545654296875,
+        402.3630065917969,
+        89.0545654296875
+      ],
+      "revised_rect": [
+        805.0,
+        75.0,
+        821.0,
+        84.67037963867188
+      ],
+      "reply_id": "fitz-A0",
+      "reply": "I have corrected CMN and placed the language before the talker identifier in both X21 curve figures. The main title is 'Mandarin Chinese (CMN), Male (M) 035'; the smaller panels use 'CMN-M-032', and so on. The original handwritten highlight has been moved beside the revised title area.",
+      "anchor": "corrected CMN",
+      "related_pages": [
+        16
+      ]
+    },
+    {
+      "id": "P18",
+      "page": 8,
+      "original_id": "290f0687-f6fa-5749-91da-6bbaa3202cad",
+      "original_rect": [
+        356.0360107421875,
+        61.0545654296875,
+        380.0360107421875,
+        85.0545654296875
+      ],
+      "revised_rect": [
+        804.0,
+        484.0,
+        828.0,
+        508.0
+      ],
+      "reply_id": "fitz-A1",
+      "reply": "I have added the pooled companion on page 16, with one black curve and point series per talker. It pools responses across conditions and uses 20 bins. I retained the existing pooled fits and intervals; this is not an average of the four separately fitted condition curves.",
+      "anchor": "condition-specific",
+      "related_pages": [
+        16
+      ]
+    },
+    {
+      "id": "P19",
+      "page": 9,
+      "original_id": "0939b7d9-09a4-9e43-b1bf-62f1a5796da1",
+      "original_rect": [
+        604.6530151367188,
+        276.5085754394531,
+        628.6530151367188,
+        300.5085754394531
+      ],
+      "revised_rect": [
+        804.0,
+        248.0,
+        828.0,
+        272.0
+      ],
+      "reply_id": "fitz-A0",
+      "reply": "I checked the X21 tables: SBI and HVE use the same 16,477 responses from 320 participants and the same model structure. Condition does add to HVE: chi-square(3) = 11.0085, p = .01168. Predictor-only HVE is strongly negative (z = -5.5038, p = 3.72e-8); p = .05318 tests its additional contribution after condition is included. I have replaced the small plot with a readable table. The negative effect does not support the expected positive HVE effect. AN19 has different included rows and random-effects structures, and B23 global-order HVE uses a smaller sample (page 17); those direct comparisons still need matching. These selected-model tests remain exploratory.",
+      "anchor": "Condition beyond predictor",
+      "related_pages": [
+        17
+      ]
+    },
+    {
+      "id": "P20",
+      "page": 9,
+      "original_id": "17e72b64-c126-c147-8ee4-4bc53fcb2262",
+      "original_rect": [
+        488.19000244140625,
+        236.94558715820312,
+        584.3060302734375,
+        318.1265869140625
+      ],
+      "revised_rect": [
+        805.0,
+        208.0,
+        821.0,
+        221.51385498046875
+      ],
+      "reply_id": "fitz-A1",
+      "reply": "I have addressed this marked comparison in my reply to the question below (P19), replacing the small plot with the table here. The original handwritten mark has been moved beside the relevant table rows.",
+      "anchor": "Predictor beyond condition",
+      "related_pages": [
+        17
+      ]
+    }
+  ]
+}

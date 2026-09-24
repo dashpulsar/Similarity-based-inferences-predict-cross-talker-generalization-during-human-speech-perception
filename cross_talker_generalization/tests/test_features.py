@@ -34,6 +34,28 @@ class FeatureStoreTests(unittest.TestCase):
                 self.assertEqual(store.feature_keys(), ("cnn_2",))
                 self.assertEqual(store.unit_count(), 1)
 
+    def test_virtual_feature_subsets(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "acoustic.h5"
+            values = np.arange(24, dtype=np.float32).reshape(4, 6)
+            with h5py.File(path, "w") as h5:
+                h5.create_dataset("spk/unit/mfcc39", data=values)
+            subsets = {
+                "static": ("mfcc39", (0, 1, 2)),
+                "delta": ("mfcc39", (3, 4, 5)),
+            }
+            spec = FeatureStoreSpec(
+                "test", "AN19", path, "acoustic_subset", "diagnostic", 1, subsets
+            )
+            with FeatureStore(spec) as store:
+                self.assertEqual(store.feature_keys(), ("static", "delta"))
+                np.testing.assert_array_equal(
+                    store.read("spk", "unit", "static"), values[:, :3]
+                )
+                np.testing.assert_array_equal(
+                    store.read("spk", "unit", "delta"), values[:, 3:]
+                )
+
     def test_time_slice_uses_manifest_relative_bounds(self):
         sequence = np.arange(20).reshape(10, 2)
         cropped = slice_by_time(sequence, 0.2, 0.6, 1.0)

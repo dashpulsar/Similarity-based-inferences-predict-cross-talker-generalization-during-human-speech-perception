@@ -1,0 +1,37 @@
+speaker_id,language,branch,mean_distance,n_segment_types,n_phone_intervals,segment_types,n_unique_words
+AN19.KOR.kf1,Korean,Koreanic,38.306637294843604,34,137,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,107
+AN19.KOR.kf2,Korean,Koreanic,37.157365290673816,32,137,aa ae ah ay b ch d eh ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,104
+AN19.KOR.kf3,Korean,Koreanic,39.7572459813881,35,138,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,103
+AN19.KOR.kf4,Korean,Koreanic,38.03906944010475,35,141,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,106
+AN19.KOR.kf5,Korean,Koreanic,36.966135687813946,35,143,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,106
+AN19.KOR.kf6,Korean,Koreanic,37.09689597468606,34,142,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,105
+AN19.KOR.km1,Korean,Koreanic,40.060900878691065,34,137,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,105
+AN19.KOR.km2,Korean,Koreanic,33.30462046360812,35,148,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,112
+AN19.KOR.km3,Korean,Koreanic,36.16882911897027,35,150,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,112
+AN19.KOR.km6,Korean,Koreanic,34.9158911205726,34,142,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m ng ow oy p r s sh t th uh uw v w y,111
+AN19.KOR.km7,Korean,Koreanic,32.5610417312966,34,149,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,113
+AN19.KOR.km8,Korean,Koreanic,32.78933546669971,35,145,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,110
+AN19.MIX.if1,Albanian,Albanian,36.225050027777804,35,141,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,108
+AN19.MIX.if2,Dutch,Germanic,38.9079615372348,34,144,aa ae ah ao ay b ch d eh ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,109
+AN19.MIX.if3,French,Romance,39.730733148096704,35,143,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,107
+AN19.MIX.if4,German,Germanic,34.620998839260025,34,137,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,104
+AN19.MIX.if5,Japanese,Japonic,45.63919026851762,35,149,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,110
+AN19.MIX.if6,Somali,Afro-Asiatic,36.2862480384714,33,138,aa ae ah ao ay b ch d eh ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,104
+AN19.MIX.im1,Romanian,Romance,41.560206729004776,35,147,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,112
+AN19.MIX.im2,Bengali,Indo-Aryan,40.74481961461366,34,138,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m ng ow oy p r s sh t th uh uw v w y,104
+AN19.MIX.im3,Russian,Slavic,35.90447477671726,34,148,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,107
+AN19.MIX.im4,Mandarin,Sino-Tibetan,39.88014748935084,34,143,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,106
+AN19.MIX.im5,Turkish,Turkic,33.17016663907006,35,138,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,103
+AN19.MIX.im6,Hindi,Indo-Aryan,40.21197526503816,34,149,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,112
+AN19.SPA.sf1,Spanish,Romance,41.14177443712945,35,145,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,105
+AN19.SPA.sf2,Spanish,Romance,41.362239924662944,34,138,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k m n ng ow oy p r s sh t th uh uw v w y,105
+AN19.SPA.sf3,Spanish,Romance,37.72011828669845,33,138,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m ng ow oy p r s sh t th uh uw v w,107
+AN19.SPA.sf4,Spanish,Romance,39.07056750892286,35,141,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,107
+AN19.SPA.sf5,Spanish,Romance,36.19507352332577,35,139,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,106
+AN19.SPA.sf6,Spanish,Romance,36.336963625777095,35,142,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,107
+AN19.SPA.sm2,Spanish,Romance,38.742582425507585,34,142,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m ng ow oy p r s sh t th uh uw v w y,107
+AN19.SPA.sm3,Spanish,Romance,39.348288865344806,34,137,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,104
+AN19.SPA.sm4,Spanish,Romance,35.9834347349885,35,139,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,105
+AN19.SPA.sm5,Spanish,Romance,35.976610663161,34,145,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w,109
+AN19.SPA.sm6,Spanish,Romance,40.28180677909282,35,148,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m n ng ow oy p r s sh t th uh uw v w y,112
+AN19.SPA.sm7,Spanish,Romance,40.41942804036537,33,136,aa ae ah ao ay b ch d eh er ey f g hh ih iy jh k l m ow oy p r s sh t th uh uw v w y,109

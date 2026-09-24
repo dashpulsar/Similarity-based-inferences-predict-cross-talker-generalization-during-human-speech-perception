@@ -1,0 +1,163 @@
+{
+  "eligible": 1276,
+  "failed": 0,
+  "fixed_training_rows": 10969,
+  "grid_coverage_checked": true,
+  "grid_fits": 1247,
+  "held_out_rows_used": 0,
+  "input_checks": [
+    {
+      "rows": 10969,
+      "tau": 0.5,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 0.625,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 0.75,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 0.875,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 1.0,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 1.125,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 1.25,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 1.375,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 1.5,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 1.625,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 1.75,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 1.875,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 2.0,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 2.125,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 2.25,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 2.375,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 2.5,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 2.625,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 2.75,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 2.875,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 3.0,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 3.125,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 3.25,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 3.375,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 3.5,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 3.625,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 3.75,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 3.875,
+      "test_fold_rows": 0
+    },
+    {
+      "rows": 10969,
+      "tau": 4.0,
+      "test_fold_rows": 0
+    }
+  ],
+  "interpretation": "Training surface, conditional on one dataset/layer/split and specified bounds.",
+  "linear_limit_fits": 29,
+  "nonconverged": 0,
+  "numerical_scaling_checked": true,
+  "singular": 0,
+  "source_hashes_checked": true,
+  "status": "passed",
+  "z_arithmetic_checked": true
+}

@@ -1,0 +1,4 @@
+"dataset_id","feature_key","held_out_fold","n_training_rows","n_held_out_rows","training_mean","training_sd"
+"B23","tr_4::between_type_sentence",0,6720,3360,48.328162501414,4.65574121496955
+"B23","tr_4::between_type_sentence",1,6720,3360,48.3376743427351,4.65568965036882
+"B23","tr_4::between_type_sentence",2,6720,3360,48.2333683017672,4.74737279984344

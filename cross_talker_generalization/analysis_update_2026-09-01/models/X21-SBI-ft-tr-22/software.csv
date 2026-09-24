@@ -1,0 +1,2 @@
+"R_version","lme4_version","input_path","dataset_id","feature_key","predictor_column","predictor_direction","predictor_term","include_fold_block","talker_strategy","selection_conditional"
+"R version 4.4.1 (2024-06-14 ucrt)","1.1.35.5","C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\artifacts\derived\X21-X21_hubert_ft_tsne-confirmatory-model-input.csv","X21","tr_22","raw_distance",-1,"similarity_z",TRUE,"fixed_block",TRUE

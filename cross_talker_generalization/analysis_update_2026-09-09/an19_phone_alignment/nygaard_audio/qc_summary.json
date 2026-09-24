@@ -1,0 +1,999 @@
+{
+  "status": "structural_and_source_qc_passed; automatic boundaries, not human-validated phonetics",
+  "registered_recordings": 6261,
+  "aligned_recordings": 6261,
+  "failed_recordings": 0,
+  "talkers": 42,
+  "english_talkers": 6,
+  "recording_accent_counts": {
+    "ENG": 899,
+    "KOR": 1800,
+    "MIX": 1762,
+    "SPA": 1800
+  },
+  "recordings_json_checked": 6261,
+  "textgrids_checked": 6261,
+  "checks": {
+    "exact_recording_id_coverage": true,
+    "all_external_audio_sha256_rechecked": true,
+    "no_repository_fallback": true,
+    "all_recording_human_verified_false": true,
+    "json_csv_agreement": true,
+    "all_intervals_positive_and_finite": true,
+    "all_intervals_within_decoded_audio": true,
+    "exact_complete_partitions_from_zero_to_duration": true,
+    "maximum_json_partition_gap_seconds": 0,
+    "maximum_json_end_duration_error_seconds": 0,
+    "textgrid_rounding_tolerance_seconds": 5.00001e-10,
+    "all_original_manifest_words_preserved": true,
+    "canonical_and_model_labels_preserved_separately": true
+  },
+  "counts": {
+    "all_intervals": 31307,
+    "silence_intervals": 12522,
+    "speech_intervals": 18785,
+    "speech_shorter_than_20ms": 6879,
+    "speech_low_mean_posterior": 11280,
+    "speech_short_and_low": 3098,
+    "speech_argmax_differs_target": 12037,
+    "speech_argmax_differs_target_nonmissing": 11875,
+    "speech_argmax_missing": 162,
+    "recordings_with_short_speech_phone": 4849,
+    "recordings_with_low_posterior_speech_phone": 5982,
+    "lexical_identity_unresolved_recordings": 42
+  },
+  "canonical_speech_phone_inventory_count": 37,
+  "canonical_speech_phone_counts": {
+    "aa": 544,
+    "ae": 590,
+    "ah": 714,
+    "ao": 341,
+    "aw": 127,
+    "ay": 337,
+    "b": 504,
+    "ch": 336,
+    "d": 972,
+    "eh": 335,
+    "er": 336,
+    "ey": 588,
+    "f": 546,
+    "g": 546,
+    "hh": 407,
+    "ih": 713,
+    "iy": 547,
+    "jh": 252,
+    "k": 840,
+    "l": 1008,
+    "m": 1051,
+    "n": 840,
+    "ng": 268,
+    "ow": 336,
+    "oy": 168,
+    "p": 672,
+    "r": 594,
+    "s": 630,
+    "sh": 252,
+    "t": 1050,
+    "th": 462,
+    "uh": 126,
+    "uw": 461,
+    "v": 498,
+    "w": 502,
+    "y": 42,
+    "z": 250
+  },
+  "canonical_to_model_counts": {
+    "aa -> ao": 544,
+    "ae -> ae": 590,
+    "ah -> ah": 714,
+    "ao -> ao": 341,
+    "aw -> aw": 127,
+    "ay -> ay": 337,
+    "b -> b": 504,
+    "ch -> ch": 336,
+    "d -> d": 972,
+    "eh -> eh": 335,
+    "er -> er": 336,
+    "ey -> ey": 588,
+    "f -> f": 546,
+    "g -> g": 546,
+    "hh -> hh": 407,
+    "ih -> ih": 713,
+    "iy -> iy": 547,
+    "jh -> jh": 252,
+    "k -> k": 840,
+    "l -> el": 1008,
+    "m -> m": 1051,
+    "n -> en": 840,
+    "ng -> ng": 268,
+    "ow -> ow": 336,
+    "oy -> oy": 168,
+    "p -> p": 672,
+    "r -> r": 594,
+    "s -> s": 630,
+    "sh -> sh": 252,
+    "t -> t": 1050,
+    "th -> th": 462,
+    "uh -> uh": 126,
+    "uw -> uw": 461,
+    "v -> v": 498,
+    "w -> w": 502,
+    "y -> y": 42,
+    "z -> z": 250
+  },
+  "by_accent": {
+    "ENG": {
+      "speech_intervals": 2699,
+      "shorter_than_20ms": 942,
+      "low_mean_posterior": 1639
+    },
+    "SPA": {
+      "speech_intervals": 5400,
+      "shorter_than_20ms": 2098,
+      "low_mean_posterior": 3290
+    },
+    "MIX": {
+      "speech_intervals": 5286,
+      "shorter_than_20ms": 1862,
+      "low_mean_posterior": 3118
+    },
+    "KOR": {
+      "speech_intervals": 5400,
+      "shorter_than_20ms": 1977,
+      "low_mean_posterior": 3233
+    }
+  },
+  "minimum_speech_phone_duration_seconds": 0.005041882395744324,
+  "null_posteriors_count": 162,
+  "null_posteriors": [
+    {
+      "recording_id": "AN19-rec-0162cb7e7e0928882ef0",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-030d5693d574c6666357",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-03914582381f7088a0f9",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-0419981461a6331b077f",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-04e90a9a28cfb20c3e4b",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-04fa90af0797691fb514",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-051ee5bae748dbe028d9",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-052fe1e4a63c93c2308a",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-0630aa81cb54db09a885",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-07a2af2d5131c1e791dc",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-0b39f3f29c783c073778",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-0b9e3f70fc53aa90fb06",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-0d6cdb7a6f6a3bb303a2",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-0eb4efc0cddc4ed671c4",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-0f2366f182d8abcccb52",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-10505617874227d5311d",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-1081a48d7ba9bc384883",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-134070ad6e057a7b6d61",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-19ce5d26f8bfd49a454b",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-1c096866df805faf8b48",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-1c9de4303853b69d113b",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-1dcd2a8eea27d4f177fc",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-1f00dd1bc56e58ebed9e",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-20d8ad20e27ddc4c5cde",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-2106ee45176a191607fd",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-215300255c8866eaecdf",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-2156ce3cab2d0beab2cb",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-2181c171c03366c8cc8e",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-22be23f68c6685801f9c",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-22db5a0b397fd2d3589b",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-24d1456ff913215bb166",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-2abc5500c2f18271952d",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-2c51674df32060684859",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-2f19d6596de38d6b54e7",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-2ffdcec4b79d7c3e681a",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-30443a1f9fb6df36f455",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-3217df072a8898f0d4ca",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-325443299ab42f3cbcc6",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-367ebb7df8bb36eb74ab",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-3b9d6b23b33430fab9b4",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-3bca6ea82673c8a7b37e",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-3c347bc6e72fc051aea2",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-3ecfb6ef428b24bb0530",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-3f3f32666385c3a53954",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-3fa2d2c615a5d93a3e3a",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-403e239d263ed202f903",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-43f140e28caacd7710fb",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-442a670195db1c0dfbca",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-45b9051bfaeaa34a1d9a",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-47b7be5f0ad705e59ed0",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-497f8d0cc8b0db81e1d1",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-4c99d1bb31a0e990effc",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-4dc074990e33ca20cb94",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-4dec9d1c233b1a1d4a33",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-4e168509f5f92f3a2e4e",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-4fd554c3d27ff119ec45",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-521f6528156c49a37ca9",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-526857210ecf221dbc16",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-56f130fb37ba32fdb619",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-581ead41eb8d55ac58ca",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-5ba19dc10dcdfc7ab349",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-5e5de8e0eb946a090f8c",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-640bd52ccafd3de287d9",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-65a86da9dd3a86f798c6",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-661060ff81108df82a0f",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-685db5c940e2b84d48f8",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-692463ddb1a0a93dab36",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-6c0ae90d28e96fa0eb29",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-6cc6f5f1530b851005ba",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-6d1805adc43f8e6b32a7",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-6d6f5ccc2ff567cae2b8",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-6f94b109d933eab5a422",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-723273582f418ee35c6d",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-72d3b1baf6659dab1e3b",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-749f0d53d9914c666da9",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-74a6aa64fb5dc75a3a16",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-77bd20246dfe4316f031",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-7867230c56fbcf477995",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-7a7f488109ab07111fc5",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-7daac2f8a467fe303242",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-7ec81062d1294360489c",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-7fcead3a6343bbef8e50",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-7fe72ecd78f1341347ac",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-835564d49cc02fb7b3bc",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-8481aa5ed725331fe19a",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-855d13b0f1ff9000627d",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-8712f4ec8fbd539a0c1f",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-87b749c3c11c435dadf9",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-89c1184fb18540430224",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-8a7bd2a5aef2ff7cb280",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-8ae7433a6feaa8eae263",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-8af1ba8b3fc4aac51057",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-8b68e2662320eb194174",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-8c0d19b03da76938c8b8",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-8d8cd9f0b48f0df93014",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-91734a248a2de98b48ba",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-91d9e00f151692da6655",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-922c3e9a122be5f8e5c5",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-9230d05738b8959e0880",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-941c97e8d5a8072c1629",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-943810d0ddff7e3c6f09",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-94f548afa8ad4ce7e13b",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-959b536e6aeb661a6ffc",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-959c9ed7c0227ca66a43",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-95c81e72a97188ec7ca1",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-96fd947d02b469cfd5ff",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-9a6abc9b87d964296ed8",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-9c1853ace7e4b77cd096",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-9c8daf3b9145ff4d8bc1",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-a01add241da5f363dcb8",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-a0c5199e6590a449e9f2",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-a0d375d0a369cb179621",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-a0f3574c72ebb0c2040a",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-a19c88fa7c8bfa4945dc",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-a4530d62b9f68a51d986",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-a888047c5403c66e8068",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ace0777b7f83667ad206",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-adf403ccdddc2a9ee537",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ae997022e8765ab387e7",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-aed941b82e2159693593",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-b1435b2ce00c70c1ab64",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-b2ca78c89704a1709506",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-bb7ba0725640805b137c",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-bd223d0b8d2e1282ab8c",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-c29b5410683f42e380af",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-c72bcb37b2bced11b643",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-c97859c34f1c621ad4bf",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-c99dd9d1db923e4e21f2",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-c9bdbd13d0f2e886d216",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ca0bba7bc8a03fbc83c6",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ca9e15fa01e5292e5121",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-cbab9d6c8ed8656ab87f",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ccf2a5d7946c97e66305",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-cfe8d1df50d5595dd81a",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-d0d6db491f0825d8e49a",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-d2d2e4da39059b7b8c14",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-d33c2f72bddd121b9e8c",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-d74c7fcddbb74b71b989",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-dcea4811323883ccecb8",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ded0482fc8fc4481e058",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-df9bf255fd5bc75c564a",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-e55445e18d28e55e98b5",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-e5ac05aea9542a3648fe",
+      "phone_index": 1,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-e5eb2fea13c36c4999f7",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-e7595fe28416d9c7e02f",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ea8770c2ac6f8fe59e3b",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-eb6f5ac749c9b73abccf",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ed3e0762c9f837a7a228",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ee983bc7f100687bde04",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ef113c3526bdafda34ea",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-ef85a17291fd6be4d626",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-efc7afc4abab02f9490d",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-f3a133140836ab3eeffd",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-f40ad6337b66a7b458ba",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-f4818b86c2dd9af01dbd",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-f5b5b3c52888ee416cee",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-f5e575200fc356d529a5",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-f7bb276788604c2e4282",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-f8a326b11caaebcf4ebc",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-fcc67be181b2619e8608",
+      "phone_index": 2,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-fdd30f50bc8c8da00b5e",
+      "phone_index": 3,
+      "silence": false
+    },
+    {
+      "recording_id": "AN19-rec-fe241aa62fd8295782b0",
+      "phone_index": 3,
+      "silence": false
+    }
+  ],
+  "transcript_changes": [
+    {
+      "recording_id": "AN19-rec-8e01733e25fc77ea52f1",
+      "original": "cheif",
+      "annotation": "chief"
+    }
+  ],
+  "source_manifest_sha256": "08013cb3b8e07474441a8ba7dae13e48d4be88efd4ed183478c164d223746a3c",
+  "alignment_summary_sha256": "5c16d73c4adb4b2e28488e0865f3e7d43bf06b79a43473589e28b28d5332b668",
+  "runner_sha256": "b42a77224dc86da2555ed787ec66e67b59738bbc38f80424430403c66d38e87f",
+  "files_sha256": {
+    "tables/phone_intervals.csv": "32d0159767b670050bb6b6ef2d7000895b5aec2913d1f3c0341240ce5a542db1",
+    "tables/recording_alignment_status.csv": "4201110d10a54bec41b1632fda1f37ea93932ecfae0543f52c3c24b3b2f1c895",
+    "tables/target_pronunciations.csv": "fb5fa1f864b8bf003c3979a0cc350ccae925c96ce52495bf434e004ab69455c6"
+  },
+  "verification_limits": [
+    "No manual hearing or boundary validation; this is not an acceptance gate.",
+    "Canonical target phones condition the alignment and do not establish actually produced phones.",
+    "Short/low-posterior flags are descriptive, not calibrated error probabilities or exclusions.",
+    "No HDF5 file was written or opened by this QC; source code contains no feature-extraction or HDF5 writes, but full pre/post HDF5 file hashes were not recomputed."
+  ],
+  "hubert_frame_center_coverage": {
+    "basis": "Calculated from actual decoded/resampled sample counts and the previously audited HuBERT convolution geometry; no HDF5 arrays opened by this QC",
+    "receptive_field_samples": 400,
+    "stride_samples": 320,
+    "sample_rate_hz": 16000,
+    "center_time_formula_seconds": "(199.5 + 320 * frame_index) / 16000",
+    "speech_intervals_with_zero_centers": 3167,
+    "speech_intervals_with_one_center": 5413,
+    "recordings_with_zero_center_speech_intervals": 2912,
+    "handling": "Keep a zero-center phone crop missing; do not fabricate a one-frame segment or stretch the time axis."
+  },
+  "methodology_review": {
+    "official_forward_and_decoder": "Pinned FALCON vendor tree was clean at revision 3d6e3d876ebaf2472757720d92222d55dd7410f8; runner invokes official forward.",
+    "targets": "First CMU dictionary pronunciation; stress stripped for alignment, stressed source retained. Initial and final sil are imposed target intervals, not independently recognized silence.",
+    "canonical_vs_model_labels": "All canonical labels are retained. Observed merges are aa->ao, l->el, n->en; model outputs must not overwrite the canonical targets.",
+    "timestamps": "Official samples-per-frame conversion 161.34011627906978 preserved; boundaries can fall between sampled posterior frames and HuBERT centers.",
+    "scope": "Automatic target-conditioned annotation, not actual-phone recognition, manual verification, or a phonetic accuracy estimate."
+  }
+}

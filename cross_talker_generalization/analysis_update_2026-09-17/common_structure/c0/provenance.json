@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-09-17T07:04:04.777586+00:00",
+  "feature_keys": [
+    "mfcc39",
+    "strf24_legacy"
+  ],
+  "feature_status_counts": {
+    "computed": 2
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\acoustic_diagnostic\\within_condition\\c0\\input.csv",
+  "input_sha256": "ba7015c76e71fb056c84198bf16199a20a14eee92ba844997a5b141dab185b48",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "5e007cb70999d99091358f1dd7bb7384624e884fdf3709fa2d82fee142fcf974",
+    "cv_metrics.csv": "ec0c24d8b62e99089e9b6a4fcee75bc7e501967539f2a9e13d3d28abec4b9349",
+    "diagnostics.csv": "712d6ee18120c8912955a74942701e59ca5baf1f7fa85b18d607e785d1fb65f0",
+    "feature_manifest.csv": "f42d4f396feebc8813397db2cf5517e061b67bb7ad6538989a9fe072adb93b07",
+    "likelihood_ratio_tests.csv": "457249bcbeaba7a69c69bba911f84b1a79002017c7c926c5f815597925323945",
+    "oof_predictions.csv": "fa8d15d4b924eb5f88ffc1eb48ae31ea47c573a7de6f85adf5ad2e49ce45e74a",
+    "software.csv": "8818060830a3af650d05026c97d203779f149d1a44160b6fc7cb28d4fd72de90",
+    "train_test_scores.csv": "b23a044928b158b1469b5bc933e3807efb6cd04f8cb17e5c6a0eb4f11ad98539",
+    "variance_components.csv": "eedea7822b02cf259422c72204d7309c59bc607d52c81e2e460d0ec9ddb0d617"
+  },
+  "package_version": "0.1.0",
+  "pandas": "3.0.5",
+  "parameters": {
+    "direction": -1,
+    "jobs": 2,
+    "model_set": "predictor_only",
+    "predictor_column": "raw_distance",
+    "random_policy": "participant_item",
+    "term": "similarity_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.5",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "589076774f7c9184cb3801c8b4ef2d9d702f59f6f4d90ad8ad2cc39ecac9bcdf",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 16,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

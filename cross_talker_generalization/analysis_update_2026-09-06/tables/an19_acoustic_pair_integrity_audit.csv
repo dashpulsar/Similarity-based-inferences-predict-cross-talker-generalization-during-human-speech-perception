@@ -1,0 +1,6 @@
+check,value
+pair rows,5459
+duplicate pair_id rows,0
+identical test/source physical unit,0
+identical test/source speaker,0
+pairs shared by all four representations,5459

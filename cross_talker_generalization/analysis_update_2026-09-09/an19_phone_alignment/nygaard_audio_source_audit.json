@@ -1,0 +1,19 @@
+{
+  "source_root_label": "user-selected July/Nygaard_audio",
+  "mapping_rule": "unique exact filename (case-insensitive), or unique identical SHA-256 in the same speaker for renamed files; no word aliases or repository fallback",
+  "mapping_method_counts": {
+    "exact_filename_case_insensitive": 6259,
+    "unique_identical_sha256_same_speaker_renamed_file": 2
+  },
+  "manifest_recordings": 6261,
+  "directory_wav_files": 6261,
+  "matched_available": 6261,
+  "status_counts": {
+    "available": 6261
+  },
+  "byte_identical_to_preliminary_repo_source": 6261,
+  "unused_directory_wavs": 0,
+  "decoded_duration_seconds": 3434.188888888889,
+  "mapping_csv_sha256": "08013cb3b8e07474441a8ba7dae13e48d4be88efd4ed183478c164d223746a3c",
+  "original_files_modified": false
+}

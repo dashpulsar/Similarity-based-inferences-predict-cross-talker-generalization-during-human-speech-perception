@@ -1,0 +1,13 @@
+{
+  "search_scope": "data/raw_data/alexander_nygaard19",
+  "recordings": 6261,
+  "annotation_files_found": [],
+  "wav_entries_are_lfs_pointers": 6261,
+  "manifest_phone_interval_fields": [],
+  "expected_ipa_nonmissing": 0,
+  "provided_ipa_nonmissing": 0,
+  "orthographic_responses_nonmissing": 24954,
+  "figure_2b_status": "awaiting verified AN19 phone boundaries",
+  "figure_2d_status": "awaiting phone deviations plus lexical/response alignment decisions",
+  "note": "No arbitrary equal-duration phone segmentation or inferred acoustic errors were generated."
+}

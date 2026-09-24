@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-09-18T03:57:57.116091+00:00",
+  "legacy_z_ceiling_changed": false,
+  "nested_cv_changed": false,
+  "note": "Partial-coverage references cannot normalize complete-sample predictors without explicit row matching. No pooled-condition fallback.",
+  "numpy": "1.26.4",
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "scope": "All behavioral test rows; paired comparisons on common available rows",
+  "script_sha256": "65827cd080eeacae2d6abcac4c780424e0c97073f992b3b12ff04d4d2c529432",
+  "sources": [
+    {
+      "behavior_sha256": "53a53a8269239bab01d4c45e740df19e049710fcf92ddbd322079a571f1cfbfd",
+      "dataset": "AN19",
+      "folds_sha256": "4d1cb9389ff105d97dd3d8851b57634aa3f0dacb489c230c7fb61fa74ce87154",
+      "historical_predictions": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-06\\ceilings\\AN19\\oof_predictions.csv",
+      "historical_sha256": "4eb256fdf453f4a090aacc71f6db42eb718a916ea547282bdfd3a5bdd537da19"
+    },
+    {
+      "behavior_sha256": "ef1db11be947d2e310c315382e42da7396771cd9e153de19a612e23000e635da",
+      "dataset": "X21",
+      "folds_sha256": "4918e966b312285e921196e14842d1a6905f04b6c1db132c49d4d48a4de7eafb",
+      "historical_predictions": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-06\\ceilings\\X21\\oof_predictions.csv",
+      "historical_sha256": "10c282bef6f5f2482c19034743fe7f63006735153b9584c0b51ba22bbb110366"
+    },
+    {
+      "behavior_sha256": "302064afce4caf81cc945100313e1036c32175adc72e1fd31a30e0d85b08280e",
+      "dataset": "B23",
+      "folds_sha256": "2bb9461c3393718e8085900d4433caedd44351c8ae526c3932c278f39baacfb6",
+      "historical_predictions": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-06\\ceilings\\B23\\oof_predictions.csv",
+      "historical_sha256": "8e291c45955a26b1806b5e732cdd2a50da1a530136f4b7cb84ed1fae78a773d7"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+run_label,figure,score,ratio
+AN19-base,AN19-base_train_test_loss,matched mean log loss,not selected
+AN19-ft,AN19-ft_train_test_loss,matched mean log loss,not selected

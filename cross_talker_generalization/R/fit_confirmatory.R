@@ -1,6 +1,6 @@
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) < 2L || length(args) > 6L) {
-  stop("usage: fit_confirmatory.R MODEL_INPUT.csv OUTPUT_DIR [PREDICTOR_COLUMN] [DIRECTION] [TERM_NAME] [MODEL_SET]")
+if (length(args) < 2L || length(args) > 7L) {
+  stop("usage: fit_confirmatory.R MODEL_INPUT.csv OUTPUT_DIR [PREDICTOR_COLUMN] [DIRECTION] [TERM_NAME] [MODEL_SET] [RANDOM_POLICY]")
 }
 
 suppressPackageStartupMessages(library(lme4))
@@ -11,9 +11,13 @@ predictor_column <- if (length(args) >= 3L) args[[3L]] else "raw_distance"
 predictor_direction <- if (length(args) >= 4L) as.numeric(args[[4L]]) else -1.0
 predictor_term <- if (length(args) >= 5L) args[[5L]] else "similarity_z"
 model_set <- if (length(args) >= 6L) args[[6L]] else "all"
+random_policy <- if (length(args) >= 7L) args[[7L]] else "registered"
 if (!(predictor_direction %in% c(-1, 1))) stop("predictor direction must be -1 or 1")
 if (!grepl("^[A-Za-z][A-Za-z0-9_]*$", predictor_term)) stop("invalid predictor term")
 if (!(model_set %in% c("all", "predictor_only"))) stop("model set must be all or predictor_only")
+if (!(random_policy %in% c("registered", "participant_item"))) {
+  stop("random policy must be registered or participant_item")
+}
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 input <- read.csv(input_path, stringsAsFactors = FALSE, check.names = FALSE,
@@ -45,7 +49,14 @@ input$analysis_item_id <- factor(input$analysis_item_id)
 input$test_talker_id <- factor(input$test_talker_id)
 
 response_text <- "cbind(response_correct, response_incorrect)"
-if (length(unique(input$test_talker_id)) <= 4L) {
+if (random_policy == "participant_item") {
+  # Explicit sensitivity analysis: fix the existing AN19 fallback structure
+  # across all features and folds. Do not choose a structure using test scores,
+  # and retain boundary estimates instead of dropping further variance terms.
+  talker_fixed <- ""
+  random_text <- "(1 | participant_id) + (1 | analysis_item_id)"
+  talker_strategy <- "omitted_by_declared_sensitivity_policy"
+} else if (length(unique(input$test_talker_id)) <= 4L) {
   # Four talkers do not support a stable variance-component estimate.  Treat
   # talker as a blocking factor for X21/B23 and retain participant/item REs.
   talker_fixed <- "test_talker_id + "
@@ -58,11 +69,12 @@ if (length(unique(input$test_talker_id)) <= 4L) {
 }
 formula_set <- function(random_structure) {
   formulas <- c(
+    M_null = paste0(response_text, " ~ ", talker_fixed, random_structure),
     M_condition = paste0(response_text, " ~ condition_id + ", talker_fixed, random_structure),
     M_predictor = paste0(response_text, " ~ ", predictor_term, " + ", talker_fixed, random_structure),
     M_joint = paste0(response_text, " ~ condition_id + ", predictor_term, " + ", talker_fixed, random_structure)
   )
-  if (model_set == "predictor_only") formulas["M_predictor"] else formulas
+  if (model_set == "predictor_only") formulas[c("M_null", "M_predictor")] else formulas
 }
 primary_formula_text <- formula_set(random_text)
 fallback_random_text <- "(1 | participant_id) + (1 | analysis_item_id)"
@@ -127,7 +139,7 @@ fit_scope <- function(data) {
     function(bundle) is.null(bundle$fit) || isTRUE(bundle$singular) || bundle$convergence != "ok",
     logical(1L)
   )
-  if (talker_strategy == "random_intercept" && any(unacceptable)) {
+  if (random_policy == "registered" && talker_strategy == "random_intercept" && any(unacceptable)) {
     formulas <- fallback_formula_text
     bundles <- lapply(names(formulas), function(model_id) fit_one(model_id, data, formulas))
     names(bundles) <- names(formulas)
@@ -139,12 +151,16 @@ fit_scope <- function(data) {
   }
   list(
     bundles = bundles, formulas = formulas,
-    random_structure = if (talker_strategy == "random_intercept") {
+    random_structure = if (random_policy == "participant_item") {
+      "participant_item_intercepts"
+    } else if (talker_strategy == "random_intercept") {
       "participant_item_talker_intercepts"
     } else {
       "participant_item_intercepts_with_fixed_talker_block"
     },
-    selection_reason = "primary registered structure accepted"
+    selection_reason = if (random_policy == "participant_item") {
+      "declared participant/item sensitivity structure; no automatic fallback"
+    } else "primary registered structure accepted"
   )
 }
 
@@ -153,11 +169,15 @@ diagnostic_rows <- list()
 lrt_rows <- list()
 prediction_rows <- list()
 metric_rows <- list()
+train_test_score_rows <- list()
+variance_rows <- list()
 coefficient_cursor <- 1L
 diagnostic_cursor <- 1L
 lrt_cursor <- 1L
 prediction_cursor <- 1L
 metric_cursor <- 1L
+train_test_score_cursor <- 1L
+variance_cursor <- 1L
 
 record_fit <- function(bundle, feature_key, scope, fold, model_id, n_rows,
                        formulas, random_structure, selection_reason) {
@@ -165,7 +185,7 @@ record_fit <- function(bundle, feature_key, scope, fold, model_id, n_rows,
     dataset_id = unique(input$dataset_id), feature_key = feature_key,
     scope = scope, fold = fold, model_id = model_id,
     formula = formulas[[model_id]], optimizer = bundle$optimizer,
-    random_structure = random_structure,
+    random_structure = random_structure, random_policy = random_policy,
     selection_reason = selection_reason, n_rows = n_rows,
     fit_ok = !is.null(bundle$fit), singular = bundle$singular,
     convergence = bundle$convergence, warnings = bundle$warnings,
@@ -178,6 +198,21 @@ record_fit <- function(bundle, feature_key, scope, fold, model_id, n_rows,
   )
   diagnostic_cursor <<- diagnostic_cursor + 1L
   if (is.null(bundle$fit)) return(invisible(NULL))
+  components <- as.data.frame(VarCorr(bundle$fit))
+  for (i in seq_len(nrow(components))) {
+    variance_rows[[variance_cursor]] <<- data.frame(
+      dataset_id = unique(input$dataset_id), feature_key = feature_key,
+      scope = scope, fold = fold, model_id = model_id,
+      random_policy = random_policy, random_structure = random_structure,
+      group = components$grp[[i]], term = components$var1[[i]],
+      paired_term = components$var2[[i]], variance = components$vcov[[i]],
+      stddev_or_correlation = components$sdcor[[i]],
+      variance_below_1e_8 = is.na(components$var2[[i]]) && components$vcov[[i]] < 1e-8,
+      singular = bundle$singular, convergence = bundle$convergence,
+      stringsAsFactors = FALSE
+    )
+    variance_cursor <<- variance_cursor + 1L
+  }
   table <- coef(summary(bundle$fit))
   for (term in rownames(table)) {
     coefficient_rows[[coefficient_cursor]] <<- data.frame(
@@ -198,6 +233,28 @@ binomial_loss <- function(correct, incorrect, probability) {
   -(correct * log(clipped) + incorrect * log1p(-clipped))
 }
 
+# Score both splits as word-response Bernoulli predictions from the training
+# model, with random effects set to zero.  These scores deliberately do not use
+# logLik(fit), which integrates over the fitted random effects and is not the
+# same quantity as the held-out prediction score.  Grouped binomial rows count
+# once per word response, not once per row; no binomial coefficient is included.
+score_split <- function(bundle, data) {
+  if (is.null(bundle$fit)) {
+    return(list(probability = rep(NA_real_, nrow(data)),
+                loss = rep(NA_real_, nrow(data)), status = "fit_failed"))
+  }
+  probability <- predict(bundle$fit, newdata = data, type = "response",
+                         re.form = NA, allow.new.levels = TRUE)
+  if (length(probability) != nrow(data) || any(!is.finite(probability))) {
+    stop("non-finite or incomplete prediction while scoring a split")
+  }
+  list(
+    probability = as.numeric(probability),
+    loss = binomial_loss(data$response_correct, data$response_incorrect, probability),
+    status = "ok"
+  )
+}
+
 feature_keys <- sort(unique(input$feature_key))
 for (feature_key in feature_keys) {
   layer_data <- input[input$feature_key == feature_key, , drop = FALSE]
@@ -215,13 +272,14 @@ for (feature_key in feature_keys) {
       full_scope$selection_reason
     )
   }
-  comparison_specs <- if (model_set == "all") {
-    list(
+  comparison_specs <- list(
+    predictor_beyond_null = c(reduced = "M_null", full = "M_predictor")
+  )
+  if (model_set == "all") {
+    comparison_specs <- c(comparison_specs, list(
       predictor_beyond_condition = c(reduced = "M_condition", full = "M_joint"),
       condition_beyond_predictor = c(reduced = "M_predictor", full = "M_joint")
-    )
-  } else {
-    list()
+    ))
   }
   for (comparison_id in names(comparison_specs)) {
     reduced_id <- comparison_specs[[comparison_id]][["reduced"]]
@@ -275,14 +333,39 @@ for (feature_key in feature_keys) {
         train_scope$formulas, train_scope$random_structure,
         train_scope$selection_reason
       )
+      split_data <- list(train = train, test = test)
+      split_scores <- lapply(split_data, function(data) score_split(bundle, data))
+      for (split_id in names(split_data)) {
+        data <- split_data[[split_id]]
+        scored <- split_scores[[split_id]]
+        n_trials <- sum(data$response_correct + data$response_incorrect)
+        total_loss <- sum(scored$loss)
+        train_test_score_rows[[train_test_score_cursor]] <- data.frame(
+          dataset_id = unique(input$dataset_id), feature_key = feature_key,
+          fold = fold_id, model_id = model_id, split = split_id,
+          n_rows = nrow(data), total_trials = n_trials,
+          total_log_loss = total_loss, mean_log_loss = total_loss / n_trials,
+          total_log_likelihood = -total_loss,
+          mean_log_likelihood = -total_loss / n_trials,
+          prediction_convention = "fixed_effects_only_re_form_NA",
+          likelihood_convention = "word_response_bernoulli_no_binomial_coefficient",
+          train_predictor_mean = train_mean, train_predictor_sd = train_sd,
+          predictor_column = predictor_column, predictor_term = predictor_term,
+          predictor_direction = predictor_direction,
+          formula = train_scope$formulas[[model_id]],
+          random_structure = train_scope$random_structure,
+          random_policy = random_policy,
+          selection_reason = train_scope$selection_reason,
+          optimizer = bundle$optimizer,
+          fit_ok = !is.null(bundle$fit), singular = bundle$singular,
+          convergence = bundle$convergence, score_status = scored$status,
+          stringsAsFactors = FALSE
+        )
+        train_test_score_cursor <- train_test_score_cursor + 1L
+      }
       if (is.null(bundle$fit)) next
-      probability <- tryCatch(
-        predict(bundle$fit, newdata = test, type = "response", re.form = NA,
-                allow.new.levels = TRUE),
-        error = function(e) e
-      )
-      if (inherits(probability, "error")) stop(conditionMessage(probability))
-      loss <- binomial_loss(test$response_correct, test$response_incorrect, probability)
+      probability <- split_scores$test$probability
+      loss <- split_scores$test$loss
       prediction_rows[[prediction_cursor]] <- data.frame(
         dataset_id = unique(input$dataset_id), feature_key = feature_key,
         fold = fold_id, model_id = model_id,
@@ -318,6 +401,16 @@ lrts <- if (length(lrt_rows)) do.call(rbind, lrt_rows) else data.frame(
 )
 predictions <- if (length(prediction_rows)) do.call(rbind, prediction_rows) else data.frame()
 metrics <- if (length(metric_rows)) do.call(rbind, metric_rows) else data.frame()
+train_test_scores <- if (length(train_test_score_rows)) {
+  do.call(rbind, train_test_score_rows)
+} else data.frame()
+variance_components <- if (length(variance_rows)) do.call(rbind, variance_rows) else data.frame(
+  dataset_id = character(), feature_key = character(), scope = character(), fold = integer(),
+  model_id = character(), random_policy = character(), random_structure = character(),
+  group = character(), term = character(), paired_term = character(), variance = numeric(),
+  stddev_or_correlation = numeric(), variance_below_1e_8 = logical(), singular = logical(),
+  convergence = character()
+)
 
 if (nrow(metrics) > 0L) {
   overall <- aggregate(
@@ -336,6 +429,8 @@ write.csv(diagnostics, file.path(output_dir, "diagnostics.csv"), row.names = FAL
 write.csv(lrts, file.path(output_dir, "likelihood_ratio_tests.csv"), row.names = FALSE, na = "")
 write.csv(predictions, file.path(output_dir, "oof_predictions.csv"), row.names = FALSE, na = "")
 write.csv(metrics, file.path(output_dir, "cv_metrics.csv"), row.names = FALSE, na = "")
+write.csv(train_test_scores, file.path(output_dir, "train_test_scores.csv"), row.names = FALSE, na = "")
+write.csv(variance_components, file.path(output_dir, "variance_components.csv"), row.names = FALSE, na = "")
 write.csv(
   data.frame(
     R_version = R.version.string,
@@ -348,6 +443,7 @@ write.csv(
     predictor_direction = predictor_direction,
     predictor_term = predictor_term,
     model_set = model_set,
+    random_policy = random_policy,
     stringsAsFactors = FALSE
   ),
   file.path(output_dir, "software.csv"), row.names = FALSE

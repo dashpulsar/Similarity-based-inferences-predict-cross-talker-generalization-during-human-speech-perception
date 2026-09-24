@@ -1,0 +1,17 @@
+{
+  "status": "draft_with_explicit_missing_panels",
+  "seed": 230519,
+  "participant_bootstrap_replicates": 2000,
+  "inputs_and_outputs": {
+    "cross_talker_generalization\\analysis_update_2026-08-21\\tables\\talker_distance_tr24.csv": "5bfafdbbc09440ba94cf32fd2bc2cd864f20091e0caac4255e4e95be266026db",
+    "cross_talker_generalization\\analysis_update_2026-09-06\\figure_drafts\\figure_01_language_inventory.csv": "6d152037ddc5413fe315f66d331985485fa6a05c6b28f16775bcb634da4817a8",
+    "cross_talker_generalization\\analysis_update_2026-09-06\\figure_drafts\\figure_01_method_and_language_coverage_draft.png": "b2d9b780f543763f1463d54d8573812b5c9385861bb695766ebebbbd8368be0c",
+    "cross_talker_generalization\\analysis_update_2026-09-06\\figure_drafts\\figure_01_method_and_language_coverage_draft.svg": "a830eaee3ea36f4c47037142509a6436669ac1d10a01b8045fabf6155e5c7bb4",
+    "cross_talker_generalization\\analysis_update_2026-09-06\\figure_drafts\\figure_02_representation_validation_draft.png": "38a47d97c41833d8bf7efd679a970ed3b6198eb01c5a5d1ce63fab81bf66b8fa",
+    "cross_talker_generalization\\analysis_update_2026-09-06\\figure_drafts\\figure_02_representation_validation_draft.svg": "d875c62e09307deb8122e124e7edeb82e5912d4cab5b9e246ac47cc1ae92ba16",
+    "cross_talker_generalization\\analysis_update_2026-09-06\\figure_drafts\\figure_02c_control_similarity_accuracy.csv": "fe1bdfe91a39b5df6832899c0f83594d312778231ace1650615e7af3ade36f8b",
+    "cross_talker_generalization\\scripts\\build_main_figure_drafts.py": "86576dadbd4258de9041b18c7590b13f44943c5b8937eb5a9780ebac47a46b10",
+    "results\\figures\\AN19-base-tr24-talker-similarity-heatmap-log-v3\\talker_similarity_heatmap.png": "e2ab6f1d798a306e56a87af2aa10892ec72a5caf9dff55717ce95b1e687605cb",
+    "results\\figures\\X21-base-tr12-representation-schematic-v1\\representation_schematic.png": "3d9fbb64e4083562c641038ad308e8929be5749569027b236a07cfadff84e615"
+  }
+}

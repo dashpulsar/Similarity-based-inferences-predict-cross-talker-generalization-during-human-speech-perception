@@ -1,0 +1,475 @@
+recording_id,speaker_id,word,source_wav_relpath
+AN19-rec-d27436921808918b6273,AN19.KOR.kf1,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf1/kf1ew50 judge.wav
+AN19-rec-a8c9d02aa8aa6c6c75fc,AN19.KOR.kf1,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf1/kf1ew51 dog.wav
+AN19-rec-747a2f67c6727c9a5e21,AN19.KOR.kf1,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf1/kf1ew53 league.wav
+AN19-rec-cd93755eac5cf536ed35,AN19.KOR.kf1,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf1/kf1ew56 hung.wav
+AN19-rec-c4b391fbfedb4dab5b89,AN19.KOR.kf1,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf1/kf1hw52 bun.wav
+AN19-rec-4ac7bda6a7baa4787421,AN19.KOR.kf1,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf1/kf1hw54 lice.wav
+AN19-rec-c83ac1c2e37690856a88,AN19.KOR.kf1,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf1/kf1hw56 wick.wav
+AN19-rec-e3949d4c00bf54f00ee2,AN19.KOR.kf1,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf1/kf1hw58 mote.wav
+AN19-rec-4e22b6caf9291b22924b,AN19.KOR.kf2,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf2/kf2ew50 judge.wav
+AN19-rec-e5ec55f83fd517a6d1b1,AN19.KOR.kf2,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf2/kf2ew51 dog.wav
+AN19-rec-7455a50b50dfcb0b3e44,AN19.KOR.kf2,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf2/kf2ew53 league.wav
+AN19-rec-b326566f26439e604d0f,AN19.KOR.kf2,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf2/kf2ew56 hung.wav
+AN19-rec-f448d385cb3bc09e88f6,AN19.KOR.kf2,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf2/kf2hw52 bun.wav
+AN19-rec-4302f29e2e732e320536,AN19.KOR.kf2,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf2/kf2hw54 lice.wav
+AN19-rec-b3b9923f5eed5cddc108,AN19.KOR.kf2,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf2/Kf2hw56 wick.wav
+AN19-rec-be427d431d55aad97a22,AN19.KOR.kf2,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf2/Kf2hw58 mote.wav
+AN19-rec-254e243417a3c17041ee,AN19.KOR.kf3,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf3/kf3ew52 vote.wav
+AN19-rec-0e0da6e8eea07ec22d9b,AN19.KOR.kf3,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf3/kf3ew54 thick.wav
+AN19-rec-0fc2b3d7b7206014db75,AN19.KOR.kf3,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf3/kf3ew55 page.wav
+AN19-rec-b908d020849f92e50575,AN19.KOR.kf3,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf3/kf3ew57 join.wav
+AN19-rec-f4dca73475edd9a37966,AN19.KOR.kf3,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf3/kf3hw53 gut.wav
+AN19-rec-35d6edfef139dad0e8de,AN19.KOR.kf3,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf3/kf3hw57 hurl.wav
+AN19-rec-12745f7bcc936f9522ed,AN19.KOR.kf3,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf3/kf3hw59 teat.wav
+AN19-rec-f68ad87d01df4c80f630,AN19.KOR.kf3,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf3/kf3hw62 hoot.wav
+AN19-rec-bc3be77d1966626f4edc,AN19.KOR.kf4,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf4/kf4ew52 vote.wav
+AN19-rec-653f45dfbf72dec94eb9,AN19.KOR.kf4,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf4/kf4ew54 thick.wav
+AN19-rec-aba115d0e349646b9ef1,AN19.KOR.kf4,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf4/kf4ew55 page.wav
+AN19-rec-ffb78b450d98db59a947,AN19.KOR.kf4,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf4/kf4ew57 join.wav
+AN19-rec-18a9d4f41335873eb070,AN19.KOR.kf4,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf4/kf4hw53 gut.wav
+AN19-rec-fa200985e6ab4e652d01,AN19.KOR.kf4,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf4/kf4hw57 hurl.wav
+AN19-rec-e1d6f69d3cbc9ef14f44,AN19.KOR.kf4,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf4/kf4hw59 teat.wav
+AN19-rec-e78f403e9c753613cb24,AN19.KOR.kf4,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf4/kf4hw62 hoot.wav
+AN19-rec-576fcdfe554548452601,AN19.KOR.kf5,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf5/kf5ew58 shop.wav
+AN19-rec-55cd78055e705b163184,AN19.KOR.kf5,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf5/kf5ew59 roof.wav
+AN19-rec-a5e30066178d51dd33b4,AN19.KOR.kf5,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf5/kf5ew64 pull.wav
+AN19-rec-4cdac32d74c829204cfb,AN19.KOR.kf5,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf5/kf5ew65 chain.wav
+AN19-rec-d041b66d7a915f41e57d,AN19.KOR.kf5,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf5/kf5hw55 mid.wav
+AN19-rec-36347a437c1185912247,AN19.KOR.kf5,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf5/kf5hw60 hash.wav
+AN19-rec-ea4e22db8c2e2a3533b8,AN19.KOR.kf5,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf5/kf5hw61 hid.wav
+AN19-rec-dab51e99088a6fc47d72,AN19.KOR.kf5,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf5/kf5hw63 mace.wav
+AN19-rec-1d21c79a16ac3b6e949f,AN19.KOR.kf6,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf6/kf6ew58 shop.wav
+AN19-rec-581ead41eb8d55ac58ca,AN19.KOR.kf6,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf6/kf6ew59 roof.wav
+AN19-rec-3929c4522019a1fb732e,AN19.KOR.kf6,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf6/kf6ew64 pull.wav
+AN19-rec-b4219d4dc939ef5c633b,AN19.KOR.kf6,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf6/kf6ew65 chain.wav
+AN19-rec-4348d5d0ada9848216e0,AN19.KOR.kf6,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf6/kf6hw55 mid.wav
+AN19-rec-5b9305f224cb6653a498,AN19.KOR.kf6,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf6/kf6hw60 hash.wav
+AN19-rec-19b6117c2fcabd0e7910,AN19.KOR.kf6,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf6/kf6hw61 hid.wav
+AN19-rec-11be2bc3240cca1618de,AN19.KOR.kf6,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/kf6/kf6hw63 mace.wav
+AN19-rec-0cd77e207f2c1a20b459,AN19.KOR.km1,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km1/km1ew60 leg.wav
+AN19-rec-d1786429ffe377f5ac0b,AN19.KOR.km1,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km1/km1ew61 lose.wav
+AN19-rec-466ef5d6e4722b405524,AN19.KOR.km1,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km1/km1ew62 theme.wav
+AN19-rec-dea3b318b204faf34c56,AN19.KOR.km1,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km1/km1ew63 soil.wav
+AN19-rec-00b0080c896440442143,AN19.KOR.km1,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km1/km1hw64 main.wav
+AN19-rec-a418f21a7a2aba39c134,AN19.KOR.km1,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km1/km1hw65 moan.wav
+AN19-rec-00cd2a165259bb4e0496,AN19.KOR.km1,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km1/km1hw66 mum.wav
+AN19-rec-6a937297c85ac3d7c001,AN19.KOR.km1,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km1/km1hw67 rim.wav
+AN19-rec-2fe565767a320399b8b9,AN19.KOR.km2,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km2/km2ew60 leg.wav
+AN19-rec-65836cddef83f89e36ad,AN19.KOR.km2,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km2/km2ew61 lose.wav
+AN19-rec-9606b29a3bd5c12d1f07,AN19.KOR.km2,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km2/km2ew62 theme.wav
+AN19-rec-ee7ac91ca8756020de56,AN19.KOR.km2,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km2/km2ew63 soil.wav
+AN19-rec-c65edcd5a6610e7d9d44,AN19.KOR.km2,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km2/km2hw64 main.wav
+AN19-rec-c8d9ae15df3bedec17bc,AN19.KOR.km2,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km2/km2hw65 moan.wav
+AN19-rec-4c8f44329d23e09ffb5a,AN19.KOR.km2,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km2/km2hw66 mum.wav
+AN19-rec-921921b88821238aec3a,AN19.KOR.km2,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km2/km2hw67 rim.wav
+AN19-rec-dba4be25a95c71a4238c,AN19.KOR.km3,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km3/km3ew66 curve.wav
+AN19-rec-ea0aac3235d06709ca68,AN19.KOR.km3,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km3/km3ew67 path.wav
+AN19-rec-f354e84cc4f72666a83e,AN19.KOR.km3,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km3/km3ew72 noise.wav
+AN19-rec-ea49fe2066cc124f4155,AN19.KOR.km3,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km3/km3ew73 wash.wav
+AN19-rec-c54ffd9ada4c289f7f41,AN19.KOR.km3,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km3/km3hw68 route.wav
+AN19-rec-07d2177457a473d16f05,AN19.KOR.km3,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km3/km3hw69 wail.wav
+AN19-rec-3ac473fefce89c515dba,AN19.KOR.km3,wave,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km3/km3hw74 wave.wav
+AN19-rec-d63ae1ad172687440a75,AN19.KOR.km3,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km3/km3hw75 weed.wav
+AN19-rec-9ee4c6a03243ed7180e3,AN19.KOR.km6,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km6/km6ew66 curve.wav
+AN19-rec-056d823ed319234cb09f,AN19.KOR.km6,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km6/km6ew67 path.wav
+AN19-rec-d1e485555dfeaab714ac,AN19.KOR.km6,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km6/km6ew72 noise.wav
+AN19-rec-afccf10d609a3e61b462,AN19.KOR.km6,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km6/km6ew73 wash.wav
+AN19-rec-e635c99cc3fc2497a9a2,AN19.KOR.km6,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km6/km6hw68 route.wav
+AN19-rec-7eb5ceba6ce5963324b5,AN19.KOR.km6,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km6/km6hw69 wail.wav
+AN19-rec-b0cd779d23610e0516c7,AN19.KOR.km6,wave,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km6/km6hw74 wave.wav
+AN19-rec-f1f270db6ff535d947d5,AN19.KOR.km6,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km6/km6hw75 weed.wav
+AN19-rec-fa9aa001b26d761eea2b,AN19.KOR.km7,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km7/km7ew18 real.wav
+AN19-rec-be65c4e46aa7d6819f5c,AN19.KOR.km7,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km7/km7ew68 dirt.wav
+AN19-rec-03028c8b783bdbde83a9,AN19.KOR.km7,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km7/km7ew69 vice.wav
+AN19-rec-08c15860673f09191da0,AN19.KOR.km7,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km7/km7ew75 fig.wav
+AN19-rec-a7eae9ee9ddf0a0eff17,AN19.KOR.km7,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km7/km7hw29 suck.wav
+AN19-rec-f5fe81e1dce196b0ece5,AN19.KOR.km7,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km7/km7hw70 hum.wav
+AN19-rec-0f60995ad3f406bd4350,AN19.KOR.km7,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km7/km7hw72 beak.wav
+AN19-rec-c501cadf59b1aec98145,AN19.KOR.km7,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km7/km7hw73 hag.wav
+AN19-rec-a2cee94d85114667d084,AN19.KOR.km8,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km8/km8ew18 real.wav
+AN19-rec-6846aa179caf273d92ee,AN19.KOR.km8,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km8/km8ew68 dirt.wav
+AN19-rec-ee4860db9c8f790c6284,AN19.KOR.km8,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km8/km8ew69 vice.wav
+AN19-rec-cb42db8f47a682cffbde,AN19.KOR.km8,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km8/km8ew75 fig.wav
+AN19-rec-f2475772c52f81d7a1de,AN19.KOR.km8,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km8/km8hw29 suck.wav
+AN19-rec-0d9882c36e1493e91bd4,AN19.KOR.km8,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km8/km8hw70 hum.wav
+AN19-rec-71fa37166ce8e550a7bf,AN19.KOR.km8,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km8/km8hw72 beak.wav
+AN19-rec-9eac2bca2f7312c0ac03,AN19.KOR.km8,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Korean L2-English/km8/km8hw73 hag.wav
+AN19-rec-910a8f14ea27c1b6692e,AN19.SPA.sf1,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf1/sf1ew50 judge.wav
+AN19-rec-e5f93ed719ec1f23f4bd,AN19.SPA.sf1,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf1/sf1ew51 dog.wav
+AN19-rec-51ecb0823b6354e05ef7,AN19.SPA.sf1,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf1/sf1ew53 league.wav
+AN19-rec-ac36e4cea8f87eada131,AN19.SPA.sf1,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf1/sf1ew56 hung.wav
+AN19-rec-3c347bc6e72fc051aea2,AN19.SPA.sf1,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf1/sf1hw52 bun.wav
+AN19-rec-27b4824aed32d64a0a40,AN19.SPA.sf1,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf1/sf1hw54 lice.wav
+AN19-rec-051ee5bae748dbe028d9,AN19.SPA.sf1,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf1/sf1hw56 wick.wav
+AN19-rec-473dd879f0fa34109667,AN19.SPA.sf1,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf1/sf1hw58 mote.wav
+AN19-rec-69603f040e16bd0f0607,AN19.SPA.sf2,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf2/sf2ew50 judge.wav
+AN19-rec-0c0f4bd6a0fbc21ff025,AN19.SPA.sf2,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf2/sf2ew51 dog.wav
+AN19-rec-217a3c56cdfa14c3f37f,AN19.SPA.sf2,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf2/sf2ew53 league.wav
+AN19-rec-01a4870fd3f1c7be6f36,AN19.SPA.sf2,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf2/sf2ew56 hung.wav
+AN19-rec-2d27cec4c0a0cfb568de,AN19.SPA.sf2,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf2/sf2hw52 bun.wav
+AN19-rec-e0c57c11b40f7b4eb942,AN19.SPA.sf2,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf2/sf2hw54 lice.wav
+AN19-rec-d12cc5b85c6eaf3624b8,AN19.SPA.sf2,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf2/sf2hw56 wick.wav
+AN19-rec-207161790ff043bbcd75,AN19.SPA.sf2,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf2/sf2hw58 mote.wav
+AN19-rec-a83296bd736aa3dc6367,AN19.SPA.sf3,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf3/sf3ew52 vote.wav
+AN19-rec-a45092db00c50b1a012f,AN19.SPA.sf3,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf3/sf3ew54 thick.wav
+AN19-rec-e5719b24ee4181832826,AN19.SPA.sf3,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf3/sf3ew55 page.wav
+AN19-rec-212832509a7555bd973d,AN19.SPA.sf3,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf3/sf3ew57 join.wav
+AN19-rec-edd6a76807a7e94e48b1,AN19.SPA.sf3,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf3/sf3hw53 gut.wav
+AN19-rec-2dd3c7ba879bddacbcad,AN19.SPA.sf3,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf3/sf3hw57 hurl.wav
+AN19-rec-fc4f201d95ca4854e3a1,AN19.SPA.sf3,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf3/sf3hw59 teat.wav
+AN19-rec-d0e7e60c85a08cec8926,AN19.SPA.sf3,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf3/sf3hw62 hoot.wav
+AN19-rec-227663ae681ebfe901c2,AN19.SPA.sf4,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf4/sf4ew52 vote.wav
+AN19-rec-f47694d3e859e22ea839,AN19.SPA.sf4,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf4/sf4ew54 thick.wav
+AN19-rec-94d68c541002411ad5b3,AN19.SPA.sf4,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf4/sf4ew55 page.wav
+AN19-rec-a6ed4fe87152a023689c,AN19.SPA.sf4,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf4/sf4ew57 join.wav
+AN19-rec-311f57c0504c071e0afa,AN19.SPA.sf4,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf4/sf4hw53 gut.wav
+AN19-rec-746a5e176ff8d1f0a400,AN19.SPA.sf4,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf4/sf4hw57 hurl.wav
+AN19-rec-a4d290c73a9abf7fec1a,AN19.SPA.sf4,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf4/sf4hw59 teat.wav
+AN19-rec-9bff74012e53794e1a9c,AN19.SPA.sf4,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf4/sf4hw62 hoot.wav
+AN19-rec-454529b79ce910711b4e,AN19.SPA.sf5,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf5/sf5ew58 shop.wav
+AN19-rec-4b84ce0119586a29ed77,AN19.SPA.sf5,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf5/sf5ew59 roof.wav
+AN19-rec-b30b26948f6eb4766e18,AN19.SPA.sf5,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf5/sf5ew64 pull.wav
+AN19-rec-2a93f84b4864a2b7a27c,AN19.SPA.sf5,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf5/sf5ew65 chain.wav
+AN19-rec-bcae4e9cf6465238b35a,AN19.SPA.sf5,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf5/sf5hw55 mid.wav
+AN19-rec-76ff55ea9705344daaaa,AN19.SPA.sf5,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf5/sf5hw60 hash.wav
+AN19-rec-d4cb8f147f3c9af98826,AN19.SPA.sf5,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf5/sf5hw61 hid.wav
+AN19-rec-94e44e2830139762f2b3,AN19.SPA.sf5,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf5/sf5hw63 mace.wav
+AN19-rec-1c30c2d4ae9179b0c578,AN19.SPA.sf6,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf6/sf6ew58 shop.wav
+AN19-rec-46f4f67e34255ad822a6,AN19.SPA.sf6,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf6/sf6ew59 roof.wav
+AN19-rec-00079a5577d59a2dc124,AN19.SPA.sf6,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf6/sf6ew64 pull.wav
+AN19-rec-d38f96bd99f506b5c69f,AN19.SPA.sf6,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf6/sf6ew65 chain.wav
+AN19-rec-8bc728d10ee870ce24d8,AN19.SPA.sf6,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf6/sf6hw55 mid.wav
+AN19-rec-18ab82cf2f8d58c04c2c,AN19.SPA.sf6,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf6/sf6hw60 hash.wav
+AN19-rec-87cc358845eefa389ef5,AN19.SPA.sf6,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf6/sf6hw61 hid.wav
+AN19-rec-a2ce18999ab78f926aed,AN19.SPA.sf6,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sf6/sf6hw63 mace.wav
+AN19-rec-0a3fd39d2abf5554c2dd,AN19.SPA.sm2,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm2/sm2ew60 leg.wav
+AN19-rec-552f3cbfb2d6085f58ea,AN19.SPA.sm2,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm2/sm2ew61 lose.wav
+AN19-rec-02c9ef6d8a6e68ac538f,AN19.SPA.sm2,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm2/sm2ew62 theme.wav
+AN19-rec-3ca1099a901a6af41b31,AN19.SPA.sm2,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm2/sm2ew63 soil.wav
+AN19-rec-7a86fd09b4df28107737,AN19.SPA.sm2,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm2/sm2hw64 main.wav
+AN19-rec-3cd4cdb3c3376dfb9f5a,AN19.SPA.sm2,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm2/sm2hw65 moan.wav
+AN19-rec-8924bdfc87961de407e1,AN19.SPA.sm2,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm2/sm2hw66 mum.wav
+AN19-rec-f59e70d593b07df7fbe6,AN19.SPA.sm2,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm2/sm2hw67 rim.wav
+AN19-rec-6aff5fadfac885c54b93,AN19.SPA.sm3,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm3/sm3ew60 leg.wav
+AN19-rec-7bb809119cececb06c5c,AN19.SPA.sm3,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm3/sm3ew61 lose.wav
+AN19-rec-6fe5550175339b6a5e3e,AN19.SPA.sm3,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm3/sm3ew62 theme.wav
+AN19-rec-7dede20cb6af82c9bb6a,AN19.SPA.sm3,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm3/sm3ew63 soil.wav
+AN19-rec-0630aa81cb54db09a885,AN19.SPA.sm3,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm3/sm3hw64 main.wav
+AN19-rec-fe5e3390051576a89595,AN19.SPA.sm3,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm3/sm3hw65 moan.wav
+AN19-rec-af711b67fe5b7672ad16,AN19.SPA.sm3,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm3/sm3hw66 mum.wav
+AN19-rec-6c38b50774314b5329b0,AN19.SPA.sm3,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm3/sm3hw67 rim.wav
+AN19-rec-8a3508773cafc03cc5da,AN19.SPA.sm4,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm4/sm4ew66 curve.wav
+AN19-rec-4dc8e8d09cacc1dfec2b,AN19.SPA.sm4,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm4/sm4ew67 path.wav
+AN19-rec-055f105924572b8dd346,AN19.SPA.sm4,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm4/sm4ew72 noise.wav
+AN19-rec-6d1f9933bde17d6b24a1,AN19.SPA.sm4,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm4/sm4ew73 wash.wav
+AN19-rec-ed48e60b8183458af0dd,AN19.SPA.sm4,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm4/sm4hw68 route.wav
+AN19-rec-09723f764d0d418e5199,AN19.SPA.sm4,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm4/sm4hw69 wail.wav
+AN19-rec-cdcec1ccde4dcb31d241,AN19.SPA.sm4,wave,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm4/sm4hw74 wave.wav
+AN19-rec-bc289064a3540e9249c3,AN19.SPA.sm4,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm4/sm4hw75 weed.wav
+AN19-rec-32ee51d568f99bc79b76,AN19.SPA.sm5,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm5/sm5ew66 curve.wav
+AN19-rec-132b5360c7eaab8cb6ac,AN19.SPA.sm5,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm5/sm5ew67 path.wav
+AN19-rec-af6db39024a259a5c170,AN19.SPA.sm5,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm5/sm5ew72 noise.wav
+AN19-rec-06c7ea3a45b54d6ae8a9,AN19.SPA.sm5,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm5/sm5ew73 wash.wav
+AN19-rec-e22fce14699067c07709,AN19.SPA.sm5,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm5/sm5hw68 route.wav
+AN19-rec-9b53144404f8fb4980b2,AN19.SPA.sm5,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm5/sm5hw69 wail.wav
+AN19-rec-bd5020a87845ccd77c01,AN19.SPA.sm5,wave,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm5/sm5hw74 wave.wav
+AN19-rec-6d557ef2e36361078d82,AN19.SPA.sm5,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm5/sm5hw75 weed.wav
+AN19-rec-1bf3624bbc0c4c4adb2f,AN19.SPA.sm6,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm6/sm6ew18 real.wav
+AN19-rec-8b0fa10d9fbaad520e76,AN19.SPA.sm6,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm6/sm6ew68 dirt.wav
+AN19-rec-dece1e80a05e275ceb73,AN19.SPA.sm6,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm6/sm6ew69 vice.wav
+AN19-rec-129c164716516388a6fb,AN19.SPA.sm6,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm6/sm6ew75 fig.wav
+AN19-rec-a7e449196b3a38bd2fe1,AN19.SPA.sm6,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm6/sm6hw29 suck.wav
+AN19-rec-14609c5abc8d2b8354cd,AN19.SPA.sm6,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm6/sm6hw70 hum.wav
+AN19-rec-8d52960ed9124949f2d5,AN19.SPA.sm6,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm6/sm6hw72 beak.wav
+AN19-rec-02c7ceecc69e60515ca1,AN19.SPA.sm6,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm6/sm6hw73 hag.wav
+AN19-rec-3e06c07c753fe55954a4,AN19.SPA.sm7,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm7/sm7ew18 real.wav
+AN19-rec-ecf7b6144c75b37d5acd,AN19.SPA.sm7,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm7/sm7ew68 dirt.wav
+AN19-rec-382e916cecb442e2d7b0,AN19.SPA.sm7,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm7/sm7ew69 vice.wav
+AN19-rec-b2ada4bf41b8a03b0beb,AN19.SPA.sm7,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm7/sm7ew75 fig.wav
+AN19-rec-0696c051fb052c117e49,AN19.SPA.sm7,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm7/sm7hw29 suck.wav
+AN19-rec-ba6af8001c8c265f3172,AN19.SPA.sm7,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm7/sm7hw70 hum.wav
+AN19-rec-b55b5daa9aba1fada0e1,AN19.SPA.sm7,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm7/sm7hw72 beak.wav
+AN19-rec-ec9b2f39e8e7f91b5d6e,AN19.SPA.sm7,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-Spanish L2-English/sm7/sm7hw73 hag.wav
+AN19-rec-83d327edb6a2f648a9c6,AN19.ENG.ef1,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew18 real.WAV
+AN19-rec-b2a51e909818a9bb6b67,AN19.ENG.ef1,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew50 judge.WAV
+AN19-rec-660c064e8006d6cc24dc,AN19.ENG.ef1,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew51 dog.WAV
+AN19-rec-c90a2f90c862036b5b14,AN19.ENG.ef1,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew52 vote.WAV
+AN19-rec-96af9aae79bf7e2383fa,AN19.ENG.ef1,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew53 league.WAV
+AN19-rec-4d7baed1f6475f81d679,AN19.ENG.ef1,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew54 thick.WAV
+AN19-rec-39d58c4b858481d8f7e0,AN19.ENG.ef1,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew55 page.WAV
+AN19-rec-9d5bfef81a490180f7db,AN19.ENG.ef1,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew56 hung.WAV
+AN19-rec-cbcbaec1eab1437cc946,AN19.ENG.ef1,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew57 join.WAV
+AN19-rec-a0c5199e6590a449e9f2,AN19.ENG.ef1,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew58 shop.WAV
+AN19-rec-c8fbae6b079a3ba88354,AN19.ENG.ef1,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew59 roof.WAV
+AN19-rec-c6f3bbb4bd78e18dd64f,AN19.ENG.ef1,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew60 leg.WAV
+AN19-rec-e90c26f21870ed3e8995,AN19.ENG.ef1,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew61 lose.WAV
+AN19-rec-e349a8c47d90b338bee8,AN19.ENG.ef1,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew62 theme.WAV
+AN19-rec-c9485adc3ff74009183e,AN19.ENG.ef1,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew63 soil.WAV
+AN19-rec-4bb293667ada582f6652,AN19.ENG.ef1,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew64 pull.WAV
+AN19-rec-f9d4991455e8ee2e52f2,AN19.ENG.ef1,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew65 chain.WAV
+AN19-rec-0290283a62b7c221e526,AN19.ENG.ef1,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew66 curve.WAV
+AN19-rec-f0fb58e63c21a7da8747,AN19.ENG.ef1,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew67 path.WAV
+AN19-rec-e5b8d3c36a880b47fb91,AN19.ENG.ef1,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew68 dirt.WAV
+AN19-rec-b748af9b01ed851a6fed,AN19.ENG.ef1,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew69 vice.WAV
+AN19-rec-c40b809516c369c8b486,AN19.ENG.ef1,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew72 noise.WAV
+AN19-rec-b892b5345183d3db63ec,AN19.ENG.ef1,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew73 wash.WAV
+AN19-rec-e0439b163416157c754c,AN19.ENG.ef1,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1ew75 fig.WAV
+AN19-rec-e52156c1c7f8b0f683e1,AN19.ENG.ef1,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw29 suck.WAV
+AN19-rec-76449a6a3e3fd542f0c1,AN19.ENG.ef1,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw52 bun.WAV
+AN19-rec-0f9b038970314a9d88c2,AN19.ENG.ef1,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw53 gut.WAV
+AN19-rec-d4b88394a81b6cc88831,AN19.ENG.ef1,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw54 lice.WAV
+AN19-rec-fd9b9bb6c123ecd1e009,AN19.ENG.ef1,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw55 mid.WAV
+AN19-rec-697cb5238ac7863d62f0,AN19.ENG.ef1,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw56 wick.WAV
+AN19-rec-0b55815af6e9192d2c37,AN19.ENG.ef1,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw57 hurl.WAV
+AN19-rec-2afd32e66cf40ff56f32,AN19.ENG.ef1,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw58 mote.WAV
+AN19-rec-d48d6425a69a8cab0b8f,AN19.ENG.ef1,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw59 teat.WAV
+AN19-rec-b4422b8bad9859bcd7d8,AN19.ENG.ef1,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw60 hash.WAV
+AN19-rec-1845528736aa2039760f,AN19.ENG.ef1,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw61 hid.WAV
+AN19-rec-97dd19a5f5e815e70d47,AN19.ENG.ef1,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw62 hoot.WAV
+AN19-rec-92992e411f4625fa600a,AN19.ENG.ef1,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw63 mace.WAV
+AN19-rec-8d005cb92ddb841bb974,AN19.ENG.ef1,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw64 main.WAV
+AN19-rec-185444f957c7ff00641f,AN19.ENG.ef1,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw65 moan.WAV
+AN19-rec-ded0482fc8fc4481e058,AN19.ENG.ef1,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw66 mum.WAV
+AN19-rec-485e7d43527f4bebcec5,AN19.ENG.ef1,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw67 rim.WAV
+AN19-rec-21e8875c9222f651de14,AN19.ENG.ef1,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw68 route.WAV
+AN19-rec-51167cd22b01bf15f7f2,AN19.ENG.ef1,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw69 wail.WAV
+AN19-rec-98ee0d498f7036bf5617,AN19.ENG.ef1,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw70 hum.WAV
+AN19-rec-7a7f488109ab07111fc5,AN19.ENG.ef1,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw72 beak.WAV
+AN19-rec-0330eb6f756f49d60642,AN19.ENG.ef1,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw73 hag.WAV
+AN19-rec-9d6d33f66d295c13886e,AN19.ENG.ef1,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef1/ef1hw75 weed.WAV
+AN19-rec-4eb4dcb45ca0a0061529,AN19.ENG.ef2,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew18 real.WAV
+AN19-rec-1e7d17c7060193e5266a,AN19.ENG.ef2,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew50 judge.WAV
+AN19-rec-b1a8a07577223df7bc93,AN19.ENG.ef2,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew51 dog.WAV
+AN19-rec-b24ddcb47df0f9d0be55,AN19.ENG.ef2,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew52 vote.WAV
+AN19-rec-c242c3dc0e51c3b304e3,AN19.ENG.ef2,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew53 league.WAV
+AN19-rec-652588f37690d975e458,AN19.ENG.ef2,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew54 thick.WAV
+AN19-rec-26b3ef1b5a23db244048,AN19.ENG.ef2,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew55 page.WAV
+AN19-rec-857cc549036967676a60,AN19.ENG.ef2,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew56 hung.WAV
+AN19-rec-a43a382b98f44987ee19,AN19.ENG.ef2,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew57 join.WAV
+AN19-rec-7d7bfeb5d3b79fe7f57c,AN19.ENG.ef2,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew58 shop.WAV
+AN19-rec-782a2c3e9ae6ba61aef0,AN19.ENG.ef2,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew59 roof.WAV
+AN19-rec-9ea12a4d5f9b3c1e7158,AN19.ENG.ef2,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew60 leg.WAV
+AN19-rec-519e5bef92ef9b9e668b,AN19.ENG.ef2,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew61 lose.WAV
+AN19-rec-bbf8b3076e2c86575158,AN19.ENG.ef2,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew62 theme.WAV
+AN19-rec-290cc64f095d97f64fe7,AN19.ENG.ef2,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew63 soil.WAV
+AN19-rec-11c793fc477390560836,AN19.ENG.ef2,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew64 pull.WAV
+AN19-rec-2c77ade3875efaa41a28,AN19.ENG.ef2,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew65 chain.WAV
+AN19-rec-f5a6c0e24a255f38dc78,AN19.ENG.ef2,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew66 curve.WAV
+AN19-rec-4166169b833280e74d11,AN19.ENG.ef2,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew67 path.WAV
+AN19-rec-abfa6b0b1eca5834edb4,AN19.ENG.ef2,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew68 dirt.WAV
+AN19-rec-a32235c22bbe2aac5983,AN19.ENG.ef2,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew69 vice.WAV
+AN19-rec-d65f0e78a6bec7e0c8b9,AN19.ENG.ef2,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew72 noise.WAV
+AN19-rec-700f2e24e7f303c3d17c,AN19.ENG.ef2,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew73 wash.WAV
+AN19-rec-27fae1cbe81dbe8eb245,AN19.ENG.ef2,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2ew75 fig.WAV
+AN19-rec-adc23cffef4ad208efe5,AN19.ENG.ef2,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw29 suck.WAV
+AN19-rec-a42215dcef5ffc7465d0,AN19.ENG.ef2,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw52 bun.WAV
+AN19-rec-5d7487818276a5e60d5a,AN19.ENG.ef2,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw53 gut.WAV
+AN19-rec-1969903c434e39d4de83,AN19.ENG.ef2,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw54 lice.WAV
+AN19-rec-c3199a29a150a39fc674,AN19.ENG.ef2,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw55 mid.WAV
+AN19-rec-78949d37d222070d1ed4,AN19.ENG.ef2,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw56 wick.WAV
+AN19-rec-7f00a7dd4364bbe8d151,AN19.ENG.ef2,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw57 hurl.WAV
+AN19-rec-48652c7046c041551267,AN19.ENG.ef2,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw58 mote.WAV
+AN19-rec-0f865e73aaa2ee7dc061,AN19.ENG.ef2,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw59 teat.WAV
+AN19-rec-02f284ba84e511560d67,AN19.ENG.ef2,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw60 hash.WAV
+AN19-rec-1bdec3c4864c2cc67977,AN19.ENG.ef2,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw61 hid.WAV
+AN19-rec-b58e2a4042d11293595c,AN19.ENG.ef2,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw62 hoot.WAV
+AN19-rec-6952ad2fbe119d75cc8a,AN19.ENG.ef2,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw63 mace.WAV
+AN19-rec-96ca545297451f224734,AN19.ENG.ef2,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw64 main.WAV
+AN19-rec-967fd1394a9a9474ec80,AN19.ENG.ef2,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw65 moan.WAV
+AN19-rec-72d3b1baf6659dab1e3b,AN19.ENG.ef2,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw66 mum.WAV
+AN19-rec-82819e1b4858e34d501e,AN19.ENG.ef2,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw67 rim.WAV
+AN19-rec-19c43f49747b6dce1ff3,AN19.ENG.ef2,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw68 route.WAV
+AN19-rec-6b4f056658a753f0031c,AN19.ENG.ef2,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw69 wail.WAV
+AN19-rec-ba816f30a531501ea2dd,AN19.ENG.ef2,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw70 hum.WAV
+AN19-rec-523e0e70a4c0d57dc662,AN19.ENG.ef2,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw72 beak.WAV
+AN19-rec-eaed016aab874b445058,AN19.ENG.ef2,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw73 hag.WAV
+AN19-rec-f99beff52f213c43d50e,AN19.ENG.ef2,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef2/ef2hw75 weed.WAV
+AN19-rec-f158a51672c7b11a18cf,AN19.ENG.ef3,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew18 real.WAV
+AN19-rec-2f18201ca611b446e640,AN19.ENG.ef3,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew50 judge.WAV
+AN19-rec-b69e54209ff4fee39756,AN19.ENG.ef3,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew51 dog.WAV
+AN19-rec-a615d19ee16c53d27e6d,AN19.ENG.ef3,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew52 vote.WAV
+AN19-rec-d1a08482badfb74b1dec,AN19.ENG.ef3,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew53 league.WAV
+AN19-rec-6ee349c7ad625499a3ac,AN19.ENG.ef3,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew54 thick.WAV
+AN19-rec-263365e929d6d3eb1ca2,AN19.ENG.ef3,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew55 page.WAV
+AN19-rec-3cab9e7195873dcb8fbc,AN19.ENG.ef3,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew56 hung.WAV
+AN19-rec-d89236016e085e2711f6,AN19.ENG.ef3,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew57 join.WAV
+AN19-rec-7244fd1936799cc54bdd,AN19.ENG.ef3,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew58 shop.WAV
+AN19-rec-f70a4aaf198896e836f8,AN19.ENG.ef3,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew59 roof.WAV
+AN19-rec-59c0c6267c61dd2f9e6c,AN19.ENG.ef3,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew60 leg.WAV
+AN19-rec-bfa59bfa220b2b3a5208,AN19.ENG.ef3,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew61 lose.WAV
+AN19-rec-f5730e58c21cece8a419,AN19.ENG.ef3,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew62 theme.WAV
+AN19-rec-164f5c594c674bb354ca,AN19.ENG.ef3,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew63 soil.WAV
+AN19-rec-965239ff420477839ba5,AN19.ENG.ef3,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew64 pull.WAV
+AN19-rec-a992f83a7e89e23b2d98,AN19.ENG.ef3,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew65 chain.WAV
+AN19-rec-f519223d641fc6a6daf0,AN19.ENG.ef3,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew66 curve.WAV
+AN19-rec-006f49e04d99bc9819e4,AN19.ENG.ef3,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew67 path.WAV
+AN19-rec-74586ac481a8b39b91be,AN19.ENG.ef3,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew68 dirt.WAV
+AN19-rec-f7893cbff95a8b926a66,AN19.ENG.ef3,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew69 vice.WAV
+AN19-rec-0cb83efbf5761eb49cfa,AN19.ENG.ef3,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew72 noise.WAV
+AN19-rec-f56839d5bc9da9963543,AN19.ENG.ef3,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew73 wash.WAV
+AN19-rec-3fdfa528c4d59a40719e,AN19.ENG.ef3,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3ew75 fig.WAV
+AN19-rec-b60bb9c606eefbef9f1d,AN19.ENG.ef3,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw29 suck.WAV
+AN19-rec-f342348eb6fe6df807ed,AN19.ENG.ef3,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw52 bun.WAV
+AN19-rec-b13dfddf58d594780c44,AN19.ENG.ef3,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw53 gut.WAV
+AN19-rec-a11be811e95dbb1a84b5,AN19.ENG.ef3,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw54 lice.WAV
+AN19-rec-365bc2e583a22c8fb997,AN19.ENG.ef3,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw55 mid.WAV
+AN19-rec-30c21ed8b523a4e08d15,AN19.ENG.ef3,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw56 wick.WAV
+AN19-rec-464c6646fef70a7d7ac1,AN19.ENG.ef3,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw57 hurl.WAV
+AN19-rec-67227f76ab377acbd9a5,AN19.ENG.ef3,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw58 mote.WAV
+AN19-rec-54fc4038fca840146801,AN19.ENG.ef3,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw59 teat.WAV
+AN19-rec-81e4ca3ec68c17907c40,AN19.ENG.ef3,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw60 hash.WAV
+AN19-rec-da52b9c5da1b6da58e28,AN19.ENG.ef3,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw61 hid.WAV
+AN19-rec-395eda4a3f0506b61bf8,AN19.ENG.ef3,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw62 hoot.WAV
+AN19-rec-079475af7708602ac125,AN19.ENG.ef3,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw63 mace.WAV
+AN19-rec-31ad6b9a7deebbf85939,AN19.ENG.ef3,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw64 main.WAV
+AN19-rec-1ddbd8c5670b0d33163b,AN19.ENG.ef3,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw65 moan.WAV
+AN19-rec-b12f3e78973b5d8a7123,AN19.ENG.ef3,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw66 mum.WAV
+AN19-rec-6d6f5ccc2ff567cae2b8,AN19.ENG.ef3,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw67 rim.WAV
+AN19-rec-647d8c69d13ecec053cf,AN19.ENG.ef3,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw68 route.WAV
+AN19-rec-f51394ae137936c23012,AN19.ENG.ef3,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw69 wail.WAV
+AN19-rec-6175753727063e46b35e,AN19.ENG.ef3,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw70 hum.WAV
+AN19-rec-9cafd6930aad2f7301f9,AN19.ENG.ef3,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw72 beak.WAV
+AN19-rec-724581f7ea9897d9b5a1,AN19.ENG.ef3,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw73 hag.WAV
+AN19-rec-df14c0fea0ffb2497841,AN19.ENG.ef3,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/ef3/ef3hw75 weed.WAV
+AN19-rec-435d5c84b53d978d0ebb,AN19.ENG.em1,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew18 real.WAV
+AN19-rec-795abbb50408ce874713,AN19.ENG.em1,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew50 judge.WAV
+AN19-rec-7fdd6c731c59b6d4244a,AN19.ENG.em1,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew51 dog.WAV
+AN19-rec-c06dbf065175e15ad1f8,AN19.ENG.em1,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew52 vote.WAV
+AN19-rec-beda7d7e1704e27aac72,AN19.ENG.em1,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew53 league.WAV
+AN19-rec-38bccf3aa1bbb43f3031,AN19.ENG.em1,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew54 thick.WAV
+AN19-rec-31c1778d98981cff50eb,AN19.ENG.em1,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew55 page.WAV
+AN19-rec-fbab9bd0b7a8d35f74d8,AN19.ENG.em1,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew56 hung.WAV
+AN19-rec-ec366505ebca26c097e1,AN19.ENG.em1,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew57 join.WAV
+AN19-rec-6a084e10d53ea499b8a5,AN19.ENG.em1,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew58 shop.WAV
+AN19-rec-119544c86b598ce09479,AN19.ENG.em1,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew59 roof.WAV
+AN19-rec-df572d7fe4272a2eedd5,AN19.ENG.em1,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew60 leg.WAV
+AN19-rec-797d0534de732bb205b2,AN19.ENG.em1,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew61 lose.WAV
+AN19-rec-2504f5c8ec27f0af40ae,AN19.ENG.em1,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew62 theme.WAV
+AN19-rec-569a72263ad0f0912257,AN19.ENG.em1,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew63 soil.WAV
+AN19-rec-0156d2df73ec1caa5616,AN19.ENG.em1,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew64 pull.WAV
+AN19-rec-5f96987c3909b5073076,AN19.ENG.em1,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew65 chain.WAV
+AN19-rec-f0a9170b06105d063d3a,AN19.ENG.em1,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew66 curve.WAV
+AN19-rec-e1c464bada6f0ad6106b,AN19.ENG.em1,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew67 path.WAV
+AN19-rec-6b61ad8dc11382308df3,AN19.ENG.em1,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew68 dirt.WAV
+AN19-rec-ba0256bc064d7035d7e3,AN19.ENG.em1,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew69 vice.WAV
+AN19-rec-ad19f2b572994c0cf5b4,AN19.ENG.em1,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew72 noise.WAV
+AN19-rec-c408157ae60cf94540ae,AN19.ENG.em1,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew73 wash.WAV
+AN19-rec-159dfc076290840b8711,AN19.ENG.em1,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1ew75 fig.WAV
+AN19-rec-8789aa3c129ee242c1c6,AN19.ENG.em1,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw29 suck.WAV
+AN19-rec-6afc38927c0dc0b64fd0,AN19.ENG.em1,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw52 bun.WAV
+AN19-rec-8dae3297c07fe9492c17,AN19.ENG.em1,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw53 gut.WAV
+AN19-rec-9485803817611fe5c5af,AN19.ENG.em1,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw54 lice.WAV
+AN19-rec-f2fe518624321492a215,AN19.ENG.em1,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw55 mid.WAV
+AN19-rec-c35c30469a51c95eb6ec,AN19.ENG.em1,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw56 wick.WAV
+AN19-rec-bd26f08d68eb151c1cc7,AN19.ENG.em1,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw57 hurl.WAV
+AN19-rec-3f46bb302aa693151664,AN19.ENG.em1,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw58 mote.WAV
+AN19-rec-ce88481f8d16dd4156a0,AN19.ENG.em1,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw59 teat.WAV
+AN19-rec-35be09e0e0c06e7d4b72,AN19.ENG.em1,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw60 hash.WAV
+AN19-rec-c8dbdac640601f164012,AN19.ENG.em1,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw61 hid.WAV
+AN19-rec-1779b52d17e97fd2b3e3,AN19.ENG.em1,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw62 hoot.WAV
+AN19-rec-2c113653ab71f502f7e4,AN19.ENG.em1,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw63 mace.WAV
+AN19-rec-0e652b650411e3667e61,AN19.ENG.em1,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw64 main.WAV
+AN19-rec-42dbd6496bb631f03e4e,AN19.ENG.em1,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw65 moan.WAV
+AN19-rec-895121085effbc89e418,AN19.ENG.em1,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw66 mum.WAV
+AN19-rec-0d2cb028fd91d84311e8,AN19.ENG.em1,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw67 rim.WAV
+AN19-rec-69a67cbf3bfec1ce7105,AN19.ENG.em1,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw68 route.WAV
+AN19-rec-c8d74689a8da45e015c1,AN19.ENG.em1,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw69 wail.WAV
+AN19-rec-18d35c4ec6f05bd6ba8c,AN19.ENG.em1,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw70 hum.WAV
+AN19-rec-40df185fe4a1d17f189d,AN19.ENG.em1,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw72 beak.WAV
+AN19-rec-6e3e09679cb7cf44eca9,AN19.ENG.em1,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw73 hag.WAV
+AN19-rec-9d7dc78ba5ec8d28baf9,AN19.ENG.em1,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em1/em1hw75 weed.WAV
+AN19-rec-f838d8901b2f01e091d3,AN19.ENG.em2,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew18 real.WAV
+AN19-rec-e131b894dddd404476df,AN19.ENG.em2,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew50 judge.WAV
+AN19-rec-4ec2d281816089bf487b,AN19.ENG.em2,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew51 dog.WAV
+AN19-rec-f9f24cbb90371d9766ca,AN19.ENG.em2,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew52 vote.WAV
+AN19-rec-05cb836f7a6affab7630,AN19.ENG.em2,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew53 league.WAV
+AN19-rec-7c968f35db3d7ff1a375,AN19.ENG.em2,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew54 thick.WAV
+AN19-rec-2bdd64d72bbb32872741,AN19.ENG.em2,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew55 page.WAV
+AN19-rec-3bb21d728d22e6ba20f3,AN19.ENG.em2,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew56 hung.WAV
+AN19-rec-b30a9ee592af1e8690ca,AN19.ENG.em2,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew57 join.WAV
+AN19-rec-eccfa44f0a0e9868f3ee,AN19.ENG.em2,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew58 shop.WAV
+AN19-rec-16780e3b9a0ab6a37b5b,AN19.ENG.em2,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew59 roof.WAV
+AN19-rec-1d0a0d7348efa3f95a89,AN19.ENG.em2,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew60 leg.WAV
+AN19-rec-1523aa50a413f4e71ed6,AN19.ENG.em2,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew61 lose.WAV
+AN19-rec-2528afd11aa7d28fcd38,AN19.ENG.em2,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew62 theme.WAV
+AN19-rec-4abca689f66dafbeff97,AN19.ENG.em2,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew63 soil.WAV
+AN19-rec-aed6fc3c008b3b3d9b34,AN19.ENG.em2,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew64 pull.WAV
+AN19-rec-8e5502d9096bc578a2b4,AN19.ENG.em2,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew65 chain.WAV
+AN19-rec-5c02f51cab1fc5b51332,AN19.ENG.em2,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew66 curve.WAV
+AN19-rec-e9b4804ccc083bd8d281,AN19.ENG.em2,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew67 path.WAV
+AN19-rec-06268e2c2bc1d0155ecc,AN19.ENG.em2,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew68 dirt.WAV
+AN19-rec-3aa8792689e9715f17cf,AN19.ENG.em2,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew69 vice.WAV
+AN19-rec-640f345a5695bec9d6cf,AN19.ENG.em2,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew72 noise.WAV
+AN19-rec-f1c55fc922d73dd5686e,AN19.ENG.em2,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew73 wash.WAV
+AN19-rec-b33de95dbbda1408f9f2,AN19.ENG.em2,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2ew75 fig.WAV
+AN19-rec-c2cb39bdf3e42fa98226,AN19.ENG.em2,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw29 suck.WAV
+AN19-rec-8f5a5efe204fdcc645b5,AN19.ENG.em2,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw52 bun.WAV
+AN19-rec-404078f914badc337951,AN19.ENG.em2,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw53 gut.WAV
+AN19-rec-681f4836fdd421007387,AN19.ENG.em2,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw54 lice.WAV
+AN19-rec-53e9749aa3c48f4a8175,AN19.ENG.em2,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw55 mid.WAV
+AN19-rec-ae25977623ca095f4650,AN19.ENG.em2,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw56 wick.WAV
+AN19-rec-f27ffffb7bf2af97cbe8,AN19.ENG.em2,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw57 hurl.WAV
+AN19-rec-e19039589f70351a0c72,AN19.ENG.em2,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw58 mote.WAV
+AN19-rec-4143854c668271ba3d22,AN19.ENG.em2,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw59 teat.WAV
+AN19-rec-6c749f99324ca7bba65f,AN19.ENG.em2,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw60 hash.WAV
+AN19-rec-6b49098e1f8516495682,AN19.ENG.em2,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw61 hid.WAV
+AN19-rec-6fea1ec9d12d8e2ab912,AN19.ENG.em2,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw62 hoot.WAV
+AN19-rec-9b3b0da96783c2ecfcb9,AN19.ENG.em2,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw63 mace.WAV
+AN19-rec-9f1b13748769dde785fa,AN19.ENG.em2,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw64 main.WAV
+AN19-rec-a03a5df4179ee4141abb,AN19.ENG.em2,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw65 moan.WAV
+AN19-rec-c10afb2b9e87c2fa5aba,AN19.ENG.em2,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw66 mum.WAV
+AN19-rec-1a1fda8876a963a88b7c,AN19.ENG.em2,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw67 rim.WAV
+AN19-rec-6cfa082a0ed28ea400ce,AN19.ENG.em2,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw68 route.WAV
+AN19-rec-40c20ddfa53e0cbf30d7,AN19.ENG.em2,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw69 wail.WAV
+AN19-rec-31a906cd9c3e7fe1b422,AN19.ENG.em2,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw70 hum.WAV
+AN19-rec-4297f0e4bf245b81ee7a,AN19.ENG.em2,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw72 beak.WAV
+AN19-rec-8c0d19b03da76938c8b8,AN19.ENG.em2,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw73 hag.WAV
+AN19-rec-e7be265945bf4e5a5716,AN19.ENG.em2,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em2/em2hw75 weed.WAV
+AN19-rec-c47c81ebb88e320a1b88,AN19.ENG.em3,real,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew18 real.WAV
+AN19-rec-8c179696d93e410d2ff9,AN19.ENG.em3,judge,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew50 judge.WAV
+AN19-rec-895d446acdf7ca75f4e7,AN19.ENG.em3,dog,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew51 dog.WAV
+AN19-rec-f4a4ee509421df676480,AN19.ENG.em3,vote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew52 vote.WAV
+AN19-rec-2b382c1b684b95e1f16d,AN19.ENG.em3,league,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew53 league.WAV
+AN19-rec-fe241aa62fd8295782b0,AN19.ENG.em3,thick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew54 thick.WAV
+AN19-rec-e2fd3e073948e6883d32,AN19.ENG.em3,page,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew55 page.WAV
+AN19-rec-fda941cf632fc0e4eb4b,AN19.ENG.em3,hung,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew56 hung.WAV
+AN19-rec-bb1ceb74fadf41176d46,AN19.ENG.em3,join,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew57 join.WAV
+AN19-rec-005d12e59da331f71df1,AN19.ENG.em3,shop,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew58 shop.WAV
+AN19-rec-1099fca7bfc1649ea1bf,AN19.ENG.em3,roof,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew59 roof.WAV
+AN19-rec-877c461a85ced34cfb26,AN19.ENG.em3,leg,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew60 leg.WAV
+AN19-rec-2271953069a5b568c8fc,AN19.ENG.em3,lose,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew61 lose.WAV
+AN19-rec-b103a5a915d1c5721213,AN19.ENG.em3,theme,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew62 theme.WAV
+AN19-rec-f851d650b0c015169130,AN19.ENG.em3,soil,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew63 soil.WAV
+AN19-rec-79f4270fd4f61e082aeb,AN19.ENG.em3,pull,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew64 pull.WAV
+AN19-rec-e6a5fa922afbe86fbe0d,AN19.ENG.em3,chain,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew65 chain.WAV
+AN19-rec-11fee23062ed1b04cd50,AN19.ENG.em3,curve,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew66 curve.WAV
+AN19-rec-7cc91ff09265b06e14d2,AN19.ENG.em3,path,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew67 path.WAV
+AN19-rec-3d30f17a47e410cb6dfa,AN19.ENG.em3,dirt,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew68 dirt.WAV
+AN19-rec-4bd50325d60357cf236d,AN19.ENG.em3,vice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew69 vice.WAV
+AN19-rec-b98b0cda29545dbc7c09,AN19.ENG.em3,noise,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew72 noise.WAV
+AN19-rec-062b935d55804f0169cd,AN19.ENG.em3,wash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew73 wash.WAV
+AN19-rec-757e1916cbc494807221,AN19.ENG.em3,fig,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3ew75 fig.WAV
+AN19-rec-f7ed2aa5bef9af1eae78,AN19.ENG.em3,suck,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw29 suck.WAV
+AN19-rec-2298549b3de8bbdec5e1,AN19.ENG.em3,bun,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw52 bun.WAV
+AN19-rec-b157908fae4c1bfc7c25,AN19.ENG.em3,gut,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw53 gut.WAV
+AN19-rec-46dadd2e0f7948779803,AN19.ENG.em3,lice,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw54 lice.WAV
+AN19-rec-f5e575200fc356d529a5,AN19.ENG.em3,mid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw55 mid.WAV
+AN19-rec-9b96ad6858a548f86a03,AN19.ENG.em3,wick,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw56 wick.WAV
+AN19-rec-1ee9cc27d3263ee3ac16,AN19.ENG.em3,hurl,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw57 hurl.WAV
+AN19-rec-b24279a929eeeebe5fa8,AN19.ENG.em3,mote,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw58 mote.WAV
+AN19-rec-990bed26edd4fdb145ca,AN19.ENG.em3,teat,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw59 teat.WAV
+AN19-rec-1876e3c407bd7361732e,AN19.ENG.em3,hash,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw60 hash.WAV
+AN19-rec-95c81e72a97188ec7ca1,AN19.ENG.em3,hid,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw61 hid.WAV
+AN19-rec-dc4f8bf7be8817e47d00,AN19.ENG.em3,hoot,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw62 hoot.WAV
+AN19-rec-003feaef879364a2d71d,AN19.ENG.em3,mace,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw63 mace.WAV
+AN19-rec-e18f7cdf3ba2e32b551d,AN19.ENG.em3,main,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw64 main.WAV
+AN19-rec-7c03aa2c41a260472534,AN19.ENG.em3,moan,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw65 moan.WAV
+AN19-rec-292c9ae524758a4f28a5,AN19.ENG.em3,mum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw66 mum.WAV
+AN19-rec-4e282d17fc6f743f4866,AN19.ENG.em3,rim,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw67 rim.WAV
+AN19-rec-3111a4751b028d1d3521,AN19.ENG.em3,route,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw68 route.WAV
+AN19-rec-0c2d1d50bc519ebd7fc3,AN19.ENG.em3,wail,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw69 wail.WAV
+AN19-rec-df72a9b0fb8243010142,AN19.ENG.em3,hum,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw70 hum.WAV
+AN19-rec-5cade90bd4eb557782c0,AN19.ENG.em3,beak,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw72 beak.WAV
+AN19-rec-f345644ffd39c6ab29e6,AN19.ENG.em3,hag,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw73 hag.WAV
+AN19-rec-4efe1698b2aca4c869f9,AN19.ENG.em3,weed,data/raw_data/alexander_nygaard19/sound_stimuli/L1-English/em3/em3hw75 weed.WAV

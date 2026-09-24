@@ -9,7 +9,7 @@ The two core estimands are:
 
 ## 2. Inputs and data contract
 
-`configs/project.json` registers behavioral CSV files, stimulus manifests, and 15 HDF5 feature stores. Loading checks expected row counts, participant counts, speech-unit counts, layer names, dataset/variant attributes, and finite values. Feature files are read-only inputs.
+`configs/project.json` registers behavioral CSV files, stimulus manifests, and 15 physical HDF5 feature stores. Loading checks expected row counts, participant counts, speech-unit counts, layer names, dataset/variant attributes, and finite values. Feature files are read-only inputs. The config also exposes one virtual AN19 acoustic-diagnostic store: it reads declared column subsets from the existing acoustic HDF5 file and creates no additional feature file.
 
 The registered HDF5 inventories are 6,261 units for AN19, 660 for X21, and 480 for B23. Each dataset includes:
 
@@ -28,6 +28,8 @@ The 18 registered HuBERT layers are `cnn_2` through `cnn_6`, `tr_0`, and `tr_2, 
 Existing 3-D t-SNE sequences are the primary method-reproduction representation. Each dataset × model variant × layer has its own coordinate space. The primary analysis does not z-score the three t-SNE coordinates again, and absolute raw distances are not compared across datasets.
 
 Full-dimensional HuBERT, MFCC39, and STRF24 are standardized per dimension using the complete representation corpus before DTW. These corpus-global statistics are not refit by participant or condition and do not use behavioral outcomes. Full-dimensional HuBERT is retained as a key sensitivity analysis.
+
+For the AN19 baseline audit, the same reader exposes MFCC static, delta, delta-delta, C0, and static-without-C0 views. STRF24 is exposed by temporal rate, spectral scale, and direction, following the stored extraction order `rate → scale → direction`. Each view receives its own corpus-wide standardizer and otherwise follows the unchanged pair, DTW, aggregation, fold, and GLMM pipeline. These views are diagnostic representations, not new acoustic features.
 
 ## 4. DTW distance
 
@@ -113,6 +115,7 @@ Folds are defined by participant, not trial. `seed=230519`, `n_folds=3`, with st
 Each predictor is evaluated with:
 
 ```text
+M_null      = registered blocking terms + registered random effects
 M_condition = original experimental condition + registered random effects
 M_predictor = predictor_z + registered random effects
 M_joint     = original condition + predictor_z + registered random effects
@@ -122,12 +125,13 @@ AN19 and X21 use binary responses. B23 retains correct/incorrect keyword counts 
 
 R/lme4 fits the GLMMs. Full-data models report coefficient, standard error, 95% CI, and Wald z. The pipeline records both likelihood-ratio comparisons: `M_condition` versus `M_joint` for predictor information beyond condition, and `M_predictor` versus `M_joint` for condition information beyond the predictor. Random-effects structure, convergence, and singularity are recorded in diagnostics rather than silently altered.
 
-There are two distinct model-comparison questions:
+There are three distinct model-comparison questions:
 
-1. **Theoretical-predictor optimization:** compare representations or parameterizations using summed three-fold held-out log loss from `M_predictor`, which excludes the original experimental condition predictor. Lower loss is better, and candidates must use identical held-out observations.
-2. **Incremental prediction beyond condition:** compare `M_condition` with `M_joint`, including on held-out participants.
+1. **Predictor-only value:** compare `M_null` with `M_predictor`. On held-out observations, `loss(M_null) - loss(M_predictor)` is positive when the theoretical predictor improves transport to unseen participants.
+2. **Theoretical-predictor optimization:** compare representations or parameterizations using `M_predictor`, which excludes the original experimental condition predictor. The implemented objective is summed three-fold held-out log loss; the planned robustness objective is the signed predictor Wald z. These objectives must be labeled separately.
+3. **Incremental prediction beyond condition:** compare `M_condition` with `M_joint`, including on held-out participants.
 
-The R code can fit only `M_predictor` during candidate selection, then fits all three models for selected candidates. It stores full-data fit statistics for auditing and scores frozen models on held-out participants. Report selection uses predictor-only held-out loss. The August 21 report predates this implementation; revised results are in `analysis_update_2026-08-27`.
+The R code fits all four models, stores full-data fit statistics for auditing, and scores frozen models on held-out participants. The fixed-`tr_24` likelihood-versus-z HVE robustness display and null-relative predictive figures are in `analysis_update_2026-09-06`. The August 21 report predates this implementation; revised all-layer likelihood-selected results remain in `analysis_update_2026-08-27`.
 
 ## 8. True OOF prediction versus compatibility z
 
@@ -163,6 +167,8 @@ Figure 00 and its variability analogue define 100% as the mean of the three comp
 
 Every formal figure has a CSV source table. PNG is intended for presentation; SVG is retained for publication-quality editing.
 
+The September 6 fixed-`tr_24` gain plots are likelihood-based companion analyses with participant-cluster intervals. They do not replace the principal SBI display: signed layerwise z with three-fold 95% intervals and a compatible z-ceiling normalized to 100%. The [z-value specification](cross_talker_generalization/docs/Z_VALUE_FIGURE_SPEC.md) defines the statistic, uncertainty, significance lines and scope restrictions. Stored notebook test-refit z and revised training-fold z are currently separate sources and must not share a ceiling without a matched-scope rerun. The [requirements review](cross_talker_generalization/docs/FLORIAN_REQUIREMENTS_REVIEW.md) also records the B23 cross-sample selection issue and AN19 acoustic scaling mismatch; the fixed-layer objective and component figures are not yet fully validated.
+
 ## 11. Sensitivity analyses
 
 The main profile fixes `tau=2`, mean-sequence-length normalization, multi-talker mean distance, and training-fold-standardized negative distance. Implemented variants include:
@@ -190,6 +196,11 @@ The reviewed package at `cross_talker_generalization/analysis_update_2026-08-21/
 broad presentation inventory. Corrected SBI selection/downstream comparisons and the complete
 revised t-SNE HVE candidate analysis are in
 `cross_talker_generalization/analysis_update_2026-08-27/`.
+The supplementary combined-test-fold nested GLMM analysis using cross-fitted
+predictor values is in `cross_talker_generalization/analysis_update_2026-09-01/`.
+The fixed-`tr_24` predictive rebuild, directly matched ceiling, HVE objective/reporting
+analysis, and AN19 acoustic diagnostic are in
+`cross_talker_generalization/analysis_update_2026-09-06/`.
 `cross_talker_generalization/artifacts/` supplies the
 refactored true OOF SBI and HVE products. The top-level `results/` directory is retained
 only where the report builder still requires historical notebook-compatible summaries,
@@ -208,6 +219,7 @@ available from Git history and are not runtime inputs.
 - 3-D t-SNE changes high-dimensional geometry. Full-dimensional sensitivity results remain important even though the reporting emphasis follows the established 3-D method.
 - Compatibility three-fold z figures cannot replace OOF prediction.
 - Absolute raw distances from dataset-specific t-SNE spaces are not directly comparable across datasets.
+- The source of the unusually strong AN19 MFCC39/STRF24 result has not yet been isolated; group-wise acoustic diagnostics are registered, but their GLMM results have not been run.
 
 Remediable gaps, including the predictor-only likelihood criterion and B23 multi-talker exposure integration, are listed in [TODO.md](TODO.md) rather than treated as intrinsic limitations.
 
@@ -218,6 +230,9 @@ Remediable gaps, including the predictor-only likelihood criterion and B23 multi
 - Exposure pools: `cross_talker_generalization/src/ctg/exposure.py`
 - Participant folds: `cross_talker_generalization/src/ctg/folds.py`
 - GLMM fitting: `cross_talker_generalization/R/fit_confirmatory.R`
+- Combined-fold cross-fitted predictor LRT: `cross_talker_generalization/R/fit_crossfitted_lrt.R`
 - Ceilings: `cross_talker_generalization/src/ctg/ceiling.py` and `ceiling_cv.py`
 - Figures and reports: `cross_talker_generalization/src/ctg/report_*.py` and `final_report.py`
 - Execution commands: `cross_talker_generalization/docs/RUNBOOK.md`
+- Current analysis and figure plan: `cross_talker_generalization/docs/NEXT_ANALYSIS_PLAN.md`
+- Main Figure 1/2 panel specification: `cross_talker_generalization/docs/MAIN_FIGURE_SPEC.md`

@@ -1,0 +1,24 @@
+{
+  "recordings": 6261,
+  "successful_inference": 6261,
+  "nonempty_hypotheses": 5872,
+  "empty_hypotheses": 389,
+  "total_decoded_audio_seconds": 3434.188888888885,
+  "all_source_hashes_match": true,
+  "all_model_lengths_match_decoded_audio": true,
+  "all_emitted_posteriors_finite": true,
+  "all_emitted_posteriors_in_0_1": true,
+  "all_logits_finite": true,
+  "all_ipa_tokens_match_utf8_vocabulary": true,
+  "all_recorded_decoded_lengths_match_source_audit": true,
+  "header_decoded_duration_discrepancies": 0,
+  "lexical_cases": {
+    "hw74_wave_wade": 42,
+    "cheif_filename_typo": 1,
+    "external_filename_differs_hash_matched": 2
+  },
+  "retained_repository_source_overlap": 144,
+  "exact_overlap_numeric_token_ids_and_posterior": 144,
+  "overlap_comparison": "Compare numeric CTC token IDs and posterior scores only; archived pre-fix IPA text used the wrong Windows encoding.",
+  "interpretation": "Empty outputs are retained and explicitly flagged. Finite model scores and source agreement are computational checks, not phonetic accuracy validation. No filename or lexical label was changed."
+}

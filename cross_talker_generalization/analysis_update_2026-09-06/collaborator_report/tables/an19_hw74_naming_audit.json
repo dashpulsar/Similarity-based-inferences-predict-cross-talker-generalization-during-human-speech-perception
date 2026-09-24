@@ -1,0 +1,7 @@
+{
+  "status": "unresolved lexical-label conflict; no automatic alias applied",
+  "file_labels": "{('ENG', 'wade'): 6, ('KOR', 'wave'): 12, ('MIX', 'wave'): 12, ('SPA', 'wave'): 12}",
+  "real_audio_available": 42,
+  "features_present": 42,
+  "asr": "local Whisper large-v3-turbo, English, beam 5, no lexical prompt; not ground truth"
+}

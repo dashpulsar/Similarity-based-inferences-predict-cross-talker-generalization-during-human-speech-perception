@@ -9,6 +9,7 @@
   "coordinate_scaling": {
     "hubert_tsne": "none",
     "hubert_full": "global_z",
-    "acoustic": "global_z"
+    "acoustic": "global_z",
+    "acoustic_subset": "global_z"
   }
 }

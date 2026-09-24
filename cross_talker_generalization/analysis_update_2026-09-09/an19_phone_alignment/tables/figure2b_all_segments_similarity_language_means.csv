@@ -1,0 +1,15 @@
+similarity_rank,language,branch,mean_similarity,n_talkers,n_segment_instances,ci_low,ci_high,ci_status
+1,German,Germanic,0.0070698798555775605,1,137,,,not_estimable_one_talker
+2,Somali,Afro-Asiatic,0.005943147592185599,1,138,,,not_estimable_one_talker
+3,Turkish,Turkic,0.0033928243930489684,1,138,,,not_estimable_one_talker
+4,Russian,Slavic,0.003210536013531345,1,148,,,not_estimable_one_talker
+5,French,Romance,0.003064505719663866,1,143,,,not_estimable_one_talker
+6,Albanian,Albanian,0.003046769430617607,1,141,,,not_estimable_one_talker
+7,Mandarin,Sino-Tibetan,0.0026611913699721855,1,143,,,not_estimable_one_talker
+8,Korean,Koreanic,0.0023377341948696805,12,1709,0.0017679592278422016,0.0029842440114476645,talker_bootstrap_95pct
+9,Dutch,Germanic,0.0022822026152918215,1,144,,,not_estimable_one_talker
+10,Bengali,Indo-Aryan,0.002110224900802183,1,138,,,not_estimable_one_talker
+11,Spanish,Romance,0.0017118229973040473,12,1690,0.001233906324931016,0.002272291975055506,talker_bootstrap_95pct
+12,Romanian,Romance,0.0016941454736675327,1,147,,,not_estimable_one_talker
+13,Hindi,Indo-Aryan,0.0011365807221491503,1,149,,,not_estimable_one_talker
+14,Japanese,Japonic,0.0007214030389443193,1,149,,,not_estimable_one_talker

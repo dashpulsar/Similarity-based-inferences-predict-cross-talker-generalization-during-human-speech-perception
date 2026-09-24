@@ -1,0 +1,29 @@
+{
+  "available_rows_per_feature": 5685,
+  "created_utc": "2026-09-17T06:07:57.432157+00:00",
+  "feature_count": 16,
+  "feature_h5_sha256": "74367834e83afe2f1d3228dc270dee9a5815a24cb2769a47e954cf2f5f043d17",
+  "fold_table_sha256": "4d1cb9389ff105d97dd3d8851b57634aa3f0dacb489c230c7fb61fa74ce87154",
+  "full_distance_max_abs_difference": {
+    "mfcc39": 1.7763568394002505e-15,
+    "strf24_legacy": 1.7763568394002505e-15
+  },
+  "historical_component_scaling": "none",
+  "historical_full_scaling": "global_z",
+  "model_input_sha256": "674a60d21a1c7b75e0052529b34869157ee13b7eb80930003c84cf0bb9dc7c9d",
+  "model_rows_per_feature": 7680,
+  "n_pairs_per_feature": 5459,
+  "new_scaling": "global_z",
+  "note": "The earlier standardizers existed but acoustic_subset fell through to none. This rerun uses exact full-baseline moments. It does not explain the high full-baseline result by itself.",
+  "numpy": "1.26.4",
+  "old_component_distances_sha256": "660ff188185e1874c1b4c6fcea7ab879325c520a749f8c45ada488ecc1f42e13",
+  "old_full_distances_sha256": "302a49f7bd9314ec7a6165e53321af1dced9bf5ba9a8cca5535c9e891b9ccc87",
+  "package_version": "0.1.0",
+  "pair_table_sha256": "69c275136cdca34e7575bffac458ebfd442599aad8fd07292243d2dd07f692dd",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "same_behavior_rows_and_folds_all_features": true,
+  "stage": "matched_acoustic_preparation",
+  "status": "complete"
+}

@@ -1,0 +1,118 @@
+{
+  "scope": "Read-only verification of every recording in the canonical AN19 stimulus manifest; no alignment or ASR performed by this audit",
+  "manifest": {
+    "path": "data/manifests/AN19-stimulus-manifest.csv",
+    "registered_recordings": 6261,
+    "unique_recording_ids": 6261,
+    "unique_audio_byte_hashes": 6260,
+    "talkers": 42,
+    "word_labels": 156,
+    "legacy_speaker_word_collision_rows": 60,
+    "behavior_used_recordings": 1056,
+    "corpus_only_recordings": 5205,
+    "csv_file_sha256": "2557a4870750a438debc09def1e402f96fc9ae1cce5d2bb6078fc29626f0cfaa",
+    "canonical_content_sha256": "c395b3a7f5b9e75af43a8040cc43640f70250d17df5160846a22fb21d15cd1b3",
+    "canonical_content_matches_h5": true
+  },
+  "availability": {
+    "main_worktree_lfs_pointers": 6261,
+    "locally_available_real_audio_objects": 6261,
+    "missing_audio_objects": 0,
+    "verified_audio_sha256_matches_pointer_oid": 6261,
+    "all_audio_headers_readable_with_soundfile": true,
+    "total_bytes_counting_registered_paths": 151769118,
+    "lfs_resolution": "git rev-parse --path-format=absolute --git-common-dir; then lfs/objects/<oid[0:2]>/<oid[2:4]>/<oid>",
+    "source_audio_collection_sha256": "55dc0c694d478d453b9fc607686107ad90e38cf6c60062003d9cb491e99bdf16",
+    "source_audio_collection_matches_h5": true,
+    "collection_hash_definition": "SHA256 of sorted unique source_wav_relpath UTF-8 bytes, NUL byte, and binary SHA256 digest of each real audio file; same algorithm as the archived extractor"
+  },
+  "audio": {
+    "mono_recordings": 6261,
+    "sample_rate_counts": {"22050": 6259, "44100": 2},
+    "decoded_duration_sum_seconds": 3434.188888888885,
+    "header_based_h5_duration_sum_seconds": 3434.370022675737,
+    "decoded_duration_quantiles_seconds": {
+      "minimum": 0.15922902494331065,
+      "q25": 0.45714285714285713,
+      "median": 0.536734693877551,
+      "q75": 0.6251700680272109,
+      "maximum": 1.4044444444444444
+    },
+    "non_22050_recordings": [
+      {"recording_id": "AN19-rec-529e0dbb4bbbba529fed", "filename": "IF2hw69 wail.wav", "sample_rate": 44100, "decoded_frames": 25712},
+      {"recording_id": "AN19-rec-c4f65de4b4dc915082a1", "filename": "im3hw68 route.wav", "sample_rate": 44100, "decoded_frames": 19880}
+    ]
+  },
+  "known_source_exceptions": {
+    "byte_identical_recordings": [
+      {
+        "speaker_id": "AN19.ENG.ef3",
+        "word": "wrong",
+        "recording_ids": ["AN19-rec-b34ab02aa32b758eebb8", "AN19-rec-9be2f5e881db511d2db7"],
+        "filenames": ["ef3ew31 wrong.WAV", "ef3hw34 wrong.WAV"],
+        "audio_sha256": "b7b219f90553b82517c23f1cdc38ac29d8432cc95ea3f27287ba4ae826425eb1",
+        "handling": "Retain both manifest identities; an alignment may be reused by byte hash plus identical transcript, without silently changing analysis weights"
+      }
+    ],
+    "overlong_header": {
+      "recording_id": "AN19-rec-227663ae681ebfe901c2",
+      "filename": "sf4ew52 vote.wav",
+      "sample_rate": 22050,
+      "python_wave_header_frames": 18910,
+      "soundfile_decodable_frames": 14916,
+      "handling": "Use actual decoded samples and duration. Do not pad to the overstated header duration. Existing Tr-24 frame count matches the decodable duration"
+    },
+    "wave_wade": "Lexical-label conflict remains separate from audio availability; forced alignment to a supplied word does not establish what the talker actually pronounced",
+    "annotation_only_transcript_override": {
+      "recording_id": "AN19-rec-8e01733e25fc77ea52f1",
+      "speaker_id": "AN19.ENG.ef2",
+      "source_filename": "ef2ew32 cheif.WAV",
+      "original_word": "cheif",
+      "annotation_transcript": "chief",
+      "matched_slot": "EW32",
+      "supporting_other_talkers_at_same_slot": 41,
+      "supporting_other_english_talkers_at_same_slot": 5,
+      "behavior_trials_expecting_chief": 240,
+      "behavior_phase": "exposure",
+      "behavior_trials_expecting_cheif": 0,
+      "recording_used_in_experiment": false,
+      "reason": "Single transposed-letter filename label; all other recordings at the same difficulty/item slot and the behavioral target use chief",
+      "scope": "Intended alignment transcript only. Preserve original filename, manifest label, recording ID and audio. This is not independent verification of the produced pronunciation"
+    }
+  },
+  "hubert_feature_checks": {
+    "full_path": "data/features/an19_hubert_full_corpus_features.h5",
+    "reduced_path": "data/features/an19_hubert_full_corpus_tsne_3d.h5",
+    "full_leaf_layout": "<speaker_id>/<recording_id>/tr_24",
+    "reduced_leaf_layout": "tr_24/<speaker_id>/<recording_id>",
+    "paired_recordings_checked": 6261,
+    "paired_frame_counts_matching": 6261,
+    "source_feature_sha256_attributes_matching": 6261,
+    "full_feature_dimension": 1024,
+    "reduced_feature_dimension": 3,
+    "feature_array_bytes_rehashed": false,
+    "h5_file_bytes_rehashed": false,
+    "model": "facebook/hubert-large-ll60k",
+    "model_revision": "ff022d095678a2995f3c49bab18a96a9e553f782",
+    "model_sample_rate": 16000,
+    "audio_preprocessing": "Entire mono recording, torchaudio resampling to 16000 Hz, feature-extractor normalization; no trimming or VAD",
+    "extractor_script_sha256_verified": "edf90efd690d7e44a4119808918dff3ef51958a3b08024be3fc9c20e07137fd2",
+    "feature_utils_sha256_verified": "8ed80151505e733ea309dd41a08bf1435062df6008b3b29e0ca1a5c1b0cf6875",
+    "archived_extractor_in_linked_worktree": "recycle_bin/project_reorganization_2026-08-21/legacy_root/code/feature_extraction/extract_an19_hubert.py",
+    "frame_geometry": {
+      "receptive_field_samples": 400,
+      "stride_samples": 320,
+      "frame_count_formula": "floor((ceil(decoded_samples * 16000 / native_sample_rate) - 400) / 320) + 1",
+      "all_6261_frame_counts_match_formula": true,
+      "center_time_seconds": "(199.5 + 320 * frame_index) / 16000, using sample-zero time convention",
+      "approximate_center_time_seconds": "0.0125 + 0.020 * frame_index",
+      "phone_crop_recommendation": "Select existing frame centers within [phone_start, phone_end); flag intervals containing no centers rather than inventing a frame",
+      "historical_alternative": "ctg.features.slice_by_time rounds T * time / recording_duration; this stretches frame locations over the entire recording and is not the exact convolution timing"
+    }
+  },
+  "audit_limits": [
+    "Availability and source identity are verified, not phonetic labels or alignment accuracy",
+    "The audit compared full/reduced leaf shapes and stored feature hashes, not a fresh numerical HuBERT reproduction",
+    "Automatic alignment output must remain labelled automatic until independently checked"
+  ]
+}

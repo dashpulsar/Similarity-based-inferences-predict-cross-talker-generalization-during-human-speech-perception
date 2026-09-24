@@ -1,0 +1,17 @@
+scope,fold,model_id,n_random_structures,n_features,n_failures,n_singular,n_non_ok_convergence
+cv_train,0.0,M_condition,2,16,0,0,0
+cv_train,0.0,M_joint,2,16,0,0,0
+cv_train,0.0,M_null,2,16,0,0,0
+cv_train,0.0,M_predictor,2,16,0,0,0
+cv_train,1.0,M_condition,2,16,0,0,0
+cv_train,1.0,M_joint,2,16,0,0,0
+cv_train,1.0,M_null,2,16,0,0,0
+cv_train,1.0,M_predictor,2,16,0,0,0
+cv_train,2.0,M_condition,1,16,0,0,0
+cv_train,2.0,M_joint,1,16,0,0,0
+cv_train,2.0,M_null,1,16,0,0,0
+cv_train,2.0,M_predictor,1,16,0,0,0
+full,,M_condition,2,16,0,0,0
+full,,M_joint,2,16,0,0,0
+full,,M_null,2,16,0,0,0
+full,,M_predictor,2,16,0,0,0

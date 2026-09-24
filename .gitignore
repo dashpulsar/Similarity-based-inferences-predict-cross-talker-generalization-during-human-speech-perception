@@ -5,13 +5,27 @@ __pycache__/
 .coverage
 *.egg-info/
 
-# Large feature stores and interrupted feature writes
+# Feature stores and archives are distributed separately, not through Git.
 *.h5
 *.hdf5
 *.h5.partial
+*.7z
+*.zip
+/recycle_bin/
 
 # Local execution outputs
 /tmp/
+/cross_talker_generalization/artifacts/report_runtime/
+/cross_talker_generalization/artifacts/external/
+/cross_talker_generalization/artifacts/vendor/
+/cross_talker_generalization/artifacts/phone_alignment_runtime/
+/cross_talker_generalization/artifacts/phonetic_xeus_runtime/
+/cross_talker_generalization/artifacts/phone_alignment_models/
+# Retain interrupted/encoding-audit phonetic runs locally, not as release results.
+/cross_talker_generalization/analysis_update_2026-09-09/an19_phone_alignment/recordings/
+/cross_talker_generalization/analysis_update_2026-09-09/an19_phone_alignment/textgrids/
+/cross_talker_generalization/analysis_update_2026-09-09/an19_phonetic_xeus/recordings/
+/cross_talker_generalization/analysis_update_2026-09-09/an19_phonetic_xeus/nygaard_audio_cp936_decoding/
 /cross_talker_generalization/final_report_rebuild*/
 
 # Large retained compatibility inputs remain local. Publish provenance and compact
@@ -26,3 +40,43 @@ __pycache__/
 
 # Large media are distributed separately.
 *.mp4
+
+# Pre-cleanup publication checkpoint: retain these files locally.
+node_modules/
+*.log
+*.rds
+*.RData
+*.npz
+/refine-logs/
+/MANIFEST.md
+/outputs/meeting_2026-09-11/
+/outputs/florian_email_2026-09-21/
+/cross_talker_generalization/analysis_update_2026-09-17/CORRESPONDENCE_2026-09-15.md
+# Repeated worker files, response-level inputs/predictions, annotation caches.
+/cross_talker_generalization/analysis_update_*/**/r/
+/cross_talker_generalization/analysis_update_*/**/input.csv
+/cross_talker_generalization/analysis_update_*/**/*model-input.csv
+/cross_talker_generalization/analysis_update_*/**/model_input.csv
+/cross_talker_generalization/analysis_update_*/**/oof_predictions.csv
+/cross_talker_generalization/analysis_update_*/**/predictions.csv
+/cross_talker_generalization/analysis_update_*/**/*predictions.csv
+/cross_talker_generalization/analysis_update_*/**/crossfitted_predictors.csv
+/cross_talker_generalization/analysis_update_*/**/response_set.csv
+/cross_talker_generalization/analysis_update_*/**/*_control_trials.csv
+/cross_talker_generalization/analysis_update_*/**/*.wav
+/cross_talker_generalization/analysis_update_*/**/recordings/
+/cross_talker_generalization/analysis_update_*/**/textgrids/
+/cross_talker_generalization/analysis_update_*/**/cache/
+/outputs/sbi_parameter_maps_2026-09-21_raw_exponential/points/
+# Parameter-grid preparation is regenerated from feature stores and behavior.
+/cross_talker_generalization/analysis_update_*/**/preparation/*.csv
+/cross_talker_generalization/analysis_update_*/**/tau_*_training.csv
+/cross_talker_generalization/analysis_update_*/**/selected_predictors/*.csv
+/cross_talker_generalization/analysis_update_*/**/reference_predictions.csv
+/cross_talker_generalization/analysis_update_2026-09-17/acoustic_diagnostic/distances.csv
+/cross_talker_generalization/analysis_update_2026-09-17/acoustic_diagnostic/predictors.csv
+# Annotated correspondence and editorial attachments are not public artifacts.
+/output/pdf/replies_report_Sep_4-tfj.pdf
+/output/pdf/*annotat*.pdf
+/output/pdf/*in_place*.pdf
+/outputs/sbi_parameter_maps_2026-09-18/presentation/suggestions.docx

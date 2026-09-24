@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-09-17T07:49:18.998782+00:00",
+  "feature_keys": [
+    "cnn_2::overall_order_sensitive",
+    "cnn_3::overall_order_sensitive",
+    "cnn_4::overall_order_sensitive",
+    "cnn_5::overall_order_sensitive",
+    "cnn_6::overall_order_sensitive",
+    "tr_0::overall_order_sensitive",
+    "tr_10::overall_order_sensitive",
+    "tr_12::overall_order_sensitive",
+    "tr_14::overall_order_sensitive",
+    "tr_16::overall_order_sensitive",
+    "tr_18::overall_order_sensitive",
+    "tr_20::overall_order_sensitive",
+    "tr_22::overall_order_sensitive",
+    "tr_2::overall_order_sensitive",
+    "tr_4::overall_order_sensitive",
+    "tr_6::overall_order_sensitive",
+    "tr_8::overall_order_sensitive"
+  ],
+  "feature_status_counts": {
+    "computed": 17
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\hve_global\\B23-ft-97\\input.csv",
+  "input_sha256": "25986518473511de8d49d4eec0fa7ad8bb419e649fc255ca8c3a81e61e257070",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "b1201e405e59b5617ee17a67544034d9c2fd63d5a23c11d476cd96cc2df1b9cd",
+    "cv_metrics.csv": "035ef09a5a03c862aa5a83c516fda38737776280f4e9f98bec6f7b5301f175d1",
+    "diagnostics.csv": "5daa2259bca66f44027b74abcb3520685a46872042c30483fed72fd89a9bdfa2",
+    "feature_manifest.csv": "04d1a1125b1c1f2438d782cd7047562c3b253b20f594edbb78cd8bf55897fd6e",
+    "likelihood_ratio_tests.csv": "87136fea34a14f585a89aad97b9c437c728c015328dba7d88f241ecc89768269",
+    "oof_predictions.csv": "e68a6f29645234cd3d056375fb62c392e60d24d9bc4f45857b2d28c0b3ee3242",
+    "software.csv": "9c86e55bdfb46576decd31a8362bd3df407a18492e7be94f5f18a98889018c76",
+    "train_test_scores.csv": "f3da8acc5002f59ae8d9e260b3a5afa3dedc6de520a3770cb3ceda057fe19d64",
+    "variance_components.csv": "b567c1bf7fbc0d24f9f5f3371907e1e1596839ee1d9faa4c3c52d074944ec35f"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": 1,
+    "jobs": 6,
+    "model_set": "all",
+    "predictor_column": "predictor_value",
+    "random_policy": "registered",
+    "term": "variability_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "589076774f7c9184cb3801c8b4ef2d9d702f59f6f4d90ad8ad2cc39ecac9bcdf",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 272,
+    "non_ok_convergence": 2,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

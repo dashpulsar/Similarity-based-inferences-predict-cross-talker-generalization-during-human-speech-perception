@@ -1,0 +1,2 @@
+"k","kind","status","z","log_likelihood","coefficient","std_error","singular","var_participant","var_item","var_talker","n_rows","participants","n_word_responses","predictor_shifted_mean","predictor_sd","fit_seconds","warnings","convergence","lme4_version"
+1e-06,"grid","ok",4.52990383210421,-1535.40516677553,0.502571359085018,0.110945260145085,FALSE,0.0996118405238514,7.82999992324013,0.429777684231535,3791,80,3791,-1.81923626167047e-05,5.18449239018005e-06,1.83,"","ok","1.1.35.5"

@@ -1,0 +1,24 @@
+{
+  "predeclared_display_phones": [
+    "ih",
+    "iy",
+    "ae",
+    "eh",
+    "uh",
+    "uw",
+    "th",
+    "dh",
+    "s",
+    "sh",
+    "r",
+    "l"
+  ],
+  "selection": "Fixed before deviation computation",
+  "bootstrap": 1000,
+  "seed": 20260909,
+  "dtw_tau": 2,
+  "dtw_normalization": "mean_sequence_length",
+  "coordinate_scaling": "none",
+  "feature_space": "HuBERT base Tr-24, existing 3-D corpus t-SNE",
+  "primary_coverage": "All six English reference speakers required for each target phone interval"
+}

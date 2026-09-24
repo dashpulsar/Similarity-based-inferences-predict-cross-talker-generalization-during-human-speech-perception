@@ -1,0 +1,146 @@
+{
+  "original_pages": 49,
+  "final_pages": 12,
+  "removed_pages": [
+    8,
+    9,
+    10,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "new_model_fits": 0,
+  "figures": [
+    {
+      "page": 1,
+      "title": "Speech to latent trajectories",
+      "previous_pages": [
+        1
+      ],
+      "layout": "single"
+    },
+    {
+      "page": 2,
+      "title": "Language backgrounds",
+      "previous_pages": [
+        2
+      ],
+      "layout": "single"
+    },
+    {
+      "page": 3,
+      "title": "Phonological inventory and feature comparisons",
+      "previous_pages": [
+        3,
+        4
+      ],
+      "layout": "vertical"
+    },
+    {
+      "page": 4,
+      "title": "AN19 distance and similarity matrices",
+      "previous_pages": [
+        5,
+        6
+      ],
+      "layout": "horizontal"
+    },
+    {
+      "page": 5,
+      "title": "AN19 all-segment similarity",
+      "previous_pages": [
+        7
+      ],
+      "layout": "single"
+    },
+    {
+      "page": 6,
+      "title": "Similarity to English and control accuracy",
+      "previous_pages": [
+        11
+      ],
+      "layout": "single"
+    },
+    {
+      "page": 7,
+      "title": "SBI across datasets and model variants",
+      "previous_pages": [
+        12,
+        13,
+        14,
+        20,
+        21,
+        22
+      ],
+      "layout": "sbi"
+    },
+    {
+      "page": 8,
+      "title": "X21 HVE: four retained definitions, z",
+      "previous_pages": [
+        15
+      ],
+      "layout": "single"
+    },
+    {
+      "page": 9,
+      "title": "X21 HVE: the same definitions, held-out likelihood",
+      "previous_pages": [
+        16
+      ],
+      "layout": "single"
+    },
+    {
+      "page": 10,
+      "title": "X21 condition-specific curves",
+      "previous_pages": [
+        17
+      ],
+      "layout": "single"
+    },
+    {
+      "page": 11,
+      "title": "X21 pooled curves",
+      "previous_pages": [
+        18
+      ],
+      "layout": "single"
+    },
+    {
+      "page": 12,
+      "title": "X21 nested-model comparisons",
+      "previous_pages": [
+        19
+      ],
+      "layout": "single"
+    }
+  ],
+  "source_pdf_sha256": "d5258af05ed05f58c670164c683359b229996becee09f3650cde52e5be781941",
+  "source_notes_sha256": "c720531033d0c31e7ea829b1df33d59c62026f97c41a1d128766e0bd0e58958a",
+  "sbi_figure_sha256": "6572ebc4d89da4360ef4ac26837eaebf623e06c3cb3d53da43b72b4018cd7b65",
+  "rationale": "User-requested editorial selection; not significance-based filtering"
+}

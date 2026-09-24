@@ -1,0 +1,2 @@
+R_version,lme4_version,input_path,n_input_rows,dataset_id,talker_strategy,predictor_column,predictor_direction,predictor_term,model_set,random_policy,parallel_jobs,feature_count
+R version 4.4.1 (2024-06-14 ucrt),1.1.35.5,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis_update_2026-09-17\common_structure\c4\r\f-5370270988\model_input.csv,950,AN19,omitted_by_declared_sensitivity_policy,raw_distance,-1,similarity_z,predictor_only,participant_item,2,2

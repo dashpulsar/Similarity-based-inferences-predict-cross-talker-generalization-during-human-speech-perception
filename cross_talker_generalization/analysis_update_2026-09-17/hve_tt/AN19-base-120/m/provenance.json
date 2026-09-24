@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-09-17T07:06:00.951706+00:00",
+  "feature_keys": [
+    "tr_24::between_type_word",
+    "tr_24::mean_dissimilarity_word",
+    "tr_24::order_word",
+    "tr_24::overall",
+    "tr_24::overall_order_sensitive",
+    "tr_24::within_token_word",
+    "tr_24::within_type_word"
+  ],
+  "feature_status_counts": {
+    "computed": 7
+  },
+  "input_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis_update_2026-09-17\\hve_tt\\AN19-base-120\\input.csv",
+  "input_sha256": "ed8380143589f372afa3e247862713d568c46c7a4a655446cbc4460fa4778d37",
+  "numpy": "1.26.4",
+  "outputs_sha256": {
+    "coefficients.csv": "7df64cfa74592f7543a3a01ecd5bb1c38e9086f3a71e72061ef00b6001c03b6e",
+    "cv_metrics.csv": "0682980b16ef1ec77f4af4ffd01ee5a3ef9bdce6d3d25722443fe110d3759bac",
+    "diagnostics.csv": "69164aa654a9bc0d83e1b13b6e031ae8f1723ea777f65ee03206ac7a0d030e56",
+    "feature_manifest.csv": "a23355e4df7279c0f6a7bb972f7ab06a90227c99134252060e037a0ad90e351e",
+    "likelihood_ratio_tests.csv": "f6941aaad3223b1a8e8eedea2825d7e6c2f49cc796a4d1e86dc4e9c67ed5043e",
+    "oof_predictions.csv": "5c2b70e951d283e4ba81f2e6697326286121ab0b55c41860257e3f49ed9c87e5",
+    "software.csv": "eccf25b2b6ca738318fdade93efc61be661b2e8903cef6bc132cc17a62a91488",
+    "train_test_scores.csv": "6f5b2f974ea3892dbbe4388e11cfc9d0e4ddcf1045e6d5a0de797f9d26beae2a",
+    "variance_components.csv": "716807d5f3197c29ddb0e87a7e5b0f50a3a704380592e5aba3b2d95d066cd82b"
+  },
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "parameters": {
+    "direction": 1,
+    "jobs": 4,
+    "model_set": "all",
+    "predictor_column": "predictor_value",
+    "random_policy": "registered",
+    "term": "variability_z"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "r_executable": "C:\\Program Files\\R\\R-4.4.1\\bin\\Rscript.exe",
+  "r_script": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\R\\fit_confirmatory.R",
+  "r_script_sha256": "589076774f7c9184cb3801c8b4ef2d9d702f59f6f4d90ad8ad2cc39ecac9bcdf",
+  "selected_fit_diagnostics": {
+    "fit_failures": 0,
+    "fits": 112,
+    "non_ok_convergence": 0,
+    "singular": 0
+  },
+  "stage": "parallel_confirmatory_glmm",
+  "status": "complete"
+}

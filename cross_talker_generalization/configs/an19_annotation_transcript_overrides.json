@@ -1,0 +1,10 @@
+{
+  "description": "Annotation-only target spelling corrections; original recording IDs, filenames, manifest words, and audio are unchanged. These are intended targets, not verified spoken transcripts.",
+  "overrides": {
+    "AN19-rec-8e01733e25fc77ea52f1": {
+      "original_word": "cheif",
+      "annotation_word": "chief",
+      "reason": "All 41 other EW32 recordings, including the other five English talkers, use chief. Behavioral exposure rows use chief (240 rows) and never cheif. See an19_phone_alignment/INPUT_AUDIT.md."
+    }
+  }
+}

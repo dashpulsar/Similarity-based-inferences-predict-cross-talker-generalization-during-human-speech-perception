@@ -1,0 +1,7 @@
+dataset_id,feature_key,comparison_id,reduced_model,full_model,scope,fold,chisq,df,p_value,status,reason
+B23,mfcc39,predictor_beyond_null,M_null,M_predictor,full,,3.97878001290883,1,0.0460769245803711,ok,
+B23,mfcc39,predictor_beyond_condition,M_condition,M_joint,full,,3.9722738048149,1,0.0462552717786883,ok,
+B23,mfcc39,condition_beyond_predictor,M_predictor,M_joint,full,,6.94768638231471,7,0.434347015791671,ok,
+B23,strf24_legacy,predictor_beyond_null,M_null,M_predictor,full,,2.64145676683256,1,0.104108042154449,ok,
+B23,strf24_legacy,predictor_beyond_condition,M_condition,M_joint,full,,2.65313400201194,1,0.103345967794788,ok,
+B23,strf24_legacy,condition_beyond_predictor,M_predictor,M_joint,full,,6.96586982558802,7,0.432442125586158,ok,

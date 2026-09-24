@@ -1,0 +1,4 @@
+dataset,accent,intercept,slope,n_trials,n_participants,n_unique_targets,bootstrap_successes,model
+AN19,KOR,-2.133669863734367,7.488156462522584,940,20,94,1000,descriptive binomial logistic; participant bootstrap; no random effects
+AN19,SPA,-2.9441416528803983,7.678428335509556,940,20,94,1000,descriptive binomial logistic; participant bootstrap; no random effects
+X21,CMN,0.6018834086882221,1.944427315841664,4117,80,412,1000,descriptive binomial logistic; participant bootstrap; no random effects
