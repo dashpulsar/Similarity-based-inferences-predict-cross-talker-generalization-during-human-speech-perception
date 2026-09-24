@@ -24,7 +24,7 @@ import pandas as pd
 
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT.parent
-OUT = PROJECT / "analysis_update_2026-09-09/an19_phone_alignment"
+OUT = PROJECT / "analysis/speech/an19_phone_alignment"
 ALIGNMENT = OUT / "nygaard_audio"
 TABLES = OUT / "tables"
 FIGURES = OUT / "figures"
@@ -61,11 +61,11 @@ def boolean(series):
 
 
 def palette():
-    path = PROJECT / "analysis_update_2026-09-09/sources/language_capitals_worldmap.R"
+    path = PROJECT / "analysis/speech/sources/language_capitals_worldmap.R"
     code = source(path).read_text(encoding="utf-8-sig")
     block = re.search(r"family_colors\s*<-\s*c\((.*?)\n\)", code, flags=re.S).group(1)
     colors = dict(re.findall(r'"([^"\n]+)"\s*=\s*"(#[0-9a-fA-F]{6})"', block))
-    path = PROJECT / "analysis_update_2026-09-09/tables/figure_si_talker_language_map.csv"
+    path = PROJECT / "analysis/speech/tables/figure_si_talker_language_map.csv"
     languages = pd.read_csv(source(path))
     return colors, languages.loc[languages.dataset.eq("AN19")].set_index("speaker_id")
 

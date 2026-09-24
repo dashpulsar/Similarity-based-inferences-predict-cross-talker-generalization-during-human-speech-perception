@@ -14,7 +14,7 @@ import sys
 import fitz
 
 REPO = Path(__file__).resolve().parents[2]
-REPORT = REPO / 'cross_talker_generalization/analysis_update_2026-09-09'
+REPORT = REPO / 'cross_talker_generalization/analysis/speech'
 
 # First ten pages retain the reviewed report's topic order. Added material follows.
 # Source pages are one-based pages in the already visually verified clean report.

@@ -22,8 +22,8 @@ from ctg.provenance import atomic_write_csv, atomic_write_json, runtime_record, 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, default=PROJECT / "analysis_update_2026-09-17/acoustic_diagnostic/model_input.csv")
-    parser.add_argument("--output", type=Path, default=PROJECT / "analysis_update_2026-09-17/acoustic_diagnostic/within_condition")
+    parser.add_argument("--input", type=Path, default=PROJECT / "analysis/acoustic_baselines/components/model_input.csv")
+    parser.add_argument("--output", type=Path, default=PROJECT / "analysis/acoustic_baselines/components/within_condition")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     source = pd.read_csv(args.input)

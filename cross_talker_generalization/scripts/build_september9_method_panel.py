@@ -23,7 +23,7 @@ from scipy.io import wavfile
 
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "cross_talker_generalization/analysis_update_2026-09-09"
+OUT = ROOT / "cross_talker_generalization/analysis/speech"
 KEY = "X21.ENG.ENG_M_055.HT1_S002"
 LAYER = "tr_24"
 COLORS = {"W": "#CC6677", "AY1": "#4477AA", "F": "#228833"}
@@ -97,7 +97,7 @@ def main():
     assert full.shape == (len(reduced), 1024)
     assert np.isfinite(full).all() and np.isfinite(reduced).all()
     original_audio = ROOT / row["source_wav_relpath"]
-    cached_audio = ROOT / "cross_talker_generalization/analysis_update_2026-09-06/collaborator_report/sources/ALL_055_M_ENG_ENG_HT1.wav"
+    cached_audio = ROOT / "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/sources/ALL_055_M_ENG_ENG_HT1.wav"
     audio_path = original_audio
     if original_audio.stat().st_size < 1024:
         pointer = original_audio.read_text(encoding="utf-8")

@@ -74,7 +74,7 @@ To run one group first, add for example `-Features mfcc_static13` or `-Features 
 
 This run diagnoses which feature family carries the AN19 result. It does not by itself test duplicate recordings, condition separation, or individual dimensions; those checks remain listed in the root `TODO.md`.
 
-The September 17 correction explicitly maps `acoustic_subset` to `global_z` in the main and sensitivity profiles. Earlier component distance files marked `coordinate_scaling=none` remain historical outputs. Use a new output prefix for corrected runs; the [September 17 update](../analysis_update_2026-09-17/README.md) records the matched-standardizer rerun.
+The September 17 correction explicitly maps `acoustic_subset` to `global_z` in the main and sensitivity profiles. Earlier component distance files marked `coordinate_scaling=none` remain historical outputs. Use a new output prefix for corrected runs; the [September 17 update](../analysis/diagnostics/README.md) records the matched-standardizer rerun.
 
 ### Optional common-random-structure sensitivity
 
@@ -84,9 +84,9 @@ The default GLMM policy remains `registered`. To reproduce the declared AN19 par
 python cross_talker_generalization\scripts\run_an19_common_structure.py --jobs 4
 ```
 
-The [runner](../scripts/run_an19_common_structure.py) writes a separate `analysis_update_2026-09-17/common_structure/` package and preserves the primary results. It fixes the existing AN19 fallback structure, `(1 | participant_id) + (1 | analysis_item_id)`, before fitting; no further term is removed automatically. Generic `fit-glmm` and `fit-glmm-parallel` calls also expose `--random-policy participant_item`; use this option only for a declared sensitivity in a distinct output directory. Omitting it retains the registered policy.
+The [runner](../scripts/run_an19_common_structure.py) writes a separate `analysis/acoustic_baselines/common_structure/` package and preserves the primary results. It fixes the existing AN19 fallback structure, `(1 | participant_id) + (1 | analysis_item_id)`, before fitting; no further term is removed automatically. Generic `fit-glmm` and `fit-glmm-parallel` calls also expose `--random-policy participant_item`; use this option only for a declared sensitivity in a distinct output directory. Omitting it retains the registered policy.
 
-Both policies now export `variance_components.csv` alongside coefficients, diagnostics and matched split scores. Policy and source hashes enter cache validation. The sensitivity's 352 selected fits include 20 participant-variance boundary fits; consult the [result metadata](../analysis_update_2026-09-17/common_structure/result_metadata.json) and [work log](../analysis_update_2026-09-17/WORK_LOG_2026-09-17.md) for their scope. Boundary variance, additional convergence messages and fit failure are separate diagnostics. Rebuild comparison tables without refitting by adding `--report-only`.
+Both policies now export `variance_components.csv` alongside coefficients, diagnostics and matched split scores. Policy and source hashes enter cache validation. The sensitivity's 352 selected fits include 20 participant-variance boundary fits; consult the [result metadata](../analysis/acoustic_baselines/common_structure/result_metadata.json) and [work log](../analysis/diagnostics/WORK_LOG_2026-09-17.md) for their scope. Boundary variance, additional convergence messages and fit failure are separate diagnostics. Rebuild comparison tables without refitting by adding `--report-only`.
 
 ## 4. HVE / exposure variability
 
@@ -120,17 +120,17 @@ Each fold's item log odds are estimated from the other two participant folds. Th
 
 New `fit-glmm` and `fit-glmm-parallel` runs also write `train_test_scores.csv`. Training and held-out rows are scored by the same training model with fixed-effect predictions and frozen training scaling. `total_trials` counts word responses, including all responses represented by grouped binomial rows. Existing `cv_metrics.csv` is unchanged.
 
-The approved SI diagnostic is `mean_test_log_loss / mean_training_log_loss`, as recorded in the [September 15 correspondence](../analysis_update_2026-09-17/CORRESPONDENCE_2026-09-15.md). Both scores use the same training-fitted model, training mean/SD and `re.form=NA`; their denominators are word-response counts. Compute the ratio separately for each paired fold, then show the mean, three fold points, a ratio=1 reference, and a 95% percentile interval from all 27 ordered bootstrap resamples of the three fold ratios. The interval describes fold variability. The [scientific specification](SCIENTIFIC_SPEC.md#matched-trainingtest-diagnostic-scores) defines invalid-pair handling and interpretation.
+The approved SI diagnostic is `mean_test_log_loss / mean_training_log_loss`, as recorded in the [September 15 correspondence](../analysis/diagnostics/CORRESPONDENCE_2026-09-15.md). Both scores use the same training-fitted model, training mean/SD and `re.form=NA`; their denominators are word-response counts. Compute the ratio separately for each paired fold, then show the mean, three fold points, a ratio=1 reference, and a 95% percentile interval from all 27 ordered bootstrap resamples of the three fold ratios. The interval describes fold variability. The [scientific specification](SCIENTIFIC_SPEC.md#matched-trainingtest-diagnostic-scores) defines invalid-pair handling and interpretation.
 
 After the model runs listed in the manifest have completed, generate the SI package with the [approved ratio plotting script](../scripts/build_train_test_ratio_figures.py):
 
 ```powershell
 python cross_talker_generalization\scripts\build_train_test_ratio_figures.py `
-  --manifest cross_talker_generalization\analysis_update_2026-09-17\diagnostic_inputs.json `
-  --output cross_talker_generalization\analysis_update_2026-09-17\si_diagnostics
+  --manifest cross_talker_generalization\analysis\diagnostics\diagnostic_inputs.json `
+  --output cross_talker_generalization\analysis\diagnostics\si_diagnostics
 ```
 
-The manifest declares each run's model directory, predictor family, variant, HVE measure and participant stratum. Preserve distinct B23 participant strata rather than pooling them. The builder retains invalid pairs and fit warnings, and writes paired-fold tables, three-fold summaries, a figure inventory and source hashes. Fewer than three valid ratios do not produce a three-fold mean/interval. These are fixed-predictor diagnostics, separate from the pending optimization-objective comparison. They do not change the current train-test design; nested CV remains unconfirmed. Raw-loss ratios are not algebraically equivalent to baseline-gain ratios. The earlier `build_train_test_diagnostics.py` remains available for separate training/test loss plots; z/ceiling plots keep their existing meaning. See the [work log](../analysis_update_2026-09-17/WORK_LOG_2026-09-17.md) for actual run completion and coverage.
+The manifest declares each run's model directory, predictor family, variant, HVE measure and participant stratum. Preserve distinct B23 participant strata rather than pooling them. The builder retains invalid pairs and fit warnings, and writes paired-fold tables, three-fold summaries, a figure inventory and source hashes. Fewer than three valid ratios do not produce a three-fold mean/interval. These are fixed-predictor diagnostics, separate from the pending optimization-objective comparison. They do not change the current train-test design; nested CV remains unconfirmed. Raw-loss ratios are not algebraically equivalent to baseline-gain ratios. The earlier `build_train_test_diagnostics.py` remains available for separate training/test loss plots; z/ceiling plots keep their existing meaning. See the [work log](../analysis/diagnostics/WORK_LOG_2026-09-17.md) for actual run completion and coverage.
 
 ## 6. Figures
 
@@ -166,7 +166,7 @@ python -m ctg.cli build-report `
   --output cross_talker_generalization\final_report_rebuild
 ```
 
-The reviewed broad August 21 package is `cross_talker_generalization/analysis_update_2026-08-21/`. Build to a new directory, inspect `FINAL_VERIFICATION_REPORT.md`, file counts, and provenance, and only then promote it.
+The reviewed broad August 21 package is `cross_talker_generalization/analysis/reference/`. Build to a new directory, inspect `FINAL_VERIFICATION_REPORT.md`, file counts, and provenance, and only then promote it.
 
 ## Parallelism
 

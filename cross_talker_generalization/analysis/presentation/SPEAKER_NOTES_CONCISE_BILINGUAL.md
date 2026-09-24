@@ -1,0 +1,131 @@
+# Concise figure update: speaking notes / 精简图集讲稿
+
+These notes follow the 12-page concise figure PDF. English is for speaking; Chinese is for preparation. This edition removes the detailed phone panels and the long appendix, combines related comparisons, and shows SBI once on the normalized-z scale. It does not add new model fits. The complete collection is retained separately; omitted pages are not evidence that those analyses are invalid or unwanted forever.
+
+讲稿对应精简图集的 12 页，英文用于口头讲，中文用于准备。这个版本移除了逐音素细图和长篇附录，合并相关对照；SBI 只保留归一化 z 的一次展示，没有新增模型拟合。完整版另外保留；移出本次汇报不表示这些分析无效，或今后都不需要。
+
+[Figure PDF](../../../output/pdf/cross_talker_figures_concise.pdf) | [Notes PDF](../../../output/pdf/cross_talker_speaker_notes_concise_bilingual.pdf)
+
+## Figure PDF page 01 | Speech to latent trajectories
+
+**English**
+
+Let me start with how I represent speech. On the left is an English-L1 speaker saying “The wife helped her husband.” The horizontal axis is time in seconds, and the vertical axis is waveform amplitude, normalized only for display. I pass the speech through the self-supervised HuBERT-large model. Here I am showing transformer layer 24, where every frame has 1,024 feature values. The middle traces show the first and last dimensions over time; the dots between the panels stand for all the dimensions that are not displayed. I then use the existing corpus-level t-SNE coordinates to show each frame in three dimensions. The x, y and z axes are simply t-SNE coordinates; they are not frequency, pitch or individual phonetic features. Connecting consecutive frames gives the trajectory. On the right, I zoom into “wife,” using its existing time annotations to color /w/, /aɪ/ and /f/. This is the same representation, not a second t-SNE fit. The figure illustrates the method; it does not show that t-SNE preserves every distance in the original space.
+
+**中文对照**
+
+我先用这张图说明语音是怎样变成轨迹的。左边是一位英语母语说话人说的“The wife helped her husband”。横轴是时间，单位是秒，纵轴是波形振幅，这里的归一化只是为了显示。语音经过自监督训练的 HuBERT-large 以后，每一帧在第 24 个 Transformer 层得到 1,024 个数值。中间展示的是第一个和最后一个维度随时间的变化，省略号表示没有画出来的其他维度。然后，我用之前在整个语料上计算好的三维 t-SNE 坐标表示每一帧，把相邻帧连接起来就得到这条轨迹。这里的 x、y、z 轴只是 t-SNE 的三个坐标，不分别代表频率、音高或某种语音特征。右边把“wife”这个词放大，按照已有的时间标注，用不同颜色表示 /w/、/aɪ/ 和 /f/。放大时没有重新做 t-SNE。这张图说明的是表示方式，并不意味着三维空间保留了原始空间的所有距离关系。
+
+## Figure PDF page 02 | Language backgrounds
+
+**English**
+
+This map gives the language-background context for the project. Each label identifies an L1 represented in our speech corpora, and shared label colors follow the language groups in Florian’s original figure. These are not scores: two labels with the same color simply belong to the same displayed group. The map positions use associated national capitals, so they should not be read as the speakers’ precise birthplaces or recording locations. I have kept Florian’s supplied map and reused its color scheme in the other language-level figures.
+
+**中文对照**
+
+这张地图介绍的是项目覆盖了哪些母语背景。每个标签是一种出现在语料中的母语，标签颜色沿用 Florian 原图中的语言分组。同一种颜色不是相似度分数，只表示属于同一个展示分组。地图上的位置用的是相应国家的首都，因此不能理解成每位说话人的出生地或录音地点。我保留了 Florian 提供的地图，并让其他按语言分组的图使用同一套颜色。
+
+## Figure PDF page 03 | Phonological inventory and feature comparisons
+
+**English**
+
+These two panels describe language similarity at different levels. At the top, each row is a language and moving right means greater phonological inventory overlap with English. I calculate Jaccard overlap: shared phoneme symbols divided by the union of symbols. The point averages the selected inventory pairs against nine English inventories; the bar is their minimum-to-maximum range, not a confidence interval. This measure does not include tone or phonotactics. Below it is the feature comparison Florian supplied. Columns are languages, rows are segmental, phonotactic and prosodic properties, and greener cells indicate greater similarity to English. I have preserved those supplied scores, not recalculated them. Their score table and generation code are still needed before I can explain the exact assignment of each value.
+
+**中文对照**
+
+这两个面板从不同层面描述语言相似性。上面每行是一种语言，越靠右表示音位库存与英语越重合。我使用 Jaccard：共有音位符号的数量除以两种库存符号的并集大小。点是所选库存与九个英语库存组合的平均值；横线是这些组合的最小到最大范围，不是置信区间。这个指标没有包含声调和音系配列。下面是 Florian 提供的具体音系特征图，列是语言，行是音段、音系配列和韵律特征，越绿表示与英语越相似。这些分数沿用原图，不是我重新计算的。原始评分表和生成代码仍然缺失，因此不能逐格说明赋值方式。
+
+## Figure PDF page 04 | AN19 distance and similarity matrices
+
+**English**
+
+Here I put the distance and similarity versions side by side. Both axes contain the same 42 AN19 talkers, including six English reference talkers, in the same order. For each talker pair I match the same 138 words and calculate DTW between their Tr-24, three-dimensional trajectories. The local distance is Euclidean, and the accumulated cost is divided by the mean number of frames in the two sequences. On the left, I average these distances within word and then across words. On the right, I first convert each recording-pair distance to exp(-distance), with k fixed at one, and then perform the same averaging. It is not the exponential of the final average distance. Both color scales are linear: larger values mean less similar on the left but more similar on the right. English comes first, other language groups are ordered by average distance to English, and speakers are clustered within each language. Gray boxes mark language groups; the masked diagonal is not an observed zero. These are representation-based comparisons, not correlations or probabilities of a correct human response.
+
+**中文对照**
+
+这里把距离和相似度两个版本并排展示。横纵轴都是相同顺序的 42 位 AN19 说话人，其中六位是英语参考。每一对说话人匹配同样的 138 个词，用 Tr-24 三维轨迹计算 DTW。局部距离是欧氏距离，累积代价除以两条序列帧数的平均值。左图在词内汇总，再跨词平均距离。右图先把每一对录音的距离转换成 exp(-distance)，固定 k=1，再进行相同平均，而不是对最终平均距离取指数。两边色标都是线性的，左边数值越大越不相似，右边越大越相似。英语组在最前，其他语言组按与英语的平均距离排序，组内再聚类。灰色框标记语言组，对角线是屏蔽的自我比较，不是测得的零。这些是表示空间的比较，不是相关系数，也不是人类回答正确的概率。
+
+## Figure PDF page 05 | AN19 all-segment similarity
+
+**English**
+
+This is the revised segment summary we discussed. Each small dot is one L2 speaker, the open diamond is the average for that L1 group, and the horizontal line is its 95 percent confidence interval. The rows are sorted from higher to lower mean similarity, and n gives the number of speakers. To calculate one dot, I first use FALCON to locate the intended phones in each word, then take the corresponding frames from the existing HuBERT trajectory. I compare each phone instance with the same intended phone, in the same word and canonical position, for the six English speakers. I convert each pair’s DTW distance to exp(-distance), average within each English speaker and across the six English speakers, and finally average every eligible instance equally for the L2 speaker. I do not give each phoneme type an equal vote. There are 5,114 eligible instances across 36 L2 speakers. The intervals resample L2 speakers within their language group 1,000 times; single-speaker groups have no estimated interval. These are automatically aligned intended phones, so the plot is not a manually verified account of what each speaker actually pronounced.
+
+**中文对照**
+
+这就是我们最近讨论后修改的音段汇总图。每个小点是一位二语说话人，空心菱形是这个母语组的平均值，横线是平均值的 95% 置信区间。语言组按照相似度从高到低排列，n 表示说话人数。计算一个点时，我先用 FALCON 定位每个词中预期音素的时间区间，再从已有的 HuBERT 轨迹中取出相应的帧。每个音素实例只和六位英语说话人在同一个词、同一个音素位置的实例比较。每一对先计算 DTW 距离并转换成 exp(-distance)，先在每位英语说话人内部平均，再平均六位英语说话人，最后对这位二语说话人的全部有效实例等权平均。这里不再让每种音素类型各占一份。最终保留了 36 位二语说话人的 5,114 个有效实例。置信区间来自组内说话人的 1,000 次重抽样；只有一个人的语言组不估计区间。另外，这些区间来自给定目标音素的自动对齐，不能当成人工核验过的实际发音标注。
+
+## Figure PDF page 06 | Similarity to English and control accuracy
+
+**English**
+
+Here the question is whether a test word that is more similar to English reference productions is also easier for English-L1 listeners to understand in the control condition. The horizontal axis is word similarity to English, and the vertical axis is the proportion of correct word responses. AN19 is on the left, with Korean- and Spanish-accented tests, and X21 is on the right, with Mandarin-accented tests. Each point summarizes a similarity quantile bin, and the smooth lines are descriptive logistic fits, not cross-validated GLMM predictions. Their bands and the point intervals come from resampling listeners 1,000 times. For this existing analysis, I first average the English-reference distances, divide by a dataset-specific median distance and then apply the exponential transformation. That scaling is different from the segment and matrix plots, so their absolute similarity numbers should not be compared. The small histograms show where the test-word similarities fall, counting each physical target once rather than once per listener response. This is control-test performance, not learning during the exposure phase.
+
+**中文对照**
+
+这张图问的是：在控制条件下，一个测试词如果更接近英语参考发音，英语母语听者是否也更容易听懂它。横轴是词与英语的相似度，纵轴是词的回答正确率。左边是 AN19，包含韩语和西班牙语口音；右边是 X21，包含普通话口音。每个点汇总一个相似度分位区间，平滑曲线是描述性的逻辑回归拟合，不是交叉验证的 GLMM 预测。曲线阴影和点的区间来自 1,000 次听者重抽样。这套已有计算先平均英语参考距离，再除以数据集内部的中位距离，最后用指数函数转换。因此它与前面音段图和矩阵图的尺度不同，不能直接比较相似度的绝对数值。下面的小直方图展示相似度分布，每个实际测试录音或词区间只计一次，不会因为听者多就重复计数。这里展示的是控制条件的测试表现，不是 exposure 阶段的学习过程。
+
+## Figure PDF page 07 | SBI across datasets and model variants
+
+**English**
+
+This single figure brings together the three datasets. The horizontal axis starts with MFCC and STRF, followed by the retained HuBERT layers. Blue is the non-ASR-fine-tuned model and red is the ASR-fine-tuned model; each acoustic baseline is shown once in black. The vertical axis is predictor z divided by that dataset's mean ceiling z, multiplied by 100. I use the same ceiling for both model variants within a dataset, not a common ceiling across datasets. Gray dots are the three fold estimates; colored points and error bars show their mean and 95 percent fold-bootstrap interval. The dashed line is 100 percent, with a gray interval for the ceiling; orange lines are the rescaled nominal z thresholds of plus or minus 1.96. I removed the raw-z panels because they plotted the same values on another scale. These are retained notebook test-fold refits, not frozen held-out predictions. In X21, averaging k across folds also introduces parameter-selection leakage. For AN19 and B23 the stored ceilings use a broader participant sample, so they are historical references, not matched predictive upper bounds. The percentages are not accuracy or explained variance, and three folds give only a coarse uncertainty summary.
+
+**中文对照**
+
+这一页把三个数据集放在一起。横轴先是 MFCC 和 STRF，再是已计算的 HuBERT 各层。蓝色为未做 ASR 微调，红色为 ASR 微调；每个声学 baseline 只用黑色画一次。纵轴是 predictor 的 z 除以该数据集平均 ceiling z，再乘以 100。同一个数据集的两个模型版本共用同一 ceiling，不同数据集不共用一个 ceiling。灰色点是三个折，彩色点和误差棒是均值及 95% 折间 bootstrap 区间。虚线是 100%，灰色带是 ceiling 的区间；橙色线是换算到这个坐标上的正负 1.96。原始 z 的面板只是换一个尺度重复这些数值，所以不再展示。这些仍是 notebook 里在 test fold 重新拟合得到的 z，不是冻结模型后的留出预测。X21 还存在跨折平均 k 带来的参数选择信息泄漏；AN19 和 B23 的旧 ceiling 使用更广的参与者样本，因此只能当作历史参考，不能称为样本匹配的预测上限。这个百分比不是正确率或解释方差，三个折也只能粗略地表达不确定性。
+
+## Figure PDF page 08 | X21 HVE: four retained definitions, z
+
+**English**
+
+For HVE I retain this X21 example, rather than the complete method-by-layer catalogue. The four panels show frame dispersion around the overall pool mean, adjacent-frame changes across the actual exposure sequence, average frame dispersion within each sentence recording, and dispersion of sentence-instance mean vectors within each repeated sentence type. The global transition measure includes token boundaries; it is the one that needs exposure order. The horizontal axis is HuBERT layer, and the vertical axis is the HVE coefficient divided by its standard error: the Wald z. Blue and red distinguish the two model variants. Each gray dot comes from fitting the predictor-only GLMM to two training folds; colored points and bars summarize the three fits with a 95 percent fold-bootstrap interval. Positive and negative values indicate the direction of the fitted association, not prediction accuracy. Orange lines mark nominal plus or minus 1.96. I do not divide these training-fit z values by the older test-refit ceiling. Non-DTW dispersion here uses squared deviations at tau = 2 without a final root, and the transition measure averages squared frame changes. None of these four panels uses DTW. This is a retained example, not a claim that only four HVE definitions exist.
+
+**中文对照**
+
+HVE 这里保留 X21 的一个示例，不再逐页展示所有方法和层。四个面板依次是整体帧离散度、真实 exposure 顺序中的相邻帧变化、句子实例内部帧离散度，以及同一句子类型不同实例的平均向量之间的离散度。整体顺序指标包含 token 边界，所以它需要真实 exposure 顺序。横轴是 HuBERT 层，纵轴是 HVE 系数除以标准误，也就是 Wald z。蓝红区分两个模型版本。每个灰点来自在两个训练折上拟合 predictor-only GLMM；彩色点和棒汇总三个拟合的均值及 95% 折间 bootstrap 区间。正负表示拟合关系的方向，不是预测正确率。橙线是名义上的正负 1.96。我没有用旧 test-refit ceiling 归一化这些训练拟合的 z。这里 dispersion 在 tau=2 时使用平方偏差且不取最终根号，顺序指标则平均相邻帧的平方变化。这四个面板均不使用 DTW。这只是保留的示例，不意味着 HVE 只有四种定义。
+
+## Figure PDF page 09 | X21 HVE: the same definitions, held-out likelihood
+
+**English**
+
+This page shows the same four HVE definitions in the same order, but now asks how well the model predicts held-out responses. The x-axis is layer and the y-axis is log likelihood per word; higher, or less negative, is better. For each split I standardize the predictor using training data, fit the predictor-only GLMM on the two training folds, and score the untouched third fold without refitting. Predictions set random-effect contributions to zero. Each score is the sum of the observed responses' log probabilities divided by the number of word trials. Gray dots are the three fold scores; colored means and 95 percent intervals use the same fold-bootstrap summary. This is distinct from the preceding coefficient z plot: a large coefficient z need not mean better held-out prediction. I keep this one likelihood page for that distinction, without the exhaustive appendix or an incompatible ceiling. It evaluates the retained candidates; it does not provide an independent outer-fold evaluation of choosing the best layer from these scores.
+
+**中文对照**
+
+这一页是相同顺序的四种 HVE 方法，但问题变成模型能否预测没有参与拟合的反应。横轴是层，纵轴是每个词的 log likelihood，越高、越接近零越好。每次划分用训练数据标准化 predictor，在两个训练折上拟合 predictor-only GLMM，然后不重新拟合，直接给第三折评分。预测时随机效应贡献设为零。把实际反应的预测概率取对数、求和，再除以词试次数，就得到每词得分。灰点是三个折的得分，彩色均值和 95% 区间沿用折间 bootstrap。这与上一页的系数 z 不同：系数 z 大，不一定意味着留出预测好。因此保留这一页来说明区别，不再附上所有逐层结果，也不加定义不匹配的 ceiling。这里评价的是已有候选项，并不是再用独立外层折验证“从这些分数中选出最好层”的整个过程。
+
+## Figure PDF page 10 | X21 condition-specific curves
+
+**English**
+
+This figure brings the model values back to listener accuracy. Each panel is one Mandarin-English test talker, with talker 035 in the large panel and 032, 043 and 037 in the smaller panels. The horizontal axis is exposure-to-test similarity from HuBERT base Tr-24 after 3-D t-SNE; the vertical axis is the proportion of correctly recognized words. Gray is control, green is multi-talker, blue is single-talker, and red is talker-specific exposure. I summarize the trial responses in ten similarity bins per condition and fit a separate ordinary binomial logistic curve for each condition and test talker. The similarity values are exp of minus k times the retained DTW distance, with k about .358 and the historical coordinate scaling. These are descriptive curves rather than mixed-model held-out predictions. The plot retains its original intervals, but their source record does not establish the resampling unit, so I cannot call them participant-bootstrap or three-fold intervals. A vertical gap between curves is descriptive; the nested models provide the test of condition beyond similarity.
+
+**中文对照**
+
+这张图把模型值和听者正确率直接放在一起。每个面板是一位说普通话背景英语的测试说话人，035 是大图，032、043 和 037 是旁边的小图。横轴是 HuBERT base Tr-24 经三维 t-SNE 后得到的 exposure-to-test similarity，纵轴是单词识别正确率。灰色是 control，绿色是 multi-talker，蓝色是 single-talker，红色是 talker-specific。每个 condition 用十个 similarity 分箱汇总反应，并在每个 condition 和测试说话人内单独拟合普通二项 logistic 曲线。similarity 是 exp(-k×DTW)，这里 k 约为 .358，使用历史坐标缩放。这些是描述曲线，不是混合模型的 held-out prediction。图中保留了原区间，但来源记录没有说明重采样单位，所以不能称为参与者 bootstrap 或三折区间。曲线之间的高度差是描述，condition 是否在 similarity 之外有贡献应由嵌套模型检验。
+
+## Figure PDF page 11 | X21 pooled curves
+
+**English**
+
+This is the same X21 data, but now I combine the conditions within each test talker. The axes and similarity calculation are unchanged. Each black point summarizes trial accuracy in one of twenty similarity bins, and the black line is one logistic regression fitted to the pooled trial rows. I did not average the four colored curves from the previous figure. The overall accuracy is about .851 for talker 035, .818 for 032, .838 for 043 and .841 for 037. This gives a compact view of the overall pattern, but pooling does not control for condition and can mix within-condition and between-condition differences. It is therefore a descriptive summary, not a substitute for the conditional analysis or the GLMM comparison.
+
+**中文对照**
+
+这还是同一批 X21 数据，但我现在在每位测试说话人内部合并所有 condition。横纵轴和 similarity 的算法不变。每个黑点代表二十个 similarity 分箱中一个箱的反应正确率，黑线是对合并后的全部 trial rows 拟合的一条 logistic 曲线，并不是把前一张的四条彩色曲线平均。四位说话人的整体正确率分别约为 .851、.818、.838 和 .841。这能简洁展示总体趋势，但合并并不等于控制 condition，会混合 condition 内部与 condition 之间的差异，因此不能替代分条件分析或 GLMM 比较。
+
+## Figure PDF page 12 | X21 nested-model comparisons
+
+**English**
+
+Here I test whether SBI or HVE and experimental condition each add information beyond the other. These are the selected non-ASR-fine-tuned X21 configurations: SBI at Tr-14 and HVE at CNN-6 using within-word transitions. The x-axis distinguishes SBI and HVE. The y-axis is the likelihood-ratio statistic, twice the improvement in fitted log likelihood; it is not z or an out-of-fold gain. On the left, I compare condition-only with the joint model. On the right, I compare predictor-only with that same joint model. For each fold, predictor values were standardized using the mean and standard deviation from the other two folds. Those values were combined, and all three GLMMs were fitted on the same response rows. I do not reselect the predictor for each comparison. The labels give the chi-square reference degrees of freedom and p-values. For SBI, the two p-values are .0107 and .000105; for HVE they are .0532 and .0117. So condition does add to HVE. The selected HVE's predictor-only coefficient is negative, which does not support the expected positive variability effect. These tests are exploratory because predictor selection used this study. They are not an independent confirmation, and the bars do not represent three folds.
+
+**中文对照**
+
+这里检验 SBI 或 HVE 与实验 condition 是否各自包含对方之外的信息。展示的是 X21 获选的未做 ASR 微调配置：SBI 为 Tr-14，HVE 为 CNN-6 的单词内部 transitions。横轴区分 SBI 和 HVE，纵轴是 likelihood-ratio 统计量，即拟合 log likelihood 改善量的两倍，不是 z，也不是 OOF gain。左边比较 condition-only 与 joint model；右边比较 predictor-only 与同一个 joint model。对于每个当前折，先用另外两折的均值和标准差标准化 predictor 值，再合并这些值，在相同反应行上拟合三个 GLMM，没有为每次比较重新挑选 predictor。柱上的标签给出卡方参考自由度和 p 值。SBI 的两项 p 值是 .0107 和 .000105，HVE 是 .0532 和 .0117，因此 condition 对 HVE 确实有额外贡献。获选 HVE 在 predictor-only 模型中的系数为负，并不支持 variability 的预期正效应。由于 predictor 也在本研究中选择，这些检验是探索性的，不是独立确认，柱也不代表三个折。
+
+## Scope
+
+Figure 2d remains unavailable. The current annotation estimates intended-phone intervals, not listener errors. Historical SBI z/ceiling limitations are explained on page 7; HVE training z and held-out likelihood are distinct quantities. The supplied feature heatmap still lacks its numerical scoring table/code. Removing the long appendix does not resolve these scientific gaps.

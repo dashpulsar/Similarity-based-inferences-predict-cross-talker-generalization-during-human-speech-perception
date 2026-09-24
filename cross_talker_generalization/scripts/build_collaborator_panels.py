@@ -32,7 +32,7 @@ sys.path.insert(0, str(PROJECT / "src"))
 from ctg.features import slice_by_time
 from ctg.metrics import dtw_distance
 
-OUT = PROJECT / "analysis_update_2026-09-06/collaborator_report"
+OUT = PROJECT / "analysis/model_comparison/reference_checks/collaborator_report"
 TABLES = OUT / "tables"
 FIGURES = OUT / "figures"
 SOURCES = {}

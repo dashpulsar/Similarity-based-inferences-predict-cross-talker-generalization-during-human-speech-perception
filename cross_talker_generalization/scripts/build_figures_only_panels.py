@@ -17,8 +17,8 @@ from build_z_value_review import LAYERS, MEASURES, fold_ci, label, measure_label
 
 ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT / "cross_talker_generalization"
-OLD = PROJECT / "analysis_update_2026-09-09"
-OUT = PROJECT / "analysis_update_2026-09-11"
+OLD = PROJECT / "analysis/speech"
+OUT = PROJECT / "analysis/presentation"
 FIG = OUT / "figures"
 TABLES = OUT / "tables"
 SOURCES = {}
@@ -115,7 +115,7 @@ def phone_panels():
 
 
 def hve_panels():
-    z = read(PROJECT / "analysis_update_2026-09-06/z_value_review/tables/revised_hve_training_fold_z.csv")
+    z = read(PROJECT / "analysis/model_comparison/reference_checks/z_value_review/tables/revised_hve_training_fold_z.csv")
     ll = read(OLD / "tables/hve_retained_fold_loglik.csv")
     for dataset in ("AN19", "X21", "B23"):
         methods = [m for m in MEASURES if m in set(z.loc[z.dataset_id.eq(dataset)].measure)]
@@ -157,7 +157,7 @@ def hve_panels():
 
 
 def x21_comparison():
-    source = read(PROJECT / "analysis_update_2026-09-01/tables/crossfitted_lrt_results.csv")
+    source = read(PROJECT / "analysis/model_comparison/pooled_lrt/tables/crossfitted_lrt_results.csv")
     data = source.loc[source.dataset_id.eq("X21") & source.variant.eq("base")].copy()
     assert len(data) == 4 and data.status.eq("ok").all()
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.9), layout="constrained")

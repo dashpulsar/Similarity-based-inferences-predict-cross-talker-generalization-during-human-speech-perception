@@ -11,7 +11,7 @@
   "weights_sha256": "ad58bf20a60e9d0380327bd8b2d0e8e90a9b8de2adccbfb479f9b21ea85eda18",
   "reviewed_source_files": 39,
   "source_bundle_sha256": "a664256b6c9dc285fa16224e7ac2ad3a671f89a1252edcc833ef248995523ec9",
-  "output_dir": "cross_talker_generalization/analysis_update_2026-09-09/an19_phonetic_xeus",
+  "output_dir": "cross_talker_generalization/analysis/speech/an19_phonetic_xeus",
   "sampling_rate": 16000,
   "mono": "arithmetic mean of channels",
   "resampler": "torchaudio.functional.resample default sinc_interp_hann",

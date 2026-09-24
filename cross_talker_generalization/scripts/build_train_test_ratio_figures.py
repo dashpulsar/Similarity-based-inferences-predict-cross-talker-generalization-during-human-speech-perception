@@ -1,8 +1,8 @@
 """Plot the approved per-response test/train log-loss ratio from matched scores.
 
 python cross_talker_generalization/scripts/build_train_test_ratio_figures.py \
-  --manifest cross_talker_generalization/analysis_update_2026-09-17/train_test/run_inputs.json \
-  --output cross_talker_generalization/analysis_update_2026-09-17/si_diagnostics
+  --manifest cross_talker_generalization/analysis/diagnostics/train_test/run_inputs.json \
+  --output cross_talker_generalization/analysis/diagnostics/si_diagnostics
 
 Repeat --manifest for additional non-overlapping runs. Each JSON has an inputs
 list: run_label, optional model_dir (relative to the manifest), path (input

@@ -1,0 +1,601 @@
+# Figure-by-figure speaker notes / 逐图讲解稿
+
+This guide follows the figure PDF page by page. English is for speaking and Chinese is for preparation. The main sequence is pages 1-19; the rest contains complete layer/method profiles and corpus coverage. For a shorter recap, use pages 1, 2, 5, 7, 11, 13, 15, 16, 17 and 19, and keep other pages for questions. This version incorporates the recent discussion, the annotated report, and the HLP direct messages from September 6 onward, including all three reply threads. This is a current figure compilation, not a claim that all manuscript analyses are complete.
+
+这份稿子按图集页码逐页对应，英文可以口头讲，中文用于准备；这些文字不放进图集 PDF。主线是第 1-19 页，后面是完整逐层/逐方法结果和语料覆盖。简短 recap 可以讲第 1、2、5、7、11、13、15、16、17、19 页，其他页用于回答问题。本版已综合最近的讨论、批注报告，以及 9 月 6 日以来 HLP 私聊中的全部三个回复线程。这是现有图的整合，不代表全部论文分析已经完成。
+
+[Figure PDF](../../../output/pdf/cross_talker_figures_only.pdf) | [Bilingual notes PDF](../../../output/pdf/cross_talker_speaker_notes_bilingual.pdf)
+
+## Figure PDF page 01 | Speech to latent trajectories
+
+**English**
+
+Let me start with how I represent speech. On the left is an English-L1 speaker saying “The wife helped her husband.” The horizontal axis is time in seconds, and the vertical axis is waveform amplitude, normalized only for display. I pass the speech through the self-supervised HuBERT-large model. Here I am showing transformer layer 24, where every frame has 1,024 feature values. The middle traces show the first and last dimensions over time; the dots between the panels stand for all the dimensions that are not displayed. I then use the existing corpus-level t-SNE coordinates to show each frame in three dimensions. The x, y and z axes are simply t-SNE coordinates; they are not frequency, pitch or individual phonetic features. Connecting consecutive frames gives the trajectory. On the right, I zoom into “wife,” using its existing time annotations to color /w/, /aɪ/ and /f/. This is the same representation, not a second t-SNE fit. The figure illustrates the method; it does not show that t-SNE preserves every distance in the original space.
+
+**中文对照**
+
+我先用这张图说明语音是怎样变成轨迹的。左边是一位英语母语说话人说的“The wife helped her husband”。横轴是时间，单位是秒，纵轴是波形振幅，这里的归一化只是为了显示。语音经过自监督训练的 HuBERT-large 以后，每一帧在第 24 个 Transformer 层得到 1,024 个数值。中间展示的是第一个和最后一个维度随时间的变化，省略号表示没有画出来的其他维度。然后，我用之前在整个语料上计算好的三维 t-SNE 坐标表示每一帧，把相邻帧连接起来就得到这条轨迹。这里的 x、y、z 轴只是 t-SNE 的三个坐标，不分别代表频率、音高或某种语音特征。右边把“wife”这个词放大，按照已有的时间标注，用不同颜色表示 /w/、/aɪ/ 和 /f/。放大时没有重新做 t-SNE。这张图说明的是表示方式，并不意味着三维空间保留了原始空间的所有距离关系。
+
+Figure source: [figure_1ab_method.pdf](../speech/figures/figure_1ab_method.pdf)
+
+## Figure PDF page 02 | Language backgrounds
+
+**English**
+
+This map gives the language-background context for the project. Each label identifies an L1 represented in our speech corpora, and shared label colors follow the language groups in Florian’s original figure. These are not scores: two labels with the same color simply belong to the same displayed group. The map positions use associated national capitals, so they should not be read as the speakers’ precise birthplaces or recording locations. I have kept Florian’s supplied map and reused its color scheme in the other language-level figures. The map tells us which backgrounds we cover, while the separate coverage plot tells us how many speakers we have for each dataset.
+
+**中文对照**
+
+这张地图介绍的是项目覆盖了哪些母语背景。每个标签是一种出现在语料中的母语，标签颜色沿用 Florian 原图中的语言分组。同一种颜色不是相似度分数，只表示属于同一个展示分组。地图上的位置用的是相应国家的首都，因此不能理解成每位说话人的出生地或录音地点。我保留了 Florian 提供的地图，并让其他按语言分组的图使用同一套颜色。这张图负责说明覆盖了哪些语言，具体每个数据集有多少位说话人则在后面的覆盖图中展示。
+
+Figure source: [language_capitals_worldmap.pdf](../speech/sources/language_capitals_worldmap.pdf)
+
+## Figure PDF page 03 | Inventory overlap with English
+
+**English**
+
+Here I am comparing languages at the inventory level, rather than comparing individual speech recordings. Each row is a language, and moving right means greater consonant-and-vowel inventory overlap with English. I take the phoneme symbols in a PHOIBLE inventory and calculate Jaccard overlap: the number of symbols shared by the two inventories divided by the number appearing in either inventory. Because PHOIBLE can contain several inventories for a language, I compare the selected inventories with all nine selected English inventories. The point is the average across those inventory pairs, and the line is their minimum-to-maximum range. That line is not a confidence interval. This is a limited reference measure: it uses exact symbol overlap, not pronunciation acoustics, and it does not include tone or phonotactics.
+
+**中文对照**
+
+这里比较的是语言的音位库存，而不是具体录音。每一行是一种语言，越靠右表示其辅音和元音库存与英语的重合程度越高。我从 PHOIBLE 取出两种语言的音位符号，用两者共有的符号数除以两者所有不同符号的总数，也就是 Jaccard 重合度。因为同一种语言可能有多个来源的库存，所以我把选中的库存与九个英语库存逐一比较。点表示这些组合的平均值，横线表示不同来源组合的最小值到最大值，不是置信区间。这只是一个参考指标：它比较的是符号重合，不是语音的声学相似性，也没有包括声调和音系配列。
+
+Figure source: [figure_1d_phonological_inventory_similarity.pdf](../speech/figures/figure_1d_phonological_inventory_similarity.pdf)
+
+## Figure PDF page 04 | Supplied phonological-feature comparison
+
+**English**
+
+This is the feature comparison Florian supplied. The columns are the L1 backgrounds, and the rows are particular phonological properties, grouped into segments, phonotactics and intonation or stress. According to the supplied color scale, greener cells indicate greater similarity to English and redder cells indicate less similarity. It gives more specific examples than the inventory-overlap plot, because languages can differ in how sounds are combined and used, not only in which sounds they contain. I should distinguish this supplied illustration from my computed results: I have not calculated or independently checked its cell scores. I still need the underlying score table and generation code before I can explain exactly how every value was assigned. I would not call these cells PHOIBLE-derived measurements on the basis of the image alone.
+
+**中文对照**
+
+这是 Florian 提供的具体音系特征对比图。每一列是一种母语背景，每一行是一个音系特征，分成音段、音系配列和语调或重音几个部分。按照他提供的色标，越绿表示与英语越相似，越红表示越不相似。它比前一张库存重合图更具体，因为语言之间的差别不仅在于拥有哪些音，还包括这些音如何组合、如何使用。不过需要区分，这张图是 Florian 提供的材料，不是我重新计算的结果。我还没有拿到原始分数表和生成代码，因此不能逐格解释分数是怎样赋值的，也不能仅凭这张图就把它称为 PHOIBLE 计算结果。
+
+Figure source: [english_phonology_similarity_heatmap.pdf](../speech/sources/english_phonology_similarity_heatmap.pdf)
+
+## Figure PDF page 05 | AN19 talker distance matrix
+
+**English**
+
+Now I move from language inventories to the recordings themselves. Both axes list the same 42 AN19 speakers: six English-L1 reference speakers and 36 L2-English speakers. One cell summarizes a pair of speakers. For each of the same 138 words, I compare their Tr-24, three-dimensional trajectories using dynamic time warping. DTW allows corresponding parts of the word to align even if the speakers produce them at different speeds. Here the local distance is Euclidean, and I divide the accumulated DTW cost by the mean length of the two frame sequences. I then average the matched-word distances. The color scale is linear, with a larger value meaning more distance. English comes first; the other language groups are ordered by average distance to English, with speakers clustered inside their language group. The gray boxes mark those groups, and the gray diagonal is masked self-comparison, not a measured zero.
+
+**中文对照**
+
+接下来比较具体录音。横轴和纵轴都是同一批 AN19 说话人，一共 42 位，包括六位英语母语参考说话人和 36 位英语二语说话人。每一个格子对应两位说话人。我对他们共同拥有的 138 个词逐词计算距离，使用的是第 24 层的三维 t-SNE 轨迹。动态时间规整，也就是 DTW，允许两个人语速不同时仍然对齐词中的相应部分。这里局部距离是欧氏距离，累积的 DTW 代价除以两条帧序列的平均长度，然后再对同样的词取平均。色标是线性的，数值越大表示距离越远。英语组排在最前面，其他语言组按照与英语的平均距离排列，组内再根据距离聚类。灰色方框标记同语言组，对角线则是没有显示的自我比较，不是测出来的零。
+
+Figure source: [figure_2a_an19_42_talker_distance_linear.pdf](../speech/figures/figure_2a_an19_42_talker_distance_linear.pdf)
+
+## Figure PDF page 06 | AN19 talker similarity matrix
+
+**English**
+
+This is the similarity view of the same speaker comparisons, with exactly the same speaker order. The important change is how the numbers are summarized. I convert each matched recording-pair distance to similarity using exp of minus the distance, with k fixed at one, and then average within word and across the same 138 words. So a larger colorbar value now means more similar, not farther apart. I transform the individual distances before averaging; taking the exponential of the final mean distance would give a different result. The diagonal stays masked, and the color scale is still linear. These are descriptive representation-based similarities, not correlations and not probabilities of a correct human response. Their absolute scale also depends on the chosen representation and exponential transformation.
+
+**中文对照**
+
+这张图使用相同的说话人顺序，但把距离换成了相似度。具体做法是，先对每一对录音的距离计算 exp(-distance)，这里 k 固定为 1，再先在同一个词内平均，最后对这 138 个词平均。因此，现在色标数值越大表示越相似，而不是距离越远。这里必须先转换每个距离再平均，不能把前一张图的最终平均距离直接放进指数函数，因为两者结果不同。对角线仍然不显示，色标也仍然是线性的。这是基于表示空间的描述性相似度，不是相关系数，也不是人类答对的概率；它的绝对尺度与使用的表示和指数转换有关。
+
+Figure source: [figure_2a_an19_42_talker_similarity_linear.pdf](../speech/figures/figure_2a_an19_42_talker_similarity_linear.pdf)
+
+## Figure PDF page 07 | AN19 all-segment similarity
+
+**English**
+
+This is the revised segment summary we discussed. Each small dot is one L2 speaker, the open diamond is the average for that L1 group, and the horizontal line is its 95 percent confidence interval. The rows are sorted from higher to lower mean similarity, and n gives the number of speakers. To calculate one dot, I first use FALCON to locate the intended phones in each word, then take the corresponding frames from the existing HuBERT trajectory. I compare each phone instance with the same intended phone, in the same word and canonical position, for the six English speakers. I convert each pair’s DTW distance to exp(-distance), average within each English speaker and across the six English speakers, and finally average every eligible instance equally for the L2 speaker. I do not give each phoneme type an equal vote. There are 5,114 eligible instances across 36 L2 speakers. The intervals resample L2 speakers within their language group 1,000 times; single-speaker groups have no estimated interval. These are automatically aligned intended phones, so the plot is not a manually verified account of what each speaker actually pronounced.
+
+**中文对照**
+
+这就是我们最近讨论后修改的音段汇总图。每个小点是一位二语说话人，空心菱形是这个母语组的平均值，横线是平均值的 95% 置信区间。语言组按照相似度从高到低排列，n 表示说话人数。计算一个点时，我先用 FALCON 定位每个词中预期音素的时间区间，再从已有的 HuBERT 轨迹中取出相应的帧。每个音素实例只和六位英语说话人在同一个词、同一个音素位置的实例比较。每一对先计算 DTW 距离并转换成 exp(-distance)，先在每位英语说话人内部平均，再平均六位英语说话人，最后对这位二语说话人的全部有效实例等权平均。这里不再让每种音素类型各占一份。最终保留了 36 位二语说话人的 5,114 个有效实例。置信区间来自组内说话人的 1,000 次重抽样；只有一个人的语言组不估计区间。另外，这些区间来自给定目标音素的自动对齐，不能当成人工核验过的实际发音标注。
+
+Figure source: [AN19_all_segments_similarity.pdf](../../../output/pdf/AN19_all_segments_similarity.pdf)
+
+## Figure PDF page 08 | AN19 intended phones: IH, IY, AE and EH
+
+**English**
+
+Here I separate the overall result into individual intended-phone types, starting with IH, IY, AE and EH in ARPAbet notation. The horizontal axis remains mean similarity to the English references, so farther right means more similar. For each panel, one dot is one L2 speaker’s average over the retained instances of that phone. I use the same pairwise similarities as in the overview and average the instances directly, without first giving each word an equal weight. The diamonds and confidence intervals summarize speakers within an L1 group. Keeping the language order fixed makes it easier to follow one group from panel to panel. These panels show whether the overall pattern looks similar for different phones, but they do not establish a language-level difference when a group contains just one person, and the set of usable word contexts can differ across speakers. Each phone panel has its own x-axis range and scientific-notation multiplier, so I read the tick values rather than compare horizontal positions across panels.
+
+**中文对照**
+
+这里把总体结果拆到具体音素，先展示 ARPAbet 标记的 IH、IY、AE 和 EH。横轴仍然是与英语参考的平均相似度，所以越靠右越相似。在每个小面板里，一个点是一位二语说话人在该音素所有保留实例上的平均值。底层使用的逐对相似度与总体图相同，这次直接对实例平均，不再先让每个词等权。菱形和置信区间仍然在母语组内按说话人汇总。所有面板保持相同的语言顺序，方便追踪同一个语言组。这些图让我们看总体模式在不同音素上是否一致，但一个组只有一位说话人时，不能据此下语言层面的结论，而且不同说话人保留下来的单词语境可能不完全相同。 每个音素面板使用各自的横轴范围和科学计数倍率，因此要比较刻度值，不能直接跨面板比较点的横向位置。
+
+Figure source: [an19_phone_similarity_01.pdf](figures/an19_phone_similarity_01.pdf)
+
+## Figure PDF page 09 | AN19 intended phones: UH, UW, TH and DH
+
+**English**
+
+This page uses the same calculation for UH, UW, TH and DH. I would read the dots and intervals in exactly the same way as on the previous page. One important point is the empty DH panel: there are no intended DH tokens in this corpus’s target lexicon, so there is no value to estimate. An empty panel is not zero similarity, and it does not mean these speakers cannot produce that sound. It simply records that the planned comparison is not supported by these materials. The other panels use the eligible instances available for each speaker; I have not filled in missing examples with ASR guesses or substituted a different phoneme. Each phone panel has its own x-axis range and scientific-notation multiplier, so I read the tick values rather than compare horizontal positions across panels.
+
+**中文对照**
+
+这一页是 UH、UW、TH 和 DH，计算方式和上一页完全相同。这里需要特别解释空着的 DH 面板：语料的目标词表里没有预期的 DH 实例，因此无法估计这个比较。空白不代表相似度为零，也不代表这些说话人不能发这个音，只是现有材料不支持这个原先计划的面板。其余面板使用每位说话人实际保留下来的有效实例，没有用 ASR 猜测去填补缺失项，也没有换成另一个音素代替。 每个音素面板使用各自的横轴范围和科学计数倍率，因此要比较刻度值，不能直接跨面板比较点的横向位置。
+
+Figure source: [an19_phone_similarity_02.pdf](figures/an19_phone_similarity_02.pdf)
+
+## Figure PDF page 10 | AN19 intended phones: S, SH, R and L
+
+**English**
+
+The final set shows S, SH, R and L, again using the same instance-weighted similarity and talker-level intervals. The colors identify language groups, not the type of consonant, and the x-axis measures model similarity rather than listener accuracy. I would use these panels to describe where the model’s overall pattern is concentrated, not to label a token as a pronunciation error. FALCON was given the intended word, so it can place an expected phone even if the actual pronunciation differs. Also, very short intervals can contain few HuBERT frames or none at all. I leave intervals without a frame missing and require all six English references. Those decisions preserve a clear comparison, but they also limit coverage, so these results remain descriptive automatic estimates. Each phone panel has its own x-axis range and scientific-notation multiplier, so I read the tick values rather than compare horizontal positions across panels.
+
+**中文对照**
+
+最后一组展示 S、SH、R 和 L，仍然使用实例等权平均的相似度和说话人层面的置信区间。颜色表示语言分组，不是辅音类别；横轴是模型相似度，也不是听者正确率。我会用这些面板描述模型的总体模式主要出现在哪些音素上，而不会据此给某个实例贴上“发音错误”的标签。因为 FALCON 已经知道目标词，即使实际发音不同，它仍然可能给预期音素安排一个区间。另外，很短的区间有时只有很少的 HuBERT 帧，甚至没有。我把没有帧的区间保留为缺失，并要求六位英语参考都有可用区间。这样比较的条件是明确的，但会损失覆盖率，所以结果仍然应解释为描述性的自动估计。 每个音素面板使用各自的横轴范围和科学计数倍率，因此要比较刻度值，不能直接跨面板比较点的横向位置。
+
+Figure source: [an19_phone_similarity_03.pdf](figures/an19_phone_similarity_03.pdf)
+
+## Figure PDF page 11 | English-reference similarity and control accuracy
+
+**English**
+
+Here the question is whether a test word that is more similar to English reference productions is also easier for English-L1 listeners to understand in the control condition. The horizontal axis is word similarity to English, and the vertical axis is the proportion of correct word responses. AN19 is on the left, with Korean- and Spanish-accented tests, and X21 is on the right, with Mandarin-accented tests. Each point summarizes a similarity quantile bin, and the smooth lines are descriptive logistic fits, not cross-validated GLMM predictions. Their bands and the point intervals come from resampling listeners 1,000 times. For this existing analysis, I first average the English-reference distances, divide by a dataset-specific median distance and then apply the exponential transformation. That scaling is different from the segment and matrix plots, so their absolute similarity numbers should not be compared. The small histograms show where the test-word similarities fall, counting each physical target once rather than once per listener response. This is control-test performance, not learning during the exposure phase.
+
+**中文对照**
+
+这张图问的是：在控制条件下，一个测试词如果更接近英语参考发音，英语母语听者是否也更容易听懂它。横轴是词与英语的相似度，纵轴是词的回答正确率。左边是 AN19，包含韩语和西班牙语口音；右边是 X21，包含普通话口音。每个点汇总一个相似度分位区间，平滑曲线是描述性的逻辑回归拟合，不是交叉验证的 GLMM 预测。曲线阴影和点的区间来自 1,000 次听者重抽样。这套已有计算先平均英语参考距离，再除以数据集内部的中位距离，最后用指数函数转换。因此它与前面音段图和矩阵图的尺度不同，不能直接比较相似度的绝对数值。下面的小直方图展示相似度分布，每个实际测试录音或词区间只计一次，不会因为听者多就重复计数。这里展示的是控制条件的测试表现，不是 exposure 阶段的学习过程。
+
+Figure source: [figure_2c_control_similarity_with_marginals.pdf](../speech/figures/figure_2c_control_similarity_with_marginals.pdf)
+
+## Figure PDF page 12 | AN19 SBI: historical non-ASR-FT z
+
+**English**
+
+This is AN19, using the non-ASR-fine-tuned representation. Here I am showing how the association between similarity and human responses changes across the feature spaces. On the horizontal axis, MFCC and STRF come first, followed by the 18 HuBERT layers we analyzed. These are CNN-2 through CNN-6 and every second transformer layer from Tr-0 to Tr-24, not all 32 extraction outputs. In the lower panel, the vertical axis is the predictor's Wald z: its fitted coefficient divided by its standard error. In the upper panel, I divide each z by the mean behavioral-reference z and multiply by 100. So the dashed line at 100 is the mean reference, and the gray band shows its fold-bootstrap interval. Small gray points show the three fold results, and the black point and bars summarize their mean and 95% fold-bootstrap interval. The orange lines are the nominal plus or minus 1.96 reference. The important distinction is that these are retained notebook results in which the response model was refitted on each test partition. They describe the association in those partitions; they are not frozen-model predictions of unseen participants. The percentage is a rescaling of z, not percentage accuracy or percentage variance explained. The stored ceiling uses a broader participant sample than these SBI fits, so it is a historical reference, not a matched predictive upper bound.
+
+**中文对照**
+
+这一页是 AN19 的未做 ASR 微调表示。这张图展示 similarity 与人类反应的关联如何随着特征空间变化。横轴最左边是 MFCC 和 STRF，后面是这次实际分析的 18 个 HuBERT 层：CNN-2 到 CNN-6，以及 Tr-0 到 Tr-24 每隔一层取一个，并不是全部 32 个提取输出。下面一幅的纵轴是预测变量的 Wald z，也就是回归系数除以标准误；上面一幅把这个 z 除以行为参考值的三折平均 z，再乘以 100。因此，100% 虚线是参考值的平均水平，灰色带是参考值的折间 bootstrap 区间。灰色小点是三折各自的结果，黑点和误差棒是均值及其 95% 折间 bootstrap 区间；橙色线对应正负 1.96 的名义参考阈值。这里需要区分的是，这些是保留的 notebook 结果，每个测试分区上重新拟合了反应模型，展示的是关联，而不是冻结模型对新参与者的预测。这个百分比也不是正确率或解释方差的百分比。 旧 ceiling 的参与者范围比这些 SBI 拟合更广，因此它只是历史参考，不是样本匹配的预测上限。
+
+Figure source: [sbi_an19_base_z.pdf](../speech/figures/sbi_an19_base_z.pdf)
+
+## Figure PDF page 13 | X21 SBI: historical non-ASR-FT z
+
+**English**
+
+This is X21, using the non-ASR-fine-tuned representation. Here I am showing how the association between similarity and human responses changes across the feature spaces. On the horizontal axis, MFCC and STRF come first, followed by the 18 HuBERT layers we analyzed. These are CNN-2 through CNN-6 and every second transformer layer from Tr-0 to Tr-24, not all 32 extraction outputs. In the lower panel, the vertical axis is the predictor's Wald z: its fitted coefficient divided by its standard error. In the upper panel, I divide each z by the mean behavioral-reference z and multiply by 100. So the dashed line at 100 is the mean reference, and the gray band shows its fold-bootstrap interval. Small gray points show the three fold results, and the black point and bars summarize their mean and 95% fold-bootstrap interval. The orange lines are the nominal plus or minus 1.96 reference. The important distinction is that these are retained notebook results in which the response model was refitted on each test partition. They describe the association in those partitions; they are not frozen-model predictions of unseen participants. The percentage is a rescaling of z, not percentage accuracy or percentage variance explained. The source also reports that k was averaged across folds, allowing parameter-selection leakage; this is not unbiased out-of-sample validation.
+
+**中文对照**
+
+这一页是 X21 的未做 ASR 微调表示。这张图展示 similarity 与人类反应的关联如何随着特征空间变化。横轴最左边是 MFCC 和 STRF，后面是这次实际分析的 18 个 HuBERT 层：CNN-2 到 CNN-6，以及 Tr-0 到 Tr-24 每隔一层取一个，并不是全部 32 个提取输出。下面一幅的纵轴是预测变量的 Wald z，也就是回归系数除以标准误；上面一幅把这个 z 除以行为参考值的三折平均 z，再乘以 100。因此，100% 虚线是参考值的平均水平，灰色带是参考值的折间 bootstrap 区间。灰色小点是三折各自的结果，黑点和误差棒是均值及其 95% 折间 bootstrap 区间；橙色线对应正负 1.96 的名义参考阈值。这里需要区分的是，这些是保留的 notebook 结果，每个测试分区上重新拟合了反应模型，展示的是关联，而不是冻结模型对新参与者的预测。这个百分比也不是正确率或解释方差的百分比。 另外，来源记录说明 k 在折间取平均，存在参数选择的信息泄漏，因此不能把它作为无偏的样本外验证。
+
+Figure source: [sbi_x21_base_z.pdf](../speech/figures/sbi_x21_base_z.pdf)
+
+## Figure PDF page 14 | B23 SBI: historical non-ASR-FT z
+
+**English**
+
+This is B23, using the non-ASR-fine-tuned representation. Here I am showing how the association between similarity and human responses changes across the feature spaces. On the horizontal axis, MFCC and STRF come first, followed by the 18 HuBERT layers we analyzed. These are CNN-2 through CNN-6 and every second transformer layer from Tr-0 to Tr-24, not all 32 extraction outputs. In the lower panel, the vertical axis is the predictor's Wald z: its fitted coefficient divided by its standard error. In the upper panel, I divide each z by the mean behavioral-reference z and multiply by 100. So the dashed line at 100 is the mean reference, and the gray band shows its fold-bootstrap interval. Small gray points show the three fold results, and the black point and bars summarize their mean and 95% fold-bootstrap interval. The orange lines are the nominal plus or minus 1.96 reference. The important distinction is that these are retained notebook results in which the response model was refitted on each test partition. They describe the association in those partitions; they are not frozen-model predictions of unseen participants. The percentage is a rescaling of z, not percentage accuracy or percentage variance explained. The stored ceiling uses a broader participant sample than these SBI fits, so it is a historical reference, not a matched predictive upper bound.
+
+**中文对照**
+
+这一页是 B23 的未做 ASR 微调表示。这张图展示 similarity 与人类反应的关联如何随着特征空间变化。横轴最左边是 MFCC 和 STRF，后面是这次实际分析的 18 个 HuBERT 层：CNN-2 到 CNN-6，以及 Tr-0 到 Tr-24 每隔一层取一个，并不是全部 32 个提取输出。下面一幅的纵轴是预测变量的 Wald z，也就是回归系数除以标准误；上面一幅把这个 z 除以行为参考值的三折平均 z，再乘以 100。因此，100% 虚线是参考值的平均水平，灰色带是参考值的折间 bootstrap 区间。灰色小点是三折各自的结果，黑点和误差棒是均值及其 95% 折间 bootstrap 区间；橙色线对应正负 1.96 的名义参考阈值。这里需要区分的是，这些是保留的 notebook 结果，每个测试分区上重新拟合了反应模型，展示的是关联，而不是冻结模型对新参与者的预测。这个百分比也不是正确率或解释方差的百分比。 旧 ceiling 的参与者范围比这些 SBI 拟合更广，因此它只是历史参考，不是样本匹配的预测上限。
+
+Figure source: [sbi_b23_base_z.pdf](../speech/figures/sbi_b23_base_z.pdf)
+
+## Figure PDF page 15 | X21 HVE: training-fold z, definitions 1-4
+
+**English**
+
+This is X21. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: overall: I pool all frames from the exposure recordings, find their common center, and average their squared deviations from that center. Longer recordings contribute more frames. overall order sensitive: I join complete exposure recordings in their actual presentation order, including the transition from the end of one recording to the beginning of the next, and average squared adjacent-frame changes. I do not insert an unobserved inter-trial pause. within token sentence: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type sentence: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：overall：我合并 exposure 录音的全部 frame，求共同中心，再平均每个 frame 到中心的平方偏差。较长的录音包含更多 frame，因此权重也更高。 overall order sensitive：我按真实 exposure 顺序连接完整录音，包括前一段末尾到下一段开头的过渡，再平均相邻 frame 的平方变化；没有额外插入未观测的试次间停顿。 within token sentence：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type sentence：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_z_01.pdf](figures/hve_x21_z_01.pdf)
+
+## Figure PDF page 16 | X21 HVE: held-out likelihood, definitions 1-4
+
+**English**
+
+This is X21. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: overall: I pool all frames from the exposure recordings, find their common center, and average their squared deviations from that center. Longer recordings contribute more frames. overall order sensitive: I join complete exposure recordings in their actual presentation order, including the transition from the end of one recording to the beginning of the next, and average squared adjacent-frame changes. I do not insert an unobserved inter-trial pause. within token sentence: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type sentence: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：overall：我合并 exposure 录音的全部 frame，求共同中心，再平均每个 frame 到中心的平方偏差。较长的录音包含更多 frame，因此权重也更高。 overall order sensitive：我按真实 exposure 顺序连接完整录音，包括前一段末尾到下一段开头的过渡，再平均相邻 frame 的平方变化；没有额外插入未观测的试次间停顿。 within token sentence：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type sentence：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_loglik_01.pdf](figures/hve_x21_loglik_01.pdf)
+
+## Figure PDF page 17 | X21 condition-specific curves
+
+**English**
+
+This figure brings the model values back to listener accuracy. Each panel is one Mandarin-English test talker, with talker 035 in the large panel and 032, 043 and 037 in the smaller panels. The horizontal axis is exposure-to-test similarity from HuBERT base Tr-24 after 3-D t-SNE; the vertical axis is the proportion of correctly recognized words. Gray is control, green is multi-talker, blue is single-talker, and red is talker-specific exposure. I summarize the trial responses in ten similarity bins per condition and fit a separate ordinary binomial logistic curve for each condition and test talker. The similarity values are exp of minus k times the retained DTW distance, with k about .358 and the historical coordinate scaling. These are descriptive curves rather than mixed-model held-out predictions. The plot retains its original intervals, but their source record does not establish the resampling unit, so I cannot call them participant-bootstrap or three-fold intervals. A vertical gap between curves is descriptive; the nested models provide the test of condition beyond similarity.
+
+**中文对照**
+
+这张图把模型值和听者正确率直接放在一起。每个面板是一位说普通话背景英语的测试说话人，035 是大图，032、043 和 037 是旁边的小图。横轴是 HuBERT base Tr-24 经三维 t-SNE 后得到的 exposure-to-test similarity，纵轴是单词识别正确率。灰色是 control，绿色是 multi-talker，蓝色是 single-talker，红色是 talker-specific。每个 condition 用十个 similarity 分箱汇总反应，并在每个 condition 和测试说话人内单独拟合普通二项 logistic 曲线。similarity 是 exp(-k×DTW)，这里 k 约为 .358，使用历史坐标缩放。这些是描述曲线，不是混合模型的 held-out prediction。图中保留了原区间，但来源记录没有说明重采样单位，所以不能称为参与者 bootstrap 或三折区间。曲线之间的高度差是描述，condition 是否在 similarity 之外有贡献应由嵌套模型检验。
+
+Figure source: [x21_s_curves_by_condition.pdf](../speech/figures/x21_s_curves_by_condition.pdf)
+
+## Figure PDF page 18 | X21 pooled curve
+
+**English**
+
+This is the same X21 data, but now I combine the conditions within each test talker. The axes and similarity calculation are unchanged. Each black point summarizes trial accuracy in one of twenty similarity bins, and the black line is one logistic regression fitted to the pooled trial rows. I did not average the four colored curves from the previous figure. The overall accuracy is about .851 for talker 035, .818 for 032, .838 for 043 and .841 for 037. This gives a compact view of the overall pattern, but pooling does not control for condition and can mix within-condition and between-condition differences. It is therefore a descriptive summary, not a substitute for the conditional analysis or the GLMM comparison.
+
+**中文对照**
+
+这还是同一批 X21 数据，但我现在在每位测试说话人内部合并所有 condition。横纵轴和 similarity 的算法不变。每个黑点代表二十个 similarity 分箱中一个箱的反应正确率，黑线是对合并后的全部 trial rows 拟合的一条 logistic 曲线，并不是把前一张的四条彩色曲线平均。四位说话人的整体正确率分别约为 .851、.818、.838 和 .841。这能简洁展示总体趋势，但合并并不等于控制 condition，会混合 condition 内部与 condition 之间的差异，因此不能替代分条件分析或 GLMM 比较。
+
+Figure source: [x21_s_curves_pooled.pdf](../speech/figures/x21_s_curves_pooled.pdf)
+
+## Figure PDF page 19 | X21 selected-model nested comparisons
+
+**English**
+
+Here I test whether SBI or HVE and experimental condition each add information beyond the other. These are the selected non-ASR-fine-tuned X21 configurations: SBI at Tr-14 and HVE at CNN-6 using within-word transitions. The x-axis distinguishes SBI and HVE. The y-axis is the likelihood-ratio statistic, twice the improvement in fitted log likelihood; it is not z or an out-of-fold gain. On the left, I compare condition-only with the joint model. On the right, I compare predictor-only with that same joint model. For each fold, predictor values were standardized using the mean and standard deviation from the other two folds. Those values were combined, and all three GLMMs were fitted on the same response rows. I do not reselect the predictor for each comparison. The labels give the chi-square reference degrees of freedom and p-values. For SBI, the two p-values are .0107 and .000105; for HVE they are .0532 and .0117. So condition does add to HVE. The selected HVE's predictor-only coefficient is negative, which does not support the expected positive variability effect. These tests are exploratory because predictor selection used this study. They are not an independent confirmation, and the bars do not represent three folds.
+
+**中文对照**
+
+这里检验 SBI 或 HVE 与实验 condition 是否各自包含对方之外的信息。展示的是 X21 获选的未做 ASR 微调配置：SBI 为 Tr-14，HVE 为 CNN-6 的单词内部 transitions。横轴区分 SBI 和 HVE，纵轴是 likelihood-ratio 统计量，即拟合 log likelihood 改善量的两倍，不是 z，也不是 OOF gain。左边比较 condition-only 与 joint model；右边比较 predictor-only 与同一个 joint model。对于每个当前折，先用另外两折的均值和标准差标准化 predictor 值，再合并这些值，在相同反应行上拟合三个 GLMM，没有为每次比较重新挑选 predictor。柱上的标签给出卡方参考自由度和 p 值。SBI 的两项 p 值是 .0107 和 .000105，HVE 是 .0532 和 .0117，因此 condition 对 HVE 确实有额外贡献。获选 HVE 在 predictor-only 模型中的系数为负，并不支持 variability 的预期正效应。由于 predictor 也在本研究中选择，这些检验是探索性的，不是独立确认，柱也不代表三个折。
+
+Figure source: [x21_nested_comparisons.pdf](figures/x21_nested_comparisons.pdf)
+
+## Figure PDF page 20 | AN19 SBI: historical ASR-FT z
+
+**English**
+
+This is AN19, using the ASR-fine-tuned representation. Here I am showing how the association between similarity and human responses changes across the feature spaces. On the horizontal axis, MFCC and STRF come first, followed by the 18 HuBERT layers we analyzed. These are CNN-2 through CNN-6 and every second transformer layer from Tr-0 to Tr-24, not all 32 extraction outputs. In the lower panel, the vertical axis is the predictor's Wald z: its fitted coefficient divided by its standard error. In the upper panel, I divide each z by the mean behavioral-reference z and multiply by 100. So the dashed line at 100 is the mean reference, and the gray band shows its fold-bootstrap interval. Small gray points show the three fold results, and the black point and bars summarize their mean and 95% fold-bootstrap interval. The orange lines are the nominal plus or minus 1.96 reference. The important distinction is that these are retained notebook results in which the response model was refitted on each test partition. They describe the association in those partitions; they are not frozen-model predictions of unseen participants. The percentage is a rescaling of z, not percentage accuracy or percentage variance explained. The stored ceiling uses a broader participant sample than these SBI fits, so it is a historical reference, not a matched predictive upper bound.
+
+**中文对照**
+
+这一页是 AN19 的ASR 微调表示。这张图展示 similarity 与人类反应的关联如何随着特征空间变化。横轴最左边是 MFCC 和 STRF，后面是这次实际分析的 18 个 HuBERT 层：CNN-2 到 CNN-6，以及 Tr-0 到 Tr-24 每隔一层取一个，并不是全部 32 个提取输出。下面一幅的纵轴是预测变量的 Wald z，也就是回归系数除以标准误；上面一幅把这个 z 除以行为参考值的三折平均 z，再乘以 100。因此，100% 虚线是参考值的平均水平，灰色带是参考值的折间 bootstrap 区间。灰色小点是三折各自的结果，黑点和误差棒是均值及其 95% 折间 bootstrap 区间；橙色线对应正负 1.96 的名义参考阈值。这里需要区分的是，这些是保留的 notebook 结果，每个测试分区上重新拟合了反应模型，展示的是关联，而不是冻结模型对新参与者的预测。这个百分比也不是正确率或解释方差的百分比。 旧 ceiling 的参与者范围比这些 SBI 拟合更广，因此它只是历史参考，不是样本匹配的预测上限。
+
+Figure source: [sbi_an19_ft_z.pdf](../speech/figures/sbi_an19_ft_z.pdf)
+
+## Figure PDF page 21 | X21 SBI: historical ASR-FT z
+
+**English**
+
+This is X21, using the ASR-fine-tuned representation. Here I am showing how the association between similarity and human responses changes across the feature spaces. On the horizontal axis, MFCC and STRF come first, followed by the 18 HuBERT layers we analyzed. These are CNN-2 through CNN-6 and every second transformer layer from Tr-0 to Tr-24, not all 32 extraction outputs. In the lower panel, the vertical axis is the predictor's Wald z: its fitted coefficient divided by its standard error. In the upper panel, I divide each z by the mean behavioral-reference z and multiply by 100. So the dashed line at 100 is the mean reference, and the gray band shows its fold-bootstrap interval. Small gray points show the three fold results, and the black point and bars summarize their mean and 95% fold-bootstrap interval. The orange lines are the nominal plus or minus 1.96 reference. The important distinction is that these are retained notebook results in which the response model was refitted on each test partition. They describe the association in those partitions; they are not frozen-model predictions of unseen participants. The percentage is a rescaling of z, not percentage accuracy or percentage variance explained. The source also reports that k was averaged across folds, allowing parameter-selection leakage; this is not unbiased out-of-sample validation.
+
+**中文对照**
+
+这一页是 X21 的ASR 微调表示。这张图展示 similarity 与人类反应的关联如何随着特征空间变化。横轴最左边是 MFCC 和 STRF，后面是这次实际分析的 18 个 HuBERT 层：CNN-2 到 CNN-6，以及 Tr-0 到 Tr-24 每隔一层取一个，并不是全部 32 个提取输出。下面一幅的纵轴是预测变量的 Wald z，也就是回归系数除以标准误；上面一幅把这个 z 除以行为参考值的三折平均 z，再乘以 100。因此，100% 虚线是参考值的平均水平，灰色带是参考值的折间 bootstrap 区间。灰色小点是三折各自的结果，黑点和误差棒是均值及其 95% 折间 bootstrap 区间；橙色线对应正负 1.96 的名义参考阈值。这里需要区分的是，这些是保留的 notebook 结果，每个测试分区上重新拟合了反应模型，展示的是关联，而不是冻结模型对新参与者的预测。这个百分比也不是正确率或解释方差的百分比。 另外，来源记录说明 k 在折间取平均，存在参数选择的信息泄漏，因此不能把它作为无偏的样本外验证。
+
+Figure source: [sbi_x21_ft_z.pdf](../speech/figures/sbi_x21_ft_z.pdf)
+
+## Figure PDF page 22 | B23 SBI: historical ASR-FT z
+
+**English**
+
+This is B23, using the ASR-fine-tuned representation. Here I am showing how the association between similarity and human responses changes across the feature spaces. On the horizontal axis, MFCC and STRF come first, followed by the 18 HuBERT layers we analyzed. These are CNN-2 through CNN-6 and every second transformer layer from Tr-0 to Tr-24, not all 32 extraction outputs. In the lower panel, the vertical axis is the predictor's Wald z: its fitted coefficient divided by its standard error. In the upper panel, I divide each z by the mean behavioral-reference z and multiply by 100. So the dashed line at 100 is the mean reference, and the gray band shows its fold-bootstrap interval. Small gray points show the three fold results, and the black point and bars summarize their mean and 95% fold-bootstrap interval. The orange lines are the nominal plus or minus 1.96 reference. The important distinction is that these are retained notebook results in which the response model was refitted on each test partition. They describe the association in those partitions; they are not frozen-model predictions of unseen participants. The percentage is a rescaling of z, not percentage accuracy or percentage variance explained. The stored ceiling uses a broader participant sample than these SBI fits, so it is a historical reference, not a matched predictive upper bound.
+
+**中文对照**
+
+这一页是 B23 的ASR 微调表示。这张图展示 similarity 与人类反应的关联如何随着特征空间变化。横轴最左边是 MFCC 和 STRF，后面是这次实际分析的 18 个 HuBERT 层：CNN-2 到 CNN-6，以及 Tr-0 到 Tr-24 每隔一层取一个，并不是全部 32 个提取输出。下面一幅的纵轴是预测变量的 Wald z，也就是回归系数除以标准误；上面一幅把这个 z 除以行为参考值的三折平均 z，再乘以 100。因此，100% 虚线是参考值的平均水平，灰色带是参考值的折间 bootstrap 区间。灰色小点是三折各自的结果，黑点和误差棒是均值及其 95% 折间 bootstrap 区间；橙色线对应正负 1.96 的名义参考阈值。这里需要区分的是，这些是保留的 notebook 结果，每个测试分区上重新拟合了反应模型，展示的是关联，而不是冻结模型对新参与者的预测。这个百分比也不是正确率或解释方差的百分比。 旧 ceiling 的参与者范围比这些 SBI 拟合更广，因此它只是历史参考，不是样本匹配的预测上限。
+
+Figure source: [sbi_b23_ft_z.pdf](../speech/figures/sbi_b23_ft_z.pdf)
+
+## Figure PDF page 23 | AN19 SBI: base held-out likelihood
+
+**English**
+
+This is AN19, using the non-ASR-fine-tuned representation. This companion figure asks a different question: how well does a model fitted to two participant folds predict responses in the third? The horizontal axis contains the same acoustic baselines and HuBERT layers. The vertical axis is held-out log likelihood per word, so higher, or less negative, is better. For each held-out response, I use the probability from the training model and score the observed correct or incorrect outcome. I then add those scores and divide by the number of words. The model contains the theoretical predictor but not experimental condition, with the registered participant and item effects and the dataset's talker structure. Predictions use the fitted fixed effects with all random-effect contributions set to zero; the model is not refitted on the test participants. Gray points are the three held-out folds, and the line and bars give their mean and 95% fold-bootstrap interval. These particular SBI runs used standardized negative DTW, not the exponential similarity used in the old z figure, so the two figures are not a controlled comparison of reporting metrics. A higher score here also does not, on its own, answer whether SBI adds beyond condition; that requires the joint-versus-condition comparison. In AN19, talker random-effect fallbacks differ across layer fits, so the model structure is not fully controlled across layers.
+
+**中文对照**
+
+这一页是 AN19 的未做 ASR 微调表示。这张配套图回答的是另一个问题：用其中两折参与者拟合的模型，能否预测第三折参与者的反应？横轴仍然是声学基线和 HuBERT 各层，纵轴是每个单词的 held-out log likelihood，越高、也就是越接近零越好。我用训练模型给出测试反应的概率，根据实际正确或错误结果计算 log score，然后加总并除以单词数。模型包括理论预测变量，但不包括实验 condition，同时保留注册的参与者、项目和相应的说话人结构。预测时随机效应贡献统一设为零，并没有在测试参与者上重新拟合。灰点是三折结果，连线和误差棒是均值及 95% 折间 bootstrap 区间。这批 SBI 模型使用标准化后的负 DTW，而旧 z 图使用指数 similarity，所以两张图不是只更换评价指标的严格对应实验。这里分数更高也不等于已经证明 SBI 超出 condition 仍有贡献，后者需要比较 joint model 和 condition-only model。 AN19 部分层发生了说话人随机效应结构回退，因此层间模型结构尚未完全一致。
+
+Figure source: [sbi_an19_base_loglik.pdf](../speech/figures/sbi_an19_base_loglik.pdf)
+
+## Figure PDF page 24 | AN19 SBI: ft held-out likelihood
+
+**English**
+
+This is AN19, using the ASR-fine-tuned representation. This companion figure asks a different question: how well does a model fitted to two participant folds predict responses in the third? The horizontal axis contains the same acoustic baselines and HuBERT layers. The vertical axis is held-out log likelihood per word, so higher, or less negative, is better. For each held-out response, I use the probability from the training model and score the observed correct or incorrect outcome. I then add those scores and divide by the number of words. The model contains the theoretical predictor but not experimental condition, with the registered participant and item effects and the dataset's talker structure. Predictions use the fitted fixed effects with all random-effect contributions set to zero; the model is not refitted on the test participants. Gray points are the three held-out folds, and the line and bars give their mean and 95% fold-bootstrap interval. These particular SBI runs used standardized negative DTW, not the exponential similarity used in the old z figure, so the two figures are not a controlled comparison of reporting metrics. A higher score here also does not, on its own, answer whether SBI adds beyond condition; that requires the joint-versus-condition comparison. In AN19, talker random-effect fallbacks differ across layer fits, so the model structure is not fully controlled across layers.
+
+**中文对照**
+
+这一页是 AN19 的ASR 微调表示。这张配套图回答的是另一个问题：用其中两折参与者拟合的模型，能否预测第三折参与者的反应？横轴仍然是声学基线和 HuBERT 各层，纵轴是每个单词的 held-out log likelihood，越高、也就是越接近零越好。我用训练模型给出测试反应的概率，根据实际正确或错误结果计算 log score，然后加总并除以单词数。模型包括理论预测变量，但不包括实验 condition，同时保留注册的参与者、项目和相应的说话人结构。预测时随机效应贡献统一设为零，并没有在测试参与者上重新拟合。灰点是三折结果，连线和误差棒是均值及 95% 折间 bootstrap 区间。这批 SBI 模型使用标准化后的负 DTW，而旧 z 图使用指数 similarity，所以两张图不是只更换评价指标的严格对应实验。这里分数更高也不等于已经证明 SBI 超出 condition 仍有贡献，后者需要比较 joint model 和 condition-only model。 AN19 部分层发生了说话人随机效应结构回退，因此层间模型结构尚未完全一致。
+
+Figure source: [sbi_an19_ft_loglik.pdf](../speech/figures/sbi_an19_ft_loglik.pdf)
+
+## Figure PDF page 25 | X21 SBI: base held-out likelihood
+
+**English**
+
+This is X21, using the non-ASR-fine-tuned representation. This companion figure asks a different question: how well does a model fitted to two participant folds predict responses in the third? The horizontal axis contains the same acoustic baselines and HuBERT layers. The vertical axis is held-out log likelihood per word, so higher, or less negative, is better. For each held-out response, I use the probability from the training model and score the observed correct or incorrect outcome. I then add those scores and divide by the number of words. The model contains the theoretical predictor but not experimental condition, with the registered participant and item effects and the dataset's talker structure. Predictions use the fitted fixed effects with all random-effect contributions set to zero; the model is not refitted on the test participants. Gray points are the three held-out folds, and the line and bars give their mean and 95% fold-bootstrap interval. These particular SBI runs used standardized negative DTW, not the exponential similarity used in the old z figure, so the two figures are not a controlled comparison of reporting metrics. A higher score here also does not, on its own, answer whether SBI adds beyond condition; that requires the joint-versus-condition comparison.
+
+**中文对照**
+
+这一页是 X21 的未做 ASR 微调表示。这张配套图回答的是另一个问题：用其中两折参与者拟合的模型，能否预测第三折参与者的反应？横轴仍然是声学基线和 HuBERT 各层，纵轴是每个单词的 held-out log likelihood，越高、也就是越接近零越好。我用训练模型给出测试反应的概率，根据实际正确或错误结果计算 log score，然后加总并除以单词数。模型包括理论预测变量，但不包括实验 condition，同时保留注册的参与者、项目和相应的说话人结构。预测时随机效应贡献统一设为零，并没有在测试参与者上重新拟合。灰点是三折结果，连线和误差棒是均值及 95% 折间 bootstrap 区间。这批 SBI 模型使用标准化后的负 DTW，而旧 z 图使用指数 similarity，所以两张图不是只更换评价指标的严格对应实验。这里分数更高也不等于已经证明 SBI 超出 condition 仍有贡献，后者需要比较 joint model 和 condition-only model。
+
+Figure source: [sbi_x21_base_loglik.pdf](../speech/figures/sbi_x21_base_loglik.pdf)
+
+## Figure PDF page 26 | X21 SBI: ft held-out likelihood
+
+**English**
+
+This is X21, using the ASR-fine-tuned representation. This companion figure asks a different question: how well does a model fitted to two participant folds predict responses in the third? The horizontal axis contains the same acoustic baselines and HuBERT layers. The vertical axis is held-out log likelihood per word, so higher, or less negative, is better. For each held-out response, I use the probability from the training model and score the observed correct or incorrect outcome. I then add those scores and divide by the number of words. The model contains the theoretical predictor but not experimental condition, with the registered participant and item effects and the dataset's talker structure. Predictions use the fitted fixed effects with all random-effect contributions set to zero; the model is not refitted on the test participants. Gray points are the three held-out folds, and the line and bars give their mean and 95% fold-bootstrap interval. These particular SBI runs used standardized negative DTW, not the exponential similarity used in the old z figure, so the two figures are not a controlled comparison of reporting metrics. A higher score here also does not, on its own, answer whether SBI adds beyond condition; that requires the joint-versus-condition comparison.
+
+**中文对照**
+
+这一页是 X21 的ASR 微调表示。这张配套图回答的是另一个问题：用其中两折参与者拟合的模型，能否预测第三折参与者的反应？横轴仍然是声学基线和 HuBERT 各层，纵轴是每个单词的 held-out log likelihood，越高、也就是越接近零越好。我用训练模型给出测试反应的概率，根据实际正确或错误结果计算 log score，然后加总并除以单词数。模型包括理论预测变量，但不包括实验 condition，同时保留注册的参与者、项目和相应的说话人结构。预测时随机效应贡献统一设为零，并没有在测试参与者上重新拟合。灰点是三折结果，连线和误差棒是均值及 95% 折间 bootstrap 区间。这批 SBI 模型使用标准化后的负 DTW，而旧 z 图使用指数 similarity，所以两张图不是只更换评价指标的严格对应实验。这里分数更高也不等于已经证明 SBI 超出 condition 仍有贡献，后者需要比较 joint model 和 condition-only model。
+
+Figure source: [sbi_x21_ft_loglik.pdf](../speech/figures/sbi_x21_ft_loglik.pdf)
+
+## Figure PDF page 27 | B23 SBI: base held-out likelihood
+
+**English**
+
+This is B23, using the non-ASR-fine-tuned representation. This companion figure asks a different question: how well does a model fitted to two participant folds predict responses in the third? The horizontal axis contains the same acoustic baselines and HuBERT layers. The vertical axis is held-out log likelihood per word, so higher, or less negative, is better. For each held-out response, I use the probability from the training model and score the observed correct or incorrect outcome. I then add those scores and divide by the number of words. The model contains the theoretical predictor but not experimental condition, with the registered participant and item effects and the dataset's talker structure. Predictions use the fitted fixed effects with all random-effect contributions set to zero; the model is not refitted on the test participants. Gray points are the three held-out folds, and the line and bars give their mean and 95% fold-bootstrap interval. These particular SBI runs used standardized negative DTW, not the exponential similarity used in the old z figure, so the two figures are not a controlled comparison of reporting metrics. A higher score here also does not, on its own, answer whether SBI adds beyond condition; that requires the joint-versus-condition comparison.
+
+**中文对照**
+
+这一页是 B23 的未做 ASR 微调表示。这张配套图回答的是另一个问题：用其中两折参与者拟合的模型，能否预测第三折参与者的反应？横轴仍然是声学基线和 HuBERT 各层，纵轴是每个单词的 held-out log likelihood，越高、也就是越接近零越好。我用训练模型给出测试反应的概率，根据实际正确或错误结果计算 log score，然后加总并除以单词数。模型包括理论预测变量，但不包括实验 condition，同时保留注册的参与者、项目和相应的说话人结构。预测时随机效应贡献统一设为零，并没有在测试参与者上重新拟合。灰点是三折结果，连线和误差棒是均值及 95% 折间 bootstrap 区间。这批 SBI 模型使用标准化后的负 DTW，而旧 z 图使用指数 similarity，所以两张图不是只更换评价指标的严格对应实验。这里分数更高也不等于已经证明 SBI 超出 condition 仍有贡献，后者需要比较 joint model 和 condition-only model。
+
+Figure source: [sbi_b23_base_loglik.pdf](../speech/figures/sbi_b23_base_loglik.pdf)
+
+## Figure PDF page 28 | B23 SBI: ft held-out likelihood
+
+**English**
+
+This is B23, using the ASR-fine-tuned representation. This companion figure asks a different question: how well does a model fitted to two participant folds predict responses in the third? The horizontal axis contains the same acoustic baselines and HuBERT layers. The vertical axis is held-out log likelihood per word, so higher, or less negative, is better. For each held-out response, I use the probability from the training model and score the observed correct or incorrect outcome. I then add those scores and divide by the number of words. The model contains the theoretical predictor but not experimental condition, with the registered participant and item effects and the dataset's talker structure. Predictions use the fitted fixed effects with all random-effect contributions set to zero; the model is not refitted on the test participants. Gray points are the three held-out folds, and the line and bars give their mean and 95% fold-bootstrap interval. These particular SBI runs used standardized negative DTW, not the exponential similarity used in the old z figure, so the two figures are not a controlled comparison of reporting metrics. A higher score here also does not, on its own, answer whether SBI adds beyond condition; that requires the joint-versus-condition comparison.
+
+**中文对照**
+
+这一页是 B23 的ASR 微调表示。这张配套图回答的是另一个问题：用其中两折参与者拟合的模型，能否预测第三折参与者的反应？横轴仍然是声学基线和 HuBERT 各层，纵轴是每个单词的 held-out log likelihood，越高、也就是越接近零越好。我用训练模型给出测试反应的概率，根据实际正确或错误结果计算 log score，然后加总并除以单词数。模型包括理论预测变量，但不包括实验 condition，同时保留注册的参与者、项目和相应的说话人结构。预测时随机效应贡献统一设为零，并没有在测试参与者上重新拟合。灰点是三折结果，连线和误差棒是均值及 95% 折间 bootstrap 区间。这批 SBI 模型使用标准化后的负 DTW，而旧 z 图使用指数 similarity，所以两张图不是只更换评价指标的严格对应实验。这里分数更高也不等于已经证明 SBI 超出 condition 仍有贡献，后者需要比较 joint model 和 condition-only model。
+
+Figure source: [sbi_b23_ft_loglik.pdf](../speech/figures/sbi_b23_ft_loglik.pdf)
+
+## Figure PDF page 29 | AN19 HVE: z, definition group 1
+
+**English**
+
+This is AN19. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: overall: I pool all frames from the exposure recordings, find their common center, and average their squared deviations from that center. Longer recordings contribute more frames. overall order sensitive: I join complete exposure recordings in their actual presentation order, including the transition from the end of one recording to the beginning of the next, and average squared adjacent-frame changes. I do not insert an unobserved inter-trial pause. within token word: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type word: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance. These seven retained AN19 definitions have not yet incorporated the new phone annotations.
+
+**中文对照**
+
+这一页是 AN19。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：overall：我合并 exposure 录音的全部 frame，求共同中心，再平均每个 frame 到中心的平方偏差。较长的录音包含更多 frame，因此权重也更高。 overall order sensitive：我按真实 exposure 顺序连接完整录音，包括前一段末尾到下一段开头的过渡，再平均相邻 frame 的平方变化；没有额外插入未观测的试次间停顿。 within token word：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type word：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。 这批 AN19 的七种已存结果尚未接入新生成的音素标注。
+
+Figure source: [hve_an19_z_01.pdf](figures/hve_an19_z_01.pdf)
+
+## Figure PDF page 30 | AN19 HVE: z, definition group 2
+
+**English**
+
+This is AN19. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: between type word: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order word: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity word: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance. These seven retained AN19 definitions have not yet incorporated the new phone annotations.
+
+**中文对照**
+
+这一页是 AN19。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：between type word：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order word：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity word：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。 这批 AN19 的七种已存结果尚未接入新生成的音素标注。
+
+Figure source: [hve_an19_z_02.pdf](figures/hve_an19_z_02.pdf)
+
+## Figure PDF page 31 | X21 HVE: z, definition group 2
+
+**English**
+
+This is X21. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: between type sentence: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order sentence: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity sentence: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. within token word: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：between type sentence：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order sentence：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity sentence：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 within token word：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_z_02.pdf](figures/hve_x21_z_02.pdf)
+
+## Figure PDF page 32 | X21 HVE: z, definition group 3
+
+**English**
+
+This is X21. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: within type word: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. between type word: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order word: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity word: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：within type word：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 between type word：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order word：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity word：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_z_03.pdf](figures/hve_x21_z_03.pdf)
+
+## Figure PDF page 33 | X21 HVE: z, definition group 4
+
+**English**
+
+This is X21. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: within token phoneme: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type phoneme: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. between type phoneme: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order phoneme: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：within token phoneme：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type phoneme：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 between type phoneme：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order phoneme：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_z_04.pdf](figures/hve_x21_z_04.pdf)
+
+## Figure PDF page 34 | X21 HVE: z, definition group 5
+
+**English**
+
+This is X21. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: mean dissimilarity phoneme: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：mean dissimilarity phoneme：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_z_05.pdf](figures/hve_x21_z_05.pdf)
+
+## Figure PDF page 35 | B23 HVE: z, definition group 1
+
+**English**
+
+This is B23. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: overall: I pool all frames from the exposure recordings, find their common center, and average their squared deviations from that center. Longer recordings contribute more frames. overall order sensitive: I join complete exposure recordings in their actual presentation order, including the transition from the end of one recording to the beginning of the next, and average squared adjacent-frame changes. I do not insert an unobserved inter-trial pause. within token sentence: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. between type sentence: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 B23。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：overall：我合并 exposure 录音的全部 frame，求共同中心，再平均每个 frame 到中心的平方偏差。较长的录音包含更多 frame，因此权重也更高。 overall order sensitive：我按真实 exposure 顺序连接完整录音，包括前一段末尾到下一段开头的过渡，再平均相邻 frame 的平方变化；没有额外插入未观测的试次间停顿。 within token sentence：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 between type sentence：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_b23_z_01.pdf](figures/hve_b23_z_01.pdf)
+
+## Figure PDF page 36 | B23 HVE: z, definition group 2
+
+**English**
+
+This is B23. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: order sentence: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. within token word: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type word: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. between type word: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 B23。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：order sentence：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 within token word：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type word：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 between type word：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_b23_z_02.pdf](figures/hve_b23_z_02.pdf)
+
+## Figure PDF page 37 | B23 HVE: z, definition group 3
+
+**English**
+
+This is B23. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: order word: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity word: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. within token phoneme: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type phoneme: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 B23。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：order word：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity word：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 within token phoneme：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type phoneme：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_b23_z_03.pdf](figures/hve_b23_z_03.pdf)
+
+## Figure PDF page 38 | B23 HVE: z, definition group 4
+
+**English**
+
+This is B23. Here I switch from similarity to variability in the exposure speech itself. Each small panel is a different definition of HVE, and the horizontal axis is the same set of 18 HuBERT layers. The vertical axis is the signed Wald z of the variability coefficient: above zero means that more variability is associated with better recognition, and below zero means the reverse. Blue is the non-ASR-fine-tuned model and red is ASR-fine-tuned. The small gray points are the three training fits, each using two participant folds; the colored point and interval summarize their mean and 95% fold-bootstrap interval. These are predictor-only fits, without condition. Unlike the historical SBI figure, these are training-fold coefficients from the revised exposure analysis. I have therefore not divided them by the old test-refit ceiling or added a 100% band. The dotted lines are only nominal plus or minus 1.96 references; they are not corrected significance tests across all these definitions and layers. The sign matters: a large negative z is not evidence for the predicted positive effect of variability. In panel order: between type phoneme: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order phoneme: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity phoneme: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 B23。这里从 similarity 转到 exposure 语音本身的 variability，也就是 HVE。每个小面板是一种 HVE 定义，横轴仍然是 18 个 HuBERT 层，纵轴是 variability 回归系数带正负号的 Wald z。正值表示 variability 越大，识别越好；负值表示相反。蓝色是 base，红色是 ASR 微调版本。灰色小点来自三次训练拟合，每次使用其中两折参与者；彩色点和误差棒表示均值及 95% 折间 bootstrap 区间。这里拟合的是不包含 condition 的 predictor-only 模型。与历史 SBI 图不同，这些是修订后 exposure 分析的训练折系数，因此我没有拿旧的测试重拟合 ceiling 来归一化，也没有加 100% 灰带。正负 1.96 的虚线只是名义参考，并不是对全部层和全部定义进行校正后的显著性判断。尤其要保留正负方向：很大的负 z 并不支持 variability 的预期正效应。 按面板顺序：between type phoneme：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order phoneme：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity phoneme：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_b23_z_04.pdf](figures/hve_b23_z_04.pdf)
+
+## Figure PDF page 39 | AN19 HVE: loglik, definition group 1
+
+**English**
+
+This is AN19. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: overall: I pool all frames from the exposure recordings, find their common center, and average their squared deviations from that center. Longer recordings contribute more frames. overall order sensitive: I join complete exposure recordings in their actual presentation order, including the transition from the end of one recording to the beginning of the next, and average squared adjacent-frame changes. I do not insert an unobserved inter-trial pause. within token word: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type word: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance. These seven retained AN19 definitions have not yet incorporated the new phone annotations.
+
+**中文对照**
+
+这一页是 AN19。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：overall：我合并 exposure 录音的全部 frame，求共同中心，再平均每个 frame 到中心的平方偏差。较长的录音包含更多 frame，因此权重也更高。 overall order sensitive：我按真实 exposure 顺序连接完整录音，包括前一段末尾到下一段开头的过渡，再平均相邻 frame 的平方变化；没有额外插入未观测的试次间停顿。 within token word：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type word：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。 这批 AN19 的七种已存结果尚未接入新生成的音素标注。
+
+Figure source: [hve_an19_loglik_01.pdf](figures/hve_an19_loglik_01.pdf)
+
+## Figure PDF page 40 | AN19 HVE: loglik, definition group 2
+
+**English**
+
+This is AN19. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: between type word: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order word: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity word: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance. These seven retained AN19 definitions have not yet incorporated the new phone annotations.
+
+**中文对照**
+
+这一页是 AN19。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：between type word：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order word：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity word：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。 这批 AN19 的七种已存结果尚未接入新生成的音素标注。
+
+Figure source: [hve_an19_loglik_02.pdf](figures/hve_an19_loglik_02.pdf)
+
+## Figure PDF page 41 | X21 HVE: loglik, definition group 2
+
+**English**
+
+This is X21. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: between type sentence: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order sentence: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity sentence: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. within token word: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：between type sentence：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order sentence：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity sentence：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 within token word：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_loglik_02.pdf](figures/hve_x21_loglik_02.pdf)
+
+## Figure PDF page 42 | X21 HVE: loglik, definition group 3
+
+**English**
+
+This is X21. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: within type word: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. between type word: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order word: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity word: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：within type word：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 between type word：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order word：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity word：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_loglik_03.pdf](figures/hve_x21_loglik_03.pdf)
+
+## Figure PDF page 43 | X21 HVE: loglik, definition group 4
+
+**English**
+
+This is X21. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: within token phoneme: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type phoneme: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. between type phoneme: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order phoneme: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：within token phoneme：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type phoneme：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 between type phoneme：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order phoneme：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_loglik_04.pdf](figures/hve_x21_loglik_04.pdf)
+
+## Figure PDF page 44 | X21 HVE: loglik, definition group 5
+
+**English**
+
+This is X21. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: mean dissimilarity phoneme: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 X21。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：mean dissimilarity phoneme：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_x21_loglik_05.pdf](figures/hve_x21_loglik_05.pdf)
+
+## Figure PDF page 45 | B23 HVE: loglik, definition group 1
+
+**English**
+
+This is B23. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: overall: I pool all frames from the exposure recordings, find their common center, and average their squared deviations from that center. Longer recordings contribute more frames. overall order sensitive: I join complete exposure recordings in their actual presentation order, including the transition from the end of one recording to the beginning of the next, and average squared adjacent-frame changes. I do not insert an unobserved inter-trial pause. within token sentence: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. between type sentence: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 B23。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：overall：我合并 exposure 录音的全部 frame，求共同中心，再平均每个 frame 到中心的平方偏差。较长的录音包含更多 frame，因此权重也更高。 overall order sensitive：我按真实 exposure 顺序连接完整录音，包括前一段末尾到下一段开头的过渡，再平均相邻 frame 的平方变化；没有额外插入未观测的试次间停顿。 within token sentence：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 between type sentence：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_b23_loglik_01.pdf](figures/hve_b23_loglik_01.pdf)
+
+## Figure PDF page 46 | B23 HVE: loglik, definition group 2
+
+**English**
+
+This is B23. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: order sentence: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. within token word: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type word: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. between type word: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 B23。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：order sentence：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 within token word：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type word：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 between type word：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_b23_loglik_02.pdf](figures/hve_b23_loglik_02.pdf)
+
+## Figure PDF page 47 | B23 HVE: loglik, definition group 3
+
+**English**
+
+This is B23. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: order word: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity word: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. within token phoneme: For each sentence, word, or phone instance, I measure how its frames spread around its own center, then average across instances. within type phoneme: I first turn each instance into its mean feature vector, measure how those vectors vary among instances of the same type, and then average across types that have at least two instances. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 B23。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：order word：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity word：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 within token phoneme：对每个句子、单词或音素实例，先计算内部 frame 围绕自身中心的分散程度，再对实例等权平均。 within type phoneme：我先把每个实例变成平均特征向量，计算同类型不同实例之间的变化，再对至少有两个实例的类型求平均。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_b23_loglik_03.pdf](figures/hve_b23_loglik_03.pdf)
+
+## Figure PDF page 48 | B23 HVE: loglik, definition group 4
+
+**English**
+
+This is B23. These panels use the same revised HVE definitions but show their held-out prediction scores instead of their coefficient z values. Again, the horizontal axis is HuBERT layer, and blue and red distinguish the two model versions. The vertical axis is log likelihood per word from the predictor-only model, with higher values indicating better held-out prediction. I fit on two participant folds, keep the model fixed, and score the third fold. The gray points show the three held-out folds, and the error bars summarize their 95% fold-bootstrap interval. Unlike z, this score does not tell us whether the variability association is positive or negative, so I use the z panels to explain its direction. A favorable score can reflect a negative variability association. I also keep B23's global-order sample separate: it contains 97 participants, compared with 168 for the other definitions. The scores should not be ranked across those different samples. In panel order: between type phoneme: I find the mean vector for each type and measure the spread among those type means, giving each type equal weight. order phoneme: I average squared adjacent-frame changes inside each instance and then average over instances with at least two frames. This does not include transitions between instances and therefore does not require their trial order. mean dissimilarity phoneme: Within each type, I compare all pairs of instances with DTW, average their distances, and then average across types that have a pair. Here I compare whole trajectories rather than their centers. Here non-DTW dispersion uses squared deviations at tau = 2, without a final root; within-type DTW uses Euclidean local distance.
+
+**中文对照**
+
+这一页是 B23。这些面板使用同一批修订后的 HVE 定义，但是展示 held-out prediction 分数，而不是回归系数的 z。横轴是 HuBERT 层，蓝红两色区分模型版本；纵轴是 predictor-only 模型的每单词 log likelihood，越高表示测试预测越好。我在两折参与者上拟合后冻结模型，再评价第三折。灰点是三个测试折，误差棒是它们的 95% 折间 bootstrap 区间。与 z 不同，这个分数不反映关联是正还是负，所以方向需要结合 z 图解释：较好的分数也可能来自负向的 variability 关联。此外，B23 的 global-order 分析只有 97 人，其他定义有 168 人，不能跨这两个不同样本直接排名。 按面板顺序：between type phoneme：我先求每个类型的平均向量，再计算这些类型均值之间的分散程度，每个类型权重相同。 order phoneme：我在每个实例内部平均相邻 frame 的平方变化，再对至少包含两个 frame 的实例求平均。这不包括实例之间的边界，因此不需要试次顺序。 mean dissimilarity phoneme：对同一类型内部的所有实例对计算 DTW，先在类型内平均，再对有配对的类型平均。这里比较完整轨迹，而不是只比较中心。 这里非 DTW dispersion 在 tau=2 时使用平方偏差、不取最终根号；within-type DTW 则使用欧氏局部距离。
+
+Figure source: [hve_b23_loglik_04.pdf](figures/hve_b23_loglik_04.pdf)
+
+## Figure PDF page 49 | Supplement: corpus talker coverage
+
+**English**
+
+This is a reference for how much speech we have from each language background. The columns are AN19, X21 and B23, and the rows are L1 languages. The number inside a circle is the number of distinct recorded speakers, while the color follows the same language-group palette as the map. The circle size is fixed; it does not encode the count. These are corpus counts, so they include English reference speakers and recordings that were not necessarily used in a particular exposure condition. They are not listener sample sizes. We have 42 corpus speakers in AN19, 11 in X21 and four in B23. This also explains why a language can appear on the map without appearing in every analysis, and why most AN19 L1 groups cannot support a group confidence interval on their own.
+
+**中文对照**
+
+这张图作为参考，说明每个母语背景有多少录音说话人。横向三列是 AN19、X21 和 B23，纵向是母语语言。圆圈里的数字是不同录音说话人的数量，颜色仍然沿用地图中的语言分组。圆圈大小是固定的，不代表数量。这是语料覆盖统计，所以包含英语参考说话人，也可能包含没有用于某个具体 exposure 条件的录音，不是听者样本量。AN19 一共 42 位语料说话人，X21 是 11 位，B23 是四位。这也解释了为什么一种语言会出现在地图里，却不一定出现在每一项分析里，以及为什么大多数 AN19 母语组无法单独估计可靠的组间不确定性。
+
+Figure source: [figure_si_language_corpus_coverage.pdf](../speech/figures/figure_si_language_corpus_coverage.pdf)
+
+## Remaining gaps / 未完成部分
+
+Figure 2d (listener segment errors and lexical constraint), matched current-definition ceilings, controlled acoustic-component ablations, and the full z-versus-likelihood optimization comparison remain unfinished. The supplied phonological-feature heatmap has no recovered numerical scoring table/code. The automatic phoneme results quantify intended-phone intervals, not verified actual pronunciations. Old word-type-weighted phoneme distance panels and the known unmatched acoustic-component rankings are not included.
+
+Figure 2d 的听者音段错误和词汇约束、当前定义下样本匹配的 ceiling、受控的声学成分消融，以及完整的 z/likelihood 优化目标对比仍未完成。Florian 提供的音系特征热图尚缺原始评分表和代码。自动音素结果来自预期音素区间，不等于人工验证的实际发音。旧版按词类型加权的音素距离图，以及已知预处理不匹配的声学成分排名，没有放入这个图集。

@@ -1,6 +1,6 @@
 # Cross-talker generalization: production analysis pipeline
 
-This directory is the repository's production analysis codebase. It reads behavioral data, manifests, and precomputed HDF5 features from the root `data/` directory and writes audits, intermediate tables, models, and figures to `artifacts/` or root-level `results/`. Superseded versions are available through Git history.
+This directory is the repository's production analysis codebase. It reads behavioral data, manifests, and precomputed HDF5 features from the root `data/` directory and writes pipeline intermediates to `artifacts/`. Retained figures and results are organized by topic in [analysis/](analysis/README.md). Original dated batches are kept locally in `recycle_bin/analysis_history/` and in the published Git history.
 
 ## Coverage
 
@@ -58,10 +58,7 @@ python -m ctg.cli build-report `
 - Repository-wide technical reference: [../TECHNICAL_DOCUMENTATION.md](../TECHNICAL_DOCUMENTATION.md)
 - Current analysis plan: [docs/NEXT_ANALYSIS_PLAN.md](docs/NEXT_ANALYSIS_PLAN.md)
 - Main Figure 1/2 specification: [docs/MAIN_FIGURE_SPEC.md](docs/MAIN_FIGURE_SPEC.md)
-- Reviewed broad August 21 analysis: [analysis_update_2026-08-21/](analysis_update_2026-08-21/)
-- Corrected SBI/HVE selection and downstream comparison update: [analysis_update_2026-08-27/](analysis_update_2026-08-27/)
-- Combined-fold cross-fitted predictor LRT update: [analysis_update_2026-09-01/](analysis_update_2026-09-01/)
-- Fixed Tr-24 SBI/HVE, behavioral-ceiling, and acoustic-audit update: [analysis_update_2026-09-06/](analysis_update_2026-09-06/)
+- Figures and results by topic: [analysis/README.md](analysis/README.md)
 
 ## B23 exposure source status
 

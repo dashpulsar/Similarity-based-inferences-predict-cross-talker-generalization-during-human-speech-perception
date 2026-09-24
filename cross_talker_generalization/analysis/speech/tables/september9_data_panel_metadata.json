@@ -1,0 +1,144 @@
+{
+  "supplied_sources": {
+    "world_map": "Supplied R/PDF/PNG preserved unchanged; R not executed",
+    "world_map_locations": "Associated national capitals, not participants' or talkers' exact origins",
+    "palette_source": "family_colors in supplied language_capitals_worldmap.R",
+    "group_name_mappings": {
+      "Cushitic": "Afro-Asiatic",
+      "Sinitic": "Sino-Tibetan"
+    },
+    "heatmap": "Supplied reference illustration, not recomputed or numerically validated",
+    "heatmap_numeric_source": "Not supplied; the R script generates only the world map",
+    "heatmap_label_issue": "Bottom row label is clipped in the supplied image; the missing text was not inferred or repaired"
+  },
+  "figure_2a": {
+    "n_talkers": 42,
+    "n_english_talkers": 6,
+    "n_l2_talkers": 36,
+    "n_pairs": 861,
+    "n_shared_words": 138,
+    "distance": "Mean raw DTW distance across words; physical pairs averaged within each word first",
+    "similarity": "Mean of exp(-raw DTW distance) across words, not exp(-mean distance)",
+    "dtw_normalization": "mean_sequence_length",
+    "dtw_tau": 2,
+    "layer": "tr_24",
+    "representation": "HuBERT base, corpus t-SNE, 3 dimensions",
+    "color_scale": "Linear from zero to each matrix's off-diagonal maximum; no logarithm",
+    "diagonal": "Masked light gray; no self-pair value estimated",
+    "blocks": "Gray outlines denote same-L1 talker groups; labels are black, language first",
+    "group_order": "English first; other L1 groups by increasing mean raw DTW distance to six English talkers",
+    "within_group_order": "Average-linkage hierarchical clustering, optimal leaf ordering; lexicographically sorted input IDs",
+    "shared_order": "Exactly the same raw-distance-derived order in both panels"
+  },
+  "figure_2c": {
+    "model_refit": false,
+    "source": "Frozen September 6 point estimates and confidence intervals",
+    "model": "Descriptive binomial logistic regressions; no random effects and not cross-validated",
+    "confidence_intervals": "95% participant bootstrap, 1,000 replicates in the source analysis",
+    "predictor": "exp(-mean English-reference DTW / median distance across unique target words in each dataset)",
+    "english_reference_pool": {
+      "AN19": 6,
+      "X21": 5
+    },
+    "marginals": "25 common bins on [0,1]; probability density, normalized separately within accent",
+    "marginal_weighting": "Each unique physical target recording/word interval counted once, not once per participant response",
+    "an19_exclusion": "40 of 1,920 trials remain excluded pending wave/wade recording-identity verification; not asserted missing audio",
+    "palette": "Exact family_colors from supplied language_capitals_worldmap.R",
+    "counts": [
+      {
+        "dataset": "AN19",
+        "total_trials": 1920,
+        "plotted_trials": 1880,
+        "excluded_trials": 40,
+        "n_physical_targets": 188,
+        "n_participants": 40
+      },
+      {
+        "dataset": "X21",
+        "total_trials": 4117,
+        "plotted_trials": 4117,
+        "excluded_trials": 0,
+        "n_physical_targets": 412,
+        "n_participants": 80
+      }
+    ]
+  },
+  "figure_1d": {
+    "calculation_changed": false,
+    "n_l2_languages": 16,
+    "quantity": "Exact-symbol consonant/vowel inventory Jaccard overlap with English, PHOIBLE 2.0",
+    "point": "Mean across all selected L2-by-English inventory pairs",
+    "line": "Minimum-to-maximum across inventory sources; NOT a 95% confidence interval",
+    "english_inventories": 9,
+    "tones": "Not included; adding tone symbols requires a separate validated comparison",
+    "construct": "Segment-inventory overlap only, not phonotactics or a complete phonological-distance measure",
+    "source_url": "https://github.com/phoible/dev/tree/v2.0",
+    "source_license": "CC BY-SA 3.0; Moran & McCloy (eds.), PHOIBLE 2.0 (2019)",
+    "dialect_scope": "Language-level sources; not matched specifically to each speaker's dialect"
+  },
+  "figure_si_language_corpus_coverage": {
+    "counts": "Unique talkers in each available corpus; includes English reference recordings and recordings not used in exposure",
+    "palette": "Exact family_colors from the supplied world-map R source",
+    "role": "Supplementary coverage table/plot; supplied geographic world map is retained for Figure 1c",
+    "n_language_labels": 17,
+    "n_talkers_by_dataset": {
+      "AN19": 42,
+      "B23": 4,
+      "X21": 11
+    }
+  },
+  "source_hashes": {
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables/figure_1c_talker_language_map.csv": "d26e32e1f6739ddfc7f76a9204feb4f6ba53be1a2036c938d9fd6b4ca1e8782d",
+    "cross_talker_generalization/analysis/speech/sources/language_capitals_worldmap.R": "3bed63a0669c07277a83382b52fc702ad7e3a9ee5f837c7cba8c54bc527744a8",
+    "cross_talker_generalization/analysis/speech/sources/language_capitals_worldmap.pdf": "03100f1ac739d09d2eed45d3e73e40b302e458db5c350fbdd1abf86a8d697af9",
+    "cross_talker_generalization/analysis/speech/sources/language_capitals_worldmap.png": "5b1a4f40b2f72ff731377ef36f32411a8a677b4d2e5ead08343334de8655416c",
+    "cross_talker_generalization/analysis/speech/sources/english_phonology_similarity_heatmap.pdf": "d984909dfc108f5568b4ba6247825fe6d613fe55b119cde0fe1d1affaf4e51a7",
+    "cross_talker_generalization/analysis/speech/sources/english_phonology_similarity_heatmap.png": "ae486f717d8546178b1da338e841189fc7073e7218ea3c90ed4a43fa2467a70e",
+    "results/derived/AN19-talker-validation-base-tr24/talker_pair_summary.csv": "b20f919d58973de12bd625cdb1c860a520783686fc52ba12e484110fa0a5bf7e",
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables/figure_2c_binned_accuracy.csv": "81ea53ba7664eeb0c6638ade2c25dd03a7f431a45beb4aa2228168d9f1efe11e",
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables/figure_2c_logistic_curves.csv": "b4ee59a1d0894fa556b059e01302409087ce95d5953360c8dedfad14e093006c",
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables/figure_2c_an19_control_trials.csv": "47297ae67217e8f127043486d882d38e9de85883046d2d67edbae785fb7bfe12",
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables/figure_2c_an19_word_reference_pairs.csv": "dd58923427e59bc0ae5cbe3d23ae3ae936b65d7372baf4312b066e51e28a3135",
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables/figure_2c_x21_control_trials.csv": "f5d557e4881abae497c1ea7edf6dafdd704ef0e28c078c62077eb70a8b8ac541",
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables/figure_2c_x21_word_reference_pairs.csv": "69e45de44014886db9a11fe7345b7eb5839d17eee8b29d5a016e056f89ff12e7",
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables/figure_1d_inventory_similarity.csv": "bd7013099b08b5e9ba81e35ef8f09740606a056b608e67c9f944f6e505f25e4a",
+    "cross_talker_generalization/scripts/build_september9_data_panels.py": "9a8ba88812da36cb39e4903c4aa45626a3b96ecd3b5be487ee72ba83ab0d25fe"
+  },
+  "output_hashes": {
+    "tables/supplied_figure_source_manifest.csv": "b01eb8b863237bf575a76e6550806247386a76cbb1e450d2663a5edf30a8866a",
+    "tables/language_branch_palette.csv": "e80e8428062530dd62277b1fc2ccd34982d7d28d0bcd12c217be46051353e3a9",
+    "tables/figure_2a_42_talker_order.csv": "e73a886c148bd3371ae5dab5bfd768629026678410ccfd5802aa3c48c97e5b71",
+    "tables/figure_2a_language_blocks.csv": "5d6b2d5f98cd9a8e3127d449ef4616519050647b8aec29d43a1e91aeb9dd5232",
+    "tables/figure_2a_42_talker_distance_matrix.csv": "ee35779aab39d14ecbc909aa3f65ea702d8e173681e10295114e4086a6d94834",
+    "figures/figure_2a_an19_42_talker_distance_linear.png": "96af7b3e592ec0b8ec67098b7c53f1ae5d5ea29f1ab3ade9771110a75400bbb0",
+    "figures/figure_2a_an19_42_talker_distance_linear.svg": "ba43375b9572d8f7edede43ee1d0d14f4f7c43c2098d442cc10822ad722f863b",
+    "figures/figure_2a_an19_42_talker_distance_linear.pdf": "e0d7795a263722c3e6f0b64acc5563dbb64e213f22ff5530b6a9d1c552e94c92",
+    "tables/figure_2a_42_talker_similarity_matrix.csv": "62942a05c4c3ee513dd1b6b336e5177c552408d2a6054046fc4d01b7d9e1f8ef",
+    "figures/figure_2a_an19_42_talker_similarity_linear.png": "9ca202bf8ef784f54a55301dfea10bd81d383a5961c07d347022aacbaad32772",
+    "figures/figure_2a_an19_42_talker_similarity_linear.svg": "32ec4ed41f7d7ecc7118fc7fd6b4cd3e93c13212973e48dee98d1d9863a393eb",
+    "figures/figure_2a_an19_42_talker_similarity_linear.pdf": "039479843b0284c112d975151c446e8db1d84df7e8aeb1da70ea979ff7ce62df",
+    "figures/figure_2c_control_similarity_with_marginals.png": "bdfa9514ad18003f1c73989ec84d3c5f79325a14cbda43b411e35e3aaa0a9bc5",
+    "figures/figure_2c_control_similarity_with_marginals.svg": "77bf148fe5502779c6e49f129665e30ed1b887a0798fbccdac1809280e27d1ca",
+    "figures/figure_2c_control_similarity_with_marginals.pdf": "1275a8b6bc499d51f89850d40f426db79f557ceba52751d5a59cf66996e6edcc",
+    "tables/figure_2c_binned_accuracy.csv": "280a8d2e7183399b757a4ce646d943c76a30428f2b93404885c7b453dd2aff12",
+    "tables/figure_2c_logistic_curves.csv": "05df942c1e10853e168cd9457fed10bdeea2c9186df44429cbe9eb320e4cff5d",
+    "tables/figure_2c_unique_physical_targets.csv": "bdf9ffd2e80e4193af2a43d1c68ea51c17ccdc89665a23e3f76ce9dda1765cdd",
+    "tables/figure_2c_marginal_densities.csv": "235bf9c0605da4262e9576fc0724b57d9b6defa81286469ab495dc9876e86b9c",
+    "tables/figure_2c_mapping_audit.csv": "198cb04a01d65022d25480405783e46f59da9cc8b9baed9beff6947e70bb9337",
+    "figures/figure_1d_phonological_inventory_similarity.png": "4248afed48d36773198493f883390e768f87c21272e54537c391c51c145a55b3",
+    "figures/figure_1d_phonological_inventory_similarity.svg": "33fc3b1bfb4fc55c6bf520ebd67c1bde4a3e605eb75f099cc6962c24cab4f433",
+    "figures/figure_1d_phonological_inventory_similarity.pdf": "45da9ec842658a0c0eea7d63221171589ea268d2d8468ffe2d825c775776562d",
+    "tables/figure_1d_inventory_similarity.csv": "f49752e1f6c0171d644bef858d8e4db50a72404f4b63e932747f94ba3ea30e5c",
+    "figures/figure_si_language_corpus_coverage.png": "d74a04bb4352fe8dc55f0c532c52391e281d9ee3946bea6b958e85d64c76329e",
+    "figures/figure_si_language_corpus_coverage.svg": "e0ddc2797dd9071750459f70b08fa5213254093b157a5dd1cc3d4f47f18b9314",
+    "figures/figure_si_language_corpus_coverage.pdf": "940f0fd6bb0bad0c1c8295561451e87a2cc96f3535fb002c0d4316128008f7ad",
+    "tables/figure_si_language_corpus_counts.csv": "f10dbbcff7d89f71d0d7f717985a0a71621e87d26af9ed0a065110c77b90bbff",
+    "tables/figure_si_talker_language_map.csv": "9e39b9a8b898c8e719ce2d2d787448188afa4eecd741fb5bc3b49510acf3ce11"
+  },
+  "software": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "matplotlib": "3.9.4"
+  },
+  "palette_source": "Exact family_colors from supplied language_capitals_worldmap.R"
+}

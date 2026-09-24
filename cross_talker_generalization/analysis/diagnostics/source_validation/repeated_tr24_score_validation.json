@@ -1,0 +1,521 @@
+{
+  "created_utc": "2026-09-17T07:18:09.677619+00:00",
+  "interpretation": "Training/test scores, prediction/scaling conventions, formulas and all shared metrics reproduce within stated tolerance. Added metadata columns are listed separately.",
+  "numeric_tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  },
+  "numpy": "1.26.4",
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "passed": true,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.9.18",
+  "runs": [
+    {
+      "checks": {
+        "cv_metrics.csv": {
+          "additional_new_columns": [],
+          "common_columns": [
+            "dataset_id",
+            "feature_key",
+            "fold",
+            "mean_log_loss",
+            "model_id",
+            "n_rows",
+            "scope",
+            "total_log_loss",
+            "total_trials"
+          ],
+          "compared_rows": 16,
+          "exact_nonnumeric_columns": [
+            "dataset_id",
+            "feature_key",
+            "model_id",
+            "scope"
+          ],
+          "new_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\tt_all\\X21-base\\cv_metrics.csv",
+          "new_sha256": "6f4fa7021a0a3c75d427eb4acc7e13b76b7e1cc0a9ec1387b4a9379461330d3b",
+          "numeric_columns": [
+            "fold",
+            "mean_log_loss",
+            "n_rows",
+            "total_log_loss",
+            "total_trials"
+          ],
+          "numeric_max_absolute_difference": {
+            "fold": 0.0,
+            "mean_log_loss": 0.0,
+            "n_rows": 0.0,
+            "total_log_loss": 0.0,
+            "total_trials": 0.0
+          },
+          "old_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\train_test\\X21-base\\cv_metrics.csv",
+          "old_sha256": "089434b3c3940c5b3566f1c8b9e678d0605c85b0c360da68b4a8da9d989666ed",
+          "passed": true
+        },
+        "train_test_scores.csv": {
+          "additional_new_columns": [
+            "random_policy"
+          ],
+          "common_columns": [
+            "convergence",
+            "dataset_id",
+            "feature_key",
+            "fit_ok",
+            "fold",
+            "formula",
+            "likelihood_convention",
+            "mean_log_likelihood",
+            "mean_log_loss",
+            "model_id",
+            "n_rows",
+            "optimizer",
+            "prediction_convention",
+            "predictor_column",
+            "predictor_direction",
+            "predictor_term",
+            "random_structure",
+            "score_status",
+            "selection_reason",
+            "singular",
+            "split",
+            "total_log_likelihood",
+            "total_log_loss",
+            "total_trials",
+            "train_predictor_mean",
+            "train_predictor_sd"
+          ],
+          "compared_rows": 24,
+          "exact_nonnumeric_columns": [
+            "convergence",
+            "dataset_id",
+            "feature_key",
+            "fit_ok",
+            "formula",
+            "likelihood_convention",
+            "model_id",
+            "optimizer",
+            "prediction_convention",
+            "predictor_column",
+            "predictor_term",
+            "random_structure",
+            "score_status",
+            "selection_reason",
+            "singular",
+            "split"
+          ],
+          "new_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\tt_all\\X21-base\\train_test_scores.csv",
+          "new_sha256": "75cba5e01fe3d268e095d640498b78e6a9a026287852adf39c3468720ac4ad16",
+          "numeric_columns": [
+            "fold",
+            "mean_log_likelihood",
+            "mean_log_loss",
+            "n_rows",
+            "predictor_direction",
+            "total_log_likelihood",
+            "total_log_loss",
+            "total_trials",
+            "train_predictor_mean",
+            "train_predictor_sd"
+          ],
+          "numeric_max_absolute_difference": {
+            "fold": 0.0,
+            "mean_log_likelihood": 0.0,
+            "mean_log_loss": 0.0,
+            "n_rows": 0.0,
+            "predictor_direction": 0.0,
+            "total_log_likelihood": 0.0,
+            "total_log_loss": 0.0,
+            "total_trials": 0.0,
+            "train_predictor_mean": 0.0,
+            "train_predictor_sd": 0.0
+          },
+          "old_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\train_test\\X21-base\\train_test_scores.csv",
+          "old_sha256": "7a39fe32b32be44b954388f7bb07a76947e48905425d381af8d4d46fabd3e374",
+          "passed": true
+        }
+      },
+      "run_label": "X21-base"
+    },
+    {
+      "checks": {
+        "cv_metrics.csv": {
+          "additional_new_columns": [],
+          "common_columns": [
+            "dataset_id",
+            "feature_key",
+            "fold",
+            "mean_log_loss",
+            "model_id",
+            "n_rows",
+            "scope",
+            "total_log_loss",
+            "total_trials"
+          ],
+          "compared_rows": 16,
+          "exact_nonnumeric_columns": [
+            "dataset_id",
+            "feature_key",
+            "model_id",
+            "scope"
+          ],
+          "new_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\tt_all\\X21-ft\\cv_metrics.csv",
+          "new_sha256": "c5c44c53682422dca5dc06981e1825937b56b480605b44d8fb4c21a689db237d",
+          "numeric_columns": [
+            "fold",
+            "mean_log_loss",
+            "n_rows",
+            "total_log_loss",
+            "total_trials"
+          ],
+          "numeric_max_absolute_difference": {
+            "fold": 0.0,
+            "mean_log_loss": 0.0,
+            "n_rows": 0.0,
+            "total_log_loss": 0.0,
+            "total_trials": 0.0
+          },
+          "old_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\train_test\\X21-ft\\cv_metrics.csv",
+          "old_sha256": "e6e872d0a7f61717e0a1645c207ef18ca54f7669b26f61bece75fa97b96cdd8a",
+          "passed": true
+        },
+        "train_test_scores.csv": {
+          "additional_new_columns": [
+            "random_policy"
+          ],
+          "common_columns": [
+            "convergence",
+            "dataset_id",
+            "feature_key",
+            "fit_ok",
+            "fold",
+            "formula",
+            "likelihood_convention",
+            "mean_log_likelihood",
+            "mean_log_loss",
+            "model_id",
+            "n_rows",
+            "optimizer",
+            "prediction_convention",
+            "predictor_column",
+            "predictor_direction",
+            "predictor_term",
+            "random_structure",
+            "score_status",
+            "selection_reason",
+            "singular",
+            "split",
+            "total_log_likelihood",
+            "total_log_loss",
+            "total_trials",
+            "train_predictor_mean",
+            "train_predictor_sd"
+          ],
+          "compared_rows": 24,
+          "exact_nonnumeric_columns": [
+            "convergence",
+            "dataset_id",
+            "feature_key",
+            "fit_ok",
+            "formula",
+            "likelihood_convention",
+            "model_id",
+            "optimizer",
+            "prediction_convention",
+            "predictor_column",
+            "predictor_term",
+            "random_structure",
+            "score_status",
+            "selection_reason",
+            "singular",
+            "split"
+          ],
+          "new_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\tt_all\\X21-ft\\train_test_scores.csv",
+          "new_sha256": "377f63da918733748acebbcbdeaca3e0156591309777342dbe3a3e8eea68d042",
+          "numeric_columns": [
+            "fold",
+            "mean_log_likelihood",
+            "mean_log_loss",
+            "n_rows",
+            "predictor_direction",
+            "total_log_likelihood",
+            "total_log_loss",
+            "total_trials",
+            "train_predictor_mean",
+            "train_predictor_sd"
+          ],
+          "numeric_max_absolute_difference": {
+            "fold": 0.0,
+            "mean_log_likelihood": 0.0,
+            "mean_log_loss": 0.0,
+            "n_rows": 0.0,
+            "predictor_direction": 0.0,
+            "total_log_likelihood": 0.0,
+            "total_log_loss": 0.0,
+            "total_trials": 0.0,
+            "train_predictor_mean": 0.0,
+            "train_predictor_sd": 0.0
+          },
+          "old_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\train_test\\X21-ft\\train_test_scores.csv",
+          "old_sha256": "5e77895f0472109ae71c7e21483a049903f8d74cb08e35c4d3d2d628c258b281",
+          "passed": true
+        }
+      },
+      "run_label": "X21-ft"
+    },
+    {
+      "checks": {
+        "cv_metrics.csv": {
+          "additional_new_columns": [],
+          "common_columns": [
+            "dataset_id",
+            "feature_key",
+            "fold",
+            "mean_log_loss",
+            "model_id",
+            "n_rows",
+            "scope",
+            "total_log_loss",
+            "total_trials"
+          ],
+          "compared_rows": 16,
+          "exact_nonnumeric_columns": [
+            "dataset_id",
+            "feature_key",
+            "model_id",
+            "scope"
+          ],
+          "new_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\tt_all\\B23-base\\cv_metrics.csv",
+          "new_sha256": "7099ba63f4c6ff9e686584a53cd3b97fd21039c39b4bf7ce400709dc3e26e777",
+          "numeric_columns": [
+            "fold",
+            "mean_log_loss",
+            "n_rows",
+            "total_log_loss",
+            "total_trials"
+          ],
+          "numeric_max_absolute_difference": {
+            "fold": 0.0,
+            "mean_log_loss": 0.0,
+            "n_rows": 0.0,
+            "total_log_loss": 0.0,
+            "total_trials": 0.0
+          },
+          "old_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\train_test\\B23-base\\cv_metrics.csv",
+          "old_sha256": "02e64da7eb22b97ae9db2cb43f759f21409a6dcd38ab16f92ef6ef2c61283d46",
+          "passed": true
+        },
+        "train_test_scores.csv": {
+          "additional_new_columns": [
+            "random_policy"
+          ],
+          "common_columns": [
+            "convergence",
+            "dataset_id",
+            "feature_key",
+            "fit_ok",
+            "fold",
+            "formula",
+            "likelihood_convention",
+            "mean_log_likelihood",
+            "mean_log_loss",
+            "model_id",
+            "n_rows",
+            "optimizer",
+            "prediction_convention",
+            "predictor_column",
+            "predictor_direction",
+            "predictor_term",
+            "random_structure",
+            "score_status",
+            "selection_reason",
+            "singular",
+            "split",
+            "total_log_likelihood",
+            "total_log_loss",
+            "total_trials",
+            "train_predictor_mean",
+            "train_predictor_sd"
+          ],
+          "compared_rows": 24,
+          "exact_nonnumeric_columns": [
+            "convergence",
+            "dataset_id",
+            "feature_key",
+            "fit_ok",
+            "formula",
+            "likelihood_convention",
+            "model_id",
+            "optimizer",
+            "prediction_convention",
+            "predictor_column",
+            "predictor_term",
+            "random_structure",
+            "score_status",
+            "selection_reason",
+            "singular",
+            "split"
+          ],
+          "new_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\tt_all\\B23-base\\train_test_scores.csv",
+          "new_sha256": "4e37575750cf2571de62e5398881f67f295a59fcf76c67a7047cc72dd8ea9aa5",
+          "numeric_columns": [
+            "fold",
+            "mean_log_likelihood",
+            "mean_log_loss",
+            "n_rows",
+            "predictor_direction",
+            "total_log_likelihood",
+            "total_log_loss",
+            "total_trials",
+            "train_predictor_mean",
+            "train_predictor_sd"
+          ],
+          "numeric_max_absolute_difference": {
+            "fold": 0.0,
+            "mean_log_likelihood": 0.0,
+            "mean_log_loss": 0.0,
+            "n_rows": 0.0,
+            "predictor_direction": 0.0,
+            "total_log_likelihood": 0.0,
+            "total_log_loss": 0.0,
+            "total_trials": 0.0,
+            "train_predictor_mean": 0.0,
+            "train_predictor_sd": 0.0
+          },
+          "old_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\train_test\\B23-base\\train_test_scores.csv",
+          "old_sha256": "d959531fd67f19b1c2a96c3aaafe06a14a380111cb38b64f2ceb0eb0e62e0958",
+          "passed": true
+        }
+      },
+      "run_label": "B23-base"
+    },
+    {
+      "checks": {
+        "cv_metrics.csv": {
+          "additional_new_columns": [],
+          "common_columns": [
+            "dataset_id",
+            "feature_key",
+            "fold",
+            "mean_log_loss",
+            "model_id",
+            "n_rows",
+            "scope",
+            "total_log_loss",
+            "total_trials"
+          ],
+          "compared_rows": 16,
+          "exact_nonnumeric_columns": [
+            "dataset_id",
+            "feature_key",
+            "model_id",
+            "scope"
+          ],
+          "new_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\tt_all\\B23-ft\\cv_metrics.csv",
+          "new_sha256": "9115f798c6f2c2ca168613d72b36ff24ee6667862c82d0db187ecc4c31b23c26",
+          "numeric_columns": [
+            "fold",
+            "mean_log_loss",
+            "n_rows",
+            "total_log_loss",
+            "total_trials"
+          ],
+          "numeric_max_absolute_difference": {
+            "fold": 0.0,
+            "mean_log_loss": 0.0,
+            "n_rows": 0.0,
+            "total_log_loss": 0.0,
+            "total_trials": 0.0
+          },
+          "old_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\train_test\\B23-ft\\cv_metrics.csv",
+          "old_sha256": "fd1c6d0bf31bfe1e615362bd4564c307abb098b2a0b9315d2ac157f213d54e63",
+          "passed": true
+        },
+        "train_test_scores.csv": {
+          "additional_new_columns": [
+            "random_policy"
+          ],
+          "common_columns": [
+            "convergence",
+            "dataset_id",
+            "feature_key",
+            "fit_ok",
+            "fold",
+            "formula",
+            "likelihood_convention",
+            "mean_log_likelihood",
+            "mean_log_loss",
+            "model_id",
+            "n_rows",
+            "optimizer",
+            "prediction_convention",
+            "predictor_column",
+            "predictor_direction",
+            "predictor_term",
+            "random_structure",
+            "score_status",
+            "selection_reason",
+            "singular",
+            "split",
+            "total_log_likelihood",
+            "total_log_loss",
+            "total_trials",
+            "train_predictor_mean",
+            "train_predictor_sd"
+          ],
+          "compared_rows": 24,
+          "exact_nonnumeric_columns": [
+            "convergence",
+            "dataset_id",
+            "feature_key",
+            "fit_ok",
+            "formula",
+            "likelihood_convention",
+            "model_id",
+            "optimizer",
+            "prediction_convention",
+            "predictor_column",
+            "predictor_term",
+            "random_structure",
+            "score_status",
+            "selection_reason",
+            "singular",
+            "split"
+          ],
+          "new_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\tt_all\\B23-ft\\train_test_scores.csv",
+          "new_sha256": "52b7a66e567bcf476780898235a0bc651a2c7c28ca47e73d2fd4f8099a56f0a0",
+          "numeric_columns": [
+            "fold",
+            "mean_log_likelihood",
+            "mean_log_loss",
+            "n_rows",
+            "predictor_direction",
+            "total_log_likelihood",
+            "total_log_loss",
+            "total_trials",
+            "train_predictor_mean",
+            "train_predictor_sd"
+          ],
+          "numeric_max_absolute_difference": {
+            "fold": 0.0,
+            "mean_log_likelihood": 0.0,
+            "mean_log_loss": 0.0,
+            "n_rows": 0.0,
+            "predictor_direction": 0.0,
+            "total_log_likelihood": 0.0,
+            "total_log_loss": 0.0,
+            "total_trials": 0.0,
+            "train_predictor_mean": 0.0,
+            "train_predictor_sd": 0.0
+          },
+          "old_file": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\diagnostics\\train_test\\B23-ft\\train_test_scores.csv",
+          "old_sha256": "07480ada3cb4fa2e2dbd27e4213dad1a010c38274a3ea7133e41d63587a68619",
+          "passed": true
+        }
+      },
+      "run_label": "B23-ft"
+    }
+  ],
+  "scope": "Repeated Tr-24 fits only; four expanded SBI runs"
+}

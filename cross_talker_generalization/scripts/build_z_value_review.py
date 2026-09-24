@@ -89,7 +89,7 @@ def read_csv(path, repository, sources):
 
 
 def collect(repository, sources):
-    old = repository / "cross_talker_generalization/analysis_update_2026-08-21/tables"
+    old = repository / "cross_talker_generalization/analysis/reference/tables"
     sbi = read_csv(old / "notebook_fold_z_percent_ceiling.csv", repository, sources)
     hve = read_csv(old / "variability_all_fold_z_percent_ceiling.csv", repository, sources)
     ceiling = read_csv(old / "notebook_behavioral_ceiling_z.csv", repository, sources)
@@ -251,7 +251,7 @@ def main():
     parser.add_argument("--repository", type=Path, default=Path(__file__).resolve().parents[2])
     args = parser.parse_args()
     repository = args.repository.resolve()
-    output = repository / "cross_talker_generalization/analysis_update_2026-09-06/z_value_review"
+    output = repository / "cross_talker_generalization/analysis/model_comparison/reference_checks/z_value_review"
     (output / "figures").mkdir(parents=True, exist_ok=True)
     (output / "tables").mkdir(exist_ok=True)
     sources, manifest = {}, []
@@ -312,13 +312,13 @@ def main():
     project = repository / "cross_talker_generalization"
     groups = [
         ("Manuscript Figure 1/2: incomplete drafts, not final panels",
-         project / "analysis_update_2026-09-06/figure_drafts", "*.png"),
+         project / "analysis/model_comparison/reference_checks/figure_drafts", "*.png"),
         ("Conditional and pooled S-curves: August 21 descriptive analysis",
-         project / "analysis_update_2026-08-21/figures/s_curves_tr24", "*.png"),
+         project / "analysis/reference/figures/s_curves_tr24", "*.png"),
         ("Matched-content talker distance matrices: August 21",
-         project / "analysis_update_2026-08-21/figures", "figure_05b[123]*.png"),
+         project / "analysis/reference/figures", "figure_05b[123]*.png"),
         ("Combined-fold nested-model comparisons: September 1, selection-conditional",
-         project / "analysis_update_2026-09-01/figures", "*.png"),
+         project / "analysis/model_comparison/pooled_lrt/figures", "*.png"),
     ]
     for title, directory, pattern in groups:
         index.append(f"<h3>{html.escape(title)}</h3><ul>")

@@ -12,7 +12,7 @@ import h5py
 import pandas as pd
 
 REPO = Path(__file__).resolve().parents[2]
-OUT = REPO / "cross_talker_generalization/analysis_update_2026-09-06/collaborator_report/tables"
+OUT = REPO / "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/tables"
 
 
 def main():

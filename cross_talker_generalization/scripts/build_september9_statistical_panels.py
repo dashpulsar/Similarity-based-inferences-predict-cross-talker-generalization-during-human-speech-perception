@@ -16,7 +16,7 @@ from build_z_value_review import LAYERS, DATASETS, fold_ci, references, plot_poi
 
 REPO = Path(__file__).resolve().parents[2]
 PROJECT = REPO / 'cross_talker_generalization'
-OUT = PROJECT / 'analysis_update_2026-09-09'
+OUT = PROJECT / 'analysis/speech'
 SOURCES = {}
 INVENTORY = []
 
@@ -35,7 +35,7 @@ def save(fig, name, scope):
 
 
 def z_figures():
-    path = PROJECT / 'analysis_update_2026-09-06/z_value_review/tables'
+    path = PROJECT / 'analysis/model_comparison/reference_checks/z_value_review/tables'
     frame = read(path / 'historical_sbi_fold_z.csv')
     ceilings = read(path / 'historical_ceiling_fold_z.csv')
     other = read(path / 'historical_hve_ceiling_fold_z.csv')

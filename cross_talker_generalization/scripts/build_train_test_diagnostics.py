@@ -2,7 +2,7 @@
 
 Example (from the repository root):
   python cross_talker_generalization/scripts/build_train_test_diagnostics.py \
-    --runs cross_talker_generalization/analysis_update_2026-09-17/train_test
+    --runs cross_talker_generalization/analysis/diagnostics/train_test
 
 Fits are produced with the existing ctg fit-glmm-parallel command. This script
 only reads those results and creates tables plus direct train/test loss plots.

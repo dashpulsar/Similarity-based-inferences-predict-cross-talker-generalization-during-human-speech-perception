@@ -3,7 +3,7 @@
 ## Authoritative release
 
 The authoritative result package is
-[`cross_talker_generalization/analysis_update_2026-08-21/`](../cross_talker_generalization/analysis_update_2026-08-21/).
+[`cross_talker_generalization/analysis/reference/`](../cross_talker_generalization/analysis/reference).
 Use that package for interpretation, presentation, figure selection, and manuscript-facing
 tables. It contains the reviewed figures, their source tables, verification records, and
 file-level SHA-256 provenance.
@@ -26,7 +26,7 @@ as a scientific validity criterion.
 | selected files at `derived/` root | Local direct inputs and published provenance for compatibility GLMM summaries | Audit and rerun support for compatibility analyses only |
 
 The participant-held-out SBI and HVE products are under
-[`cross_talker_generalization/artifacts/`](../cross_talker_generalization/artifacts/),
+[`cross_talker_generalization/artifacts/`](../cross_talker_generalization/artifacts),
 and their reviewed presentation is in the final report. They should not be inferred from
 the compatibility z-value directories in `results/statistics/`.
 

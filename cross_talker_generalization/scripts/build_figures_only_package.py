@@ -15,8 +15,8 @@ from reportlab.pdfbase.ttfonts import TTFont
 
 ROOT=Path(__file__).resolve().parents[2]
 PROJECT=ROOT/"cross_talker_generalization"
-OLD=PROJECT/"analysis_update_2026-09-09"
-OUT=PROJECT/"analysis_update_2026-09-11"
+OLD=PROJECT/"analysis/speech"
+OUT=PROJECT/"analysis/presentation"
 PDF_DIR=ROOT/"output/pdf"
 FIGURE_PDF=PDF_DIR/"cross_talker_figures_only.pdf"
 NOTES_PDF=PDF_DIR/"cross_talker_speaker_notes_bilingual.pdf"

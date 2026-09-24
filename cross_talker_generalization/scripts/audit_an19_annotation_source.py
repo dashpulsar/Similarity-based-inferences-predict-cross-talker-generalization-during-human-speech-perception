@@ -15,7 +15,7 @@ import pandas as pd
 import soundfile as sf
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT/'cross_talker_generalization/analysis_update_2026-09-09/an19_phone_alignment'
+OUT = ROOT/'cross_talker_generalization/analysis/speech/an19_phone_alignment'
 
 
 def main():

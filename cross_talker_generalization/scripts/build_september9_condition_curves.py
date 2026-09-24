@@ -30,7 +30,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "results/figures/X21-base-tr24-notebook-s-curves-legacy-axis-z-v5"
-OUTPUT = ROOT / "cross_talker_generalization/analysis_update_2026-09-09"
+OUTPUT = ROOT / "cross_talker_generalization/analysis/speech"
 SVG = "http://www.w3.org/2000/svg"
 ET.register_namespace("", SVG)
 ET.register_namespace("xlink", "http://www.w3.org/1999/xlink")

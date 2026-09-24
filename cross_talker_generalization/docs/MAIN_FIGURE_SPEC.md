@@ -2,7 +2,7 @@
 
 This document converts the current manuscript captions into reproducible panel requirements. It deliberately marks missing inputs instead of filling gaps with illustrative or inferred values.
 
-The latest computed panels and captions are in the [report for Florian](../analysis_update_2026-09-09/REPORT_FOR_FLORIAN.md). Its [review response](../analysis_update_2026-09-09/REVIEW_RESPONSE.md) supersedes the earlier example and matrix specification below: Figure 1a/b now uses the native "wife" example; Figure 1c uses the supplied world map and palette; Figure 2a includes all 42 talkers, with separate linear distance/similarity panels. AN19 phone panels remain an alignment/validation task, with an alternative annotated dataset also under consideration. Earlier source inspection is documented in [SOURCE_REVIEW.md](../analysis_update_2026-09-06/collaborator_report/SOURCE_REVIEW.md).
+The latest computed panels and captions are in the [report for Florian](../analysis/speech/REPORT_FOR_FLORIAN.md). Its [review response](../analysis/speech/REVIEW_RESPONSE.md) supersedes the earlier example and matrix specification below: Figure 1a/b now uses the native "wife" example; Figure 1c uses the supplied world map and palette; Figure 2a includes all 42 talkers, with separate linear distance/similarity panels. AN19 phone panels remain an alignment/validation task, with an alternative annotated dataset also under consideration. Earlier source inspection is documented in [SOURCE_REVIEW.md](../analysis/model_comparison/reference_checks/collaborator_report/SOURCE_REVIEW.md).
 
 ## Figure 1: obtaining and interpreting latent speech trajectories
 

@@ -60,7 +60,7 @@ X21 contains 320 participants and 16,477 binary-response observations. It includ
 
 B23 contains 195 participants and 11,700 sentence-level observations. Each observation retains the number of correctly and incorrectly recognized keywords, so the appropriate outcome is count-binomial rather than one binary value per sentence. Same-content SBI is defined at the sentence level. The current SBI results are close to zero, making B23 important as a possible boundary condition.
 
-The production exposure builder now integrates the public B23 stimulus lists and participant-level training table for all four single-talker and all four multi-talker conditions. It maps the stimulus filename actually presented, which resolves the speaker-label irregularity described in the paper. Revised B23 HVE candidate selection and downstream comparisons are reported in `analysis_update_2026-08-27`.
+The production exposure builder now integrates the public B23 stimulus lists and participant-level training table for all four single-talker and all four multi-talker conditions. It maps the stimulus filename actually presented, which resolves the speaker-label irregularity described in the paper. Revised B23 HVE candidate selection and downstream comparisons are reported in `analysis/model_comparison/selection`.
 
 ## Computational construction
 

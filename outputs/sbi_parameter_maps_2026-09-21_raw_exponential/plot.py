@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap, BoundaryNorm
 
 HERE=Path(__file__).resolve().parent; ROOT=HERE.parents[1]
-SOURCE=ROOT/'cross_talker_generalization/analysis_update_2026-09-18/x21_parameter_landscape'
+SOURCE=ROOT/'cross_talker_generalization/analysis/sbi/parameter_maps/x21_all_conditions'
 
 def main():
     meta=json.loads((HERE/'manifest.json').read_text())

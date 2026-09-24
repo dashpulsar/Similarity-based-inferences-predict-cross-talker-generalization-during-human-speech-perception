@@ -16,7 +16,7 @@ def read(path):
     sources[path.relative_to(ROOT).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
     return pd.read_csv(path)
 
-historical = read(PROJECT / "analysis_update_2026-09-06/z_value_review/tables/historical_sbi_fold_z.csv")
+historical = read(PROJECT / "analysis/model_comparison/reference_checks/z_value_review/tables/historical_sbi_fold_z.csv")
 labels = ["MFCC39", "STRF24", "HuBERT base Tr-24", "HuBERT FT Tr-24"]
 keys = [("mfcc39", "mfcc39"), ("strf24_legacy", "strf24_legacy"), ("base", "tr_24"), ("ft", "tr_24")]
 z = {}

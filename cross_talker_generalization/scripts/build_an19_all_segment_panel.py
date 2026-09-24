@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-UPDATE = ROOT / "cross_talker_generalization/analysis_update_2026-09-09"
+UPDATE = ROOT / "cross_talker_generalization/analysis/speech"
 SOURCE = UPDATE / "an19_phone_alignment"
 TABLES = SOURCE / "tables"
 EXPORT = ROOT / "output/figures/an19_phonemes"

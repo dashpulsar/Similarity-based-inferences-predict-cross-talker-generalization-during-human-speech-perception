@@ -282,7 +282,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("stage", choices=("prepare", "fit", "report"))
     parser.add_argument("--output", type=Path,
-                        default=PROJECT / "analysis_update_2026-09-17/acoustic_diagnostic")
+                        default=PROJECT / "analysis/acoustic_baselines/components")
     parser.add_argument("--jobs", type=int, default=8)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)

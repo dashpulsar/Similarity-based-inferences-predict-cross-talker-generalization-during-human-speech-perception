@@ -30,8 +30,8 @@ from scipy.spatial.distance import squareform
 
 PROJECT = Path(__file__).resolve().parents[1]
 REPO = PROJECT.parent
-PREVIOUS = PROJECT / "analysis_update_2026-09-06/collaborator_report/tables"
-OUT = PROJECT / "analysis_update_2026-09-09"
+PREVIOUS = PROJECT / "analysis/model_comparison/reference_checks/collaborator_report/tables"
+OUT = PROJECT / "analysis/speech"
 FIGURES = OUT / "figures"
 TABLES = OUT / "tables"
 SOURCES = OUT / "sources"

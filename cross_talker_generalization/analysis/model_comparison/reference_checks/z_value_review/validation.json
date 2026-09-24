@@ -1,0 +1,27 @@
+{
+  "figures": 27,
+  "sbi_historical_fold_values": 342,
+  "hve_historical_fold_values": 3888,
+  "hve_revised_fold_values": 4212,
+  "bootstrap_resamples": 27,
+  "new_glmm_fits": 0,
+  "source_sha256": {
+    "cross_talker_generalization/analysis/reference/tables/notebook_fold_z_percent_ceiling.csv": "633639ed231a3f6d6e161ee40e43aa374b8815df61c82c3e3847bcc308278100",
+    "cross_talker_generalization/analysis/reference/tables/variability_all_fold_z_percent_ceiling.csv": "926ab2ac4e35d727dfaeecc3a14e1a25b7052729c9fb64a4e201d31fa924a91e",
+    "cross_talker_generalization/analysis/reference/tables/notebook_behavioral_ceiling_z.csv": "2ee987164b94e9e836099ea86837a26695529d992c94b81465f6862f02f7aaad",
+    "cross_talker_generalization/analysis/reference/tables/variability_behavioral_ceiling_z.csv": "2ee987164b94e9e836099ea86837a26695529d992c94b81465f6862f02f7aaad",
+    "cross_talker_generalization/artifacts/models/AN19-HVE-base-revised-selection/coefficients.csv": "c0b7dbb06420bcdd7469559d33107a098cf797bcaf10ae4f78105e086ac76ddd",
+    "cross_talker_generalization/artifacts/models/AN19-HVE-base-revised-selection/diagnostics.csv": "3dcea819a65b7d750518b0ae43eb11515b48a80b6b0ca3ea33060ff238273150",
+    "cross_talker_generalization/artifacts/models/AN19-HVE-ft-revised-selection/coefficients.csv": "c1a9878568310e9f6d00703bac90dad35ea7d760068177b4224648c453082a1e",
+    "cross_talker_generalization/artifacts/models/AN19-HVE-ft-revised-selection/diagnostics.csv": "e3c0a54b9c2db1840af1f60b2289054b92c4b4b44056eb69036f9755b1d99fc8",
+    "cross_talker_generalization/artifacts/models/X21-HVE-base-revised-selection/coefficients.csv": "ed550c409701339c02c8d549ebafc7402e306544726de77a04d6ad7d44d8161f",
+    "cross_talker_generalization/artifacts/models/X21-HVE-base-revised-selection/diagnostics.csv": "5870c57e0892f707595f91ac77cf3067c25290e17991dec55ae6325de571ae4d",
+    "cross_talker_generalization/artifacts/models/X21-HVE-ft-revised-selection/coefficients.csv": "7e0a6847aab8846c29a868def88e24155ff4397789eb6fbfa58194672b556066",
+    "cross_talker_generalization/artifacts/models/X21-HVE-ft-revised-selection/diagnostics.csv": "c96499128438775f461820639d196462013d152fabc158a680b70ef7c5ac83a2",
+    "cross_talker_generalization/artifacts/models/B23-HVE-base-selection/coefficients.csv": "4fe48abe4fb655547b6eddf54bc29e5047e5112c1facc0d2794e27fcbcbec112",
+    "cross_talker_generalization/artifacts/models/B23-HVE-base-selection/diagnostics.csv": "3f77b6803fee18ab0bceb7c31c68daaa71012fe1df6db6e4b3b376b0ddfd47ca",
+    "cross_talker_generalization/artifacts/models/B23-HVE-ft-selection/coefficients.csv": "1e4cf154258ac81b02a8fddcdbdec7cfe7084aaf3127bf12b2b2ae2bb4831f76",
+    "cross_talker_generalization/artifacts/models/B23-HVE-ft-selection/diagnostics.csv": "f6daf2f80223a8f0b61185b5bd48f725b98ed338d95350cc3baa237c169e68b0",
+    "cross_talker_generalization/scripts/build_z_value_review.py": "fbfd5b8f0a276fb6baa963686ed102c53dfb819bb291f76f01785d20c24734ad"
+  }
+}

@@ -131,7 +131,7 @@ There are three distinct model-comparison questions:
 2. **Theoretical-predictor optimization:** compare representations or parameterizations using `M_predictor`, which excludes the original experimental condition predictor. The implemented objective is summed three-fold held-out log loss; the planned robustness objective is the signed predictor Wald z. These objectives must be labeled separately.
 3. **Incremental prediction beyond condition:** compare `M_condition` with `M_joint`, including on held-out participants.
 
-The R code fits all four models, stores full-data fit statistics for auditing, and scores frozen models on held-out participants. The fixed-`tr_24` likelihood-versus-z HVE robustness display and null-relative predictive figures are in `analysis_update_2026-09-06`. The August 21 report predates this implementation; revised all-layer likelihood-selected results remain in `analysis_update_2026-08-27`.
+The R code fits all four models, stores full-data fit statistics for auditing, and scores frozen models on held-out participants. The fixed-`tr_24` likelihood-versus-z HVE robustness display and null-relative predictive figures are in `analysis/model_comparison/reference_checks`. The August 21 report predates this implementation; revised all-layer likelihood-selected results remain in `analysis/model_comparison/selection`.
 
 ## 8. True OOF prediction versus compatibility z
 
@@ -159,7 +159,7 @@ Figure 00 and its variability analogue define 100% as the mean of the three comp
 ## 10. Figures and interpretation
 
 - **Figure 00:** MFCC39 and STRF24 appear first, followed by 18 HuBERT layers. Gray dots are fold-specific held-out-refit z values; black points/lines show the fold mean and fold-bootstrap 95% interval; the gray band represents ceiling uncertainty. This is a compatibility association figure.
-- **Figures 01–02 in the August 21 package:** participant-held-out frozen-model OOF log-loss gain asks whether a representation improves prediction for unseen participants beyond condition. The zero line means no incremental prediction, not a significance threshold. Its old best-layer labels are superseded by the predictor-only selection and paired participant-bootstrap results in `analysis_update_2026-08-27`.
+- **Figures 01–02 in the August 21 package:** participant-held-out frozen-model OOF log-loss gain asks whether a representation improves prediction for unseen participants beyond condition. The zero line means no incremental prediction, not a significance threshold. Its old best-layer labels are superseded by the predictor-only selection and paired participant-bootstrap results in `analysis/model_comparison/selection`.
 - **Figure 03 series:** the compatibility panel matches Figure 00 semantics, while the core and dataset-specific profiles report OOF incremental results across every currently computed HVE method.
 - **S-curves:** panels follow available test talkers and conditions. Points are trial-count-weighted accuracy in predictor quantile bins with Wilson 95% binomial intervals. Curves are descriptive binomial logistic fits, not hierarchical GLMM conditional-effect plots.
 - **Talker distance matrices:** for talkers A and B, DTW is computed for each shared linguistic item and averaged. X21 uses all 32 matched experimental sentences per cell, B23 uses 120 common sentences, and AN19 uses the shared word set. Matrices are symmetric with a zero diagonal.
@@ -192,15 +192,15 @@ Provenance JSON records random seed, input paths and hashes, runtime versions, p
 
 ### Result authority and retention
 
-The reviewed package at `cross_talker_generalization/analysis_update_2026-08-21/` is the
+The reviewed package at `cross_talker_generalization/analysis/reference/` is the
 broad presentation inventory. Corrected SBI selection/downstream comparisons and the complete
 revised t-SNE HVE candidate analysis are in
-`cross_talker_generalization/analysis_update_2026-08-27/`.
+`cross_talker_generalization/analysis/model_comparison/selection/`.
 The supplementary combined-test-fold nested GLMM analysis using cross-fitted
-predictor values is in `cross_talker_generalization/analysis_update_2026-09-01/`.
+predictor values is in `cross_talker_generalization/analysis/model_comparison/pooled_lrt/`.
 The fixed-`tr_24` predictive rebuild, directly matched ceiling, HVE objective/reporting
 analysis, and AN19 acoustic diagnostic are in
-`cross_talker_generalization/analysis_update_2026-09-06/`.
+`cross_talker_generalization/analysis/model_comparison/reference_checks/`.
 `cross_talker_generalization/artifacts/` supplies the
 refactored true OOF SBI and HVE products. The top-level `results/` directory is retained
 only where the report builder still requires historical notebook-compatible summaries,

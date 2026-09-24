@@ -1,0 +1,23 @@
+{
+  "cells_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\AN19-pairs\\cells.csv",
+  "cells_sha256": "8e9e056b7a425003aefe93d9ce9e56f1f4cbcfd253389b25651dc7fa1d5671ca",
+  "created_utc": "2026-09-17T06:07:55.785258+00:00",
+  "distances_path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\acoustic_baselines\\components\\distances.csv",
+  "distances_sha256": "b97cc2c2051deb2c0ae041c405c9c27c6cd7aa234dff03908c6efc632b1d5939",
+  "estimand": "same_content_talker_proxy",
+  "fixed_k": 1.0,
+  "numpy": "1.26.4",
+  "output_rows": 17664,
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "profile_id": "an19_matched_acoustic_components_20260917",
+  "python": "3.9.18",
+  "stage": "aggregate_predictors",
+  "status_counts": {
+    "available": 14384,
+    "incomplete_source_mapping": 208,
+    "no_exposure": 3072
+  },
+  "talker_aggregation": "mean_distance"
+}

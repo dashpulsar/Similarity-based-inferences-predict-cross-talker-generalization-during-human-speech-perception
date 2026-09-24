@@ -19,7 +19,7 @@ const sources=[
   ['x21_parameter_landscape_no_talker_specific','X21: Talker-specific excluded','8,290 word responses from 161 participants','x21_without_talker_specific.html']
 ];
 for(const [dir,title,subtitle,html] of sources){
-  const base=path.join(root,'cross_talker_generalization/analysis_update_2026-09-18',dir);
+  const base=path.join(root,'cross_talker_generalization/analysis/sbi',dir);
   const s=p.slides.add(); s.background.fill='#FFFFFF';
   function text(t,l,y,w,h,size,color='#18232D',bold=false){
     const box=s.shapes.add({geometry:'textbox',position:{left:l,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});

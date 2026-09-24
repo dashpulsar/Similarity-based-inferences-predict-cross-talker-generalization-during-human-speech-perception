@@ -32,7 +32,7 @@ The following quantities answer different questions and must not share an ambigu
 | `M_condition` versus `M_joint` | Does the theoretical predictor add information beyond condition? | Positive held-out gain or a supported nested comparison favors `M_joint` |
 | `M_predictor` versus `M_joint` | Does condition add information beyond the theoretical predictor? | Positive held-out gain or a supported nested comparison favors `M_joint` |
 
-The requested robustness display is a 2 × 2 analysis: select candidate predictors once by predictor-only likelihood and once by predictor-only z, and report each selected candidate using both likelihood and z. A fixed-`tr_24` HVE implementation exists in `analysis_update_2026-09-06`, but its B23 ranking must be corrected to separate the 97-participant ordered and 168-participant order-independent samples. It is not completion of the full objective/ablation request. Any corresponding all-layer search remains exploratory and would require nested selection for a confirmatory predictive claim.
+The requested robustness display is a 2 × 2 analysis: select candidate predictors once by predictor-only likelihood and once by predictor-only z, and report each selected candidate using both likelihood and z. A fixed-`tr_24` HVE implementation exists in `analysis/model_comparison/reference_checks`, but its B23 ranking must be corrected to separate the 97-participant ordered and 168-participant order-independent samples. It is not completion of the full objective/ablation request. Any corresponding all-layer search remains exploratory and would require nested selection for a confirmatory predictive claim.
 
 For paper-facing claims, `tr_24` avoids selecting a layer on the same data used to summarize it. If a data-selected layer is used for an out-of-sample claim, selection must occur inside each outer training split; held-out outcomes must never determine the selected candidate. Historical held-out-refit z values remain descriptive association summaries only.
 
@@ -69,7 +69,7 @@ The production reader now exposes diagnostic views of the existing AN19 acoustic
 
 Run these groups through the same pair construction, corpus scaling, DTW, participant folds, and GLMM code as the full baselines. Then check:
 
-The first diagnostic batch did not satisfy the same-scaling requirement: its distance table records `none`, whereas the full baseline records `global_z`. The [September 17 rerun](../analysis_update_2026-09-17/README.md) applies the full baseline's coordinate moments to all 14 subsets and reproduces the full MFCC/STRF scores. Random-effect fallback still differs across some groups/scopes; harmonize that structure before interpreting their ordering as controlled feature attribution.
+The first diagnostic batch did not satisfy the same-scaling requirement: its distance table records `none`, whereas the full baseline records `global_z`. The [September 17 rerun](../analysis/diagnostics/README.md) applies the full baseline's coordinate moments to all 14 subsets and reproduces the full MFCC/STRF scores. Random-effect fallback still differs across some groups/scopes; harmonize that structure before interpreting their ordering as controlled feature attribution.
 
 1. whether the high result survives within each AN19 condition rather than merely separating experimental conditions;
 2. whether any self-comparison, duplicate recording, item leakage, or missingness pattern drives the result;

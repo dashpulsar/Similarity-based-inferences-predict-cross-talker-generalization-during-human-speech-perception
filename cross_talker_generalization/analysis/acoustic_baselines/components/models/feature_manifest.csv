@@ -1,0 +1,17 @@
+feature_key,status,run_dir
+mfcc39,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-5370270988
+mfcc_c0,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-46dce38da6
+mfcc_delta13,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-69839609f8
+mfcc_delta_delta13,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-ca5a57e48d
+mfcc_static13,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-3f4b0e558c
+mfcc_static_spectral12,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-1bb8ba791d
+strf24_legacy,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-c9fed7836e
+strf_direction_negative,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-8c0cc87fb3
+strf_direction_positive,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-8eb370ee05
+strf_rate_16,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-571d619e5e
+strf_rate_2,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-4028756b2c
+strf_rate_4,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-0805261c43
+strf_rate_8,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-9d96feaffe
+strf_scale_0p25,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-d9b10e619b
+strf_scale_0p5,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-6d35663cd8
+strf_scale_1p0,computed,C:\Users\Alex\Documents\GitHub\cross-talker-generalization-final-review-2026-08-21\cross_talker_generalization\analysis\acoustic_baselines\components\models\r\f-6533840c70

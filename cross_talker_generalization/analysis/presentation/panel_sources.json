@@ -1,0 +1,336 @@
+{
+  "new_model_fits": 0,
+  "new_dtw_pairs": 0,
+  "source_sha256": {
+    "cross_talker_generalization/analysis/speech/an19_phone_alignment/tables/figure2b_all_segments_similarity_instances.csv": "9efa7d5c791e6cb7a77ef208f63a18ee82fa679e72a3c17a016a630d3d0478d9",
+    "cross_talker_generalization/analysis/speech/an19_phone_alignment/tables/figure2b_all_segments_similarity_language_means.csv": "8071071e45e4d3e882b308da25cbbe8e57e3d7ea9e6730e292ae99b09679c0a0",
+    "cross_talker_generalization/analysis/speech/tables/language_branch_palette.csv": "e80e8428062530dd62277b1fc2ccd34982d7d28d0bcd12c217be46051353e3a9",
+    "cross_talker_generalization/analysis/model_comparison/reference_checks/z_value_review/tables/revised_hve_training_fold_z.csv": "071cc30da5a9fe52d3711faab87f152f1784c66bd6831a0e12422eff7605e340",
+    "cross_talker_generalization/analysis/speech/tables/hve_retained_fold_loglik.csv": "47e6599d31eeaae8f5461ab87c05f2a4a002625612a626f142d20a2fc75b97bc",
+    "cross_talker_generalization/analysis/model_comparison/pooled_lrt/tables/crossfitted_lrt_results.csv": "03f54071b58357c5d6295ae6752014404800878d5607176a031e01fa3fdbbfab"
+  },
+  "figures": [
+    {
+      "id": "an19_phone_similarity_01",
+      "family": "phone_similarity",
+      "path": "cross_talker_generalization/analysis/presentation/figures/an19_phone_similarity_01.pdf",
+      "phones": [
+        "ih",
+        "iy",
+        "ae",
+        "eh"
+      ],
+      "weighting": "equal instances within talker/phone; then equal talkers within L1",
+      "ci": "1000 by-talker percentile bootstrap samples within L1/phone; no CI for n=1"
+    },
+    {
+      "id": "an19_phone_similarity_02",
+      "family": "phone_similarity",
+      "path": "cross_talker_generalization/analysis/presentation/figures/an19_phone_similarity_02.pdf",
+      "phones": [
+        "uh",
+        "uw",
+        "th",
+        "dh"
+      ],
+      "weighting": "equal instances within talker/phone; then equal talkers within L1",
+      "ci": "1000 by-talker percentile bootstrap samples within L1/phone; no CI for n=1"
+    },
+    {
+      "id": "an19_phone_similarity_03",
+      "family": "phone_similarity",
+      "path": "cross_talker_generalization/analysis/presentation/figures/an19_phone_similarity_03.pdf",
+      "phones": [
+        "s",
+        "sh",
+        "r",
+        "l"
+      ],
+      "weighting": "equal instances within talker/phone; then equal talkers within L1",
+      "ci": "1000 by-talker percentile bootstrap samples within L1/phone; no CI for n=1"
+    },
+    {
+      "id": "hve_an19_z_01",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_an19_z_01.pdf",
+      "dataset": "AN19",
+      "methods": [
+        "overall",
+        "overall_order_sensitive",
+        "within_token_word",
+        "within_type_word"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_an19_loglik_01",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_an19_loglik_01.pdf",
+      "dataset": "AN19",
+      "methods": [
+        "overall",
+        "overall_order_sensitive",
+        "within_token_word",
+        "within_type_word"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_an19_z_02",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_an19_z_02.pdf",
+      "dataset": "AN19",
+      "methods": [
+        "between_type_word",
+        "order_word",
+        "mean_dissimilarity_word"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_an19_loglik_02",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_an19_loglik_02.pdf",
+      "dataset": "AN19",
+      "methods": [
+        "between_type_word",
+        "order_word",
+        "mean_dissimilarity_word"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_x21_z_01",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_z_01.pdf",
+      "dataset": "X21",
+      "methods": [
+        "overall",
+        "overall_order_sensitive",
+        "within_token_sentence",
+        "within_type_sentence"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_x21_loglik_01",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_loglik_01.pdf",
+      "dataset": "X21",
+      "methods": [
+        "overall",
+        "overall_order_sensitive",
+        "within_token_sentence",
+        "within_type_sentence"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_x21_z_02",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_z_02.pdf",
+      "dataset": "X21",
+      "methods": [
+        "between_type_sentence",
+        "order_sentence",
+        "mean_dissimilarity_sentence",
+        "within_token_word"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_x21_loglik_02",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_loglik_02.pdf",
+      "dataset": "X21",
+      "methods": [
+        "between_type_sentence",
+        "order_sentence",
+        "mean_dissimilarity_sentence",
+        "within_token_word"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_x21_z_03",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_z_03.pdf",
+      "dataset": "X21",
+      "methods": [
+        "within_type_word",
+        "between_type_word",
+        "order_word",
+        "mean_dissimilarity_word"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_x21_loglik_03",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_loglik_03.pdf",
+      "dataset": "X21",
+      "methods": [
+        "within_type_word",
+        "between_type_word",
+        "order_word",
+        "mean_dissimilarity_word"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_x21_z_04",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_z_04.pdf",
+      "dataset": "X21",
+      "methods": [
+        "within_token_phoneme",
+        "within_type_phoneme",
+        "between_type_phoneme",
+        "order_phoneme"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_x21_loglik_04",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_loglik_04.pdf",
+      "dataset": "X21",
+      "methods": [
+        "within_token_phoneme",
+        "within_type_phoneme",
+        "between_type_phoneme",
+        "order_phoneme"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_x21_z_05",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_z_05.pdf",
+      "dataset": "X21",
+      "methods": [
+        "mean_dissimilarity_phoneme"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_x21_loglik_05",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_x21_loglik_05.pdf",
+      "dataset": "X21",
+      "methods": [
+        "mean_dissimilarity_phoneme"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_b23_z_01",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_b23_z_01.pdf",
+      "dataset": "B23",
+      "methods": [
+        "overall",
+        "overall_order_sensitive",
+        "within_token_sentence",
+        "between_type_sentence"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_b23_loglik_01",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_b23_loglik_01.pdf",
+      "dataset": "B23",
+      "methods": [
+        "overall",
+        "overall_order_sensitive",
+        "within_token_sentence",
+        "between_type_sentence"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_b23_z_02",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_b23_z_02.pdf",
+      "dataset": "B23",
+      "methods": [
+        "order_sentence",
+        "within_token_word",
+        "within_type_word",
+        "between_type_word"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_b23_loglik_02",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_b23_loglik_02.pdf",
+      "dataset": "B23",
+      "methods": [
+        "order_sentence",
+        "within_token_word",
+        "within_type_word",
+        "between_type_word"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_b23_z_03",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_b23_z_03.pdf",
+      "dataset": "B23",
+      "methods": [
+        "order_word",
+        "mean_dissimilarity_word",
+        "within_token_phoneme",
+        "within_type_phoneme"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_b23_loglik_03",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_b23_loglik_03.pdf",
+      "dataset": "B23",
+      "methods": [
+        "order_word",
+        "mean_dissimilarity_word",
+        "within_token_phoneme",
+        "within_type_phoneme"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "hve_b23_z_04",
+      "family": "hve_z",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_b23_z_04.pdf",
+      "dataset": "B23",
+      "methods": [
+        "between_type_phoneme",
+        "order_phoneme",
+        "mean_dissimilarity_phoneme"
+      ],
+      "scope": "two-training-fold GLMM coefficient"
+    },
+    {
+      "id": "hve_b23_loglik_04",
+      "family": "hve_loglik",
+      "path": "cross_talker_generalization/analysis/presentation/figures/hve_b23_loglik_04.pdf",
+      "dataset": "B23",
+      "methods": [
+        "between_type_phoneme",
+        "order_phoneme",
+        "mean_dissimilarity_phoneme"
+      ],
+      "scope": "frozen predictor-only held-out per-word score"
+    },
+    {
+      "id": "x21_nested_comparisons",
+      "family": "nested_comparison",
+      "path": "cross_talker_generalization/analysis/presentation/figures/x21_nested_comparisons.pdf",
+      "scope": "retained combined-fold selected-model LRT, exploratory; not a held-out prediction score"
+    }
+  ],
+  "phone_update": "Per-phone views now use the same pairwise exponential transformation and instance weighting as the overall view; superseded word-type distance plots are not included."
+}

@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "cross_talker_generalization/analysis_update_2026-09-06/collaborator_report"
+OUT = ROOT / "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report"
 
 
 def main():

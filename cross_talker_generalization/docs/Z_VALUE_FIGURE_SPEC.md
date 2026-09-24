@@ -1,6 +1,6 @@
 # Z-value figure specification
 
-This file defines the main **SBI result display** requested on September 6: layerwise z, three-fold intervals, and a normalized behavioral ceiling. It does not designate manuscript main figures or replace Figures 1/2. Similar HVE panels respond to the earlier request for complete variability displays. It changes presentation, not previously fitted models. See the [requirements review](FLORIAN_REQUIREMENTS_REVIEW.md) for meeting evidence and the [generated review](../analysis_update_2026-09-06/z_value_review/README.md) for the actual outputs.
+This file defines the main **SBI result display** requested on September 6: layerwise z, three-fold intervals, and a normalized behavioral ceiling. It does not designate manuscript main figures or replace Figures 1/2. Similar HVE panels respond to the earlier request for complete variability displays. It changes presentation, not previously fitted models. See the [requirements review](FLORIAN_REQUIREMENTS_REVIEW.md) for meeting evidence and the [generated review](../analysis/model_comparison/reference_checks/z_value_review/README.md) for the actual outputs.
 
 ## 1. Quantity on the y-axis
 

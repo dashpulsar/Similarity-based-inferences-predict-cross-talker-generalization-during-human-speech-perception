@@ -1,0 +1,117 @@
+{
+  "segment_id": "X21.ENG.ENG_M_055.HT1_S002",
+  "speaker": "X21.ENG.ENG_M_055",
+  "L1": "English",
+  "sentence": "THE WIFE HELPED HER HUSBAND",
+  "word": "WIFE",
+  "word_interval": {
+    "index": 13,
+    "start_seconds": 0.089,
+    "end_seconds": 0.4,
+    "label": "WIFE",
+    "normalized": "WIFE",
+    "is_behavior_keyword": true
+  },
+  "phones": [
+    {
+      "index": 23,
+      "start_seconds": 0.089,
+      "end_seconds": 0.23,
+      "label": "W",
+      "normalized": "W",
+      "first_frame_zero_based": 4,
+      "end_frame_exclusive": 11,
+      "frame_count": 7,
+      "display_label": "/w/"
+    },
+    {
+      "index": 24,
+      "start_seconds": 0.23,
+      "end_seconds": 0.34,
+      "label": "AY1",
+      "normalized": "AY1",
+      "first_frame_zero_based": 11,
+      "end_frame_exclusive": 17,
+      "frame_count": 6,
+      "display_label": "/aɪ/"
+    },
+    {
+      "index": 25,
+      "start_seconds": 0.34,
+      "end_seconds": 0.4,
+      "label": "F",
+      "normalized": "F",
+      "first_frame_zero_based": 17,
+      "end_frame_exclusive": 20,
+      "frame_count": 3,
+      "display_label": "/f/"
+    }
+  ],
+  "changed_example": "The first example was replaced, not relabeled. All five native HT1_S001 manifest transcripts say A BOY FELL FROM A WINDOW; this illustration uses the annotated HT1_S002 instead.",
+  "sentence1_manifest_audit": [
+    {
+      "segment_id": "X21.ENG.ENG_M_055.HT1_S001",
+      "sentence": "A BOY FELL FROM A WINDOW"
+    },
+    {
+      "segment_id": "X21.ENG.ENG_M_066.HT1_S001",
+      "sentence": "A BOY FELL FROM A WINDOW"
+    },
+    {
+      "segment_id": "X21.ENG.ENG_M_070.HT1_S001",
+      "sentence": "A BOY FELL FROM A WINDOW"
+    },
+    {
+      "segment_id": "X21.ENG.ENG_M_131.HT1_S001",
+      "sentence": "A BOY FELL FROM A WINDOW"
+    },
+    {
+      "segment_id": "X21.ENG.ENG_M_133.HT1_S001",
+      "sentence": "A BOY FELL FROM A WINDOW"
+    }
+  ],
+  "audio_verification": "Existing audio checked against original Git LFS SHA-256. No claim of manual listening or new ASR verification.",
+  "audio_file": "cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/sources/ALL_055_M_ENG_ENG_HT1.wav",
+  "audio_sha256": "85353805062b0993107b807f9eef8a9541affe28e26023c819e1a3722f8de528",
+  "manifest_file": "data/manifests/X21-stimulus-manifest.csv",
+  "manifest_sha256": "bd59745e7f8fb6d389f50daa1d3fc1e1fdf3f0cbe11f3a05fa43b6f73cc0f76e",
+  "textgrid_file": "data/raw_data/xie_liu_jaeger21/sound_stimuli/ALL_055_M_ENG_ENG_HT1.TextGrid",
+  "textgrid_sha256": "097e5dbae8bfef80412aeb4a873faa468a86cf0775388cc64fae6729774a5b8b",
+  "layer": "tr_24",
+  "checkpoint": "facebook/hubert-large-ll60k",
+  "checkpoint_revision": "ff022d095678a2995f3c49bab18a96a9e553f782",
+  "frames": 66,
+  "dimensions": 1024,
+  "shown_dimensions_one_based": [
+    1,
+    1024
+  ],
+  "tsne_parameters": {
+    "angle": 0.5,
+    "early_exaggeration": 12.0,
+    "init": "pca",
+    "learning_rate": "auto",
+    "max_iter": 1000,
+    "method": "barnes_hut",
+    "metric": "euclidean",
+    "min_grad_norm": 1e-07,
+    "n_components": 3,
+    "n_iter_without_progress": 300,
+    "n_jobs": 1,
+    "perplexity": 30.0,
+    "random_state": 42
+  },
+  "tsne_corpus_scope": "all_660_textgrid_sentence_segments",
+  "full_leaf": "X21.ENG.ENG_M_055/X21.ENG.ENG_M_055.HT1_S002/tr_24",
+  "reduced_leaf": "tr_24/X21.ENG.ENG_M_055/X21.ENG.ENG_M_055.HT1_S002",
+  "full_selected_array_float64_sha256": "2fb76e5bdafdb50343f851770565c8fdcdfc28ec07eaf8c237193516ce3d60f6",
+  "reduced_selected_array_float64_sha256": "a71592bf2ddc4fcd43d45191f2ec7e7c42229fb002cf344e51393156e3055dba",
+  "display_scaling": "No coordinate or activation standardization. Audio normalized by its maximum absolute amplitude for display only. Panel b zooms its axes without changing coordinates.",
+  "timing": "Manifest-relative boundaries converted to frames with existing round(frames*time/duration) rule; no new alignment.",
+  "connection_rule": "Only adjacent frames within this sentence/word are joined. A word edge crossing a phone boundary uses the preceding frame's phone color; no black linking segments.",
+  "output_sha256": {
+    "figure_1ab_method.pdf": "6dd73fd52ee4b1f131c2bc7fb42e303939b18f69b11db4cbdadd94ed1ece02fe",
+    "figure_1ab_method.png": "c932644d68da1e1de1e44a0617bf8bd98b381dff96bb7bb82d078489623a5e48",
+    "figure_1ab_method.svg": "9c84c97dce15ee5215c810640ffa0849c6a94377b2a17610c270f57075663c88"
+  }
+}

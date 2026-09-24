@@ -56,7 +56,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("cross_talker_generalization/analysis_update_2026-09-06/figure_drafts"),
+        default=Path("cross_talker_generalization/analysis/model_comparison/reference_checks/figure_drafts"),
     )
     parser.add_argument("--seed", type=int, default=230519)
     parser.add_argument("--bootstrap", type=int, default=2000)
@@ -169,7 +169,7 @@ def build_figure_1(repository: Path, output: Path, inventory: pd.DataFrame) -> l
 
 
 def talker_control_summary(repository: Path, rng: np.random.Generator, n_boot: int) -> tuple[pd.DataFrame, Path]:
-    distance_path = repository / "cross_talker_generalization/analysis_update_2026-08-21/tables/talker_distance_tr24.csv"
+    distance_path = repository / "cross_talker_generalization/analysis/reference/tables/talker_distance_tr24.csv"
     distances = pd.read_csv(distance_path)
     summaries = []
     for dataset, control_id in (("AN19", "AN19.Control"), ("X21", "X21.Control")):

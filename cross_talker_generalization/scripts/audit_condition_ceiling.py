@@ -21,11 +21,11 @@ from ctg.provenance import atomic_write_csv, atomic_write_json, runtime_record, 
 
 def main():
     config = load_project(PROJECT/'configs/project.json')
-    out = PROJECT/'analysis_update_2026-09-18/conditional_ceiling'
+    out = PROJECT/'analysis/model_comparison/conditional_ceiling'
     comparisons, coverage, sources, context = [], [], [], []
     for dataset in ['AN19','X21','B23']:
         folds = PROJECT/f'artifacts/derived/{dataset}-folds.csv'
-        historical = PROJECT/f'analysis_update_2026-09-06/ceilings/{dataset}/oof_predictions.csv'
+        historical = PROJECT/f'analysis/model_comparison/reference_checks/ceilings/{dataset}/oof_predictions.csv'
         old = pd.read_csv(historical)
         new, metrics = compute_cross_validated_ceiling(
             spec=config.dataset(dataset), folds_path=folds, output_dir=out/dataset,

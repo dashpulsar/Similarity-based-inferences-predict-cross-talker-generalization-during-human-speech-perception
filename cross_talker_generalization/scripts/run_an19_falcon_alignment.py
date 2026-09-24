@@ -19,7 +19,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT/'cross_talker_generalization'
-BASE_OUT = PROJECT/'analysis_update_2026-09-09/an19_phone_alignment'
+BASE_OUT = PROJECT/'analysis/speech/an19_phone_alignment'
 OUT = BASE_OUT/'nygaard_audio'
 os.environ.setdefault('PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION', 'python')
 os.environ['WANDB_MODE'] = 'disabled'

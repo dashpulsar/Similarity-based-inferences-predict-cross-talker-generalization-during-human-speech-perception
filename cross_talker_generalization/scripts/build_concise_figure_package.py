@@ -11,8 +11,8 @@ import json
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / 'cross_talker_generalization/analysis_update_2026-09-11'
-OLD = ROOT / 'cross_talker_generalization/analysis_update_2026-09-09'
+OUT = ROOT / 'cross_talker_generalization/analysis/presentation'
+OLD = ROOT / 'cross_talker_generalization/analysis/speech'
 PDF_DIR = ROOT / 'output/pdf'
 FULL_PDF = PDF_DIR / 'cross_talker_figures_only.pdf'
 FIGURE_PDF = PDF_DIR / 'cross_talker_figures_concise.pdf'

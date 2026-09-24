@@ -7,7 +7,7 @@ import pandas as pd
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
-SOURCE=ROOT/'cross_talker_generalization/analysis_update_2026-09-18/x21_parameter_landscape'
+SOURCE=ROOT/'cross_talker_generalization/analysis/sbi/parameter_maps/x21_all_conditions'
 R=Path('C:/Program Files/R/R-4.4.1/bin/x64/Rscript.exe')
 JOBS=16; POINT_SECONDS=90; BUDGET_SECONDS=1800
 

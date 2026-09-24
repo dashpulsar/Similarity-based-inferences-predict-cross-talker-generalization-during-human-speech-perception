@@ -1,0 +1,271 @@
+{
+  "created_utc": "2026-09-17T07:02:59.889290+00:00",
+  "direction": 1,
+  "inputs": [
+    {
+      "family": "HVE",
+      "feature_count": 7,
+      "input_sha256": "ed8380143589f372afa3e247862713d568c46c7a4a655446cbc4460fa4778d37",
+      "layers": [
+        "tr_24"
+      ],
+      "measures": [
+        "between_type_word",
+        "mean_dissimilarity_word",
+        "order_word",
+        "overall",
+        "overall_order_sensitive",
+        "within_token_word",
+        "within_type_word"
+      ],
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\AN19-base-120\\m",
+      "participant_count": 120,
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\AN19-base-120\\input.csv",
+      "response_set_sha256": "fd9fe200dda47d3cef1a157ee31e382fdd068266a0cbe1e5e50c454dffe802df",
+      "responses_per_feature": 5760,
+      "rows_per_feature": 5760,
+      "run_label": "HVE-AN19-base-120",
+      "same_responses_across_features": true,
+      "source_input": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\AN19-HVE-base-tr24-20260906-model-input.csv",
+      "source_sha256": "12613d6167cbcbd1ba6ff51a55855c701f7a9f89966d3cbb6c719842767cbe0f",
+      "stratum": "AN19_120_available_exposure",
+      "variant": "base"
+    },
+    {
+      "family": "HVE",
+      "feature_count": 7,
+      "input_sha256": "ae2d08890e31b6cd771d19f0eb83771521340be9b35544fbb27e20c46b3ae81d",
+      "layers": [
+        "tr_24"
+      ],
+      "measures": [
+        "between_type_word",
+        "mean_dissimilarity_word",
+        "order_word",
+        "overall",
+        "overall_order_sensitive",
+        "within_token_word",
+        "within_type_word"
+      ],
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\AN19-ft-120\\m",
+      "participant_count": 120,
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\AN19-ft-120\\input.csv",
+      "response_set_sha256": "fd9fe200dda47d3cef1a157ee31e382fdd068266a0cbe1e5e50c454dffe802df",
+      "responses_per_feature": 5760,
+      "rows_per_feature": 5760,
+      "run_label": "HVE-AN19-ft-120",
+      "same_responses_across_features": true,
+      "source_input": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\AN19-HVE-ft-tr24-20260906-model-input.csv",
+      "source_sha256": "ae2d08890e31b6cd771d19f0eb83771521340be9b35544fbb27e20c46b3ae81d",
+      "stratum": "AN19_120_available_exposure",
+      "variant": "ft"
+    },
+    {
+      "family": "HVE",
+      "feature_count": 17,
+      "input_sha256": "8d8ed72d03ba77b48124c688cb1a8d9eb57dead15a7e225d2022f47ac6d3eda3",
+      "layers": [
+        "tr_24"
+      ],
+      "measures": [
+        "between_type_phoneme",
+        "between_type_sentence",
+        "between_type_word",
+        "mean_dissimilarity_phoneme",
+        "mean_dissimilarity_sentence",
+        "mean_dissimilarity_word",
+        "order_phoneme",
+        "order_sentence",
+        "order_word",
+        "overall",
+        "overall_order_sensitive",
+        "within_token_phoneme",
+        "within_token_sentence",
+        "within_token_word",
+        "within_type_phoneme",
+        "within_type_sentence",
+        "within_type_word"
+      ],
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\X21-base-320\\m",
+      "participant_count": 320,
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\X21-base-320\\input.csv",
+      "response_set_sha256": "8d1319e4d52d0b3813afcbd4f0dc4d4d174580aee4bb2dfaf9c41c5b111b3332",
+      "responses_per_feature": 16477,
+      "rows_per_feature": 16477,
+      "run_label": "HVE-X21-base-320",
+      "same_responses_across_features": true,
+      "source_input": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-HVE-base-tr24-20260906-model-input.csv",
+      "source_sha256": "bd84063a67357002dd56a3a0eea929cca2e91b7b920070365a0991effe68cf87",
+      "stratum": "X21_320_available_exposure",
+      "variant": "base"
+    },
+    {
+      "family": "HVE",
+      "feature_count": 17,
+      "input_sha256": "bac1ba27740ff9225fe7bd89141f920a980068e413f2281d30913c8bfcaf3d4e",
+      "layers": [
+        "tr_24"
+      ],
+      "measures": [
+        "between_type_phoneme",
+        "between_type_sentence",
+        "between_type_word",
+        "mean_dissimilarity_phoneme",
+        "mean_dissimilarity_sentence",
+        "mean_dissimilarity_word",
+        "order_phoneme",
+        "order_sentence",
+        "order_word",
+        "overall",
+        "overall_order_sensitive",
+        "within_token_phoneme",
+        "within_token_sentence",
+        "within_token_word",
+        "within_type_phoneme",
+        "within_type_sentence",
+        "within_type_word"
+      ],
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\X21-ft-320\\m",
+      "participant_count": 320,
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\X21-ft-320\\input.csv",
+      "response_set_sha256": "8d1319e4d52d0b3813afcbd4f0dc4d4d174580aee4bb2dfaf9c41c5b111b3332",
+      "responses_per_feature": 16477,
+      "rows_per_feature": 16477,
+      "run_label": "HVE-X21-ft-320",
+      "same_responses_across_features": true,
+      "source_input": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\X21-HVE-ft-tr24-20260906-model-input.csv",
+      "source_sha256": "34a6e0066ff90355b1da661f18a9ecb67edaa2126eff29ee799d1362034a91d7",
+      "stratum": "X21_320_available_exposure",
+      "variant": "ft"
+    },
+    {
+      "family": "HVE",
+      "feature_count": 1,
+      "input_sha256": "786971525f830c18d4ba5dd982d05c70dd020f7a879703b4221984a82e7554c8",
+      "layers": [
+        "tr_24"
+      ],
+      "measures": [
+        "overall_order_sensitive"
+      ],
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\B23-base-97\\m",
+      "participant_count": 97,
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\B23-base-97\\input.csv",
+      "response_set_sha256": "a5850f9a9db751a603253565e98434eef3ecae734a65a8c61b8eb2fadaccdf63",
+      "responses_per_feature": 31234,
+      "rows_per_feature": 5820,
+      "run_label": "HVE-B23-base-97",
+      "same_responses_across_features": true,
+      "source_input": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\B23-HVE-base-tr24-20260906-model-input.csv",
+      "source_sha256": "f504bc718723c10ba8dc3a60120aab00a4db4ec101cafcf289e82c4eeab37eae",
+      "stratum": "B23_97_complete_order",
+      "variant": "base"
+    },
+    {
+      "family": "HVE",
+      "feature_count": 14,
+      "input_sha256": "8210b759eebb296f6ce2b7fb8a8a0d42c94751ac95d50dd429733c7492010926",
+      "layers": [
+        "tr_24"
+      ],
+      "measures": [
+        "between_type_phoneme",
+        "between_type_sentence",
+        "between_type_word",
+        "mean_dissimilarity_phoneme",
+        "mean_dissimilarity_word",
+        "order_phoneme",
+        "order_sentence",
+        "order_word",
+        "overall",
+        "within_token_phoneme",
+        "within_token_sentence",
+        "within_token_word",
+        "within_type_phoneme",
+        "within_type_word"
+      ],
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\B23-base-168\\m",
+      "participant_count": 168,
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\B23-base-168\\input.csv",
+      "response_set_sha256": "4a9920abf6f03052d4c42b0a2d932b7fcf6b55906ed07330c180d7efa9021aeb",
+      "responses_per_feature": 54096,
+      "rows_per_feature": 10080,
+      "run_label": "HVE-B23-base-168",
+      "same_responses_across_features": true,
+      "source_input": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\B23-HVE-base-tr24-20260906-model-input.csv",
+      "source_sha256": "f504bc718723c10ba8dc3a60120aab00a4db4ec101cafcf289e82c4eeab37eae",
+      "stratum": "B23_168_available_exposure",
+      "variant": "base"
+    },
+    {
+      "family": "HVE",
+      "feature_count": 1,
+      "input_sha256": "6c2d4f27102d5256d1e3d76530ab9545ec1ba59e5f880e1794265684ffbf7836",
+      "layers": [
+        "tr_24"
+      ],
+      "measures": [
+        "overall_order_sensitive"
+      ],
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\B23-ft-97\\m",
+      "participant_count": 97,
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\B23-ft-97\\input.csv",
+      "response_set_sha256": "a5850f9a9db751a603253565e98434eef3ecae734a65a8c61b8eb2fadaccdf63",
+      "responses_per_feature": 31234,
+      "rows_per_feature": 5820,
+      "run_label": "HVE-B23-ft-97",
+      "same_responses_across_features": true,
+      "source_input": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\B23-HVE-ft-tr24-20260906-model-input.csv",
+      "source_sha256": "ebc914b347cdbeb22276ae7b73737e395320bd82b1626a3aca6b0b54c7f14936",
+      "stratum": "B23_97_complete_order",
+      "variant": "ft"
+    },
+    {
+      "family": "HVE",
+      "feature_count": 14,
+      "input_sha256": "f7059cde5decddda528da670c22812fdbe754d0a7aaadd338982993c4af00375",
+      "layers": [
+        "tr_24"
+      ],
+      "measures": [
+        "between_type_phoneme",
+        "between_type_sentence",
+        "between_type_word",
+        "mean_dissimilarity_phoneme",
+        "mean_dissimilarity_word",
+        "order_phoneme",
+        "order_sentence",
+        "order_word",
+        "overall",
+        "within_token_phoneme",
+        "within_token_sentence",
+        "within_token_word",
+        "within_type_phoneme",
+        "within_type_word"
+      ],
+      "model_dir": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\B23-ft-168\\m",
+      "participant_count": 168,
+      "path": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\analysis\\hve\\train_test\\B23-ft-168\\input.csv",
+      "response_set_sha256": "4a9920abf6f03052d4c42b0a2d932b7fcf6b55906ed07330c180d7efa9021aeb",
+      "responses_per_feature": 54096,
+      "rows_per_feature": 10080,
+      "run_label": "HVE-B23-ft-168",
+      "same_responses_across_features": true,
+      "source_input": "C:\\Users\\Alex\\Documents\\GitHub\\cross-talker-generalization-final-review-2026-08-21\\cross_talker_generalization\\artifacts\\derived\\B23-HVE-ft-tr24-20260906-model-input.csv",
+      "source_sha256": "ebc914b347cdbeb22276ae7b73737e395320bd82b1626a3aca6b0b54c7f14936",
+      "stratum": "B23_168_available_exposure",
+      "variant": "ft"
+    }
+  ],
+  "model_set": "all",
+  "numpy": "1.26.4",
+  "package_version": "0.1.0",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "predictor_column": "predictor_value",
+  "python": "3.9.18",
+  "random_policy": "registered",
+  "scope": "all_Tr24_measures",
+  "selection": "none",
+  "term": "variability_z"
+}

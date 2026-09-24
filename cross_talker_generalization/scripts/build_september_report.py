@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("cross_talker_generalization/analysis_update_2026-09-06"),
+        default=Path("cross_talker_generalization/analysis/model_comparison/reference_checks"),
     )
     parser.add_argument("--bootstrap", type=int, default=2000)
     parser.add_argument("--seed", type=int, default=230519)
@@ -304,7 +304,7 @@ def collect(repository: Path, specs: list[dict[str, object]], n_boot: int, seed:
         ceiling_path = (
             repository
             / "cross_talker_generalization"
-            / "analysis_update_2026-09-06"
+            / "analysis/model_comparison/reference_checks"
             / "ceilings"
             / str(spec["dataset_id"])
             / "oof_predictions.csv"

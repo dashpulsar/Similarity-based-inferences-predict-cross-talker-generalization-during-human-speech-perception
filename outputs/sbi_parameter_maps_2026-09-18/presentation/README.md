@@ -12,4 +12,4 @@ Extract the complete ZIP before opening the deck. In PowerPoint editing view a h
 
 Both analyses use X21 non-ASR-fine-tuned HuBERT Tr-24, existing 3-D t-SNE, and participant training folds 1+2. Each map contains 1,247 fitted tau/k pairs. Additional small-k reference fits are outside the plotted positive-k grid. These are training landscapes. Raw z and total fitted log likelihood across the two samples do not provide a direct performance comparison.
 
-Source reports are in `cross_talker_generalization/analysis_update_2026-09-18/x21_parameter_landscape/` and `x21_parameter_landscape_no_talker_specific/` in the project. No new analysis was run to make this deck.
+Source reports are in `cross_talker_generalization/analysis/sbi/parameter_maps/x21_all_conditions/` and `x21_parameter_landscape_no_talker_specific/` in the project. No new analysis was run to make this deck.

@@ -96,7 +96,7 @@ def _hve_input(
 
 
 def _load_registry(project: Path) -> list[AnalysisSpec]:
-    report_tables = project / "analysis_update_2026-08-27" / "tables"
+    report_tables = project / "analysis/model_comparison/selection" / "tables"
     derived = project / "artifacts" / "derived"
     sbi = pd.read_csv(report_tables / "sbi_predictor_only_selected_layers.csv")
     hve = pd.read_csv(report_tables / "hve_predictor_only_selected_methods.csv")
@@ -449,7 +449,7 @@ def main() -> int:
     output = (
         options.output.resolve()
         if options.output
-        else project / "analysis_update_2026-09-01"
+        else project / "analysis/model_comparison/pooled_lrt"
     )
     table_dir = output / "tables"
     figure_dir = output / "figures"

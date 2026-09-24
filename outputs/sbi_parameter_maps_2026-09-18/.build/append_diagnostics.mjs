@@ -16,12 +16,12 @@ try{await fs.copyFile(original,backup,fs.constants.COPYFILE_EXCL);}catch(e){
 }
 const p=Presentation.create({slideSize:{width:1280,height:720}});
 for(const dataset of ['AN19','X21','B23'])for(const variant of ['base','ft']){
- const rel=`cross_talker_generalization/analysis_update_2026-09-17/si_diagnostics/figures/${dataset}_SBI_${variant}_similarity_all_participants_test_train_ratio.png`;
+ const rel=`cross_talker_generalization/analysis/diagnostics/si_diagnostics/figures/${dataset}_SBI_${variant}_similarity_all_participants_test_train_ratio.png`;
  const s=p.slides.add();s.background.fill='#FFFFFF';
  s.images.add({blob:new Uint8Array(await fs.readFile(path.join(root,rel))),contentType:'image/png',fit:'contain',
   alt:`${dataset} ${variant}: SBI mean test log loss divided by mean training log loss`,
   position:{left:24,top:24,width:1232,height:672}});
- s.speakerNotes.textFrame.setText(`Source: ${rel}\nEach point shows a participant-held-out fold. Black markers show three-fold means with descriptive 95% fold-bootstrap intervals. The horizontal line marks equal training and test mean log loss. Scores use the same training-fitted model and frozen scaling with random effects set to zero. These plots use the existing fixed-distance predictor. A near-one mean does not establish absence of overfitting.\nInterpretation: cross_talker_generalization/analysis_update_2026-09-18/sbi_diagnostic_review/README.md`);
+ s.speakerNotes.textFrame.setText(`Source: ${rel}\nEach point shows a participant-held-out fold. Black markers show three-fold means with descriptive 95% fold-bootstrap intervals. The horizontal line marks equal training and test mean log loss. Scores use the same training-fitted model and frozen scaling with random effects set to zero. These plots use the existing fixed-distance predictor. A near-one mean does not establish absence of overfitting.\nInterpretation: cross_talker_generalization/analysis/diagnostics/sbi_review/README.md`);
 }
 const added=path.join(tmp,'six_sbi_diagnostic_slides.pptx');
 await(await PresentationFile.exportPptx(p)).save(added);

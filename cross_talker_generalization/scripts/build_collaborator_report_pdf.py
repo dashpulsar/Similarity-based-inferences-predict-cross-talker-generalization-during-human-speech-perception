@@ -38,7 +38,7 @@ def main():
     parser.add_argument("--image-max-height", type=float, default=370,
                         help="Maximum figure height in PDF points (default: 370)")
     args = parser.parse_args()
-    folder = PROJECT / "analysis_update_2026-09-06/collaborator_report"
+    folder = PROJECT / "analysis/model_comparison/reference_checks/collaborator_report"
     markdown = args.source.resolve() if args.source else folder / "REPORT_FOR_FLORIAN.md"
     folder = markdown.parent
     output = PROJECT.parent / "output/pdf"
