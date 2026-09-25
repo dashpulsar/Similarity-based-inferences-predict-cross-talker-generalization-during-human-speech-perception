@@ -1,4 +1,4 @@
-"""Render the English collaborator report from its Markdown source.
+"""Render an English analysis report from an explicit Markdown source.
 
 Dependencies: reportlab and Pillow. PyMuPDF is used only for preview rendering.
 The optional artifacts/report_runtime directory permits isolated dependencies.
@@ -33,17 +33,17 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--render", action="store_true")
     parser.add_argument("--output", type=Path, help="Alternative PDF path, e.g. when the previous PDF is open")
-    parser.add_argument("--source", type=Path, help="Report Markdown source; defaults to the earlier collaborator report")
+    parser.add_argument("--source", type=Path, required=True, help="Public report Markdown source")
     parser.add_argument("--preview-dir", type=Path, help="Optional directory for page PNGs")
     parser.add_argument("--image-max-height", type=float, default=370,
                         help="Maximum figure height in PDF points (default: 370)")
     args = parser.parse_args()
     folder = PROJECT / "analysis/model_comparison/reference_checks/collaborator_report"
-    markdown = args.source.resolve() if args.source else folder / "REPORT_FOR_FLORIAN.md"
+    markdown = args.source.resolve()
     folder = markdown.parent
     output = PROJECT.parent / "output/pdf"
     output.mkdir(parents=True, exist_ok=True)
-    pdf = args.output.resolve() if args.output else output / "cross_talker_analysis_report_for_florian.pdf"
+    pdf = args.output.resolve() if args.output else output / "analysis_report.pdf"
     pdf.parent.mkdir(parents=True, exist_ok=True)
     page_width, page_height = landscape(A4)
     styles = getSampleStyleSheet()

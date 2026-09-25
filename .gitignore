@@ -41,6 +41,17 @@ __pycache__/
 # Large media are distributed separately.
 *.mp4
 
+# Personal communications and speaking notes must be stored outside this project.
+*.eml
+*.msg
+**/EMAIL_DRAFT.md
+**/EMAIL_PREVIEW.html
+**/CORRESPONDENCE_*.md
+**/SPEAKER_NOTES*BILINGUAL*
+**/*_script_bilingual.*
+**/meeting_*/
+**/florian_email_*/
+
 # Pre-cleanup publication checkpoint: retain these files locally.
 node_modules/
 *.log

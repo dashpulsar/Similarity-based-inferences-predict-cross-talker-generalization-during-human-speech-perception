@@ -1,8 +1,8 @@
 # Next analysis plan
 
-This plan records the analysis decisions from the September project meeting and the written follow-up. It separates results that already exist from work that still has to be run. The scientific definitions in `SCIENTIFIC_SPEC.md` remain authoritative.
+This plan records the analysis scope and remaining work. It separates results that already exist from work that still has to be run. The scientific definitions in `SCIENTIFIC_SPEC.md` remain authoritative.
 
-The [numbered requirements review](FLORIAN_REQUIREMENTS_REVIEW.md) now distinguishes direct meeting/email requests, the latest SBI display clarification, and unfinished work. The [z-value specification](Z_VALUE_FIGURE_SPEC.md) governs the principal **SBI result display**; it does not designate manuscript main figures. Existing fixed-Tr-24 likelihood plots are companion analyses, not replacements for layerwise SBI z.
+The [z-value specification](Z_VALUE_FIGURE_SPEC.md) governs the principal **SBI result display**; it does not designate manuscript main figures. Existing fixed-Tr-24 likelihood plots are companion analyses, not replacements for layerwise SBI z.
 
 ## What the current results support
 
@@ -43,7 +43,7 @@ Figure families share clear labels and named uncertainty units; their statistics
 - improvement is plotted upward;
 - the principal SBI layer plot uses signed z, three fold points and 95% bootstrap intervals across those three folds;
 - its mean z-ceiling is 100%, with a gray ceiling interval and labeled nominal z significance lines, provided the z and ceiling have compatible fit scopes;
-- likelihood/model-comparison companion plots retain their explicitly labeled participant-cluster intervals; fold-bootstrap versions are still required by the earlier email;
+- likelihood/model-comparison companion plots retain their explicitly labeled participant-cluster intervals; fold-bootstrap companion versions remain to be completed;
 - the behavioral ceiling is shown as a horizontal reference with its uncertainty band when the plotted scale permits a valid same-observation normalization;
 - MFCC39 and STRF24 appear before DNN representations when they are in the same panel;
 - the title or subtitle states the model (`M_predictor`, `M_condition`, or `M_joint`), selection objective, representation, layer, and evaluation set;
@@ -54,7 +54,7 @@ Figure families share clear labels and named uncertainty units; their statistics
 ## Work package 1: primary SBI/HVE result set
 
 1. Deliver the requested SBI layerwise z presentation and complete HVE method displays; preserve the distinction between historical test-refit and revised training-fit z until a matched-scope current z/ceiling rerun is specified.
-2. Retain the fixed-`tr_24` SBI and HVE fits for all three datasets and both HuBERT variants with `M_null`, `M_condition`, `M_predictor`, and `M_joint` as the common-layer summary discussed in the meeting.
+2. Retain the fixed-`tr_24` SBI and HVE fits for all three datasets and both HuBERT variants with `M_null`, `M_condition`, `M_predictor`, and `M_joint` as the common-layer summary used for the common-layer summary.
 3. Report predictor-only gain, predictor beyond condition, and condition beyond predictor with participant-cluster intervals.
 4. Add the directly cross-validated behavioral ceiling on the same held-out observations. Do not divide by a ceiling computed from a different row set.
 5. Produce the likelihood-selected and z-selected 2 × 2 robustness display on comparable samples. Showing layerwise z as the principal SBI display does not determine manuscript main/supplementary placement.

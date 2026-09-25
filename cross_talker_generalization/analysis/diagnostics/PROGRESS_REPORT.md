@@ -1,6 +1,6 @@
 # Analysis progress report
 
-September 18 handoff: further parameter-search research is paused at Zhengyang's request. The two maps are collected in a [two-slide PPTX with linked offline HTML](../../../outputs/sbi_parameter_maps_2026-09-18/presentation/README.md). See [remaining Florian requests](../sbi/NEXT_FLORIAN_TASKS.md) for the next priorities. HVE remains paused; no new analysis was launched for the deck.
+September 18 handoff: further parameter-search research is paused at Zhengyang's request. The two maps are collected in a [two-slide PPTX with linked offline HTML](../../../outputs/sbi_parameter_maps_2026-09-18/presentation/README.md). See remaining Florian requests for the next priorities. HVE remains paused; no new analysis was launched for the deck.
 
 Latest September 18 sensitivity: [X21 with Talker-specific excluded](../sbi/parameter_maps/x21_without_talker_specific/README.md) is complete. Re-standardized and refitted 1,276 candidates on 8,290 responses / 161 participants; all converged, 6.31 minutes with 16 workers. Static and interactive maps plus actual selected-predictor tables are available. Metric-domain best: tau=1, k=0.017914, signed training z=4.092719; both objectives select this pair. The full-condition run is preserved. This remains one training split, not a new held-out evaluation.
 
@@ -16,13 +16,13 @@ Updated September 17, 2026, after the 16:06 validation (Asia/Shanghai). Both HVE
 
 The approved training/test diagnostic is complete for this batch: **six SBI and twelve HVE layer profiles**, covering **396 unique specifications** in 25 runs. All **9,504 split scores** and **4,752 paired-fold ratios** passed the combined coverage/arithmetic checks; no invalid ratios or CV fit warnings were recorded. The AN19 acoustic-component correction and common-random-structure sensitivity are also complete. The matched z-versus-likelihood optimization experiment, optimization stability, compatible current-definition ceilings and several manuscript panels remain unfinished. The overall meeting TODO is therefore still substantially open.
 
-The [daily work log](WORK_LOG_2026-09-17.md) records today's changes, runs, checks and caveats. The [Chinese meeting checklist](../../../outputs/meeting_2026-09-11/TODO_CN.md) retains the complete requirements.
+The [daily work log](WORK_LOG_2026-09-17.md) records today's changes, runs, checks and caveats.
 
 ## 1. Completed and available
 
 ### Approved SI diagnostic
 
-Florian accepted `mean test log loss / mean training log loss` in the [September 15 exchange](CORRESPONDENCE_2026-09-15.md). Both losses are normalized per word response. Each fold uses the same training-fitted model and frozen predictor scaling for both splits, with random effects set to zero in both predictions.
+The diagnostic uses `mean test log loss / mean training log loss`. Both losses are normalized per word response. Each fold uses the same training-fitted model and frozen predictor scaling for both splits, with random effects set to zero in both predictions.
 
 - Three datasets, base and ASR-FT, all 18 registered HuBERT layers, plus MFCC39/STRF24: **114 unique specifications**.
 - **Six layer-wise figures**, in PNG/PDF/SVG, and **1,368 paired-fold ratios** across all four models. No invalid ratios or fit warnings in these SBI ratio tables.
@@ -37,7 +37,7 @@ Read the [SI figure guide](si_diagnostics/README.md), [figure inventory](si_diag
 | X21 | 1.005850–1.006788 |
 | B23 | 1.000519–1.000690 |
 
-These means are close to 1, with larger variation between individual folds. They do not establish that selecting the best layer using the same CV scores is unbiased. Nested CV remains unanswered in the correspondence.
+These means are close to 1, with larger variation between individual folds. They do not establish that selecting the best layer using the same CV scores is unbiased. Nested selection has not been implemented in these runs.
 
 ### AN19 acoustic baselines
 

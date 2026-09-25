@@ -2,7 +2,7 @@
 
 ## Conclusion
 
-The six existing SBI figures implement the test/train mean log-loss ratio accepted in Florian's September 15 email. The saved values, three-fold intervals, and scoring conventions check out. They can be retained as the current fixed-predictor SI diagnostic without rerunning the models.
+The six existing SBI figures implement the test/train mean log-loss ratio used for the training/test comparison. The saved values, three-fold intervals, and scoring conventions check out. They can be retained as the current fixed-predictor SI diagnostic without rerunning the models.
 
 Mean ratios are close to one. X21 has much larger differences between individual folds than AN19 or B23, so the average alone understates the variation. The X21 pattern also appears in models without SBI and is consistent with differing response difficulty across participant folds. This is evidence against attributing the entire gap to SBI overfitting, not proof that overfitting is absent.
 
@@ -69,7 +69,6 @@ We assessed training-to-test differences using the ratio of held-out to training
 
 ## Sources and reproduction
 
-- [Approved email exchange](../CORRESPONDENCE_2026-09-15.md).
 - [Saved paired scores](../si_diagnostics/tables/paired_fold_ratios.csv) and [three-fold summaries](../si_diagnostics/tables/three_fold_ratio_summary.csv).
 - [Scoring code](../../../R/fit_confirmatory.R), especially `score_split` and the fold loop, and [plotting code](../../../scripts/build_train_test_ratio_figures.py).
 - [Verification record](verification.json) and [read-only verification script](verify_saved_scores.py).

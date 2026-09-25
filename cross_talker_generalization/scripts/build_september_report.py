@@ -998,7 +998,7 @@ def build_readme(
     lines = [
         "# September 6 analysis update",
         "",
-        "> **Review correction:** these are likelihood-based companion analyses, not the principal SBI z display or a completed manuscript figure set. See [z-value review](z_value_review/README.md) and [requirements report](../docs/FLORIAN_REQUIREMENTS_REVIEW.md). B23 HVE selection mixes 97- and 168-participant samples and needs correction. Acoustic component distances used `none` scaling while full baselines used `global_z`; their ranking is not a controlled ablation. Figure 1d and Figure 2b/d remain placeholders.",
+        "> **Review correction:** these are likelihood-based companion analyses, not the principal SBI z display or a completed manuscript figure set. See [z-value review](z_value_review/README.md). B23 HVE selection mixes 97- and 168-participant samples and needs correction. Acoustic component distances used `none` scaling while full baselines used `global_z`; their ranking is not a controlled ablation. Figure 1d and Figure 2b/d remain placeholders.",
         "",
         "This package implements the first analysis batch requested after the September meeting. All predictive gains use models fitted on two participant folds and frozen before scoring the third. `M_null` is now included, so predictor-only gain is oriented upward. Confidence intervals resample participants within folds.",
         "",

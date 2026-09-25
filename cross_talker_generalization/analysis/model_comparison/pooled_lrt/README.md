@@ -1,6 +1,6 @@
 # Cross-fitted predictor nested-model update
 
-> **Role after the September project meeting:** this package is a supplementary nested-association analysis. It is distinct from both the principal SBI layerwise z display and frozen-model held-out likelihood. The meeting proposed Tr-24 as a common manuscript representation, not gain as the only reporting metric. See the [requirements review](../../../docs/FLORIAN_REQUIREMENTS_REVIEW.md) and [z figure specification](../../../docs/Z_VALUE_FIGURE_SPEC.md).
+> **Analysis scope:** this package is a supplementary nested-association analysis. It is distinct from both the principal SBI layerwise z display and frozen-model held-out likelihood. Tr-24 serves as a common manuscript representation alongside layerwise displays. See the [z figure specification](../../../docs/Z_VALUE_FIGURE_SPEC.md).
 
 This supplementary analysis implements the combined-test-fold procedure requested for nested GLMM comparison. For each selected SBI or HVE specification, the predictor is standardized for each held-out participant fold using the mean and standard deviation from the other two folds. The three held-out partitions are then concatenated, and one set of GLMMs is fit to the combined data.
 

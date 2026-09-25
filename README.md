@@ -10,8 +10,6 @@ We address these questions for three distinct behavioral data sets previously el
 
 The production codebase is [cross_talker_generalization/](cross_talker_generalization). Superseded tracked versions remain available through Git history and are not used at runtime.
 
-For the latest illustrated discussion report, see [Report for Florian](cross_talker_generalization/analysis/speech/REPORT_FOR_FLORIAN.md) ([PDF](output/pdf/cross_talker_analysis_report_for_florian_reviewed.pdf)). The [comment-by-comment response](cross_talker_generalization/analysis/speech/REVIEW_RESPONSE.md) records changes following the annotated PDF and supplied Slack messages. The report distinguishes revised figures, retained model results, and analyses still to run; it does not claim that every manuscript panel is complete.
-
 ## Research questions
 
 The analyses compare (multiple implementations of) two theories of generalization during human speech perception:
@@ -101,7 +99,7 @@ Candidate theoretical predictors are selected by the summed three-fold held-out 
 
 After selection, condition-only versus joint asks whether the theoretical predictor adds information beyond condition; predictor-only versus joint asks whether condition adds information beyond the theoretical predictor. Both comparisons are separate from the optimization criterion. The August 21 report predates this correction; the corrected selection and downstream results are in [analysis/model_comparison/selection](cross_talker_generalization/analysis/model_comparison/selection/README.md).
 
-The meeting proposed Transformer layer 24 as a common manuscript summary. The principal **SBI result display** is a layerwise z-value plot with three-fold 95% intervals, a compatible behavioral z-ceiling normalized to 100%, and labeled nominal significance references; this does not designate the manuscript's main figures. See the [z-value review](cross_talker_generalization/analysis/model_comparison/reference_checks/z_value_review/README.md) for the currently available plots and their source/scope distinctions. Likelihood-based evaluation and nested-model comparisons remain separate analyses. The [numbered requirements review](cross_talker_generalization/docs/FLORIAN_REQUIREMENTS_REVIEW.md) records the meeting/email requests and unfinished figure panels, including corrections needed in the September 6 HVE selection and acoustic diagnostics.
+Transformer layer 24 is used as a common manuscript summary. The principal **SBI result display** is a layerwise z-value plot with three-fold 95% intervals, a compatible behavioral z-ceiling normalized to 100%, and labeled nominal significance references; this does not designate the manuscript's main figures. See the [z-value review](cross_talker_generalization/analysis/model_comparison/reference_checks/z_value_review/README.md) for the currently available plots and their source/scope distinctions. Likelihood-based evaluation and nested-model comparisons remain separate analyses. See the project TODO for unfinished analyses and figure panels.
 
 Full-data coefficients, confidence intervals, Wald z, and likelihood-ratio tests remain useful association summaries. Historical held-out-refit z values are preserved only in clearly labeled compatibility figures.
 

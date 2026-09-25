@@ -295,7 +295,7 @@ def main():
              "<style>body{font:16px system-ui;max-width:1250px;margin:32px auto;padding:0 20px}img{width:100%}article{margin:40px 0}small{color:#555}</style>",
              "<h1>SBI and HVE z-value review</h1><p>The SBI display format is not a designation of manuscript main figures.</p>",
              "<p>Historical test-refit z/ceiling and revised HVE training-fold z are separate analyses. No new GLMM was fitted. ",
-             "See <a href='README.md'>README</a> and <a href='../../docs/FLORIAN_REQUIREMENTS_REVIEW.md'>requirements review</a>.</p>",
+             "See <a href='README.md'>README</a>.</p>",
              "<p><a href='#historical_test_fold_refit'>Stored z/ceiling displays</a> | "
              "<a href='#revised_training_two_folds'>Revised HVE z</a> | "
              "<a href='#other'>Other requested figure families</a></p>"]

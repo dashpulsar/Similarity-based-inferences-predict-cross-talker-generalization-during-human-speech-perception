@@ -2,31 +2,25 @@
 
 This file tracks work that can still change the production results. Scientific definitions are kept in [`cross_talker_generalization/docs/SCIENTIFIC_SPEC.md`](cross_talker_generalization/docs/SCIENTIFIC_SPEC.md).
 
-## September 11 meeting and follow-up email
+## Analysis status
 
-Latest handoff (September 18): Zhengyang has paused further tau/k optimization research as well as the previously paused HVE work. The two X21 interactive maps are packaged in a new [two-slide presentation](outputs/sbi_parameter_maps_2026-09-18/presentation/README.md). The [remaining-request review](cross_talker_generalization/analysis/sbi/NEXT_FLORIAN_TASKS.md) separates unfinished explicit requests, completed diagnostics, conditional suggestions and unanswered decisions. Recommended next task: explain the high AN19 result using the completed audits. No further optimization run was launched.
+Latest handoff (September 18): Further tau/k optimization research and HVE work are paused. The two X21 interactive maps are packaged in a new [two-slide presentation](outputs/sbi_parameter_maps_2026-09-18/presentation/README.md). Recommended next task: explain the high AN19 result using the completed audits. No further optimization run was launched.
 
 September 18 additional sensitivity: the [X21 landscape excluding Talker-specific](cross_talker_generalization/analysis/sbi/parameter_maps/x21_without_talker_specific/README.md) is complete, including freshly standardized predictors, 1,276 refits, static/interactive figures and selected-predictor value tables. This checks removal of the self-comparison condition on one training split; it does not close the cross-fold evaluation or beyond-condition comparison tasks.
 
-Current scope (September 18): **HVE and cross-theory matching are paused at Zhengyang's request.** Focus on SBI. A [small joint tau/k search test](cross_talker_generalization/analysis/sbi/optimizer_probe/README.md) is complete (101 seconds, 39 distinct fits; one layer/split/seed). The subsequent [X21 dense landscape](cross_talker_generalization/analysis/sbi/parameter_maps/x21_all_conditions/README.md) is also complete: 1,247 grid pairs plus 29 limit fits, all converged in 15.83 minutes, with checked 3-D surfaces and profiles. Both objectives select the same grid pair; tau remains boundary-limited. Cross-fold/layer validation and the multi-seed optimizer comparison remain open; the dense map is a single-training-split diagnostic.
+Current scope (September 18): **HVE and cross-theory matching are paused.** Focus on SBI. A [small joint tau/k search test](cross_talker_generalization/analysis/sbi/optimizer_probe/README.md) is complete (101 seconds, 39 distinct fits; one layer/split/seed). The subsequent [X21 dense landscape](cross_talker_generalization/analysis/sbi/parameter_maps/x21_all_conditions/README.md) is also complete: 1,247 grid pairs plus 29 limit fits, all converged in 15.83 minutes, with checked 3-D surfaces and profiles. Both objectives select the same grid pair; tau remains boundary-limited. Cross-fold/layer validation and the multi-seed optimizer comparison remain open; the dense map is a single-training-split diagnostic.
 
-September 18 update: the [conditional-ceiling correction](cross_talker_generalization/analysis/sbi/README.md) has been computed for all three datasets. AN19/X21 now retain condition, and X21 retains sentence context; B23 reproduces the previous reference. All held-out rows have reference predictions. Zhengyang confirmed signed z for the optimization comparison. Matching theory-specific response coverage and constructing compatible z-ceilings remain open.
+September 18 update: the [conditional-ceiling correction](cross_talker_generalization/analysis/sbi/README.md) has been computed for all three datasets. AN19/X21 now retain condition, and X21 retains sentence context; B23 reproduces the previous reference. All held-out rows have reference predictions. The optimization comparison uses signed z. Matching theory-specific response coverage and constructing compatible z-ceilings remain open.
 
 September 17 post-run update: the [completed diagnostic batch](cross_talker_generalization/analysis/diagnostics/PROGRESS_REPORT.md) contains 396 specifications, 4,752 paired-fold ratios and 18 layer profiles (6 SBI, 12 HVE). Coverage and score-arithmetic checks pass; one small X21-FT historical-repeatability difference is retained. HVE coverage includes all existing Tr-24 definitions and two overall definitions at all registered layers. This does not complete the separate optimization, ceiling or manuscript-panel tasks below.
 
-The [source-linked Chinese checklist](outputs/meeting_2026-09-11/TODO_CN.md) consolidates the complete meeting transcript and Florian's supplied follow-up email. It preserves the 14 meeting topics and adds four email work items: report the actual data split, confirm the diagnostic ratio, score training/test consistently, and produce layerwise SI diagnostics. The email text is retained there; its original date was not supplied.
-
-The current prediction runner uses participant-level three-fold train-test CV, with no independent inner tuning split. Layer/method selection reuses those CV scores. The confirmatory configuration fixes tau and does not search k. Historical optimizer sources have now been identified; mapping each historical figure to its exact run and completing a matched objective comparison remain open. In the [September 15 exchange](cross_talker_generalization/analysis/diagnostics/CORRESPONDENCE_2026-09-15.md), Florian accepted mean test log loss divided by mean training log loss. Nested CV remains unanswered.
+The current prediction runner uses participant-level three-fold train-test CV, with no independent inner tuning split. Layer/method selection reuses those CV scores. The confirmatory configuration fixes tau and does not search k. Historical optimizer sources have now been identified; mapping each historical figure to its exact run and completing a matched objective comparison remain open. The diagnostic uses mean test log loss divided by mean training log loss. Nested selection has not been implemented in these runs.
 
 The September 16 update consolidated the task records. Implementation began on September 17; see the [analysis update](cross_talker_generalization/analysis/diagnostics/README.md) for corrected acoustic components, matched training/test scoring, SI ratios and the common-random-structure sensitivity. The [daily work log](cross_talker_generalization/analysis/diagnostics/WORK_LOG_2026-09-17.md) records completed runs, checks and remaining coverage for the later report. Earlier completed boxes describe their original outputs; they do not certify completion of the new matched-objective comparison. Existing unresolved work remains in scope.
 
-The earlier work-package rationale is in the [next analysis plan](cross_talker_generalization/docs/NEXT_ANALYSIS_PLAN.md); use the checklist above for the latest meeting/email priorities. Figure 1 and Figure 2 inputs are tracked separately in the [main-figure specification](cross_talker_generalization/docs/MAIN_FIGURE_SPEC.md).
+The earlier work-package rationale is in the [next analysis plan](cross_talker_generalization/docs/NEXT_ANALYSIS_PLAN.md); use the task list below for remaining analyses. Figure 1 and Figure 2 inputs are tracked separately in the [main-figure specification](cross_talker_generalization/docs/MAIN_FIGURE_SPEC.md).
 
-The [numbered meeting/email requirements review](cross_talker_generalization/docs/FLORIAN_REQUIREMENTS_REVIEW.md) distinguishes verified requests from implementation choices. The requested layerwise z/three-fold CI/ceiling format is the principal **SBI result display**, not a designation of manuscript main figures.
-
-## Annotated-report follow-up (September 9)
-
-See the [illustrated report](cross_talker_generalization/analysis/speech/REPORT_FOR_FLORIAN.md) and [complete comment response](cross_talker_generalization/analysis/speech/REVIEW_RESPONSE.md). This update covers all supplied PDF annotations and pasted Slack messages; it is not a complete audit of inaccessible private Slack history.
+## Figure and validation work
 
 - [x] Preserve the supplied world map, phonological feature illustration and map R code; apply its exact language groups/colors to the revised figures.
 - [x] Redraw Figure 1a/b with first/last latent dimensions, white background and the annotated native example "The wife helped her husband"; replace the earlier example without silently changing its transcript.
@@ -46,15 +40,6 @@ See the [illustrated report](cross_talker_generalization/analysis/speech/REPORT_
 
 ## Immediate display and analysis corrections (September 6 review)
 
-- [x] Re-read the available full September 1 automatic transcript and supplied email chain; record the requested work with timestamps and sources.
-- [x] Generate [SBI/HVE z review figures](cross_talker_generalization/analysis/model_comparison/reference_checks/z_value_review/README.md), clearly separating stored notebook test-refit z/ceiling from revised HVE training-fold z.
-- [ ] Specify and run current-definition z plus a compatible three-fold behavioral z-ceiling; do not normalize training-fit z with a test-refit ceiling.
-- [ ] Produce a current-definition matched SBI z/likelihood/ceiling analysis across all 18 registered layers. Retained all-layer confirmatory likelihood scores were recovered on September 9, but use a different predictor from the notebook-z figures.
-- [ ] Correct September 6 B23 HVE objective selection: keep the 97- and 168-participant samples separate, or refit all candidates on identical response rows.
-- [x] Rerun all 14 AN19 component diagnostics with `global_z` scaling, matching the full acoustic baselines; retain the earlier unscaled distances as historical outputs.
-- [ ] Provide fold-bootstrap companion intervals where earlier email requested three-fold uncertainty; retain participant-bootstrap results under explicit labels.
-- [ ] Obtain the current Overleaf ablation inventory and the additional Figure 2 materials referenced in email; do not claim complete manuscript coverage from placeholders.
-
 ## 1. Freeze the primary analysis and figure grammar
 
 - [x] Add `M_null` with the same blocking terms and random-effects structure as `M_predictor`, so predictor-only OOF gain can be expressed as `loss(M_null) - loss(M_predictor)`.
@@ -62,7 +47,7 @@ See the [illustrated report](cross_talker_generalization/analysis/speech/REPORT_
 - [x] Normalize predictor-only gain to the directly cross-validated behavioral ceiling on exactly the same held-out rows.
 - [ ] Validate the fixed-`tr_24` 2 × 2 robustness analysis on comparable B23 samples; the existing implementation is not yet a valid cross-stratum ranking.
 - [x] Use participant-cluster 95% bootstrap intervals and the same upward-is-better layout for the fixed-`tr_24` SBI/HVE and acoustic-control batch.
-- [ ] Retain Tr-24 as the common manuscript summary discussed in the meeting, and supply layerwise z as the principal SBI display; do not confuse display format with manuscript figure placement.
+- [ ] Retain Tr-24 as the common manuscript summary used for the common-layer summary, and supply layerwise z as the principal SBI display; do not confuse display format with manuscript figure placement.
 - [ ] Audit every title, legend, and caption so it states the fitted model, optimization objective, evaluation set, and meaning of all gray/reference lines.
 
 ## 2. Diagnose the AN19 acoustic baselines
@@ -92,7 +77,6 @@ See the [illustrated report](cross_talker_generalization/analysis/speech/REPORT_
 - [x] Recover the complete Figure 2d caption from `references/manuscript_draft.pdf`; inspect the supplied Desktop notebooks.
 - [x] Add AN19 automatic acoustic phone labels directly on the full corpus, following the decision to proceed without a small manual pilot. The selected audio source and all 6,261 recording hashes are recorded; two Somalian filename-number differences are mapped by identical audio SHA-256. Figure 2d's remaining work is tracked above.
 - [ ] Resolve AN19 HW74's lexical-label conflict by checking the recording content: all six English files say "wade", all 36 L2 files say "wave", and corresponding features exist. Do not automatically alias two distinct words by matching their item number; Figure 2c provisionally excludes the 40 affected responses.
-- [x] Produce the [illustrated report for Florian](cross_talker_generalization/analysis/model_comparison/reference_checks/collaborator_report/REPORT_FOR_FLORIAN.md), separating completed panels, proposals and missing inputs.
 
 ## 4. Design the specific-exposure-understanding extension
 

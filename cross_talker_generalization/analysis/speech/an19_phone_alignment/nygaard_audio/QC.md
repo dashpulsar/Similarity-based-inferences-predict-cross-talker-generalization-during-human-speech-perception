@@ -60,4 +60,3 @@ The pinned official FALCON implementation and decoder are unchanged. The run use
 This establishes complete, internally consistent **automatic target-conditioned annotations** with identified source audio. It does not establish that each target phone was actually produced, that the phone boundaries are accurate, or that low model scores represent human perception errors. The supplied word constrains forced alignment, so the `wave/wade` distinction remains unresolved by alignment alone.
 
 The audio checks establish unchanged bytes relative to the pre-run source audit. The alignment runner and this QC perform no HuBERT extraction or HDF5 writes; full pre/post HDF5 file checksums were not recomputed. Exact source/table hashes, all canonical counts, and the 162 null-posterior interval identities are in [qc_summary.json](qc_summary.json).
-

@@ -19,9 +19,9 @@ This checkpoint preserves the accumulated September code, figures, and compact r
 
 Included: analysis source, configurations, checks, technical reports, figures, presentations, and compact aggregate results. September updates are retained together at this checkpoint rather than selecting experiments for deletion now.
 
-Kept locally and excluded from new Git additions: HDF5 features, feature archives, recordings, model/runtime dependencies, duplicated worker outputs, response-level model inputs/predictions, intermediate grid preparation, original meeting transcripts, email drafts, and correspondence records. Some dated documents still refer to these local resources; those references do not mean that the resources are included in a clone. Existing tracked public data are unchanged. Recomputing analyses still requires the separately distributed inputs.
+Kept locally and excluded from new Git additions: HDF5 features, feature archives, recordings, model/runtime dependencies, duplicated worker outputs, response-level model inputs/predictions, intermediate grid preparation, other computational intermediates. Some dated documents still refer to these local resources; those references do not mean that the resources are included in a clone. Existing tracked public data are unchanged. Recomputing analyses still requires the separately distributed inputs.
 
-Private correspondence is not reproduced here. Its methodological proposals are summarized below as future work, not implemented features.
+The methodological extensions below describe future work, not implemented features.
 
 ## Follow-up from the recent methodological discussion
 

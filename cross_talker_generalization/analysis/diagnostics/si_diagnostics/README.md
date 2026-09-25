@@ -2,7 +2,7 @@
 
 Completed September 17: **18 layer profiles (6 SBI + 12 HVE)**, 396 specifications and 4,752 paired-fold ratios. Combined coverage/arithmetic validation passed, with no invalid ratios or CV fit warnings. The separate historical-repeatability check retains one small X21-FT difference; see the [progress report](../PROGRESS_REPORT.md).
 
-The y-axis uses the ratio approved in the [September 15 email exchange](../CORRESPONDENCE_2026-09-15.md):
+The y-axis uses the following per-response loss ratio:
 
 ```text
 ratio = mean test log loss / mean training log loss

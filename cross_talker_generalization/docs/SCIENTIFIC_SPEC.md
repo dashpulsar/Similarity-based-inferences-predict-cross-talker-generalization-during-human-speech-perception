@@ -72,13 +72,13 @@ Participants are assigned to three fixed, participant-disjoint folds. For each c
 
 Candidate predictors may be ranked together only when they were scored on identical held-out observations and trial counts. The report code enforces this condition. Full-data log likelihood, deviance, AIC, observation count, and convergence status are retained for auditing, not used as the selection score.
 
-This is currently a train-test design without an independent inner tuning split. Reusing these scores to choose a layer or HVE definition does not give the selected configuration an additional independent final test. Whether to add nested selection remains an open decision in the [meeting checklist](../../outputs/meeting_2026-09-11/TODO_CN.md).
+This is currently a train-test design without an independent inner tuning split. Reusing these scores to choose a layer or HVE definition does not give the selected configuration an additional independent final test. An independent selection-evaluation split remains to be specified.
 
 ### Matched training/test diagnostic scores
 
 From September 17, the GLMM runner additionally exports `train_test_scores.csv`. Each fold's fitted training model scores both its training and test observations using the same training-derived predictor mean/SD and `predict(..., re.form=NA)`. All fitted random effects are set to zero for both splits; this does not integrate predictions over a random-effects distribution. The score is the Bernoulli negative log likelihood summed over word responses, divided by `sum(response_correct + response_incorrect)`. Grouped rows therefore contribute their number of word responses, and no binomial combinatorial constant is added.
 
-The fitted-model `logLik()` remains a separate model-fit diagnostic. It is not substituted for the new training prediction score. In the [September 15 email exchange](../analysis/diagnostics/CORRESPONDENCE_2026-09-15.md), Florian accepted the proposed per-response loss ratio:
+The fitted-model `logLik()` remains a separate model-fit diagnostic. It is not substituted for the new training prediction score. The per-response loss ratio is:
 
 ```text
 ratio_fold = mean_test_log_loss / mean_training_log_loss
@@ -126,4 +126,4 @@ The September 17 AN19 sensitivity covers 352 selected fits across the 16 acousti
 
 The checked-in `analysis/reference` predates the changes above. It remains the historical broad August 21 package; corrected selection and revised HVE results are in `analysis/model_comparison/selection`.
 
-The September meeting decisions, remaining analysis runs, common figure grammar, and Figure 1/2 panel requirements are tracked in `NEXT_ANALYSIS_PLAN.md` and `MAIN_FIGURE_SPEC.md`.
+The remaining analysis runs, common figure grammar, and Figure 1/2 panel requirements are tracked in `NEXT_ANALYSIS_PLAN.md` and `MAIN_FIGURE_SPEC.md`.

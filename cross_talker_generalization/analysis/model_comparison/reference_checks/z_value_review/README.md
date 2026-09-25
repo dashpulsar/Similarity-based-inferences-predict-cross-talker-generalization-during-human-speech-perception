@@ -2,7 +2,7 @@
 
 Open [the figure gallery](index.html). This review makes **layerwise z the main SBI result display**. It does not designate manuscript main figures or replace Figures 1/2, the Tr-24 summary, or nested-model comparisons.
 
-Read the [numbered Florian requirements report](../../../../docs/FLORIAN_REQUIREMENTS_REVIEW.md) for the meeting/email evidence, complete available figure inventory, and unfinished work. The [plot specification](../../../../docs/Z_VALUE_FIGURE_SPEC.md) defines every statistic and line.
+The [plot specification](../../../../docs/Z_VALUE_FIGURE_SPEC.md) defines every statistic and line.
 
 ## What was generated
 

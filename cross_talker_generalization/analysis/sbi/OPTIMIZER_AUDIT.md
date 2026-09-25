@@ -52,7 +52,7 @@ Remaining work:
 1. Link the specific historical figures discussed at the meeting to their exact source version, inputs and saved optimization results. Saved notebook output alone is insufficient for that link.
 2. Compare z-based and likelihood-based predictor selection on matched data, folds, preprocessing and random-effects structures. The current fixed-parameter results do not complete that comparison.
 3. Check stability across optimization starts or seeds, focusing on objective values and predictions as well as parameter values. Similar predictions can arise from different near-equivalent parameters.
-4. Agree on whether selection analyses should use an inner tuning split. Preserve an untouched outer test set for evaluating a data-selected configuration. The separate diagnostic ratio was accepted in the [September 15 correspondence](../diagnostics/CORRESPONDENCE_2026-09-15.md): mean test log loss divided by mean training log loss.
+4. Agree on whether selection analyses should use an inner tuning split. Preserve an untouched outer test set for evaluating a data-selected configuration. The separate diagnostic ratio is mean test log loss divided by mean training log loss.
 
 ## Source fingerprints
 

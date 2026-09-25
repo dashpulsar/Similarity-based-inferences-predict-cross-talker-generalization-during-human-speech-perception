@@ -2,7 +2,7 @@
 
 **Completed diagnostic batch:** the [progress report](PROGRESS_REPORT.md) now includes the post-run validation: 396 SBI/HVE specifications, 4,752 paired-fold ratios and 18 layer figures (6 SBI + 12 HVE). HVE fitting and figure generation are complete. Other scientific TODO items remain open; the earlier 15:32 snapshot is retained in the daily work log.
 
-This update implements work from the [September 11 meeting and email checklist](../../../outputs/meeting_2026-09-11/TODO_CN.md). It preserves previous results and the existing CV design. The new SI diagnostic uses the test/train mean-log-loss ratio accepted by Florian in the [September 15 correspondence](CORRESPONDENCE_2026-09-15.md). The principal SBI z/ceiling figures remain unchanged. Today's changes, commands, checks and remaining tasks are recorded in the [daily work log](WORK_LOG_2026-09-17.md) for the later report.
+It preserves previous results and the existing CV design. The SI diagnostic uses the ratio of test to training mean log loss. The principal SBI z/ceiling figures remain unchanged. Today's changes, commands, checks and remaining tasks are recorded in the [daily work log](WORK_LOG_2026-09-17.md) for the later report.
 
 ## Completed in this update
 
@@ -104,4 +104,4 @@ python cross_talker_generalization/scripts/build_train_test_ratio_figures.py `
 - Interpret the two boundary-singular condition analyses cautiously; harmonize AN19 neural-layer/theory comparisons separately. The acoustic common-structure sensitivity is complete. Run finer-component analyses only when warranted by these checks.
 - Complete the other outstanding figure and analysis items in the shared checklist.
 
-The user sent the September 15 email. This update sent no additional email, pushed no repository changes and replaced no manuscript figures.
+These runs did not replace manuscript figures.

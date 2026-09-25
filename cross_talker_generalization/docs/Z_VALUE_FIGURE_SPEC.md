@@ -1,6 +1,6 @@
 # Z-value figure specification
 
-This file defines the main **SBI result display** requested on September 6: layerwise z, three-fold intervals, and a normalized behavioral ceiling. It does not designate manuscript main figures or replace Figures 1/2. Similar HVE panels respond to the earlier request for complete variability displays. It changes presentation, not previously fitted models. See the [requirements review](FLORIAN_REQUIREMENTS_REVIEW.md) for meeting evidence and the [generated review](../analysis/model_comparison/reference_checks/z_value_review/README.md) for the actual outputs.
+This file defines the main **SBI result display** requested on September 6: layerwise z, three-fold intervals, and a normalized behavioral ceiling. It does not designate manuscript main figures or replace Figures 1/2. Similar HVE panels respond to the earlier request for complete variability displays. It changes presentation, not previously fitted models. See the [generated review](../analysis/model_comparison/reference_checks/z_value_review/README.md) for the actual outputs.
 
 ## 1. Quantity on the y-axis
 
@@ -51,6 +51,6 @@ Alternatively, retain training-fit z throughout and construct a correspondingly 
 
 The theoretical-predictor-only model is the optimization model; condition must not be included in that search. The actual code may also contain design blocking terms such as test talker. Record those terms rather than describing every implementation as literally having only one fixed term.
 
-The September email requests both likelihood and z objectives and both reporting metrics. Z-first figures do not delete that requirement. Use the same samples within each search and keep categorical layer choice distinct from continuous parameter fitting. Fold-specific candidate selection for independent prediction belongs inside training data.
+The planned comparison uses both likelihood and z objectives and reports both metrics. Z-first figures do not delete that requirement. Use the same samples within each search and keep categorical layer choice distinct from continuous parameter fitting. Fold-specific candidate selection for independent prediction belongs inside training data.
 
 The paper can retain Tr-24 as the common main representation, as requested in the meeting, while the review prominently shows layer trajectories. Report the two condition comparisons with their actual statistics; a multi-level condition term has no single coefficient z equivalent to its omnibus likelihood-ratio test.

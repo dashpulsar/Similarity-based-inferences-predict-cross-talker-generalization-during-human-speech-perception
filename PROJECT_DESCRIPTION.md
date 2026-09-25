@@ -47,7 +47,6 @@ The three experiments provide complementary tests rather than interchangeable re
 | X21 | 320 | Sentence transcription | 16,477 | Word (within sentence) | Bernoulli | Within- and across talker within-accent |
 | B23 | 195 | Sentence transcription | 11,700  | Sentence | Binomial | Within- and across talker within- or across accent |
 
-
 ### AN19
 
 AN19 contains 160 participants and 24,960 behavioral observations, including 7,680 test-phase rows. The key comparison is word-level: exposure and test talkers are compared while producing the same word. Its relatively rich talker structure supports both behavioral prediction and a large all-talker validation matrix. In the current results, AN19 supplies the strongest evidence that computational similarity improves prediction beyond experimental condition.
@@ -112,7 +111,6 @@ The project produces several complementary views of the evidence:
 - Compatibility z/ceiling percentages are descriptive rescalings of Wald z, not variance explained or predictive accuracy.
 - t-SNE distance is dataset- and layer-specific and cannot be compared in absolute units across datasets.
 - Selecting the best HuBERT layer from the same held-out results is exploratory unless layer choice is prespecified or nested within cross-validation.
-
 
 ## Reproducible project structure
 

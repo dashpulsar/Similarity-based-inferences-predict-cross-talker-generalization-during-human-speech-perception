@@ -9,7 +9,7 @@ Results are organized by research question. Add new results to the relevant topi
 | AN19 acoustic baselines | [Explanation and evidence](acoustic_baselines/AN19_BASELINE_EXPLANATION.md) |
 | Speech representations and phonemes | [Figures, annotation methods, and report](speech/README.md) |
 | Model comparisons | [Predictor selection](model_comparison/selection/README.md), [pooled GLMM comparisons](model_comparison/pooled_lrt/README.md) |
-| Presentation | [Concise figure package and speaking notes](presentation/CONCISE_EDITION.md) |
+| Presentation | [Concise figure package](presentation/CONCISE_EDITION.md) |
 
 ## Supporting material
 
@@ -19,9 +19,11 @@ Results are organized by research question. Add new results to the relevant topi
 - `hve/`: retained global-order and train/test results; further HVE work remains paused.
 - `model_comparison/`: selection, pooled tests, behavioral references, and earlier fixed-layer checks.
 - `speech/`: shared figure sources, automatic phone annotations, and report tables.
-- `presentation/`: figure selections and bilingual notes.
+- `presentation/`: figure selections and figure assembly metadata.
 - `reference/`: historical figures and tables still required by report builders. These are supporting sources, not a replacement for the current analyses.
 
-The original dated batches are preserved locally in `recycle_bin/analysis_history/`. They are excluded from Git; the complete published pre-cleanup snapshot is commit `42cfa42618b404dcd041f8e0d9e3d8cccb15393b`. Historical provenance records retain their original execution paths and hashes. Current commands and document links use the topic-based layout.
+The scientific portions of earlier dated batches are retained locally in `recycle_bin/analysis_history/`. They are excluded from Git; the complete published pre-cleanup snapshot is commit `42cfa42618b404dcd041f8e0d9e3d8cccb15393b`. Historical provenance records retain their original execution paths and hashes. Current commands and document links use the topic-based layout.
 
 This is an organizational change, not a new experiment. Dated observations inside retained scientific notes still refer to the runs described in those notes.
+
+Private communications, meeting transcripts and personal bilingual notes are not part of the public project or its local analysis archive.

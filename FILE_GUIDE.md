@@ -14,7 +14,7 @@ All retained analysis batches have been consolidated under `cross_talker_general
 | `speech/` | Representation figures, phoneme annotations, source tables, and report |
 | `model_comparison/` | Predictor selection, pooled GLMM tests, and behavioral references |
 | `hve/` | Existing variability results; further work remains paused |
-| `presentation/` | Figure selections and bilingual speaking notes |
+| `presentation/` | Figure selections and figure assembly metadata |
 | `reference/` | Historical tables and figures required by existing builders; supporting material only |
 
 The [analysis index](cross_talker_generalization/analysis/README.md) links directly to the relevant results. New work should update these topic directories, not create another dated analysis-update folder.
@@ -39,8 +39,10 @@ Run commands from the repository root. JSON configuration paths retain their doc
 
 ## Original batches and recovery
 
-The original dated directories are preserved unchanged under `recycle_bin/analysis_history/`. This local archive is excluded from Git and is not an input directory for the active analysis scripts. The published pre-cleanup snapshot is commit `42cfa42618b404dcd041f8e0d9e3d8cccb15393b`.
+The original dated directories are retained as scientific archives under `recycle_bin/analysis_history/`. This local archive is excluded from Git and is not an input directory for the active analysis scripts. The published pre-cleanup snapshot is commit `42cfa42618b404dcd041f8e0d9e3d8cccb15393b`.
 
 All 1,407 tracked files in those batches were copied and checked by SHA-256 before the originals were moved. Active path references were then updated. Historical provenance retains the original execution paths and hashes; it should not be interpreted as a new analysis run.
 
 After migration, all 475 retained figure assets remain byte-identical. Across 718 result CSVs, changes are confined to path fields; no other cell values changed. The 59 Python checks and 119 entry-page links passed, and the relocated diagnostic input/score checks passed without fitting models.
+
+Private communications, meeting transcripts and personal bilingual notes are not part of the public project or its local analysis archive.
